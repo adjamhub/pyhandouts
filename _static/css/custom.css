@@ -1,0 +1,20 @@
+/** css/yourtheme.css **/
+
+@import 'theme.css';       /* for the Read the Docs theme */
+
+/* Allarga lo spazio del contenuto */
+.wy-nav-content {max-width:900px}
+
+/* colore di sfondo dei riquadri di codice */
+.highlight {background:#efeffc}
+
+/* più distanza tra i capitoli */
+h2 {padding-top:50px}
+h3 {padding-top:30px}
+h4 {padding-top:20px}
+
+/* justified text align */
+p {text-align:justify}
+
+/* bold links */
+a {font-weight: bold}
