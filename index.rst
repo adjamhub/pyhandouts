@@ -25,12 +25,21 @@ Come vedete, questa documentazione è divisa in 3 parti:
    :caption: Prime cose
 
    intro/00_first
+   intro/01_install
    
 .. toctree::
    :maxdepth: 1
    :caption: Programmare in Python
 
+   handout/00_basics
    handout/01_var
+   handout/02_alt
+   handout/03_iter
+   handout/04_seq
+   handout/05_funz
+   handout/06_mod
+   handout/07_files
+   handout/08_OOP
 
 
 .. toctree::
