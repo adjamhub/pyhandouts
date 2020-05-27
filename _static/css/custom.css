@@ -8,6 +8,9 @@
 /* colore di sfondo dei riquadri di codice */
 .highlight {background:#efeffc}
 
+/* colore di sfondo diverso per i riquadri generici */
+.highlight-default .highlight {background: #fafad2}
+
 /* più distanza tra i capitoli */
 h2 {padding-top:50px}
 h3 {padding-top:30px}

@@ -21,18 +21,25 @@ storie di successo ove Python ha contribuito in maniera determinante.
 
 Python è un linguaggio ideato da **Guido van Rossum** all'inizio degli anni novanta. Il nome fu scelto (tenetevi alla sedia) per via della sua passione 
 per i `Monty Python <https://it.wikipedia.org/wiki/Monty_Python>`_, un gruppo comico britannico attivo negli anni settanta. 
-Sembra strano lo so, ma se pensate ai nomi dei cantanti che girano adesso...
+Per rendervi conto della *incredibile comicità* del gruppo... ecco uno dei primi video su YouTube ottenuto cercando *Monty Python ita*. Dura 84 minuti. Io non ho
+superato il minuto 4...
 
+.. youtube:: S04V_mW5v0I
 
 
 Breve Storia
 ============
 
 
+.. image:: images/GuidoVonRossum.jpg
+   :width: 300px
+   :align: right
+   :alt: Guido Von Rossum
+
 Come già citato, Python nasce negli anni novanta, grazie al suo `Benevolent Dictator For Life <https://en.wikipedia.org/wiki/Benevolent_dictator_for_life>`_ 
 *Guido van Rossum*. La storia racconta che durante le vacanze di Natale del 1989, Guido progettò questo nuovo linguaggio, 
 cercando di mettere in esso tutte le caratteristiche positive che aveva trovato negli altri linguaggi di programmazione, 
-lprovando ad evitare forzature o strutture non lineari.
+provando ad evitare forzature o strutture non lineari.
 
 Subito Python diventa uno strumento imprescindibile per l’azienda in cui Guido lavora. Questo fatto e la licenza opensource con cui van Rossum distribuisce la sua 
 creatura determinano la sua fortuna: Python diventa brevemente uno dei linguaggi più utilizzati e seguiti da una comunità *attiva* di sviluppatori.

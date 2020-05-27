@@ -1,12 +1,13 @@
-Python
-======
+=============
+Python Course
+=============
 
 .. tip::
-    Questa documentazione, oltre che usufruibile online, è disponibile in diversi formati: **PDF, ePUB, SingleHTML, etc.** Per scaricare il formato 
-    che preferite, accedete alla apposita finestra di selezione posizionata in basso nella barra laterale.
+    Questa documentazione, oltre che usufruibile online, è disponibile in diversi formati: **PDF, ePUB, SingleHTML, etc.** 
+    Per scaricare il formato che preferite, accedete alla apposita finestra di selezione posizionata in basso nella barra laterale.
     
-    Se ne scaricate una copia, abbiate cura di verificare che essa sia sempre aggiornata, confrontando la sua data di rilascio con quella del sito, scritta
-    in ogni pagina in basso (Version: AnnoMeseGiorno).
+    Se ne scaricate una copia, abbiate cura di verificare che essa sia sempre aggiornata, confrontando la sua data di rilascio 
+    con quella del sito, scritta in ogni pagina in basso (Version: AnnoMeseGiorno).
     
 
 Come vedete, questa documentazione è divisa in 3 parti:
@@ -49,6 +50,8 @@ Come vedete, questa documentazione è divisa in 3 parti:
    insights/01_pip
    insights/02_virtualenv
    insights/03_eccezioni
-   insights/04_arduino
+   insights/04_turtle
    insights/05_script_to_exe
    insights/06_scipy
+   insights/07_arduino
+

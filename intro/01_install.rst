@@ -127,5 +127,8 @@ Si tratta di aprire Thonny, scrivere nell'editor il seguente codice e premere F5
 .. code:: bash
 
     print("Hello, World!")
+
     
+.. image:: images/HelloWorldThonny.jpg
+
 
