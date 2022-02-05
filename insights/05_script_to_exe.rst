@@ -4,14 +4,14 @@ Creazione di eseguibili
 
 Blah blah...
 
-$ pip install pyinstaller
+.. $ pip install pyinstaller
 
 
-https://www.pyinstaller.org/
+.. https://www.pyinstaller.org/
 
 
-* Windows
-* Mac
-* Linux
-* Android ?
-* Other ??
+.. * Windows
+.. * Mac
+.. * Linux
+.. * Android ?
+.. * Other ??

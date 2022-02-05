@@ -1,6 +1,14 @@
 Python
 ======
 
+
+.. warning::
+    La documentazione qui presente rappresenta una parte del materiale necessario per il corso di Informatica del prof. Essendo un lavoro in fase di sviluppo
+    vi prego (più del solito) di segnalare sempre cose che non capite bene, eventuali refusi nella scrittura e tutto quello che vi viene in mente :)
+    
+    Grazie.
+
+
 .. tip::
     Questa documentazione, oltre che usufruibile online, è disponibile in diversi formati: **PDF, ePUB, SingleHTML, etc.** Per scaricare il formato 
     che preferite, accedete alla apposita finestra di selezione posizionata in basso nella barra laterale.
