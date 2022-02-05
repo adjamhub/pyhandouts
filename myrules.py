@@ -4,6 +4,9 @@
 from docutils import nodes
 from docutils.parsers.rst import directives
 
+# --------------------------------------------------------------------------------------------------------------
+# embed youtube videos
+
 CODE = """\
 <iframe width="%(width)s" 
         height="%(height)s" 
@@ -39,8 +42,7 @@ youtube.content = True
 directives.register_directive('youtube', youtube)
 
 # --------------------------------------------------------------------------------------------------------------
-
-# to draw a stupid horizontal line
+# draw a stupid horizontal line
 
 def line(name, args, options, content, lineno,
             contentOffset, blockText, state, stateMachine):
