@@ -3,9 +3,13 @@ Prime cose
 ==========
 
 
-Questa parte della documentazione non è ancora pronta. 
+.. warning::
+    Questa parte della documentazione non è ancora pronta.
 
-Usa la documentazione in PDF reperibile `qui <https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON>`_
+    Usa la documentazione in PDF reperibile `qui <https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON>`_
+
+
+.. ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 PRIMA PARLA DELLA DIFFERENZA FRA UNA SCRIPT E UNA COSA INSERITA NELL'INTERPRETE

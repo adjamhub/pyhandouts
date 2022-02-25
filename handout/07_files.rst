@@ -2,9 +2,13 @@
 Files
 =====
 
-Questa parte della documentazione non è ancora pronta. 
+.. warning::
+    Questa parte della documentazione non è ancora pronta.
 
-Usa la documentazione in PDF reperibile `qui <https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON>`_
+    Usa la documentazione in PDF reperibile `qui <https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON>`_
+
+
+.. ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 Per interagire con il filesystem del sistema in cui è in esecuzione uno script, Python mette a disposizione due semplici funzioni predefinite: `open()` e `close()`. Banalmente, la prima permette di "aprire" un file e lavorarci dentro, mentre la seconda lo "chiude".
