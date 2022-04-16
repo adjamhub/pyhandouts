@@ -1,0 +1,35 @@
+site_name: Python Course
+
+theme:
+  name: mkdocs
+
+nav:
+  - Home: index.md
+  - Basics:
+    - Intro: basics/00_basics.md
+    - Variabili: basics/01_var.md
+    - Alternanza: basics/02_alt.md
+    - Ripetizione: basics/03_iter.md
+    - Sequenze: basics/04_seq.md
+    - Funzioni: basics/05_funz.md
+    - Moduli: basics/06_mod.md
+    - Files: basics/07_files.md
+  - OOP: OOP.md
+  - Insights:
+    - pip: insights/01_pip.md
+    - venv: insights/02_venv.md
+    - eccezioni: insights/03_eccezioni.md
+    - turtle: insights/04_turtle.md
+    - Eseguibili: insights/05_script_to_exe.md
+    - Scipy: insights/06_scipy.md
+    - Arduino: insights/07_arduino.md
+  - wxPython: about.md
+  - About: about.md
+
+markdown_extensions:
+  toc:
+    permalink: True
+  admonition: {}
+  attr_list: {}
+  def_list: {}
+
