@@ -1,15 +1,12 @@
 # Files
 
-::: warning
-::: title
-Warning
-:::
+!!! warning
 
-Questa parte della documentazione non è ancora pronta.
+    Questa parte della documentazione non è ancora pronta.
 
-Usa la documentazione in PDF reperibile
-[qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
-:::
+    Usa la documentazione in PDF reperibile
+    [qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
+
 
 Per interagire con il filesystem del sistema in cui è in esecuzione uno
 script, Python mette a disposizione due semplici funzioni predefinite:
