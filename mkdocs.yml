@@ -29,9 +29,8 @@ nav:
   - About: about.md
 
 markdown_extensions:
-  toc:
-    permalink: True
-  admonition: {}
-  attr_list: {}
-  def_list: {}
+  - toc: {permalink: True}
+  - admonition: {}
+  - attr_list: {}
+  - def_list: {}
 
