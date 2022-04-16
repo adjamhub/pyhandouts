@@ -1,4 +1,6 @@
 site_name: Python Course
+site_author: Andrea Diamantini
+copyright: Andrea Diamantini (c) 2022
 
 theme:
   name: mkdocs

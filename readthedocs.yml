@@ -2,7 +2,7 @@ build:
   image: latest
 
 python:
-  setup_py_install: true
+  setup_py_install: false
 
 requirements_file: mkdocs_requirements.txt
 
