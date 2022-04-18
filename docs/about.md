@@ -186,16 +186,10 @@ diventa
     Questo è un avvertimento
 
     
-!!! todo
-    Questa è una informazione
-
-    
 !!! tip
-
     Questo è un suggerimento
 
     
-!!! Error
-
+!!! danger
     Questo è un errore
 
