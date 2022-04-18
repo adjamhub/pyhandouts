@@ -1,65 +1,201 @@
-# Temerasse excusare salute populisque eodem
+# Markdown in due minuti
 
-## Mea adiutus tradat
+<!-- I COMMENTI SI FANNO COME IN HTML -->
+<!-- qui ci vanno i titoli -->
 
-Lorem markdownum quid, fati grata, aera, Thesea vos Phoebus ire teneri duro?
-Iter patris evehor calore patriam comitatur sopire decebat depositum imitatur
-profatur dat tibi, purior cave tremensque, odissem!
+-------------------------------------------------------------------------------------
 
-## Putat vite Iovi forma clausas
+## Titoli
 
-Quam exemplum cuspide ego haec nostrisque praecipitata unda ruinae inpulsumque
-levi, mecum. Sollicitae arcus Idan telis; artus arbore?
+    # Titolo 1
+    ## Titolo 2
+    ### Titolo 3
+    #### Titolo 4
+    ##### Titolo 5
+    ###### Titolo 6
 
-- Vel Persephone regia
-- Sic placatoque movetur crematisregia est futura discrimine
-- Somni virides percussis equos donec mea
-- Meritis acta gere caeli
+Diventa
 
-## Saxa retentus corpora sustinet solent pulveris ebore
+# Titolo 1
+## Titolo 2
+### Titolo 3
+#### Titolo 4
+##### Titolo 5
+###### Titolo 6
 
-Quasque sacra. Lacunabant aethera, tum illic ingenium Asopida neque Hippotadae
-quoque erili superis mihi, perdidit.
+-------------------------------------------------------------------------------------
 
-    videoJqueryStatus.boot_card_us *= 5 + safeStandalone;
-    recycle(word_printer.ramSuffix(token_broadband_disk * errorMulti,
-            cleanDuplex + num, internal(2, sync)), superscalar_debug_html *
-            engine_big_toolbar - regular_default_graphics, console.xpPowerFile(
-            pmuCameraLaptop, 14));
-    solidLogic.gps = gif_fifo;
-    if (5 + access_video_nntp + directx_wheel_encoding.cluster.property(
-            install)) {
-        floodIpxControl.bitmapCookie -= nybble_windows_architecture +
-                console_page_cloud;
-    } else {
-        protectorSdRaster -= 5;
-        digitalWeb *= soap_standalone_moodle * website_expansion_infotainment;
-        unicode_services_scsi = graphicsKvmEdi;
-    }
-    jpeg_image_adsl = 5;
+<!-- qui ci vanno i paragrafi -->
+## Paragrafi
 
-## Amnes nigrae
+    Un paragrafo inizia con una riga vuota e continua finché non salti una nuova
+    riga vuota. Non serve mettere il punto.
+    O andare a capo. Serve proprio una riga vuota di separazione fra un paragrafo e l'altro.
 
-Tecum et tenuit et dexterior crimen terra! Cetera qui doceo neque: cumque dum
-cornua iam bimembres. Fortia ait Philemona imponit praemia Eleusin et vincta in
-non longae capacius ripis tempora periturus peracta. Regebat angue. Est est
-rimas restet genus.
+    Questo è un nuovo paragrafo.
 
-## Violas primo
+Diventa
 
-Transitus verba, Dianae dari pernocte numero cum collumque, **negari**, et
-dixerat, nuper in ergo sentire. Et volucris tenet illas in alumno terrasque
-motaque, hominum semper, iuvenis.
+Un paragrafo inizia con una riga vuota e continua finché non salti una nuova
+riga vuota. Non serve mettere il punto.
+O andare a capo. Serve proprio una riga vuota di separazione fra un paragrafo e l'altro.
 
-1. Et nigrum Deoida
-2. Vix irata modo
-3. Curvos exsangui in pater
-4. Est nati cum falsa talibus vela haec
-5. Placeat dato telaque oris pueroque matrem ora
-6. Perdet conorque Erysicthonis longo
+Questo è un nuovo paragrafo.
 
-Modo iuncti sed; cum certos supplentur sinu pararis ora dum istis se armenta
-plura, nec! Et moenia quae Phoci sonarent **arduus generis harenam**: litora
-umbra subeunt Epidauria nunc Delphice, per quoque, ipse. Que eodem vidit, tum
-dum peto stridula ubique trunco praedaeque vix Oresteae umet species mediis!
-*Delapsam* detraxit urbe cortice vitta *senecta*?
+-------------------------------------------------------------------------------------
+
+<!-- qui ci vanno gli elenchi -->
+## Elenchi
+
+(prima di ogni elenco... salta una riga!!!)
+
+1. primo
+2. secondo
+3. contorno
+4. dolce
+    1. pasticcini
+    2. gelato
+5. caffè
+
+
+Elenchi non numerati
+
+- asso
+- fante
+    - forbici
+    - scotch
+- gino
+- pino
+
+-------------------------------------------------------------------------------------
+
+## Immagini
+
+<!-- ![alt text](Image_URL "Image Title") -->
+
+    ![Python Logo](https://www.python.org/static/img/python-logo.png "Python Logo")
+
+diventa
+
+![Python Logo](https://www.python.org/static/img/python-logo.png "Python Logo")
+
+-------------------------------------------------------------------------------------
+
+## Links
+
+    [Home](https://pyhandouts.readthedocs.io/it/latest/)
+
+diventa
+
+[Home](https://pyhandouts.readthedocs.io/it/latest/)
+
+
+    [Elenchi](#elenchi)
+    
+diventa
+
+[Elenchi](#elenchi)
+
+
+    [Scrivimi](mailto:ciccio@pippo.com)
+
+diventa
+
+[Scrivimi](mailto:ciccio@pippo.com)
+
+
+    <a href="https://www.adjam.org" target="_blank">adjam site</a>
+
+diventa
+
+<a href="https://www.adjam.org" target="_blank">adjam site</a>
+
+
+-------------------------------------------------------------------------------------
+
+## Enfatizzare il testo
+
+    **Grassetto**
+    
+diventa
+
+**Grassetto**
+
+
+    *Corsivo*
+    
+diventa
+
+*Corsivo*
+
+
+    ***Grassetto e Corsivo***
+
+diventa
+
+***Grassetto e Corsivo***
+
+-------------------------------------------------------------------------------------
+
+## Codice
+
+Riga di codice inline: ``nome = input("Come ti chiami? ")``
+
+Blocco di codice
+
+    nome = input("Come ti chiami? ")
+    print("Ah... ti chiami",nome)
+    print("Io mi chiamo Mario")
+
+
+-------------------------------------------------------------------------------------
+
+## Righe orizzontali
+
+    una linea vuota prima ...
+
+    --- (almeno 3 lineette)
+
+    ... e una riga vuota dopo!
+
+Il risultato si vede prima di ogni titolo
+
+
+-------------------------------------------------------------------------------------
+
+## blockquotes
+
+    > questo è un blocco evidenziato
+    > di più righe insieme
+        
+diventa
+
+> questo è un blocco evidenziato
+> di più righe insieme
+
+
+-------------------------------------------------------------------------------------
+
+## admonitions
+
+!!! note "Nota con titolo"
+    Questa è una nota
+
+    
+!!! warning
+    Questo è un avvertimento
+
+    
+!!! todo
+    Questa è una informazione
+
+    
+!!! tip
+
+    Questo è un suggerimento
+
+    
+!!! Error
+
+    Questo è un errore
+
