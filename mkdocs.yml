@@ -7,17 +7,40 @@ theme:
   custom_dir: mkdocs2/
 
 nav:
-  - Home: index.md
   - Basics:
-    - Intro: basics/00_basics.md
-    - Variabili: basics/01_var.md
-    - Alternanza: basics/02_alt.md
-    - Ripetizione: basics/03_iter.md
-    - Sequenze: basics/04_seq.md
-    - Funzioni: basics/05_funz.md
-    - Moduli: basics/06_mod.md
-    - Files: basics/07_files.md
+    - Intro: basics/000_first.md
+    - Installazione: basics/001_install.md
+    - Prime cose: basics/100_basics.md
+    - Variabili: basics/101_var.md
+    - Alternanza: basics/102_alt.md
+    - Ripetizione: basics/103_iter.md
+    - Sequenze: basics/104_seq.md
+    - Funzioni: basics/105_funz.md
+    - Moduli: basics/106_mod.md
+    - Files: basics/107_files.md
+    - Files: basics/108_csv.md
   - OOP: OOP.md
+  - wxPython:
+    - intro: wx/000_intro.md
+    - install: wx/001_install.md
+    - first things: wx/101_first_things.md
+    - events: wx/102_events.md
+    - widgets: wx/110_widgets.md
+    - exercizes (base): wx/115_base_ex.md
+    - layout: wx/120_layout.md
+    - exercizes (layout): wx/122_layout_ex.md
+    - exercizes (full): wx/125_full_ex.md
+    - dialogs: wx/130_dialogs.md
+    - images: wx/132_images.md
+    - timer(s): wx/135_timer.md
+    - full GUI: wx/140_full_gui.md
+    - exercizes (GUI): wx/143_full_gui_ex.md
+    - advanced: wx/150_advanced.md
+    - network: wx/160_network.md
+    - classes: wx/201_classes.md
+    - tools (wxpydocs): wx/291_tools_wxdocs.md
+    - tools (wxdemo): wx/292_tools_wxdemo.md
+    - tools (wit): wx/293_tools_wit.md
   - Insights:
     - pip: insights/01_pip.md
     - venv: insights/02_venv.md
@@ -26,7 +49,9 @@ nav:
     - Eseguibili: insights/05_script_to_exe.md
     - Scipy: insights/06_scipy.md
     - Arduino: insights/07_arduino.md
-  - wxPython: about.md
+    - MySql: insights/08_mysql.md
+    - Flask: insights/09_Flask.md
+    - Reals: insights/10_reals.md
   - About: about.md
 
 markdown_extensions:
