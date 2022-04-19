@@ -28,7 +28,6 @@ body > .container {
 
 .navbar.fixed-top { /* csslint allow: adjoining-classes */
     /* csslint ignore:start */
-    position: -webkit-sticky;
     position: sticky;
     /* csslint ignore:end */
 }
@@ -46,6 +45,13 @@ body > .container {
     border: 1px solid #ddd;
     border-radius: 4px;
     margin: 20px auto 30px auto;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/* better divide chapters by "spacing" titles */
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 20px
 }
 
 h1 {
@@ -100,7 +106,6 @@ kbd {
     color: #fff;
     background-color: #333;
     border-radius: 3px;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
     box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
 }
 
@@ -123,6 +128,7 @@ footer {
     margin-top: 60px;
 }
 
+/* ------------------------------------------------------------------------------------ */
 /*
  * Side navigation
  *
@@ -132,7 +138,6 @@ footer {
 
 .bs-sidebar.affix { /* csslint allow: adjoining-classes */
     /* csslint ignore:start */
-    position: -webkit-sticky;
     position: sticky;
     /* csslint ignore:end */
     /* The nav header is 3.5rem high, plus 20px for the margin-top of the
@@ -148,18 +153,10 @@ footer {
 
 /* Toggle (vertically flip) sidebar collapse icon */
 .bs-sidebar .navbar-toggler span {
-    -moz-transform: scale(1, -1);
-    -webkit-transform: scale(1, -1);
-    -o-transform: scale(1, -1);
-    -ms-transform: scale(1, -1);
     transform: scale(1, -1);
 }
 
 .bs-sidebar .navbar-toggler.collapsed span { /* csslint allow: adjoining-classes */
-    -moz-transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-    -o-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
 }
 
@@ -213,6 +210,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     display:inline-block;
 }
 
+/* ------------------------------------------------------------------------------------ */
 
 
 .admonition {
@@ -252,6 +250,17 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     font-weight: bold;
     text-align: left;
 }
+
+/* added by me (adjam) on 2022-04-19 */
+blockquote {
+    border-left: 10px solid #7A818A;
+    background: #DFDFDF;
+    padding: 10px;
+    font-size: 1.25em;
+    border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------------------------ */
 
 @media (max-width: 991.98px) {
     .navbar-collapse.show { /* csslint allow: adjoining-classes */
@@ -323,3 +332,4 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     /* Remove sidebar when print */
     .col-md-3 { display: none; }
 }
+

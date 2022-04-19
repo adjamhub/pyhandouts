@@ -7,8 +7,11 @@
     fase di sviluppo vi prego (più del solito) di segnalare sempre cose che
     non capite bene, eventuali refusi nella scrittura e tutto quello che vi
     viene in mente :)
+    
+    Grazie.
 
-Grazie.
+> Questa è solo una prova!
+> Questa roba... è **tutta** da riscrivere!!!
 
 Questa documentazione, oltre che usufruibile online, è disponibile in
 diversi formati: **PDF, ePUB, SingleHTML, etc.** Per scaricare il
