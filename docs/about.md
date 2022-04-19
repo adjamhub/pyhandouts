@@ -165,12 +165,12 @@ Il risultato si vede prima di ogni titolo
 
 ## blockquotes
 
-    > questo è un blocco evidenziato
+    > questo è un blocco evidenziato<br>
     > di più righe insieme
         
 diventa
 
-> questo è un blocco evidenziato
+> questo è un blocco evidenziato<br>
 > di più righe insieme
 
 
@@ -178,18 +178,67 @@ diventa
 
 ## admonitions
 
+
+**Note**
+
+    !!! note "Nota con titolo"
+        Questa è una nota
+
+Diventa
+
 !!! note "Nota con titolo"
     Questa è una nota
 
-    
+
+**Avvertimenti**
+
+    !!! warning
+        Questo è un avvertimento
+
+Diventa
+
 !!! warning
     Questo è un avvertimento
 
-    
+
+**Suggerimenti**
+
+    !!! tip
+        Questo è un suggerimento
+
+Diventa
+
 !!! tip
     Questo è un suggerimento
 
-    
+
+**Errori**
+
+    !!! danger
+        Questo è un errore
+
+Diventa
+
 !!! danger
     Questo è un errore
+
+
+-------------------------------------------------------------------------------------
+
+## Tabelle
+
+Tabelle semplici
+
+    | Item         | Price     | # In stock |
+    |--------------|-----------|------------|
+    | Juicy Apples | 1.99      | *7*        |
+    | Bananas      | **1.89**  | 5234       |
+    
+Diventa
+
+| Item         | Price     | # In stock |
+|--------------|-----------|------------|
+| Juicy Apples | 1.99      | *7*        |
+| Bananas      | **1.89**  | 5234       |
+
 

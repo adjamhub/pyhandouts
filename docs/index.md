@@ -1,12 +1,12 @@
 # Python Course
 
-!!! Note
+!!! warning "Attenzione!"
 
     La documentazione qui presente rappresenta una parte del materiale
-    necessario per il corso di Informatica del prof. Essendo un lavoro in
-    fase di sviluppo vi prego (più del solito) di segnalare sempre cose che
-    non capite bene, eventuali refusi nella scrittura e tutto quello che vi
-    viene in mente :)
+    necessario per il corso di Informatica del prof.<br>
+    Essendo un lavoro in fase di sviluppo vi prego (più del solito) di segnalare 
+    ***sempre*** cose che non capite bene, eventuali refusi nella scrittura e tutto 
+    quello che vi viene in mente :)
     
     Grazie.
 
