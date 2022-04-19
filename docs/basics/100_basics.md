@@ -99,8 +99,7 @@ Visualizzare sullo schermo la scritta seguente:
 Ciao, mi chiamo Pinco Pallino
 ```
 
-::: line
-:::
+----------------------------------------------------------------------------
 
 **Esercizio 2**
 
@@ -113,8 +112,7 @@ mi chiamo
 Pinco Pallino
 ```
 
-::: line
-:::
+----------------------------------------------------------------------------
 
 **Esercizio 3**
 
@@ -126,3 +124,4 @@ Visualizzare sullo schermo il seguente disegno:
 +     +
 + + + +
 ```
+

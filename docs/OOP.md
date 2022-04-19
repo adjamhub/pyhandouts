@@ -304,8 +304,7 @@ nascita, sesso (M/F). La funzione di \_\_init\_\_ della classe non deve
 avere argomenti. Definite un maschio e una femmina della classe a libera
 scelta.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 702**
 
@@ -315,8 +314,7 @@ del perimetro. Definire un oggetto della classe TriangoloRettangolo con
 cateti uguali a 4 cm e 3 cm, visualizzare i suoi attributi e calcolare
 l'ipotenusa, l'area e il perimetro.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 703**
 
@@ -325,8 +323,7 @@ metodo \"corri\" (ritorna la stringa \"sto correndo\...\") e \"mangia\"
 (ritorna la stringa \"sto mangiando\"). Definire un cane di nome
 \"Piero\" e farlo correre e mangiare. Visualizzare i suoi attributi.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 704**
 
@@ -340,8 +337,7 @@ persone: \"Augusto\", maschio di 47 anni e \"Marianna\", femmina di 44
 anni. Utilizzare i metodi \"invecchia\" e \"saluta\" per entrambi,
 procedere poi a visualizzare gli attributi di entrambi.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 705**
 
@@ -358,8 +354,7 @@ in esso 1000 euro. Prelevare 600 euro per 2 volte. La seconda volta
 l'operazione dovrebbe fallire. Visualizzare dopo ogni operazione i
 valori dell'oggetto con la funzione print().
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 706**
 
@@ -374,8 +369,7 @@ con parametro a piacere e provare a \"criptare\" e \"decriptare\" una
 stringa, verificando che la stringa decriptata è uguale a quella
 inserita prima di essere criptata.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 707**
 
@@ -404,8 +398,7 @@ Definire un oggetto della classe Automobile e progettare un test in modo
 che ognuna delle funzioni venga eseguita almeno 2 volte, una ritornando
 True, una ritornando False.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 708**
 
@@ -415,8 +408,7 @@ minore, la base maggiore e l'altezza del Trapezio. Definire i metodi
 TrapezioRettangolo e procedere a visualizzare i suoi parametri, la sua
 area e il suo perimetro.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 709**
 
@@ -431,8 +423,7 @@ aggiungoTempo(1,2,3) l\'orario diventa le 04:16:25. Attenzione a quando
 \"mattina\" se orario è fra le 8 e le 13, \"pomeriggio\" se fra 13 e 20,
 \"sera\" fra 20 e 23, \"notte\" altrimenti
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 710**
 
@@ -451,8 +442,7 @@ fa una spesa di 300€. In seguito, il primo cliente fa una spesa pari a
 per ritirare un premio. Il secondo cliente chiede di utilizzare 50 dei
 punti accumulati.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 711**
 
@@ -483,8 +473,7 @@ a centrocampista (con \"C\"). Utilizzare la funzione cambiaNumero per
 modificare il suo numero a 7 (se avete implementato la parte opzionale,
 dovrebbe fallire) e poi a 11.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 712**
 
@@ -691,8 +680,7 @@ e il risultato dei metodi area e perimetro.
 Dichiarare un oggetto Cubo di lato 4, visualizzando i suoi attributi e
 il risultato dei metodi area e volume.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 722**
 
@@ -719,8 +707,7 @@ Definire il docente \"Francesca\", di anni 31. Testare i metodi saluta,
 invecchia (ridefinito) e il metodo insegna con le materie \"diritto\" e
 \"inglese\". Visualizzare infine gli attributi della classe.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 723**
 
@@ -739,8 +726,7 @@ Definire il Punto3D di coordinate (4,5,6), visualizzare i suoi attributi
 ed eseguire le funzioni distanzaDalCentro e distanzaDalPunto. Per
 quest'ultima funzione definire il Punto3D di coordinate (1,1,2).
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 724**
 
@@ -752,8 +738,7 @@ Derivare da essa la classe Sfera.
 Definire un cerchio di raggio 5, di cui calcolare area e circonferenza.
 Definire una sfera di raggio 3, di cui calcolare area e volume.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 725**
 
@@ -777,8 +762,7 @@ Definire il seguente contatto di lavoro:
 -   Alessandro (detto \"Alex\"), numero +39-345-6789012, mail
     <alex@mail.com>, fax +39-0721-098765, partitaIVA 1234567890A
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 726**
 
@@ -793,8 +777,7 @@ fino ad un massimo del 50% di sconto sul prezzo di noleggio. Definire
 una funzione \"noleggiaFilm\" che aggiunge un noleggio all'abbonato,
 eventualmente aggiornando le informazioni dell'abbonato.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 727**
 
@@ -949,8 +932,7 @@ diverso e minore o uguale.
 
 Dichiarare almeno 3 frazioni con cui testare le funzioni implementate.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 742**
 
@@ -964,8 +946,7 @@ minore di un altro se la sua area è minore. Dichiarare 2 rettangoli e
 procedete a testare le operazioni aritmetiche e di confronto
 implementate.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 743**
 
@@ -983,8 +964,7 @@ Definire i numeri reali: 4.5 , -7.2 , 9.1 Testare le funzioni
 implementate. Definire i numeri complessi: 4 + 5i , -7 + 3i Testare le
 funzioni implementate.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 744**
 

@@ -16,8 +16,7 @@ contiene un pulsante \"Toggle\". Quando clicchi il pulsante, il titolo
 diventa *Pippo*, quando lo clicchi di nuovo ritorna ad essere *Ciccio* e
 così via.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 102 (Button, StaticText, TextCtrl)**
 
@@ -26,16 +25,14 @@ inizialmente vuota, una TextCtrl e un pulsante. Quando l\'utente clicca
 sul pulsante, il testo contenuto nella TextCtrl viene copiato nella
 StaticText e la TextCtrl ripulita.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 103 (Button)**
 
 Creare una applicazione con un pulsante *CHIUDI*. Quando lo clicchi,
 l\'applicazione si chiude.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 104 (RadioButton, StaticText)**
 
@@ -45,8 +42,7 @@ bus, etc.. Sotto a questo, un\'altra StaticText, che alla selezione di
 un mezzo di trasporto selezionerà la scritta: *vieni a scuola in
 MEZZODITRASPORTO*.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 105 (TextCtrl, RadioButton, Button, StaticText)**
 
@@ -61,8 +57,7 @@ il pulsante viene cliccato fra le 6 e le 14, si utilizza *Buongiorno*,
 fra le 14 e le 22 si scrive *Buonasera*, fra le 22 e le 6 si scrive
 *Buonanotte*.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 106 (TextCtrl, RadioButton, Button)**
 
@@ -71,8 +66,7 @@ di parole separate da virgola nella TextCtrl e quando preme il pulsante
 appare un RadioButton con le opzioni indicate nella TextCtrl e separate
 da virgole.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 107 (StaticText, CheckBox)**
 
@@ -80,8 +74,7 @@ Serie di 5 CheckBox con una selezione di cibi (es: pasta, pizza,
 etc\...). Man mano che l\'utente seleziona cibi la StaticText sotto alle
 CheckBox si aggiorna mostrando tutti i cibi selezionati.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 108 (StaticText, CheckBox)**
 
@@ -90,8 +83,7 @@ testo delle CheckBox selezionate ma il numero di queste. Ad esempio
 all\'inizio vi sarà scritto \"0 CheckBox selezionate\" e il numero
 crescerà o diminuirà a seconda che vengono attivate o no le CheckBox.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 109 (Button, CheckBox)**
 
@@ -103,8 +95,7 @@ abilitato, altrimenti è disabilitato. Fate attenzione a sincronizzare la
 spunta sulla CheckBox con l\'abilitazione del pulsante corrispondente e
 viceversa.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 110 (TextCtrl, Button, ComboBox)**
 
@@ -114,8 +105,7 @@ inserisce una stringa nella TextCtrl e se non è vuota, quando clicca il
 pulsante quella stringa viene aggiunta come opzione alla ComboBox e la
 TextCtrl ripulita.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 111 (Frame, ComboBox)**
 
@@ -123,8 +113,7 @@ la finestra presenta una ComboBox con opzioni \'600x400\', \'800x600\',
 \'massimizza\'. Quando l\'utente seleziona una delle opzioni la finestra
 si ridimensiona secondo quanto indicato.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 112 (Frame, ComboBox, CheckBox)**
 
@@ -137,8 +126,7 @@ venendo spuntata oppure no a seconda del suo stato precedente.
 PS: se non avete pensato ad usare un dizionario\... beh\... ricominciate
 a pensare!
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 113 (SpinCtrl, Button, StaticText)**
 
@@ -146,8 +134,7 @@ Inserite nella finestra una SpinCtrl per inserire un intero fra 1 e 10.
 Quando si clicca il pulsante nella StaticText sotto appare il countdown
 dal numero selezionato fino a zero.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 114 (ComboBox, TextCtrl, Button)**
 
@@ -156,8 +143,7 @@ un Button. L\'utente digita qualcosa nella TextCtrl e quando clicca il
 pulsante, se la TextCtrl non è vuota, aggiunge la parola alla ComboBox e
 pulisce la TextCtrl.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 115 (TextCtrl, Button)**
 
@@ -166,16 +152,14 @@ l\'utente clicca il pulsante, il programma carica dal file *dati.txt*
 presente nella stessa cartella il contenuto e lo visualizza nella
 TextCtrl.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 116 (Slider, StaticText)**
 
 Inserite nella finestra uno Slider che va da 1 a 10 e aggiungete una
 StaticText che visualizza il suo valore aggiornato in tempo reale.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 117 (TextCtrl, Button, Slider)**
 
@@ -183,8 +167,7 @@ Inserite nella finestra due coppie TextCtrl/Button. La prima coppia
 decide il valore minimo dello Slider, la seconda coppia il valore
 massimo. I pulsanti aggiornano lo stato dello Slider.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 118 (Slider, Button)**
 
@@ -193,8 +176,7 @@ per la larghezza e uno verticale che va da 100 a 500 per l\'altezza.
 L\'utente muove gli slider a piacimento e quando clicca il pulsante si
 modifica la dimensione della finestra.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 119 (ListBox, Button, StaticText)**
 
@@ -203,8 +185,7 @@ possibilità di selezionarne contemporaneamente più di una. Quando
 l\'utente clicca il pulsante nella StaticText vengono visualizzate tutte
 le voci selezionate, separate da virgola.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 120 (ListBox, TextCtrl, Button)**
 
@@ -213,8 +194,7 @@ un pulsante. L\'utente digita qualcosa nella TextCtrl e quando clicca il
 pulsante, se la TextCtrl non è vuota, aggiunge la parola alla ListBox e
 pulisce la TextCtrl.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 **Esercizio 121 (ListBox, Button)**
 

@@ -18,8 +18,7 @@ Buona lettura!
 
 :   Gestisce le applicazioni con GUI implementate tramite wxPython.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 [wx.Frame](https://docs.wxpython.org/wx.Frame.html)
 
@@ -30,8 +29,7 @@ Buona lettura!
 
 :   Pannello utile per organizzare il layout.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 [wx.Button](https://docs.wxpython.org/wx.Button.html)
 
@@ -83,8 +81,7 @@ Buona lettura!
 :   Decorazione per raggruppare le widget. Utile per organizzare il
     layout.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 [wx.BoxSizer](https://docs.wxpython.org/wx.BoxSizer.html)
 
@@ -107,8 +104,7 @@ Buona lettura!
 
 :   Contenitore a tabella con spanning
 
-::: line
-:::
+--------------------------------------------------------------------
 
 [wx.MessageDialog](https://docs.wxpython.org/wx.MessageDialog.html)
 
@@ -140,8 +136,7 @@ Buona lettura!
 :   Classe ausiliaria alla FontDialog. Contiene le informazioni
     necessarie ad essa.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 [wx.Bitmap](https://docs.wxpython.org/wx.Bitmap.html)
 
@@ -159,8 +154,7 @@ Buona lettura!
 
 :   Classe per individuare file multimediali predefiniti.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 [wx.Timer](https://docs.wxpython.org/wx.Timer.html)
 
@@ -174,8 +168,7 @@ Buona lettura!
 
 :   Barra di avanzamento.
 
-::: line
-:::
+--------------------------------------------------------------------
 
 [wx.MenuBar](https://docs.wxpython.org/wx.MenuBar.html)
 
@@ -206,3 +199,5 @@ Buona lettura!
 
 :   Classe per il salvataggio delle impostazioni su file INI (coppie
     VARIABILE=VALORE)
+
+

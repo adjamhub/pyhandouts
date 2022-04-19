@@ -125,8 +125,7 @@ Implementare una semplice finestra con un\'unica etichetta che
 visualizza un orologio funzionante (che scorre) con ore, minuti,
 secondi.
 
-::: line
-:::
+----------------------------------------------------------------------------------
 
 **Esercizio 382 (cronometro)**
 
@@ -138,8 +137,7 @@ di secondo e tre pulsanti per le funzioni START, STOP, RESET.
 -   STOP lo ferma.
 -   RESET lo (ri)imposta a ZERO
 
-::: line
-:::
+----------------------------------------------------------------------------------
 
 **Esercizio 383 (semaforo)**
 
