@@ -30,14 +30,15 @@ britannico attivo negli anni settanta. Per rendervi conto della
 YouTube ottenuto cercando *Monty Python ita*. Dura 84 minuti. Io non ho
 superato il minuto 4\...
 
+<!--
 ::: youtube
 S04V_mW5v0I
 :::
+-->
 
 ## Breve Storia
 
-![Guido Von Rossum](images/GuidoVonRossum.jpg){.align-right
-width="300px"}
+![Guido Von Rossum](images/GuidoVonRossum.jpg)
 
 Come già citato, Python nasce negli anni novanta, grazie al suo
 [Benevolent Dictator For
@@ -162,23 +163,21 @@ Python, per massimizzare i punti a favore e ottenere il miglior
 comportamento possibile, può utilizzare un approccio *misto*,
 sbilanciato dalla parte dell'interpretazione:
 
-::: note
-::: title
-Note
-:::
+!!! note
 
-L'interprete Python, alla prima esecuzione del codice, fa una sorta di
-*compilazione*, generando un programma (bytecode, estensione .pyc) non
-direttamente eseguibile dal dispositivo, ma direttamente eseguibile
-dalla parte dell'interprete preposta allo scopo: la macchina virtuale.
+    L'interprete Python, alla prima esecuzione del codice, fa una sorta di
+    *compilazione*, generando un programma (bytecode, estensione .pyc) non
+    direttamente eseguibile dal dispositivo, ma direttamente eseguibile
+    dalla parte dell'interprete preposta allo scopo: la macchina virtuale.
 
-In questo modo, dalla seconda esecuzione in poi, la velocità della
-stessa sarà paragonabile (in molti casi identica) a quella dei linguaggi
-compilati.
-:::
+    In questo modo, dalla seconda esecuzione in poi, la velocità della
+    stessa sarà paragonabile (in molti casi identica) a quella dei linguaggi
+    compilati.
+
 
 ![image](images/python_compiler_virtual_machine.png)
 
 Tutto il processo descritto è completamente automatico: il programmatore
 non deve far altro che scrivere codice e testarne l'esecuzione
 nell'ambiente adatto.
+
