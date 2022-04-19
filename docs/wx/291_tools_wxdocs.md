@@ -1,6 +1,4 @@
----
-title: wxdocs
----
+# wxdocs
 
 La libreria wxPython fornisce alcuni semplici strumenti di supporto alla
 programmazione. Il primo che andiamo ad incontrare è il tool denominato

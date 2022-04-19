@@ -1,6 +1,4 @@
----
-title: Dialogs
----
+# Dialogs
 
 Le finestre di dialogo sono strumenti indispensabili della
 programmazione con GUI attuale. Esse permettono una comunicazione
@@ -8,19 +6,16 @@ bidirezionale fra l\'applicazione e l\'utente con la prima che tramite
 esse mostra all\'ultimo informazioni ritenute importanti o richiede
 scelte senza le quali non si può procedere oltre.
 
-::: tip
-::: title
-Tip
-:::
+!!! tip "Suggerimento"
 
-La caratteristica delle finestre che le porta ad essere considerate
-finestre di dialogo è quella di essere finestre **modali**, ovvero
-finestre che si sovrappongono alle finestre principali e non possono in
-alcun modo essere ignorate.
+    La caratteristica delle finestre che le porta ad essere considerate
+    finestre di dialogo è quella di essere finestre **modali**, ovvero
+    finestre che si sovrappongono alle finestre principali e non possono in
+    alcun modo essere ignorate.
 
-Questa condizione si ottiene utilizzando in una finestra la funzione
-**ShowModal()** al posto della classica funzione **Show()**.
-:::
+    Questa condizione si ottiene utilizzando in una finestra la funzione
+    **ShowModal()** al posto della classica funzione **Show()**.
+
 
 Esempi banali di finestre di dialogo sono la finestra di errore, la
 finestra di selezione file, quella per selezionare i font oppure i

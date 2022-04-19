@@ -1,6 +1,4 @@
----
-title: Esercizi strutturati
----
+# Esercizi strutturati
 
 Negli esercizi che seguono dovete implementare layout e funzionalità:
 nessuno di questi è un esercizio banale, ma sono tutti più che fattibili

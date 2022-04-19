@@ -1,6 +1,4 @@
----
-title: Timer(s)
----
+# Timer(s)
 
 I Timer sono oggetti molto comuni in ogni libreria OOP. Per la scansione
 del tempo si appoggiano tipicamente al clock di sistema, che

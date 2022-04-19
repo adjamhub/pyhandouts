@@ -1,6 +1,4 @@
----
-title: widget inspection tool
----
+# widget inspection tool
 
 La libreria wxPython fornisce uno strumento molto interessante per
 l\'analisi delle widget in fase di creazione: lo **Widget Inspection

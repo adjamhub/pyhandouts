@@ -1,6 +1,4 @@
----
-title: Classi wxPython
----
+# Classi wxPython
 
 La documentazione ufficiale della libreria **wxPython** è disponibile
 online (in versione integrale) all\'indirizzo

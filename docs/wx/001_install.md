@@ -1,6 +1,4 @@
----
-title: Installazione
----
+# Installazione
 
 La libreria wxPython è una libreria OOP Python in tutto e per tutto. La
 trovate come tantissime altre sul **Python Package Index**

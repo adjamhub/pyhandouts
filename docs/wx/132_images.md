@@ -1,6 +1,4 @@
----
-title: Immagini
----
+# Immagini
 
 Per imparare a gestire, visualizzare, modificare immagini con wxPython
 abbiamo bisogno di discutere alcune caratteristiche della libreria e di
@@ -17,22 +15,18 @@ modalità di lavoro con le immagini con wxPython a seconda che si voglia:
     (solo durante la visualizzazione) o in maniera permanente, salvando
     quindi le modifiche fatte all\'immagine.
 
-::: warning
-::: title
-Warning
-:::
+!!! warning "Attenzione!"
 
-Per elaborare le immagini e supportare il numero più alto possibile di
-formati per le immagini, la libreria wxPython si appoggia sulla libreria
-*Pillow* (Python Image Library). Questa dovrebbe essere stata installata
-durante l\'installazione di wxPython. Se vi accorgete di qualche
-problema legato ad essa e pensate che per qualche motivo manchi nel
-vostro sistema, potete installarla con un bel:
+    Per elaborare le immagini e supportare il numero più alto possibile di
+    formati per le immagini, la libreria wxPython si appoggia sulla libreria
+    *Pillow* (Python Image Library). Questa dovrebbe essere stata installata
+    durante l\'installazione di wxPython. Se vi accorgete di qualche
+    problema legato ad essa e pensate che per qualche motivo manchi nel
+    vostro sistema, potete installarla con un bel:
 
-``` bash
-$ pip3 install -U pillow
-```
-:::
+    ``` bash
+    $ pip3 install -U pillow
+    ```
 
 Cominciamo la nostra disamina sulle classi wxPython per la
 visualizzazione e la manipolazione delle immagini. Le prime classi che

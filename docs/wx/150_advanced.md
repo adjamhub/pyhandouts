@@ -1,8 +1,6 @@
----
-title: Caratteristiche avanzate
----
+# Caratteristiche avanzate
 
-# Widgets
+## Widgets
 
 -   wx.ListCtrl
 
@@ -35,6 +33,6 @@ title: Caratteristiche avanzate
     > -   orologio
     > -   agenda
 
-# Printing support
+## Printing support
 
 esempio già preparato

@@ -1,6 +1,5 @@
----
-title: Introduzione a wxPython
----
+
+# Introduzione a wxPython
 
 **wxPython** (<https://wxpython.org/>) è una libreria grafica open
 source, adatta alla creazione di GUI (interfacce grafiche) per sistemi

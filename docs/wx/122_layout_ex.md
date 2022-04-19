@@ -1,6 +1,4 @@
----
-title: Esercizi sul layout
----
+# Esercizi sul layout
 
 Alcuni esercizi in cui ricostruire il layout dell\'immagine proposta.
 

@@ -1,6 +1,4 @@
----
-title: Gestione degli eventi
----
+# Gestione degli eventi
 
 Una volta iniziato il Main Event Loop le applicazioni wxPython sono in
 grado di intercettare gli eventi utente, come ad esempio un click su un

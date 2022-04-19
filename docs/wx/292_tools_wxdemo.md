@@ -1,6 +1,4 @@
----
-title: wxdemo
----
+# wxdemo
 
 La libreria wxPython fornisce una serie incredibile di esempi di codice
 ben documentato per imparare dagli esempi come si implementano

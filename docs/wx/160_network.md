@@ -1,6 +1,4 @@
----
-title: Network
----
+# Network
 
 Blah blah
 

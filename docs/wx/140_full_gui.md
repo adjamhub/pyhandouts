@@ -1,6 +1,4 @@
----
-title: GUI complete
----
+# GUI complete
 
 In questo capitolo cercheremo di introdurre tutti quegli elementi
 grafici che completano una GUI moderna: barra dei menù, azioni, icone,

@@ -1,22 +1,17 @@
----
-title: "Le widgets :)"
----
+# Le widgets :)
 
-::: warning
-::: title
-Warning
-:::
+!!! warning "Attenzione!"
 
-Negli esempi che seguono, scritti con l\'unico obiettivo di presentare
-le widget, andremo a posizionare più oggetti nella stessa finestra
-tramite il cosiddetto **posizionamento assoluto**, inserendo tutte le
-widget in un **wx.Panel** e indicando **posizione (pos)** e **dimensione
-(size)** degli oggetti.
+    Negli esempi che seguono, scritti con l\'unico obiettivo di presentare
+    le widget, andremo a posizionare più oggetti nella stessa finestra
+    tramite il cosiddetto **posizionamento assoluto**, inserendo tutte le
+    widget in un **wx.Panel** e indicando **posizione (pos)** e **dimensione
+    (size)** degli oggetti.
 
-Questo modo di fare, pur semplice e intuitivo, è comunque assolutamente
-sconsigliato e sarà sostituito nel prossimo capitolo da un concetto
-molto più avanzato e funzionale.
-:::
+    Questo modo di fare, pur semplice e intuitivo, è comunque assolutamente
+    sconsigliato e sarà sostituito nel prossimo capitolo da un concetto
+    molto più avanzato e funzionale.
+
 
 In questa sezione andremo ad inserire le Widgets più semplici, per
 capire come sono fatte e come funzionano. Per ognuna di esse sarà
