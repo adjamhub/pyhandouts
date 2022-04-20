@@ -37,7 +37,10 @@ python e sono sempre disponibili per la versione a cui si riferiscono.
 Facciamo una prova per capire il (semplice) funzionamento di un ambiente
 virtuale
 
+
+#################################################################################
 # Gestire un ambiente virtuale
+
 
 Un ambiente virtuale si crea con il modulo venv che fa parte della
 libreria standard di Python 3, dalla versione 3.4 in avanti. La scelta
@@ -58,7 +61,9 @@ procediamo alla creazione dello stesso
 
 Per creare l'ambiente virtuale
 
-\$ python -m venv Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
+
+    $ python -m venv Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
+
 
 Dopo un paio di secondi, l'ambiente virtuale è pronto!
 
@@ -75,15 +80,17 @@ e Linux si trovano dentro la cartella "bin".
 
 Per attivare l'ambiente virtuale, su Windows
 
-\> cd Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
 
-\> Scripts/activate.bat
+    > cd Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
+    > Scripts/activate.bat
+
 
 Per attivare l'ambiente virtuale, su Mac o Linux
 
-\$ cd Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
 
-\$ source bin/activate
+    $ cd Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
+    $ source bin/activate
+
 
 Ovviamente, in maniera analoga alle istruzioni per l'attivazione, lo
 script "deactivate" disattiva l'ambiente virtuale creato.
@@ -94,14 +101,16 @@ tra l'ambiente fisico e quello virtuale.
 
 Ecco una schermata del mio computer.
 
-![](Pictures/1000000000000320000001BA42B9D339B37B976E.jpg){width="17.59cm"
-height="9.28cm"}
+![system vs virtual pip](images/pipVSvirtualpip.jpg)
 
 Tutto qui!
 
 Basta provare un paio di volte.
 
-# Lavorare con un ambiente virtuale
+
+#################################################################################
+## Lavorare con un ambiente virtuale
+
 
 Ok, siamo in grado di creare e attivare un ambiente virtuale. E adesso?
 Cosa ci facciamo? Gli ambienti virtuali sono un grandissimo aiuto quando
@@ -117,15 +126,19 @@ Il progetto sarà basato su skyfield e astropy, che sono due moduli
 python utilizzati per i calcoli astronomici. All'interno del suo
 ambiente virtuale installa i moduli a lui necessari:
 
-(TestAmbientiVirtuali) \$ pip install skyfield astropy
+
+    (TestAmbientiVirtuali) \$ pip install skyfield astropy
+
 
 A questo punto, si crea una cartella che chiamerà "StarsTrips" e
 utilizzerà i due moduli citati per scrivere il codice necessario per il
 suo obiettivo.
 
-(TestAmbientiVirtuali) \$ cd StarsTrips
 
-... ore di coding, parolacce, merende varie ...
+    (TestAmbientiVirtuali) $ cd StarsTrips
+
+    ... ore di coding, parolacce, merende varie ...
+
 
 Terminato il suo lavoro, nella cartella StarsTrips ci sarà la sua
 fantastica applicazione: per permettere a chiunque di eseguire
@@ -137,7 +150,9 @@ StarsTrips:
 Elenca i moduli installati nell'ambiente virtuale scrivendoli nel file
 "requirements.txt"
 
-(TestAmbientiVirtuali) \$ pip freeze \> requirements.txt
+
+    (TestAmbientiVirtuali) $ pip freeze > requirements.txt
+
 
 Questo comando crea un file chiamato "requirements.txt" che elenca tutti
 i moduli installati nel nostro ambiente virtuale. Fatto questo, lo
@@ -149,8 +164,11 @@ Lo sviluppatore 2, che vuole testare il lavoro del suo amico/collega,
 prende la cartella StarsTrips, crea un ambiente virtuale, lo attiva e lì
 esegue il comando:
 
-(NuovoAmbienteVirtuale) \$ pip install --r requirements.txt
+
+    (NuovoAmbienteVirtuale) $ pip install --r requirements.txt
+
 
 Questo comando installa tutti i moduli python elencati nel file
 requirements.txt. A questo punto lo sviluppatore 2 è pronto per testare
 il lavoro importato.
+

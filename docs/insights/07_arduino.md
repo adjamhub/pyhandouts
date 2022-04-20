@@ -95,19 +95,16 @@ schermo. Vediamo il codice:
 
 Su **Arduino**:
 
-*void* *setup() {*
 
-* Serial.begin(9600);*
+    void setup() {
+        Serial.begin(9600);
+    }
 
-*}*
+    void loop() {
+        Serial.print("Funziona!!!");
+        delay(2000);
+    }
 
-*void* *loop() {*
-
-* Serial.print(\"Funziona!!!\");*
-
-* delay(2000);*
-
-*}*
 
 Tramite l'ambiente di sviluppo, creare un nuovo progetto, copiare il
 codice sovrastante in esso e "passarlo" al proprio Arduino.
@@ -117,13 +114,10 @@ Sul **Computer** con **Python**:
     import serial
     import time
 
-    \# Va individuata la porta seriale abbinata ad Arduino
-
-    \# Aiutatevi con Arduino IDE
-
-    \# Su Win, dovrebbe essere una "COMx" (con x che può essere 1,2,3,4)
-
-    \# Su Mac/Linux, dovrebbe essere "/dev/ttyACMx" (con x che va da 0 a...)
+    # Va individuata la porta seriale abbinata ad Arduino
+    # Aiutatevi con Arduino IDE
+    # Su Win, dovrebbe essere una "COMx" (con x che può essere 1,2,3,4)
+    # Su Mac/Linux, dovrebbe essere "/dev/ttyACMx" (con x che va da 0 a...)
 
     portaSeriale = "boh"
     ad = serial.Serial(portaSeriale, 9600)
@@ -188,7 +182,7 @@ Codice Python
     import serial
     import time
 
-    portaSeriale = "boh" \# VEDI SOPRA
+    portaSeriale = "boh" # VEDI SOPRA
 
     arduino = serial.Serial(portaSeriale,9600)
     time.sleep(2)
@@ -206,4 +200,4 @@ Codice Python
 
 Tutto qua!
 
-Rimane da provare e sperimentare un po\'...
+Rimane da provare e sperimentare un po'...
