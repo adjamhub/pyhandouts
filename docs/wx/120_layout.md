@@ -685,28 +685,26 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-::: tip
-::: title
-Tip
-:::
+!!! tip "Suggerimenti per la creazione del layout"
 
-Ok, state provando a creare un layout, partendo da una idea che avete e
-non state riuscendo\... Ci sono due suggerimenti che posso darvi.
+    Ok, state provando a creare un layout, partendo da una idea che avete e
+    non state riuscendo\... Ci sono due suggerimenti che posso darvi.
 
-Il primo è quello di disegnare **prima** su carta il layout che volete
-ottenere, in modo da poter ragionare su quale *Sizers* possono
-realizzarlo più correttamente.
+    Il primo è quello di disegnare **prima** su carta il layout che volete
+    ottenere, in modo da poter ragionare su quale *Sizers* possono
+    realizzarlo più correttamente.
 
-In questo modo dovreste riuscire ad avere l\'idea giusta su come
-realizzare il layout. Poi scrivete il codice, lo testate\... e non
-funziona ancora :(
+    In questo modo dovreste riuscire ad avere l\'idea giusta su come
+    realizzare il layout. Poi scrivete il codice, lo testate\... e non
+    funziona ancora :(
 
-Il secondo suggerimento è quello di utilizzare uno strumento di debug,
-fornito direttamente da wxPython: **The Widget Inspection Tool (WIT)**.
-Ne parlo un pochino in questa [pagina](293_tools_wit.html)
+    Il secondo suggerimento è quello di utilizzare uno strumento di debug,
+    fornito direttamente da wxPython: **The Widget Inspection Tool (WIT)**.
+    Ne parlo un pochino in questa [pagina](/wx/293_tools_wit/)
 
-Buona lettura!
-:::
+    Buona lettura!
+
+
 
 # Layout Sizing
 

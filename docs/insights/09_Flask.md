@@ -23,6 +23,7 @@ pip install Flask
 
 Oppure dall'interfaccia di Thonny per la gestione dei pacchetti.
 
+#################################################################################################
 ## Primi esempi con Flask
 
 La più semplice applicazione sviluppabile con la libreria Flask è
@@ -137,7 +138,8 @@ if \_\_name\_\_ == \"\_\_main\_\_\":
 
 app.run(host = \"0.0.0.0\", port = 5000, debug = False)
 
-### Esercizio svolto
+#################################################################################################
+## Esercizio svolto
 
 Ho scritto la mia bella pagina web in HTML, CSS, JS e via discorrendo.
 Ho tutto pronto nel file \"pagina.html\": come la rendo disponibile
@@ -162,7 +164,8 @@ file.close()
 
 return content
 
-### L'esercizio svolto è sbagliato!
+#################################################################################################
+## L'esercizio svolto è sbagliato!
 
 In che senso sbagliato... l'esercizio è giusto. Funziona! L'ho appena
 provato... inoltre ha senso, combacia con la teoria spiegata nella
@@ -178,8 +181,7 @@ sinistra (on the web) descrivo come scriveresti una normale pagina web,
 a destra (on the Flask framework) descrivo come andrebbero organizzati i
 file.
 
-![](Pictures/10000000000003B2000002718FB0059CE27905DD.jpg){width="17.59cm"
-height="11.621cm"}
+![Organizzazione dei file con Flask](images/Flask_organizzazione_files.jpg "Organizzazione dei file con Flask")
 
 Il web framework Flask considera (scontata) la presenza di 2 directory:
 

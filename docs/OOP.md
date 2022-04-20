@@ -1,17 +1,11 @@
-> \<br\>
-
 # OOP
 
-::: warning
-::: title
-Warning
-:::
+!!! warning "Attenzione!"
 
-Questa parte della documentazione non è ancora pronta.
+    Questa parte della documentazione non è ancora pronta.
 
-Usa la documentazione in PDF reperibile
-[qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
-:::
+    Usa la documentazione in PDF reperibile
+    [qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
 
 Python è un linguaggio basato sulla OOP, ovvero sulla Object Oriented
 Programming, la programmazione orientata agli oggetti.
@@ -29,16 +23,12 @@ concetti, tutti\... oggetti!!!
 
 E possono essere contenuti in una variabile!
 
-::: note
-::: title
-Note
-:::
+!!! note "Gli Oggetti"
 
-Un oggetto é un\'entità concreta o astratta, tipica anche della vita
-comune, definibile elencando le sue caratteristiche e descrivendo il
-modo con cui interagisce con l'ambiente esterno, cioè i suoi
-comportamenti.
-:::
+    Un oggetto é un\'entità concreta o astratta, tipica anche della vita
+    comune, definibile elencando le sue caratteristiche e descrivendo il
+    modo con cui interagisce con l'ambiente esterno, cioè i suoi
+    comportamenti.
 
 Partiamo sempre da un esempio: l'oggetto \"Rettangolo\". Le sue
 caratteristiche potrebbero essere la misura di base e altezza, il colore
@@ -51,17 +41,13 @@ spegni, accelera, frena, curva, ecc\...
 
 Spero sia abbastanza chiaro.
 
-::: tip
-::: title
-Tip
-:::
+!!! tip "Gli attributi di un oggetto"
 
-Le caratteristiche, o attributi di un oggetto, sono quegli elementi
-utili a descriverne le proprietà e lo stato. Sono solitamente
-individuate tramite dei sostantivi. I comportamenti, o metodi di un
-oggetto sono quelle funzionalità che mette a disposizione per interagire
-con esso. Sono solitamente individuati tramite dei verbi.
-:::
+    Le caratteristiche, o attributi di un oggetto, sono quegli elementi
+    utili a descriverne le proprietà e lo stato. Sono solitamente
+    individuate tramite dei sostantivi. I comportamenti, o metodi di un
+    oggetto sono quelle funzionalità che mette a disposizione per interagire
+    con esso. Sono solitamente individuati tramite dei verbi.
 
 Gli attributi e metodi definiti all'interno di un oggetto vengono
 comunemente definiti i membri dell'oggetto.
@@ -147,6 +133,8 @@ Spero adesso sia tutto ok\... Non è così, lo so. Per iniziare cerchiamo
 di chiarirci alcuni termini e alcune funzioni \"strane\" che ho
 utilizzato prima e poi vediamo qualche esercizio.
 
+
+#################################################################################################
 ## Terminologia
 
 Chiariamo bene i termini che andremo ad utilizzare per definire una
@@ -252,6 +240,7 @@ print(c)
 # visualizzerà "Quadrato di lato 4, sfondo bianco, bordo nero"
 ```
 
+#################################################################################################
 ## Esercizio svolto: la classe Rettangolo
 
 Definire un oggetto Rettangolo, tramite i parametri base e altezza e
@@ -286,6 +275,7 @@ if __name__ == "__main__":
     print("Perimetro:",r.perimetro())    
 ```
 
+#################################################################################################
 ## Esercizi di comprensione
 
 Prima di andare avanti, proviamo a definire alcune classi e proporre con
@@ -509,7 +499,9 @@ ottenuto, con una visualizzazione simile a questa:
 -   Senigallia: (23,34,45,67,88)
 -   Ancona: (39, 43, 44, 78, 81)
 
-### Ereditarietà
+
+#################################################################################################
+# Ereditarietà
 
 L'ereditarietà è un concetto tipico della programmazione orientata agli
 oggetti che ovviamente qui sarà declinato in salsa Python :)
@@ -541,6 +533,7 @@ if __name__ == "__main__":
     print(ciccio.saluta())  # la classe Figlio "eredita" il metodo saluta()
 ```
 
+#################################################################################################
 ## Overloading
 
 Nella teoria della OOP il polimorfismo è la tecnica che definisce la
@@ -639,6 +632,7 @@ issubclass(int, Prova)      # ritorna False
 
 Come avete visto, porta tutto :)
 
+#################################################################################################
 ## Funzione super()
 
 Dato che ci sono introdurrò un'altra funzione importante, la funzione
@@ -802,7 +796,8 @@ parametro il numero di persone che salgono e il numero di persone che
 scendono e aggiorna il numero di persone attualmente presenti
 nell\'autobus.
 
-### Funzioni operatori
+#################################################################################################
+# Funzioni operatori
 
 La classe object introduce tutta una serie di funzioni (che ovviamente,
 tutte le classi ereditano) per standardizzare una serie di comportamenti
