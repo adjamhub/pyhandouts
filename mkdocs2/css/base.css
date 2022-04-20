@@ -22,7 +22,7 @@ body::before {
 }
 
 body > .container {
-    margin-top: 20px;
+    margin-top: 50px;
     min-height: 400px;
 }
 
@@ -141,9 +141,7 @@ footer {
     /* csslint ignore:start */
     position: sticky;
     /* csslint ignore:end */
-    /* The nav header is 3.5rem high, plus 20px for the margin-top of the
-       main container. */
-    top: calc(3.5rem + 20px);
+    margin-top: 50px;
 }
 
 .bs-sidebar.card { /* csslint allow: adjoining-classes */
