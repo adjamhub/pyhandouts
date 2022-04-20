@@ -8,6 +8,7 @@ html {
 
 /* Replacement for `body { background-attachment: fixed; }`, which has
    performance issues when scrolling on large displays. See #1394. */
+/*
 body::before {
     content: ' ';
     position: fixed;
@@ -19,6 +20,12 @@ body::before {
     background: url(../img/grid.png) repeat-x;
     will-change: transform;
     z-index: -1;
+}
+*/
+
+body {
+    background-attachment: fixed;
+    font-size: 16px;
 }
 
 body > .container {
@@ -254,7 +261,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 blockquote {
     border-left: 10px solid #7A818A;
     background: #DFDFDF;
-    padding: 10px;
+    padding: 30px 15px;
     font-size: 1.25em;
     border-radius: 2px;
 }

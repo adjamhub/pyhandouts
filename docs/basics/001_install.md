@@ -135,18 +135,15 @@ aiuto. Appena avete finito procedete con l\'Hello World Test sotto.
 
 ## Hello World Test
 
-::: tip
-::: title
-Tip
-:::
+!!! tip "Hello World" Programs
 
-Gli *Hello World* sono programmi che scrivono (o mostrano) semplicemente
-la scritta \"Hello, World!\".
+    Gli *Hello World* sono programmi che scrivono (o mostrano) semplicemente
+    la scritta \"Hello, World!\".
 
-Sono tipicamente i primi programmi che si vuole scrivere in un qualsiasi
-linguaggio di programmazione e servono solo a testare l\'ambiente di
-lavoro per assicurarsi che tutto funzioni.
-:::
+    Sono tipicamente i primi programmi che si vuole scrivere in un qualsiasi
+    linguaggio di programmazione e servono solo a testare l\'ambiente di
+    lavoro per assicurarsi che tutto funzioni.
+
 
 Si tratta di aprire Thonny, scrivere nell\'editor il seguente codice e
 premere F5 per avviare l\'interpretazione.
