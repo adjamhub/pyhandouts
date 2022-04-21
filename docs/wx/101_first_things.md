@@ -5,50 +5,40 @@ applicazioni con GUI e che espone una lunga lista di widgets per i
 compiti più disparati. Le sue classi sono organizzate in moduli che pian
 piano andremo a studiare: per adesso ci basterà sapere che le classi
 principali sono disponibili nel modulo **wx**, lo stesso che abbiamo
-importato nell\'esempio *Hello, World!*.
+importato nell'esempio *Hello, World!*.
 
 Capisco che arrivato a questo punto, prima di andare avanti, è
 necessario che io faccia una pausa e spieghi una serie di termini che ho
 utilizzato qua e là e che probabilmente ancora non conoscete.
 
-*toolkit*
+* ***toolkit*** <br>
+  Letteralmente "cassetta degli attrezzi", rappresenta l'insieme di strumenti necessari per eseguire un compito. 
+  Il compito del toolkit wxPython è la creazione di applicazioni grafiche, gli strumenti che utilizza sono classi Python.
 
-:   Letteralmente \"cassetta degli attrezzi\", rappresenta l\'insieme di
-    strumenti necessari per eseguire un compito. Il compito del toolkit
-    wxPython è la creazione di applicazioni grafiche, gli strumenti che
-    utilizza sono classi Python.
+* ***GUI*** <br>
+  Acronimo di *Graphical User Interface*, indica la capacità di alcune applicazioni di interagire con gli utenti 
+  tramite la modalità WIMP (e adesso spiego WIMP...)
 
-*GUI*
+* ***WIMP*** <br>
+  Acronimo di *Windows Icon Mouse Pointer*. Rappresenta una modalità tramite la quale interagire con il sistema operativo 
+  e le applicazioni, alternativa a quella testuale, tipica delle linee di comando.
 
-:   Acronimo di *Graphical User Interface*, indica la capacità di alcune
-    applicazioni di interagire con gli utenti tramite la modalità WIMP
-    (e adesso spiego WIMP\...)
+* ***cross-platform*** <br>
+  Rappresenta la capacità di alcuni software di essere utilizzati su vari sistemi operativi. 
+  Per quanto riguarda wxPython essa è disponibile su tutti i sistemi operativi desktop, in particolare è sicuramente 
+  disponibile su Windows, Mac OS e Linux.
 
-*WIMP*
+* ***Widget*** <br>
+  Si tratta di un generico oggetto grafico. Nel contesto wxPython si tratta di una classe wxPython che implementa 
+  un oggetto grafico, ad esempio la classe che implementa un pulsante (e quindi il pulsante), la classe che implementa una finestra, 
+  una checkbox, etc...
 
-:   Acronimo di *Windows Icon Mouse Pointer*. Rappresenta una modalità
-    tramite la quale interagire con il sistema operativo e le
-    applicazioni, alternativa a quella testuale, tipica delle linee di
-    comando.
-
-*cross-platform*
-
-:   Rappresenta la capacità di alcuni software di essere utilizzati su
-    vari sistemi operativi. Per quanto riguarda wxPython essa è
-    disponibile su tutti i sistemi operativi desktop, in particolare è
-    sicuramente disponibile su Windows, Mac OS e Linux.
-
-*Widget*
-
-:   Si tratta di un generico oggetto grafico. Nel contesto wxPython si
-    tratta di una classe wxPython che implementa un oggetto grafico, ad
-    esempio la classe che implementa un pulsante (e quindi il pulsante),
-    la classe che implementa una finestra, una checkbox, etc\...
-
-Benissimo! Detto questo passiamo a reimplementare l\'unico esempio che
+Benissimo! Detto questo passiamo a reimplementare l'unico esempio che
 abbiamo finora visto e ragioniamoci un pò sù
 
-# Ancora \"Hello, World!\"
+
+#######################################################################################
+## Ancora "Hello, World!"
 
 Riguardiamo per un attimo il solito esempio iniziale alla luce delle
 nuove cose che abbiamo imparato:
@@ -73,30 +63,27 @@ window.Show()
 app.MainLoop()
 ```
 
-::: note
-::: title
-Note
-:::
+!!! note "MainLoop"
 
-Il **Main Event Loop** o *ciclo principale degli eventi* è uno stato di
-grazia in cui si pone ogni applicazione grafica dopo aver disegnato le
-proprie widgets.
+    Il **Main Event Loop** o *ciclo principale degli eventi* è uno stato di
+    grazia in cui si pone ogni applicazione grafica dopo aver disegnato le
+    proprie widgets.
 
-In questo particolare stato di colloquio perenne tra il sistema
-operativo, l\'utente e l\'applicazione stessa, quest\'ultima diventa in
-grado di intercettare gli eventi che accadono nel sistema (un click su
-un pulsante, un movimento del mouse, la carta della stampante che
-finisce, la rete che si sconnette, etc\...) e di rispondere
-(eventualmente) eseguendo una funzione tra quelle disponibili fra gli
-oggetti che la compongono.
-:::
+    In questo particolare stato di colloquio perenne tra il sistema
+    operativo, l'utente e l'applicazione stessa, quest'ultima diventa in
+    grado di intercettare gli eventi che accadono nel sistema (un click su
+    un pulsante, un movimento del mouse, la carta della stampante che
+    finisce, la rete che si sconnette, etc...) e di rispondere
+    (eventualmente) eseguendo una funzione tra quelle disponibili fra gli
+    oggetti che la compongono.
 
-# Finestra derivata
+
+#######################################################################################
+## Finestra derivata
 
 Nel prossimo esempio di codice andremo a derivare una finestra a partire
 dalla classe **wx.Frame** che abbiamo già accennato sopra e utilizzato
-nell\'esempio \"Hello, World!\". Nel suo costruttore (la funzione
-[\_\_init\_\_]{.title-ref}) andremo ad inserire tutti gli oggetti
+nell'esempio "Hello, World!". Nel suo costruttore (la funzione `__init__`) andremo ad inserire tutti gli oggetti
 grafici che compongono la nostra finestra, in questo primo esempio solo
 una semplice etichetta di testo.
 
@@ -124,17 +111,19 @@ if __name__ == "__main__":
 
 In questo modo impareremo a strutturare ogni finestra in una classe e se
 necessario a strutturare i nostri progetti dividendo ogni classe in un
-file diverso, in modo da favorire al massimo l\'organizzazione
+file diverso, in modo da favorire al massimo l'organizzazione
 fortemente orientata agli oggetti e tutti le buone cose che ne derivano
 (organizzazione del codice, chiara divisione dei compiti fra le classi,
 semplicità nel riutilizzare il codice, etc..)
 
-# Dimensione e posizionamento
+
+#######################################################################################
+## Dimensione e posizionamento
+
 
 Se vogliamo modificare la **dimensione** di una finestra possiamo farlo
 in 2 modi: o fornendo una dimensione iniziale nel costruttore della
-stessa, oppure utilizzando la funzione [SetSize(width,
-height)]{.title-ref}. Ricordo che tutte le misure sono espresse in
+stessa, oppure utilizzando la funzione `SetSize(width, height)`. Ricordo che tutte le misure sono espresse in
 pixel.
 
 ``` python
@@ -146,7 +135,7 @@ window.Show()
 app.MainLoop()
 ```
 
-\...oppure\...
+...oppure...
 
 ``` python
 import wx
@@ -158,14 +147,12 @@ window.Show()
 app.MainLoop()
 ```
 
-Entrambi i metodi sono semplici ed efficaci. In alternativa, il metodo
-[SetSize()]{.title-ref} può essere chiamato all\'interno della funzione
-[\_\_init\_\_]{.title-ref} quando si definisce una finestra derivata.
+Entrambi i metodi sono semplici ed efficaci. In alternativa, il metodo `SetSize()` può essere chiamato all'interno della funzione
+`__init__` quando si definisce una finestra derivata.
 
 In maniera analoga, se vogliamo specificare il **posizionamento** della
-finestra all\'interno dello schermo possiamo specificare la posizione
-iniziale nel costruttore o eseguire successivamente la funzione
-[Move(x,y)]{.title-ref}.
+finestra all'interno dello schermo possiamo specificare la posizione
+iniziale nel costruttore o eseguire successivamente la funzione `Move(x,y)`
 
 ``` python
 import wx
@@ -176,7 +163,7 @@ window.Show()
 app.MainLoop()
 ```
 
-\...oppure\...
+...oppure...
 
 ``` python
 import wx
@@ -189,14 +176,13 @@ app.MainLoop()
 ```
 
 Anche qui, possiamo decidere di mischiare i due approcci, inserendo la
-funzione [Move()]{.title-ref} all\'interno della funzione
-[\_\_init\_\_]{.title-ref} della classe Finestra. Vi ricordo che le
+funzione `Move()` all'interno della funzione `__init__` della classe Finestra. Vi ricordo che le
 finestre TopLevel vengono create nascoste e poi bisogna mostrarle con la
-funzione [Show()]{.title-ref} come facciamo noi nelle ultime righe di
+funzione `Show()` come facciamo noi nelle ultime righe di
 codice di ogni programma.
 
-Un\'ultima cosa, semplice e molto utile può essere quella relativa al
-posizionamento automatico con la funzione [Centre()]{.title-ref}, che
+Un'ultima cosa, semplice e molto utile può essere quella relativa al
+posizionamento automatico con la funzione `Centre()`, che
 posiziona automaticamente la finestra al centro dello schermo:
 
 ``` python
@@ -213,5 +199,6 @@ window.Show()
 app.MainLoop()
 ```
 
-Adesso avanti! Il prossimo step è quello di interagire un pò con
-l\'applicazione! Inserire un pulsante e fargli fare qualcosa!
+Adesso avanti! Il prossimo step è quello di interagire un pò con l'applicazione! 
+Inserire un pulsante e fargli fare qualcosa!
+

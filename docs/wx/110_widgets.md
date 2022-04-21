@@ -2,7 +2,7 @@
 
 !!! warning "Attenzione!"
 
-    Negli esempi che seguono, scritti con l\'unico obiettivo di presentare
+    Negli esempi che seguono, scritti con l'unico obiettivo di presentare
     le widget, andremo a posizionare più oggetti nella stessa finestra
     tramite il cosiddetto **posizionamento assoluto**, inserendo tutte le
     widget in un **wx.Panel** e indicando **posizione (pos)** e **dimensione
@@ -22,7 +22,10 @@ funzionamento di base.
 Ricordo che la documentazione completa di ognuna di queste widget è
 disponibile nella apposita sezione.
 
-# wx.Frame
+
+###########################################################################################################
+## wx.Frame
+
 
 La classe wx.Frame rappresenta una finestra vuota, con bordo e aspetto
 nativo nel sistema operativo ospite, con le funzionalità tipiche delle
@@ -33,7 +36,7 @@ massimizzazione, etc\...
 ![image](images/wxFrame.jpg)
 
 Non c\'è molto da spiegare su questo che non abbiamo già visto\...
-provate a copiare l\'esempio sotto e a giocare un pò con la finestra.
+provate a copiare l'esempio sotto e a giocare un pò con la finestra.
 Poi magari date un occhio alla documentazione.
 
 ``` python
@@ -45,46 +48,43 @@ win.Show()
 app.MainLoop()
 ```
 
-# wx.Panel
+###########################################################################################################
+## wx.Panel
+
 
 La classe wx.Panel rappresenta una widget vuota, adatta ad essere
 utilizzata come contenitore delle altre che vedremo.
 
 La sua utilità sta nel fatto che fornisce nativamente interazione con la
-tastiera (*Tab Traversal*, lo spostamento fra una widget e l\'altra
+tastiera (*Tab Traversal*, lo spostamento fra una widget e l'altra
 premendo Tab) per sè e per tutte le widget al suo interno.
 
 Da ora in poi la utilizzeremo in tutti i nostri progetti!. Anche dal
 punto di vista visivo, un Frame senza un Panel sembra *vuoto*, mentre un
 frame con dentro un *panel* sembra normalmente *pieno*.
 
-::: tip
-::: title
-Tip
-:::
+!!! tip "Suggerimento (anzi no... Obbligo Perentorio!!!)"
 
-Da ora in poi utilizzeremo il wx.Panel in tutti i nostri progetti. Esso
-costituirà anche un livello intermedio di parentela fra le widgets in
-maniera che:
+    Da ora in poi utilizzeremo il wx.Panel in tutti i nostri progetti. Esso costituirà anche un livello 
+    intermedio di parentela fra le widgets in maniera che:
 
--   il Frame nasce senza parent
--   il Panel nasce con parent il Frame (tipicamente *self*)
--   Tutte le widget inserite nella finestra, che giacciono sopra il
-    Panel, hanno il panel stesso come parent
+    - il Frame nasce senza parent
+    - il Panel nasce con parent il Frame (tipicamente *self*)
+    - Tutte le widget inserite nella finestra, che giacciono sopra il Panel, hanno il panel stesso come parent
 
-Tutti gli esempi da qui in poi sono strutturati in questo modo: vi
-basterà osservarli un minimo :)
-:::
+    Tutti gli esempi da qui in poi sono strutturati in questo modo: vi basterà osservarli un minimo :)
 
-# wx.Button
 
-La classe wx.Button rappresenta una widget che implementa un pulsante
-cliccabile con una etichetta di testo dentro.
+
+###########################################################################################################
+## wx.Button
+
+
+La classe wx.Button rappresenta una widget che implementa un pulsante cliccabile con una etichetta di testo dentro.
 
 ![image](images/wxButton.jpg)
 
-Nell\'esempio proposto quando si clicca il pulsante (evento
-**wx.EVT_BUTTON**) si riduce ad icona l\'applicazione.
+Nell'esempio proposto quando si clicca il pulsante (evento **wx.EVT_BUTTON**) si riduce ad icona l'applicazione.
 
 ``` python
 import wx
@@ -108,17 +108,18 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+
+###########################################################################################################
 # wx.ToggleButton
 
-La classe wx.ToggleButton rappresenta una widget che implementa un
-pulsante con due stati: cliccato e non cliccato.
+
+La classe wx.ToggleButton rappresenta una widget che implementa un pulsante con due stati: cliccato e non cliccato.
 
 ![image](images/wxToggleButton.jpg)
 
-Nell\'esempio proposto quando si clicca il ToggleButton (evento
-**wx.EVT_TOGGLEBUTTON**) si mette a schermo intero la finestra e si
-cambia la scritta sul pulsante (che rimane cliccato). Cliccandolo di
-nuovo si ritorna alla situazione iniziale.
+Nell'esempio proposto quando si clicca il ToggleButton (evento **wx.EVT_TOGGLEBUTTON**) si mette a schermo intero 
+la finestra e si cambia la scritta sul pulsante (che rimane cliccato). 
+Cliccandolo di nuovo si ritorna alla situazione iniziale.
 
 ``` python
 import wx
@@ -147,17 +148,20 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.StaticText
+
+###########################################################################################################
+## wx.StaticText
+
 
 La classe wx.StaticText rappresenta una widget che implementa una
 etichetta dove il programmatore può inserire un testo da visualizzare
-all\'utente.
+all'utente.
 
 ![image](images/wxStaticText.jpg)
 
 Nel semplicissimo esempio proposto, viene utilizzato la widget
 wx.StaticText per visualizzare una poesia in più righe. La widget è
-inserita a \"tutta finestra\".
+inserita a "tutta finestra".
 
 ``` python
 import wx
@@ -177,7 +181,10 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.StaticLine
+
+###########################################################################################################
+## wx.StaticLine
+
 
 La classe wx.StaticLine rappresenta una widget che implementa una linea
 decorativa, orizzontale o verticale.
@@ -215,7 +222,10 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.TextCtrl
+
+###########################################################################################################
+## wx.TextCtrl
+
 
 La classe wx.TextCtrl rappresenta una widget che implementa una casella
 di testo, con vari stili supportati, definibili in fase di
@@ -229,10 +239,10 @@ Cito qui i più importanti:
 
   Stile                 Descrizione
   --------------------- ----------------------------------------------------
-  (default)             Linea singola di testo, digitabile dall\'utente
+  (default)             Linea singola di testo, digitabile dall'utente
   wx.TE_MULTILINE       Permette alla TextCtrl di utilizzare più righe
   wx.TE_PASSWORD        Ogni carattere viene visualizzato con un asterisco
-  wx.TE_READONLY        Testo non modificabile dall\'utente
+  wx.TE_READONLY        Testo non modificabile dall'utente
   wx.TE_PROCESS_ENTER   Gestisce il tasto INVIO come evento separato
 
 Non ha un evento di default, ma ben due utilizzabili distintamente:
@@ -242,9 +252,9 @@ Non ha un evento di default, ma ben due utilizzabili distintamente:
 -   **wx.EVT_TEXT_ENTER**: viene scatenato quando hai impostato lo stile
     wx.TE_PROCESS_ENTER e si preme INVIO nella widget
 
-Nell\'esempio proposto ho inserito una TextCtrl con caratteri oscurati
+Nell'esempio proposto ho inserito una TextCtrl con caratteri oscurati
 (password). Man mano che si digita su di essa, il testo appare nella
-StaticText a fianco. Provate a testare l\'esempio autonomamente e a
+StaticText a fianco. Provate a testare l'esempio autonomamente e a
 modificare il codice per visualizzare ciò che è stato digitato solo alla
 fine, quando si preme INVIO nella TextCtrl.
 
@@ -275,7 +285,10 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.ComboBox
+
+###########################################################################################################
+## wx.ComboBox
+
 
 La classe wx.ComboBox rappresenta una widget che implementa un menù a
 tendina
@@ -291,9 +304,9 @@ La ComboBox supporta i seguenti stili di lavoro:
   wx.CB_SORT            Ordina automaticamente le voci
   wx.TE_PROCESS_ENTER   Gestisce il tasto INVIO come evento separato
 
-Nell\'esempio proposto vediamo una etichetta e un menù a tendina.
+Nell'esempio proposto vediamo una etichetta e un menù a tendina.
 Selezionando una voce del menù a tendina (evento **wx.EVT_COMBOBOX**) si
-modifica il contenuto dell\'etichetta.
+modifica il contenuto dell'etichetta.
 
 ``` python
 import wx
@@ -324,14 +337,17 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.CheckBox
+
+###########################################################################################################
+## wx.CheckBox
+
 
 La classe wx.CheckBox rappresenta una widget che implementa una casella
 di spunta.
 
 ![image](images/wxCheckBox.jpg)
 
-Nell\'esempio proposto abbiamo una sola casella di spunta che quando
+Nell'esempio proposto abbiamo una sola casella di spunta che quando
 viene abilitata imposta lo sfondo rosso della finestra, riportando
 quello originale se deselezionata.
 
@@ -368,7 +384,10 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.RadioButton
+
+###########################################################################################################
+## wx.RadioButton
+
 
 La classe wx.RadioButton rappresenta una widget che implementa un
 pulsante selezionabile in maniera mutualmente esclusiva.
@@ -381,9 +400,9 @@ esclusività si deve dichiarare nella prima widget lo stile
 del primo. Se si vuole iniziare un nuovo gruppo, basterà inserire di
 nuovo lo stile necessario.
 
-Nell\'esempio proposto saranno inserite 2 radio buttons per selezionare
+Nell'esempio proposto saranno inserite 2 radio buttons per selezionare
 il sesso (M/F). Al click su una di loro (evento **wx.EVT_RADIOBUTTON**)
-l\'altra si deselezionerà automaticamente e l\'etichetta sotto verrà
+l'altra si deselezionerà automaticamente e l'etichetta sotto verrà
 aggiornata.
 
 ``` python
@@ -417,16 +436,17 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.Slider
+###########################################################################################################
+## wx.Slider
 
 La classe wx.Slider rappresenta una widget che implementa un cursore ad
 avanzamento lineare.
 
 ![image](images/wxSlider.jpg)
 
-Nell\'esempio proposto ho implementato uno slider che va da 0 a 10 (il
+Nell'esempio proposto ho implementato uno slider che va da 0 a 10 (il
 range predefinito è 0-100) e ho impostato il valore iniziale a 5. Sotto
-c\'è una etichetta che si aggiorna automaticamente quando si muove lo
+c'è una etichetta che si aggiorna automaticamente quando si muove lo
 slider (evento **wx.EVT_SLIDER**)
 
 ``` python
@@ -457,15 +477,18 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.SpinCtrl
+
+###########################################################################################################
+## wx.SpinCtrl
+
 
 La classe wx.SpinCtrl rappresenta una widget che implementa un selettore
 numerico con pulsanti di avanzamento.
 
 ![image](images/wxSpinCtrl.jpg)
 
-Nell\'esempio proposto quando muovo il controllo della wx.SpinCtrl
-l\'etichetta si aggiorna automaticamente (evento **wx.EVT_SPINCTRL**).
+Nell'esempio proposto quando muovo il controllo della wx.SpinCtrl
+l'etichetta si aggiorna automaticamente (evento **wx.EVT_SPINCTRL**).
 Come ormai tradizione in questi esempi, approfitto di una widget
 *facile* per introdurre una piccola novità: Il pulsante a due stati
 serve per abilitare e disabilitare la widget. Provate!
@@ -508,16 +531,19 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.StaticBox
+
+###########################################################################################################
+## wx.StaticBox
+
 
 La classe wx.StaticBox rappresenta una widget che implementa una
 decorazione per raggruppare le widget. Utile per organizzare il layout.
 
 ![image](images/wxStaticBox.jpg)
 
-Nell\'esempio proposto vediamo come la StaticBox, con etichetta
-\"Informazioni Personali\" serva a raggruppare logicamente le widget che
-permettono all\'utente di inserirli. Non sapendo ancora organizzare un
+Nell'esempio proposto vediamo come la StaticBox, con etichetta
+"Informazioni Personali" serva a raggruppare logicamente le widget che
+permettono all'utente di inserirli. Non sapendo ancora organizzare un
 layout (lo vedremo a breve!!!) voglio farvi notare che gli oggetti sono
 *dentro* la StaticBox solo perché a livello di dimensione essa riesce a
 contenerli tutti tranne il pulsante in fondo!!!
@@ -554,21 +580,24 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-# wx.ListBox
+
+###########################################################################################################
+## wx.ListBox
+
 
 La classe wx.ListBox rappresenta una widget che implementa una lista di
 voci selezionabili in maniera singola o multipla.
 
 ![image](images/wxListBox.jpg)
 
-Questa widget supporta 2 eventi considerabili \"di default\":
+Questa widget supporta 2 eventi considerabili "di default":
 
 -   **wx.EVT_LISTBOX**: scatenato quando si seleziona un elemento della
     lista
 -   **wx.EVT_LISTBOX_DCLICK**: scatenato quando si fa doppio click su un
     elemento della lista
 
-Come al solito vediamo il codice che genera l\'immagine che vedete
+Come al solito vediamo il codice che genera l'immagine che vedete
 sopra:
 
 ``` python
@@ -597,5 +626,5 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-Provate a cambiare l\'evento nel Bind per vedere la differenza di
-funzionamento.
+Provate a cambiare l'evento nel Bind per vedere la differenza di funzionamento.
+
