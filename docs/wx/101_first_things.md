@@ -37,7 +37,7 @@ Benissimo! Detto questo passiamo a reimplementare l'unico esempio che
 abbiamo finora visto e ragioniamoci un pò sù
 
 
-#######################################################################################
+<!-- ####################################################################################### -->
 ## Ancora "Hello, World!"
 
 Riguardiamo per un attimo il solito esempio iniziale alla luce delle
@@ -78,7 +78,7 @@ app.MainLoop()
     oggetti che la compongono.
 
 
-#######################################################################################
+<!-- ####################################################################################### -->
 ## Finestra derivata
 
 Nel prossimo esempio di codice andremo a derivare una finestra a partire
@@ -117,7 +117,7 @@ fortemente orientata agli oggetti e tutti le buone cose che ne derivano
 semplicità nel riutilizzare il codice, etc..)
 
 
-#######################################################################################
+<!-- ####################################################################################### -->
 ## Dimensione e posizionamento
 
 

@@ -23,11 +23,18 @@ body::before {
 }
 */
 
+@media (min-width: 1400px) {
+    .container  {
+        max-width: 1340px;
+    }
+}
+
 body {
     background-attachment: fixed;
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 200%;
 }
 
 p {
@@ -66,6 +73,7 @@ body > .container {
 h1,h2,h3,h4,h5,h6 {
     margin-top: 50px;
     margin-bottom: 30px;
+    padding: 10px;
     background-color: #EEEEFF; /* #d9edf7; */
 }
 
@@ -122,6 +130,7 @@ pre code {
     word-wrap: normal;
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 14px;
+    line-height: 150%;
 }
 
 kbd {
@@ -278,7 +287,6 @@ blockquote {
     border-left: 10px solid #7A818A;
     background: #DFDFDF;
     padding: 30px 15px;
-    font-size: 1.25em;
     border-radius: 2px;
 }
 
