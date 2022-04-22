@@ -8,9 +8,8 @@ intercettare: ad esempio un pulsante saprà intercettare un click su di
 esso, una linea di testo sarà in grado di capire quando ci scrivi
 dentro, etc...
 
-Deciso l'evento a cui rispondere (click su pulsante) è possibile
-abbinare a questo una funzione, in modo che quando l'evento accade, la
-funzione viene eseguita!
+Deciso l'evento a cui rispondere (ad esempio, un click su pulsante) è possibile
+abbinare a questo una funzione, in modo che quando l'evento accade, la funzione venga eseguita!
 
 Per farlo dobbiamo utilizzare la funzione **Bind**:
 
@@ -29,6 +28,7 @@ class Esempio(wx.Frame):
 
     def __init__(self):
         super().__init__(None, title="Cliccami")
+               
         pulsante = wx.Button(self, label="Chiudi tutto")
         pulsante.Bind(wx.EVT_BUTTON, self.chiudi)
 
@@ -43,118 +43,50 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-Ok... con questo esempio abbiamo capito che un pulsante, ovvero la
-widget **wx.Button** intercetta il click con l'evento
-**wx.EVT_BUTTON**. Vediamo un altro esempio con una finestra che
-intercetta i suoi spostamenti e tramite una funzione scrive le
-coordinate della sua posizione.
+Ok... con questo esempio abbiamo capito che un pulsante, ovvero la widget **wx.Button** intercetta il click 
+con l'evento **wx.EVT_BUTTON**. 
 
-``` python
-import wx
+Provate a sostituire la funzione `self.Close()` con altre funzioni tipo:
 
-class Esempio(wx.Frame):
+- `self.Maximize()`: massimizza la finestra
+- `self.Iconize()`: riduce a icona la finestra
+- `self.Move(0,0)`: sposta la finestra nel punto (0,0)
+- `self.SetSize(400,300)`: ridimensiona la finestra
+- etc...
 
-    def __init__(self):
-        super().__init__(None, title="Muovimi")
-        self.etichetta = wx.StaticText(self, label="x: 0\ny: 0")
-        self.Bind(wx.EVT_MOVE, self.aggiornaPosizione)
+Ormai avete capito tutto... io nel dubbio scrivo un pò di deduzioni a partire da questi esempi...
 
-    def aggiornaPosizione(self, evt):
-        (x,y) = evt.GetPosition()
-        info = "x: " + str(x) + "\ny: " + str(y)
-        self.etichetta.SetLabel(info)
+1. L'oggetto che rappresenta un pulsante si chiama `wx.Button`.
+2. L'evento predefinito per un pulsante è il click su di esso: questo evento, per un pulsante, si chiama `wx.EVT_BUTTON`.
+3. Probabilmente (ed è proprio così) se una widget si chiamasse `wx.Pippo`, il suo evento predefinito si chiamerebbe `wx.EVT_PIPPO`
+4. Le funzioni che rispondono agli eventi hanno tutte la struttura `nomeFunzione (self, event)`.
 
-# ----------------------------------------
-if __name__ == "__main__":
-    app = wx.App()
-    window = Esempio()
-    window.Show()
-    app.MainLoop()
-```
+Ok... adesso invece parto con i dubbi... stavolta con un elenco in ordine sparso?
 
-Anche qui vi propongo di copiare il codice e testarlo prima di andare
-avanti... L'oggetto in questione stavolta è la finestra principale, la
-widget **wx.Frame**, l'evento da intercettare si chiama
-**wx.EVT_MOVE**, la funzione da eseguire in risposta ad esso è
-implementata sotto e si chiama *aggiornaPosizione*.
+- Come si fa a sapere quali (altri) eventi può gestire una widget? (Sugg: leggi la documentazione)
+- Dove sta la documentazione? (qui ci sono le dispense del prof, su <https://docs.wxpython.org> trovi la documentazione ufficiale)
+- E... se voglio mettere 2 pulsanti? (fra qualche riga ci arriviamo)
+- E se voglio mettere un pulsante... piccolo? (in realtà lo sai già...)
+- E... se voglio far fare qualcos'altro al mio programma quando clicco il pulsante? (sugg: studia!)
 
-Cerchiamo adesso di mettere in evidenza alcune cose che avete intuito
-osservando questi esempi:
-
-1.  Le funzioni che rispondono agli eventi hanno tutte la struttura
-    **funzione (self, event)**. Questo per fare in modo che la funzione
-    possa trarre informazioni dall'evento occorso, come nel caso della
-    funzione *aggiornaPosizione* che tramite esso acquisisce la nuova
-    posizione della finestra.
-2.  Come la widget pulsante, che si chiama wxButton ha un evento
-    predefinito (il click su di esso) che si chiama wx.EVT_BUTTON, quasi
-    tutte le widget che vedremo hanno l'evento predefinito che si
-    chiama come loro stesse. Quindi ad esempio la ipotetica widget
-    *wx.Banana* ha un evento predefinito (ad esempio qualcuno che inizia
-    a sbucciarla) che si chiama wx.EVT_BANANA.
-3.  Come si fa a sapere quali altri eventi può gestire una widget?
-    Beh... bisogna leggere la documentazione. Nella sezione apposita ci
-    sono i link diretti a tutte le classi che studieremo e scorrendola
-    troverete la sezione che elenca gli eventi a cui ognuna di esse può
-    reagire e che possono essere collegati tramite **binding** (ovvero
-    con la funzione Bind)
-
-Vediamo altre due cose importantissime sugli eventi prima di passare in
-rassegna tutte le widget disponibili.
+Basta così con le domande per adesso... prima di passare a presentare tutte le widgets vediamo altre due cose molto importanti sugli eventi
 
 
-##############################################################################################################
+<!-- ############################################################################################################## -->
 ## Identificare le widgets
 
 
-Immaginate una applicazione con tanti pulsanti (una tastiera virtuale,
-una calcolatrice, etc...). Capita spesso in questi casi di collegare
-più oggetti alla stessa funzione. Ma come si può distinguere quale
-pulsante (o più in generale quale widget) ha scatenato l'evento. Provo
-con un esempio:
+Immaginate una applicazione con tanti pulsanti (una tastiera virtuale, una calcolatrice, etc...). Capita spesso in questi casi di collegare
+più oggetti alla stessa funzione. Ma come si può distinguere quale pulsante (o più in generale quale widget) ha scatenato l'evento?
 
-``` python
-import wx
+***Come si fa ad identificare una widget?***
 
-  class Esempio(wx.Frame):
 
-      def __init__(self):
-          super().__init__(None, title="2 pulsanti, 1 funzione")
-          pulsante1 = wx.Button(self, label="pulsante1", pos=(5,5), size=(100,30))
-          pulsante2 = wx.Button(self, label="pulsante2", pos=(120,5), size=(100,30))
-          pulsante1.Bind(wx.EVT_BUTTON, self.faiQualcosa)
-          pulsante2.Bind(wx.EVT_BUTTON, self.faiQualcosa)
+> Ogni oggetto grafico wxPython dispone di un **ID** identificativo!
 
-      def faiQualcosa(self, event):
-          # ok... chi mi ha cliccato?
 
-  # ----------------------------------------
-  if __name__ == "__main__":
-      app = wx.App()
-      window = Esempio()
-      window.Show()
-      app.MainLoop()
-```
+Vediamo un semplice esempio con due pulsanti che cliccati richiamano entrambi la stessa funzione!
 
-Bene... la soluzione in questo e molti altri casi è quella di
-identificare le widgets con un **ID**. Questo significa praticamente
-assegnare ad ogni widget un numero in modo da poterle distinguere tra di
-loro (se te li ricordi... ovviamente!).
-
-La libreria wxPython fa già questo lavoro di default, ovvero assegna
-automaticamente ad ogni widget un numero **negativo**: la prima widget
-creata sarà quella con ID -1, la seconda quella con ID -2 e così via...
-invece di contare all'impazzata, sappiate che è possibile assegnare
-manualmente un ID (magari solo alle widget per cui vi interessa farlo).
-
-La regola d'oro per i programmatori è quella di **usare per gli ID solo
-numeri positivi diversi fra loro**, magari partendo da 1, poi 2, etc...
-Questo ovviamente per evitare a priori alcun conflitto con gli ID
-selezionati automaticamente dalla libreria wxPython. A questo punto sarà
-possibile identificare le widget e quello che fanno da ogni punto della
-tua applicazione!
-
-Il codice nel nostro esempio specifico diventa il seguente:
 
 ``` python
 import wx
@@ -184,8 +116,14 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+La libreria wxPython identifica in maniera automatica tutte le widget con un ID sempre diverso e sempre **negativo**: 
+la prima widget creata sarà quella con ID -1, la seconda quella con ID -2 e così via...
 
-##############################################################################################################
+**Se volete impostare voi l'ID di una widget usate solo numeri positivi crescenti**: in questo modo sarete sicuri di non fare
+confusione con gli ID assegnati automaticamente alle widget da wxPython e di non sbagliarvi da soli mettendo due volte lo stesso ID!
+
+
+<!-- ############################################################################################################## -->
 ## Bloccare gli eventi
 
 
