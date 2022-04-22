@@ -1,5 +1,8 @@
+# La libreria grafica wxPython
 
-# Introduzione a wxPython
+
+<!-- ########################################################################################################################################### -->
+## Introduzione
 
 **wxPython** (<https://wxpython.org/>) è una libreria grafica open source, adatta alla creazione di GUI (interfacce grafiche) per sistemi Windows, Mac e Linux.
 
@@ -10,6 +13,33 @@ E chissà che presto non diventi la libreria grafica predefinita!
 
 Si presenta come una libreria Python 3.x completamente orientata agli oggetti e quindi sarà di immediato utilizzo per tutti noi, 
 non appena avremo introdotto la sua struttura e gli oggetti principali.
+
+
+<!-- ########################################################################################################################################### -->
+## Installazione
+
+La libreria wxPython è una libreria OOP Python in tutto e per tutto. 
+La trovate come tantissime altre sul **Python Package Index** ([pypi.org](https://pypi.org)) e per installarla
+seguite questi semplici passaggi.
+
+Aprite [Thonny](https://thonny.org) e accedete al suo gestore dei pacchetti:
+
+![image](images/wxpython_install_0.jpg)
+
+Da lì digitate la stringa **wxpython** e cliccate su *Cerca in PyPi*:
+
+![image](images/wxpython_install_1.jpg)
+
+A questo punto vi basta semplicemente cliccare **INSTALLA** e aspettare :)
+
+![image](images/wxpython_install_2.jpg)
+
+Quando il download e l'installazione sono finiti, passiamo a verificare il funzionamento del tutto con un Hello Wordl!
+
+
+<!-- ########################################################################################################################################### -->
+## Hello World!
+
 
 Vediamo innanzitutto un primo assaggio di codice, il famoso programma *Hello World!* per la libreria wxPython:
 
@@ -39,9 +69,11 @@ app.MainLoop()
     funzioni.
 
 
-Il risultato dell\'esecuzione di quel codice è questo!
+Il risultato dell'esecuzione di quel codice è questo!
 
 ![image](images/first_wxpython_code.jpg)
 
-Come inizio basta così! Lo proveremo dal vivo non appena avremo installato la libreria **wxPython** nel prossimo step!
+
+Se avete visto anche voi una finestra grigia vuota con il titolo "Hello, World!" significa che l'installazione e il primo programma sono andati
+a buon fine e siete pronti per studiare la libreria wxPython (a partire dalla prossima pagina!).
 

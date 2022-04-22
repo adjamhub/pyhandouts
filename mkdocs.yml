@@ -22,31 +22,27 @@ nav:
     - CSV: basics/108_csv.md
   - OOP: OOP.md
   - wxPython:
-    - intro: wx/000_intro.md
-    - install: wx/001_install.md
-    - first things: wx/101_first_things.md
-    - events: wx/102_events.md
+    - Introduzione: wx/000_intro.md
+    - Primi concetti: wx/101_first_things.md
+    - Eventi: wx/102_events.md
     - widgets: wx/110_widgets.md
-    - exercizes (base): wx/115_base_ex.md
-    - layout: wx/120_layout.md
-    - exercizes (layout): wx/122_layout_ex.md
-    - exercizes (full): wx/125_full_ex.md
-    - dialogs: wx/130_dialogs.md
-    - images: wx/132_images.md
-    - timer(s): wx/135_timer.md
-    - full GUI: wx/140_full_gui.md
-    - exercizes (GUI): wx/143_full_gui_ex.md
-    - advanced: wx/150_advanced.md
-    - network: wx/160_network.md
-    - classes: wx/201_classes.md
-    - tools (wxpydocs): wx/291_tools_wxdocs.md
-    - tools (wxdemo): wx/292_tools_wxdemo.md
-    - tools (wit): wx/293_tools_wit.md
+    - Esercizi (base): wx/115_base_ex.md
+    - Layout: wx/120_layout.md
+    - Esercizi (layout): wx/122_layout_ex.md
+    - Esercizi (full): wx/125_full_ex.md
+    - Dialogs: wx/130_dialogs.md
+    - Immagini: wx/132_images.md
+    - Timer(s): wx/135_timer.md
+    - Full GUI: wx/140_full_gui.md
+    - Esercizi (GUI): wx/143_full_gui_ex.md
+    - Caratteristiche Avanzate: wx/150_advanced.md
+    - Classi wx: wx/201_classes.md
+    - Tools: wx/299_tools.md
   - Insights:
     - pip: insights/01_pip.md
     - venv: insights/02_venv.md
-    - eccezioni: insights/03_eccezioni.md
-    - turtle: insights/04_turtle.md
+    - Eccezioni: insights/03_eccezioni.md
+    - Turtle: insights/04_turtle.md
     - Eseguibili: insights/05_script_to_exe.md
     - Scipy: insights/06_scipy.md
     - Arduino: insights/07_arduino.md
