@@ -19,7 +19,7 @@ nav:
     - Funzioni: basics/105_funz.md
     - Moduli: basics/106_mod.md
     - Files: basics/107_files.md
-    - Files: basics/108_csv.md
+    - CSV: basics/108_csv.md
   - OOP: OOP.md
   - wxPython:
     - intro: wx/000_intro.md
