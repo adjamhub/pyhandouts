@@ -9,15 +9,15 @@
 
 
 PRIMA PARLA DELLA DIFFERENZA FRA UNA SCRIPT E UNA COSA INSERITA
-NELL\'INTERPRETE
+NELL'INTERPRETE
 
 POI PARLA DI PRINT(), INPUT(), COMMENTI
 
 CAMBIA IL DISCORSO SU HELLO WORLD
 
 Quando si comincia a studiare un nuovo linguaggio, il primo programma
-che si scrive di solito è il cosiddetto \"Hello, World!\". E' un
-semplice programma che scrive semplicemente \"Hello, World!\", ma in
+che si scrive di solito è il cosiddetto "Hello, World!". E' un
+semplice programma che scrive semplicemente "Hello, World!", ma in
 realtà serve per fare un numero incredibile di cose:
 
 -   familiarizzare con il nuovo ambiente di programmazione
@@ -25,7 +25,7 @@ realtà serve per fare un numero incredibile di cose:
 -   riuscire nella fase di compilazione/interpretazione/esecuzione del
     codice
 -   conoscere l'istruzione principale di output
--   e molto altro\...
+-   e molto altro...
 
 L'istruzione da utilizzare per visualizzare del testo è l'istruzione
 print(), dove all'interno delle parentesi va inserito, fra doppi apici,
@@ -36,8 +36,8 @@ il testo da visualizzare. Ad esempio:
 Ciao
 ```
 
-Non mi sembra molto complicato\... Capite bene che il programma \"Hello,
-World!\" consta di un'unica riga contenente la stringa stessa.
+Non mi sembra molto complicato... Capite bene che il programma "Hello,
+World!" consta di un'unica riga contenente la stringa stessa.
 
 ``` python
 >>> print("Hello, World!")
@@ -47,7 +47,7 @@ Hello, World!
 Ecco fatto!
 
 Proviamo adesso a scrivere il codice che dovrebbe andare nel file
-\"HelloWorld.py\" e provate ad eseguire quello per verificare che
+"HelloWorld.py" e provate ad eseguire quello per verificare che
 sappiamo far funzionare anche questa cosa.
 
 ``` python
@@ -62,7 +62,7 @@ print("Hello, World!")
 Con la scusa di scrivere insieme il file HelloWorld.py abbiamo inserito
 un concetto nuovo: i commenti al codice! Come vedete, ogni commento
 inizia con un \# e fino a fine riga potete scrivere ciò che volete. Se
-vi serve o preferite una riga di commento in più\... rimettete un \#
+vi serve o preferite una riga di commento in più... rimettete un \#
 all'inizio.
 
 I commenti semplificano il lavoro di rilettura del codice, soprattutto
