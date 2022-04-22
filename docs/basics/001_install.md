@@ -1,13 +1,13 @@
 # Installazione
 
-Per lavorare con Python basta avere l\'interprete Python con tutte le
+Per lavorare con Python basta avere l'interprete Python con tutte le
 sue librerie più importanti installato nel proprio sistema, utilizzare
 il blocco note (o un altro editor di testo semplice) per scrivere il
-codice e infine richiederne l\'esecuzione all\'interprete Python tramite
+codice e infine richiederne l'esecuzione all'interprete Python tramite
 riga di comando.
 
 Capite che questa modalità di lavoro, benché funzionante e sufficiente,
-risulti complicata e inadatta a chi deve concentrarsi sull\'imparare il
+risulti complicata e inadatta a chi deve concentrarsi sull'imparare il
 linguaggio piuttosto che far funzionare tutto il sistema solo per
 eseguire la prova di un semplice programma.
 
@@ -21,8 +21,8 @@ Environment](https://it.wikipedia.org/wiki/Integrated_development_environment)).
 Questi sono software che contengono più o meno tutto quanto necessario
 per sviluppare una applicazione in uno o più linguaggi di
 programmazione: un editor di testo per la scrittura del codice, il
-compilatore e/o l\'interprete dei vari linguaggi, gli strumenti per il
-debug, ovvero per la correzione degli errori del software, per\... tutto
+compilatore e/o l'interprete dei vari linguaggi, gli strumenti per il
+debug, ovvero per la correzione degli errori del software, per... tutto
 quello che serve!
 
 Esempi di IDE famosi (nella loro categoria) sono:
@@ -47,7 +47,7 @@ di IDE per Python che potreste provare sono:
 
 -   [IDLE](https://en.wikipedia.org/wiki/IDLE), il più semplice IDE per
     Python, scritto in Python, multipiattaforma, disponibile
-    nell\'installer ufficiale di Python.
+    nell'installer ufficiale di Python.
 -   [Visual Studio
     Code](https://it.wikipedia.org/wiki/Visual_Studio_Code), su Windows,
     MacOS e Linux. Offre un eccellente supporto per Python.
@@ -63,15 +63,15 @@ procedere:
 -   Thonny è scritto in Python e disponibile per Windows, MacOS, Linux,
     Raspberry. Tutti sistemi operativi che potenzialmente useremo.
 -   Thonny è scritto non da una azienda o da una comunità, ma
-    direttamente dal dipartimento di informatica dell\'università di
+    direttamente dal dipartimento di informatica dell'università di
     Tartu (Estonia)
 -   Thonny è stato scritto specificatamente per la didattica con Python.
 -   Thonny installa una copia di Python, rendendo semplicissima
-    l\'installazione dell\'ambiente completo per tutti gli utenti.
--   Thonny fornisce una interfaccia semplice anche per l\'interazione
+    l'installazione dell'ambiente completo per tutti gli utenti.
+-   Thonny fornisce una interfaccia semplice anche per l'interazione
     con pip, il gestore di pacchetti Python (ne parleremo in seguito)
 
-Insomma, un IDE a misura degli studenti! Passiamo all\'installazione sui
+Insomma, un IDE a misura degli studenti! Passiamo all'installazione sui
 nostri sistemi (in rigoroso ordine alfabetico)!
 
 ## Installare Thonny su Linux
@@ -98,9 +98,9 @@ $ sudo dnf install python3 thonny
 $ sudo pacman -S python3 thonny
 ```
 
-Questo installerà l\'ultima versione di Python 3.x e Thonny sul vostro
-sistema, rendendolo pronto all\'uso! Tutto qui! Passate a testare
-l\'installazione con l\'Hello World Test in fondo!
+Questo installerà l'ultima versione di Python 3.x e Thonny sul vostro
+sistema, rendendolo pronto all'uso! Tutto qui! Passate a testare
+l'installazione con l'Hello World Test in fondo!
 
 ## Installare Thonny su MacOS
 
@@ -111,7 +111,7 @@ Mac un pacchetto .pkg non avrete alcuna difficoltà!
 
 ![image](images/ThonnyMac.jpg)
 
-Terminata l\'installazione verificate che tutto funzioni con l\'Hello
+Terminata l'installazione verificate che tutto funzioni con l'Hello
 World Test in fondo.
 
 ## Installare Thonny su Windows
@@ -122,31 +122,31 @@ Windows e installatelo sul vostro sistema.
 
 ![image](images/ThonnyWin.jpg)
 
-C\'è qualcuno che pensa evidentemente che gli utenti di Windows siano
+C'è qualcuno che pensa evidentemente che gli utenti di Windows siano
 tutti tonti: non avete idea di quanti tutorial si trovano su YouTube per
-installare Thonny. Nel dubbio ne aggiungo qui uno\...
+installare Thonny. Nel dubbio ne aggiungo qui uno...
 
-::: youtube
-yMO-lNk6dgY
-:::
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/yMO-lNk6dgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
-aiuto. Appena avete finito procedete con l\'Hello World Test sotto.
+aiuto. Appena avete finito procedete con l'Hello World Test sotto.
 
 ## Hello World Test
 
-!!! tip "Hello World" Programs
+!!! tip "Hello World Programs"
 
     Gli *Hello World* sono programmi che scrivono (o mostrano) semplicemente
-    la scritta \"Hello, World!\".
+    la scritta "Hello, World!".
 
     Sono tipicamente i primi programmi che si vuole scrivere in un qualsiasi
-    linguaggio di programmazione e servono solo a testare l\'ambiente di
+    linguaggio di programmazione e servono solo a testare l'ambiente di
     lavoro per assicurarsi che tutto funzioni.
 
 
-Si tratta di aprire Thonny, scrivere nell\'editor il seguente codice e
-premere F5 per avviare l\'interpretazione.
+Si tratta di aprire Thonny, scrivere nell'editor il seguente codice e
+premere F5 per avviare l'interpretazione.
 
 ``` bash
 print("Hello, World!")
