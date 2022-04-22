@@ -32,86 +32,84 @@ L'istruzione for permette di scorrere in maniera semplice gli elementi
 di una sequenza ed effettuare una qualsivoglia operazione che si ripete
 con oggetto l'ennesimo elemento di essa. La struttura di base è:
 
+```
 for variabile in sequenza:
-
-# blocco da ripetere, indentato di 4 caratteri
-
-. . .
+    # blocco da ripetere, indentato di 4 caratteri
+    # . . .
 
 # finita l'indentazione, termina il blocco
+```
 
 In questi primi esempi proveremo a lavorare solo con sequenze numeriche,
-autogenerate con il comando **range**. Vediamo un semplice esempio:
+autogenerate con il comando `range`. Vediamo un semplice esempio:
 
+
+``` python
 for w in range(4):
+    print(w)
+```
 
-print(w)
+    0
+    1
+    2
+    3
 
-0
 
-1
-
-2
-
-3
-
-Penso si capisca in maniera abbastanza intuitiva come funziona range:
+Penso si capisca in maniera abbastanza intuitiva come funziona `range`:
 parte da ZERO e va avanti di UNO fino al numero immediatamente prima a
 quello indicato.
 
 Tutto quello che viene indentato (spostato a destra) di 4 caratteri fa
-parte del for. Quando si ritorna incolonnati alla parola "for" si
+parte del for. Quando si ritorna incolonnati alla parola `for` si
 passa alla prossima istruzione. Ad esempio:
 
+
+``` python
 for n in range(6):
-
-if n % 2 == 0:
-
-print (n, "è pari[]{#anchor}")[]{#anchor-1}
-
-else:
-
-print (n, "è dispari")
+    if n % 2 == 0:
+        print (n, "è pari")
+    else:
+        print (n, "è dispari")
 
 print("Finito!")
+```
 
-0 è pari
+    0 è pari
+    1 è dispari
+    2 è pari
+    3 è dispari
+    4 è pari
+    5 è dispari
+    Finito!
 
-1 è dispari
-
-2 è pari
-
-3 è dispari
-
-4 è pari
-
-5 è dispari
-
-Finito!
-
-Notate l'indentazione dell'esempio in cui tutto il blocco "if" è
-ripetuto nel "for" e le due "print" fanno parte ognuna di una delle
-due parti dell'if. Il "print" finale viene eseguito al termine del
+Notate l'indentazione dell'esempio in cui tutto il blocco `if` è
+ripetuto nel `for` e le due `print` fanno parte ognuna di una delle
+due parti dell'`if`. Il `print` finale viene eseguito al termine del
 ciclo.
 
 La funzione range utilizzata in questo modo può essere utilizzata anche
-semplicemente per "contare" le ripetizioni.
+semplicemente per *contare* le ripetizioni.
 
 Il nome della variabile che si utilizza nel for è assolutamente libero e
 casuale: potete scegliere qualsiasi nome ma evitate di sceglierne uno
 già utilizzato nel vostro programma, per evitare confusione!!!
 
-Scrivi 5 volte "ciao"
 
+**Scrivi 5 volte "ciao"**
+
+``` python
 for x in range(5):
+    print("ciao")
+```
 
-print("ciao")
 
-Disegna una piramide di "x"
+**Disegna una piramide di "x"**
 
+``` python
 for i in range(10):
+    print( "x" * i )
+```
 
-print( "x" * i )
 
 Capiterà spesso di voler gestire una sequenza di numeri un po' più
 complessa: ad esempio una sequenza che non inizia da zero, una sequenza
@@ -120,18 +118,18 @@ che avanza di 2, un conto alla rovescia...
 Per tutte le casistiche possibili occorre studiare i parametri della
 funzione range().
 
-***La funzione range() è una funzione predefinita del linguaggio che
-crea "al volo" una sequenza numerica intera***. Essa è definita come:
+> La funzione `range()` è una funzione predefinita del linguaggio che
+> crea "al volo" una sequenza numerica intera. 
 
-range( [start = 0 ,] stop [, step = 1] )
+Essa è definita come:
+
+    range( [start = 0 ,] stop [, step = 1] )
 
 dove:
 
-start è il valore iniziale della sequenza (compreso)
-
-stop è il valore finale (non compreso)
-
-step è il valore di avanzamento
+- *start* è il valore iniziale della sequenza (compreso)
+- *stop* è il valore finale (non compreso)
+- *step* è il valore di avanzamento
 
 Ho indicato le parentesi quadre su start e step per indicare che i due
 valori sono opzionali e nel caso non ci siano, il valore iniziale
@@ -140,93 +138,86 @@ UNO.
 
 È più facile di quello che sembra; vediamo qualche esempio:
 
-Esempio 1
 
+**Esempio 1**
+
+``` python
 # c'è un numero solo, è stop!
-
 # Start è predefinito a 0, step è predefinito a 1, quindi...
-
 for i in range(5):
+    print(i)
+```
 
-print(i)
 
-0
+    0
+    1
+    2
+    3
+    4
 
-1
 
-2
+**Esempio 2**
 
-3
-
-4
-
-Esempio 2
-
+``` python
 # due numeri, il primo è start, il secondo è stop
-
 # step è predefinito a +1
-
 for i in range(1, 5):
+    print(i)
+```
 
-print(i)
 
-1
+    1
+    2
+    3
+    4
 
-2
 
-3
+**Esempio 3**
 
-4
-
-Esempio 3
-
+``` python
 # si parte da 1, si avanza di 2 fino a 7 (non compreso)!!!
-
 for i in range(1, 7, 2):
+    print(i)
+```
 
-print(i)
 
-1
+    1
+    3
+    5
 
-3
 
-5
+**Esempio 4**
 
-Esempio 4
-
+``` python
 # si parte da 9, si "avanza" di -2 (quindi si va indietro)
-
 # ci si ferma prima di arrivare a 0
-
 for i in range(9, 0, -2):
+    print(i)
+```
 
-print(i)
+    9
+    7
+    5
+    3
+    1
 
-9
-
-7
-
-5
-
-3
-
-1
 
 Altro esempio, con un po' di codice:
 
-Esempio 5
 
+**Esempio 5**
+
+``` python
 for n in range(1,4):
+    q = n**2
+    print(q, "è il quadrato di", n)
+```
 
-q = n**2
 
-print(q, "è il quadrato di", n)
+    1 è il quadrato di 1
+    4 è il quadrato di 2
+    9 è il quadrato di 3
 
-1 è il quadrato di 1
-
-4 è il quadrato di 2
-
-9 è il quadrato di 3
 
 Insomma, secondo me più o meno ci siamo. Dopo una trentina di esercizi,
 ne sarete convinti anche voi :)
@@ -236,107 +227,118 @@ ne sarete convinti anche voi :)
 ## Esercizi su for e range
 
 
-Tutti questi esercizi sono su ***for ... in range ( ... )*** e quindi
+Tutti questi esercizi sono su `for ... in range ( ... )` e quindi
 devono essere svolti scrivendo un ciclo del tipo:
 
+``` 
 for v in range ( . . . ):
-
-print ( v )
+    print ( v )
+```
 
 cercando di ragionare su come implementare la soluzione dell'esercizio
 sfruttando i parametri di range.
 
 ------------------------------------------------------------------------------------------
-Esercizio 301
 
+
+**Esercizio 301**
 
 Visualizzare i numeri da 0 a 19
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 302
 
+
+**Esercizio 302**
 
 Visualizzare i numeri da 1 a 20
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 303
 
+
+**Esercizio 303**
 
 Visualizzare i numeri dispari presenti fra 1 e 20
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 304
 
+
+**Esercizio 304**
 
 Visualizzare i numeri pari presenti fra 1 e 30
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 305
 
+
+**Esercizio 305**
 
 Visualizzare un countdown che parte da 10 e arriva a 0.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 306
 
+
+**Esercizio 306**
 
 Visualizzare un countdown dei numeri pari che parte da 20 e arriva a 0.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 307
 
+
+**Esercizio 307**
 
 Chiedere all'utente di inserire un numero intero positivo e visualizzare
 un countdown che parte da quel numero fino a 0.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 308
 
+
+**Esercizio 308**
 
 Visualizzare la tabellina del 5.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 309
 
 
-Chiedere all'utente un numero intero e visualizzare la tabellina di quel
-numero
+**Esercizio 309**
 
-
-------------------------------------------------------------------------------------------
-Esercizio 310
-
-
-Visualizzare la tabellina del 7 alla rovescia (cioè partendo da 70 e
-andando indietro fino a 7)
+Chiedere all'utente un numero intero e visualizzare la tabellina di quel numero.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 311
 
 
-Chiedere all'utente un numero intero e visualizzare la tabellina di quel
-numero alla rovescia
+**Esercizio 310**
+
+Visualizzare la tabellina del 7 alla rovescia (cioè partendo da 70 e andando indietro fino a 7)
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 312
 
+
+**Esercizio 311**
+
+Chiedere all'utente un numero intero e visualizzare la tabellina di quel numero alla rovescia.
+
+
+------------------------------------------------------------------------------------------
+
+
+**Esercizio 312**
 
 Visualizzare i primi 20 numeri dispari
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 313
 
+
+**Esercizio 313**
 
 Chiedere all'utente un numero intero e visualizzare i 10 numeri pari
 successivi a quel numero. Ad esempio, inserito 17, si dovranno
@@ -344,8 +346,9 @@ visualizzare 18, 20, 22, 24, 26, 28, 30, 32, 34, 36.
 
 
 ------------------------------------------------------------------------------------------
-**Esercizio 314**
 
+
+**Esercizio 314**
 
 Visualizzare in colonna i numeri da 1 a 100 (i primi 100 numeri).
 
@@ -362,7 +365,9 @@ tratta semplicemente di mettere insieme alcune conoscenze che già
 abbiamo. Vediamo dunque i 2 casi (la *somma* e la *conta*) tramite
 l'ausilio di 2 esempi
 
-Esempio somma: somma dei numeri fra 5 e 12
+
+------------------------------------------------------------------------------------------
+### Esempio somma: somma dei numeri fra 5 e 12
 
 In questo esempio voglio fare la somma dei numeri che vanno da 5 a 12,
 quindi sommare insieme 5, 6, 7, 8, 9, 10, 11, 12 e sapere quanto fa
@@ -372,44 +377,54 @@ Se vuoi sommare delle quantità vorrai inserire il risultato in una
 variabile. Mi sembra abbastanza ragionevole affermare che la variabile
 che contiene la somma deve partire da ZERO!
 
-somma = 0
+
+    somma = 0
+
 
 La seconda considerazione da fare è sul ciclo for: se voglio sommare i
 numeri fra 5 e 12 devo scrivere un ciclo che parte da 5 (start,
 compreso) e avere come stop 13, in modo che si fermi a quello prima,
 ovvero 12.
 
-for s in range(5,13):
 
-# s va da 5 a 12:
+    for s in range(5,13):
+        # s va da 5 a 12:
+        # la prima volta vale 5, la seconda 6, etc... l'ultima volta 12
 
-# la prima volta vale 5, la seconda 6, etc... l'ultima volta 12
 
 Terza e ultima considerazione: se voglio sommare tutti questi numeri
 devo "aggiungerli tutti" alla (variabile) somma. Man mano che il ciclo
 for li scorre li aggiungo dunque ad essa:
 
-...
 
-somma = somma + s # si può scrivere in maniera compatta: somma += s
+```
+    ...
+    somma = somma + s # si può scrivere in maniera compatta: somma += s
+```
+
 
 Questa istruzione aggiunge s al valore attuale di somma e assegna il
 nuovo valore calcolato di nuovo alla variabile somma.
 
 Mettendo insieme i 3 pezzi, che spero abbiate compreso, otteniamo:
 
+
+``` python
 somma = 0
 
 for s in range(5, 13):
-
-somma += s
+    somma += s
 
 print("la somma dei numeri fra 5 e 12 fa: ", somma)
+```
 
-Spero sia tutto chiaro! Come al solito comunque, fra un attimo arrivano
-gli esercizi ;)
 
-Esempio conta: conta i numeri dispari fra 15 e 30
+Spero sia tutto chiaro! Come al solito comunque, fra un attimo arrivano gli esercizi ;)
+
+
+------------------------------------------------------------------------------------------
+### Esempio conta: conta i numeri dispari fra 15 e 30
+
 
 In questo secondo esempio voglio contare i numeri dispari fra 15 e 30
 ovvero sapere quanti sono i numeri 15, 17, 19, 21, 23, 25, 27, 29 (senza
@@ -418,31 +433,38 @@ contarli a mano!).
 Anche qui ci servità una variabile per "contare" i numeri, che
 ovviamente deve partire da ZERO!!
 
-conta = 0
+
+    conta = 0
+
 
 Per scorrere i dispari fra 15 e 30 devo scrivere un for molto semplice:
 parte da 15, arriva a 30 e va avanti di 2!
 
+
+```
 for c in range(15, 30, 2):
+    # In questo modo c varrà 15, 17, 19... fino a 29, il numero prima di 30!
+```
 
-# In questo modo c varrà 15, 17, 19... fino a 29, il numero prima di
-30!
+Ultima cosa, ogni volta che scorro un numero devo contarlo, cioè aumentare la conta di 1, quindi:
 
-Ultima cosa, ogni volta che scorro un numero devo contarlo, cioè
-aumentare la conta di 1, quindi:
 
+```
 conta += 1
+```
 
-Mettiamo insieme ancora una volta i tre pezzi del ragionamento e
-otteniamo:
+Mettiamo insieme ancora una volta i tre pezzi del ragionamento e otteniamo:
 
+
+``` python
 conta = 0
 
 for c in range(15, 30, 2):
-
-conta += 1
+    conta += 1
 
 print("I numeri dispari fra 15 e 30 sono:", conta)
+```
+
 
 Sinceramente credo che analizzando un pochino gli esempi e ragionando un
 po' anche questo concetto sia abbastanza chiaro! Ripeto... in questo
@@ -456,44 +478,49 @@ E adesso sotto con gli esercizi!
 ## Esercizi su somma e conta
 
 
-Esercizio 321
+**Esercizio 321**
 
 Visualizzare la somma dei numeri da 1 a 100
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 322
 
+
+**Esercizio 322**
 
 Contare i numeri che vanno da 10 a 20. (dovrebbe fare 11...)
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 323
 
+
+**Esercizio 323**
 
 Dato un numero intero N, inserito dall'utente, visualizzare la somma dei
 numeri da 1 a N
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 324
 
+
+**Esercizio 324**
 
 Fare la somma di 10 numeri inseriti dall'utente.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 325
 
+
+**Esercizio 325**
 
 Dati 2 numeri interi A e B inseriti dall'utente, contare i numeri pari
 compresi fra questi, estremi inclusi.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 326
 
+
+**Esercizio 326**
 
 Permettere all'utente di inserire 6 numeri interi. Alla fine
 dell'inserimento dire quanti numeri dispari positivi sono stati
@@ -501,29 +528,30 @@ digitati.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 327
 
+
+**Esercizio 327**
 
 Scrivere un ciclo che permetta all'utente di inserire 10 numeri interi.
 Alla fine dell'inserimento visualizzare:
 
--   la quantità di numeri pari inseriti
--   la somma dei numeri dispari inseriti
+- la quantità di numeri pari inseriti
+- la somma dei numeri dispari inseriti
 
 Ad esempio, se l'utente inserisce in sequenza i numeri 1, 2, 3, 4, 5,
 6, 7, 8, 9, 10 allora il programma dovrà rispondere:
 
-I numeri pari sono 5.
-
-La somma dei numeri dispari fa 25.
+    I numeri pari sono 5.
+    La somma dei numeri dispari fa 25.
 
 (infatti i numeri pari sono 2, 4, 6, 8, 10 ovvero 5 numeri. La somma dei
 dispari inseriti è 1 + 3 + 5 + 7 + 9 = 25)
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 328
 
+
+**Esercizio 328**
 
 Chiedere all'utente di inserire due numeri interi da memorizzare nelle
 variabili tot e valore.
@@ -542,29 +570,28 @@ Visualizzare i risultati ottenuti.
 L'istruzione while si abbina ad una condizione e ripete il suo blocco di
 codice finché questa condizione rimane vera. Vediamo la struttura.
 
+
+```
 while condizione:
-
-# blocco di codice da ripetere se la condizione è vera
-
-# . . .
+    # blocco di codice da ripetere se la condizione è vera
+    # . . .
 
 # altro codice
+```
 
 Vediamo un esempio per provare a chiarire il concetto:
 
+
+``` python
 a = 0
-
 while a < 5:
+    print(a)
+    a = a + 2
+```
 
-print(a)
-
-a = a + 2
-
-0
-
-2
-
-4
+    0
+    2
+    4
 
 Le istruzioni for e while permettono di implementare qualsiasi tipo di
 iterazione in maniera semplice e lineare. Prendiamo prima un po'
@@ -577,7 +604,7 @@ comportamento dei cicli.
 ## Esercizi su while
 
 
-Esercizio 341
+**Esercizio 341**
 
 Chiedere all'utente di inserire un numero intero fra 1 e 3. Far ripetere
 l'inserimento finché non si è ottenuto il numero nell'intervallo
@@ -586,7 +613,8 @@ richiesto
 
 ------------------------------------------------------------------------------------------
 
-Esercizio 342
+
+**Esercizio 342**
 
 Avendo un capitale iniziale C = 100 euro e sapendo che donandolo al
 professore questi è in grado di farlo fruttare con un incremento del 15%
@@ -595,24 +623,27 @@ capitale iniziale?
 
 
 ------------------------------------------------------------------------------------------
-**Esercizio 343**
 
+
+**Esercizio 343**
 
 Chiedere all'utente di inserire numeri interi finché la somma dei
 numeri inseriti non superi 20.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 344
 
+
+**Esercizio 344**
 
 Chiedere all'utente di inserire numeri interi finché la somma dei pari
 inseriti non superi 50.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 345
 
+
+**Esercizio 345**
 
 Chiedere all'utente di inserire numeri positivi e crescenti.
 L'inserimento si interrompe quando non si inserisce più un numero
@@ -620,8 +651,9 @@ maggiore del precedente.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 346
 
+
+**Esercizio 346**
 
 Chiedere all'utente di inserire una serie di numeri e terminare
 l'inserimento quando l'utente digita lo zero. Visualizzare la somma dei
@@ -629,8 +661,9 @@ numeri positivi inseriti.
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 347
 
+
+**Esercizio 347**
 
 Chiedere all'utente di inserire una serie di numeri e terminare
 l'inserimento quando l'utente ne digita due uguali consecutivi.
@@ -639,8 +672,9 @@ esempio inseriti 1 , 3 , 4 , 4 saranno stati inseriti 3 numeri).
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 348
 
+
+**Esercizio 348**
 
 La malattia più contagiosa che sia mai esistita (finora) è il morbillo.
 Una persona con il morbillo in un'ora può contagiare fino a 18 persone.
@@ -653,8 +687,9 @@ ora si contagino 18 persone).
 
 
 ------------------------------------------------------------------------------------------
-Esercizio 349
 
+
+**Esercizio 349**
 
 Al bar della scuola la pizza costa 1 euro, i panini 1,50 euro e le
 brioches salate ripiene 1,80 euro. Mario prende tot euro alla settimana
@@ -670,7 +705,7 @@ per almeno un giorno è dovuto vivere in ristrettezze.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 350
+**Esercizio 350**
 
 Decidere il nome di un pezzo e un prezzo iniziale (ad esempio:
 "orologio antico", 50 euro) e procedere ad un'asta simulata in cui 2
@@ -685,7 +720,7 @@ prezzo.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 351
+**Esercizio 351**
 
 Si supponga che l'andamento della popolazione di un'alga si sviluppi nel
 seguente modo: un anno raddoppia l'anno successivo cala di un quarto
@@ -715,44 +750,34 @@ Provare per credere!
 ## Istruzione break
 
 
-L'istruzione break provoca un'interruzione del ciclo e un salto
+L'istruzione `break` provoca un'interruzione del ciclo e un salto
 immediato alla prima istruzione seguente. Esempio illuminante
 
-indovina = 8
 
+``` python
+indovina = 8
 print ("Ho pensato un numero fra 1 e 10. Prova a indovinarlo")
 
 while True:
-
-tentativo = int(input("Che numero è?"))
-
-if tentativo == indovina:
-
-print("Incredibile! Hai indovinato!!!")
-
-break # finito! Esci dal ciclo!
-
-else:
-
-print("No, mi spiace! Riprova...")
+    tentativo = int(input("Che numero è?"))
+    if tentativo == indovina:
+        print("Incredibile! Hai indovinato!!!")
+        break # finito! Esci dal ciclo!
+    else:
+        print("No, mi spiace! Riprova...")
 
 print("\nok, adesso andiamo avanti")
+```
 
-Ho pensato un numero fra 1 e 10. Prova a indovinarlo
+    Ho pensato un numero fra 1 e 10. Prova a indovinarlo
+    Che numero è? 6
+    No, mi spiace! Riprova...
+    Che numero è? 7
+    No, mi spiace! Riprova...
+    Che numero è? 8
+    Incredibile! Hai indovinato!!!
+    ok, adesso andiamo avanti
 
-Che numero è? 6
-
-No, mi spiace! Riprova...
-
-Che numero è? 7
-
-No, mi spiace! Riprova...
-
-Che numero è? 8
-
-Incredibile! Hai indovinato!!!
-
-ok, adesso andiamo avanti
 
 Mi sembra sia semplice da capire e facile da usare. Andiamo avanti.
 
@@ -765,23 +790,19 @@ L'istruzione continue interrompe l'esecuzione del blocco di codice da
 ripetere e salta immediatamente alla prossima iterazione, ricominciando
 il blocco iterativo.
 
+
+``` python
 for n in range(1, 8):
+    if n % 3 == 0:
+        continue # ricomincia il ciclo dalla prossima iterazione
+    print ("Numero: ", n)
+```
 
-if n % 3 == 0:
-
-continue # ricomincia il ciclo dalla prossima iterazione
-
-print ("Numero: ", n)
-
-Numero: 1
-
-Numero: 2
-
-Numero: 4
-
-Numero: 5
-
-Numero: 7
+    Numero: 1
+    Numero: 2
+    Numero: 4
+    Numero: 5
+    Numero: 7
 
 Anche qui, facile da capire e da utilizzare. Magari è una istruzione che
 capiterà di usare poche volte, ma di sicuro non sarà un grande problema
@@ -797,43 +818,35 @@ dagli altri linguaggi, è questa cosa di poter utilizzare la clausola
 else nei cicli. Il codice nel campo else viene eseguito in due casi
 specifici:
 
-1.  Abbinato ad un ciclo for, quando la sequenza da scorrere termina.
-2.  Abbinato ad un ciclo while, quando la condizione diventa False
+1. Abbinato ad un ciclo for, quando la sequenza da scorrere termina.
+2. Abbinato ad un ciclo while, quando la condizione diventa False
 
 Vediamo un **esempio con il ciclo for**:
 
-# Calcolo numeri primi
 
-numero = int( input("Inserisci numero. Io ti dico se è primo o no: ")
-)
+``` python
+# Calcolo numeri primi
+numero = int( input("Inserisci numero. Io ti dico se è primo o no: ") )
 
 for divisore in range(2, numero):
+    if numero % divisore == 0:
+        print (numero,"non è primo, infatti")
+        print (numero, " = ", divisore, " * ", numero//divisore )
+        break
+else: # Indentazione! else è incolonnato al for NON all'if!!!
+    print(numero, "è primo")
+```
 
-if numero % divisore == 0:
+**Prima esecuzione, inserisco 15**
 
-print (numero,"non è primo, infatti")
+    Inserisci numero. Io ti dico se è primo o no: 15
+    15 non è primo, infatti 
+    15 = 3 * 5
 
-print (numero, " = ", divisore, " * ", numero//divisore )
+**Seconda esecuzione, inserisco 17**
 
-break
-
-else: **# Indentazione! else è incolonnato al for NON all'if!!!**
-
-print(numero, "è primo")
-
-Prima esecuzione, inserisco 15
-
-Inserisci numero. Io ti dico se è primo o no: 15
-
-15 non è primo, infatti
-
-15 = 3 * 5
-
-Seconda esecuzione, inserisco 17
-
-Inserisci numero. Io ti dico se è primo o no: 17
-
-17 è primo
+    Inserisci numero. Io ti dico se è primo o no: 17
+    17 è primo
 
 Praticamente il secondo ciclo for, basato sulla variabile i, cerca
 eventuali divisori del numero. Se scorrendo tutti i numeri fra 2 e
@@ -844,65 +857,52 @@ break, rendendo nullo l'else.
 Ecco un esempio analogo **che utilizza la clausola else abbinata
 all'istruzione while**.
 
-# sette e mezzo
 
+``` python
+# sette e mezzo
 valoreCarte = 0.0
 
 while valoreCarte <= 7.5:
-
-# controllo quanto ho e decido se andare avanti o no
-
-print("In mano hai", valoreCarte)
-
-risp = input("Vuoi una carta? (s/n)")
-
-if risp != "s":
-
-break
-
-# aggiungo la nuova carta
-
-x = float( input("Dammi una carta: ") )
-
-valoreCarte += x
+    # controllo quanto ho e decido se andare avanti o no
+    print("In mano hai", valoreCarte)
+    risp = input("Vuoi una carta? (s/n)")
+    if risp != "s":
+        break
+    
+    # aggiungo la nuova carta
+    x = float( input("Dammi una carta: ") )
+    valoreCarte += x
 
 else: # Indentazione! else è incolonnato a while NON all'if!!!
-
-print("Hai sballato, accidenti!!!")
+    print("Hai sballato, accidenti!!!")
 
 print("In mano hai", valoreCarte)
+```
 
-Prima esecuzione, vado sempre avanti
 
-In mano hai: 0.0
+**Prima esecuzione, vado sempre avanti**
 
-Vuoi una carta? (s/n) s
 
-Dammi una carta: 5
+    In mano hai: 0.0
+    Vuoi una carta? (s/n) s
+    Dammi una carta: 5
+    In mano hai: 5.0
+    Vuoi una carta? (s/n) s
+    Dammi una carta: 3
+    Hai sballato, accidenti!!!
+    In mano hai 8.0
 
-In mano hai: 5.0
 
-Vuoi una carta? (s/n) s
+**Seconda esecuzione, mi fermo dopo la prima carta**
 
-Dammi una carta: 3
 
-Hai sballato, accidenti!!!
+    In mano hai: 0.0
+    Vuoi una carta? (s/n) s
+    Dammi una carta: 6
+    In mano hai: 6.0
+    Vuoi una carta? (s/n) n
+    In mano hai 6.0
 
-In mano hai 8.0
-
-Seconda esecuzione, mi fermo dopo la prima carta
-
-In mano hai: 0.0
-
-Vuoi una carta? (s/n) s
-
-Dammi una carta: 6
-
-In mano hai: 6.0
-
-Vuoi una carta? (s/n) n
-
-In mano hai 6.0
 
 Spero sia abbastanza chiaro. In generale ci sono altri modi per ovviare
 all'utilizzo di questi for -- else o while -- else, semplicemente con un
@@ -927,25 +927,23 @@ funzionare la cosa.
 
 Facciamo una prova.
 
-Esercizio: inserimento di un numero intero fra 1 e 90 (per la tombola)
 
+**Esercizio: inserimento di un numero intero fra 1 e 90 (per la tombola)**
+
+
+``` python
 # ciclo con condizione sempre vera. Ripete all'infinito
+while True:
+    # *nell'input dobbiamo suggerire all'utente cosa fare...*
+    num = int(input("*Inserisci un numero fra 1 e 90*: "))
 
-while *True*:
-
-# *nell'input dobbiamo suggerire all'utente cosa fare...*
-
-num = int(input("*Inserisci un numero fra 1 e 90*: "))
-
-# controllo con interruzione
-
-if num >= 1 and num <= 90:
-
-break
+    # controllo con interruzione
+    if num >= 1 and num <= 90:
+        break
 
 # visualizzazione finale
-
 print("Numero inserito:", num)
+```
 
 Capito vero? Verifichiamolo con qualche esercizio :)
 
@@ -984,7 +982,7 @@ visualizzare il numero inserito.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 364
+**Esercizio 364**
 
 Chiedere all'utente di inserire un carattere, fra le maiuscole 'A',
 'B', 'C'. Ripetere l'inserimento finché la condizione non viene
@@ -994,7 +992,7 @@ soddisfatta. Alla fine, visualizzare il carattere inserito.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 365: caratteri minuscoli
+**Esercizio 365: caratteri minuscoli**
 
 Chiedere all'utente di inserire un carattere minuscolo. Ripetere
 l'inserimento finché la condizione non viene soddisfatta. Alla fine,
@@ -1004,7 +1002,7 @@ visualizzare il carattere inserito.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 366
+**Esercizio 366**
 
 Chiedere all'utente di inserire 2 numeri reali, di cui il secondo non
 nullo (da verificare). Infine visualizzare il rapporto (il risultato
@@ -1014,7 +1012,7 @@ della divisione) fra questi.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 367
+**Esercizio 367**
 
 Predisporre un programma che permetta all'utente di inserire numeri
 interi e che si interrompa solo quando l'utente inserisce ZERO. Alla
@@ -1025,20 +1023,20 @@ inseriti.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 368: interi, stringhe e congiunzioni (di stringhe)
+**Esercizio 368: interi, stringhe e congiunzioni (di stringhe)**
 
 Chiedere all'utente di inserire caratteri minuscoli, finché non
 inserisce il carattere '!' per terminare. Alla fine si visualizzi
 tutti i caratteri inseriti, in una sola riga, separati da spazi.
 
-(Sugg: create una stringa congiungendo il carattere inserito e uno
-spazio...)
+!!! tip "Suggerimento"
+    Create una stringa congiungendo il carattere inserito e uno spazio...
 
 
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 369
+**Esercizio 369**
 
 Visualizzare la domanda "Hai capito?" e continuare a ripeterla finché
 l'utente non dice "sì" (con l'accento sulla ì, mi raccomando...)
@@ -1088,28 +1086,28 @@ dell'esercizio.
 
 La prima cosa da notare è che l'esercizio si divide in 2 parti:
 
-1.  Chiedere all'utente di inserire un numero intero positivo N
-2.  Dire se N è primo oppure no
+1. Chiedere all'utente di inserire un numero intero positivo N
+2. Dire se N è primo oppure no
 
 Mi immagino che siamo tutti sereni con la prima parte che si svolge come
 spiegato nel capitolo sul "Controllo dei valori inseriti": ridateci un
 occhio se ci sono problemi su questa parte. Scrivo il codice necessario:
 
-while *True*:
 
-N = int(input("Inserisci un numero intero positivo: "))
-
-if N > 0:
-
-break
+``` python
+while True:
+    N = int(input("Inserisci un numero intero positivo: "))
+    if N > 0:
+        break
+```
 
 La seconda parte è quella più difficoltosa: come si capisce se un numero
 è primo? Come si calcola? Cos'è un numero primo???
 
 > Un numero naturale maggiore di 1 si definisce primo se è divisible
-> solamente per 1 e per se stesso.
+> solamente per 1 e per se stesso.<br>
+> (Wikipedia, cit.)
 
-(Wikipedia, cit.)
 
 Mi sembra che cosa sia un numero primo si sappia... ma per investigare
 bene il problema non ci si può esimere dal prossimo step!!!
@@ -1122,16 +1120,10 @@ bene il problema non ci si può esimere dal prossimo step!!!
 Partiamo scrivendo su carta alcuni esempi che possono aiutarci a
 riflettere:
 
-7 è primo perché è divisibile solo per 1 e per 7. Infatti, nessuno dei
-numeri fra 2 e 6 divide 7.
-
-18 non è primo perché è divisibile per 2, per 3, per 6, per 9...
-
-11 è primo perché è divisibile solo per 1 e per 11. Nessun altro numero
-divide 11
-
-25 non è primo perché è divisibile (anche) per 5, oltre ché per 1 e per
-25 stesso.
+- 7 è primo perché è divisibile solo per 1 e per 7. Infatti, nessuno dei numeri fra 2 e 6 divide 7.
+- 18 non è primo perché è divisibile per 2, per 3, per 6, per 9...
+- 11 è primo perché è divisibile solo per 1 e per 11. Nessun altro numero divide 11
+- 25 non è primo perché è divisibile (anche) per 5, oltre ché per 1 e per 25 stesso.
 
 
 ------------------------------------------------------------------------------------------
@@ -1141,11 +1133,10 @@ divide 11
 Per fare queste considerazioni, più esempi fate prima e meglio è...
 Dagli esempi precedenti ho capito che:
 
--   tutti i numeri (primi o no) sono divisibili per 1
--   tutti i numeri (primi o no) sono divisibili per se stessi
--   Se N è primo, nessun numero fra 2 e N -- 1 lo divide
--   Dato N, se almeno un numero fra 2 e N -- 1 divide N, allora N non è
-    primo.
+- tutti i numeri (primi o no) sono divisibili per 1
+- tutti i numeri (primi o no) sono divisibili per se stessi
+- Se N è primo, nessun numero fra 2 e N -- 1 lo divide
+- Dato N, se almeno un numero fra 2 e N -- 1 divide N, allora N non è primo.
 
 Siete d'accordo? Queste considerazioni le ho fatte guardando gli esempi
 che mi sono fatto! Fatene anche voi e provate a vedere se quello che ho
@@ -1160,10 +1151,10 @@ Da questi primi esempi comincio a formulare una ***strategia.***
 
 Dato N:
 
--   scorro tutti i numeri fra 2 e N -- 1
--   vedo se qualcuno di questi divide N
--   Se anche uno solo divide N, N non è primo!
--   Se nessuno di questi divide N, allora N è primo!
+- scorro tutti i numeri fra 2 e N -- 1
+- vedo se qualcuno di questi divide N
+- Se anche uno solo divide N, N non è primo!
+- Se nessuno di questi divide N, allora N è primo!
 
 La cosa più semplice da fare mi sembra ***contare*** quanti numeri fra 2
 e N -- 1 dividono N. Se la conta porta ZERO, allora N è primo,
@@ -1175,29 +1166,25 @@ che 1 e N stessi vanno esclusi, perché non sono divisori interessanti.
 
 Provo a organizzare le cose da fare in questo modo:
 
-**Passaggio 1**
+**Passaggio 1**<br>
+Dato N, visualizzo tutti i numeri fra 2 e N - 1
 
-Dato N, visualizzo tutti i numeri fra 2 e N -- 1
+**Passaggio 2**<br>
+Dato N, visualizzo quali numeri fra 2 e N - 1 dividono N
 
-**Passaggio 2**
-
-Dato N, visualizzo quali numeri fra 2 e N -- 1 dividono N
-
-**Passaggio 3**
-
+**Passaggio 3**<br>
 Dato N, conto quanti numeri fra 2 e N -- 1 dividono N
 
-**Passaggio 4 (finale)**
-
+**Passaggio 4 (finale)**<br>
 Dato N, faccio lo step 3 e poi guardo il risultato: se la conta è ZERO,
 N è primo, altrimenti no.
 
 Attenzione adesso... siete riusciti a figurarvi i passaggi descritti
 sopra?!?! Bene! Allora sappiate 2 cose:
 
-1.  arrivati qui avete già praticamente risolto l'esercizio
-2.  la descrizione dei passaggi rappresenta esattamente i commenti che
-    servono nel codice!
+1. arrivati qui avete già praticamente risolto l'esercizio
+2. la descrizione dei passaggi rappresenta esattamente i commenti che
+   servono nel codice!
 
 Capito il concetto?! I commenti che il prof tanto agogna scriviate nelle
 vostre risoluzioni sono esattamente questi, ovvero ***i passaggi che
@@ -1214,87 +1201,77 @@ Provo a scrivere il codice:
 
 **Passaggio 1**
 
-# Dato N, visualizzo tutti i numeri fra 2 e N -- 1
-
+``` python
+# Dato N, visualizzo tutti i numeri fra 2 e N - 1
 for div in range(2, N -- 1):
+    print (div)
+```
 
-print (div)
 
 **Passaggio 2**
 
-# Dato N, visualizzo quali numeri fra 2 e N -- 1 dividono N
-
+``` python
+# Dato N, visualizzo quali numeri fra 2 e N - 1 dividono N
 for div in range(2, N -- 1):
+    if N % div == 0:
+        print (div)
+```
 
-if N % div == 0:
-
-print (div)
 
 **Passaggio 3**
 
-# Dato N, conto quanti numeri fra 2 e N -- 1 dividono N
-
+``` python
+# Dato N, conto quanti numeri fra 2 e N - 1 dividono N
 conta = 0
-
 for div in range(2, N -- 1):
+    if N % div == 0:
+        conta += 1
+```
 
-if N % div == 0:
-
-*conta += 1*
 
 **Passaggio 4 (finale)**
 
-# Dato N, faccio lo step 3 e poi guardo il risultato
 
+```
+# Dato N, faccio lo step 3 e poi guardo il risultato
 # se la conta è ZERO, N è primo, altrimenti no.
 
+
+```
 . . .
 
 if conta == 0:
-
-print(N, "è primo")
-
+    print(N, "è primo")
 else:
-
-print(N, "non è primo")
-
+    print(N, "non è primo")
+```
 
 ------------------------------------------------------------------------------------------
 ### STEP 6: stesura finale del codice
 
-Fatto questo, mi basta rimettere insieme tutto il ragionamento e il
-gioco è fatto!
+Fatto questo, mi basta rimettere insieme tutto il ragionamento e il gioco è fatto!
 
+
+``` python
 # inserimento controllato valore utente
-
-while *True*:
-
-N = int(input("Inserisci un numero intero positivo: "))
-
-if N > 0:
-
-break
+while True:
+    N = int(input("Inserisci un numero intero positivo: "))
+    if N > 0:
+        break
 
 # conta dei divisori "propri" di N
-
 conta = 0
 
-for div in range(2, N -- 1):
-
-if N % div == 0:
-
-*conta += 1*
+for div in range(2, N - 1):
+    if N % div == 0:
+        conta += 1
 
 # controllo numero dei divisori propri
-
 if conta == 0:
-
-print(N, "è primo")
-
+    print(N, "è primo")
 else:
-
-print(N, "non è primo")
-
+    print(N, "non è primo")
+```
 
 ------------------------------------------------------------------------------------------
 ### STEP 7: test del codice scritto
@@ -1307,7 +1284,7 @@ ci sono problemi, bisogna analizzare a ritroso tutti gli step, a costo
 di ripartire dallo step 0!!!
 
 In effetti un piccolo errore in questo codice c'è... infatti, facendo
-alcune prove, ci si accorge che questo codice riconosce il numero 1 come
+alcune prove, ci si accorge che questo codice riconosce il numero 1 (e tutti i negativi) come
 primo, mentre wikipedia (vedi sopra) ci dice che non lo è...
 
 Provate a correggere voi il codice.
@@ -1355,7 +1332,7 @@ due volte consecutive un valore negativo.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 383
+**Esercizio 383**
 
 Scrivere un programma che acquisisca da tastiera un numero intero
 assicurandosi che sia positivo e, successivamente, stampi a video i 5
@@ -1365,7 +1342,7 @@ anni bisestili strettamente superiori al numero acquisito.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 384
+**Esercizio 384**
 
 Visualizzare la Tavola Pitagorica.
 
@@ -1373,7 +1350,7 @@ Visualizzare la Tavola Pitagorica.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 385: numeri perfetti
+**Esercizio 385: numeri perfetti**
 
 Un numero intero si dice perfetto se risulta uguale alla somma dei suoi
 divisori (minori del numero stesso). Ad esempio 6 = 1 + 2 + 3, che sono
@@ -1386,27 +1363,32 @@ perfetto.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 386
+**Esercizio 386**
 
 Dato un numero F, inserito dall'utente e compreso fra 0 e 12
 (verificare), visualizzare il fattoriale di F.
 
-> Il **fattoriale** di un numero intero positivo F si indica con ! ed è
-> definito come il prodotto di tutti i numeri da 1 a F. Ad esempio:
 
-6 ! = 1 * 2 * 3 * 4 * 5 * 6 = 720
+!!! note "Il Fattoriale"
 
-> Per definizione inoltre abbiamo:
+    Il *fattoriale* di un numero intero positivo F si indica con ! ed è
+    definito come il prodotto di tutti i numeri da 1 a F. Ad esempio:
 
-> 0 ! = 1
+    ```
+    6! = 1 * 2 * 3 * 4 * 5 * 6 = 720
+    ```
+    
+    Per definizione inoltre abbiamo:
 
-> n ! = ( n -- 1 ) ! * n
-
+    ```
+    0! = 1
+    n! = ( n - 1 ) ! * n
+    ```
 
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 387: cornice rettangolare
+**Esercizio 387: cornice rettangolare**
 
 Visualizzazione di un rettangolo con cornice "+" e interno "=" di
 misure A e B, decise dall'utente
@@ -1425,7 +1407,7 @@ come cornice e da un carattere a scelta all'interno.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 389: MCM
+**Esercizio 389: MCM**
 
 Inseriti 2 numeri interi positivi (verificare) da parte dell'utente,
 calcolare il minimo comune multiplo fra di essi.
@@ -1434,7 +1416,7 @@ calcolare il minimo comune multiplo fra di essi.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 390: MCD
+**Esercizio 390: MCD**
 
 Inseriti 2 numeri interi positivi (verificare) da parte dell'utente,
 calcolare il Massimo Comun Divisore fra di essi.
@@ -1443,7 +1425,7 @@ calcolare il Massimo Comun Divisore fra di essi.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 391: Quadrato Perfetto
+**Esercizio 391: Quadrato Perfetto**
 
 Un quadrato perfetto è un numero della sequenza 1, 4, 9, 16, 25...
 ovverosia un numero qualsiasi creato come prodotto per se stesso di un
@@ -1463,31 +1445,29 @@ quadrato perfetto, cioè 4.
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 392
+**Esercizio 392**
 
 Scrivere un programma che riceva in ingresso un numero positivo N e
 determini il massimo intero K tale che la somma dei primi K interi sia
 minore o uguale a N. Ad esempio, se N=20 allora K risulta 5, infatti
 
-1 + 2 + 3 + 4 + 5 = 15
+    1 + 2 + 3 + 4 + 5 = 15
 
 mentre
 
-1 + 2 + 3 + 4 + 5 + 6 = 21
+    1 + 2 + 3 + 4 + 5 + 6 = 21
 
 
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 393: Fibonacci
+**Esercizio 393: Fibonacci**
 
-La successione di Fibonacci è una sequenza di numeri tale che:
+La **successione di Fibonacci** è una sequenza di numeri tale che:
 
-F(1) = 0
-
-F(2) = 1
-
-F(n) = F(n-1) + F(n-2)
+    F(1) = 0
+    F(2) = 1
+    F(n) = F(n-1) + F(n-2)
 
 Quindi, i numeri di Fibonacci sono quelli della sequenza 0, 1, 1, 2, 3,
 5, 8, 13, 21 ... dove **il numero successivo si ottiene come somma dei 2
@@ -1497,14 +1477,13 @@ Dato un numero intero N da parte dell'utente (verificare che sia
 positivo), visualizzare la successione di Fibonacci da 0 fino
 all'ennesimo numero.
 
-Ad esempio, dato N = 6, va visualizzata la successione: 0 , 1 , 1 , 2 ,
-3 , 5.
+Ad esempio, dato N = 6, va visualizzata la successione: 0 , 1 , 1 , 2 , 3 , 5.
 
 
 ------------------------------------------------------------------------------------------
 
 
-Esercizio 394
+**Esercizio 394**
 
 Dopo aver fatto inserire un numero intero positivo dire da quante cifre
 è composto il numero. Ad esempio 12345 è composto da 5 cifre.
