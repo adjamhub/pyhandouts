@@ -4,14 +4,14 @@ I Timer sono oggetti molto comuni in ogni libreria OOP. Per la scansione
 del tempo si appoggiano tipicamente al clock di sistema, che
 teoricamente scandisce il milionesimo di secondo, ma che per motivi
 tecnici che non sto a spiegarvi (a lezione me lo chiederete, lo so: il
-bello dell\'inutile) è affidabile appena al millesimo di secondo. Per
-quello che serve a noi, basta e avanza\...
+bello dell'inutile) è affidabile appena al millesimo di secondo. Per
+quello che serve a noi, basta e avanza...
 
-Un Timer è un oggetto della classe wx.Timer che gestisce appunto una
+Un Timer è un oggetto della classe `wx.Timer` che gestisce appunto una
 scansione del tempo in millisecondi. Poiché ha già il suo bel daffare
 con questa questione del tempo vive sospeso rispetto al *Main Event
 Loop* e quindi non gestisce direttamente i suoi eventi, ma si appoggia
-alla sua widget parent. Detto così sembra complicato\... vediamo un
+alla sua widget parent. Detto così sembra complicato... vediamo un
 esempio commentato e capirete subito come funziona.
 
 ``` python
@@ -27,7 +27,7 @@ self.Bind(wx.EVT_TIMER, self.funzioneDaEseguire, self.timer)
 
 Ecco qua! Come avete visto non è particolarmente complicato. Adesso il
 timer è pronto e collegato alla funzione da eseguire al timeout. Ma come
-si fa a far partire il timer? E a fermarlo? E\...
+si fa a far partire il timer? E a fermarlo? E...
 
 Come vediamo fra un attimo, per attivare un timer, basta invocare la
 funzione **Start(millisecondi)**. Se ad esempio invochiamo Start(100),
@@ -55,20 +55,22 @@ timer.StartOnce(millisecondi)
 
 Spero sia tutto chiaro :)
 
+
+<!-- #################################################################################################################################### -->
 # wx.Gauge
 
-La classe wx.Gauge rappresenta una widget che implementa una barra di
+La classe `wx.Gauge` rappresenta una widget che implementa una barra di
 avanzamento.
 
 ![image](images/wxGauge.jpg)
 
 La barra di avanzamento va impostata indicando il range predefinito. In
 questo esempio ho messo range=10 e questo significa che la barra si
-caricherà come fosse divisa in 10 pezzi. Nell\'esempio presentato
+caricherà come fosse divisa in 10 pezzi. Nell'esempio presentato
 abbiamo un timer per far avanzare la barra di uno step automaticamente
 ogni secondo e 2 pulsanti per fare OK e STOP.
 
-Nell\'esempio proposto quando si clicca OK la barra comincia a caricarsi
+Nell'esempio proposto quando si clicca OK la barra comincia a caricarsi
 e può essere fermata cliccando STOP. Quando la barra è carica il
 programma si chiude.
 
@@ -117,20 +119,25 @@ window.Show()
 app.MainLoop()
 ```
 
+
+
+<!-- #################################################################################################################################### -->
 # Esercizi
 
 **Esercizio 381 (orologio)**
 
-Implementare una semplice finestra con un\'unica etichetta che
+Implementare una semplice finestra con un'unica etichetta che
 visualizza un orologio funzionante (che scorre) con ore, minuti,
 secondi.
 
+
 ----------------------------------------------------------------------------------
+
 
 **Esercizio 382 (cronometro)**
 
 Implementare un cronometro con una etichetta con valore iniziale
-\"00:00:00\" rappresentanti rispettivamente minuti, secondi e centesimi
+"00:00:00" rappresentanti rispettivamente minuti, secondi e centesimi
 di secondo e tre pulsanti per le funzioni START, STOP, RESET.
 
 -   START fa (ri)partire il cronometro
@@ -145,4 +152,5 @@ Applicazione con 4 immagini per 3 caselle: luce rossa, luce gialla, luce
 verde, luce grigia (luce spenta). Il semaforo inizia con la luce verde
 attiva e le altre due grigie. Ogni 5 secondi si passa allo stadio
 successivo (luce gialla, poi luce rossa, poi si ritorna a luce verde,
-all\'infinito).
+all'infinito).
+
