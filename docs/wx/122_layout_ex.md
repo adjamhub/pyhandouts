@@ -4,23 +4,23 @@ Alcuni esercizi in cui ricostruire il layout dell'immagine proposta.
 
 Buon lavoro!
 
-**Esercizio 181**
+**Esercizio 181 (line)**
 
-![image](exLayout/exFlexGrid2.jpg)
-
-
-------------------------------------------------------------------------------------------------------------------------------------------
-
-
-**Esercizio 182**
-
-![image](exLayout/exFlexGrid3.jpg)
+![image](exLayout/LineLayout1.png)
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 183**
+**Esercizio 182 (line)**
+
+![image](exLayout/LineLayout2.png)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**Esercizio 183 (grid)**
 
 ![image](exLayout/exGrid1.jpg)
 
@@ -28,7 +28,7 @@ Buon lavoro!
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 184**
+**Esercizio 184 (grid)**
 
 ![image](exLayout/exGrid2.jpg)
 
@@ -36,16 +36,15 @@ Buon lavoro!
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 185**
+**Esercizio 185 (grid)**
 
-![image](exLayout/exGrid3.jpg)
+![image](exLayout/exGridBag1.jpg)
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 186**
+**Esercizio 186 (grid)**
 
-![image](exLayout/exGridBag1.jpg)
-
+![image](exLayout/exFlexGrid1.jpg)
 
