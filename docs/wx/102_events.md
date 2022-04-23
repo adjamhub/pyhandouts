@@ -166,15 +166,10 @@ if __name__ == "__main__":
 Come al solito... copiate e provate!
 
 !!! warning "Attenzione!"
-    In questo unico caso, in cui si intercetta l'evento **wx.EVT_CLOSE** è
-    necessario chiudere la finestra utilizzando *Destroy()* invece di
-    *Close(True)*. Infatti la funzione *Close()* genera un evento EVT_CLOSE
-    che di solito chiama la funzione di chiusura predefinita.
-
-    Se in questo caso usassimo Close(True) dentro la funzione chiudi() si
-    genererebbe un nuovo evento wx.EVT_CLOSE, che richiamerebbe la funzioni
-    chiudi(), che richiamerebbe la funzione Close()... dando vita ad un
-    ciclo infinito.
+    Quando ci si connette all'evento **wx.EVT_CLOSE** (e tipicamente... solo in questo caso) è necessario chiudere la finestra utilizzando 
+    la funzione `Destroy()` invece della funzione `Close()`. 
+    
+    Infatti: funzione `Close()` ---> evento `wx.EVT_CLOSE` ---> bind alla funzione chiudi ---> funzione `Close()` ---> CICLO INFINITO!
 
 
 Ok, definiti gli eventi più semplici e capito come collegarli alle

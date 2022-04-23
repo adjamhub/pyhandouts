@@ -2,28 +2,25 @@
 
 !!! warning "Attenzione!"
 
-    Negli esempi che seguono, scritti con l'unico obiettivo di presentare
-    le widget, andremo a posizionare più oggetti nella stessa finestra
-    tramite il cosiddetto **posizionamento assoluto**, inserendo tutte le
-    widget in un **wx.Panel** e indicando **posizione (pos)** e **dimensione
-    (size)** degli oggetti.
+    Negli esempi che seguono, scritti con l'unico obiettivo di presentare le widget, andremo a posizionare più oggetti nella stessa finestra
+    tramite il cosiddetto **posizionamento assoluto**, inserendo tutte le widget in un `wx.Panel` e indicando **posizione (pos)** e 
+    **dimension (size)** degli oggetti.
 
-    Questo modo di fare, pur semplice e intuitivo, è comunque assolutamente
-    sconsigliato e sarà sostituito nel prossimo capitolo da un concetto
+    Questo modo di fare, pur semplice e intuitivo, è comunque assolutamente sconsigliato e sarà sostituito nel prossimo capitolo da un concetto
     molto più avanzato e funzionale.
 
 
 In questa sezione andremo ad inserire le Widgets più semplici, per
 capire come sono fatte e come funzionano. Per ognuna di esse sarà
 proposta una descrizione sommaria delle sue caratteristiche,
-un\'immagine esplicativa e un semplice esempio di codice per testare il
+un'immagine esplicativa e un semplice esempio di codice per testare il
 funzionamento di base.
 
 Ricordo che la documentazione completa di ognuna di queste widget è
 disponibile nella apposita sezione.
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.Frame
 
 
@@ -31,11 +28,11 @@ La classe wx.Frame rappresenta una finestra vuota, con bordo e aspetto
 nativo nel sistema operativo ospite, con le funzionalità tipiche delle
 finestre già implementate e funzionanti senza fare nulla: trascinamento,
 ridimensionamento, barra del titolo, riduzione ad icona,
-massimizzazione, etc\...
+massimizzazione, etc...
 
 ![image](images/wxFrame.jpg)
 
-Non c\'è molto da spiegare su questo che non abbiamo già visto\...
+Non c'è molto da spiegare su questo che non abbiamo già visto...
 provate a copiare l'esempio sotto e a giocare un pò con la finestra.
 Poi magari date un occhio alla documentazione.
 
@@ -48,11 +45,11 @@ win.Show()
 app.MainLoop()
 ```
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.Panel
 
 
-La classe wx.Panel rappresenta una widget vuota, adatta ad essere
+La classe `wx.Panel` rappresenta una widget vuota, adatta ad essere
 utilizzata come contenitore delle altre che vedremo.
 
 La sua utilità sta nel fatto che fornisce nativamente interazione con la
@@ -65,26 +62,26 @@ frame con dentro un *panel* sembra normalmente *pieno*.
 
 !!! tip "Suggerimento (anzi no... Obbligo Perentorio!!!)"
 
-    Da ora in poi utilizzeremo il wx.Panel in tutti i nostri progetti. Esso costituirà anche un livello 
+    Da ora in poi utilizzeremo il `wx.Panel` in tutti i nostri progetti. Esso costituirà anche un livello 
     intermedio di parentela fra le widgets in maniera che:
 
     - il Frame nasce senza parent
-    - il Panel nasce con parent il Frame (tipicamente *self*)
+    - il Panel nasce con parent il Frame (tipicamente `self`)
     - Tutte le widget inserite nella finestra, che giacciono sopra il Panel, hanno il panel stesso come parent
 
     Tutti gli esempi da qui in poi sono strutturati in questo modo: vi basterà osservarli un minimo :)
 
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.Button
 
 
-La classe wx.Button rappresenta una widget che implementa un pulsante cliccabile con una etichetta di testo dentro.
+La classe `wx.Button` rappresenta una widget che implementa un pulsante cliccabile con una etichetta di testo dentro.
 
 ![image](images/wxButton.jpg)
 
-Nell'esempio proposto quando si clicca il pulsante (evento **wx.EVT_BUTTON**) si riduce ad icona l'applicazione.
+Nell'esempio proposto quando si clicca il pulsante (evento `wx.EVT_BUTTON`) si riduce ad icona l'applicazione.
 
 ``` python
 import wx
@@ -99,6 +96,7 @@ class Esempio(wx.Frame):
 
     def iconifica(self, evt):
         self.Iconize()
+        return
 
 # ----------------------------------------
 if __name__ == "__main__":
@@ -109,16 +107,16 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 # wx.ToggleButton
 
 
-La classe wx.ToggleButton rappresenta una widget che implementa un pulsante con due stati: cliccato e non cliccato.
+La classe `wx.ToggleButton` rappresenta una widget che implementa un pulsante con due stati: cliccato e non cliccato.
 
 ![image](images/wxToggleButton.jpg)
 
-Nell'esempio proposto quando si clicca il ToggleButton (evento **wx.EVT_TOGGLEBUTTON**) si mette a schermo intero 
-la finestra e si cambia la scritta sul pulsante (che rimane cliccato). 
+Nell'esempio proposto quando si clicca il ToggleButton (evento `wx.EVT_TOGGLEBUTTON`) si mette a schermo intero 
+la finestra e si cambia la scritta sul pulsante (che rimane cliccato). <br>
 Cliccandolo di nuovo si ritorna alla situazione iniziale.
 
 ``` python
@@ -129,16 +127,16 @@ class Esempio(wx.Frame):
     def __init__(self):
         super().__init__(None, title="Fullscreen(er)")
         panel = wx.Panel(self)
-        self.fsButton = wx.ToggleButton(panel, label="Metti fullscreen", pos=(5,5), size=(150,40))
-        self.fsButton.Bind(wx.EVT_TOGGLEBUTTON, self.mettiFullScreen)
+        self.fullScreenButton = wx.ToggleButton(panel, label="Metti fullscreen", pos=(5,5), size=(150,40))
+        self.fullScreenButton.Bind(wx.EVT_TOGGLEBUTTON, self.mettiFullScreen)
 
     def mettiFullScreen(self, evt):
         if not self.IsFullScreen():
             self.ShowFullScreen(True)
-            self.fsButton.SetLabel("Esci dal fullscreen")
+            self.fullScreenButton.SetLabel("Esci dal fullscreen")
         else:
             self.ShowFullScreen(False)
-            self.fsButton.SetLabel("Metti fullscreen")
+            self.fullScreenButton.SetLabel("Metti fullscreen")
 
 # ----------------------------------------
 if __name__ == "__main__":
@@ -149,19 +147,17 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.StaticText
 
 
-La classe wx.StaticText rappresenta una widget che implementa una
-etichetta dove il programmatore può inserire un testo da visualizzare
-all'utente.
+La classe `wx.StaticText` rappresenta una widget che implementa una etichetta dove il programmatore 
+può inserire un testo da visualizzare all'utente.
 
 ![image](images/wxStaticText.jpg)
 
-Nel semplicissimo esempio proposto, viene utilizzato la widget
-wx.StaticText per visualizzare una poesia in più righe. La widget è
-inserita a "tutta finestra".
+Nel semplicissimo esempio proposto, viene utilizzata la widget `wx.StaticText` per visualizzare una poesia in più righe. 
+La widget è inserita a "tutta finestra".
 
 ``` python
 import wx
@@ -182,19 +178,17 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.StaticLine
 
 
-La classe wx.StaticLine rappresenta una widget che implementa una linea
-decorativa, orizzontale o verticale.
+La classe `wx.StaticLine` rappresenta una widget che implementa una linea decorativa, orizzontale o verticale.
 
 ![image](images/wxStaticLine.jpg)
 
-Inserire una wx.StaticLine è veramente semplice e serve solo a scopo
-decorativo. Approfitto di questa per farvi vedere come modificare il
-font di una wx.StaticText e realizzare una widget con titolo, linea e
-testo, come vedete nella figura.
+Inserire una `wx.StaticLine` è veramente semplice e serve solo a scopo decorativo. 
+Approfitto di questa per farvi vedere come modificare il font di una `wx.StaticText` e realizzare una widget con 
+titolo, linea e testo, come vedete nella figura.
 
 ``` python
 import wx
@@ -205,14 +199,15 @@ class Esempio(wx.Frame):
         super().__init__(None, title="Poesia")
         panel = wx.Panel(self)
 
-        font = wx.Font(20,wx.DEFAULT,wx.NORMAL,wx.BOLD)
+        # Font grassetto di 20pt
+        bigBoldFont = wx.Font( wx.FontInfo(20).Bold() )
         titolo = wx.StaticText(panel, label="Soldati",pos=(10,10), size=(200,30))
-        titolo.SetFont(font)
+        titolo.SetFont(bigBoldFont)
 
         linea = wx.StaticLine(panel, pos=(10,50), size=(200,3))
 
         testo = "\nSi sta come\nd'autunno\nsugli alberi\nle foglie\n"
-        etichetta = wx.StaticText(panel, label=testo, pos=(10,60), size=(200,100))
+        etichetta = wx.StaticText(panel, label=testo, pos=(10,60), size=(200,150))
 
 # ----------------------------------------
 if __name__ == "__main__":
@@ -223,13 +218,12 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.TextCtrl
 
 
-La classe wx.TextCtrl rappresenta una widget che implementa una casella
-di testo, con vari stili supportati, definibili in fase di
-inizializzazione:
+La classe `wx.TextCtrl` rappresenta una widget che implementa una casella di testo, con vari stili supportati, 
+definibili in fase di inizializzazione:
 
 ``` python
 casella = wx.TextCtrl( window , style=OPTIONS )
@@ -237,26 +231,22 @@ casella = wx.TextCtrl( window , style=OPTIONS )
 
 Cito qui i più importanti:
 
-  Stile                 Descrizione
-  --------------------- ----------------------------------------------------
-  (default)             Linea singola di testo, digitabile dall'utente
-  wx.TE_MULTILINE       Permette alla TextCtrl di utilizzare più righe
-  wx.TE_PASSWORD        Ogni carattere viene visualizzato con un asterisco
-  wx.TE_READONLY        Testo non modificabile dall'utente
-  wx.TE_PROCESS_ENTER   Gestisce il tasto INVIO come evento separato
+| Stile               |  Descrizione                                       |
+|---------------------|----------------------------------------------------|
+| (default)           | Linea singola di testo, digitabile dall'utente     |
+| wx.TE_MULTILINE     | Permette alla TextCtrl di utilizzare più righe     |
+| wx.TE_PASSWORD      | Ogni carattere viene visualizzato con un asterisco |
+| wx.TE_READONLY      | Testo non modificabile dall'utente                 |
+| wx.TE_PROCESS_ENTER | Gestisce il tasto INVIO come evento separato       |
 
 Non ha un evento di default, ma ben due utilizzabili distintamente:
 
--   **wx.EVT_TEXT**: viene scatenato ogni volta che cambia il testo
-    contenuto nella widget
--   **wx.EVT_TEXT_ENTER**: viene scatenato quando hai impostato lo stile
-    wx.TE_PROCESS_ENTER e si preme INVIO nella widget
+- `wx.EVT_TEXT`: viene scatenato ogni volta che cambia il testo contenuto nella widget
+- `wx.EVT_TEXT_ENTER`: viene scatenato quando hai impostato lo stile `wx.TE_PROCESS_ENTER` e si preme INVIO nella widget
 
-Nell'esempio proposto ho inserito una TextCtrl con caratteri oscurati
-(password). Man mano che si digita su di essa, il testo appare nella
-StaticText a fianco. Provate a testare l'esempio autonomamente e a
-modificare il codice per visualizzare ciò che è stato digitato solo alla
-fine, quando si preme INVIO nella TextCtrl.
+Nell'esempio proposto ho inserito una TextCtrl con caratteri oscurati (password). 
+Man mano che si digita su di essa, il testo appare nella StaticText a fianco. Provate a testare l'esempio autonomamente e a
+modificare il codice per visualizzare ciò che è stato digitato solo alla fine, quando si preme INVIO nella TextCtrl.
 
 ![image](images/wxTextCtrl.jpg)
 
@@ -286,27 +276,25 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.ComboBox
 
 
-La classe wx.ComboBox rappresenta una widget che implementa un menù a
-tendina
+La classe `wx.ComboBox` rappresenta una widget che implementa un menù a tendina
 
 ![image](images/wxComboBox.jpg)
 
 La ComboBox supporta i seguenti stili di lavoro:
 
-  Stile                 Descrizione
-  --------------------- ---------------------------------------------------
-  (default)             Linea singola di testo editabile + menù a tendina
-  wx.CB_READONLY        Linea di testo NON editabile.
-  wx.CB_SORT            Ordina automaticamente le voci
-  wx.TE_PROCESS_ENTER   Gestisce il tasto INVIO come evento separato
+|  Stile               |  Descrizione                                      |
+|----------------------|---------------------------------------------------|
+| (default)            | Linea singola di testo editabile + menù a tendina |
+| wx.CB_READONLY       | Linea di testo NON editabile.                     |
+| wx.CB_SORT           | Ordina automaticamente le voci                    |
+| wx.TE_PROCESS_ENTER  | Gestisce il tasto INVIO come evento separato      |
 
 Nell'esempio proposto vediamo una etichetta e un menù a tendina.
-Selezionando una voce del menù a tendina (evento **wx.EVT_COMBOBOX**) si
-modifica il contenuto dell'etichetta.
+Selezionando una voce del menù a tendina (evento `wx.EVT_COMBOBOX`) si modifica il contenuto dell'etichetta.
 
 ``` python
 import wx
@@ -317,11 +305,9 @@ class Esempio(wx.Frame):
         super().__init__(None, title="Cambia l'etichetta")
 
         panel = wx.Panel(self)       
-        self.etichetta = wx.StaticText(panel, label="seleziona una voce",
-                                        pos=(5,5), size=(200,30))
+        self.etichetta = wx.StaticText(panel, label="seleziona una voce", pos=(5,5), size=(200,30))
         frutta = ["pere", "mele", "arance", "banane"]
-        self.combo = wx.ComboBox(panel, choices=frutta, style=wx.CB_READONLY,
-                                        pos=(5,40), size=(200,30))
+        self.combo = wx.ComboBox(panel, choices=frutta, style=wx.CB_READONLY, pos=(5,40), size=(200,30))
         self.combo.Bind(wx.EVT_COMBOBOX, self.visualizzaSelezione)
 
     def visualizzaSelezione(self, evt):
@@ -338,12 +324,11 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.CheckBox
 
 
-La classe wx.CheckBox rappresenta una widget che implementa una casella
-di spunta.
+La classe `wx.CheckBox` rappresenta una widget che implementa una casella di spunta.
 
 ![image](images/wxCheckBox.jpg)
 
@@ -385,24 +370,20 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.RadioButton
 
 
-La classe wx.RadioButton rappresenta una widget che implementa un
-pulsante selezionabile in maniera mutualmente esclusiva.
+La classe `wx.RadioButton` rappresenta una widget che implementa un pulsante selezionabile in maniera mutualmente esclusiva.
 
 ![image](images/wxRadioButton.jpg)
 
-Per definire il comportamento tipico dei RadioButton della mutua
-esclusività si deve dichiarare nella prima widget lo stile
-**wx.RB_GROUP**: tutte le RadioButton seguenti faranno parte del gruppo
-del primo. Se si vuole iniziare un nuovo gruppo, basterà inserire di
-nuovo lo stile necessario.
+Per definire il comportamento tipico dei RadioButton della mutua esclusività si deve dichiarare nella prima widget lo stile
+`wx.RB_GROUP`: tutte le RadioButton seguenti faranno parte del gruppo del primo. Se si vuole iniziare un nuovo gruppo, 
+basterà inserire di nuovo lo stile necessario.
 
-Nell'esempio proposto saranno inserite 2 radio buttons per selezionare
-il sesso (M/F). Al click su una di loro (evento **wx.EVT_RADIOBUTTON**)
-l'altra si deselezionerà automaticamente e l'etichetta sotto verrà
+Nell'esempio proposto saranno inserite 2 radio buttons per selezionare il sesso (M/F). 
+Al click su una di loro (evento `wx.EVT_RADIOBUTTON`) l'altra si deselezionerà automaticamente e l'etichetta sotto verrà
 aggiornata.
 
 ``` python
@@ -436,18 +417,16 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.Slider
 
-La classe wx.Slider rappresenta una widget che implementa un cursore ad
+La classe `wx.Slider` rappresenta una widget che implementa un cursore ad
 avanzamento lineare.
 
 ![image](images/wxSlider.jpg)
 
-Nell'esempio proposto ho implementato uno slider che va da 0 a 10 (il
-range predefinito è 0-100) e ho impostato il valore iniziale a 5. Sotto
-c'è una etichetta che si aggiorna automaticamente quando si muove lo
-slider (evento **wx.EVT_SLIDER**)
+Nell'esempio proposto ho implementato uno slider che va da 0 a 10 (il range predefinito è 0-100) e ho impostato il valore iniziale a 5. 
+Sotto c'è una etichetta che si aggiorna automaticamente quando si muove lo slider (evento `wx.EVT_SLIDER`)
 
 ``` python
 import wx
@@ -478,19 +457,16 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.SpinCtrl
 
 
-La classe wx.SpinCtrl rappresenta una widget che implementa un selettore
-numerico con pulsanti di avanzamento.
+La classe `wx.SpinCtrl` rappresenta una widget che implementa un selettore numerico con pulsanti di avanzamento.
 
 ![image](images/wxSpinCtrl.jpg)
 
-Nell'esempio proposto quando muovo il controllo della wx.SpinCtrl
-l'etichetta si aggiorna automaticamente (evento **wx.EVT_SPINCTRL**).
-Come ormai tradizione in questi esempi, approfitto di una widget
-*facile* per introdurre una piccola novità: Il pulsante a due stati
+Nell'esempio proposto quando muovo il controllo della `wx.SpinCtrl` l'etichetta si aggiorna automaticamente (evento `wx.EVT_SPINCTRL`).
+Come ormai tradizione in questi esempi, approfitto di una widget *facile* per introdurre una piccola novità: Il pulsante a due stati
 serve per abilitare e disabilitare la widget. Provate!
 
 ``` python
@@ -532,12 +508,12 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.StaticBox
 
 
-La classe wx.StaticBox rappresenta una widget che implementa una
-decorazione per raggruppare le widget. Utile per organizzare il layout.
+La classe `wx.StaticBox` rappresenta una widget che implementa una decorazione per raggruppare le widget. <br>
+Utile per organizzare il layout.
 
 ![image](images/wxStaticBox.jpg)
 
@@ -565,7 +541,7 @@ class Esempio(wx.Frame):
         self.text = wx.StaticText(panel, label='Età', pos=(15, 95))
         self.age = wx.SpinCtrl(panel, value='1', pos=(55, 90), size=(120, -1), min=1, max=120)
 
-        self.button = wx.Button(panel, wx.ID_CLOSE, pos=(90, 185), size=(120, -1))
+        self.button = wx.Button(panel, label="Chiudi", pos=(90, 185), size=(120, -1))
         self.button.Bind(wx.EVT_BUTTON, self.chiudi)
 
     def chiudi(self, evt):    
@@ -581,24 +557,20 @@ if __name__ == "__main__":
 ```
 
 
-###########################################################################################################
+<!-- ########################################################################################################### -->
 ## wx.ListBox
 
 
-La classe wx.ListBox rappresenta una widget che implementa una lista di
-voci selezionabili in maniera singola o multipla.
+La classe `wx.ListBox` rappresenta una widget che implementa una lista di voci selezionabili in maniera singola o multipla.
 
 ![image](images/wxListBox.jpg)
 
-Questa widget supporta 2 eventi considerabili "di default":
+Questa widget supporta 2 eventi considerabili ***di default***:
 
--   **wx.EVT_LISTBOX**: scatenato quando si seleziona un elemento della
-    lista
--   **wx.EVT_LISTBOX_DCLICK**: scatenato quando si fa doppio click su un
-    elemento della lista
+- `wx.EVT_LISTBOX`: scatenato quando si seleziona un elemento della lista
+- `wx.EVT_LISTBOX_DCLICK`: scatenato quando si fa doppio click su un elemento della lista
 
-Come al solito vediamo il codice che genera l'immagine che vedete
-sopra:
+Come al solito vediamo il codice che genera l'immagine che vedete sopra:
 
 ``` python
 import wx
