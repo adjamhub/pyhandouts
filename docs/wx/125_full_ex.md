@@ -9,7 +9,67 @@ funzionalità richieste.
 
 Buon lavoro!
 
-**Esercizio 201 (Tic Tac Toe)**
+
+**Esercizio 201 (Sommatore)**
+
+![image](images/ex_sommatore.jpg)
+
+In questa applicazione bisogna implementare una widget per fare le
+somme. Sarà l'occasione per ragionare un pò sui layout e per curiosare
+un pochino nella documentazione degli oggetti utilizzati.
+
+Come vedete, si parte con un layout verticale in cui sono inseriti una
+serie di layout orizzontali contenenti gli oggetti... Per quanto
+riguarda l'implementazione, vi voglio far notare che i dati nelle
+TextCtrl sono comunque stringhe, quindi quando li prendete dovete
+convertirli in int (oppure in float), poi potete sommarli e infine, per
+visualizzarli dovete ritrasformare il risultato in una stringa.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**Esercizio 202 (Calcolatrice)**
+
+![image](images/ex_calcolatrice.jpg)
+
+Evoluzione del programma sommatore. Nella calcolatrice è presente anche
+un layout a griglia. La TextCtrl è impostata in modalità READONLY e ogni
+pulsante ha la sua ovvia funzione. Copiate il funzionamento da una
+calcolatrice tradizionale. La nostra dovrà comportarsi in maniera
+esattamente identica!!
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**Esercizio 203 (Lista spesa)**
+
+![image](images/ex_lista_spesa.jpg)
+
+La lista della spesa è poco più di un semplice esercizio sulla ListBox.
+Menzione particolare al layout, nel mio caso implementato con un'unica
+BagSizer. Attenzione alle righe e alle colonne da far allargare!
+
+-   pulsante AGGIUNGI: aggiunge la voce presente nella TextCtrl (se non
+    vuota) e la pulisce.
+-   pulsante ELIMINA: elimina la voce selezionata della ListBox (oppure
+    nulla, se nulla è selezionato)
+-   pulsante CHIUDI: chiude l'applicazione
+
+Aggiungo 2 livelli di difficoltà (opzionali):
+
+1.  il pulsante ELIMINA disabilitato all'inizio e abilitato solo se
+    c'è una voce selezionata nella ListBox.
+2.  Invece di CHIUDI, implementare SALVA E CHIUDI che prima di chiudere
+    l'applicazione salva i dati nel file *lista_della_spesa.txt* sul
+    Desktop dell'utente. I dati vanno salvati uno per riga.
+    
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**Esercizio 204 (Tic Tac Toe)**
 
 ![image](images/ex_tictactoe.jpg)
 
@@ -37,7 +97,7 @@ semplicemente scriverlo sul titolo.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 202 (Fifteen puzzle)**
+**Esercizio 205 (Fifteen puzzle)**
 
 ![image](images/ex_fifteen_puzzle.jpg)
 
@@ -59,60 +119,3 @@ gioco, far muovere i pulsanti al click e una funzione
 il puzzle!
 
 
-------------------------------------------------------------------------------------------------------------------------------------------
-
-
-**Esercizio 203 (Sommatore)**
-
-![image](images/ex_sommatore.jpg)
-
-In questa applicazione bisogna implementare una widget per fare le
-somme. Sarà l'occasione per ragionare un pò sui layout e per curiosare
-un pochino nella documentazione degli oggetti utilizzati.
-
-Come vedete, si parte con un layout verticale in cui sono inseriti una
-serie di layout orizzontali contenenti gli oggetti... Per quanto
-riguarda l'implementazione, vi voglio far notare che i dati nelle
-TextCtrl sono comunque stringhe, quindi quando li prendete dovete
-convertirli in int (oppure in float), poi potete sommarli e infine, per
-visualizzarli dovete ritrasformare il risultato in una stringa.
-
-
-------------------------------------------------------------------------------------------------------------------------------------------
-
-
-**Esercizio 204 (Calcolatrice)**
-
-![image](images/ex_calcolatrice.jpg)
-
-Evoluzione del programma sommatore. Nella calcolatrice è presente anche
-un layout a griglia. La TextCtrl è impostata in modalità READONLY e ogni
-pulsante ha la sua ovvia funzione. Copiate il funzionamento da una
-calcolatrice tradizionale. La nostra dovrà comportarsi in maniera
-esattamente identica!!
-
-
-------------------------------------------------------------------------------------------------------------------------------------------
-
-
-**Esercizio 205 (Lista spesa)**
-
-![image](images/ex_lista_spesa.jpg)
-
-La lista della spesa è poco più di un semplice esercizio sulla ListBox.
-Menzione particolare al layout, nel mio caso implementato con un'unica
-BagSizer. Attenzione alle righe e alle colonne da far allargare!
-
--   pulsante AGGIUNGI: aggiunge la voce presente nella TextCtrl (se non
-    vuota) e la pulisce.
--   pulsante ELIMINA: elimina la voce selezionata della ListBox (oppure
-    nulla, se nulla è selezionato)
--   pulsante CHIUDI: chiude l'applicazione
-
-Aggiungo 2 livelli di difficoltà (opzionali):
-
-1.  il pulsante ELIMINA disabilitato all'inizio e abilitato solo se
-    c'è una voce selezionata nella ListBox.
-2.  Invece di CHIUDI, implementare SALVA E CHIUDI che prima di chiudere
-    l'applicazione salva i dati nel file *lista_della_spesa.txt* sul
-    Desktop dell'utente. I dati vanno salvati uno per riga.
