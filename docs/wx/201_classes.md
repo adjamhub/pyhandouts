@@ -1,15 +1,15 @@
 # Classi wxPython
 
 La documentazione ufficiale della libreria **wxPython** è disponibile
-online (in versione integrale) all\'indirizzo
+online (in versione integrale) all'indirizzo
 <https://docs.wxpython.org/>. Se volete lavorare consultando quella e
 magari cercando qualche tutorial date un occhio anche allo [wiki del
 sito wxpython](https://wiki.wxpython.org).
 
 Qui sotto trovate i link diretti alla documentazione relativa alle
 classi che abbiamo utilizzato durante il corso. Le trovate elencate con
-la sintassi [MODULO.CLASSE]{.title-ref}. Nella maggior parte dei casi si
-tratterà di classi del modulo [wx]{.title-ref}, il modulo di base della
+la sintassi `MODULO.CLASSE`. <br>
+Nella maggior parte dei casi si tratterà di classi del modulo `wx`, il modulo di base della
 libreria.
 
 Buona lettura!
@@ -42,7 +42,7 @@ Buona lettura!
 [wx.StaticText](https://docs.wxpython.org/wx.StaticText.html)
 
 :   Etichetta dove il programmatore può inserire un testo da
-    visualizzare all\'utente.
+    visualizzare all'utente.
 
 [wx.StaticLine](https://docs.wxpython.org/wx.StaticLine.html)
 
