@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
 
 <!-- ########################################################################################################### -->
-# wx.ToggleButton
+## wx.ToggleButton
 
 
 La classe `wx.ToggleButton` rappresenta una widget che implementa un pulsante con due stati: cliccato e non cliccato.
