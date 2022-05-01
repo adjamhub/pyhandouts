@@ -3,6 +3,9 @@ version: 2
 build:
   image: latest
 
+mkdocs:
+  configuration: mkdocs.yml
+
 python:
   install:
     - requirements: mkdocs_requirements.txt
