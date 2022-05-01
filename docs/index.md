@@ -21,7 +21,7 @@
 - [ ] supporta CHM
 - [ ] Differenze di rendering fra "mkdocs serve" e "readthedocs" ---> nuova piattaforma???
 - [ ] link che si aprono in un'altra scheda
-- [ ] previous/next IN FONDO ALLA PAGINA
+- [x] previous/next IN FONDO ALLA PAGINA
 
 
 ## Cose da (ri)scrivere

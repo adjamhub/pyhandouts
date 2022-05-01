@@ -7,7 +7,6 @@ theme:
   custom_dir: mkdocs2/
 
 nav:
-  - Home: index.md
   - Basics:
     - Intro: basics/000_first.md
     - Installazione: basics/001_install.md
