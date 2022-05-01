@@ -1,8 +1,9 @@
+version: 2
+
 build:
   image: latest
 
 python:
-  setup_py_install: false
-
-requirements_file: mkdocs_requirements.txt
+  install:
+    - requirements: mkdocs_requirements.txt
 
