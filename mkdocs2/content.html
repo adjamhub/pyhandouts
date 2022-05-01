@@ -12,10 +12,10 @@
 {%- block next_prev %}
 {%- if page and (page.next_page or page.previous_page) %}
 <a rel="prev" {% if page.previous_page %}href="{{ page.previous_page.url|url }}" class="nav-link"{% else %}class="nav-link disabled"{% endif %}>
-  <i class="fa fa-arrow-left"></i> {% trans %}Previous{% endtrans %}
+  <i class="fa fa-arrow-left"></i> Previous
 </a>
 <a rel="next" {% if page.next_page %}href="{{ page.next_page.url|url }}" class="nav-link"{% else %}class="nav-link disabled"{% endif %}>
-  {% trans %}Next{% endtrans %} <i class="fa fa-arrow-right"></i>
+  Next <i class="fa fa-arrow-right"></i>
 </a>
 {%- endif %}
 {%- endblock %}
