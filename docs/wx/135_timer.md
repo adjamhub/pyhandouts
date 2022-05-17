@@ -86,14 +86,26 @@ class Esempio(wx.Frame):
         self.Bind(wx.EVT_TIMER, self.OnTimer, self.timer)        
         self.conta = 0
 
-        pannello = wx.Panel(self)
-        self.barra = wx.Gauge(pannello, range=10, pos=(5,5), size=(250,-1))
-        self.btnOk = wx.Button(pannello, label="OK", pos=(5,50))
-        self.btnStop = wx.Button(pannello, label="STOP", pos=(150,50))
+        panel = wx.Panel(self)
+        vbox = wx.BoxSizer(wx.VERTICAL)
+        
+        self.barra = wx.Gauge(panel, range=10)
+        vbox.Add(self.barra, proportion=1, flag=wx.ALL|wx.EXPAND, border=5)
+        
+        hbox = wx.BoxSizer(wx.HORIZONTAL)
 
-        self.btnOk.Bind(wx.EVT_BUTTON, self.OnOk)
-        self.btnStop.Bind(wx.EVT_BUTTON, self.OnStop)
-
+        pulsanteStart = wx.Button(panel, label="START")
+        pulsanteStart.Bind(wx.EVT_BUTTON, self.OnOk)
+        hbox.Add(pulsanteStart, proportion=1, flag=wx.ALL, border=5)
+        
+        pulsanteStop = wx.Button(panel, label="STOP")
+        pulsanteStop.Bind(wx.EVT_BUTTON, self.OnStop)
+        hbox.Add(pulsanteStop, proportion=1, flag=wx.ALL, border=5)
+        
+        vbox.Add(hbox, proportion=1, flag=wx.ALL|wx.EXPAND, border=5)
+        panel.SetSizer(vbox)
+        self.SetMinSize( (600,200) )
+        
     def OnTimer(self, event):
         self.conta += 1
         if self.conta > 10:
@@ -111,12 +123,11 @@ class Esempio(wx.Frame):
         return
 
 # ----------------------------------------
-app = wx.App()
-
-window = Esempio()
-window.Show()
-
-app.MainLoop()
+if __name__ == "__main__":
+    app = wx.App()
+    window = Esempio()
+    window.Show()
+    app.MainLoop()
 ```
 
 
