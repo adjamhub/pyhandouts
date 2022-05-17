@@ -18,6 +18,7 @@
 
 - [ ] Dividi i tre libri: basi, OOP, wxPython
 - [ ] Rendi "scaricabili in PDF" le singole pagine.
+- [ ] copia blocco di codice
 - [ ] supporta CHM
 - [ ] Differenze di rendering fra "mkdocs serve" e "readthedocs" ---> nuova piattaforma???
 - [ ] link che si aprono in un'altra scheda
