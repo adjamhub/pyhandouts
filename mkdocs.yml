@@ -3,8 +3,7 @@ site_author: Andrea Diamantini
 copyright: Andrea Diamantini (c) 2022
 
 theme:
-  name: mkdocs
-  custom_dir: mkdocs2/
+  name: material
 
 nav:
   - Basics:
