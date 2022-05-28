@@ -17,13 +17,13 @@
 ## Problemi Tecnici
 
 - [ ] Rendi "scaricabili" (fruibili OFFLINE) i vari libri (CHM??)
-- [ ] link che si aprono in un'altra scheda
+- [ ] link che si aprono in un'altra scheda (QUALI???)
 
 
 ## Cose da (ri)scrivere
 
 - [ ] TUTTO (scrivi qui sotto TUTTE LE PAGINE che devono essere risistemate... e sistemale)
-
+- [ ] LA PRIMA PAGINA (come questa: https://squidfunk.github.io/mkdocs-material/)
 
 ## Stili da sistemare
 
