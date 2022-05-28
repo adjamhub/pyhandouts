@@ -28,7 +28,7 @@
 ## Stili da sistemare
 
 - [ ] Sistema problema codice vs esecuzione!
-- [ ] colora le admonitions
+- [x] colora le admonitions
 
 
 **Buona lettura!**

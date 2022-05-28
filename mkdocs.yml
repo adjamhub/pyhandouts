@@ -2,6 +2,8 @@ site_name: Python Course
 site_author: Andrea Diamantini
 copyright: Andrea Diamantini (c) 2022
 
+# -----------------------------------------------------------------------------------------------
+
 theme:
   name: material
   font:
@@ -17,6 +19,20 @@ theme:
     - search:
         lang: it
 
+extra_css:
+- stylesheets/extra.css
+
+# -----------------------------------------------------------------------------------------------
+
+markdown_extensions:
+  - toc: {permalink: True}
+  - admonition: {}
+  - attr_list: {}
+  - def_list: {}
+  - pymdownx.tasklist: {custom_checkbox: True}
+  
+# -----------------------------------------------------------------------------------------------
+ 
 nav:
   - Home: index.md
   - Basics:
@@ -62,10 +78,3 @@ nav:
     - Reals: insights/10_reals.md
   - About: about.md
 
-markdown_extensions:
-  - toc: {permalink: True}
-  - admonition: {}
-  - attr_list: {}
-  - def_list: {}
-  - pymdownx.tasklist: {custom_checkbox: True}
-  

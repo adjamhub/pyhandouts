@@ -1,3 +1,22 @@
+/* text justified */
 p {
   text-align: justify;
 }
+
+/* admonitions colors :D */
+.note {
+  background-color: rgba(68,138,255,.1) !important;
+}
+
+.warning {
+  background-color: rgba(255,145,0,.1) !important;
+}
+
+.tip {
+  background-color: rgba(0,191,165,.1) !important;
+}
+
+.danger {
+  background-color: rgba(255,23,68,.1) !important;
+}
+
