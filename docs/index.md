@@ -16,29 +16,19 @@
 
 ## Problemi Tecnici
 
-- [ ] Dividi i tre libri: basi, OOP, wxPython
-- [ ] Rendi "scaricabili in PDF" le singole pagine.
-- [ ] copia blocco di codice
-- [ ] supporta CHM
-- [ ] Differenze di rendering fra "mkdocs serve" e "readthedocs" ---> nuova piattaforma???
+- [ ] Rendi "scaricabili" (fruibili OFFLINE) i vari libri (CHM??)
 - [ ] link che si aprono in un'altra scheda
-- [x] previous/next IN FONDO ALLA PAGINA
 
 
 ## Cose da (ri)scrivere
 
-- [ ] Riscrivi la prima pagina
-- [ ] scrivi qui sotto TUTTE LE PAGINE che devono essere risistemate (e sistemale).
-- [ ] OOP!!!
-- [ ] wx: layout
-- [ ] basi: sequenze
+- [ ] TUTTO (scrivi qui sotto TUTTE LE PAGINE che devono essere risistemate... e sistemale)
 
 
 ## Stili da sistemare
 
 - [ ] Sistema problema codice vs esecuzione!
-- [ ] Problema della barra superiore
-- [ ] etc...
+- [ ] colora le admonitions
 
 
 **Buona lettura!**

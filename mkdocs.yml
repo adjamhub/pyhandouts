@@ -4,8 +4,21 @@ copyright: Andrea Diamantini (c) 2022
 
 theme:
   name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  language: it
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+  plugins:
+    - search:
+        lang: it
 
 nav:
+  - Home: index.md
   - Basics:
     - Intro: basics/000_first.md
     - Installazione: basics/001_install.md
