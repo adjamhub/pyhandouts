@@ -127,7 +127,7 @@ tutti tonti: non avete idea di quanti tutorial si trovano su YouTube per
 installare Thonny. Nel dubbio ne aggiungo qui uno...
 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/yMO-lNk6dgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/TlvQOWhlfpo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
