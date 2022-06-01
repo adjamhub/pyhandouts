@@ -12,10 +12,9 @@ utilizzabile in vari contesti anche molto diversi fra loro:
 -   grafica 3D,
 -   etc\...
 
-Se controllate sul sito di riferimento potrete trovare una sezione **quotes** (<https://www.python.org/about/quotes/>) con le citazioni
-famose su Python da parte di personaggi famosi delle aziende più in vista e una sezione **Success Stories**
-(<https://www.python.org/success-stories/>) che appunto elenca le maggiori storie di successo ove Python ha contribuito in maniera
-determinante.
+Se controllate sul sito di riferimento potrete trovare una sezione **[quotes](https://www.python.org/about/quotes/)** con le citazioni famose su Python da parte di personaggi famosi delle aziende più in vista 
+e una sezione **[Success Stories](https://www.python.org/success-stories/)** che appunto elenca le maggiori 
+storie di successo ove Python ha contribuito in maniera determinante.
 
 Python è un linguaggio ideato da **Guido van Rossum** all'inizio degli anni novanta. Il nome fu scelto (tenetevi alla sedia) per via della sua
 passione per i [Monty Python](https://it.wikipedia.org/wiki/Monty_Python), un gruppo comico britannico attivo negli anni settanta. 
@@ -27,10 +26,12 @@ Dura 84 minuti. Io non ho superato il minuto 4...
 
 ## Breve Storia
 
-![Guido Von Rossum](images/GuidoVonRossum.jpg)
 
 Come già citato, Python nasce negli anni novanta, grazie al suo [Benevolent Dictator For Life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life) 
 *Guido van Rossum*. 
+
+![Guido Von Rossum](images/GuidoVonRossum.jpg)
+
 La storia racconta che durante le vacanze di Natale del 1989, Guido progettò questo nuovo linguaggio, cercando di mettere in esso tutte le caratteristiche positive 
 che aveva trovato negli altri linguaggi di programmazione, provando ad evitare forzature o strutture non lineari.
 
@@ -55,8 +56,12 @@ dei migliori linguaggi di programmazione della seppur breve storia dell'Informat
 
 Prima di passare all'installare vera e propria dell'interprete e dell'ambiente di sviluppo Python, concediamoci una breve introduzione generica e generale sui linguaggi di programmazione.
 
-> Sentitevi liberi di leggere velocemente questa parte, ma ricordatevi di riguardare queste righe almeno una
-> volta all'anno, per meglio apprezzare il livello di comprensione del linguaggio raggiunto
+!!! tip "Suggerimento"
+
+    Le cose che spiego in questo capitolo non sono banali per chi non ha (ancora) mai programmato con alcun linguaggio. 
+    
+    Sentitevi liberi di leggere velocemente questa parte, ma ricordatevi di riguardare queste righe almeno una
+    volta all'anno, per meglio apprezzare il livello di comprensione del linguaggio raggiunto.
 
 
 I linguaggi di programmazione si dividono in:

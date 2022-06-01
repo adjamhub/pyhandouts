@@ -39,7 +39,7 @@ nav:
     - Intro: basics/000_first.md
     - Installazione: basics/001_install.md
     - Prime cose: basics/100_basics.md
-    - Variabili: basics/101_var.md
+    - Variabili e Operatori: basics/101_var.md
     - Alternanza: basics/102_alt.md
     - Ripetizione: basics/103_iter.md
     - Sequenze: basics/104_seq.md

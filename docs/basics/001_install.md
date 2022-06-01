@@ -18,47 +18,32 @@ si è addirittura inventata una nuova categoria di software, denominata
 **IDE** ([Integrated Development
 Environment](https://it.wikipedia.org/wiki/Integrated_development_environment)).
 
-Questi sono software che contengono più o meno tutto quanto necessario
+Gli IDE sono software che contengono più o meno tutto quanto necessario
 per sviluppare una applicazione in uno o più linguaggi di
 programmazione: un editor di testo per la scrittura del codice, il
-compilatore e/o l'interprete dei vari linguaggi, gli strumenti per il
-debug, ovvero per la correzione degli errori del software, per... tutto
-quello che serve!
+compilatore e/o l'interprete del linguaggio (o dei linguaggi, se l'IDE ne supporta più di uno), 
+gli strumenti per il debug, ovvero per la correzione degli errori del software, 
+e... tutto quello che serve!
 
-Esempi di IDE famosi (nella loro categoria) sono:
+Gli IDE più utilizzati per sviluppare in Python sono:
 
--   [Eclipse](https://it.wikipedia.org/wiki/Eclipse_(informatica))
-    (multipiattaforma e multilinguaggio)
--   [KDevelop](https://it.wikipedia.org/wiki/KDevelop)
-    (multipiattaforma, per linguaggi C e C++)
--   [NetBeans](https://it.wikipedia.org/wiki/NetBeans) (multipiattaforma
-    e multilinguaggio)
--   [Visual
-    Studio](https://it.wikipedia.org/wiki/Microsoft_Visual_Studio) (su
-    Windows, per C++ e C#)
--   [Visual Studio
-    Code](https://it.wikipedia.org/wiki/Visual_Studio_Code)
-    (multipiattaforma e multilinguaggio)
--   [XCode](https://it.wikipedia.org/wiki/Xcode) (su MacOS, per C, C++,
-    Swift, Obj-C)
-
-Allo stesso modo per lavorare con Python noi utilizzeremo un IDE. Esempi
-di IDE per Python che potreste provare sono:
-
+-   [PyCharm](https://en.wikipedia.org/wiki/PyCharm)
+    (multipiattaforma e multilinguaggio), molto completo, ma anche molto pesante;
+    sviluppato specificatamente per lo sviluppo in Python.
+-   [Visual Studio Code](https://it.wikipedia.org/wiki/Visual_Studio_Code)
+    (multipiattaforma e multilinguaggio), sviluppato da Microsoft per sviluppare su tutti i
+    linguaggi che essa supporta e utilizza (tra cui, ovviamente, Python!)
+-   [XCode](https://it.wikipedia.ia.org/wiki/Eclipse_(informatica))
+    (Specifico per MacOS, multilinguaggio) l'IDE di casa Apple, può essere configurato per lavorare
+    con Python. 
 -   [IDLE](https://en.wikipedia.org/wiki/IDLE), il più semplice IDE per
     Python, scritto in Python, multipiattaforma, disponibile
     nell'installer ufficiale di Python.
--   [Visual Studio
-    Code](https://it.wikipedia.org/wiki/Visual_Studio_Code), su Windows,
-    MacOS e Linux. Offre un eccellente supporto per Python.
--   [PyCharm](https://en.wikipedia.org/wiki/PyCharm), sviluppato
-    specificatamente per lo sviluppo in Python.
-
-Le istruzioni che seguono servono per installare un altro IDE, chiamato
-[Thonny](https://en.wikipedia.org/wiki/Thonny). La scelta fra tutta
-questa abbondanza e questa qualità di software disponibili è ricaduta su
-questo per una serie di motivi che vorrei mettere in evidenza, prima di
-procedere:
+-   [Thonny](https://thonny.org/), (multipiattaforma, specifico per Python), un IDE
+    progettato specificatamente per imparare a programmare in Python. Semplice, leggero,
+    con supporto per MicroPython (Python per piccoli dispositivi).
+    
+Non la facciamo lunga: **noi utilizzeremo Thonny!** E lo faremo per i seguenti motivi:
 
 -   Thonny è scritto in Python e disponibile per Windows, MacOS, Linux,
     Raspberry. Tutti sistemi operativi che potenzialmente useremo.
@@ -71,8 +56,11 @@ procedere:
 -   Thonny fornisce una interfaccia semplice anche per l'interazione
     con pip, il gestore di pacchetti Python (ne parleremo in seguito)
 
-Insomma, un IDE a misura degli studenti! Passiamo all'installazione sui
-nostri sistemi (in rigoroso ordine alfabetico)!
+Insomma, un IDE a misura degli studenti! 
+
+Le istruzioni che seguono spiegano come installare [Thonny](https://en.wikipedia.org/wiki/Thonny)
+sui vari sistemi operativi (in rigoroso ordine alfabetico)!
+
 
 ## Installare Thonny su Linux
 
@@ -129,7 +117,6 @@ installare Thonny. Nel dubbio ne aggiungo qui uno...
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/TlvQOWhlfpo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
 Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
 aiuto. Appena avete finito procedete con l'Hello World Test sotto.
 
@@ -148,8 +135,12 @@ aiuto. Appena avete finito procedete con l'Hello World Test sotto.
 Si tratta di aprire Thonny, scrivere nell'editor il seguente codice e
 premere F5 per avviare l'interpretazione.
 
-``` bash
+``` python
 print("Hello, World!")
 ```
 
 ![image](images/HelloWorldThonny.jpg)
+
+Tutto qui!<br>
+Adesso siamo pronti per cominciare a parlare del linguaggio Python!!!
+
