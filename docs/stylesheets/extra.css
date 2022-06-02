@@ -3,6 +3,16 @@ p {
   text-align: justify;
 }
 
+/* title margin and color */
+h2,h3,h4 {
+  margin-top: 120px !important;
+  margin-bottom: 30px !important;
+}
+
+blockquote {
+  background-color: rgba(160,160,160,.1) !important;  
+}
+
 /* admonitions colors :D */
 .note {
   background-color: rgba(68,138,255,.1) !important;

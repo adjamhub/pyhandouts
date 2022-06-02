@@ -27,11 +27,9 @@ Dura 84 minuti. Io non ho superato il minuto 4...
 ## Breve Storia
 
 
+![Guido Von Rossum](images/GuidoVonRossum.jpg){style="float:right; margin-left:10px; margin-top:5px;"}
 Come già citato, Python nasce negli anni novanta, grazie al suo [Benevolent Dictator For Life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life) 
 *Guido van Rossum*. 
-
-![Guido Von Rossum](images/GuidoVonRossum.jpg)
-
 La storia racconta che durante le vacanze di Natale del 1989, Guido progettò questo nuovo linguaggio, cercando di mettere in esso tutte le caratteristiche positive 
 che aveva trovato negli altri linguaggi di programmazione, provando ad evitare forzature o strutture non lineari.
 

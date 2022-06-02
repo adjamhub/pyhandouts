@@ -9,9 +9,9 @@
 
 
 
-# Funzioni in Python
+## Funzioni in Python
 
-Il termine \"*funzione*\" viene utilizzato in programmazione con un
+Il termine "*funzione*" viene utilizzato in programmazione con un
 significato analogo a quello della matematica: una funzione è una
 procedura che può ricevere valori come argomenti e restituire un
 ***unico*** valore come risultato. Nel linguaggio comune si dice anche
@@ -89,7 +89,9 @@ Per adesso però, cerchiamo di prendere mano con la definizione e
 l'utilizzo delle funzioni. Vediamo ancora qualche piccola cosa e poi
 \"divertiamoci\" con una valanga di esercizi da svolgere!!!
 
-## Parametri delle funzioni
+
+
+### Parametri delle funzioni
 
 I parametri di una funzione sono quelle variabili indicate tra parentesi
 nella sua dichiarazione e che prendono i valori che vengono inseriti in
@@ -173,7 +175,9 @@ saluta(\"pippo\") \# ritorna la stringa \"ciao pippo\"
 
 Spero sia chiaro, a me perlomeno sembra così.
 
-## Esercizi sulle funzioni
+
+
+### Esercizi sulle funzioni
 
 Esercizio 501
 
@@ -246,7 +250,9 @@ convertita in farfallese. In farfallese ogni vocale viene seguita da una
 f + la vocale ripetuta. Ad esempio la stringa \"ciao\" in farfallese
 diventa \"cifiafaofo\".
 
-# Moduli Python
+
+
+## Moduli Python
 
 Tutte le variabili e le funzioni che si possono definire nell'interprete
 Python vengono ovviamente perse alla sua chiusura. Per evitare ciò ed
@@ -333,7 +339,8 @@ print(\"NON primo\")
 
 Tutto qua! Spero sia chiaro :)
 
-## Esercizio svolto sui moduli
+
+### Esercizio svolto sui moduli
 
 Implementare un modulo, chiamato \"ControlloInteri\" contenente le
 funzioni per verificare se un numero intero è positivo, se è pari, se è
@@ -424,7 +431,8 @@ Tutto qua!
 
 E adesso gli esercizi ;)
 
-## Esercizi sui moduli Python
+
+### Esercizi sui moduli Python
 
 Per ognuno degli esercizi qui sotto proposti occorre implementare il
 modulo citato accanto al numero dell'esercizio, implementare al suo
@@ -606,7 +614,8 @@ il numero è semiprimo, False altrimenti. Un numero si dice semiprimo se
 è esprimibile come prodotto di due numeri primi. Ad esempio 6 = 2\*3 è
 semiprimo, 7 = 7\*1 non è semiprimo, infatti 1 non è primo.
 
-# Moduli della libreria standard
+
+## Moduli della libreria standard
 
 Ovviamente l'utilità dei moduli non è solo organizzativa, ma...
 storica!!! Immaginate se qualcuno avesse raccolto tutte le funzioni più
@@ -685,7 +694,8 @@ nome del modulo e che le funzioni che iniziano con il doppio underscore
 
 Proviamo!!!
 
-## Modulo Random
+
+### Modulo Random
 
 Serve per operazioni che richiedono una certa \"casualità\", anche se il
 termine corretto sarebbe \"pseudocasualità\"... Ad esempio:
@@ -763,7 +773,8 @@ Creare una lista contenente i numeri da 1 a 10 e mescolarla.
 Visualizzare la lista nel nuovo ordine ottenuto e successivamente
 riordinarla.
 
-## Modulo Math
+
+### Modulo Math
 
 Contiene tutte le funzioni matematiche utili per le operazioni su
 esponenziali, logaritmi, trigonometria, etc...
@@ -835,7 +846,8 @@ insieme? Implementare la funzione calcolaMinuti(TOT_A, TOT_B, TOT_C) che
 ritorna il numero di minuti che bisogna aspettare per avere di nuovo i 3
 tram insieme al capolinea.
 
-## Modulo DateTime
+
+### Modulo DateTime
 
 Contiene le funzioni per la manipolazione di data e ora. Contiene 4
 classi diverse a cui si accede con l'operatore PUNTO (.):
@@ -965,7 +977,7 @@ relativi ad ore, minuti o secondi non vanno bene, mentre con un oggetto
 time non vanno quelli sul giorno, il mese, etc... su un oggetto datetime
 funzionano tutti!!!
 
-### Differenze di tempo (TimeDelta)
+#### Differenze di tempo (TimeDelta)
 
 Ok, domanda a bruciapelo. Da quanto tempo l'uomo è andato sulla Luna? Da
 quanti anni? Da quanti giorni??
@@ -1022,3 +1034,4 @@ Esercizio 554 (\...)
 Chiedere all'utente di inserire due numeri per giorno e mese dell'anno
 corrente e calcolare quante settimane sono passate dall'inizio dell'anno
 a quella data.
+

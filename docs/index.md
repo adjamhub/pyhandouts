@@ -23,12 +23,26 @@
 ## Cose da (ri)scrivere
 
 - [ ] TUTTO (scrivi qui sotto TUTTE LE PAGINE che devono essere risistemate... e sistemale)
-- [ ] LA PRIMA PAGINA (come questa: https://squidfunk.github.io/mkdocs-material/)
+- [ ] basics: sistema titoli, cornicette per TUTTI i capitoli
+- [ ] basics: sistema esercizi, numeri in grassetto, riga di divisione
+- [ ] first
+- [ ] install
+- [ ] basics
+- [ ] var
+- [ ] alt
+- [ ] iter
+- [ ] seq
+- [ ] funz
+- [ ] mod
+- [ ] files
+- [ ] csv???
+
 
 ## Stili da sistemare
 
 - [ ] Sistema problema codice vs esecuzione!
 - [x] colora le admonitions
+- [ ] LA PRIMA PAGINA (come questa: https://squidfunk.github.io/mkdocs-material/)
 
 
 **Buona lettura!**

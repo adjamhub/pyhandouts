@@ -9,7 +9,8 @@
 
 
 <!-- ###################################################################################################### -->
-# Istruzioni iterative
+
+## Istruzioni iterative
 
 In Python esistono due tipi di strutture per i cicli, ovvero per
 ripetere un certo numero di volte una istruzione:
@@ -25,7 +26,8 @@ struttura iterativa. Vediamole nel dettaglio.
 
 
 <!-- ###################################################################################################### -->
-# Istruzione for
+
+## Istruzione for
 
 
 L'istruzione for permette di scorrere in maniera semplice gli elementi
@@ -224,7 +226,8 @@ ne sarete convinti anche voi :)
 
 
 <!-- ###################################################################################################### -->
-## Esercizi su for e range
+
+### Esercizi su for e range
 
 
 Tutti questi esercizi sono su `for ... in range ( ... )` e quindi
@@ -354,6 +357,7 @@ Visualizzare in colonna i numeri da 1 a 100 (i primi 100 numeri).
 
 
 <!-- ###################################################################################################### -->
+
 ## Somma e Conta
 
 
@@ -367,6 +371,7 @@ l'ausilio di 2 esempi
 
 
 ------------------------------------------------------------------------------------------
+
 ### Esempio somma: somma dei numeri fra 5 e 12
 
 In questo esempio voglio fare la somma dei numeri che vanno da 5 a 12,
@@ -423,6 +428,7 @@ Spero sia tutto chiaro! Come al solito comunque, fra un attimo arrivano gli eser
 
 
 ------------------------------------------------------------------------------------------
+
 ### Esempio conta: conta i numeri dispari fra 15 e 30
 
 
@@ -475,7 +481,8 @@ E adesso sotto con gli esercizi!
 
 
 <!-- ###################################################################################################### -->
-## Esercizi su somma e conta
+
+### Esercizi su somma e conta
 
 
 **Esercizio 321**
@@ -564,7 +571,8 @@ Visualizzare i risultati ottenuti.
 
 
 <!-- ###################################################################################################### -->
-# Istruzione while
+
+## Istruzione while
 
 
 L'istruzione while si abbina ad una condizione e ripete il suo blocco di
@@ -601,7 +609,8 @@ comportamento dei cicli.
 
 
 <!-- ###################################################################################################### -->
-## Esercizi su while
+
+### Esercizi su while
 
 
 **Esercizio 341**
@@ -733,7 +742,7 @@ superare quel valore.
 
 
 <!-- ###################################################################################################### -->
-# Istruzioni per i cicli
+## Istruzioni per i cicli
 
 
 Per ognuna delle istruzioni seguenti, vedremo una semplice descrizione
@@ -747,7 +756,7 @@ Provare per credere!
 
 
 <!-- ###################################################################################################### -->
-## Istruzione break
+### Istruzione break
 
 
 L'istruzione `break` provoca un'interruzione del ciclo e un salto
@@ -783,7 +792,7 @@ Mi sembra sia semplice da capire e facile da usare. Andiamo avanti.
 
 
 <!-- ###################################################################################################### -->
-## Istruzione continue
+### Istruzione continue
 
 
 L'istruzione continue interrompe l'esecuzione del blocco di codice da
@@ -810,7 +819,8 @@ utilizzarla.
 
 
 <!-- ###################################################################################################### -->
-## Istruzione else nei cicli
+
+### Istruzione else nei cicli
 
 
 Una delle caratteristiche peculiari di Python, che lo differenziano
@@ -913,7 +923,8 @@ A voi la scelta per come e quando utilizzarle!
 
 
 <!-- ###################################################################################################### -->
-# Controllo dei valori inseriti
+
+## Controllo dei valori inseriti
 
 
 Capita spesso e volentieri di voler controllare il valore che l'utente
@@ -949,7 +960,8 @@ Capito vero? Verifichiamolo con qualche esercizio :)
 
 
 <!-- ###################################################################################################### -->
-## Esercizi sul controllo valori
+
+### Esercizi sul controllo valori
 
 
 **Esercizio 361**
@@ -1043,7 +1055,7 @@ l'utente non dice "sì" (con l'accento sulla ì, mi raccomando...)
 
 
 <!-- ###################################################################################################### -->
-# Esercizio "ragionato" svolto
+## Esercizio "ragionato" svolto
 
 
 Questo esercizio è stato pensato perché arrivati a questo punto, in cui
@@ -1300,7 +1312,7 @@ mettervi alla prova!!!
 
 
 <!-- ###################################################################################################### -->
-# Esercizi finali sui cicli
+## Esercizi finali sui cicli
 
 
 Gli esercizi elencati qua di seguito non sono semplici applicazioni dei
@@ -1487,3 +1499,4 @@ Ad esempio, dato N = 6, va visualizzata la successione: 0 , 1 , 1 , 2 , 3 , 5.
 
 Dopo aver fatto inserire un numero intero positivo dire da quante cifre
 è composto il numero. Ad esempio 12345 è composto da 5 cifre.
+
