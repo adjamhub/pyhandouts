@@ -36,7 +36,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Basics:
-    - Intro: basics/000_first.md
+    - Introduzione: basics/000_first.md
     - Installazione: basics/001_install.md
     - Prime cose: basics/100_basics.md
     - Variabili e Operatori: basics/101_var.md

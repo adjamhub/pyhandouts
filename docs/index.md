@@ -25,7 +25,7 @@
 - [ ] TUTTO (scrivi qui sotto TUTTE LE PAGINE che devono essere risistemate... e sistemale)
 - [x] basics: sistema titoli, cornicette per TUTTI i capitoli
 - [x] basics: sistema esercizi, numeri in grassetto, riga di divisione
-- [ ] seq: fatte intro e stringhe, riparti da tuple
+- [ ] seq: fatte intro, stringhe, tuple. riparti da liste
 - [ ] funz
 - [ ] mod
 - [ ] files
