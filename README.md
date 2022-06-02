@@ -2,10 +2,7 @@
 
 School handouts about Python 3.x
 
-!!! warning "Attenzione"
-
-    Il file README.md è attualmente utilizzato come TODO file!
-    
+    Il file README.md è attualmente utilizzato come TODO file!<br>    
     Questa roba... è **tutta** da riscrivere!!!
 
 
