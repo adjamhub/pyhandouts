@@ -64,7 +64,7 @@ Prima di passare all'installare vera e propria dell'interprete e dell'ambiente d
     Le cose che spiego in questo capitolo non sono banali per chi non ha (ancora) mai programmato con alcun linguaggio. 
     
     Sentitevi liberi di leggere velocemente questa parte, ma ricordatevi di riguardare queste righe almeno una
-    volta all'anno, per meglio apprezzare il livello di comprensione del linguaggio raggiunto.
+    volta all'anno, per meglio apprezzare il livello di comprensione del linguaggio che avete raggiunto!
 
 
 I linguaggi di programmazione si dividono in:
