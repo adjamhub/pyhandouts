@@ -24,6 +24,8 @@ Dura 84 minuti. Io non ho superato il minuto 4...
 <iframe width="640" height="360" src="https://www.youtube.com/embed/S04V_mW5v0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+
+<!-- ############################################################################################ -->
 ## Breve Storia
 
 
@@ -50,7 +52,10 @@ Il tempo ha fatto il resto... la versione 2.x di Python ha fatto la storia, ma o
 dei migliori linguaggi di programmazione della seppur breve storia dell'Informatica.
 
 
+
+<!-- ############################################################################################ -->
 ## Linguaggi compilati vs interpretati
+
 
 Prima di passare all'installare vera e propria dell'interprete e dell'ambiente di sviluppo Python, concediamoci una breve introduzione generica e generale sui linguaggi di programmazione.
 

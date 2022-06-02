@@ -20,22 +20,22 @@
 - [ ] link che si aprono in un'altra scheda (QUALI???)
 
 
-## Cose da (ri)scrivere
+## Files ove sistemare il MARKDOWN!
 
 - [ ] TUTTO (scrivi qui sotto TUTTE LE PAGINE che devono essere risistemate... e sistemale)
-- [ ] basics: sistema titoli, cornicette per TUTTI i capitoli
-- [ ] basics: sistema esercizi, numeri in grassetto, riga di divisione
-- [ ] first
-- [ ] install
-- [ ] basics
-- [ ] var
-- [ ] alt
-- [ ] iter
-- [ ] seq
+- [x] basics: sistema titoli, cornicette per TUTTI i capitoli
+- [x] basics: sistema esercizi, numeri in grassetto, riga di divisione
+- [ ] seq: fatte intro e stringhe, riparti da tuple
 - [ ] funz
 - [ ] mod
 - [ ] files
 - [ ] csv???
+
+## Parti da migliorare
+
+- [ ] basics,first: intro: riscrivi linguaggi compilati vs interpretati
+- [ ] basics,install: aggiungi usare thonny, mettendo 1) hello world test, 2) apri e usa terminale 3) dir,help 4)... 
+- [ ] basics,basics: riscrivere e ripensare in base agli spunti (forse quelli sopra di install)
 
 
 ## Stili da sistemare
@@ -43,7 +43,7 @@
 - [ ] Sistema problema codice vs esecuzione!
 - [x] colora le admonitions
 - [ ] LA PRIMA PAGINA (come questa: https://squidfunk.github.io/mkdocs-material/)
-
+- [ ] le tabelle in genere fanno cagare :O
 
 **Buona lettura!**
 

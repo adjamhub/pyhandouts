@@ -86,6 +86,8 @@ Come ti chiami? Andrea
 Ecco fatto! Provate questo codice e scrivete lo script WhatsYourName.py
 per chiedere all'utente il proprio nome. E il primo step è fatto...
 
+
+<!-- ############################################################################################ -->
 ## Esercizi
 
 Per ognuno dei seguenti quesiti, creare uno script per eseguire la

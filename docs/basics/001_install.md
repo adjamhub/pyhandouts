@@ -62,6 +62,8 @@ Le istruzioni che seguono spiegano come installare [Thonny](https://en.wikipedia
 sui vari sistemi operativi (in rigoroso ordine alfabetico)!
 
 
+
+<!-- ############################################################################################ -->
 ## Installare Thonny su Linux
 
 Installare software su Linux è affare allo stesso momento semplicissimo
@@ -90,6 +92,9 @@ Questo installerà l'ultima versione di Python 3.x e Thonny sul vostro
 sistema, rendendolo pronto all'uso! Tutto qui! Passate a testare
 l'installazione con l'Hello World Test in fondo!
 
+
+
+<!-- ############################################################################################ -->
 ## Installare Thonny su MacOS
 
 Per installare Thonny su Mac, andate sul sito di Thonny
@@ -102,6 +107,9 @@ Mac un pacchetto .pkg non avrete alcuna difficoltà!
 Terminata l'installazione verificate che tutto funzioni con l'Hello
 World Test in fondo.
 
+
+
+<!-- ############################################################################################ -->
 ## Installare Thonny su Windows
 
 Per installare Thonny su Windows, andate sul sito di Thonny
@@ -120,6 +128,9 @@ installare Thonny. Nel dubbio ne aggiungo qui uno...
 Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
 aiuto. Appena avete finito procedete con l'Hello World Test sotto.
 
+
+
+<!-- ############################################################################################ -->
 ## Hello World Test
 
 !!! tip "Hello World Programs"

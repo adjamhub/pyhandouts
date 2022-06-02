@@ -9,6 +9,7 @@
 
 
 
+<!-- ############################################################################################ -->
 ## Funzioni in Python
 
 Il termine "*funzione*" viene utilizzato in programmazione con un
@@ -90,6 +91,8 @@ l'utilizzo delle funzioni. Vediamo ancora qualche piccola cosa e poi
 \"divertiamoci\" con una valanga di esercizi da svolgere!!!
 
 
+
+<!-- ############################################################################################ -->
 
 ### Parametri delle funzioni
 
@@ -177,20 +180,26 @@ Spero sia chiaro, a me perlomeno sembra così.
 
 
 
+<!-- ############################################################################################ -->
+
 ### Esercizi sulle funzioni
 
-Esercizio 501
+**Esercizio 501**
 
 Scrivere una funzione che calcola l\'area di un rettangolo e una che ne
 calcola il perimetro, date la base e l\'altezza.
 
-Esercizio 502
+------------------------------------------------------------------------------------------------
+
+**Esercizio 502**
 
 Scrivere una funzione che calcola l\'area di un cerchio e una che
 calcola la sua circonferenza. Entrambe richiedono (ovviamente) come
 parametro il raggio del cerchio.
 
-Esercizio 503: triangoli rettangoli
+------------------------------------------------------------------------------------------------
+
+**Esercizio 503: triangoli rettangoli**
 
 Scrivere 3 funzioni relative ai triangoli rettangoli. Tutte e tre
 prendono come parametri la lunghezza reale dei cateti e calcolano
@@ -205,7 +214,9 @@ rispettivamente:
 Utilizzare la funzione \"ipotenusa\" all'interno della funzione
 \"perimetro\".
 
-Esercizio 504: potenze
+------------------------------------------------------------------------------------------------
+
+**Esercizio 504: potenze**
 
 Dati un parametro per la base e uno (intero) per l'esponente,
 implementare la funzione potenza. Attenzione ai valori negativi degli
@@ -214,15 +225,21 @@ esponenti.
 (Per implementare questa funzione **non** potete usare la sintassi
 Python base\*\*esp, ma dovete "scrivere" i calcoli da fare)
 
-Esercizio 505: MCD
+------------------------------------------------------------------------------------------------
+
+**Esercizio 505: MCD**
 
 Scrivere una funzione che, dati due numeri interi positivi come
 parametri, ritorna il Massimo Comun Divisore fra questi.
+
+------------------------------------------------------------------------------------------------
 
 **Esercizio 506: mcm**
 
 Scrivere una funzione che, dati due numeri interi positivi come
 parametri, ritorna il minimo comune multiplo fra questi.
+
+------------------------------------------------------------------------------------------------
 
 **Esercizio 507: carattere**
 
@@ -230,11 +247,15 @@ Scrivere una funzione che, dato un carattere, ritorna la stringa
 \"vocale\", \"consonante\", \"cifra\" o \"alfanumerico\" a seconda del
 carattere passato.
 
+------------------------------------------------------------------------------------------------
+
 **Esercizio 508: inverti stringa**
 
 Scrivere una funzione che, data una stringa, ritorna la stringa
 rovesciata. Ad esempio fornito \"ciao\" come parametro, la funzione
 ritorna la stringa \"oaic\".
+
+------------------------------------------------------------------------------------------------
 
 **Esercizio 509: palindroma**
 
@@ -242,6 +263,8 @@ Scrivere una funzione che, data una stringa, dice se è palindroma oppure
 no. Una stringa palindroma (ad esempio: \"anna\") si legge uguale in
 entrambi i versi. Ritornare True o False a seconda che la stringa sia
 palindroma oppure no.
+
+------------------------------------------------------------------------------------------------
 
 **Esercizio 510: farfallese**
 
@@ -251,6 +274,7 @@ f + la vocale ripetuta. Ad esempio la stringa \"ciao\" in farfallese
 diventa \"cifiafaofo\".
 
 
+<!-- ############################################################################################ -->
 
 ## Moduli Python
 
@@ -339,6 +363,8 @@ print(\"NON primo\")
 
 Tutto qua! Spero sia chiaro :)
 
+
+<!-- ############################################################################################ -->
 
 ### Esercizio svolto sui moduli
 
@@ -432,7 +458,10 @@ Tutto qua!
 E adesso gli esercizi ;)
 
 
+
+<!-- ############################################################################################ -->
 ### Esercizi sui moduli Python
+
 
 Per ognuno degli esercizi qui sotto proposti occorre implementare il
 modulo citato accanto al numero dell'esercizio, implementare al suo
@@ -516,7 +545,9 @@ InizialiMaiuscole
 La funzione prende una stringa come parametro e ritorna la stringa
 trasformata in minuscolo con le iniziali di ogni parola maiuscole
 
-Esercizio 523: modulo \"PianoCartesiano\"
+------------------------------------------------------------------------------------------------
+
+**Esercizio 523: modulo \"PianoCartesiano\"**
 
 quadrante
 
@@ -537,7 +568,10 @@ La funzione prende quattro numeri xP, yP, xQ, yQ che rappresentano le
 coordinate dei punto P e Q nel piano cartesiano e restituisce la
 distanza fra loro.
 
-Esercizio 524: modulo \"CifreNumeriche\"
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 524: modulo \"CifreNumeriche\"**
 
 unita
 
@@ -574,7 +608,9 @@ La funzione prende un numero come parametro e restituisce la cifra dei
 centesimi. Ad esempio centesimi(23) restituisce 0, centesimi(8174.56)
 restituisce 6.
 
-Esercizio 525: modulo \"FunzioniNumeriche\"
+------------------------------------------------------------------------------------------------
+
+**Esercizio 525: modulo \"FunzioniNumeriche\"**
 
 sommaDivisori
 
@@ -615,6 +651,7 @@ il numero è semiprimo, False altrimenti. Un numero si dice semiprimo se
 semiprimo, 7 = 7\*1 non è semiprimo, infatti 1 non è primo.
 
 
+<!-- ############################################################################################ -->
 ## Moduli della libreria standard
 
 Ovviamente l'utilità dei moduli non è solo organizzativa, ma...
@@ -695,7 +732,10 @@ nome del modulo e che le funzioni che iniziano con il doppio underscore
 Proviamo!!!
 
 
+
+<!-- ############################################################################################ -->
 ### Modulo Random
+
 
 Serve per operazioni che richiedono una certa \"casualità\", anche se il
 termine corretto sarebbe \"pseudocasualità\"... Ad esempio:
@@ -740,41 +780,56 @@ print(lista) \# \[4, 3, 2, 1, 5\]
 Non è affatto difficile! Provate a fare i seguenti esercizi aiutandovi
 con la documentazione integrata.
 
+------------------------------------------------------------------------------------------------
+
 **Esercizio 531 (randint)**
 
 Riempire una lista con 5 numeri casuali fra 1 e 90 diversi fra loro.
 Pronta la cartella della tombola!!!
 
-Esercizio 532 (randint)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 532 (randint)**
 
 Generare 5 numeri casuali fra 0 e 1 con 2 cifre esatte dopo la virgola
 (sugg: genera interi fra 0 e 100, dividi per\...)
 
-Esercizio 533 (choice)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 533 (choice)**
 
 Dichiarare una tupla contenenti l'elenco dei cognomi della classe ed
 estrarne uno con choice. Chi esce sarà interrogato!!!
 
-Esercizio 534 (choice)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 534 (choice)**
 
 Creare una lista contenente i numeri da 1 a 10 ed estrarre un numero con
 choice. Provvedere successivamente ad eliminare il numero estratto dalla
 lista e visualizzare la stessa.
 
-Esercizio 535 (shuffle)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 535 (shuffle)**
 
 Dichiarare una lista contenente l'elenco dei cognomi della classe (in
 ordine alfabetico) e mischiarla con shuffle. Visualizzare la lista
 mescolata: quello sarà l'ordine delle interrogazioni!!!
 
-Esercizio 536 (shuffle)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 536 (shuffle)**
 
 Creare una lista contenente i numeri da 1 a 10 e mescolarla.
 Visualizzare la lista nel nuovo ordine ottenuto e successivamente
 riordinarla.
 
 
+
+<!-- ############################################################################################ -->
 ### Modulo Math
+
 
 Contiene tutte le funzioni matematiche utili per le operazioni su
 esponenziali, logaritmi, trigonometria, etc...
@@ -809,7 +864,10 @@ ceil/floor/trunc \# RTFM
 
 \# math.pi = 3.141592653589793 (pi greco)
 
-Esercizio 541 (sqrt)
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 541 (sqrt)**
 
 Scrivere una funzione che calcola le soluzioni dell\'equazione di
 secondo grado Ax^2^ + Bx + C = 0.
@@ -821,7 +879,9 @@ stessa.
 La lista può contenere 0, 1, 2 soluzioni (anche coincidenti) a seconda
 dei casi.
 
-Esercizio 542 (sqrt, floor)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 542 (sqrt, floor)**
 
 Scrivere una funzione per calcolare la radice quadrata intera di un
 numero. La radice quadrata intera di un numero x è il più grande intero
@@ -830,14 +890,18 @@ n tale che n \* n \<= x.
 Provate a scrivere questa funzione con l'aiuto del modulo math (facile)
 e provate a scriverne una analoga senza (un po\' più complicato)
 
-Esercizio 543 (gcd , lcd)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 543 (gcd , lcd)**
 
 Scrivere una funzione che prende numeratore e denominatore di una
 frazione e ritorna una tupla di 2 valori contenenti numeratore e
 denominatore ridotti ai minimi termini. Ad esempio, la funzione
 riduci(15,6) ritorna la tupla (5,2).
 
-Esercizio 544 (gcd , lcd)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 544 (gcd , lcd)**
 
 In una piazza si trova il capolinea di tre linee di tram: A, B, e C. Il
 tram A parte ogni TOT_A minuti, il tram B ogni TOT_B minuti, il tram C
@@ -847,6 +911,8 @@ ritorna il numero di minuti che bisogna aspettare per avere di nuovo i 3
 tram insieme al capolinea.
 
 
+
+<!-- ############################################################################################ -->
 ### Modulo DateTime
 
 Contiene le funzioni per la manipolazione di data e ora. Contiene 4
@@ -977,6 +1043,9 @@ relativi ad ore, minuti o secondi non vanno bene, mentre con un oggetto
 time non vanno quelli sul giorno, il mese, etc... su un oggetto datetime
 funzionano tutti!!!
 
+
+
+<!-- ############################################################################################ -->
 #### Differenze di tempo (TimeDelta)
 
 Ok, domanda a bruciapelo. Da quanto tempo l'uomo è andato sulla Luna? Da
@@ -1014,22 +1083,30 @@ anniTotali = giorniTotali // 365 \# più o meno\...
 Prendiamo un po\' confidenza con il modulo grazie ad un po\' di esercizi
 :)
 
+------------------------------------------------------------------------------------------------
+
 **Esercizio 551 (now)**
 
 Visualizzare la data e l'ora corrente, scrivendo la frase \"Oggi è il
 GG/MM/AAAA e sono le ore HH:MM\"
 
-Esercizio 552 (\...)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 552 (\...)**
 
 Data l'ora di adesso e inserito dall'utente l'ora di fine lezione
 calcolare il numero di minuti mancanti.
 
-Esercizio 553 (tuple, weekday)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 553 (tuple, weekday)**
 
 Chiedere all'utente di inserire la data di nascita e visualizzare il
 giorno della settimana in cui è nato.
 
-Esercizio 554 (\...)
+------------------------------------------------------------------------------------------------
+
+**Esercizio 554 (\...)**
 
 Chiedere all'utente di inserire due numeri per giorno e mese dell'anno
 corrente e calcolare quante settimane sono passate dall'inizio dell'anno
