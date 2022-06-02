@@ -1,49 +1,22 @@
-# Python Course
+---
+hide:
+  - navigation
+  - toc
+---
 
-!!! warning "Attenzione!"
+<body style="background: #4051b5; background:linear-gradient(#4051b5 0%, #4051b5 20%, #C4D5F9 100%);">
 
-    La documentazione qui presente rappresenta una parte del materiale
-    necessario per il corso di Informatica del prof.<br>
-    Essendo un lavoro in fase di sviluppo vi prego (più del solito) di segnalare 
-    ***sempre*** cose che non capite bene, eventuali refusi nella scrittura e tutto 
-    quello che vi viene in mente :)
-    
-    Grazie.
+<div class="">
 
-> Questa è solo una prova!
-> Questa roba... è **tutta** da riscrivere!!!
+<div style="color:white;">
+<h1 style="color:white;font-weight:bold">Python: le dispense del Prof!</h1>
+<p>Manca solo di studiare e fare esercizi...</p>
+<br>
+<a href="/basics/000_first" class="md-button md-button--primary">Python: le basi!</a>
+<a href="/OOP" class="md-button">Python: OOP</a>
+</div>
 
+</div>
 
-## Problemi Tecnici
-
-- [ ] Rendi "scaricabili" (fruibili OFFLINE) i vari libri (CHM??)
-- [ ] link che si aprono in un'altra scheda (QUALI???)
-
-
-## Files ove sistemare il MARKDOWN!
-
-- [ ] TUTTO (scrivi qui sotto TUTTE LE PAGINE che devono essere risistemate... e sistemale)
-- [x] basics: sistema titoli, cornicette per TUTTI i capitoli
-- [x] basics: sistema esercizi, numeri in grassetto, riga di divisione
-- [ ] seq: fatte intro, stringhe, tuple. riparti da liste
-- [ ] funz
-- [ ] mod
-- [ ] files
-- [ ] csv???
-
-## Parti da migliorare
-
-- [ ] basics,first: intro: riscrivi linguaggi compilati vs interpretati
-- [ ] basics,install: aggiungi usare thonny, mettendo 1) hello world test, 2) apri e usa terminale 3) dir,help 4)... 
-- [ ] basics,basics: riscrivere e ripensare in base agli spunti (forse quelli sopra di install)
-
-
-## Stili da sistemare
-
-- [ ] Sistema problema codice vs esecuzione!
-- [x] colora le admonitions
-- [ ] LA PRIMA PAGINA (come questa: https://squidfunk.github.io/mkdocs-material/)
-- [ ] le tabelle in genere fanno cagare :O
-
-**Buona lettura!**
+</body>
 
