@@ -120,8 +120,9 @@ che avanza di 2, un conto alla rovescia...
 Per tutte le casistiche possibili occorre studiare i parametri della
 funzione range().
 
-> La funzione `range()` è una funzione predefinita del linguaggio che
-> crea "al volo" una sequenza numerica intera. 
+!!! tip "Suggerimento"
+
+    La funzione `range()` è una funzione predefinita del linguaggio che crea "al volo" una sequenza numerica intera. 
 
 Essa è definita come:
 
@@ -361,7 +362,7 @@ Visualizzare in colonna i numeri da 1 a 100 (i primi 100 numeri).
 ## Somma e Conta
 
 
-Capita spesso (vedrete! Capiterà...) di dover sommare una sequenza di
+Capita spesso (vedrete... capiterà!!!) di dover sommare una sequenza di
 numeri oppure di dover contare una sequenza di informazioni in genere.
 
 In questo caso il ciclo for appena studiato torna veramente utile. Si
@@ -382,9 +383,9 @@ Se vuoi sommare delle quantità vorrai inserire il risultato in una
 variabile. Mi sembra abbastanza ragionevole affermare che la variabile
 che contiene la somma deve partire da ZERO!
 
-
-    somma = 0
-
+``` python
+somma = 0
+```
 
 La seconda considerazione da fare è sul ciclo for: se voglio sommare i
 numeri fra 5 e 12 devo scrivere un ciclo che parte da 5 (start,
@@ -392,21 +393,20 @@ compreso) e avere come stop 13, in modo che si fermi a quello prima,
 ovvero 12.
 
 
-    for s in range(5,13):
-        # s va da 5 a 12:
-        # la prima volta vale 5, la seconda 6, etc... l'ultima volta 12
-
+``` python
+for s in range(5,13):
+    # s va da 5 a 12:
+    # la prima volta vale 5, la seconda 6, etc... l'ultima volta 12
+```
 
 Terza e ultima considerazione: se voglio sommare tutti questi numeri
 devo "aggiungerli tutti" alla (variabile) somma. Man mano che il ciclo
 for li scorre li aggiungo dunque ad essa:
 
-
+``` python
+...
+somma = somma + s # si può scrivere in maniera compatta: somma += s
 ```
-    ...
-    somma = somma + s # si può scrivere in maniera compatta: somma += s
-```
-
 
 Questa istruzione aggiunge s al valore attuale di somma e assegna il
 nuovo valore calcolato di nuovo alla variabile somma.
@@ -440,14 +440,15 @@ Anche qui ci servità una variabile per "contare" i numeri, che
 ovviamente deve partire da ZERO!!
 
 
-    conta = 0
-
+``` python
+conta = 0
+```
 
 Per scorrere i dispari fra 15 e 30 devo scrivere un for molto semplice:
 parte da 15, arriva a 30 e va avanti di 2!
 
 
-```
+``` python
 for c in range(15, 30, 2):
     # In questo modo c varrà 15, 17, 19... fino a 29, il numero prima di 30!
 ```
@@ -455,7 +456,7 @@ for c in range(15, 30, 2):
 Ultima cosa, ogni volta che scorro un numero devo contarlo, cioè aumentare la conta di 1, quindi:
 
 
-```
+``` python
 conta += 1
 ```
 
@@ -858,14 +859,11 @@ else: # Indentazione! else è incolonnato al for NON all'if!!!
     Inserisci numero. Io ti dico se è primo o no: 17
     17 è primo
 
-Praticamente il secondo ciclo for, basato sulla variabile i, cerca
-eventuali divisori del numero. Se scorrendo tutti i numeri fra 2 e
-numero -- 1 non ne trova, allora è un numero primo! Se invece trova
-anche un solo divisore, lo visualizza e interrompe il ciclo con il
-break, rendendo nullo l'else.
+Praticamente il secondo ciclo for, basato sulla variabile i, cerca eventuali divisori del numero. 
+Se scorrendo tutti i numeri fra 2 e (numero - 1) non ne trova, allora è un numero primo! Se invece trova
+anche un solo divisore, lo visualizza e interrompe il ciclo con il break, rendendo nullo l'else.
 
-Ecco un esempio analogo **che utilizza la clausola else abbinata
-all'istruzione while**.
+Ecco un esempio analogo che utilizza **la clausola else abbinata all'istruzione while**.
 
 
 ``` python
@@ -892,7 +890,6 @@ print("In mano hai", valoreCarte)
 
 **Prima esecuzione, vado sempre avanti**
 
-
     In mano hai: 0.0
     Vuoi una carta? (s/n) s
     Dammi una carta: 5
@@ -905,7 +902,6 @@ print("In mano hai", valoreCarte)
 
 **Seconda esecuzione, mi fermo dopo la prima carta**
 
-
     In mano hai: 0.0
     Vuoi una carta? (s/n) s
     Dammi una carta: 6
@@ -915,9 +911,9 @@ print("In mano hai", valoreCarte)
 
 
 Spero sia abbastanza chiaro. In generale ci sono altri modi per ovviare
-all'utilizzo di questi for -- else o while -- else, semplicemente con un
+all'utilizzo di questi `for-else` o `while-else`, semplicemente con un
 paio di righe di codice in più. Di certo però queste istruzioni sono
-molto "*pythonic*" :)
+molto *pythonic* :)
 
 A voi la scelta per come e quando utilizzarle!
 
@@ -945,8 +941,8 @@ Facciamo una prova.
 ``` python
 # ciclo con condizione sempre vera. Ripete all'infinito
 while True:
-    # *nell'input dobbiamo suggerire all'utente cosa fare...*
-    num = int(input("*Inserisci un numero fra 1 e 90*: "))
+    # nell'input dobbiamo suggerire all'utente cosa fare...*
+    num = int(input("Inserisci un numero fra 1 e 90: "))
 
     # controllo con interruzione
     if num >= 1 and num <= 90:
@@ -1042,6 +1038,7 @@ inserisce il carattere '!' per terminare. Alla fine si visualizzi
 tutti i caratteri inseriti, in una sola riga, separati da spazi.
 
 !!! tip "Suggerimento"
+
     Create una stringa congiungendo il carattere inserito e uno spazio...
 
 
@@ -1147,8 +1144,8 @@ Dagli esempi precedenti ho capito che:
 
 - tutti i numeri (primi o no) sono divisibili per 1
 - tutti i numeri (primi o no) sono divisibili per se stessi
-- Se N è primo, nessun numero fra 2 e N -- 1 lo divide
-- Dato N, se almeno un numero fra 2 e N -- 1 divide N, allora N non è primo.
+- Se N è primo, nessun numero fra 2 e N-1 lo divide
+- Dato N, se almeno un numero fra 2 e N-1 divide N, allora N non è primo.
 
 Siete d'accordo? Queste considerazioni le ho fatte guardando gli esempi
 che mi sono fatto! Fatene anche voi e provate a vedere se quello che ho
@@ -1163,13 +1160,13 @@ Da questi primi esempi comincio a formulare una ***strategia.***
 
 Dato N:
 
-- scorro tutti i numeri fra 2 e N -- 1
+- scorro tutti i numeri fra 2 e N-1
 - vedo se qualcuno di questi divide N
 - Se anche uno solo divide N, N non è primo!
 - Se nessuno di questi divide N, allora N è primo!
 
 La cosa più semplice da fare mi sembra ***contare*** quanti numeri fra 2
-e N -- 1 dividono N. Se la conta porta ZERO, allora N è primo,
+e N-1 dividono N. Se la conta porta ZERO, allora N è primo,
 altrimenti NO!
 
 A questo punto ho un altro problema: come contare i divisori di N? Ho
@@ -1247,9 +1244,6 @@ for div in range(2, N -- 1):
 ```
 # Dato N, faccio lo step 3 e poi guardo il risultato
 # se la conta è ZERO, N è primo, altrimenti no.
-
-
-```
 . . .
 
 if conta == 0:
@@ -1296,10 +1290,12 @@ ci sono problemi, bisogna analizzare a ritroso tutti gli step, a costo
 di ripartire dallo step 0!!!
 
 In effetti un piccolo errore in questo codice c'è... infatti, facendo
-alcune prove, ci si accorge che questo codice riconosce il numero 1 (e tutti i negativi) come
+alcune prove, ci si accorge che questo codice riconosce il numero 1 (e tecnicamente... anche tutti i negativi) come
 primo, mentre wikipedia (vedi sopra) ci dice che non lo è...
 
-Provate a correggere voi il codice.
+Provate a correggere voi il codice...
+
+Rifate i test per verificare che adesso sia tutto a posto...
 
 Finito!
 
