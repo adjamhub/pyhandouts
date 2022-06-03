@@ -18,7 +18,7 @@ School handouts about Python 3.x
 - [x] basics: sistema titoli, cornicette per TUTTI i capitoli
 - [x] basics: sistema esercizi, numeri in grassetto, riga di divisione
 - [x] seq
-- [ ] funz
+- [x] funz
 - [ ] mod
 - [ ] files
 - [ ] csv???
