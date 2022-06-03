@@ -17,7 +17,7 @@ School handouts about Python 3.x
 - [ ] TUTTO (scrivi qui sotto TUTTE LE PAGINE che devono essere risistemate... e sistemale)
 - [x] basics: sistema titoli, cornicette per TUTTI i capitoli
 - [x] basics: sistema esercizi, numeri in grassetto, riga di divisione
-- [ ] seq: fatte intro, stringhe, tuple. riparti da liste
+- [x] seq
 - [ ] funz
 - [ ] mod
 - [ ] files
