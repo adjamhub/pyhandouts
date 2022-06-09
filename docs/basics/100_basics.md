@@ -1,15 +1,41 @@
 # Prime cose
 
-!!! warning
+In questo primo capitolo cercheremo di fare semplicemente i primi passi con il linguaggio di programmazione Python
+e le prime esperienze con l'IDE Thonny. la cosa più intelligente per iniziare a fare entrambi è scrivere un primo
+programma con Python: un *Hello, World!".
 
-    Questa parte della documentazione non è ancora pronta.
+!!! tip "Hello World Programs"
 
-    Usa la documentazione in PDF reperibile
-    [qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
+    Gli *Hello World* sono programmi che scrivono (o mostrano) semplicemente
+    la scritta "Hello, World!".
 
+    Sono tipicamente i primi programmi che si vuole scrivere in un qualsiasi
+    linguaggio di programmazione e servono solo a testare l'ambiente di
+    lavoro per assicurarsi che tutto funzioni.
+
+
+<!-- ############################################################################################ -->
+## Hello World (File)
+
+
+Si tratta di aprire Thonny, scrivere nell'editor il seguente codice e
+premere F5 per avviare l'interpretazione.
+
+``` python
+print("Hello, World!")
+```
+
+![Hello World su Thonny!](images/thonny_file_HelloWorld.jpg)
+
+Tutto qui!<br>
+Adesso siamo pronti per cominciare a parlare del linguaggio Python!!!
 
 PRIMA PARLA DELLA DIFFERENZA FRA UNA SCRIPT E UNA COSA INSERITA
 NELL'INTERPRETE
+
+![Thonny mostra shell](images/thonny_mostra_shell.png)
+
+![Thonny script "Hello, World!"](images/thonny_shell_helloworld.png)
 
 POI PARLA DI PRINT(), INPUT(), COMMENTI
 

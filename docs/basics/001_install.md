@@ -104,8 +104,8 @@ Mac un pacchetto .pkg non avrete alcuna difficoltà!
 
 ![image](images/ThonnyMac.jpg)
 
-Terminata l'installazione verificate che tutto funzioni con l'Hello
-World Test in fondo.
+Terminata l'installazione verificate che tutto funzioni con gli Hello World Test 
+del prossimo capitolo.
 
 
 
@@ -126,32 +126,6 @@ installare Thonny. Nel dubbio ne aggiungo qui uno...
 <iframe width="640" height="360" src="https://www.youtube.com/embed/TlvQOWhlfpo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
-aiuto. Appena avete finito procedete con l'Hello World Test sotto.
-
-
-
-<!-- ############################################################################################ -->
-## Hello World Test
-
-!!! tip "Hello World Programs"
-
-    Gli *Hello World* sono programmi che scrivono (o mostrano) semplicemente
-    la scritta "Hello, World!".
-
-    Sono tipicamente i primi programmi che si vuole scrivere in un qualsiasi
-    linguaggio di programmazione e servono solo a testare l'ambiente di
-    lavoro per assicurarsi che tutto funzioni.
-
-
-Si tratta di aprire Thonny, scrivere nell'editor il seguente codice e
-premere F5 per avviare l'interpretazione.
-
-``` python
-print("Hello, World!")
-```
-
-![image](images/HelloWorldThonny.jpg)
-
-Tutto qui!<br>
-Adesso siamo pronti per cominciare a parlare del linguaggio Python!!!
+aiuto. Appena avete finito procedete gli Hello World Test 
+del prossimo capitolo.
 

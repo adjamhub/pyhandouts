@@ -13,7 +13,14 @@ blockquote {
   background-color: rgba(160,160,160,.1) !important;  
 }
 
-/* admonitions colors :D */
+
+/* admonitions */
+
+.admonition {
+  margin: 3em 0 !important;
+  font-size: .9em !important;
+}
+
 .note {
   background-color: rgba(68,138,255,.1) !important;
 }
