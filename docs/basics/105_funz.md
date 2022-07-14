@@ -152,15 +152,15 @@ Spero sia chiaro, a me perlomeno sembra così.
 
 <!-- ############################################################################################ -->
 
-### Documentare le funzioni
+### Documentare le funzioni (TODO)
 
 Qui spiega come si scrive la documentazione delle funzioni e come si vede quanto scritto
 
 <!-- ############################################################################################ -->
 
-### Testare le funzioni
+### Testare le funzioni (TODO)
 
-Qui spiega il problema di if __name__ == "__main__" e chiedi un atto di fede. Poi fai un esercizio svolto per spiegare il concetto
+Qui spiega il problema di if `__name__ == "__main__"` e chiedi un atto di fede. Poi fai un esercizio svolto per spiegare il concetto
 
 <!-- ############################################################################################ -->
 
