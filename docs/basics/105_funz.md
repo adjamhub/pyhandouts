@@ -1,13 +1,5 @@
 # Funzioni
 
-!!! warning
-
-    Questa parte della documentazione non è ancora pronta.
-
-    Usa la documentazione in PDF reperibile
-    [qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
-
-
 
 <!-- ############################################################################################ -->
 
@@ -152,9 +144,66 @@ Spero sia chiaro, a me perlomeno sembra così.
 
 <!-- ############################################################################################ -->
 
-### Documentare le funzioni (TODO)
+### Documentare le funzioni
 
-Qui spiega come si scrive la documentazione delle funzioni e come si vede quanto scritto
+
+Se ricordate la struttura di base di una funzione, proveremo adesso ad aggiungere una piccola parte: la documentazione!
+
+    def nome_funzione ( parametri: tipo ) -> tipo_di_ritorno :
+        """ documentazione di nome_funzione in formato doc_string """
+        # blocco di codice che implementa la funzione
+        # return valore del tipo_di_ritorno
+
+La documentazione di una funzione va strutturata nel modo seguente:
+
+    def nome_funzione ( par1: tipo1, par2: tipo2 ) -> tipo_di_ritorno :
+    """una riga che descrive quello che la funzione fa
+    
+       alcune righe (opzionali) per descrivere più precisamente cosa la funzione 
+       vuole ottenere
+       
+       Parameters
+       ---------
+       par1
+            Una descrizione del parametro1
+       par2
+            Una descrizione del parametro2
+            
+       Returns
+       -------
+       tipo_di_ritorno
+            La descrizione del valore ottenuto
+    """
+    
+Facciamo una prova, implementando la funzione `trova(carattere, stringa)` che ritorna True se il carattere è presente nella stringa,
+False altrimenti.
+
+```python
+def trova(carattere:str, stringa:str) -> bool:
+    """
+    Dice se carattere è presente o meno nella stringa.
+    
+    Parameters
+    ----------
+    carattere
+        il carattere da cercare
+    stringa
+        la stringa in cui cercare il carattere
+        
+    Returns
+    -------
+    bool
+        il valore booleano che dice se il carattere è presente o meno nella stringa
+    """
+    
+    if carattere in stringa:
+        return True
+    
+    return False
+```
+
+Tutto qui! Di sicuro non è una cosa molto complicata... ma chiaramente ci vorrà un pò di esercizio per essere sicuri di avere capito tutto bene.
+Per fortuna stanno arrivando...
 
 <!-- ############################################################################################ -->
 
