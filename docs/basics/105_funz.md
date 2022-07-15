@@ -207,13 +207,121 @@ Per fortuna stanno arrivando...
 
 <!-- ############################################################################################ -->
 
-### Testare le funzioni (TODO)
+### Importare moduli
 
-Qui spiega il problema di if `__name__ == "__main__"` e chiedi un atto di fede. Poi fai un esercizio svolto per spiegare il concetto
+Per lavorare con moduli e funzioni, finora abbiamo scritto cose del tipo:
+
+
+<!-- ############################################################################################ -->
+
+### Nomi dei moduli 
+
+
+Tutte le persone hanno un nome che le identifica (ad esempio il mio nome è Andrea), ma quando le persone parlano di se stesse usano la parola `io` (*io* mi chiamo Andrea).
+E fin qui mi sembra tutto semplice.
+
+Abbiamo detto finora (e nel dubbio, lo ripeto con chiarezza) che anche i moduli, ovvero i file Python con estensione `.py`, hanno un nome, che dipende dal nome del file stesso:
+ad esempio, il file `pippo.py` definisce il modulo di nome `pippo`. Ogni volta che definite un modulo, Python inizializza alcune variabili speciali, fra cui la variabile `__name__`
+che contiene il nome del modulo (fra un attimo faccio un esempio).
+
+Così come le persone, parlando di se stesse, dicono *io*, i moduli, al loro interno non utilizzano il loro nome, ma utilizzano la parola `__main__`.
+
+Cerchiamo di chiarire subito questo primo concetto, il resto verrà naturalmente di conseguenza:
+
+**Esempio 1: un unico file**
+
+```python
+# file pippo.py
+
+# la variabile __name__ si riferisce al nome del modulo pippo
+# essendo al suo interno, conterrà la parola "__main__"
+print(__name__)
+```
+
+**Esempio 2: un altro file**
+```python
+# file ciccio.py
+
+# importo il modulo pippo, dell'esempio 1
+# importando il modulo, andrò ad eseguirlo. la print sopra (eseguita all'esterno del modulo pippo)
+# scriverà il suo nome: "pippo".
+import pippo
+
+# la variabile __name__ qui sotto si riferisce al nome del modulo ciccio
+# essendo al suo interno, conterrà la parola "__main__"
+print(__name__)
+
+# la variabile __name__ qui sotto si riferisce al nome del modulo pippo
+# NON essendo dentro al modulo pippo, conterrà il suo nome proprio, ovvero "pippo"
+print(pippo.__name__)
+```
+
+Tutto qui :)
+
+
+<!-- ############################################################################################ -->
+
+### Test delle funzioni
+
+
+Dalle considerazioni fatte nei precedenti capitoli, vorrei farvi capire una tecnica molto utilizzata in ambito Python per l'esecuzione dei moduli e i test delle funzioni
+in essi contenute.
+
+La strategia è questa:
+
+* scrivo il modulo con la definizione delle funzioni che mi interessano
+* faccio delle prove per assicurarmi che tutto... funzioni! (faccio i **test**!!!) in fondo al file, dentro un `if __name__ == "__main__"`
+* Se eseguo direttamente il modulo con le funzioni, l'if mi permette di svolgere i test (e verificare che tutto funzioni correttamente)
+* Se importo il modulo in un altro contesto, il suo nome NON sarà "__main__" e i test non saranno svolti, permettendo di importare solo le funzioni!
+
+Da questa spiegazione, deriva questa modalità di scrittura dei moduli con funzioni:
+
+```python
+# file prova.py
+
+def molt(a:float,b:molt) -> float:
+    """
+    esempio di moltiplicazione
+    
+    Parameters
+    ----------
+    a,b
+        i termini della moltiplicazione
+    
+    Returns
+    -------
+    float
+        il prodotto
+    """
+    return a*b
+    
+# questa parte NON sarà eseguita all'esterno del modulo "prova"
+if __name__ == "__main__":
+    x = 5
+    y = 4
+    print("x:",x)
+    print("y:",y)
+    print( f"molt({x},{y}):{molt(x,y)}" )
+    # ... e così via...
+```
+
+Da ora in poi scriveremo così i nostri moduli e in questo modo faremo tutti gli esercizi che seguono. Questo ci permetterà di definire un *modus operandi* logico e professionale, che ci
+tornerà enormemente utile quando le cose diventeranno inevitabilmente più complicate.
+
+Adesso, sotto con gli esercizi!
 
 <!-- ############################################################################################ -->
 
 ### Esercizi sulle funzioni
+
+
+!!! warning "Attenzione"
+
+    Da ora in poi dovrete organizzare i vostri file come descritto sopra, aggiungendo **sempre** la documentazione
+    delle funzioni implementate e inserendo alcuni test in fondo alle definizioni, dentro il controllo `if __name__ == "__main__"`
+    
+    Buon lavoro!
+    
 
 **Esercizio 501**
 
