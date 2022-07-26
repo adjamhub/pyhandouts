@@ -1,24 +1,11 @@
 # Strutture di ripetizione
 
-!!! warning
 
-    Questa parte della documentazione non è ancora pronta.
+In Python esistono due tipi di strutture di ripetizione, ovvero per
+ripetere un certo numero di volte una istruzione (fare *un ciclo*):
 
-    Usa la documentazione in PDF reperibile
-    [qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
-
-
-<!-- ###################################################################################################### -->
-
-## Istruzioni iterative
-
-In Python esistono due tipi di strutture per i cicli, ovvero per
-ripetere un certo numero di volte una istruzione:
-
-1.  ***Istruzione for***, che si utilizza per scorrere gli elementi di
-    una sequenza
-2.  ***Istruzione while***, che si utilizza per ripetere un blocco di
-    istruzioni finché non si verifica una determinata condizione.
+1.  ***Istruzione for***, che si utilizza per scorrere gli elementi di una sequenza
+2.  ***Istruzione while***, che si utilizza per ripetere un blocco di istruzioni finché non si verifica una determinata condizione.
 
 Queste istruzioni possono essere usate alla bisogna in un programma
 Python e rappresentano due possibilità di implementazione per la
@@ -1068,8 +1055,9 @@ inizieranno a capitare da adesso in poi.
 
 
 ------------------------------------------------------------------------------------------
-### STEP 0: lettura del testo dell'esercizio
-
+<br>
+**STEP 0: lettura del testo dell'esercizio**
+<br>
 
 Cominciamo leggendo ***attentamente*** il testo dell'esercizio:
 
@@ -1082,7 +1070,9 @@ Invece di provare a buttare giù codice nella speranza che l'esercizio
 
 
 ------------------------------------------------------------------------------------------
-### STEP 1: organizzazione delle conoscenze sul contesto
+<br>
+**STEP 1: organizzazione delle conoscenze sul contesto**
+<br>
 
 Cosa significa questa cosa? Significa cercare di fare mente locale su
 tutto quello che si sa sugli argomenti relativi all'esercizio,
@@ -1123,7 +1113,9 @@ bene il problema non ci si può esimere dal prossimo step!!!
 
 
 ------------------------------------------------------------------------------------------
-### STEP 2: esempi su valori possibili per l'esercizio
+<br>
+**STEP 2: esempi su valori possibili per l'esercizio**
+<br>
 
 
 Partiamo scrivendo su carta alcuni esempi che possono aiutarci a
@@ -1136,7 +1128,9 @@ riflettere:
 
 
 ------------------------------------------------------------------------------------------
-### STEP 3: considerazioni desunte dagli esempi
+<br>
+**STEP 3: considerazioni desunte dagli esempi**
+<br>
 
 
 Per fare queste considerazioni, più esempi fate prima e meglio è...
@@ -1153,7 +1147,9 @@ scritto vi convince e se vi vengono in mente altre idee.
 
 
 ------------------------------------------------------------------------------------------
-### STEP 4: formulazione di una strategia risolutiva
+<br>
+**STEP 4: formulazione di una strategia risolutiva**
+<br>
 
 
 Da questi primi esempi comincio a formulare una ***strategia.***
@@ -1203,7 +1199,9 @@ secondario rispetto a questo!
 
 
 ------------------------------------------------------------------------------------------
-### STEP 5: prima stesura del codice
+<br>
+**STEP 5: prima stesura del codice**
+<br>
 
 
 Provo a scrivere il codice:
@@ -1253,7 +1251,9 @@ else:
 ```
 
 ------------------------------------------------------------------------------------------
-### STEP 6: stesura finale del codice
+<br>
+**STEP 6: stesura finale del codice**
+<br>
 
 Fatto questo, mi basta rimettere insieme tutto il ragionamento e il gioco è fatto!
 
@@ -1280,7 +1280,9 @@ else:
 ```
 
 ------------------------------------------------------------------------------------------
-### STEP 7: test del codice scritto
+<br>
+**STEP 7: test del codice scritto**
+<br>
 
 
 Arrivati a scrivere tutto, non è mica finito!!! Il codice scritto va
