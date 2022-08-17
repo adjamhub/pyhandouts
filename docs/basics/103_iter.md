@@ -113,7 +113,7 @@ funzione range().
 
 Essa è definita come:
 
-    range( [start = 0 ,] stop [, step = 1] )
+> range( [ start = 0 , ] stop [ , step = 1 ] )
 
 dove:
 

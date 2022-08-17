@@ -16,21 +16,21 @@ Banalmente, la prima permette di *aprire* un file e lavorarci dentro, mentre la 
 
 Vediamo nel dettaglio cosa questo significhi:
 
-``` 
-file_object = open ( name, mode )
-```
 
-La funzione `open` ha due parametri principali, di cui solo il primo è
-obbligatorio: il nome del file da aprire. Il secondo parametro indica la modalità di apertura: lettura, scrittura o aggiunta a fine file.
+    file_object = open ( name, mode )
+
+
+La funzione `open` ha due parametri principali, di cui solo il primo è obbligatorio: 
+il nome del file da aprire. Il secondo parametro indica la modalità di apertura: lettura, scrittura o aggiunta a fine file.
 
 Elenchiamo le principali modalità:
 
 
-| Modo | Descrizione                                                                                                                                        |
-|------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| r    | Modalità di lettura (read).<br> Il file NON sarà modificato da alcuna operazione. Se il file non esiste l'apertura fallisce. **Modo di default**.      |
-| w    | Modalità di scrittura (write). <br> Un file esistente verrà sovrascritto, altrimenti ne verrà creato uno nuovo.                                         |
-| x    | Modalità di creazione file (non lo so perché x...).<br> Ritorna un errore se il file esiste già. Se funziona, apre il file in scrittura.               |
+| Modo | Descrizione                                                                                                                                                                |
+|------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| r    | Modalità di lettura (read).<br> Il file NON sarà modificato da alcuna operazione. Se il file non esiste l'apertura fallisce. **Modo di default**.                          |
+| w    | Modalità di scrittura (write). <br> Un file esistente verrà sovrascritto, altrimenti ne verrà creato uno nuovo.                                                            |
+| x    | Modalità di creazione file (non lo so perché x...).<br> Ritorna un errore se il file esiste già. Se funziona, apre il file in scrittura.                                   |
 | a    | Modalità di aggiunta a fine file (append). <br> Il file verrà aperto in scrittura, aggiungendo in fondo a ciò che esiste quello che viene scritto. Altrimenti è come write.|
 
 
@@ -159,7 +159,9 @@ Basta con gli esempi! Ma fra un attimo iniziamo con gli esercizi ;)
 
 Un file object non è nient’altro che una variabile a cui è stato assegnato l’abbinamento con un file tramite la funzione open(). Se ad esempio scrivo:
 
-    f = open( "file.txt", "w" )
+``` python
+f = open( "file.txt", "w" )
+```
 
 allora f diventa un file object!
 Questo tipo di variabile presenta alcune caratteristiche che permettono al programmatore di investigare sullo stato della relazione fra la variabile (e quindi il programma) e il file.
@@ -174,15 +176,18 @@ Le caratteristiche esposte sono:
 
 Queste possono essere utilizzate ad esempio per verificare se è possibile scrivere sul file oppure se il file è già stato chiuso.
 
-    if f.closed :
-        print("impossibile interagire con il file!")
+``` python
+if f.closed :
+    print("impossibile interagire con il file!")
+else:
+    if f.mode == "w" or f.mode == "a":
+        f.write("ciao")
     else:
-        if f.mode == "w" or f.mode == "a":
-            f.write("ciao")
-        else:
-            print("file non aperto in scrittura!")
+        print("file non aperto in scrittura!")
+```
 
-Spero sia abbastanza chiaro. Nel dubbio… lo sapete già! Funzioni dir() ed help() !!!
+Spero sia abbastanza chiaro. Nel dubbio… lo sapete già! Funzioni `dir()` ed `help()` !!!
+
 
 
 ### Esercizi sui files
@@ -255,6 +260,7 @@ Terminato l’inserimento, chiudere il file e ripetere il codice dell’esercizi
 ------------------------------------------------------------
 
 **Esercizio 610**
+
 Creare un file chiamato "parola.txt" nella stessa cartella del codice di questo esercizio, digitando al suo interno una parola qualsiasi. 
 Provare ad aprire il file in modalità "x" per verificare se è possibile andarlo a sovrascrivere. 
 Ripetere l’operazione in modalità "w" e infine controllare il contenuto del file.
@@ -319,27 +325,27 @@ Il modulo Pathlib permette di ricavare informazioni sui percorsi ove si trovano 
 In particolare, di solito viene utilizzato l’oggetto Path importato dalla libreria pathlib.
 
 
-    from pathlib import Path
+``` python
+from pathlib import Path
 
-    # il file "song.mp3" della cartella "musica" su C: in Windows 
-    canzone = Path("C:/musica/song.mp3")
-    print("Percorso della canzone:", canzone)
+# il file "song.mp3" della cartella "musica" su C: in Windows 
+canzone = Path("C:/musica/song.mp3")
+print("Percorso della canzone:", canzone)
 
-    # la cartella corrente (dove abbiamo salvato questo file Python)
-    cur = Path.cwd()
-    print( "Cartella corrente:", cur )
+# la cartella corrente (dove abbiamo salvato questo file Python)
+cur = Path.cwd()
+print( "Cartella corrente:", cur )
 
-    # la HOME utente
-    # "C:\Users\utente" su Windows, "/home/utente" su Mac/Linux
-    home = Path.home()
-    print( "Home dir:", home )
+# la HOME utente
+# "C:\Users\utente" su Windows, "/home/utente" su Mac/Linux
+home = Path.home()
+print( "Home dir:", home )
 
-    # il percorso del Desktop
-    # il simbolo / congiunge i percorsi
-    desktop = home / "Desktop"
-    print( "Il percorso del Desktop:", desktop )
-
-
+# il percorso del Desktop
+# il simbolo / congiunge i percorsi
+desktop = home / "Desktop"
+print( "Il percorso del Desktop:", desktop )
+```
 
 
 Negli esempi trattati sopra sono evidenziate alcune funzionalità:
@@ -364,27 +370,35 @@ L’oggetto Path espone fra le altre le seguenti funzioni:
 
 Vediamo alcuni esempi per capire il funzionamento delle funzioni più "ostiche": ovviamente ognuno di questi esempi dovrebbe iniziare con l’import dell’oggetto Path dalla libreria pathlib.
 
-    From pathlib import Path
+
+``` python
+From pathlib import Path
+```
+
 
 **Esempio 1: verificare se nella Home è presente un file chiamato "pippo"**
 
-    percorso = Path.home()
-    pippo = percorso / "pippo"
-    if pippo.exists():
-        print("pippo esiste")
-        if pippo.is_file():
-            print("ed è un file")
-        if pippo.is_dir():
-            print("ed è una cartella")
-    else:
-        print("pippo non esiste")
+``` python
+percorso = Path.home()
+pippo = percorso / "pippo"
+if pippo.exists():
+    print("pippo esiste")
+    if pippo.is_file():
+        print("ed è un file")
+    if pippo.is_dir():
+        print("ed è una cartella")
+else:
+    print("pippo non esiste")
+```
 
 
 **Esempio 2: elenco dei file *.txt presenti nel Desktop dell’utente "pippo"**
 
-    desk = Path("C:/Users/pippo/Desktop")
-    for f in desk.glob("*.txt"):
-        print(f, "(file)")
+``` python
+desk = Path("C:/Users/pippo/Desktop")
+for f in desk.glob("*.txt"):
+    print(f, "(file)")
+```
 
 
 !!! note "Pattern"
@@ -397,39 +411,45 @@ Vediamo alcuni esempi per capire il funzionamento delle funzioni più "ostiche":
 
 **Esempio 3: elenco del contenuto della home con suggerimento a fianco**
 
-    home = Path.home()
-    for f in home.iterdir():
-        if f.is_file():
-            print(f, "(file)")
-        elif f.is_dir():
-            print(f, "(dir)")
-        else:
-            print(f, "(boh)")    
+``` python
+home = Path.home()
+for f in home.iterdir():
+    if f.is_file():
+        print(f, "(file)")
+    elif f.is_dir():
+        print(f, "(dir)")
+    else:
+        print(f, "(boh)")    
+``` 
 
 
 **Esempio 4: creazione, cambio nome ed eliminazione di una cartella nella home utente**
 
-    home = Path.home()
+``` python
+home = Path.home()
 
-    # creazione della cartella "ciao" nella home
-    cartellaCiao = home / "ciao"
-    cartellaCiao.mkdir()
+# creazione della cartella "ciao" nella home
+cartellaCiao = home / "ciao"
+cartellaCiao.mkdir()
 
-    # cambio nome della cartella "ciao" in "salve" nella home
-    cartellaSalve = home / "salve"
-    cartellaCiao.rename(cartellaSalve)
+# cambio nome della cartella "ciao" in "salve" nella home
+cartellaSalve = home / "salve"
+cartellaCiao.rename(cartellaSalve)
 
-    # eliminazione della cartella "salve"
-    cartellaSalve.rmdir()
+# eliminazione della cartella "salve"
+cartellaSalve.rmdir()
+```
 
 
 **Esempio 5: creazione del file "pippo.txt" nel Desktop**
 
-    desktop = Path.home() / "Desktop"
-    filePath = desktop / "pippo.txt"
-    file = filePath.open("w")
-    file.write("Ciao Pippo")
-    file.close()
+``` python
+desktop = Path.home() / "Desktop"
+filePath = desktop / "pippo.txt"
+file = filePath.open("w")
+file.write("Ciao Pippo")
+file.close()
+```
 
 Grazie alla funzione `open()` dell’oggetto Path possiamo creare o aprire in lettura file in un percorso a nostra scelta. O a scelta dell’utente.
 Adesso tocca a voi provare il codice degli esempi e poi procedere con gli esercizi!
@@ -465,9 +485,6 @@ Scrivere un codice per creare, nella cartella "prova" sul Desktop precedentement
 **Esercizio 635**
 
 Scrivere un codice per eliminare la cartella "prova" sul Desktop precedentemente creata e verificare che se non si eliminano i file al suo interno, l’eliminazione è impossibile.
-
-
-
 
 
 

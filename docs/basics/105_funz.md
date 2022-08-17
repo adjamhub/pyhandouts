@@ -19,18 +19,21 @@ La sintassi generale per le funzioni in Python è così strutturata:
 
 Come al solito, cominciamo con un semplice esempio per capire il funzionamento:
 
-    def isPositive ( number:float ) -> bool:
-        if number > 0 :
-            return True
-        return False
-    
-    numero = float(input("Inserisci un numero: "))
-    if isPositive(numero):
-        print("Hai inserito un numero positivo")
-    else:
-        print("NON Hai inserito un numero positivo")
-    
-    
+
+```python
+def isPositive ( number:float ) -> bool:
+    if number > 0 :
+        return True
+    return False
+
+numero = float(input("Inserisci un numero: "))
+if isPositive(numero):
+    print("Hai inserito un numero positivo")
+else:
+    print("NON Hai inserito un numero positivo")
+```
+
+
 Alcune considerazioni banali:
 
 - la funzione si chiama "isPositive"
@@ -41,11 +44,15 @@ Alcune considerazioni banali:
 
 Altro esempio banale:
 
-    def somma (addendo1: float , addendo2: float) -> float:
-        return addendo1 + addendo2
-    
-    print("27 + 35 = " , somma(27,35) )
-    print("12 + 5 = " , somma(12,5) )
+
+```python
+def somma (addendo1: float , addendo2: float) -> float:
+    return addendo1 + addendo2
+
+print("27 + 35 = " , somma(27,35) )
+print("12 + 5 = " , somma(12,5) )
+```
+
 
 Questo solo per mettere in evidenza che, se ci sono più parametri, essi
 vanno elencati fra virgole dentro le parentesi tonde.
@@ -86,17 +93,24 @@ essa al momento della sua chiamata.
 
 Capisco lo sconcerto... riprovo con un esempio:
 
-    # la variabile "nome" è il parametro (di tipo str) della funzione saluta()
-    def saluta (nome: str) -> str:
-        return "ciao " + nome
+
+```python
+# la variabile "nome" è il parametro (di tipo str) della funzione saluta()
+def saluta (nome: str) -> str:
+    return "ciao " + nome
+```
+
 
 Quando poi la funzione viene chiamata i parametri prendono dei valori:
 
-    # il valore "ciccio" sarà inserito nel parametro "nome"
-    # della funzione "saluta()"
-    print( saluta("ciccio") )
-    
-    # scrive "ciao ciccio"
+```python
+# il valore "ciccio" sarà inserito nel parametro "nome"
+# della funzione "saluta()"
+print( saluta("ciccio") )
+```
+
+    "ciao ciccio"
+
 
 Se la funzione prende più di un parametro, Python fornisce 2 possibilità:
 
@@ -105,40 +119,64 @@ Se la funzione prende più di un parametro, Python fornisce 2 possibilità:
 
 Partiamo come al solito definendo una funzione di prova e verificando cosa succede:
 
-    # la funzione ritorna parola ripetuta per un certo numero di volte
-    # (con uno spazio di separazione in mezzo, ma non alla fine):
-    # ripeti("ciao", 3) ritorna "ciao ciao ciao"
-    def ripeti(parola:str , numero:int)->str :
-        res = (parola + " " ) * (numero - 1) + parola
-        return res
+
+```python
+# la funzione ritorna parola ripetuta per un certo numero di volte
+# (con uno spazio di separazione in mezzo, ma non alla fine):
+# ripeti("ciao", 3) ritorna "ciao ciao ciao"
+def ripeti(parola:str , numero:int)->str :
+    res = (parola + " " ) * (numero - 1) + parola
+    return res
+```
+
 
 Nella chiamata con inserimento ordinato dei valori basta inserire i dati
 nell'ordine della definizione: prima la parola e poi il numero:
 
-    print( ripeti ("ciao", 4) ) # scrive "ciao ciao ciao ciao"
+
+```python
+print( ripeti ("ciao", 4) ) # scrive "ciao ciao ciao ciao"
+```
+
 
 mentre se si inseriscono i dati nell'ordine errato si va incontro ad un errore:
 
-    print( ripeti (3, "ciao") ) # ***ERRORE***
+
+```python
+print( ripeti (3, "ciao") ) # ***ERRORE***
+```
+
 
 Se lo si desidera è anche possibile procedere ad un **inserimento nominale**, 
 indicando cioè il nome della variabile in cui inserire il valore: in questo caso, l'ordine di inserimento non conta.
 
-    print( ripeti (parola = "ciao" , numero = 3) ) # ciao ciao ciao
-    print( ripeti (numero = 3 , parola = "ciao") ) # ciao ciao ciao
+
+```python
+print( ripeti (parola = "ciao" , numero = 3) ) # ciao ciao ciao
+print( ripeti (numero = 3 , parola = "ciao") ) # ciao ciao ciao
+```
+
 
 È inoltre possibile passare alle funzioni alcuni **valori di default**: questi vengono utilizzati se la funzione 
 viene chiamata senza i valori da passare ai parametri o ignorati in presenza di essi.
 
-    # definizione della funzione `saluta` con valore di default "ciccio"
-    # per il parametro nome
-    def saluta(nome = "ciccio"):
-        return "ciao " + nome
+
+```python
+# definizione della funzione `saluta` con valore di default "ciccio"
+# per il parametro nome
+def saluta(nome = "ciccio"):
+    return "ciao " + nome
+```
+
 
 Allora è possibile scrivere in fase di chiamata:
 
-    saluta()        # ritorna la stringa "ciao ciccio"
-    saluta("pippo") # ritorna la stringa "ciao pippo"
+
+```python
+saluta()        # ritorna la stringa "ciao ciccio"
+saluta("pippo") # ritorna la stringa "ciao pippo"
+```
+
 
 Spero sia chiaro, a me perlomeno sembra così.
 
@@ -156,9 +194,10 @@ Se ricordate la struttura di base di una funzione, proveremo adesso ad aggiunger
 
 La documentazione di una funzione va strutturata nel modo seguente:
 
+
     def nome_funzione ( par1: tipo1, par2: tipo2 ) -> tipo_di_ritorno :
     """una riga che descrive quello che la funzione fa
-    
+
        alcune righe (opzionali) per descrivere più precisamente cosa la funzione 
        vuole ottenere
        
