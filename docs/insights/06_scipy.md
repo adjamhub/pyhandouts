@@ -1,8 +1,8 @@
 # Scipy
 
-Blah blah\...
+FIXME!!!
 
-
+<!-- ################################################################################# -->
 ## Modulo NumPy
 
 Il modulo NumPy serve per operazioni matematiche con sequenze di numeri.

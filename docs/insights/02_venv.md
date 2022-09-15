@@ -38,8 +38,8 @@ Facciamo una prova per capire il (semplice) funzionamento di un ambiente
 virtuale
 
 
-#################################################################################
-# Gestire un ambiente virtuale
+<!-- ################################################################################# -->
+## Gestire un ambiente virtuale
 
 
 Un ambiente virtuale si crea con il modulo venv che fa parte della
@@ -108,7 +108,7 @@ Tutto qui!
 Basta provare un paio di volte.
 
 
-#################################################################################
+<!-- ################################################################################# -->
 ## Lavorare con un ambiente virtuale
 
 

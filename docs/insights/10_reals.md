@@ -1,4 +1,4 @@
-## Python e i numeri reali
+# Python e i numeri reali
 
 Python sembra fare parecchi errori per calcolare i numeri con la
 virgola... non sembra preciso... guardate questo esempio:
