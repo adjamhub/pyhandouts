@@ -1,28 +1,24 @@
 # OOP
 
-!!! warning "Attenzione!"
+OOP è l'acronimo di Object Oriented Programming, programmazione orientata agli oggetti.
+Python è un linguaggio di programmazione completamente basato sulla OOP, ovvero tutti i tipi di dato
+che abbiamo incontrato (interi, reali, stringhe, liste, etc...) sono in realtà oggetti che 
+condividono caratteristiche comuni.
 
-    Questa parte della documentazione non è ancora pronta.
+In questo capitolo cercheremo prima di capire cosa è un oggetto e come si definisce in Python
+e poi vedremo tutte quelle peculiarità che fanno della OOP il punto di svolta della programmazione
+fino a renderla in grado di produrre il software della qualità odierna.
 
-    Usa la documentazione in PDF reperibile
-    [qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
+Sarà bellissimo! :smile:
+
 
 <!-- ################################################################################################# -->
-## Introduzione alla OOP
+## Classi e Oggetti
 
-Python è un linguaggio basato sulla OOP, ovvero sulla Object Oriented
-Programming, la programmazione orientata agli oggetti.
+Cerchiamo innanzitutto di capire che cosa è un oggetto, partendo magari da esempi banali.
 
-La frase precedente non spiega nulla, mi rendo conto. Riprovo. Tutti i
-tipi di dati che abbiamo incontrato e che incontreremo in Python sono
-oggetti e quindi seguono le regole della OOP. Cerchiamo innanzitutto di
-capire che cosa è un oggetto e che cosa è questa OOP...
-
-Partiamo da alcuni esempi semplici per definire il concetto di oggetto.
-Un oggetto è un entità, concreta od astratta, che descrive un concetto.
-Facciamo subito un esempio che alleggerisca la tensione! Secondo Python,
-una casa, un tavolo, una persona, un colore... sono tutte entità, tutti
-concetti, tutti... oggetti!!!
+**Un oggetto è un entità, concreta od astratta, che descrive un concetto.** 
+Una casa, un tavolo, una persona, un colore... sono tutte entità, tutti concetti, tutti... oggetti!!!
 
 E possono essere contenuti in una variabile!
 
@@ -61,19 +57,19 @@ comunemente definiti i membri dell'oggetto.
 Vediamo la sintassi utilizzata così da scrivere un po' di codice:
 
 ``` python
-# immagina che la variabile "c" sia un oggetto "Cerchio"
-c = Cerchio()
+# immagina che la variabile "cx" sia un oggetto "Cerchio"
+cx = Cerchio()
 
 # Per accedere ai membri (attributi e metodi) di un oggetto si utilizza
 # il punto. Ad esempio:
 
 # attributo "raggio"
 # è come una variabile interna, a cui si accede con il punto
-c.raggio = 3
-# da ora in poi, l’oggetto Cerchio cerc ha raggio 3
+cx.raggio = 3
+# da ora in poi, l’oggetto Cerchio cx ha raggio 3
 
 # metodo "calcolaArea()"
-# è come una funzione interna, a cui si accede con il punto
+# è come una funzione interna, a cui si accede con l'operatore punto
 c.calcolaArea() 
 # valutando PiGreco a 3.14, questa funzione ritorna 28.26
 
@@ -121,11 +117,11 @@ class Cerchio:
 Il fantomatico oggetto Cerchio si inizializza con il codice seguente:
 
 ``` python
-cerc = Cerchio(4)   # crea un oggetto della classe Cerchio con raggio 4
+cx = Cerchio(4)   # crea un oggetto della classe Cerchio con raggio 4
 print("Cerchio")
-print("raggio:", cerc.raggio)
-print("area:", cerc.calcolaArea())
-print("circonferenza:", cerc.calcolaPerimetro())
+print("raggio:", cx.raggio)
+print("area:", cx.calcolaArea())
+print("circonferenza:", cx.calcolaPerimetro())
 ```
 
 che dovrebbe visualizzare:
@@ -159,17 +155,16 @@ Ricordate?
 Per evitare confusione fra i concetti mi piace utilizzare i termini classe e oggetto. In OOP solitamente si usa il
 termine "classe" per la definizione dell'oggetto, mentre "oggetto" è l'istanza del tipo classe definito. Prima abbiamo scritto:
 
-`cerc = Cerchio(4)`
+`cx = Cerchio(4)`
 
-Bene: cerc è un oggetto di tipo Cerchio, un'istanza della classe, mentre Cerchio è la classe.
+Bene: `cx` è un oggetto di tipo Cerchio, un'istanza della classe, mentre `Cerchio` è la classe.
 
 `self` 
 
-Avrete notato questo parametro predefinito nelle funzioni della
-classe e per inizializzare la variabile membro. Questo parametro viene
-automaticamente istanziato da Python in questo modo:
+Avrete notato questo parametro predefinito nelle funzioni della classe e per inizializzare la variabile membro. 
+Questo parametro viene automaticamente istanziato da Python in questo modo:
 
-`cerc.area()` diventa `Cerchio.area(cerc)`
+`cx.area()` diventa `Cerchio.area(cx)`
 
 In questo modo il parametro self permette accesso alla classe, ma
 l'utente della classe non ha bisogno di occuparsene. Spero sia chiaro,
@@ -214,7 +209,7 @@ class Quadrato:
         self.coloreBordo = "nero"
 # ...
 # nella riga sotto viene eseguita automaticamente la funzione __init__
-c = Quadrato(4)
+obj = Quadrato(4)
 # si definisce così un oggetto della classe Quadrato, di lato 4
 # con colore di sfondo bianco e colore del bordo nero.
 ```
@@ -241,8 +236,8 @@ def __str__(self):
     return s
 
 ...
-# riferito all’oggetto c definito prima
-print(c)
+# riferito all’oggetto obj definito prima
+print(obj)
 # visualizzerà "Quadrato di lato 4, sfondo bianco, bordo nero"
 ```
 
@@ -273,12 +268,12 @@ class Rettangolo:
         return p
 
 if __name__ == "__main__":
-    r = Rettangolo(5,3)
-    print(r)
-    print("Base:", r.b)
-    print("Altezza:", r.h)
-    print("Area:", r.area())
-    print("Perimetro:",r.perimetro())    
+    ret = Rettangolo(5,3)
+    print(ret)
+    print("Base:", ret.b)
+    print("Altezza:", ret.h)
+    print("Area:", ret.area())
+    print("Perimetro:", ret.perimetro())    
 ```
 
 <!-- ################################################################################################# -->
@@ -299,8 +294,9 @@ print().
 
 Definire la classe Persona con attributi nome, cognome, data e luogo di
 nascita, sesso (M/F). La funzione di `__init__` della classe non deve
-avere argomenti. Definite un maschio e una femmina della classe a libera
-scelta.
+avere argomenti. 
+
+Definite un maschio e una femmina della classe a libera scelta.
 
 --------------------------------------------------------------------
 
@@ -308,9 +304,10 @@ scelta.
 
 Definire la classe TriangoloRettangolo inserendo come attributi i due
 cateti. Aggiungere i metodi per il calcolo dell'ipotenusa, dell'area e
-del perimetro. Definire un oggetto della classe TriangoloRettangolo con
-cateti uguali a 4 cm e 3 cm, visualizzare i suoi attributi e calcolare
-l'ipotenusa, l'area e il perimetro.
+del perimetro. 
+
+Definire un oggetto della classe TriangoloRettangolo con cateti uguali a 4 cm e 3 cm, 
+visualizzare i suoi attributi e calcolare l'ipotenusa, l'area e il perimetro.
 
 --------------------------------------------------------------------
 
@@ -318,8 +315,9 @@ l'ipotenusa, l'area e il perimetro.
 
 Definire la classe Animale con attributi nome e specie. Aggiungere il
 metodo "corri" (ritorna la stringa "sto correndo...") e "mangia"
-(ritorna la stringa "sto mangiando"). Definire un cane di nome
-"Piero" e farlo correre e mangiare. Visualizzare i suoi attributi.
+(ritorna la stringa "sto mangiando"). 
+
+Definire un cane di nome "Piero" e farlo correre e mangiare. Visualizzare i suoi attributi.
 
 --------------------------------------------------------------------
 
@@ -328,11 +326,13 @@ metodo "corri" (ritorna la stringa "sto correndo...") e "mangia"
 Definire la classe Persona con attributi nome, età e sesso (M/F). La
 funzione di `__init__` della classe deve prendere come argomento solo
 il nome della persona, mentre l'età va impostata automaticamente a ZERO
-e il sesso a "M" (o "F", scegliete voi). Aggiungere i metodi
-"invecchia" (aggiunge un anno di età) e "saluta" (restituisce
-"signore" o "signora" a seconda del sesso della persona). Definire 2
-persone: "Augusto", maschio di 47 anni e "Marianna", femmina di 44
-anni. Utilizzare i metodi "invecchia" e "saluta" per entrambi,
+e il sesso a "M" (o "F", scegliete voi). 
+
+Aggiungere i metodi `invecchia` (aggiunge un anno di età) e `saluta` (restituisce
+"signore" o "signora" a seconda del sesso della persona). 
+
+Definire 2 persone: "Augusto", maschio di 47 anni e "Marianna", femmina di 44
+anni. Utilizzare i metodi `invecchia` e `saluta` per entrambi,
 procedere poi a visualizzare gli attributi di entrambi.
 
 --------------------------------------------------------------------
@@ -341,13 +341,16 @@ procedere poi a visualizzare gli attributi di entrambi.
 
 Definire la classe ContoCorrente con attributi proprietario e capitale;
 il proprietario va definito tramite parametro della funzione
-`__init__` mentre il capitale va inizializzato a ZERO. Definire il
-metodo "deposita", che prende un parametro reale, controlla che sia
+`__init__` mentre il capitale va inizializzato a ZERO. 
+
+Definire il metodo `deposita`, che prende un parametro reale, controlla che sia
 positivo ed eventualmente lo aggiunge al capitale e il metodo
-"preleva", che prende anch'esso un parametro reale, verifica che il
+`preleva`, che prende anch'esso un parametro reale, verifica che il
 parametro sia positivo, verifica che sia minore del capitale ed
 eventualmente lo sottrae da esso (il metodo ritorna True se possibile,
-False altrimenti). Definire il Conto Corrente di "Gigetto". Depositare
+False altrimenti). 
+
+Definire il Conto Corrente di "Gigetto". Depositare
 in esso 1000 euro. Prelevare 600 euro per 2 volte. La seconda volta
 l'operazione dovrebbe fallire. Visualizzare dopo ogni operazione i
 valori dell'oggetto con la funzione print().
@@ -359,13 +362,14 @@ valori dell'oggetto con la funzione print().
 Definire la classe Crittografia con attributo un numero intero che
 indica lo spiazzamento dei caratteri. Ad esempio, se il numero è 3 ogni
 carattere sarà traslato di 3 posti sull'alfabeto (le A diventano D, le B
-diventano E...). La classe contiene inoltre 2 funzioni: "cripta", che
-prende una stringa qualsiasi e restituisce la stessa trasformata secondo
-la regola descritta sopra; "decripta" che pende una stringa criptata e
-la rimette "a posto". Definire due oggetti della classe Crittografia
-con parametro a piacere e provare a "criptare" e "decriptare" una
-stringa, verificando che la stringa decriptata è uguale a quella
-inserita prima di essere criptata.
+diventano E...). 
+
+La classe contiene inoltre 2 funzioni: 
+- `cripta`, che prende una stringa qualsiasi e restituisce la stessa trasformata secondo la regola descritta sopra; 
+- `decripta` che pende una stringa criptata e la rimette "a posto". 
+
+Definire due oggetti della classe Crittografia con parametro a piacere e provare a "criptare" e "decriptare" una
+stringa, verificando che la stringa decriptata è uguale a quella inserita prima di essere criptata.
 
 --------------------------------------------------------------------
 
@@ -401,8 +405,9 @@ True, una ritornando False.
 **Esercizio 708**
 
 Definire la classe TrapezioRettangolo, che prende come parametri la base
-minore, la base maggiore e l'altezza del Trapezio. Definire i metodi
-"latoObliquo", "area", "perimetro". Dichiarare un oggetto
+minore, la base maggiore e l'altezza del Trapezio. 
+
+Definire i metodi `latoObliquo`, `area`, `perimetro`. Dichiarare un oggetto
 TrapezioRettangolo e procedere a visualizzare i suoi parametri, la sua
 area e il suo perimetro.
 
@@ -430,9 +435,10 @@ ogni 12€ di spesa si aggiunga un punto. All'inizio ovviamente il numero
 di punti è ZERO. Il cliente può decidere, in ogni momento, di usufruire
 di una parte dei punti accumulati per l'ottenimento di un premio
 (implementare un opportuno metodo utilizzaPunti(quantita): il metodo
-ritorna True... False altrimenti). Definire le carte fedeltà per 2
-clienti. Il primo cliente fa una spesa pari a 150€. Il secondo cliente
-fa una spesa di 300€. In seguito, il primo cliente fa una spesa pari a
+ritorna True... False altrimenti). 
+
+Definire le carte fedeltà per 2 clienti. Il primo cliente fa una spesa pari a 150€. 
+Il secondo cliente fa una spesa di 300€. In seguito, il primo cliente fa una spesa pari a
 1500€ e, dopo aver pagato, decide di utilizzare 100 dei punti accumulati
 per ritirare un premio. Il secondo cliente chiede di utilizzare 50 dei
 punti accumulati.
@@ -754,10 +760,8 @@ stringa vuota.
 
 Definire i seguenti contatti:
 
--   Giacomo (detto "Jack"), numero +39-340-1234567, mail
-    <jack@mail.com>.
--   Giovanni (detto "John"), numero +39-333-4567890, mail
-    <john@mail.com>.
+- Giacomo (detto "Jack"), numero +39-340-1234567, mail <jack@mail.com>.
+- Giovanni (detto "John"), numero +39-333-4567890, mail <john@mail.com>.
 
 La classe ContattoLavoro deriva dalla classe Contatto, ma aggiunge le
 informazioni fax e partitaIVA. Il costruttore prende ancora una volta
@@ -765,8 +769,8 @@ solo nome e numero, impostando le restanti variabili alla stringa vuota.
 
 Definire il seguente contatto di lavoro:
 
--   Alessandro (detto "Alex"), numero +39-345-6789012, mail
-    <alex@mail.com>, fax +39-0721-098765, partitaIVA 1234567890A
+- Alessandro (detto "Alex"), numero +39-345-6789012, mail <alex@mail.com>, 
+  fax +39-0721-098765, partitaIVA 1234567890A
 
 --------------------------------------------------------------------
 
@@ -856,20 +860,20 @@ sotto.
 
 | Operatore            | Espressione     | Funzione interna per l'overloading  |
 |----------------------|-----------------|-------------------------------------|
-| print                | print ( a )     | a.__str__()                         | 
-| Addizione            | a + b           | a.__add__(b)                        |
-| Sottrazione          | a - b           | a.__sub__(b)                        |
-| Moltiplicazione      | a * b           | a.__mul__(b)                        |
-| Divisione            | a / b           | a.__truediv__(b)                    |
-| Divisione Intera     | a // b          | a.__floordiv__(b)                   |
-| Potenza              | a ** b          | a.__pow__(b)                        |
-| Modulo               | a % b           | a.__mod__(b)                        |
-| Minore               | a < b           | a.__lt__(b)                         |
-| Minore o uguale      | a <= b          | a.__le__(b)                         |
-| Uguale               | a == b          | a.__eq__(b)                         |
-| Diverso              | a != b          | a.__ne__(b)                         |
-| Maggiore             | a > b           | a.__gt__(b)                         |
-| Maggiore o uguale    | a >= b          | a.__ge__(b)                         |
+| print                | print ( a )     | `a.__str__()`                       | 
+| Addizione            | a + b           | `a.__add__(b)`                      |
+| Sottrazione          | a - b           | `a.__sub__(b)`                      |
+| Moltiplicazione      | a * b           | `a.__mul__(b)`                      |
+| Divisione            | a / b           | `a.__truediv__(b)`                  |
+| Divisione Intera     | a // b          | `a.__floordiv__(b)`                 |
+| Potenza              | a ** b          | `a.__pow__(b)`                      |
+| Modulo               | a % b           | `a.__mod__(b)`                      |
+| Minore               | a < b           | `a.__lt__(b)`                       |
+| Minore o uguale      | a <= b          | `a.__le__(b)`                       |
+| Uguale               | a == b          | `a.__eq__(b)`                       |
+| Diverso              | a != b          | `a.__ne__(b)`                       |
+| Maggiore             | a > b           | `a.__gt__(b)`                       |
+| Maggiore o uguale    | a >= b          | `a.__ge__(b)`                       |
 
 
 La funzione `__str__` permette ad un oggetto della classe di essere
@@ -899,7 +903,7 @@ Le funzioni di confronto (minore, maggiore, diverso, etc...) prendono
 come parametro i 2 oggetti da confrontare e ritornano un booleano
 
 ad esempio per implementare l'operatore minore bisogna definire la
-funzione `__lt__` che prende i 2 parametri self , other che
+funzione `__lt__` che prende i 2 parametri `self`, `other` che
 rappresentano i 2 oggetti. Se secondo la tua implementazione la funzione
 ritorna True significa che il primo oggetto è minore del secondo,
 altrimenti se si ritorna False significa che il primo oggetto NON è

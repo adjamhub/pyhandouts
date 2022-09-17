@@ -9,8 +9,8 @@ hide:
 <div class="">
 
 <div style="color:white;">
-<h1 style="color:white;font-weight:bold">Python: le dispense del Prof!</h1>
-<p>Manca solo di studiare e fare esercizi...</p>
+<h1 style="color:white;font-weight:bold">Corso Python</h1>
+<p>Le dispense per le lezioni di informatica del prof...</p>
 <br>
 <a href="/basics/000_first" class="md-button md-button--primary">Python: le basi!</a>
 <a href="/OOP" class="md-button">Python: OOP</a>
