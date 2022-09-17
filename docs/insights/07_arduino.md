@@ -11,7 +11,7 @@ Arduino servono sostanzialmente 4 cose:
 -   L'ambiente di sviluppo per Arduino installato sul Computer
 
 
-################################################################################
+<!-- ################################################################################# -->
 ## Python & PySerial
 
 
@@ -50,7 +50,7 @@ aprire l'interprete Python e provare a importare il modulo:
 Se Python non si lamenta di nulla, siamo pronti per il prossimo step :)
 
 
-################################################################################
+<!-- ################################################################################# -->
 ## Ambiente Arduino
 
 
@@ -72,7 +72,7 @@ Non dovrebbe essere incredibilmente difficile riuscire nell'impresa di
 acquistare un arduino e installare il suo IDE.
 
 
-################################################################################
+<!-- ################################################################################# -->
 ## Collegamento fra i dispositivi
 
 I due esempi che seguono servono per verificare che sia possibile
@@ -84,7 +84,7 @@ implementare con Arduino, sia dei collegamenti che si instaurano fra i
 vari dispositivi.
 
 
-################################################################################
+<!-- ################################################################################# -->
 ## Da Arduino a Python
 
 
@@ -131,7 +131,7 @@ Eseguite questo pezzo di codice e "dovreste" vedere, ogni 2 secondi, la
 scritta "**Funziona!!!**" apparire...
 
 
-################################################################################
+<!-- ################################################################################# -->
 ## Da Python ad Arduino
 
 

@@ -7,6 +7,8 @@ servono sostanzialmente 2 cose:
 -   un modulo Python per il collegamento con il DBMS
 -   l'installazione di un DBMS per il testing dell'applicazione
 
+
+<!-- ################################################################################# -->
 ## Modulo Python
 
 Il modulo necessario per le implementazioni che vedremo si chiama "MySQL
@@ -38,6 +40,9 @@ aprire l'interprete Python e provare a importare il modulo:
 
 Se Python non si lamenta di nulla, siamo pronti per il prossimo step :)
 
+
+
+<!-- ################################################################################# -->
 ## Installazione DBMS
 
 Per testare il codice che scriveremo dobbiamo installare un DBMS.
@@ -78,6 +83,8 @@ database="dbname"
 Ovviamente se c'è un problema qualunque nella connessione questo pezzo
 di codice fallirà.
 
+
+<!-- ################################################################################# -->
 ## DDL execution
 
 DDL (Data Definition Language) è quella parte di codice SQL che serve
@@ -124,6 +131,8 @@ pycur.execute(sql)
 
 pydb.commit()
 
+
+<!-- ################################################################################# -->
 ## QL execution
 
 QL (Query Language) è quella parte di codice SQL che serve per

@@ -23,7 +23,7 @@ pip install Flask
 
 Oppure dall'interfaccia di Thonny per la gestione dei pacchetti.
 
-#################################################################################################
+<!-- ################################################################################# -->
 ## Primi esempi con Flask
 
 La più semplice applicazione sviluppabile con la libreria Flask è
@@ -138,7 +138,7 @@ if \_\_name\_\_ == \"\_\_main\_\_\":
 
 app.run(host = \"0.0.0.0\", port = 5000, debug = False)
 
-#################################################################################################
+<!-- ################################################################################# -->
 ## Esercizio svolto
 
 Ho scritto la mia bella pagina web in HTML, CSS, JS e via discorrendo.
@@ -164,7 +164,7 @@ file.close()
 
 return content
 
-#################################################################################################
+<!-- ################################################################################# -->
 ## L'esercizio svolto è sbagliato!
 
 In che senso sbagliato... l'esercizio è giusto. Funziona! L'ho appena
