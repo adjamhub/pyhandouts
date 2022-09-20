@@ -12,8 +12,8 @@ hide:
 <h1 style="color:white;font-weight:bold">Corso Python</h1>
 <p>Le dispense per le lezioni di informatica del prof...</p>
 <br>
-<a href="/basics/000_first" class="md-button md-button--primary">Python: le basi!</a>
-<a href="/OOP" class="md-button">Python: OOP</a>
+<a href="/pyhandouts/basics/000_first" class="md-button md-button--primary">Python: le basi!</a>
+<a href="/pyhandouts/OOP" class="md-button">Python: OOP</a>
 </div>
 
 </div>
