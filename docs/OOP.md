@@ -101,9 +101,9 @@ import math
 
 class Cerchio:
     # inizializza gli attributi della classe
-    def __init__(self, raggio):
+    def __init__(self, raggioInserito):
         # aggiunge l’attributo "raggio" alla classe e lo inizializza
-        self.raggio = raggio
+        self.raggio = raggioInserito
 
     def calcolaArea(self):
         a = math.pi * self.raggio * self.raggio
