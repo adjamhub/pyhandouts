@@ -70,11 +70,11 @@ cx.raggio = 3
 
 # metodo "calcolaArea()"
 # è come una funzione interna, a cui si accede con l'operatore punto
-c.calcolaArea() 
+cx.calcolaArea() 
 # valutando PiGreco a 3.14, questa funzione ritorna 28.26
 
 # metodo "calcolaCirconferenza()"
-c.calcolaCirconferenza()  
+cx.calcolaCirconferenza()  
 # ritorna 18.84
 ```
 
@@ -121,7 +121,7 @@ cx = Cerchio(4)   # crea un oggetto della classe Cerchio con raggio 4
 print("Cerchio")
 print("raggio:", cx.raggio)
 print("area:", cx.calcolaArea())
-print("circonferenza:", cx.calcolaPerimetro())
+print("circonferenza:", cx.calcolaCirconferenza())
 ```
 
 che dovrebbe visualizzare:
