@@ -27,10 +27,10 @@ o le tabelle in genere fanno cagare :O
 ## BASICS
 
 o FIRST THINGS (OK, ma... magari qualche esercizio in più)
-o SEQUENZE (
-o FUNZIONI
-o MODULI
-o FILEs
+o SEQUENZE (dizionari???? DA DECIDERE)
+x FUNZIONI: esercizi ci sono. Si possono aggiungere i vecchi compiti sulle funzioni
+o MODULI (import TODO)
+o FILEs ????? (possibile unione con modulo pathlib)
 o CSV
 
 
@@ -38,7 +38,7 @@ o CSV
 # OOP
 
 o Varie cose da sistemare... ANCHE con l'esperienza di quest'anno!!!
-
+o Python scope rules
 
 --------------------------
 # WX

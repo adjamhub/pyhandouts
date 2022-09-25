@@ -335,5 +335,38 @@ diventa "cifiafaofo".
 
 ------------------------------------------------------------------------------------------------
 
-**PIU ESERCIZI SULLE FUNZIONI!!! Anche con liste, tuple, dizionari!!! interi...**
+**Esercizio 511**
+
+Scrivere una funzione che prende come parametro una lista di numeri interi 
+e ritorna una lista con solo i numeri dispari della lista precedente.
+
+Ad esempio, `dispari( [1,2,3,4,5,6,7] )` ritorna `[1,3,5,7]`.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 512**
+
+Scrivere una funzione che prende come parametro una sequenza generica (stringa, tupla o lista) e
+ritorna il numero di interi presenti come elementi della sequenza. (Pensa, pensa...)
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 513**
+
+Scrivere una funzione che prende come parametro una stringa qualsiasi e ritorna una stringa
+con le lettere minuscole (solo le lettere) ordinate alfabeticamente e
+ripetute una sola volta.
+
+Ad esempio `elencaLettere("casa")` ritorna `"acs"`. `elencaLettere("Hai capito?")` ritorna `"achiopt"`.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 514**
+
+Scrivere una funzione che prende come parametro due stringhe e che ritorna l'intersezione
+MAIUSCOLA delle loro lettere ordinate alfabeticamente, ovvero una lista
+con le lettere (scritte in maiuscolo) presenti in entrambe le stringhe.
+
+Ad esempio `intersezioneMaiuscola("casa", scuola")` ritorna `[ "A", "C", "S"]`
+
 
