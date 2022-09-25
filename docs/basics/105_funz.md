@@ -143,7 +143,7 @@ mentre se si inseriscono i dati nell'ordine errato si va incontro ad un errore:
 
 
 ```python
-print( ripeti (3, "ciao") ) # ***ERRORE***
+print( ripeti (3, "ciao") ) # ERRORE!!!
 ```
 
 

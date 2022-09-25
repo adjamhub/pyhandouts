@@ -29,10 +29,14 @@ o le tabelle in genere fanno cagare :O
 o FIRST THINGS (OK, ma... magari qualche esercizio in più)
 o SEQUENZE (dizionari???? DA DECIDERE)
 x FUNZIONI: esercizi ci sono. Si possono aggiungere i vecchi compiti sulle funzioni
-o MODULI (import TODO)
+o MODULI (import TODO) ---> PACKAGES????
 o FILEs ????? (possibile unione con modulo pathlib)
 o CSV
 
+COSE DA DECIDERE NELLA DIDATTICA
+- dizionari --> dove arriviamo???
+- packages
+- unione files <--> modulo pathlib
 
 --------------------------
 # OOP
