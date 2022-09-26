@@ -1498,3 +1498,7 @@ Ad esempio, dato N = 6, va visualizzata la successione: 0 , 1 , 1 , 2 , 3 , 5.
 Dopo aver fatto inserire un numero intero positivo dire da quante cifre
 è composto il numero. Ad esempio 12345 è composto da 5 cifre.
 
+<br>
+<br>
+<br>
+

@@ -6,10 +6,12 @@ stando attenti a utilizzare correttamente la libreria wxPython.
 
 
 !!! tip "Suggerimento"
-    Alcune (molte) funzionalità delle widgets che abbiamo visto non vi sono note. Come si fa a trovare la funzione che
-    fa la cosa che ho in mente di fare? **Si legge la documentazione!!!**.
+    Alcune (molte) funzionalità delle widgets che abbiamo visto non vi sono note. 
+    Come si fa a trovare la funzione che fa la cosa che ho in mente di fare? 
     
-    Per ognuna delle widget studiate, nella pagina [Classi wx](/wx/201_classes), trovate i link diretti alla documentazione ufficiale!
+    **Si legge la documentazione!!!**.
+    
+    Per ognuna delle widget studiate, nella pagina [Classi wx](/pyhandouts/wx/201_classes), trovate i link diretti alla documentazione ufficiale!
 
 
 Iniziamo!
@@ -208,3 +210,9 @@ Inserite nella finestra una ListBox vuota e un pulsante. Quando
 l'utente clicca il pulsante, il programma carica dal file *dati.txt*
 presente nella stessa cartella (dovete crearlo voi, con una parola ogni
 riga: ogni riga del file diventerà una voce nella ListBox).
+
+<br>
+<br>
+<br>
+
+

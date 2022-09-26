@@ -165,3 +165,7 @@ attiva e le altre due grigie. Ogni 5 secondi si passa allo stadio
 successivo (luce gialla, poi luce rossa, poi si ritorna a luce verde,
 all'infinito).
 
+<br>
+<br>
+<br>
+

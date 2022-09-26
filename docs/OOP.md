@@ -510,6 +510,54 @@ ottenuto, con una visualizzazione simile a questa:
 -   Senigallia: (23,34,45,67,88)
 -   Ancona: (39, 43, 44, 78, 81)
 
+<!-- ################################################################################################# -->
+## Accesso agli attributi di una classe
+
+In Python è facile... si può fare sempre!
+
+Finito il capitolo!
+
+Nei linguaggi di programmazione più *antichi* e *strutturati* esiste il concetto di *visibilità* di un membro (un attributo o un metodo)
+della classe. Ogni membro può essere specificato (almeno) come `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze;
+oppure `private`, ovvero visibile solo all'interno della propria classe di appartenenza.
+
+Inserisco un pezzo di codice di linguaggio C++ per rendere evidente il concetto:
+
+```c
+class Persona
+{
+// attributi privati
+private:
+    string _nome;
+
+// metodi pubblici
+public:
+    // setter method: permette di impostare il valore dell'attributo _nome
+    bool setNome(string n) {
+        if (n != "") {
+            _nome = n;
+            return True;
+        }
+        return False;
+    };
+    
+    // getter method: ritorna il valore dell'attributo _nome
+    string nome() const {
+        return _nome;
+    }; 
+};
+```
+
+Anche se non conosciamo il linguaggio C++, quello che vediamo è molto semplice da comprendere: l'attributo `_nome` è privato e quindi **NON** modificabile direttamente
+dall'esterno della classe `Persona`.
+Se il programmatore vuole che all'esterno venga visualizzato il nome della Persona, inserisce nella classe un metodo *getter*: tipicamente `nome()`. Dall'esterno non è possibile
+nemmeno modificare il valore dell'attributo `_nome`: se il programmatore vuole fornire questa possibilità, inserisce nella classe un metodo *setter*: `setNome(string n)`. Dall'esterno
+è possibile modificare il valore solo utilizzando il metodo indicato e quindi eseguendo il codice del metodo `setNome` che permette di verificare il valore proposto per l'attributo.
+
+In Python non esiste una struttura simile e tutto funziona come se fosse stato dichiarato pubblico. Ci sono occasioni però in cui serve rende inaccessibile il valore di una variabile membro, 
+oppure in cui serve verificare se un valore è accettabile o meno per un attributo: in quel caso si usano le **Python properties**.
+
+
 
 <!-- ################################################################################################# -->
 ## Ereditarietà
@@ -1009,4 +1057,7 @@ Testare le seguenti operazioni:
 -   03 mar < 2 feb
 -   05 lug != 2 feb
 
+<br>
+<br>
+<br>
 

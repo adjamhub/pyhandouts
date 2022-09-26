@@ -26,7 +26,7 @@ convertirli in int (oppure in float), poi potete sommarli e infine, per
 visualizzarli dovete ritrasformare il risultato in una stringa.
 
 
-------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 
 **Esercizio 202 (Calcolatrice)**
@@ -40,7 +40,7 @@ calcolatrice tradizionale. La nostra dovrà comportarsi in maniera
 esattamente identica!!
 
 
-------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 
 
 **Esercizio 203 (Lista spesa)**
@@ -66,7 +66,7 @@ Aggiungo 2 livelli di difficoltà (opzionali):
     Desktop dell'utente. I dati vanno salvati uno per riga.
     
 
-------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 
 **Esercizio 204 (Tic Tac Toe)**
@@ -94,7 +94,7 @@ apparire una nuova finestra con l'etichetta HAI VINTO. O più
 semplicemente scriverlo sul titolo.
 
 
-------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 
 
 **Esercizio 205 (Fifteen puzzle)**
@@ -118,4 +118,7 @@ gioco, far muovere i pulsanti al click e una funzione
 *controllaSeHaiVinto* che appunto ti dice se sei riuscito a riordinare
 il puzzle!
 
+<br>
+<br>
+<br>
 

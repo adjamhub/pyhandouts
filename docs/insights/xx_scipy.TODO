@@ -46,3 +46,9 @@ arr2D = np.array ( \[ \[1 , 3 , 5 \] , \[ 2 , 4 , 6 \] \] )
 print(arr2D\[0,1\]) \# visualizza il secondo elemento della prima lista
 
 3
+
+<br>
+<br>
+<br>
+
+

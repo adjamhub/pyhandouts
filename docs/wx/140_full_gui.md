@@ -615,3 +615,8 @@ Come vedete salvare le configurazioni della propria App diventa
 semplicissimo, a patto di saper scegliere bene i valori da salvare come
 impostazioni e di fare in modo che i dati da salvare siano semplicemente
 convertibili in stringhe.
+
+<br>
+<br>
+<br>
+

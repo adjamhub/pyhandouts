@@ -144,32 +144,37 @@ Vediamo i parametri:
     I flag di allineamento possono decidere l'allineamento della widget rispetto al contenitore (il layout stesso). 
     In questo caso dobbiamo distinguere il comportamento a seconda del contenitore. Mi spiego.
 
-
+    <br>
+    
     In un **layout orizzontale**, gli allineamenti disponibili sono:
 
     * wx.ALIGN_TOP, incolonnata in alto
     * wx.ALIGN_BOTTOM, incolonnata in basso
     * wx.ALIGN_CENTER_VERTICAL, allineamento verticale al centro
 
-
+    <br>
+    
     In un **layout verticale**, gli allineamenti disponibili sono:
 
     * wx.ALIGN_LEFT, allineata a sinistra
     * wx.ALIGN_RIGHT, allineata a destra
     * wx.ALIGN_CENTER_HORIZONTAL, allineamento orizzontale al centro
 
-
+    <br>
+    
     In un **layout a griglia** funzionano tutti gli allineamenti indicati e in più il seguente:
 
     * wx.ALIGN_CENTER, allineamento centrato orizzontalmente e verticalmente
 
-
+    <br>
+    
     C'è inoltre un ultimo flag, alternativo a tutti gli altri flag di allineamento, che permette alla widget di espandersi verso direzioni
     predefinite:
 
     * wx.EXPAND: widget espansa su tutto lo spazio disponibile (ortogonalmente nel caso di un sizer lineare, nelle due direzioni per un sizer a griglia)
 
-
+    <br>
+    
     Va detto che è possibile combinare 2 o più flag con il simbolo "|" (la barra verticale, si chiama *pipe*). Vediamo qualche esempio:
 
 ``` python
@@ -691,6 +696,8 @@ Ci sono però alcune scelte (poche... tranquilli) che possiamo indurre
 tramite codice e che posso migliorare il comportamento della nostra
 finestra. Vediamole una per una!
 
+<br>
+
 **wx.Window.SetMinSize && wx.Window.SetMaxSize**
 
 :   Imposta la dimensione minima/massima della finestra. Funziona solo per
@@ -706,6 +713,8 @@ self.SetMinSize( (400,250) )
 panel.SetSizer(vbox)
 # ...
 ```
+
+<br>
 
 **wx.Sizer.Fit(self, window) && wx.Window.SetSizerAndFit(wx.Sizer)**
 
@@ -738,4 +747,8 @@ questo problema: <https://docs.wxpython.org/window_sizing_overview.html>
 
 Se invece pensate sia sufficiente quello che avete visto qui... passate
 agli esercizi del prossimo capitolo!!!
+
+<br>
+<br>
+<br>
 

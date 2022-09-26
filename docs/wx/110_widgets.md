@@ -600,3 +600,7 @@ if __name__ == "__main__":
 
 Provate a cambiare l'evento nel Bind per vedere la differenza di funzionamento.
 
+<br>
+<br>
+<br>
+

@@ -209,3 +209,7 @@ Vediamo l'elenco delle icone automaticamente supportate (in rigoroso ordine alfa
 Per adesso basta così! Ma ricordatevi di questo elenco quando parleremo
 di menù e barre degli strumenti...
 
+<br>
+<br>
+<br>
+

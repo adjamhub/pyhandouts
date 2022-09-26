@@ -487,4 +487,7 @@ Scrivere un codice per creare, nella cartella "prova" sul Desktop precedentement
 Scrivere un codice per eliminare la cartella "prova" sul Desktop precedentemente creata e verificare che se non si eliminano i file al suo interno, l’eliminazione è impossibile.
 
 
+<br>
+<br>
+<br>
 

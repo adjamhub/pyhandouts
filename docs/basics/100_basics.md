@@ -232,4 +232,7 @@ Visualizzare sullo schermo il seguente disegno:
 + + + +
 ```
 
+<br>
+<br>
+<br>
 

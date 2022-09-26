@@ -77,3 +77,7 @@ Il risultato dell'esecuzione di quel codice è questo!
 Se avete visto anche voi una finestra grigia vuota con il titolo "Hello, World!" significa che l'installazione e il primo programma sono andati
 a buon fine e siete pronti per studiare la libreria wxPython (a partire dalla prossima pagina!).
 
+<br>
+<br>
+<br>
+

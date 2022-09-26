@@ -68,15 +68,11 @@ nav:
     - Classi wx: wx/201_classes.md
     - Tools: wx/299_tools.md
   - Insights:
-    - pip: insights/01_pip.md
-    - venv: insights/02_venv.md
-    - Eccezioni: insights/03_eccezioni.md
-    - Turtle: insights/04_turtle.md
-    - Eseguibili: insights/05_script_to_exe.md
-    - Scipy: insights/06_scipy.md
-    - Arduino: insights/07_arduino.md
-    - MySql: insights/08_mysql.md
-    - Flask: insights/09_Flask.md
-    - Reals: insights/10_reals.md
+    - Introduzione: insights/00_intro.md
+    - Ambienti Virtuali: insights/01_venv.md
+    - Arduino: insights/02_arduino.md
+    - MySql: insights/03_mysql.md
+    - Flask: insights/04_flask.md
+    - Numeri reali: insights/05_reals.md
   - About: about.md
 

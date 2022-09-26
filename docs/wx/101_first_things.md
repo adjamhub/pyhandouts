@@ -202,3 +202,8 @@ app.MainLoop()
 Adesso avanti! Il prossimo step è quello di interagire un pò con l'applicazione! 
 Inserire un pulsante e fargli fare qualcosa!
 
+<br>
+<br>
+<br>
+
+
