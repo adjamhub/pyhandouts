@@ -511,11 +511,7 @@ ottenuto, con una visualizzazione simile a questa:
 -   Ancona: (39, 43, 44, 78, 81)
 
 <!-- ################################################################################################# -->
-## Accesso agli attributi di una classe
-
-In Python è facile... si può fare sempre!
-
-Finito il capitolo!
+## Accesso agli attributi
 
 Nei linguaggi di programmazione più *antichi* e *strutturati* esiste il concetto di *visibilità* di un membro (un attributo o un metodo)
 della classe. Ogni membro può essere specificato (almeno) come `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze;
@@ -534,11 +530,10 @@ private:
 public:
     // setter method: permette di impostare il valore dell'attributo _nome
     bool setNome(string n) {
-        if (n != "") {
-            _nome = n;
-            return True;
-        }
-        return False;
+        if (n == "")
+            return False;
+        _nome = n;
+        return True;
     };
     
     // getter method: ritorna il valore dell'attributo _nome
@@ -548,15 +543,68 @@ public:
 };
 ```
 
-Anche se non conosciamo il linguaggio C++, quello che vediamo è molto semplice da comprendere: l'attributo `_nome` è privato e quindi **NON** modificabile direttamente
-dall'esterno della classe `Persona`.
-Se il programmatore vuole che all'esterno venga visualizzato il nome della Persona, inserisce nella classe un metodo *getter*: tipicamente `nome()`. Dall'esterno non è possibile
-nemmeno modificare il valore dell'attributo `_nome`: se il programmatore vuole fornire questa possibilità, inserisce nella classe un metodo *setter*: `setNome(string n)`. Dall'esterno
-è possibile modificare il valore solo utilizzando il metodo indicato e quindi eseguendo il codice del metodo `setNome` che permette di verificare il valore proposto per l'attributo.
+Anche se non conosciamo il linguaggio C++, quello che vediamo è molto semplice da comprendere: l'attributo `_nome` è privato e quindi 
+**NON** modificabile direttamente dall'esterno della classe `Persona`.
 
-In Python non esiste una struttura simile e tutto funziona come se fosse stato dichiarato pubblico. Ci sono occasioni però in cui serve rende inaccessibile il valore di una variabile membro, 
-oppure in cui serve verificare se un valore è accettabile o meno per un attributo: in quel caso si usano le **Python properties**.
+Se il programmatore vuole che all'esterno venga visualizzato il nome della Persona, inserisce nella classe un metodo *getter*: tipicamente `nome()`. 
 
+Dall'esterno non è possibile nemmeno modificare il valore dell'attributo `_nome`: se il programmatore vuole fornire questa possibilità, 
+inserisce nella classe un metodo *setter*: `setNome(string n)`. Dall'esterno è possibile modificare il valore solo utilizzando il metodo 
+indicato e quindi eseguendo il codice del metodo `setNome` che permette di verificare il valore proposto per l'attributo.
+
+> In Python non esiste una struttura simile e tutto funziona come se fosse stato dichiarato pubblico. 
+
+Ci sono occasioni però in cui serve rendere inaccessibile il valore di una variabile membro, 
+oppure in cui serve verificare se un valore è accettabile o meno per un attributo: 
+in quel caso si usano le **Python properties** (o per farla anche più inutilmente difficile, il **Python @property decorator**)
+
+Un codice funzionalmente identico a quello sopra, che scriviamo in Python, potrebbe essere fatto così:
+
+```python
+class Persona:
+    def __init__(self, name):
+        self._nome = name
+    
+    @property
+    def nome(self):
+        return self._nome
+        
+    @nome.setter
+    def nome(self, name):
+        if name == "":
+            raise ValueError("Tutte le persone hanno un nome...")
+        self._nome = name
+        return
+```
+
+Mamma mia, quante cose da spiegare... Cominciamo!
+
+```python
+@property
+def nome(self):
+    return self._nome
+```
+
+Questo decoratore (`@property` con la chiocciolina davanti si dice *decoratore* in Python) fa in modo che `nome` (in questo caso, il nome della funzione) 
+diventi una `Python property`
+
+
+> Una proprietà è una caratteristica tipica di un oggetto, 
+> a cui possono essere aggiunti funzioni `getter` e `setter`.
+
+Allora... CONTINUA DA QUI!!!
+
+> La convenzione dice che le variabili che iniziano con underscore `_` sono non-public in Python. Comunque nessun controllo di accesso 
+> viene realmente implementato, quindi tecnicamente si può comunuque scrivere:
+>
+> ```python
+> p = Persona("Gianni")
+> p._nome = ""
+> ```
+>
+> E farla franca!
+>
+> Però attenti passerotti... il prof vi osserva!!!
 
 
 <!-- ################################################################################################# -->
