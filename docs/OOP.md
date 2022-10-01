@@ -360,16 +360,18 @@ valori dell'oggetto con la funzione print().
 **Esercizio 706**
 
 Definire la classe Crittografia con attributo un numero intero che
-indica lo spiazzamento dei caratteri. Ad esempio, se il numero è 3 ogni
-carattere sarà traslato di 3 posti sull'alfabeto (le A diventano D, le B
-diventano E...). 
+indica lo spiazzamento dei caratteri. Questo numero sarà utilizzato per criptare le stringhe traslando i caratteri
+di `numero` posti sull'alfabeto: ad esempio se il numero è 3 e vuoi criptare la stringa "ale", prendi la "a" e vai avanti
+di 3 sull'alfabeto ("d"), prendi la "l" e vai avanti di 3 sull'alfabeto ("o") e lo stesso con la "e": la stringa criptata ottenuta è "doh".
 
-La classe contiene inoltre 2 funzioni: 
-- `cripta`, che prende una stringa qualsiasi e restituisce la stessa trasformata secondo la regola descritta sopra; 
-- `decripta` che pende una stringa criptata e la rimette "a posto". 
+La classe contiene due funzioni: 
+
+- `cripta`, che prende una stringa come parametro e restituisce la stessa trasformata (*criptata*) secondo la regola descritta sopra; 
+
+- `decripta`, che prende una stringa come parametro e la rimette "a posto" (la *decripta*). 
 
 Definire due oggetti della classe Crittografia con parametro a piacere e provare a "criptare" e "decriptare" una
-stringa, verificando che la stringa decriptata è uguale a quella inserita prima di essere criptata.
+stringa, verificando che la stringa decriptata sia uguale a quella inserita prima di essere criptata.
 
 --------------------------------------------------------------------
 
@@ -380,20 +382,20 @@ numero di persone trasportate. La funzione init prende come parametri la
 marca e il modello e imposta a ZERO gli altri attributi. Implementare i
 seguenti metodi:
 
--   *faiSalirePersona*: aggiunge una persona al numero di persone
+-   `faiSalirePersona`: aggiunge una persona al numero di persone
     trasportate fino ad un massimo di 5. Ritorna True se è stato
     possibile aggiungere una persona, False altrimenti.
--   *faiScenderePersona*: toglie una persona al numero di persone
+-   `faiScenderePersona`: toglie una persona al numero di persone
     trasportate (Se possibile ovviamente). Ritorna True se è stato
     possibile togliere una persona, False altrimenti.
--   *Accelera*: aggiunge 20 kmh alla velocità di marcia, fino ad un
+-   `accelera`: aggiunge 20 kmh alla velocità di marcia, fino ad un
     massimo di 120 kmh. Funziona solo se il numero di persone
     trasportate è positivo. Ritorna True se è stato possibile aumentare
     la velocità, False altrimenti.
--   *Rallenta*: toglie 20 kmh alla velocità di marcia, ovviamente fino a
+-   `rallenta`: toglie 20 kmh alla velocità di marcia, ovviamente fino a
     fermarsi. Ritorna True se è stato possibile diminuire la velocità,
     False altrimenti.
--   *Frena*: azzera la velocità di marcia. Ritorna True se è stato
+-   `frena`: azzera la velocità di marcia. Ritorna True se è stato
     possibile frenare, False altrimenti.
 
 Definire un oggetto della classe Automobile e progettare un test in modo
