@@ -196,43 +196,31 @@ La documentazione di una funzione va strutturata nel modo seguente:
 
 
     def nome_funzione ( par1: tipo1, par2: tipo2 ) -> tipo_di_ritorno :
-    """una riga che descrive quello che la funzione fa
-
-       alcune righe (opzionali) per descrivere più precisamente cosa la funzione 
-       vuole ottenere
-       
-       Parameters
-       ---------
-       par1
-            Una descrizione del parametro1
-       par2
-            Una descrizione del parametro2
+        """ Una breve frase che descrive COSA la funzione fa (NON come lo fa).
             
-       Returns
-       -------
-       tipo_di_ritorno
-            La descrizione del valore ottenuto
-    """
+            Un esempio di utilizzo della funzione 
+        
+            Opzionalmente (necessaria solo quando la funzione ha 2 o più parametri), 
+            una descrizione dei valori necessari per eseguire la funzione
+        """
     
-Facciamo una prova, implementando la funzione `trova(carattere, stringa)` che ritorna True se il carattere è presente nella stringa,
-False altrimenti.
+Facciamo una prova, implementando la funzione `trova(carattere, stringa)` che ritorna `True` se il carattere è presente nella stringa,
+`False` altrimenti.
 
 ```python
 def trova(carattere:str, stringa:str) -> bool:
     """
     Dice se carattere è presente o meno nella stringa.
     
-    Parameters
+    Ad esempio trova("c", "cane") ritorna True, mentre
+    trova("c", "gatto") ritorna False
+    
+    Parametri
     ----------
     carattere
         il carattere da cercare
     stringa
-        la stringa in cui cercare il carattere
-        
-    Returns
-    -------
-    bool
-        il valore booleano che dice se il carattere è presente o meno nella stringa
+        la stringa in cui cercare il carattere        
     """
     
     if carattere in stringa:
@@ -304,15 +292,15 @@ Scrivere una funzione che, dati due numeri interi positivi come parametri, ritor
 **Esercizio 507: carattere**
 
 Scrivere una funzione che, dato un carattere, ritorna la stringa
-"vocale", "consonante", "cifra" o "alfanumerico" a seconda del
-carattere passato.
+"vocale", "consonante", "cifra" a seconda del carattere passato.
 
 ------------------------------------------------------------------------------------------------
 
 **Esercizio 508: inverti stringa**
 
 Scrivere una funzione che, data una stringa, ritorna la stringa
-rovesciata. Ad esempio fornito "ciao" come parametro, la funzione
+rovesciata. 
+Ad esempio fornito "ciao" come parametro, la funzione
 ritorna la stringa "oaic".
 
 ------------------------------------------------------------------------------------------------
@@ -321,7 +309,7 @@ ritorna la stringa "oaic".
 
 Scrivere una funzione che, data una stringa, dice se è palindroma oppure
 no. Una stringa palindroma (ad esempio: "anna") si legge uguale in
-entrambi i versi. Ritornare True o False a seconda che la stringa sia
+entrambi i versi. Ritornare `True` o `False` a seconda che la stringa sia
 palindroma oppure no.
 
 ------------------------------------------------------------------------------------------------
@@ -346,7 +334,7 @@ Ad esempio, `dispari( [1,2,3,4,5,6,7] )` ritorna `[1,3,5,7]`.
 
 **Esercizio 512**
 
-Scrivere una funzione che prende come parametro una sequenza generica (stringa, tupla o lista) e
+Scrivere una funzione che prende come parametro una lista e
 ritorna il numero di interi presenti come elementi della sequenza. (Pensa, pensa...)
 
 ------------------------------------------------------------------------------------------------
