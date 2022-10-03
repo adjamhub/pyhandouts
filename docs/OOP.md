@@ -546,21 +546,37 @@ public:
 ```
 
 Anche se non conosciamo il linguaggio C++, quello che vediamo è molto semplice da comprendere: l'attributo `_nome` è privato e quindi 
-**NON** modificabile direttamente dall'esterno della classe `Persona`.
+**NON** modificabile direttamente dall'esterno della classe `Persona`.<br>
+Questo significa che un codice del genere da errore:
 
-Se il programmatore vuole che all'esterno venga visualizzato il nome della Persona, inserisce nella classe un metodo *getter*: tipicamente `nome()`. 
+```c
+Persona pers;
+pers._nome = "Andrea"; // ERRORE! L'attributo è PRIVATO!!!
+```
 
-Dall'esterno non è possibile nemmeno modificare il valore dell'attributo `_nome`: se il programmatore vuole fornire questa possibilità, 
-inserisce nella classe un metodo *setter*: `setNome(string n)`. Dall'esterno è possibile modificare il valore solo utilizzando il metodo 
-indicato e quindi eseguendo il codice del metodo `setNome` che permette di verificare il valore proposto per l'attributo.
+> Questa sovrastruttura, tipica dei linguaggi compilati come C e Java, 
+> fornisce un livello di protezione aggintivo ai valori delle variabili membro!
+
+Se il programmatore vuole che all'esterno venga visualizzato il nome della Persona, inserisce nella classe un metodo *getter* (tipicamente `nome()`)
+cioè un metodo che *ritorna* il valore di `_nome`.
+
+Se il programmatore vuole che dall'esterno sia possibile modificare il nome della Persona, inserisce nella classe un metodo *setter* (tipicamente `setNome(string n)`),
+cioè un metodo che permette di impostare un nuovo valore per `_nome` (se il valore  accettabile!)
+
 
 > In Python non esiste una struttura simile e tutto funziona come se fosse stato dichiarato pubblico. 
 
-Ci sono occasioni però in cui serve rendere inaccessibile il valore di una variabile membro, 
-oppure in cui serve verificare se un valore è accettabile o meno per un attributo: 
-in quel caso si usano le **Python properties** (o per farla anche più inutilmente difficile, il **Python @property decorator**)
+A dire la verità, una struttura simile esiste, ma è... *sociale*!!! Mi spiego meglio...
 
-Un codice funzionalmente identico a quello sopra, che scriviamo in Python, potrebbe essere fatto così:
+> In Python i membri di una classe i cui nomi iniziano con underscore `_` sono considerati privati!!
+
+Insisto sul concetto... sono ***considerati*** privati! Dalle persone! L'interprete Python li considera come
+qualunque altra variabile... non li *protegge*!!!
+
+Per ottenere una struttura analoga (ovvero... *simile*, **NON** *uguale*) si utilizza un concetto chiamato **Python properties** 
+(o per farla anche più inutilmente difficile, il **Python @property decorator**)
+
+Un codice funzionalmente analogo a quello sopra in `C++`, che scriviamo in `Python`, potrebbe essere fatto così:
 
 ```python
 class Persona:
@@ -569,6 +585,7 @@ class Persona:
     
     @property
     def nome(self):
+        """ DOCUMENTA QUI LA TUA PROPRIETA': il nome della persona """
         return self._nome
         
     @nome.setter
@@ -582,31 +599,123 @@ class Persona:
 Mamma mia, quante cose da spiegare... Cominciamo!
 
 ```python
+def __init__(self, name):
+    self._nome = name
+```
+
+Secondo la convenzione già esposta, si intende mantenere `privata` la variabile membro `_nome`.
+
+```python
 @property
 def nome(self):
+    """ DOCUMENTA QUI LA TUA PROPRIETA': il nome della persona """
     return self._nome
 ```
 
 Questo decoratore (`@property` con la chiocciolina davanti si dice *decoratore* in Python) fa in modo che `nome` (in questo caso, il nome della funzione) 
-diventi una `Python property`
+diventi una `Python property`. La `docstring` interna specifica la descrizione della proprietà.
 
 
 > Una proprietà è una caratteristica tipica di un oggetto, 
 > a cui possono essere aggiunti funzioni `getter` e `setter`.
 
-Allora... CONTINUA DA QUI!!!
 
-> La convenzione dice che le variabili che iniziano con underscore `_` sono non-public in Python. Comunque nessun controllo di accesso 
-> viene realmente implementato, quindi tecnicamente si può comunuque scrivere:
->
-> ```python
-> p = Persona("Gianni")
-> p._nome = ""
-> ```
->
-> E farla franca!
->
-> Però attenti passerotti... il prof vi osserva!!!
+La definizione della proprietà implica automaticamente l'esistenza della funzione `getter`, quella che ritorna il valore. Se vogliamo inserire anche la funzione
+`setter`, che permette i modificare il valore della proprietà, allora scriviamo:
+
+```python
+@nome.setter
+def nome(self, name):
+    if name == "":
+        # questa la ignoriamo??? La scriviamo così e basta :D
+        raise ValueError("Tutte le persone hanno un nome...")
+    self._nome = name
+    return
+```
+
+A questo punto, la proprietà `nome` diventa una sorta di nuova *variabile membro* della classe, che invoca automaticamente le funzioni *getter* e *setter* ad essa collegate:
+
+```python
+pers = Persona()
+pers.nome = "Andrea"        # esegue la funzione "setter" automaticamente
+print("Nome:", pers.nome)   # esegue la funzione "getter" automaticamente
+```
+
+Questo modo di implementare le variabili membro di una classe è la via scelta dai programmatori Python per gestire i valori delle stesse.
+
+
+
+<!-- ################################################################################################# -->
+### Read-Only Properties
+
+
+Capire il concetto di proprietà di sola lettura è molto semplice: basta *dimenticarsi* di aggiungere ad una prorietà 
+la funzione *setter*... ed ecco che diventa impossibile modificarla al di fuori della classe!!!
+
+```python
+class Oggetto:
+    def __init__(self):
+        self._valore = 0
+    
+    @property
+    def valore(self):
+        return self._valore
+
+obj = Oggetto()
+obj.valore = 5 # ERRORE!!!! NO setter!!!
+```
+
+Questa caratteristica delle proprietà ritorna utile quando abbiamo delle caratteristiche *derivate* da altre: ad esempio,
+l'area di un rettangolo può essere definita come proprietà read-only, in modo che essa venga calcolata automaticamente a partire
+dai valori attuali di base e altezza, ma non possa essere impostata da codice. Proviamo:
+
+```python
+class Rettangolo:
+    def __init__(self, b, h):
+        self.base = b
+        self.altezza = h
+    
+    @property
+    def area(self):
+        return self.base * self.altezza
+
+ret = Rettangolo(5,4)
+print("Area:", ret.area)    # scrive "Area: 20"
+ret.area = 30               # ERRORE!!! Quali sono base e altezza di un rettangolo di area 30? Boh...
+```
+
+Mi sembra facile.
+Provate a verificare la vostra comprensione coi seguenti esercizi.
+
+
+<!-- ################################################################################################# -->
+### Esercizi sulle proprietà
+
+--------------------------------------------------------------------
+
+**Esercizio 721**
+
+Cerchio con raggio, diametro, area e circonferenza.
+
+--------------------------------------------------------------------
+
+**Esercizio 722**
+
+Temperatura Celsius/Kelvin/Farheneit
+
+
+--------------------------------------------------------------------
+
+**Esercizio 723**
+
+Temperatura Celsius/Kelvin/Farheneit
+
+
+--------------------------------------------------------------------
+
+**Esercizio 724**
+
+Altri due con proprietà e metodi
 
 
 <!-- ################################################################################################# -->
@@ -777,7 +886,7 @@ propri dubbi facendo gli esercizi qui sotto!!!
 <!-- ################################################################################################# -->
 ### Esercizi su ereditarietà
 
-**Esercizio 721**
+**Esercizio 741**
 
 Definire la classe Quadrato con attributo il lato e metodi "area" e
 "perimetro". Da quella derivare la classe Cubo, in cui va aggiunto il
@@ -792,7 +901,7 @@ il risultato dei metodi area e volume.
 
 --------------------------------------------------------------------
 
-**Esercizio 722**
+**Esercizio 742**
 
 Definire la classe Persona, con attributi nome ed età e metodi saluta()
 (restituisce la stringa "ciao, sono + nome") e invecchia() (aggiunge
@@ -819,7 +928,7 @@ invecchia (ridefinito) e il metodo insegna con le materie "diritto" e
 
 --------------------------------------------------------------------
 
-**Esercizio 723**
+**Esercizio 743**
 
 Definire la classe Punto2D, con attributi le coordinate del punto nel
 piano cartesiano e le funzioni "distanzaDalCentro" e
@@ -838,7 +947,7 @@ quest'ultima funzione definire il Punto3D di coordinate (1,1,2).
 
 --------------------------------------------------------------------
 
-**Esercizio 724**
+**Esercizio 744**
 
 Definire la classe Cerchio con gli attributi e i metodi che ritenete
 opportuni.
@@ -850,7 +959,7 @@ Definire una sfera di raggio 3, di cui calcolare area e volume.
 
 --------------------------------------------------------------------
 
-**Esercizio 725**
+**Esercizio 745**
 
 Definire la classe Contatto con nome, nick, numero, mail. In fase di
 definizione la classe prende solo nome e numero e imposta gli altri alla
@@ -872,7 +981,7 @@ Definire il seguente contatto di lavoro:
 
 --------------------------------------------------------------------
 
-**Esercizio 726**
+**Esercizio 746**
 
 Definire una classe Persona con attributi nome e anno di nascita,
 forniti tramite parametri e indirizzo, inizialmente impostato alla
@@ -887,7 +996,7 @@ eventualmente aggiornando le informazioni dell'abbonato.
 
 --------------------------------------------------------------------
 
-**Esercizio 727**
+**Esercizio 747**
 
 Definire una classe Veicolo, che contempli fra le sue caratteristiche la
 possibilità di indicare la velocità massima (in km/h) e che in fase di
@@ -909,6 +1018,7 @@ Implementare una funzione chiamata "eseguiFermata" che prende come
 parametro il numero di persone che salgono e il numero di persone che
 scendono e aggiorna il numero di persone attualmente presenti
 nell'autobus.
+
 
 <!-- ################################################################################################# -->
 ## Funzioni operatori
@@ -1021,7 +1131,7 @@ Spero sia chiaro! Come al solito... per capire meglio ci sono gli esercizi :)
 <!-- ################################################################################################# -->
 ### Esercizi sulle funzioni operatori
 
-**Esercizio 741**
+**Esercizio 761**
 
 Definire la classe Frazione, con parametri numeratore e denominatore.
 
@@ -1043,7 +1153,7 @@ Dichiarare almeno 3 frazioni con cui testare le funzioni implementate.
 
 --------------------------------------------------------------------
 
-**Esercizio 742**
+**Esercizio 762**
 
 Definire la classe Rettangolo, con attributi base e altezza e metodi
 area e perimetro. Implementare in essa le funzioni aritmetiche, che
@@ -1057,7 +1167,7 @@ implementate.
 
 --------------------------------------------------------------------
 
-**Esercizio 743**
+**Esercizio 763**
 
 Definire la classe Reale (che rappresenta un numero reale) con l'unico
 attributo float che rappresenta il suo valore. Definire in essa le
@@ -1075,7 +1185,7 @@ funzioni implementate.
 
 --------------------------------------------------------------------
 
-**Esercizio 744**
+**Esercizio 764**
 
 Definire la classe DataSemplice, con i due attributi interi che
 rappresentano i giorni e i mesi. Nella classe DataSemplice i mesi hanno
