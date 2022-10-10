@@ -512,6 +512,59 @@ ottenuto, con una visualizzazione simile a questa:
 -   Senigallia: (23,34,45,67,88)
 -   Ancona: (39, 43, 44, 78, 81)
 
+
+--------------------------------------------------------------------
+
+**Esercizio 713: Agenda**
+
+
+Una agenda contiene una serie di impegni identificati con una descrizione generica e con il giorno in cui questo impegno è preso. 
+Esempi di impegni potrebbero essere:
+
+- Calcetto, Lunedì
+- Parrucchiere, Mercoledì
+- Pizza con gli amici, Venerdì
+
+Quando si crea un oggetto della classe Agenda si parte (ovviamente) con una lista di impegni vuota! 
+La classe presenta inoltre le seguenti funzioni:
+
+- `inserisciImpegno ( descrizione, giorno )` : prende i dati dai parametri della funzione e inserisce il nuovo impegno in agenda. Non ritorna nulla.
+- `listaImpegniDi ( giorno )` : prende come parametro un giorno della settimana e ritorna la lista delle descrizioni degli impegni per quel giorno.
+- `rimuoviImpegno ( descrizione )` : prende come parametro la descrizione di un impegno e, se lo trova in agenda, rimuove l’impegno corrispondente. 
+  Ritorna True se viene rimosso un impegno, False altrimenti.
+- `trovaImpegno ( descrizione )` : prende come parametro la descrizione di un impegno e, se lo trova in agenda, ritorna il giorno in cui quell’impegno è stato preso. 
+  Se non trova nulla, ritorna la stringa "NON TROVATO".
+
+Definire la classe Agenda, un oggetto della classe stessa, inserire in essa almeno 4 impegni (tramite la funzione inserisciImpegno) 
+e fare un test di utilizzo di tutte le altre funzioni
+
+
+--------------------------------------------------------------------
+
+**Esercizio 714: Rubrica**
+
+Una rubrica contiene una lista di contatti. Ogni contatto comprende un nome ed un numero di telefono (memorizzabile comunque come una stringa). 
+Esempi di contatti potrebbero essere:
+
+- prof , 555-12345
+- tizio di Dallas, 214-748-3647
+- casa, 0731-24680
+
+Quando si crea un oggetto della classe Rubrica, si parte con un elenco di contatti vuoto.
+La classe presenta inoltre le seguenti funzioni:
+
+- `inserisciContatto ( nome , numero )` : prende i dati dai parametri della funzione e inserisce il nuovo contatto in rubrica. Non ritorna nulla.
+- `modificaContatto ( nome , nuovoNumero )` : modifica il contatto identificato dal parametro nome, aggiornando il suo numero con il parametro nuovoNumero. 
+  Ritorna True se il numero viene aggiornato, False altrimenti.
+- `rimuoviContatto ( nome )` : rimuove dalla rubrica il contatto identificato dal parametro nome. 
+  Ritorna True se è stato possibile rimuovere il contatto, false altrimenti.
+- `trovaNumero ( nome )` : ritorna il numero del contatto con nome la stringa riportata nel parametro. 
+  Se non si trova nessun contatto, ritorna la stringa "NESSUN CONTATTO".
+
+Definire la classe Rubrica, un oggetto della stessa, inserirvi almeno 4 contatti (tramite la funzione inserisciContatto) e fare un test di utilizzo di tutte le altre funzioni.
+
+
+
 <!-- ################################################################################################# -->
 ## Accesso agli attributi
 
@@ -693,6 +746,12 @@ Provate a verificare la vostra comprensione coi seguenti esercizi.
 
 --------------------------------------------------------------------
 
+**Esercizio 720: ESERCIZIO SVOLTO**
+
+Un esercizio svolto.
+
+--------------------------------------------------------------------
+
 **Esercizio 721**
 
 Cerchio con raggio, diametro, area e circonferenza.
@@ -708,8 +767,7 @@ Temperatura Celsius/Kelvin/Farheneit
 
 **Esercizio 723**
 
-Temperatura Celsius/Kelvin/Farheneit
-
+Altri Tre con proprietà e metodi
 
 --------------------------------------------------------------------
 
@@ -717,6 +775,11 @@ Temperatura Celsius/Kelvin/Farheneit
 
 Altri due con proprietà e metodi
 
+--------------------------------------------------------------------
+
+**Esercizio 725**
+
+Un altro con proprietà e metodi
 
 <!-- ################################################################################################# -->
 ## Ereditarietà
