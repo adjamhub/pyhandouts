@@ -781,120 +781,197 @@ Altri due con proprietà e metodi
 
 Un altro con proprietà e metodi
 
+
 <!-- ################################################################################################# -->
 ## Ereditarietà
 
-L'ereditarietà è un concetto tipico della programmazione orientata agli
-oggetti che ovviamente qui sarà declinato in salsa Python :)
-
-L'ereditarietà è la capacità di definire una classe a partire da una già
-esistente, facendo in modo che la nuova classe "erediti" tutte le
-caratteristiche (attributi e metodi) della classe iniziale.
-
-Poiché questo concetto viene definito "ereditarietà" solitamente si
-usano nomi "parentali" per indicare le classi in gioco, ad esempio la
-classe iniziale Padre e la classe finale Figlio, che eredita le
-caratteristiche dalla classe Padre.
+L'ereditarietà è un concetto tipico della programmazione orientata agli oggetti che ovviamente qui sarà declinato in salsa Python :)
+Essa è la capacità di definire una classe (la ***classe derivata***) a partire da una già esistente (la ***classe base***), facendo in modo che 
+la nuova classe *erediti* tutte le caratteristiche della classe iniziale.
 
 ``` python
-class Padre:
-    def __init__(self):
-        print("Init classe Padre")
+class Persona:
+    def __init__(self, name):
+        self.nome = name
 
     def saluta(self):
-        return "buongiorno"
+        return f"buongiorno, mi chiamo {self.nome}"
 
-class Figlio(Padre):        # la classe Figlio "deriva" dalla classe Padre
-    def __init__(self):
-        print("Init classe Figlio")
+class Studente(Persona):        # la classe Studente "deriva" dalla classe Persona
+    pass
+    
+# ------------------------------------ 
+if __name__ == "__main__":
+    p = Studente("Gino")
+    print(p.saluta())        # la classe Studente "eredita" il metodo saluta()
+
+# scrive: buongiorno, mi chiamo gino
+```
+
+Fin qui, mi sembra molto semplice... La classe Studente deriva dalla classe Persona e quindi eredita tutte le sue caratteristiche, in particolare, le sue funzioni!
+Quindi può usare la funzione saluta() ereditata.
+
+Adesso pensate che uno studente voglia comportarsi in modo *diverso* da una generica Persona... salutando in maniera più sciolta, più informale, 
+
+E' possibile modificare il comportamente di una funzione ereditata semplicemente riscrivendola da capo nella classe derivata: 
+questo comportamento si definisce ***OVERRIDING***, cioè la nuova funzione implementata va a sovrapporsi alla funzione ereditata nascondendola dall'esecuzione.
+
+``` python
+class Persona:
+    def __init__(self, name):
+        self.nome = name
+
+    def saluta(self):
+        return f"buongiorno, mi chiamo {self.nome}"
+
+class Studente(Persona):        # la classe Studente "deriva" dalla classe Persona
+    def saluta(self):
+        return f"bella raga, io sono {self.nome}!!!"
+    
+# ------------------------------------ 
+if __name__ == "__main__":
+    p = Studente("Gino")
+    print(p.saluta())        # la classe Studente utilizza il metodo saluta() reimplementato
+    
+# scrive: bella raga, io sono gino!!!
+```
+
+Visti questi due esempi, possiamo azzardare a dare una definizione del comportamento dell'ereditarietà in Python.
+
+
+> In Python il meccanismo dell'ereditarietà si abilita semplicemente scrivendo:
+>
+> ```
+> class Derivata(Base):
+>     ...
+> ```
+> il che significa che la nuova classe Derivata eredita tutte le caratteristiche della classe Base, da cui deriva.
+
+
+Ok, ma... quali sono queste caratteristiche che vengono ereditate??? E qui, la risposta mi sembra abbastanza evidente: **le funzioni!!!**
+
+
+> In Python, dal punto di vista pratico, l'ereditarietà permette *il passaggio* di tutte le funzioni 
+> presenti nella classe Base alla classe Derivata
+
+
+Quando attivi l'ereditarietà, tutte le funzioni definite nella classe Base passano automaticamente nella classe Derivata.
+
+
+!!!warning "Attenzione!"
+
+    Se pensate alle semplici classi che scriviamo adesso, l'ereditarietà è solo una inutile complicazione.
+    
+    Se pensate però al prossimo step, in cui importeremo librerie di classi fighissime (fatte da altri!!!) e con
+    funzionalità incredibili, capite bene che programmare in OOP diventerà una *sciccheria*!
+    
+    Con una riga di codice avrete già implementato il mondo :smile:<br>
+    E funziona tutto!!!
+    
+
+Se vuoi modificare il comportamento di una funzione devi agire tramite **overriding** reimplementando la funzione nella classe Derivata.
+
+I metodi ereditati dalla classe Base, ma reimplementati tramite *overriding* non vengono cancellati, ma sono semplicemente nascosti dal metodo reimplementato
+(*overriding* si potrebbe tradurre con *prevalente*, nel senso che il metodo reimplementato è prevalente rispetto a quello ereditato: non lo cancella, lo prevarica).
+
+Per accedere ai metodi ereditati dalla classe Base, ma nascosti tramite *overriding*, Python mette a disposizione la funzione `super()`. 
+Vediamo un esempio di utilizzo:
+
+
+``` python
+class Persona:
+    def __init__(self, name):
+        self.nome = name
+
+    def saluta(self):
+        return f"buongiorno, mi chiamo {self.nome}"
+
+class Studente(Persona):        # la classe Studente "deriva" dalla classe Persona
+    def saluta(self):
+        s = super().saluta()
+        return s + " e sono uno studente"
+        
+# ------------------------------------ 
+if __name__ == "__main__":
+    p = Studente("Gino")
+    print(p.saluta())        # la classe Studente utilizza il metodo saluta() reimplementato
+    
+# scrive: buongiorno, mi chiamo Gino e sono uno studente
+```
+
+
+La funzione `super()` permette di accedere a tutti i metodi ereditati dalla classe Base (la classe Persona, nel caso della classe Studente).
+Capisco che l'esempio sopra è un pò sempliciotto, però rende l'idea: prima ottengo l'output della funzione `saluta()` ereditata e poi ci aggiungo
+qualcosa (leggi: ci faccio quello che mi pare).
+
+In programmazione OOP la funzione `super()` è clamorosamente utile nel caso di overriding della funzione `__init__`: vediamo perché.
+
+Nel seguente esempio proveremo ad aggiungere una variabile membro alla classe Studente relativa alla scuola frequentata dallo studente.
+Per farlo dobbiamo forzatamente reimplementare la funzione `__init__` della classe, modificando così anche il numero dei parametri.
+Questa cosa mi forza (poiché facendo overriding, la funzione `__init__` ereditata viene nascosta) a reimplementare tutto quanto viene definito 
+nella funzione `__init__` della classe Base.
+
+``` python
+class Persona:
+    def __init__(self, name):
+        self.nome = name
+
+class Studente(Persona):
+    def __init__(self,name,school):
+        self.nome = name
+        self.scuola = school
 
 # ------------------------------------ 
 if __name__ == "__main__":
-    ciccio = Figlio()
-    print(ciccio.saluta())  # la classe Figlio "eredita" il metodo saluta()
+    p = Studente("Gino", "Liceo")    
 ```
 
-<!-- ################################################################################################# -->
-### Overloading
+Questo modo di fare può funzionare per classi banali come la classe Persona e la classe Studente... NON può funzionare quando si eredita da classi
+complesse: bisogna usufruire della funzione `__init__` ereditata grazie alla funzione `super()`:
 
-Nella teoria della OOP il polimorfismo è la tecnica che definisce la
-possibilità di ridefinire il comportamento di un metodo di una classe.
-Fra le varie forme di polimorfismo (non azzardatevi a chiedere di
-più...) Python ne introduce una sola e la definisce "overloading",
-quindi... che cosa è l'overloading in Python? È la capacità di
-reimplementare un metodo (una funzione) nella classe derivata, per
-modificare il suo comportamento nella stessa. Anche qui parto con un
-esempio semplicissimo per aiutare a capire il concetto. Ricordate le
-classi Padre e Figlio precedentemente definite? Grazie all'ereditarietà
-gli oggetti della classe Figlio salutano come gli oggetti della classe
-Padre. Ma come è possibile che un ragazzo saluti dicendo "buongiorno"?
-Ecco in aiuto il concetto di overloading. All'interno della classe
-Figlio basta ridefinire il metodo in questione
 
 ``` python
-. . .
-class Figlio(Padre):        # la classe Figlio "deriva" dalla classe Padre
-    def __init__(self):
-        print("Init classe Figlio")
+class Persona:
+    def __init__(self, name):
+        self.nome = name
 
-    def saluta(self):   # la funzione "saluta()" viene reimplementata
-        return "ciao"
+class Studente(Persona):
+    def __init__(self,name,school):
+        super().__init__(name)
+        self.scuola = school
+
+# ------------------------------------ 
+if __name__ == "__main__":
+    p = Studente("Gino", "Liceo")    
 ```
 
-In questo modo ogni saluto di un oggetto della classe Figlio sarà
-effettuato dicendo "ciao"!!!
+
+La funzione `super()` che richiama la funzione `__init__` ereditata deve essere eseguita per prima cosa, fornendole tutti i parametri necessari (nel nostro caso, solo il nome),
+mentre l'attributo aggiunto (self.scuola) si definisce subito dopo.
+
 
 
 <!-- ################################################################################################# -->
 ### Python Object class
 
-Il concetto che illustriamo in questo capitolo è molto semplice da
-comprendere come concetto; purtroppo le motivazioni che hanno portato
-gli sviluppatori Python a tale scelta non sono altrettanto semplici da
-chiarire :)
+L'ereditarietà è un meccanismo talmente comodo che tutto il linguaggio Python è basato su di esso.
 
-Il concetto è: in Python 3 esiste una classe predefinita, chiamata
-object, da cui automaticamente tutte le classi derivano, secondo una
-sorta di eredità forzata.
+In Python 3 esiste una classe predefinita, chiamata `object`, da cui automaticamente tutte le classi derivano, secondo una
+sorta di eredità forzata. Significa che tutte le classi che dichiariamo in Python 3 automaticamente derivano dalla classe `object`. 
 
-Significa che tutte le classi che dichiariamo in Python 3
-automaticamente derivano dalla classe object. Questo concetto di avere
-una unica classe base da cui per ereditarietà derivano tutte le altre
-non è una idea partorita in seno alla comunità Python ma una
-"genialata" che le comunità Java e Qt/C++ sperimentano già da decenni.
+Questo concetto di avere una unica classe base da cui per ereditarietà derivano tutte le altre non è una idea partorita 
+in seno alla comunità Python ma una "genialata" che le comunità Java e Qt/C++ sperimentano già da decenni.
 
-L'idea alla base di questa "moda" è quella di sfruttare l'ereditarietà
-per condividere con tutti gli oggetti una serie di proprietà comuni che
-possano facilitare la gestione del codice e potenziare con semplicità e
-in maniera automatica tutto il sistema OOP Python.
+L'idea alla base di questa "moda" è quella di sfruttare l'ereditarietà per condividere con tutti gli oggetti una serie di proprietà comuni che
+possano facilitare la gestione del codice e potenziare con semplicità e in maniera automatica tutto il sistema OOP Python.
 
-Volendo essere precisi e pignoli, le caratteristiche nuove che vengono
-introdotte sono:
-
--   il supporto per i descrittori
--   il "Method Resolution Order" (MRO)
--   il metodo super() di accesso alla classe superiore
-
-Io credo che addentrarci su queste caratteristiche sia al di là del
-nostro corso: vedremo semplicemente come funziona la OOP in Python. Se e
-quando studierete un altro linguaggio di programmazione Object Oriented
-potrete valutare le differenze e googlare su queste cose.
-
-
-<!-- ################################################################################################# -->
-### Funzioni predefinite
-
-Per verificare che la struttura di ereditarietà che vi ho prospettato (e
-tutte le altre che vi capiteranno) potete utilizzare le funzioni
-predefinite:
+Per verificare la struttura di ereditarietà che vi ho prospettato potete utilizzare le funzioni predefinite:
 
 - `isinstance()`
 - `issubclass()`
 
-La funzione `isinstance()` prende due parametri, un oggetto e una classe
-(ricordate questi termini? Controllate nella terminologia) e ritorna
-True se l'oggetto è una istanza della classe, False altrimenti. Come al
-solito, con un esempio è più facile capire:
+La funzione `isinstance()` prende due parametri, un oggetto e una classe (ricordate questi termini? Controllate nella terminologia) e ritorna
+True se l'oggetto è una istanza della classe, False altrimenti. Come al solito, con un esempio è più facile capire:
 
 ``` python
 class Prova:
@@ -907,43 +984,17 @@ isinstance(b, Prova)        # ritorna False
 isinstance(a, object)       # ritorna True
 ```
 
-La funzione `issubclass()` prende due parametri, due classi e ritorna True
-se la prima classe è una sottoclasse della seconda.
+La funzione `issubclass()` prende due parametri, due classi e ritorna True se la prima classe è una sottoclasse della seconda.
 
 ``` python
 issubclass(Prova, object)   # ritorna True
 issubclass(int, Prova)      # ritorna False
+issubclass(int, object)     # ritorna True, tutto deriva da object. Ricordate?
 ```
 
 Come avete visto, porta tutto :)
 
 
-<!-- ################################################################################################# -->
-### Funzione super()
-
-Dato che ci sono introdurrò un'altra funzione importante, la funzione
-`super()`. Essa restituisce un riferimento alla classe genitore da cui una
-classe deriva. Grazie ad essa è possibile accedere ai metodi della
-classe Padre che sono stati sovrascritti sulla classe Figlio.
-
-Esempio di utilizzo della funzione super()
-
-``` python
-# Nella classe Punto2D
-class Punto2D:
-    def __init__ (self, x, y):
-        self.x = x
-        self.y = y
-
-# Nella classe Punto3D
-class Punto3D(Punto2D):
-    def __init__ (self, x, y, z):
-        super().__init__(x,y)   # richiama __init__ della classe Punto2D
-        self.z = z
-```
-
-Spero sia chiaro già così. In ogni caso... ci sarà modo di chiarire i
-propri dubbi facendo gli esercizi qui sotto!!!
 
 
 <!-- ################################################################################################# -->

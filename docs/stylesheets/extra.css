@@ -13,6 +13,10 @@ h2,h3,h4 {
   margin-bottom: 30px !important;
 }
 
+h2 {
+  background-color: rgba(68,138,255,.1) !important;
+}
+
 blockquote {
   background-color: rgba(160,200,240,.1) !important;  
   margin-top: 50px !important;
