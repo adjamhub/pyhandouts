@@ -1,11 +1,12 @@
 # Files
 
-!!! warning "TOGLIMI"
 
-    Questa parte della documentazione non è ancora pronta.
+Le operazioni di I/O (input/output) da file e verso file sono operazioni native in Python, che come vedremo, si eseguono con un semplice
+comando (nativo, appunto) e che servono per interagire con un generico file presente nel filesystem (quindi sul nostro computer).
 
-    Usa la documentazione in PDF reperibile
-    [qui](https://www.adjam.org/next/index.php/s/egW7AnHxcif8n27?path=%2FPYTHON)
+Il primo capitolo è dedicato espressamente a comprendere come questo meccanismo funzioni. Nel secondo capitolo, con il modulo `pathlib` si apprende
+uno strumento utile alla manipolazione dei percorsi dei file (es: dove si trova la cartella dei download? Voglio creare una cartella sul Desktop di...)
+e alla gestione dei file e delle cartelle.
 
 
 ## Files Management
@@ -26,12 +27,12 @@ il nome del file da aprire. Il secondo parametro indica la modalità di apertura
 Elenchiamo le principali modalità:
 
 
-| Modo | Descrizione                                                                                                                                                                |
-|------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| r    | Modalità di lettura (read).<br> Il file NON sarà modificato da alcuna operazione. Se il file non esiste l'apertura fallisce. **Modo di default**.                          |
-| w    | Modalità di scrittura (write). <br> Un file esistente verrà sovrascritto, altrimenti ne verrà creato uno nuovo.                                                            |
-| x    | Modalità di creazione file (non lo so perché x...).<br> Ritorna un errore se il file esiste già. Se funziona, apre il file in scrittura.                                   |
-| a    | Modalità di aggiunta a fine file (append). <br> Il file verrà aperto in scrittura, aggiungendo in fondo a ciò che esiste quello che viene scritto. Altrimenti è come write.|
+| Modo | Descrizione                                                                                                                                                                     |
+|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| r    | Modalità di lettura (read).<br> Il file NON sarà modificato da alcuna operazione. Se il file non esiste l'apertura fallisce. <br> **Modo di default**.                          |
+| w    | Modalità di scrittura (write). <br> Un file esistente verrà sovrascritto, altrimenti ne verrà creato uno nuovo.                                                                 |
+| x    | Modalità di creazione file (non lo so perché x...).<br> Ritorna un errore se il file esiste già. Se funziona, apre il file in scrittura.                                        |
+| a    | Modalità di aggiunta a fine file (append). <br> Il file verrà aperto in scrittura, aggiungendo in fondo a ciò che esiste quello che viene scritto. <br> Altrimenti è come write.|
 
 
 Oltre ad aprire un file per leggerci o scriverci, bisogna anche sapere
@@ -39,14 +40,12 @@ come farlo. Le modalità di gestione dei file sono solo due:
 
 | Modo | Descrizione                                                                                                 |
 |------|-------------------------------------------------------------------------------------------------------------|
-| t    | Modalità testuale. <br> In questa modalità i dati vengono gestiti byte a byte. **Modo di default.**         |
+| t    | Modalità testuale. <br> In questa modalità i dati vengono gestiti byte a byte. <br> **Modo di default.**    |
 | b    | Modalità binaria. <br> In questa modalità i dati vengono gestiti bit a bit.                                 |
 
-Da queste informazioni si desume che l'apertura generica di un file
-corrisponde ad una apertura in lettura in modalità testuale: qualsiasi
-altra operazione dovrà essere esplicitata. Per evitare errori,
-esplicitiamo sempre la modalità di apertura! Per quanto riguarda la
-gestione invece... qui tratteremo solo la gestione testuale :)
+Da queste informazioni si desume che l'apertura generica di un file corrisponde ad una apertura in lettura in modalità testuale: 
+qualsiasi altra operazione dovrà essere esplicitata. Per evitare errori, esplicitiamo sempre la modalità di apertura! 
+Per quanto riguarda la gestione invece... qui tratteremo solo la gestione testuale :)
 
 Vediamo alcuni semplici esempi:
 
@@ -59,9 +58,8 @@ f.close()
 
 In questo primo esempio il file "ciao.txt" inizialmente non esiste.
 L'esecuzione del codice lo crea con dentro scritto il testo indicato.
-Dopo aver eseguito questo codice, vedrete nella cartella del file
-python, un file chiamato "ciao.txt" che contiene 2 righe... Nella
-stessa cartella creiamo un nuovo file sorgente con questo codice:
+Dopo aver eseguito questo codice, vedrete nella cartella del file python, un file chiamato "ciao.txt" che contiene 2 righe... 
+Nella stessa cartella creiamo un nuovo file sorgente con questo codice:
 
 ``` python
 # Esempio 2: lettura del file "ciao.txt" creato sopra
@@ -78,8 +76,7 @@ Ecco qua.
 Capito?
 ```
 
-Penso sia tutto abbastanza intuitivo da capire. Facciamo un esempio con
-la modalità *append*
+Penso sia tutto abbastanza intuitivo da capire. Facciamo un esempio con la modalità `append`
 
 ``` python
 # Esempio 3: aggiunta a fine file
@@ -88,7 +85,7 @@ f.write("\nSperiamo di sì")
 f.close()
 ```
 
-Se aprite il file "ciao.txt" DOPO aver eseguito il codice sopra, vedrete che il testo è diventato di 3 righe:
+Se aprite il file "ciao.txt" **DOPO** aver eseguito il codice sopra, vedrete che il testo è diventato di 3 righe:
 
 ``` 
 Ecco qua.
@@ -98,14 +95,11 @@ Speriamo di sì
 
 Se avete osservato i 3 esempi proposti avrete notato che:
 
--   la funzione `write()` scrive su file la stringa esatta che gli
-    viene fornita come parametro senza aggiungere spazi o andare a capo
-    (come ad esempio fa la print())
--   la funzione `read()` copia su una stringa tutto il contenuto del
-    file in una volta sola.
+-   la funzione `write()` scrive su file la stringa esatta che gli viene fornita come parametro senza aggiungere spazi 
+    o andare a capo (come ad esempio fa la print())
+-   la funzione `read()` copia su una stringa tutto il contenuto del file in una volta sola.
 
-Se vogliamo leggere il file di testo riga per riga abbiamo due
-possibilità:
+Se vogliamo leggere il file di testo riga per riga abbiamo due possibilità:
 
 1.  il ciclo for
 2.  la funzione readline()
@@ -126,9 +120,8 @@ Capito?
 Speriamo di sì
 ```
 
-Stesso risultato lo si ottiene con la funzione **readline()** che, come dice
-il nome, legge una linea del file di testo. Il difetto di questa seconda
-modalità è che devi sapere quante righe contiene il file...
+Stesso risultato lo si ottiene con la funzione `readline()` che, come dice il nome, legge una linea del file di testo. 
+Il difetto di questa seconda modalità è che devi sapere quante righe contiene il file...
 
 ``` python
 # Esempio 5: lettura delle righe con funzione readline()
@@ -239,6 +232,7 @@ Visualizzare la variabile e verificare il suo tipo con la funzione type().
 ------------------------------------------------------------
 
 **Esercizio 607**
+
 Creare una lista contenente i nomi di alcuni animali, visualizzarla sullo schermo e poi andare a copiarne il contenuto nel file "animali.txt" avendo cura di mettere 
 ogni animale in una nuova riga.<br>
 Eseguito il codice verificare che il file è effettivamente ben formato con un animale per riga.
@@ -354,18 +348,18 @@ Negli esempi trattati sopra sono evidenziate alcune funzionalità:
 
 L’oggetto Path espone fra le altre le seguenti funzioni:
 
-| Funzione            | Descrizione                                                                                                          |
-|---------------------|----------------------------------------------------------------------------------------------------------------------|
-| exists()            | Verifica se il percorso attuale esiste oppure no. Restituisce un valore boolean.                                     |
-| glob(pattern)       | Ritorna la lista di tutti i file e le cartelle presenti nel Path e che rispettano il pattern.                        |
-| is_dir()            | Ritorna True se il path attuale è una cartella, False altrimenti.                                                    |
-| is_file()           | Ritorna True se il path attuale è un file, False altrimenti.                                                         |
-| iterdir()           | Ritorna la lista di tutti i file presenti nel Path.                                                                  |
-| mkdir()             | Crea la cartella abbinata al percorso del Path.                                                                      |
-| open(mode)          | Apre il file indicato nel Path in modalità "mode". Ritorna un file object come fa la funzione predefinita "open()"   |
-| rename(target)      | Rinomina il Path al percorso indicato nel Path "target".                                                             |
-| rmdir()             | Rimuove la cartella abbinata al percorso del Path (solo se la cartella è vuota).                                     | 
-| unlink()            | Rimuove un file (solo se è un file). <br> **Attenti a quello che fate, per favore!!!**                               |   
+| Funzione              | Descrizione                                                                                                          |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------|
+| `exists()`            | Verifica se il percorso attuale esiste oppure no. Restituisce un valore boolean.                                     |
+| `glob(pattern)`       | Ritorna la lista di tutti i file e le cartelle presenti nel Path e che rispettano il pattern.                        |
+| `is_dir()`            | Ritorna True se il path attuale è una cartella, False altrimenti.                                                    |
+| `is_file()`           | Ritorna True se il path attuale è un file, False altrimenti.                                                         |
+| `iterdir()`           | Ritorna la lista di tutti i file presenti nel Path.                                                                  |
+| `mkdir()`             | Crea la cartella abbinata al percorso del Path.                                                                      |
+| `open(mode)`          | Apre il file indicato nel Path in modalità "mode". Ritorna un file object come fa la funzione predefinita "open()"   |
+| `rename(target)`      | Rinomina il Path al percorso indicato nel Path "target".                                                             |
+| `rmdir()`             | Rimuove la cartella abbinata al percorso del Path (solo se la cartella è vuota).                                     | 
+| `unlink()`            | Rimuove un file (solo se è un file). <br> **Attenti a quello che fate, per favore!!!**                               |   
 
 
 Vediamo alcuni esempi per capire il funzionamento delle funzioni più "ostiche": ovviamente ognuno di questi esempi dovrebbe iniziare con l’import dell’oggetto Path dalla libreria pathlib.
