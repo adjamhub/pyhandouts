@@ -382,7 +382,7 @@ numero di persone trasportate. La funzione init prende come parametri la
 marca e il modello e imposta a ZERO gli altri attributi. Implementare i
 seguenti metodi:
 
--   `faiSalirePersona`: aggiunge una persona al numero di persone
+-   `faiSalirePersona`: aggiunge una persona al numero di persone 
     trasportate fino ad un massimo di 5. Ritorna True se è stato
     possibile aggiungere una persona, False altrimenti.
 -   `faiScenderePersona`: toglie una persona al numero di persone
@@ -568,17 +568,57 @@ Definire la classe Rubrica, un oggetto della stessa, inserirvi almeno 4 contatti
 <!-- ################################################################################################# -->
 ## Accesso agli attributi
 
-Nei linguaggi di programmazione più *antichi* e *strutturati* esiste il concetto di *visibilità* di un membro (un attributo o un metodo)
-della classe. Ogni membro può essere specificato (almeno) come `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze;
-oppure `private`, ovvero visibile solo all'interno della propria classe di appartenenza.
+Nei linguaggi di programmazione più *antichi* e *strutturati* (come C++ e Java) esiste il concetto di *visibilità* di un membro (un attributo o un metodo)
+della classe. Ogni membro può essere specificato come:
 
-Inserisco un pezzo di codice di linguaggio C++ per rendere evidente il concetto:
+- `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze;
+- `protected`, ovvero visibile solo all'interno della propria classe di appartenenza e dall'interno di ogni sua classe derivata;
+- `private`, ovvero visibile solo all'interno della propria classe di appartenenza. Questa è la visibilità di default.
+
+
+Questi concetti in Python (che è un linguaggio molto più... moderno. Non so quanto in questo caso sia un bene...) è stato tradotto in maniera molto particolare.
+
+La visibilità di default è diventata quella `public` per eliminare alla radice qualunque problema di accesso. Di sicuro una mossa a favore di chi è poco esperto.
+
+Per ottenere la visibilità `protected` basta iniziare il nome della variabile con un underscore `_`. Una roba tipo:
+
+```python
+class Persona:
+    def __init__(self, name):
+        self._nome = name
+```
+
+Attenzione però! Il livello di visibilità che si introduce con un underscore è puramente sociale!!! Questo significa che se qualcuno volesse accedere alla vostra
+variabile dall'esterno, potrà sempre farlo e l'interprete Python non si lamenterà! Qualunque programmatore Python però... lo considererebbe alquanto scortese!
+
+```python
+p = Persona("Ciccio")
+print(p._nome) # ecco... adesso sono un programmatore maleducato. Corretto, ma maleducato!!!
+```
+
+Avrete già capito... la visibilità `private` si ottiene iniziando il nome di una variabile (o di una funzione membro) con 2 underscore. Stavolta però le cose cambiano...
+l'interprete custodisce eccome i membri privati e riporta un **AttributeError**. Insisto col mio esempio:
+
+```python
+class Persona:
+    def __init__(self, name):
+        self.__nome = name
+
+p = Persona("Ciccio")
+print(p.__nome)      # ERRORE!!! Adesso sono solo un somaro...
+```
+
+Capito come Python rende la visibilità dei membri delle classi, passiamo alla domanda di concetto: che cosa può interessarci tutto ciò? Risposta: a proteggere le variabili!
+Dall'esterno. Da un uso libero. Da chi vuole visualizzarle senza permesso. Da chi vuole modificarne il valore come crede.
+
+---------------------------------------------------------------------------------------------------------
+
+Inserisco un pezzo di codice di linguaggio C++ nella speranza di rendere evidente il concetto:
 
 ```c
 class Persona
 {
-// attributi privati
-private:
+// attributi privati (in C gli attributi si segnano con un solo underscore)
     string _nome;
 
 // metodi pubblici
@@ -608,7 +648,7 @@ pers._nome = "Andrea"; // ERRORE! L'attributo è PRIVATO!!!
 ```
 
 > Questa sovrastruttura, tipica dei linguaggi compilati come C e Java, 
-> fornisce un livello di protezione aggintivo ai valori delle variabili membro!
+> fornisce un livello di protezione aggiuntivo ai valori delle variabili membro!
 
 Se il programmatore vuole che all'esterno venga visualizzato il nome della Persona, inserisce nella classe un metodo *getter* (tipicamente `nome()`)
 cioè un metodo che *ritorna* il valore di `_nome`.
@@ -616,24 +656,18 @@ cioè un metodo che *ritorna* il valore di `_nome`.
 Se il programmatore vuole che dall'esterno sia possibile modificare il nome della Persona, inserisce nella classe un metodo *setter* (tipicamente `setNome(string n)`),
 cioè un metodo che permette di impostare un nuovo valore per `_nome` (se il valore  accettabile!)
 
+---------------------------------------------------------------------------------------------------------
 
-> In Python non esiste una struttura simile e tutto funziona come se fosse stato dichiarato pubblico. 
 
-A dire la verità, una struttura simile esiste, ma è... *sociale*!!! Mi spiego meglio...
-
-> In Python i membri di una classe i cui nomi iniziano con underscore `_` sono considerati privati!!
-
-Insisto sul concetto... sono ***considerati*** privati! Dalle persone! L'interprete Python li considera come
-qualunque altra variabile... non li *protegge*!!!
-
-Per ottenere una struttura analoga (ovvero... *simile*, **NON** *uguale*) si utilizza un concetto chiamato **Python properties** 
-(o per farla anche più inutilmente difficile, il **Python @property decorator**)
+Nel linguaggio Python esiste uno strumento che permette una implementazione analoga (ovvero... *simile*, **NON** *uguale*) a questo livello di protezione
+delle variabili che si definisce il **Python @property decorator**.
 
 Un codice funzionalmente analogo a quello sopra in `C++`, che scriviamo in `Python`, potrebbe essere fatto così:
 
 ```python
 class Persona:
     def __init__(self, name):
+        # funziona anche se usi il livello private con il doppio underscore, però poi potresti avere problemi con l'ereditarietà.
         self._nome = name
     
     @property
@@ -656,7 +690,7 @@ def __init__(self, name):
     self._nome = name
 ```
 
-Secondo la convenzione già esposta, si intende mantenere `privata` la variabile membro `_nome`.
+Secondo la convenzione già esposta, si intende mantenere `nascosta` la variabile membro `_nome`.
 
 ```python
 @property

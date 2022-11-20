@@ -218,16 +218,9 @@ ne sarete convinti anche voi :)
 ### Esercizi su for e range
 
 
-Tutti questi esercizi sono su `for ... in range ( ... )` e quindi
-devono essere svolti scrivendo un ciclo del tipo:
+Utilizzate il comando `for ... in range ( ... )` per la risoluzione dei seguenti esercizi:
 
-``` 
-for v in range ( . . . ):
-    print ( v )
-```
-
-cercando di ragionare su come implementare la soluzione dell'esercizio
-sfruttando i parametri di range.
+<br>
 
 ------------------------------------------------------------------------------------------
 
@@ -360,9 +353,9 @@ l'ausilio di 2 esempi
 
 ------------------------------------------------------------------------------------------
 
-### Esempio: somma dei numeri fra 5 e 12
+### Esempio con la somma
 
-In questo esempio voglio fare la somma dei numeri che vanno da 5 a 12,
+In questo esempio voglio fare **la somma dei numeri che vanno da 5 a 12**,
 quindi sommare insieme 5, 6, 7, 8, 9, 10, 11, 12 e sapere quanto fa
 (senza fare a mente!).
 
@@ -416,10 +409,10 @@ Spero sia tutto chiaro! Come al solito comunque, fra un attimo arrivano gli eser
 
 ------------------------------------------------------------------------------------------
 
-### Esempio: conta i numeri dispari fra 15 e 30
+### Esempio con la conta
 
 
-In questo secondo esempio voglio contare i numeri dispari fra 15 e 30
+In questo secondo esempio voglio **contare i numeri dispari fra 15 e 30**
 ovvero sapere quanti sono i numeri 15, 17, 19, 21, 23, 25, 27, 29 (senza
 contarli a mano!).
 
