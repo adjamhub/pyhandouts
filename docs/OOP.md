@@ -667,7 +667,7 @@ Un codice funzionalmente analogo a quello sopra in `C++`, che scriviamo in `Pyth
 ```python
 class Persona:
     def __init__(self, name):
-        # funziona anche se usi il livello private con il doppio underscore, però poi potresti avere problemi con l'ereditarietà.
+        # funziona anche se usi il livello private con il doppio underscore 
         self._nome = name
     
     @property
@@ -780,40 +780,107 @@ Provate a verificare la vostra comprensione coi seguenti esercizi.
 
 --------------------------------------------------------------------
 
-**Esercizio 720: ESERCIZIO SVOLTO**
+**Esercizio 720: SVOLTO**
 
-Un esercizio svolto.
+(Ri)definire la classe Rettangolo, facendo in modo che base e altezza siano numeri comunque positivi e che area e perimetro
+siano calcolate automaticamente come proprietà in sola lettura.
+
+Il codice che segue mi sembra alquanto chiaro. Provate a leggerlo con calma, a copiarlo sul vostro computer e a provare alcune modifiche 
+per essere sicuri di aver capito tutto!
+
+```python
+class Rettangolo:
+    def __init__(self, b, h):
+        # i valori passati nella init NON sono sottoposti al controllo
+        # imposto dai decoratori sotto, quindi...
+        self._base = abs(b)
+        self._altezza = abs(h)
+    
+    def __str__(self):
+        return f"Rettangolo {self._base} x {self._altezza}"
+
+    @property
+    def base(self):
+        return self._base
+    
+    @base.setter
+    def base(self, value):
+        if value < 0:
+            raise ValueError("La base di un rettangolo non può essere negativa")
+        self._base = value
+        return
+    
+    @property
+    def altezza(self):
+        return self._altezza
+    
+    @altezza.setter
+    def altezza(self, value):
+        if value < 0:
+            raise ValueError("L'altezza di un rettangolo non può essere negativa")
+        self._altezza = value
+        return
+    
+    @property
+    def area(self):
+        return self._base * self._altezza
+    
+    @property
+    def perimetro(self):
+        return (self._base + self._altezza) * 2
+    
+if __name__ == "__main__":
+    r1 = Rettangolo(5,3)
+    print(r1)
+    # se decommenti sotto vedi il ValueError con la nostra spiegazione
+    #r1.base = -12
+    r1.base = 12
+    print("base:", r1.base)
+    print("altezza:", r1.altezza)
+    # area e perimetro sono proprietà NON funzioni, quindi vanno SENZA parentesi
+    print("area:", r1.area)
+    print("perimetro:", r1.perimetro) 
+    # se decommenti sotto, vedi l'interprete lamentarsi per l'assegnazione
+    #r1.area = 23
+```
+
+E adesso sotto con un esercizio analogo!
 
 --------------------------------------------------------------------
 
 **Esercizio 721**
 
-Cerchio con raggio, diametro, area e circonferenza.
+(Ri)definire la classe Cerchio, facendo in modo che il raggio sia un numero sempre positivo e che il diametro, l'area e la circonferenza 
+siano calcolate automaticamente come proprietà in sola lettura.
 
 --------------------------------------------------------------------
 
 **Esercizio 722**
 
-Temperatura Celsius/Kelvin/Farheneit
+Definire una classe Temperatura, che NON prende parametri in fase di inizializzazione. Ha una sola variabile membro, la temperatura in gradi Kelvin, che
+(come sapete) deve essere non negativa. Presenta inoltre due proprietà in sola lettura per visualizzare la temperatura in gradi Celsius e in gradi Farheneit.
 
 
 --------------------------------------------------------------------
 
 **Esercizio 723**
 
-Altri Tre con proprietà e metodi
+Definire la classe Data con giorno, mese, anno che NON possono essere modificati (capito come fanno le classi Datetime???)
+
 
 --------------------------------------------------------------------
 
 **Esercizio 724**
 
-Altri due con proprietà e metodi
+Definire la classe Contatore. Essa ha un solo valore membro (la conta, appunto).
+La conta parte da zero, non può essere modificata e viene incrementata ogni volta che viene visualizzata.
 
 --------------------------------------------------------------------
 
-**Esercizio 725**
+<!-- 
+INSERISCI ALTRI DUE ESERCIZI (almeno!!!) per proprietà e metodi.
+-->
 
-Un altro con proprietà e metodi
 
 
 <!-- ################################################################################################# -->
