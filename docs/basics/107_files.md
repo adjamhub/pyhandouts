@@ -51,9 +51,9 @@ Vediamo alcuni semplici esempi:
 
 ``` python
 # Esempio 1: creazione di un file con testo inserito all’interno
-f = open("ciao.txt", "w")
-f.write("Ecco qua.\nCapito?")
-f.close()
+file = open("ciao.txt", "w")
+file.write("Ecco qua.\nCapito?")
+file.close()
 ```
 
 In questo primo esempio il file "ciao.txt" inizialmente non esiste.
@@ -63,10 +63,10 @@ Nella stessa cartella creiamo un nuovo file sorgente con questo codice:
 
 ``` python
 # Esempio 2: lettura del file "ciao.txt" creato sopra
-f = open("ciao.txt", "r")
-str = f.read()
-f.close()
-print(str)
+file = open("ciao.txt", "r")
+contenuto = file.read()
+file.close()
+print(contenuto)
 ```
 
 Che visualizzerà:
@@ -80,9 +80,9 @@ Penso sia tutto abbastanza intuitivo da capire. Facciamo un esempio con la modal
 
 ``` python
 # Esempio 3: aggiunta a fine file
-f = open("ciao.txt", "a")
-f.write("\nSperiamo di sì")
-f.close()
+file = open("ciao.txt", "a")
+file.write("\nSperiamo di sì")
+file.close()
 ```
 
 Se aprite il file "ciao.txt" **DOPO** aver eseguito il codice sopra, vedrete che il testo è diventato di 3 righe:
@@ -126,12 +126,12 @@ Il difetto di questa seconda modalità è che devi sapere quante righe contiene 
 ``` python
 # Esempio 5: lettura delle righe con funzione readline()
 file = open("ciao.txt", "r")
-str = file.readline()
-print(str)
-str = file.readline()
-print(str)
-str = file.readline()
-print(str)
+riga1 = file.readline()
+print(riga1)
+riga2 = file.readline()
+print(riga2)
+riga3 = file.readline()
+print(riga3)
 file.close()
 ```
 
@@ -143,6 +143,13 @@ Capito?
 Speriamo di sì
 ```
 
+!!! warning "Attenzione!"
+    
+    La visualizzazione degli ultimi due esempi non è proprio... corretta!!! Se eseguite gli ultimi due spezzoni di codice vedrete infatti delle righe vuote in più...
+    
+    Se volete capire perché... ragionate sul funzionamento della print e sul fatto che le righe dei file finiscono (ma comprendono) il carattere *a capo* `\n`
+    
+
 Basta con gli esempi! Ma fra un attimo iniziamo con gli esercizi ;)
 
 
@@ -153,7 +160,7 @@ Basta con gli esempi! Ma fra un attimo iniziamo con gli esercizi ;)
 Un file object non è nient’altro che una variabile a cui è stato assegnato l’abbinamento con un file tramite la funzione open(). Se ad esempio scrivo:
 
 ``` python
-f = open( "file.txt", "w" )
+file = open( "file.txt", "w" )
 ```
 
 allora f diventa un file object!
@@ -162,19 +169,19 @@ Le caratteristiche esposte sono:
 
 | Caratteristica  | Descrizione                                 | Esempio              |
 |-----------------|---------------------------------------------|----------------------|
-| f.name          | Contiene il nome del file                   | "file.txt"           |
-| f.mode          | Contiene il modo di apertura del file       | "w"                  |
-| f.closed        | Indica se il file è aperto oppure no        | False                |
+| file.name       | Contiene il nome del file                   | "file.txt"           |
+| file.mode       | Contiene il modo di apertura del file       | "w"                  |
+| file.closed     | Indica se il file è chiuso oppure no        | False                |
 
 
 Queste possono essere utilizzate ad esempio per verificare se è possibile scrivere sul file oppure se il file è già stato chiuso.
 
 ``` python
-if f.closed :
+if file.closed :
     print("impossibile interagire con il file!")
 else:
-    if f.mode == "w" or f.mode == "a":
-        f.write("ciao")
+    if file.mode == "w" or file.mode == "a":
+        file.write("ciao")
     else:
         print("file non aperto in scrittura!")
 ```
