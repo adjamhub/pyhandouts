@@ -6,6 +6,9 @@ copyright: Andrea Diamantini (c) 2022
 
 theme:
   name: material
+  palette:
+    primary: indigo
+    accent: indigo
   font:
     text: Roboto
     code: Roboto Mono
