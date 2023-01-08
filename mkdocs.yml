@@ -8,7 +8,7 @@ theme:
   name: material
   palette:
     primary: indigo
-    accent: indigo
+    accent: blue
   font:
     text: Roboto
     code: Roboto Mono
