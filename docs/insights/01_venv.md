@@ -59,7 +59,9 @@ Creiamo nel nostro sistema una cartella da destinare al nostro primo
 ambiente virtuale; chiamiamola per esempio "TestAmbientiVirtuali" e
 procediamo alla creazione dello stesso
 
-Per creare l'ambiente virtuale
+---
+
+**Per creare l'ambiente virtuale**
 
 
     $ python -m venv Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
@@ -78,15 +80,17 @@ cartella "TestAmbientiVirtuali" venv ha creato gli script "activate" e
 "deactivate". Su Windows si trovano dentro la cartella "Scripts", su Mac
 e Linux si trovano dentro la cartella "bin".
 
-Per attivare l'ambiente virtuale, su Windows
+---
 
+**Per attivare l'ambiente virtuale**
+
+Su Windows
 
     > cd Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
     > Scripts/activate.bat
 
 
-Per attivare l'ambiente virtuale, su Mac o Linux
-
+Su Mac o Linux
 
     $ cd Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
     $ source bin/activate
@@ -117,6 +121,10 @@ Cosa ci facciamo? Gli ambienti virtuali sono un grandissimo aiuto quando
 si vuole sviluppare un'applicazione che si basa su moduli specifici non
 solitamente installati sul sistema. Proviamo con un esempio.
 
+---
+
+**Lo sviluppatore 1 crea un ambiente virtuale**
+
 Lo sviluppatore 1 vuole implementare nell'ambiente virtuale
 "TestAmbientiVirtuali" appena creato un progetto per calcolare la
 distanza fra le stelle conosciute e capire quali universi potrebbero
@@ -127,7 +135,7 @@ python utilizzati per i calcoli astronomici. All'interno del suo
 ambiente virtuale installa i moduli a lui necessari:
 
 
-    (TestAmbientiVirtuali) \$ pip install skyfield astropy
+    (TestAmbientiVirtuali) $ pip install skyfield astropy
 
 
 A questo punto, si crea una cartella che chiamerà "StarsTrips" e
@@ -150,7 +158,6 @@ StarsTrips:
 Elenca i moduli installati nell'ambiente virtuale scrivendoli nel file
 "requirements.txt"
 
-
     (TestAmbientiVirtuali) $ pip freeze > requirements.txt
 
 
@@ -160,16 +167,19 @@ sviluppatore 1 può condividere con chiunque il proprio lavoro, presente
 nella cartella StarsTrips e cancellare eventualmente l'ambiente
 virtuale, semplicemente eliminando la cartella "TestAmbienteVirtuale".
 
+---
+
+**Lo sviluppatore 2 vuole provare il programma dello sviluppatore 1**
+
 Lo sviluppatore 2, che vuole testare il lavoro del suo amico/collega,
 prende la cartella StarsTrips, crea un ambiente virtuale, lo attiva e lì
 esegue il comando:
-
 
     (NuovoAmbienteVirtuale) $ pip install --r requirements.txt
 
 
 Questo comando installa tutti i moduli python elencati nel file
-requirements.txt. A questo punto lo sviluppatore 2 è pronto per testare
+`requirements.txt`. A questo punto lo sviluppatore 2 è pronto per testare
 il lavoro importato.
 
 <br>
