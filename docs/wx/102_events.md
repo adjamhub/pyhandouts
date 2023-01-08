@@ -30,9 +30,9 @@ class Esempio(wx.Frame):
         super().__init__(None, title="Cliccami")
                
         pulsante = wx.Button(self, label="Chiudi tutto")
-        pulsante.Bind(wx.EVT_BUTTON, self.chiudi)
+        pulsante.Bind(wx.EVT_BUTTON, self.funzione)
 
-    def chiudi(self, evt):
+    def funzione(self, evt):
         self.Close()
 
 # ----------------------------------------
