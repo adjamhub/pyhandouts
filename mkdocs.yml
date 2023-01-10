@@ -1,6 +1,6 @@
 site_name: Python Course
 site_author: Andrea Diamantini
-copyright: Andrea Diamantini (c) 2022
+copyright: Andrea Diamantini (c) 2022-2023
 
 # -----------------------------------------------------------------------------------------------
 
@@ -14,10 +14,11 @@ theme:
     code: Roboto Mono
   language: it
   features:
+    - navigation.footer
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
     - navigation.top
+    - toc.integrate
     - content.code.copy
   plugins:
     - search:
@@ -29,12 +30,12 @@ extra_css:
 # -----------------------------------------------------------------------------------------------
 
 markdown_extensions:
-  - toc: {permalink: True}
   - admonition: {}
   - attr_list: {}
+  - toc: {}
   - def_list: {}
-  - pymdownx.tasklist: {custom_checkbox: True}
   - pymdownx.emoji: {}
+  - pymdownx.tasklist: {custom_checkbox: True}
   - pymdownx.highlight: {anchor_linenums: True}
   - pymdownx.inlinehilite: {}
   - pymdownx.snippets: {}

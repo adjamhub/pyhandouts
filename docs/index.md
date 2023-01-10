@@ -2,6 +2,7 @@
 hide:
   - navigation
   - toc
+  - footer
 ---
 <style>
 .w3-row:after,.w3-row:before{content:"";display:table;clear:both}
