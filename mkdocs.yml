@@ -63,7 +63,6 @@ nav:
     - Primi concetti: wx/101_first_things.md
     - Eventi: wx/102_events.md
     - Widgets: wx/110_widgets.md
-    - Esercizi (base): wx/115_base_ex.md
     - Layout: wx/120_layout.md
     - Esercizi (layout): wx/122_layout_ex.md
     - Esercizi (full): wx/125_full_ex.md

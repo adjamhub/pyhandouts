@@ -4,20 +4,22 @@
 
     Negli esempi che seguono, scritti con l'unico obiettivo di presentare le widget, andremo a posizionare più oggetti nella stessa finestra
     tramite il cosiddetto **posizionamento assoluto**, inserendo tutte le widget in un `wx.Panel` e indicando **posizione (pos)** e 
-    **dimension (size)** degli oggetti.
+    **dimensione (size)** degli oggetti.
 
     Questo modo di fare, pur semplice e intuitivo, è comunque assolutamente sconsigliato e sarà sostituito nel prossimo capitolo da un concetto
-    molto più avanzato e funzionale.
+    molto più avanzato e funzionale: **i layout**!.
+    
+    Per adesso... cerchiamo di capire bene come funzionano le widgets!!!
 
 
 In questa sezione andremo ad inserire le Widgets più semplici, per
 capire come sono fatte e come funzionano. Per ognuna di esse sarà
 proposta una descrizione sommaria delle sue caratteristiche,
-un'immagine esplicativa e un semplice esempio di codice per testare il
-funzionamento di base.
+un'immagine esplicativa, un semplice esempio di codice per testare il
+funzionamento di base e alcuni esercizi basilari per prendere confidenza con il codice.
 
 Ricordo che la documentazione completa di ognuna di queste widget è
-disponibile nella apposita sezione.
+disponibile nella [apposita sezione](/pyhandouts/wx/201_classes/).
 
 
 <!-- ########################################################################################################### -->
@@ -65,13 +67,14 @@ frame con dentro un *panel* sembra normalmente *pieno*.
     Da ora in poi utilizzeremo il `wx.Panel` in tutti i nostri progetti. Esso costituirà anche un livello 
     intermedio di parentela fra le widgets in maniera che:
 
-    - il Frame nasce senza parent
-    - il Panel nasce con parent il Frame (tipicamente `self`)
-    - Tutte le widget inserite nella finestra, che giacciono sopra il Panel, hanno il panel stesso come parent
+    - il Frame nasce senza `parent`
+    - il Panel nasce con `parent` il Frame (tipicamente `self`)
+    - Tutte le widget inserite nella finestra, che giacciono sopra il Panel, hanno il panel stesso come `parent`
 
     Tutti gli esempi da qui in poi sono strutturati in questo modo: vi basterà osservarli un minimo :)
 
 
+<br>
 
 <!-- ########################################################################################################### -->
 ## wx.Button
@@ -106,6 +109,26 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+--------------------------------------------------------------------
+
+**Esercizio 111 (Button)**
+
+Creare una applicazione con un pulsante *CHIUDI*. Quando lo clicchi, l'applicazione si chiude.
+
+--------------------------------------------------------------------
+
+**Esercizio 112 (Button)**
+
+Creare una applicazione con un pulsante *MASSIMIZZA*. Quando lo clicchi, l'applicazione si massimizza.
+
+--------------------------------------------------------------------
+
+**Esercizio 113 (Button)**
+
+Creare una applicazione con un pulsante *NUOVA FINESTRA*. Quando lo clicchi, si apre una nuova finestra, identica alla precedente.
+
+
+<br>
 
 <!-- ########################################################################################################### -->
 ## wx.ToggleButton
@@ -146,6 +169,23 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+--------------------------------------------------------------------
+
+**Esercizio 115 (ToggleButton)**
+
+Creare una applicazione con una finestra con titolo *Ciccio* che
+contiene un pulsante "Toggle". Quando clicchi il pulsante, il titolo
+diventa *Pippo*, quando lo clicchi di nuovo ritorna ad essere *Ciccio* e
+così via.
+
+--------------------------------------------------------------------
+
+**Esercizio 116 (ToggleButton)**
+
+Creare una applicazione con una finestra che contiene un pulsante "Toggle". 
+Quando clicchi il pulsante, appare una nuova finestra vuota di fianco a questa; quando lo clicchi di nuovo la finestra scompare.
+
+<br>
 
 <!-- ########################################################################################################### -->
 ## wx.StaticText
@@ -275,6 +315,27 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+--------------------------------------------------------------------
+
+**Esercizio 131 (Button, StaticText, TextCtrl)**
+
+Creare una applicazione con una finestra che contiene una StaticText,
+inizialmente vuota, una TextCtrl e un pulsante. Quando l'utente clicca
+sul pulsante, il testo contenuto nella TextCtrl viene copiato nella
+StaticText e la TextCtrl ripulita.
+
+--------------------------------------------------------------------
+
+**Esercizio 132 (TextCtrl, Button)**
+
+Salvate questo esercizio come `es132.py` in una cartella e nella stessa creerete un file
+chiamato `testo.txt` contenente un testo a piacere.
+
+Create una Finestra con una TextCtrl multilinea vuota e un pulsante. Quando
+l'utente clicca il pulsante, il programma carica dal file `testo.txt` il contenuto 
+e lo visualizza nella TextCtrl.
+
+<br>
 
 <!-- ########################################################################################################### -->
 ## wx.ComboBox
@@ -311,7 +372,7 @@ class Esempio(wx.Frame):
         self.combo.Bind(wx.EVT_COMBOBOX, self.visualizzaSelezione)
 
     def visualizzaSelezione(self, evt):
-        f = evt.GetString()
+        f = self.combo.GetValue()
         self.etichetta.SetLabel("Hai selezionato: " + f)
         return
 
@@ -322,6 +383,36 @@ if __name__ == "__main__":
     window.Show()
     app.MainLoop()
 ```
+
+--------------------------------------------------------------------
+
+**Esercizio 136 (TextCtrl, Button, ComboBox)**
+
+La finestra presenta una TextCtrl, un pulsante e una ComboBox,
+inizialmente con un'unica opzione (un testo a piacere). L'utente
+inserisce una stringa nella TextCtrl e se non è vuota, quando clicca il
+pulsante quella stringa viene aggiunta come opzione alla ComboBox e la
+TextCtrl ripulita.
+
+--------------------------------------------------------------------
+
+**Esercizio 137 (Frame, ComboBox)**
+
+la finestra presenta una ComboBox con opzioni '600x400', '800x600',
+'massimizza'. Quando l'utente seleziona una delle opzioni la finestra
+si ridimensiona secondo quanto indicato.
+
+--------------------------------------------------------------------
+
+**Esercizio 138 (ComboBox, TextCtrl, Button)**
+
+Inserite nella finestra una ComboBox inizialmente vuota, una TextCtrl e
+un Button. L'utente digita qualcosa nella TextCtrl e quando clicca il
+pulsante, se la TextCtrl non è vuota, aggiunge la parola alla ComboBox e
+pulisce la TextCtrl.
+
+
+<br>
 
 
 <!-- ########################################################################################################### -->
@@ -368,6 +459,51 @@ if __name__ == "__main__":
     window.Show()
     app.MainLoop()
 ```
+
+--------------------------------------------------------------------
+
+**Esercizio 141 (StaticText, CheckBox)**
+
+Serie di 5 CheckBox con una selezione di cibi (es: pasta, pizza,
+etc...). Man mano che l'utente seleziona cibi la StaticText sotto alle
+CheckBox si aggiorna mostrando tutti i cibi selezionati.
+
+--------------------------------------------------------------------
+
+**Esercizio 142 (StaticText, CheckBox)**
+
+Identico all'esercizio precedente, ma la StaticText non visualizza il
+testo delle CheckBox selezionate ma il numero di queste. Ad esempio
+all'inizio vi sarà scritto "0 CheckBox selezionate" e il numero
+crescerà o diminuirà a seconda che vengono attivate o no le CheckBox.
+
+--------------------------------------------------------------------
+
+**Esercizio 143 (Button, CheckBox)**
+
+la finestra contiene 3 pulsanti: il primo massimizza la finestra, il
+secondo la iconizza sulla barra delle applicazioni, il terzo la chiude.
+Sotto i pulsanti ci sono 3 CheckBox che corrispondono ognuna ad un
+pulsante: se la CheckBox è spuntata, il pulsante corrispondente è
+abilitato, altrimenti è disabilitato. Fate attenzione a sincronizzare la
+spunta sulla CheckBox con l'abilitazione del pulsante corrispondente e
+viceversa.
+
+--------------------------------------------------------------------
+
+**Esercizio 144 (Frame, ComboBox, CheckBox)**
+
+Dichiarate una tupla di valori qualsiasi e con essa create sia una
+ComboBox che elenca tutti gli elementi della tupla, sia una serie di
+CheckBox, una per ogni valore della tupla. Quando l'utente seleziona
+uno dei valori della ComboBox, la CheckBox corrispondente cambia stato,
+venendo spuntata oppure no a seconda del suo stato precedente.
+
+PS: se non avete pensato ad usare un dizionario... beh... ricominciate
+a pensare!
+
+
+<br>
 
 
 <!-- ########################################################################################################### -->
@@ -417,6 +553,44 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+--------------------------------------------------------------------
+
+**Esercizio 146 (RadioButton, StaticText)**
+
+Implementare un testo con domanda: *Dimmi come vieni a scuola* e un
+elenco di opzioni a vostra scelta, tra cui ad esempio auto, moto, bici,
+bus, etc.. Sotto a questo, un'altra StaticText, che alla selezione di
+un mezzo di trasporto selezionerà la scritta: *vieni a scuola in
+MEZZODITRASPORTO*.
+
+--------------------------------------------------------------------
+
+**Esercizio 147 (TextCtrl, RadioButton, Button, StaticText)**
+
+Applicazione con una TextCtrl per inserire il nome e un RadioButton per
+selezionare il sesso (opzioni *Maschio*, *Femmina*) più un pulsante e
+una StaticText. Al click sul pulsante va visualizzata nella StaticText
+la scritta *Buongiorno signor NOME* oppure *Buongiorno signora NOME* a
+seconda del sesso selezionato.
+
+Come ulteriore difficoltà si può aggiungere il controllo dell'ora: se
+il pulsante viene cliccato fra le 6 e le 14, si utilizza *Buongiorno*,
+fra le 14 e le 22 si scrive *Buonasera*, fra le 22 e le 6 si scrive
+*Buonanotte*.
+
+--------------------------------------------------------------------
+
+**Esercizio 148 (TextCtrl, RadioButton, Button)**
+
+Applicazione con una TextCtrl e un pulsante. L'utente scrive una serie
+di parole separate da virgola nella TextCtrl e quando preme il pulsante
+appare un RadioButton con le opzioni indicate nella TextCtrl e separate
+da virgole.
+
+
+<br>
+
+
 <!-- ########################################################################################################### -->
 ## wx.Slider
 
@@ -455,6 +629,33 @@ if __name__ == "__main__":
     window.Show()
     app.MainLoop()
 ```
+
+--------------------------------------------------------------------
+
+**Esercizio 151 (Slider, StaticText)**
+
+Inserite nella finestra uno Slider che va da 1 a 10 e aggiungete una
+StaticText che visualizza il suo valore aggiornato in tempo reale.
+
+--------------------------------------------------------------------
+
+**Esercizio 152 (TextCtrl, Button, Slider)**
+
+Inserite nella finestra due coppie TextCtrl/Button. La prima coppia
+decide il valore minimo dello Slider, la seconda coppia il valore
+massimo. I pulsanti aggiornano lo stato dello Slider.
+
+--------------------------------------------------------------------
+
+**Esercizio 153 (Slider, Button)**
+
+Inserite nella finestra due Slider, uno orizzontale che va da 200 a 800
+per la larghezza e uno verticale che va da 100 a 500 per l'altezza.
+L'utente muove gli slider a piacimento e quando clicca il pulsante si
+modifica la dimensione della finestra.
+
+
+<br>
 
 
 <!-- ########################################################################################################### -->
@@ -506,6 +707,23 @@ if __name__ == "__main__":
     window.Show()
     app.MainLoop()
 ```
+
+--------------------------------------------------------------------
+
+**Esercizio 156 (SpinCtrl, Button, StaticText)**
+
+Inserite nella finestra una SpinCtrl per inserire un intero fra 1 e 10.
+Quando si clicca il pulsante nella StaticText sotto appare il countdown
+dal numero selezionato fino a zero.
+
+--------------------------------------------------------------------
+
+**Esercizio 157 (SpinCtrl...)**
+
+Un altro esercizio con la SpinCtrl
+
+
+<br>
 
 
 <!-- ########################################################################################################### -->
@@ -600,7 +818,33 @@ if __name__ == "__main__":
 
 Provate a cambiare l'evento nel Bind per vedere la differenza di funzionamento.
 
-<br>
-<br>
+
+--------------------------------------------------------------------
+
+**Esercizio 166 (ListBox, Button, StaticText)**
+
+Inserite nella finestra una ListBox con una sequenza di voci e la
+possibilità di selezionarne contemporaneamente più di una. Quando
+l'utente clicca il pulsante nella StaticText vengono visualizzate tutte
+le voci selezionate, separate da virgola.
+
+--------------------------------------------------------------------
+
+**Esercizio 167 (ListBox, TextCtrl, Button)**
+
+Inserite nella finestra una ListBox inizialmente vuota, una TextCtrl e
+un pulsante. L'utente digita qualcosa nella TextCtrl e quando clicca il
+pulsante, se la TextCtrl non è vuota, aggiunge la parola alla ListBox e
+pulisce la TextCtrl.
+
+--------------------------------------------------------------------
+
+**Esercizio 168 (ListBox, Button)**
+
+Inserite nella finestra una ListBox vuota e un pulsante. Quando
+l'utente clicca il pulsante, il programma carica dal file *dati.txt*
+presente nella stessa cartella (dovete crearlo voi, con una parola ogni
+riga: ogni riga del file diventerà una voce nella ListBox).
+
 <br>
 
