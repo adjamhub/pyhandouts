@@ -388,11 +388,10 @@ if __name__ == "__main__":
 
 **Esercizio 136 (TextCtrl, Button, ComboBox)**
 
-La finestra presenta una TextCtrl, un pulsante e una ComboBox,
-inizialmente con un'unica opzione (un testo a piacere). L'utente
-inserisce una stringa nella TextCtrl e se non è vuota, quando clicca il
-pulsante quella stringa viene aggiunta come opzione alla ComboBox e la
-TextCtrl ripulita.
+Inserite nella finestra una ComboBox inizialmente vuota, una TextCtrl e
+un Button. L'utente digita qualcosa nella TextCtrl e quando clicca il
+pulsante, se la TextCtrl non è vuota, aggiunge la parola alla ComboBox e
+pulisce la TextCtrl.
 
 --------------------------------------------------------------------
 
@@ -404,16 +403,19 @@ si ridimensiona secondo quanto indicato.
 
 --------------------------------------------------------------------
 
-**Esercizio 138 (ComboBox, TextCtrl, Button)**
+**Esercizio 138 (StaticText, ComboBox, TextCtrl, Button)**
 
-Inserite nella finestra una ComboBox inizialmente vuota, una TextCtrl e
-un Button. L'utente digita qualcosa nella TextCtrl e quando clicca il
-pulsante, se la TextCtrl non è vuota, aggiunge la parola alla ComboBox e
-pulisce la TextCtrl.
+Inserite nella finestra una StaticText con scritto "nome" e accanto una TextCtrl per l'inserimento.
+Nella riga sotto, una nuova StaticText con scritto "cognome" e accanto una TextCtrl per l'inserimento.
+Nella riga sotto una StaticText con scritto "sesso" e accanto una ComboBox contenente le opzioni "M" e "F".<br>
+Nella riga sotto un pulsante STAMPA.
 
+Quando si clicca il pulsante viene creato il file "dati.txt" nella stessa cartella dello script python con
+scritto "Signor Nome Cognome" oppure "Signora Nome Cognome" a seconda del sesso selezionato.
+
+PS: Ovviamente sul file **non** dovete scrivere veramente *Nome* e "Cognome*...
 
 <br>
-
 
 <!-- ########################################################################################################### -->
 ## wx.CheckBox
