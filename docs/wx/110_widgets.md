@@ -279,6 +279,17 @@ Cito qui i più importanti:
 | wx.TE_READONLY      | Testo non modificabile dall'utente                 |
 | wx.TE_PROCESS_ENTER | Gestisce il tasto INVIO come evento separato       |
 
+
+!!! note "Nota"
+
+  Per inserire 2 o più stili nella stessa TextCtrl utilizza il `pipe` (`|`) in questo modo:
+  
+  ``` py
+  # textctrl multilinea con gestione del pulsante INVIO
+  text = wx.TextCtrl(panel, style = wx.TE_MULTILINE | wx.TE_PROCESS_ENTER
+  ```
+
+
 Non ha un evento di default, ma ben due utilizzabili distintamente:
 
 - `wx.EVT_TEXT`: viene scatenato ogni volta che cambia il testo contenuto nella widget
