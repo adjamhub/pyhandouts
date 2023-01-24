@@ -755,8 +755,8 @@ layout (lo vedremo a breve!!!) voglio farvi notare che gli oggetti sono
 *dentro* la StaticBox solo perché a livello di dimensione essa riesce a
 contenerli tutti tranne il pulsante in fondo!!!
 
-Provate a giovare un pò con i valori del parametro size per rendervene
-conto.
+Provate a giocare un pò con i valori del parametro `size` per rendervene conto.
+
 
 ``` python
 import wx
