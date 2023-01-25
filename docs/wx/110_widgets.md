@@ -26,7 +26,7 @@ disponibile nella [apposita sezione](/pyhandouts/wx/201_classes/).
 ## wx.Frame
 
 
-La classe wx.Frame rappresenta una finestra vuota, con bordo e aspetto
+La classe `wx.Frame` rappresenta una finestra vuota, con bordo e aspetto
 nativo nel sistema operativo ospite, con le funzionalità tipiche delle
 finestre già implementate e funzionanti senza fare nulla: trascinamento,
 ridimensionamento, barra del titolo, riduzione ad icona,

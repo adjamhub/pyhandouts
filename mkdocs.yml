@@ -73,7 +73,7 @@ nav:
     - Esercizi (GUI): wx/143_full_gui_ex.md
     - Caratteristiche Avanzate: wx/150_advanced.md
     - Classi wx: wx/201_classes.md
-    - Tools: wx/299_tools.md
+    - wx Tools: wx/299_tools.md
   - Insights:
     - Introduzione: insights/00_intro.md
     - Ambienti Virtuali: insights/01_venv.md

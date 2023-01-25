@@ -106,6 +106,8 @@ viewer.SetBitmap(newBmp)
 Spero sia chiaro. 
 Adesso comunque arriva qualche esercizio ad aiutarvi :)
 
+## Esercizi
+
 ----------------------------------------------------------------------------------------------------------------------
 
 **Esercizio 361**
@@ -131,7 +133,7 @@ selezionata.
 
 
 <!-- ############################################################################################################################# -->
-# Icone
+## Icone
 
 Se la necessità relativa alle immagini è quella di visualizzare le icone
 nei pulsanti (e nei menù e nelle barre degli strumenti, come impareremo

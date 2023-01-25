@@ -2,38 +2,36 @@
 
 In questo capitolo cercheremo di introdurre tutti quegli elementi
 grafici che completano una GUI moderna: barra dei menù, azioni, icone,
-barre degli strumenti, etc\... Iniziamo subito!
+barre degli strumenti, etc... Iniziamo subito!
 
-# Azioni predefinite
+## Azioni predefinite
 
-Domanda a bruciapelo: pensate a Microsoft Word o a LibreOffice Writer e
-ditemi: *In quanti modi diversi si può fare copia e incolla?*
+Domanda a bruciapelo: pensate a Microsoft Word o a LibreOffice Writer e ditemi: *In quanti modi diversi si può fare copia e incolla?*
 
 Tra scorciatoie da tastiera, pulsantini sulla barra degli strumenti,
 voci nei menù, contestuali e sulla barra, a me ne vengono in mente
-almeno 4\... se non 5\... Adesso mettetevi un secondo il vostro cappello
+almeno 4... se non 5... Adesso mettetevi un secondo il vostro cappello
 da programmatore e rispondete alla prossima domanda: *Ma se uno può fare
 copia e incolla in 4 modi, significa che un altro lo ha implementato 4
 volte?*
 
-Fortunatamente la risposta a quest\'ultima domanda è **no**! In questo
-contesto rientra un concetto tipico della programmazione grafica: il
-concetto di **azione**. E cosa è un\'azione?
+Fortunatamente la risposta a quest'ultima domanda è **no**! 
+In questo contesto rientra un concetto tipico della programmazione grafica: il concetto di **azione**. E cosa è un'azione?
 
-Un azione è un\'astrazione di una funzionalità che il nostro programma
-vuole offrire all\'utente. Viene identificata univocamente tramite un
-nome (ad esempio: COPIA), un\'icona (\...), una scorciatoia (CTRL + C),
+Un azione è un'astrazione di una funzionalità che il nostro programma
+vuole offrire all'utente. Viene identificata univocamente tramite un
+nome (ad esempio: COPIA), un'icona (...), una scorciatoia (CTRL + C),
 una descrizione.
 
 La libreria wxPython per assicurare uniformità nelle azioni più comuni,
-come ad esempio APRI, SALVA, ESCI, etc\... ha pensato bene di definirle
-tramite degli ID: ad esempio l\'ID per l\'azione SALVA si chiama
-wx.ID_SAVE. Voi identificate un pulsante con quell\'ID e quello diventa
-automaticamente il pulsante SALVA! Ha un testo, una scorciatoia, etc\...
+come ad esempio APRI, SALVA, ESCI, etc... ha pensato bene di definirle
+tramite degli ID: ad esempio l'ID per l'azione SALVA si chiama
+wx.ID_SAVE. Voi identificate un pulsante con quell'ID e quello diventa
+automaticamente il pulsante SALVA! Ha un testo, una scorciatoia, etc...
 
 Su Linux (precisamente, se wxPython utilizza il backend wxGTK) la nostra
-azione avrà anche un\'icona di default. Purtroppo questo non vale per
-tutte le piattaforme supportate\... poco male comunque! Possiamo
+azione avrà anche un'icona di default. Purtroppo questo non vale per
+tutte le piattaforme supportate... poco male comunque! Possiamo
 inserire le icone necessarie tramite la classe **wx.ArtProvider**, come
 visto nella parte sulle immagini.
 
@@ -42,90 +40,91 @@ visto nella parte sulle immagini.
 var = wx.RobaGrafica( parent, id = wx.ID_SAVE , bitmap = wx.ArtProvider.GetBitmap(wx.ART_SAVE) )
 ```
 
-Ok, ci manca solo l\'elenco completo degli ID delle azioni predefinite
+Ok, ci manca solo l'elenco completo degli ID delle azioni predefinite
 in wxPython. Come noterete osservando la tabella e come spiegato prima,
 questi ID hanno abbinata una etichetta (e una scorciatoia) predefinita,
 tipicamente in lingua inglese. La buona notizia è che wxPython supporta
-l\'internazionalizzazione (i18n) e quindi se (ad esempio) il vostro
+l'internazionalizzazione (i18n) e quindi se (ad esempio) il vostro
 sistema operativo è in lingua italiana, troverete le stringhe
 predefinite già tradotte!!!
 
-  ACTION ID               DEFAULT LABEL
-  ----------------------- -----------------
-  wx.ID_ABOUT             About
-  wx.ID_ADD               Add
-  wx.ID_APPLY             Apply
-  wx.ID_BACKWARD          Back
-  wx.ID_BOLD              Bold
-  wx.ID_BOTTOM            Bottom
-  wx.ID_CANCEL            Cancel
-  wx.ID_CDROM             CD-Rom
-  wx.ID_CLEAR             Clear
-  wx.ID_CLOSE             Close
-  wx.ID_CONVERT           Convert
-  wx.ID_COPY              Copy
-  wx.ID_CUT               Cut
-  wx.ID_DELETE            Delete
-  wx.ID_DOWN              Down
-  wx.ID_EDIT              Edit
-  wx.ID_EXECUTE           Execute
-  wx.ID_EXIT              Quit
-  wx.ID_FILE              File
-  wx.ID_FIND              Find
-  wx.ID_FIRST             First
-  wx.ID_FLOPPY            Floppy
-  wx.ID_FORWARD           Forward
-  wx.ID_HARDDISK          Harddisk
-  wx.ID_HELP              Help
-  wx.ID_HOME              Home
-  wx.ID_INDENT            Indent
-  wx.ID_INDEX             Index
-  wx.ID_INFO              Info
-  wx.ID_ITALIC            Italic
-  wx.ID_JUMP_TO           Jump to
-  wx.ID_JUSTIFY_CENTER    Centered
-  wx.ID_JUSTIFY_FILL      Justified
-  wx.ID_JUSTIFY_LEFT      Align Left
-  wx.ID_JUSTIFY_RIGHT     Align Right
-  wx.ID_LAST              Last
-  wx.ID_NETWORK           Network
-  wx.ID_NEW               New
-  wx.ID_NO                No
-  wx.ID_OK                Ok
-  wx.ID_OPEN              Open
-  wx.ID_PASTE             Paste
-  wx.ID_PREFERENCES       Preferences
-  wx.ID_PREVIEW           Print previe&w
-  wx.ID_PRINT             Print
-  wx.ID_PROPERTIES        Properties
-  wx.ID_REDO              Redo
-  wx.ID_REFRESH           Refresh
-  wx.ID_REMOVE            Remove
-  wx.ID_REPLACE           Replace
-  wx.ID_REVERT_TO_SAVED   Revert to Saved
-  wx.ID_SAVE              Save
-  wx.ID_SAVEAS            Save As
-  wx.ID_SELECTALL         Select All
-  wx.ID_SELECT_COLOR      Color
-  wx.ID_SELECT_FONT       Font
-  wx.ID_SORT_ASCENDING    Ascending
-  wx.ID_SORT_DESCENDING   Descending
-  wx.ID_SPELL_CHECK       Spell Check
-  wx.ID_STOP              Stop
-  wx.ID_STRIKETHROUGH     Strikethrough
-  wx.ID_TOP               Top
-  wx.ID_UNDELETE          Undelete
-  wx.ID_UNDERLINE         Underline
-  wx.ID_UNDO              Undo
-  wx.ID_UNINDENT          Unindent
-  wx.ID_UP                Up
-  wx.ID_YES               Yes
-  wx.ID_ZOOM_100          Actual Size
-  wx.ID_ZOOM_FIT          Zoom to Fit
-  wx.ID_ZOOM_IN           Zoom In
-  wx.ID_ZOOM_OUT          Zoom Out
+| ACTION ID         | DEFAULT LABEL                |
+|-------------------|------------------------------|
+| wx.ID_ABOUT       |      About |
+| wx.ID_ADD         |      Add |
+|  wx.ID_APPLY      |       Apply |
+|  wx.ID_BACKWARD   |       Back |
+|  wx.ID_BOLD       |       Bold |
+|  wx.ID_BOTTOM     |       Bottom |
+|  wx.ID_CANCEL     |       Cancel |
+|  wx.ID_CDROM      |       CD-Rom |
+|  wx.ID_CLEAR      |       Clear |
+|  wx.ID_CLOSE      |       Close |
+|  wx.ID_CONVERT    |       Convert |
+|  wx.ID_COPY       |       Copy |
+|  wx.ID_CUT        |       Cut |
+|  wx.ID_DELETE     |       Delete |
+|  wx.ID_DOWN       |       Down |
+|  wx.ID_EDIT       |       Edit |
+|  wx.ID_EXECUTE    |       Execute |
+|  wx.ID_EXIT       |       Quit |
+|  wx.ID_FILE       |       File |
+|  wx.ID_FIND       |       Find |
+|  wx.ID_FIRST      |       First |
+|  wx.ID_FLOPPY     |       Floppy |
+|  wx.ID_FORWARD    |       Forward |
+|  wx.ID_HARDDISK   |       Harddisk |
+|  wx.ID_HELP       |       Help |
+|  wx.ID_HOME       |       Home |
+|  wx.ID_INDENT     |       Indent |
+|  wx.ID_INDEX      |       Index |
+|  wx.ID_INFO       |       Info |
+|  wx.ID_ITALIC     |       Italic |
+|  wx.ID_JUMP_TO    |       Jump to |
+|  wx.ID_JUSTIFY_CENTER |    Centered |
+|  wx.ID_JUSTIFY_FILL   |   Justified |
+|  wx.ID_JUSTIFY_LEFT   |   Align Left |
+|  wx.ID_JUSTIFY_RIGHT  |   Align Right |
+|  wx.ID_LAST           |   Last |
+|  wx.ID_NETWORK        |   Network |
+|  wx.ID_NEW            |   New |
+|  wx.ID_NO             |   No |
+|  wx.ID_OK             |   Ok |
+|  wx.ID_OPEN           |   Open |
+|  wx.ID_PASTE          |   Paste |
+|  wx.ID_PREFERENCES    |   Preferences |
+|  wx.ID_PREVIEW        |   Print preview |
+|  wx.ID_PRINT          |  Print |
+|  wx.ID_PROPERTIES     |   Properties |
+|  wx.ID_REDO           |   Redo |
+|  wx.ID_REFRESH        |   Refresh |
+|  wx.ID_REMOVE         |   Remove |
+|  wx.ID_REPLACE        |   Replace |
+|  wx.ID_REVERT_TO_SAVED |   Revert to Saved |
+|  wx.ID_SAVE            |  Save |
+|  wx.ID_SAVEAS          |  Save As |
+|  wx.ID_SELECTALL       |  Select All |
+|  wx.ID_SELECT_COLOR    |  Color |
+|  wx.ID_SELECT_FONT     |  Font |
+|  wx.ID_SORT_ASCENDING  |  Ascending |
+|  wx.ID_SORT_DESCENDING |  Descending |
+|  wx.ID_SPELL_CHECK     |  Spell Check |
+|  wx.ID_STOP            |  Stop |
+|  wx.ID_STRIKETHROUGH   |  Strikethrough |
+|  wx.ID_TOP             |  Top |
+|  wx.ID_UNDELETE        |  Undelete |
+|  wx.ID_UNDERLINE       |  Underline |
+|  wx.ID_UNDO            |  Undo |
+|  wx.ID_UNINDENT        |  Unindent |
+|  wx.ID_UP              |  Up |
+|  wx.ID_YES             |  Yes |
+|  wx.ID_ZOOM_100        |  Actual Size |
+|  wx.ID_ZOOM_FIT        |  Zoom to Fit | 
+|  wx.ID_ZOOM_IN         |  Zoom In |
+|  wx.ID_ZOOM_OUT        |  Zoom Out |
 
-# Menubar
+
+## Menubar
 
 I menù sono oggetti grafici che tutti conosciamo e a cui tutti siamo
 abituati, non ho bisogno di grandi introduzioni! Poiché la nostra
@@ -173,12 +172,12 @@ fileMenu.Append(customItem)
 menubar.Append(fileMenu, '&File')
 ```
 
-Si ottiene questo (come vedete, su Linux c\'è un\'icona in più\...):
+Si ottiene questo (come vedete, su Linux c'è un'icona in più...):
 
 ![image](images/wxMenuBar.jpg)
 
 Per collegare le azioni create ad una funzione (Binding) va intercettato
-l\'evento wx.EVT_MENU abbinato all\'ID della voce di menù in questione:
+l'evento wx.EVT_MENU abbinato all'ID della voce di menù in questione:
 
 ``` python
 # per fare Bind dell'azione con ID = wx.ID_EXIT ad una funzione chiamata esci
@@ -188,7 +187,7 @@ self.Bind(wx.EVT_MENU, self.esci, id=wx.ID_EXIT)
 self.Bind(wx.EVT_MENU, self.faiQualcosa, id=35)
 ```
 
-Come al solito allego il codice completo dell\'esempio proposto:
+Come al solito allego il codice completo dell'esempio proposto:
 
 ``` python
 import wx
@@ -241,7 +240,7 @@ window.Show()
 app.MainLoop()
 ```
 
-## Check Items
+### Check Items
 
 Devo aggiungere a questo punto una caratteristica della classe
 wx.MenuItem, ovvero quella che implementa le voci di menù e può
@@ -298,11 +297,11 @@ window.Show()
 app.MainLoop()
 ```
 
-# Toolbar
+## Toolbar
 
-Se le barre dei menù dovrebbero permettere l\'accesso a **tutte** le
+Se le barre dei menù dovrebbero permettere l'accesso a **tutte** le
 funzioni disponibili in una applicazione, le barre degli strumenti
-dovrebbero permettere l\'accesso alle azioni veloci, ovvero a quelle di
+dovrebbero permettere l'accesso alle azioni veloci, ovvero a quelle di
 maggior utilizzo per gli utenti.
 
 Per aggiungere una Toolbar alla nostra Frame Widget dobbiamo utilizzare
@@ -335,14 +334,14 @@ questionTool = toolbar.AddTool( 73 , "Fai una domanda" , wx.ArtProvider.GetBitma
 ```
 
 A questo punto, se volete collegare i pulsanti della Toolbar ad una
-funzione, basta eseguire il solito Bind() con l\'evento **wx.EVT_TOOL**.
+funzione, basta eseguire il solito Bind() con l'evento **wx.EVT_TOOL**.
 
 ``` 
 self.Bind(wx.EVT_TOOL, self.esci, exitTool )
 self.Bind(wx.EVT_TOOL, self.dattiUnaRisposta, exitTool )
 ```
 
-Come al solito, propongo l\'esempio completo delle toolbar.
+Come al solito, propongo l'esempio completo delle toolbar.
 
 ``` 
 import wx
@@ -378,18 +377,15 @@ window.Show()
 app.MainLoop()
 ```
 
-::: warning
-::: title
-Warning
-:::
+!!! warning "Attenzione!"
 
-L\'evento EVT_TOOL è automaticamente abbinato ad un evento EVT_MENU e
-viceversa. Questo significa che se, ad esempio, avete già implementato
-tutte le vostre azioni nella MenuBar e fatto il Binding con i loro ID
-con le opportune funzioni, tutte le azioni che aggiungerete alla toolbar
-con ID già utilizzati funzioneranno automaticamente senza bisogno di un
-ulteriore binding!!!
-:::
+    L'evento `wx.EVT_TOOL` è automaticamente abbinato ad un evento `wx.EVT_MENU` e
+    viceversa. Questo significa che se, ad esempio, avete già implementato
+    tutte le vostre azioni nella MenuBar e fatto il Binding con i loro ID
+    con le opportune funzioni, tutte le azioni che aggiungerete alla toolbar
+    con ID già utilizzati funzioneranno automaticamente senza bisogno di un
+    ulteriore binding!!!
+
 
 Vediamo una semplicissima dimostrazione di ciò con una finestra avente
 una sola azione, presente sia nella menubar che nella toolbar.
@@ -425,14 +421,14 @@ window.Show()
 app.MainLoop()
 ```
 
-# wx.StatusBar
+## wx.StatusBar
 
 La classe wx.StatusBar rappresenta una widget che implementa la barra di
 stato delle applicazioni.
 
 ![image](images/wxStatusBar.jpg)
 
-E\' possibile creare una barra di stato in due modi: o dichiarando un
+E' possibile creare una barra di stato in due modi: o dichiarando un
 oggetto di tipo wx.StatusBar e poi inserendolo nella finestra tramite il
 metodo *SetStatusBar()* oppure chiamando direttamente dalla finestra il
 metodo *CreateStatusBar()*. Se dovete solo visualizzare informazioni il
@@ -440,7 +436,7 @@ secondo metodo è una bomba! Se dovete modificare la StatusBar
 aggiungendovi widget e icone serve il primo metodo, eventualmente
 creando una classe derivata da wx.StatusBar.
 
-Nell\'esempio proposto si crea automaticamente una StatusBar e si
+Nell'esempio proposto si crea automaticamente una StatusBar e si
 visualizza la posizione del puntatore non appena questo entra nella
 finestra.
 
@@ -469,7 +465,7 @@ window.Show()
 app.MainLoop()
 ```
 
-# Context Menu
+## Context Menu
 
 I *Context Menus* ovvero i menù contestuali sono quei menù che appaiono
 quando si fa click con il tasto destro in determinate posizione della
@@ -482,7 +478,7 @@ Un immagine vale più di 1000 parole:
 Per capire come si può implementare un Context Menu tramite la libreria
 wxPython proviamo ad implementarne uno su una widget con dentro un check
 item che abilita o disabilita la toolbar, rendendo possibile in
-quest\'ultimo caso utilizzare i suoi strumenti.
+quest'ultimo caso utilizzare i suoi strumenti.
 
 ``` python
 import wx
@@ -532,30 +528,30 @@ Il risultato di questo codice è il seguente:
 
 ![image](images/wxContextMenu.jpg)
 
-Spero che osservare e riprodurre l\'esempio sia sufficiente per capire
+Spero che osservare e riprodurre l'esempio sia sufficiente per capire
 il funzionamento :)
 
-# Impostazioni
+## Impostazioni
 
 Può essere interessante e/o addirittura necessario per una applicazione
 salvare da qualche parte alcune impostazioni da ricaricare al prossimo
 riavvio. Ad esempio potrebbe essere interessante tracciare la posizione
 e la dimensione della finestra principale nello schermo, per riproporla
-identica\... oppure nel caso di una applicazione che permette ad esempio
+identica... oppure nel caso di una applicazione che permette ad esempio
 di cambiare la dimensione del font, di memorizzare questa impostazione e
 riproporla anche nelle successive esecuzioni, senza dover ogni volta
-costringere l\'utente a cambiarla di nuovo.
+costringere l'utente a cambiarla di nuovo.
 
 Certo siete già in grado di fare questo tipo di lavoro salvando ad
-esempio su file di testo queste informazioni\... ma dove lo mettiamo
+esempio su file di testo queste informazioni... ma dove lo mettiamo
 questo file per essere ragionevolmente sicuri di ritrovarlo alla
 prossima esecuzione? A tutte queste domande risponde con semplicità
 disarmante la classe **wx.FileConfig** che deriva dalla classe astratta
-**wx.ConfigBase** (uhm\... forse non sapete cosa significa astratta\...
+**wx.ConfigBase** (uhm... forse non sapete cosa significa astratta...
 pazienza!!!).
 
 La classe *wx.FileConfig* richiede come informazioni solo il nome
-dell\'applicazione, poi per ogni sistema operativo sceglie il posto
+dell'applicazione, poi per ogni sistema operativo sceglie il posto
 riservato alle impostazioni delle applicazioni e scrive lì dentro un
 file di testo con una sequenza di coppie VARIABILE = VALORE.
 
@@ -578,9 +574,9 @@ STEP 2
 
 :   Dove ti serve di salvare alcune impostazioni, crea un oggetto della
     classe wx.FileConfig e salva i tuoi dati con la funzione
-    [Write(\"variabile\", valore)]{.title-ref}. Nell\'esempio sotto
-    proviamo a salvare la variabile \"colore\" che contiene il valore
-    \"red\" e la variabile \"dimensioneFont\" che contiene il valore 18.
+    `Write("variabile", valore)`. Nell'esempio sotto
+    proviamo a salvare la variabile "colore" che contiene il valore
+    "red" e la variabile "dimensioneFont" che contiene il valore 18.
     Attenzione ad assicurarsi di salvare sempre e solo stringhe:
 
     ``` python
@@ -596,7 +592,7 @@ STEP 2
 STEP 3
 
 :   Quando ti serve di sapere i valori abbinati alle variabili
-    \"colore\" e \"dimensioneFont\", che evidentemente per il tuo
+    "colore" e "dimensioneFont", che evidentemente per il tuo
     programma sono importanti, ti basterà andare a controllarne il
     valore con le funzioni Read (che restituisce sempre stringhe, quindi
     converti i valori se ne hai bisogno).
