@@ -1,6 +1,6 @@
 # Gestione degli eventi
 
-Una volta iniziato il Main Event Loop le applicazioni wxPython sono in
+Una volta iniziato il ***Main Event Loop*** le applicazioni wxPython sono in
 grado di intercettare gli eventi utente, come ad esempio un click su un
 pulsante o sulla tastiera o un movimento del mouse. Tutte questi eventi
 sono catalogati negli oggetti, ovvero ogni widget sa quali eventi
@@ -63,8 +63,7 @@ Ormai avete capito tutto... io nel dubbio scrivo un pò di deduzioni a partire d
 
 Ok... adesso invece parto con i dubbi... stavolta con un elenco in ordine sparso?
 
-- Come si fa a sapere quali (altri) eventi può gestire una widget? (Sugg: leggi la documentazione)
-- Dove sta la documentazione? (qui ci sono le dispense del prof, su <https://docs.wxpython.org> trovi la documentazione ufficiale)
+- Come si fa a sapere quali (altri) eventi può gestire una widget? (Sugg: leggi la documentazione ufficiale della classe **<a href="https://docs.wxpython.org/wx.Button.html" target="_blank">wx.Button</a>**)
 - E... se voglio mettere 2 pulsanti? (fra qualche riga ci arriviamo)
 - E se voglio mettere un pulsante... piccolo? (in realtà lo sai già...)
 - E... se voglio far fare qualcos'altro al mio programma quando clicco il pulsante? (sugg: studia!)
