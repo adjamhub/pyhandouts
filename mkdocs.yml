@@ -64,15 +64,13 @@ nav:
     - Eventi: wx/102_events.md
     - Widgets: wx/110_widgets.md
     - Layout: wx/120_layout.md
-    - Esercizi (layout): wx/122_layout_ex.md
-    - Esercizi (full): wx/125_full_ex.md
-    - Dialogs: wx/130_dialogs.md
-    - Immagini: wx/132_images.md
-    - Timer(s): wx/135_timer.md
-    - Full GUI: wx/140_full_gui.md
-    - Esercizi (GUI): wx/143_full_gui_ex.md
-    - Caratteristiche Avanzate: wx/150_advanced.md
-    - Classi wx: wx/201_classes.md
+    - Esercizi Completi: wx/130_full_ex.md
+    - Dialogs: wx/140_dialogs.md
+    - Immagini: wx/150_images.md
+    - Timer(s): wx/160_timer.md
+    - Full GUI: wx/170_full_gui.md
+    - Esercizi (GUI): wx/171_full_gui_ex.md
+    - Caratteristiche Avanzate: wx/180_advanced.md
     - wx Tools: wx/299_tools.md
   - Insights:
     - Introduzione: insights/00_intro.md

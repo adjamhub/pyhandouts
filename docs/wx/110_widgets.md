@@ -18,12 +18,20 @@ proposta una descrizione sommaria delle sue caratteristiche,
 un'immagine esplicativa, un semplice esempio di codice per testare il
 funzionamento di base e alcuni esercizi basilari per prendere confidenza con il codice.
 
-Ricordo che la documentazione completa di ognuna di queste widget è
-disponibile nella [apposita sezione](/pyhandouts/wx/201_classes/).
+!!! tip "Documentazione Ufficiale"
+
+    Ricordo che la documentazione completa di ognuna di queste widget è disponibile nel <a href="https://docs.wxpython.org/" target="_blank">sito ufficiale</a>
+    
+    All'inizio di ognuna delle classi che vado ad introdurre metterò invece un link diretto alla documentazione ufficiale della classe!
 
 
 <!-- ########################################################################################################### -->
 ## wx.Frame
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.Frame.html" target="_blank">wx.Frame</a>**
+> 
+> Finestra vuota generica, con barra del titolo, bordi e ridimensionamento funzionanti.
 
 
 La classe `wx.Frame` rappresenta una finestra vuota, con bordo e aspetto
@@ -51,6 +59,11 @@ app.MainLoop()
 ## wx.Panel
 
 
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.Panel.html" target="_blank">wx.Panel</a>**
+> 
+> Pannello utile per organizzare il layout.
+
+
 La classe `wx.Panel` rappresenta una widget vuota, adatta ad essere
 utilizzata come contenitore delle altre che vedremo.
 
@@ -74,10 +87,17 @@ frame con dentro un *panel* sembra normalmente *pieno*.
     Tutti gli esempi da qui in poi sono strutturati in questo modo: vi basterà osservarli un minimo :)
 
 
+QUI INSERISCI DUE IMMAGINI!!! UN FRAME SENZA PANEL E UN FRAME CON PANEL!!!
+
 <br>
 
 <!-- ########################################################################################################### -->
 ## wx.Button
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.Button.html" target="_blank">wx.Button</a>**
+> 
+> Pulsante cliccabile.
 
 
 La classe `wx.Button` rappresenta una widget che implementa un pulsante cliccabile con una etichetta di testo dentro.
@@ -109,6 +129,8 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+### Esercizi
+
 --------------------------------------------------------------------
 
 **Esercizio 111 (Button)**
@@ -132,6 +154,11 @@ Creare una applicazione con un pulsante *NUOVA FINESTRA*. Quando lo clicchi, si 
 
 <!-- ########################################################################################################### -->
 ## wx.ToggleButton
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.ToggleButton.html" target="_blank">wx.ToggleButton</a>**
+> 
+> Pulsante con due stati: cliccato e non cliccato.
 
 
 La classe `wx.ToggleButton` rappresenta una widget che implementa un pulsante con due stati: cliccato e non cliccato.
@@ -169,6 +196,8 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+### Esercizi
+
 --------------------------------------------------------------------
 
 **Esercizio 115 (ToggleButton)**
@@ -189,6 +218,11 @@ Quando clicchi il pulsante, appare una nuova finestra vuota di fianco a questa; 
 
 <!-- ########################################################################################################### -->
 ## wx.StaticText
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.StaticText.html" target="_blank">wx.StaticText</a>**
+> 
+> Etichetta dove il programmatore può inserire un testo da visualizzare all'utente.
 
 
 La classe `wx.StaticText` rappresenta una widget che implementa una etichetta dove il programmatore 
@@ -220,6 +254,11 @@ if __name__ == "__main__":
 
 <!-- ########################################################################################################### -->
 ## wx.StaticLine
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.StaticLine.html" target="_blank">wx.StaticLine</a>**
+> 
+> Linea decorativa, orizzontale o verticale.
 
 
 La classe `wx.StaticLine` rappresenta una widget che implementa una linea decorativa, orizzontale o verticale.
@@ -262,6 +301,11 @@ if __name__ == "__main__":
 ## wx.TextCtrl
 
 
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.TextCtrl.html" target="_blank">wx.TextCtrl</a>**
+> 
+> Casella di testo.
+
+
 La classe `wx.TextCtrl` rappresenta una widget che implementa una casella di testo, con vari stili supportati, 
 definibili in fase di inizializzazione:
 
@@ -281,16 +325,16 @@ Cito qui i più importanti:
 
 
 !!! note "Nota"
+    
+    Per inserire 2 o più stili nella stessa TextCtrl utilizza il `pipe` (`|`) in questo modo:
+    
+    ``` py
+    # TextCtrl multilinea con gestione del pulsante INVIO
+    text = wx.TextCtrl(panel, style = wx.TE_MULTILINE | wx.TE_PROCESS_ENTER
+    ```
 
-  Per inserire 2 o più stili nella stessa TextCtrl utilizza il `pipe` (`|`) in questo modo:
-  
-  ``` py
-  # textctrl multilinea con gestione del pulsante INVIO
-  text = wx.TextCtrl(panel, style = wx.TE_MULTILINE | wx.TE_PROCESS_ENTER
-  ```
 
-
-Non ha un evento di default, ma ben due utilizzabili distintamente:
+la TextCtrl non ha un evento di default, ma ben due utilizzabili distintamente:
 
 - `wx.EVT_TEXT`: viene scatenato ogni volta che cambia il testo contenuto nella widget
 - `wx.EVT_TEXT_ENTER`: viene scatenato quando hai impostato lo stile `wx.TE_PROCESS_ENTER` e si preme INVIO nella widget
@@ -326,6 +370,8 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+### Esercizi
+
 --------------------------------------------------------------------
 
 **Esercizio 131 (Button, StaticText, TextCtrl)**
@@ -350,6 +396,11 @@ e lo visualizza nella TextCtrl.
 
 <!-- ########################################################################################################### -->
 ## wx.ComboBox
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.ComboBox.html" target="_blank">wx.ComboBox</a>**
+> 
+> Menù a tendina
 
 
 La classe `wx.ComboBox` rappresenta una widget che implementa un menù a tendina
@@ -395,6 +446,8 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+### Esercizi
+
 --------------------------------------------------------------------
 
 **Esercizio 136 (TextCtrl, Button, ComboBox)**
@@ -432,7 +485,12 @@ PS: Ovviamente sul file **non** dovete scrivere veramente *Nome* e "Cognome*...
 ## wx.CheckBox
 
 
-La classe `wx.CheckBox` rappresenta una widget che implementa una casella di spunta.
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.CheckBox.html" target="_blank">wx.CheckBox</a>**
+> 
+> Casella di spunta.
+
+
+La classe `wx.CheckBox` rappresenta una widget che implementa una casella di spunta, tipicamente di forma squadrata.
 
 ![image](images/wxCheckBox.jpg)
 
@@ -472,6 +530,9 @@ if __name__ == "__main__":
     window.Show()
     app.MainLoop()
 ```
+
+
+### Esercizi
 
 --------------------------------------------------------------------
 
@@ -523,7 +584,12 @@ a pensare!
 ## wx.RadioButton
 
 
-La classe `wx.RadioButton` rappresenta una widget che implementa un pulsante selezionabile in maniera mutualmente esclusiva.
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.RadioButton.html" target="_blank">wx.RadioButton</a>**
+> 
+> Casella selezionabile in maniera mutualmente esclusiva.
+
+
+La classe `wx.RadioButton` rappresenta una widget che implementa una casella, tipicamente rotonda, selezionabile in maniera mutualmente esclusiva.
 
 ![image](images/wxRadioButton.jpg)
 
@@ -566,6 +632,9 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+
+### Esercizi
+
 --------------------------------------------------------------------
 
 **Esercizio 146 (RadioButton, StaticText)**
@@ -607,6 +676,12 @@ da virgole.
 <!-- ########################################################################################################### -->
 ## wx.Slider
 
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.Slider.html" target="_blank">wx.Slider</a>**
+> 
+> Barra di scorrimento lineare.
+
+
 La classe `wx.Slider` rappresenta una widget che implementa un cursore ad
 avanzamento lineare.
 
@@ -643,6 +718,9 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+
+### Esercizi
+
 --------------------------------------------------------------------
 
 **Esercizio 151 (Slider, StaticText)**
@@ -673,6 +751,11 @@ modifica la dimensione della finestra.
 
 <!-- ########################################################################################################### -->
 ## wx.SpinCtrl
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.SpinCtrl.html" target="_blank">wx.SpinCtrl</a>**
+> 
+> Selettore numerico con pulsanti di avanzamento.
 
 
 La classe `wx.SpinCtrl` rappresenta una widget che implementa un selettore numerico con pulsanti di avanzamento.
@@ -721,6 +804,9 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+
+### Esercizi
+
 --------------------------------------------------------------------
 
 **Esercizio 156 (SpinCtrl, Button, StaticText)**
@@ -741,6 +827,11 @@ Un altro esercizio con la SpinCtrl
 
 <!-- ########################################################################################################### -->
 ## wx.StaticBox
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.StaticBox.html" target="_blank">wx.StaticBox</a>**
+> 
+> Contenitore decorativo con bordo.
 
 
 La classe `wx.StaticBox` rappresenta una widget che implementa una decorazione per raggruppare le widget. <br>
@@ -792,6 +883,11 @@ if __name__ == "__main__":
 ## wx.ListBox
 
 
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.ListBox.html" target="_blank">wx.ListBox</a>**
+> 
+> Lista verticale di elementi di testo.
+
+
 La classe `wx.ListBox` rappresenta una widget che implementa una lista di voci selezionabili in maniera singola o multipla.
 
 ![image](images/wxListBox.jpg)
@@ -831,6 +927,8 @@ if __name__ == "__main__":
 
 Provate a cambiare l'evento nel Bind per vedere la differenza di funzionamento.
 
+
+### Esercizi
 
 --------------------------------------------------------------------
 

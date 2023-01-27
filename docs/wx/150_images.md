@@ -1,4 +1,4 @@
-# Immagini
+# Immagini & Icone
 
 Per imparare a gestire, visualizzare, modificare immagini con wxPython
 abbiamo bisogno di discutere alcune caratteristiche della libreria e di
@@ -24,7 +24,11 @@ modalità di lavoro con le immagini con wxPython a seconda che si voglia:
     problema legato ad essa e pensate che per qualche motivo manchi nel
     vostro sistema, aprite l'interfaccia di gestione dei pacchetti di Thonny e
     installate la librerie `pillow`.
-    
+  
+
+<!-- ############################################################################################################################# -->
+## Immagini
+
 
 Cominciamo la nostra disamina sulle classi wxPython per la
 visualizzazione e la manipolazione delle immagini. Le prime classi che
@@ -106,11 +110,12 @@ viewer.SetBitmap(newBmp)
 Spero sia chiaro. 
 Adesso comunque arriva qualche esercizio ad aiutarvi :)
 
-## Esercizi
+
+### Esercizi
 
 ----------------------------------------------------------------------------------------------------------------------
 
-**Esercizio 361**
+**Esercizio 501**
 
 Crea una semplice interfaccia con un pannello e un StaticBitmap per
 visualizzare una immagine presente nella stessa cartella ove salverete
@@ -120,7 +125,7 @@ il codice dell'esercizio.
 ----------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 362**
+**Esercizio 502**
 
 Crea una applicazione con 2 pulsanti allineati sopra e una StaticBitmap
 sotto. Con il primo pulsante si apre una finestra di selezione file per

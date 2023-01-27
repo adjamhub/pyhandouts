@@ -98,6 +98,12 @@ codice.
 <!-- ################################################################################################################################## -->
 ## BoxSizer
 
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.BoxSizer.html" target="_blank">wx.BoxSizer</a>**
+> 
+> Contenitore per una riga (o una colonna) di widget
+
+
 La classe `wx.BoxSizer` può essere utilizzata per creare un layout orizzontale oppure verticale.
 
 ``` python
@@ -317,8 +323,15 @@ if __name__ == "__main__":
     2. partiamo da una situazione semplice: proporzione ZERO, e bordo 5 da tutti i lati.
     3. se qualcosa non quadra, fate una modifica per volta e guardate subito cosa succede!
 
+
 <!-- ################################################################################################################################## -->
 ## StaticBoxSizer
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.StaticBoxSizer.html" target="_blank">wx.StaticBoxSizer</a>**
+> 
+> Contenitore per una riga (o una colonna) di widget con contorno evidenziato
+
 
 Lo StaticBoxSizer è esattamente identico al BoxSizer se non per il fatto 
 che contiene al suo interno già una StaticBox per decorare ed
@@ -341,8 +354,32 @@ StaticBoxSizer per apprezzare la differenza. E poi passate al prossimo
 layout!
 
 
+### Esercizi *BoxSizer
+
+
+**Esercizio 201 (line)**
+
+![image](exLayout/LineLayout1.png)
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+**Esercizio 202 (line)**
+
+![image](exLayout/LineLayout2.png)
+
+
+------------------------------------------------------------------------------------------------------
+
+
 <!-- ################################################################################################################################## -->
 ## GridSizer
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.GridSizer.html" target="_blank">wx.GridSizer</a>**
+> 
+> Contenitore a tabella per le widget
 
 
 La classe `wx.GridSizer` può essere utilizzata per creare un layout a griglia uniforme, ovvero con lo stesso spazio (più o meno) 
@@ -465,6 +502,11 @@ Adesso però tornate su e ricontrollate il codice che avete copiato cercando di 
 ## FlexGridSizer
 
 
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.FlexGridSizer.html" target="_blank">wx.FlexGridSizer</a>**
+> 
+> Contenitore a tabella per le widget con dimensioni variabili
+
+
 La classe `wx.FlexGridSizer` può essere utilizzata per creare un layout a
 griglia flessibile, ovvero con righe o colonne di dimensione diversa.
 Questo può ritornare utile soprattutto in alcuni casi specifici, che
@@ -554,6 +596,11 @@ if __name__ == "__main__":
 
 <!-- ################################################################################################################################## -->
 ## GridBagSizer
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.GridBagSizer.html" target="_blank">wx.GridBagSizer</a>**
+> 
+> Contenitore a tabella con spanning
 
 
 La classe `wx.GridBagSizer` implementa il contenitore più flessibile in
@@ -678,6 +725,34 @@ if __name__ == "__main__":
     Ne parlo un pochino in questa [pagina](/wx/293_tools_wit/)
 
     Buona lettura!
+
+
+### Esercizi *GridSizer
+
+
+**Esercizio 251 (grid)**
+
+![image](exLayout/exGrid1.jpg)
+
+
+------------------------------------------------------------------------------------------------------
+
+
+**Esercizio 252 (grid)**
+
+![image](exLayout/exGrid2.jpg)
+
+
+------------------------------------------------------------------------------------------------------
+
+
+**Esercizio 253 (grid)**
+
+![image](exLayout/exGridBag1.jpg)
+
+
+------------------------------------------------------------------------------------------------------
+
 
 
 <!-- ################################################################################################################################## -->

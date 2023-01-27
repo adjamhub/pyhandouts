@@ -10,7 +10,7 @@ funzionalità richieste.
 Buon lavoro!
 
 
-**Esercizio 201 (Sommatore)**
+**Esercizio 301 (Sommatore)**
 
 ![image](images/ex_sommatore.jpg)
 
@@ -29,7 +29,7 @@ visualizzarli dovete ritrasformare il risultato in una stringa.
 --------------------------------------------------------------------------------------------------
 
 
-**Esercizio 202 (Calcolatrice)**
+**Esercizio 302 (Calcolatrice)**
 
 ![image](images/ex_calcolatrice.jpg)
 
@@ -43,7 +43,7 @@ esattamente identica!!
 -------------------------------------------------------------------------------------------------
 
 
-**Esercizio 203 (Lista spesa)**
+**Esercizio 303 (Lista spesa)**
 
 ![image](images/ex_lista_spesa.jpg)
 
@@ -69,7 +69,7 @@ Aggiungo 2 livelli di difficoltà (opzionali):
 ---------------------------------------------------------------------------------------------
 
 
-**Esercizio 204 (Tic Tac Toe)**
+**Esercizio 304 (Tic Tac Toe)**
 
 ![image](images/ex_tictactoe.jpg)
 
@@ -97,7 +97,7 @@ semplicemente scriverlo sul titolo.
 -------------------------------------------------------------------------------------------
 
 
-**Esercizio 205 (Fifteen puzzle)**
+**Esercizio 305 (Fifteen puzzle)**
 
 ![image](images/ex_fifteen_puzzle.jpg)
 

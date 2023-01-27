@@ -92,7 +92,7 @@ maleducato.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 301**
+**Esercizio 401**
 
 Visualizzate una finestra con un pulsante che quando premuto visualizza
 un messaggio informativo a vostro piacere.
@@ -101,7 +101,7 @@ un messaggio informativo a vostro piacere.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 302**
+**Esercizio 402**
 
 Visualizzate una finestra vuota. Quando si clicca per chiuderla appare
 il messaggio di domanda "Sicuro di voler chiudere?". Se l'utente
@@ -111,7 +111,7 @@ risponde No, la finestra non si chiude.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 303**
+**Esercizio 403**
 
 Visualizzare una finestra con una SpinCtrl con valori da -10 a +10. Se
 l'utente seleziona 0, appare un messaggio di avvertimento.
@@ -132,7 +132,7 @@ percorso = dlg.GetPath()
 # ...
 ```
 
-**Esercizio 311**
+**Esercizio 411**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre la DirDialog che
@@ -143,7 +143,7 @@ etichetta di testo si visualizzi il percorso selezionato.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 312**
+**Esercizio 412**
 
 Visualizzare una finestra con un pulsante. Cliccando il pulsante si apre
 una DirDialog con la possibilità di selezionare cartelle non esistenti.
@@ -173,7 +173,7 @@ if dlg.ShowModal() == wx.ID_CANCEL:
 #... il percorso scelto si ottiene con dlg.GetPath()
 ```
 
-**Esercizio 321**
+**Esercizio 421**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre la FileDialog che
@@ -184,7 +184,7 @@ nella etichetta di testo si visualizzi il percorso del file selezionato.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 322**
+**Esercizio 422**
 
 Visualizzare una finestra con un pulsante. Cliccando il pulsante si apre
 una FileDialog in modalità salva. Se l'utente ne seleziona uno non
@@ -195,7 +195,7 @@ Pathlib???)
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 323**
+**Esercizio 423**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre una FileDialog in
@@ -221,7 +221,7 @@ if dialog.ShowModal() == wx.ID_OK:
     # ...
 ```
 
-**Esercizio 331**
+**Esercizio 431**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre una ColourDialog che
@@ -232,7 +232,7 @@ etichetta.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 332**
+**Esercizio 432**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre una ColourDialog che
@@ -243,7 +243,7 @@ del colore selezionato.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 333**
+**Esercizio 433**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo con
 la scritta "Colore selezionato". Cliccando il pulsante si apre una
@@ -270,7 +270,7 @@ if dialog.ShowModal() == wx.ID_OK:
     # ...
 ```
 
-**Esercizio 341**
+**Esercizio 441**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre una FontDialog che
@@ -281,7 +281,7 @@ etichetta.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 342**
+**Esercizio 442**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo con
 la scritta "Font selezionato". Cliccando il pulsante si apre una
