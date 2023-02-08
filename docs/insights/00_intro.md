@@ -9,7 +9,7 @@ E quindi io ho cercato di documentarmi al meglio e di scriverne in maniera *acce
 
 Almeno questo è quello che ho cercato di fare.
 
-L'obiettivo di queste pagine è quella di farvi perdere un pomeriggio, di farvi spendere tempo (e soldi) dietro alla programmazione, di... farvi venire *fame* (se capite la battuta).
+L'obiettivo di queste pagine è quella di farvi perdere un pomeriggio, di farvi spendere tempo (e soldi) dietro alla programmazione, di... farvi venire *fame*.
 
 Chissà...
 

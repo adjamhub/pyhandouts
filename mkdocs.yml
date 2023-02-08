@@ -74,10 +74,13 @@ nav:
     - wx Tools: wx/299_tools.md
   - Insights:
     - Introduzione: insights/00_intro.md
-    - Ambienti Virtuali: insights/01_venv.md
-    - Arduino: insights/02_arduino.md
-    - MySql: insights/03_mysql.md
-    - Flask: insights/04_flask.md
-    - Numeri reali: insights/05_reals.md
+    - Turtle: insights/01_turtle.md
+    - PyGame: insights/02_pygame.md
+    - ESP32: insights/03_ESP32.md
+    - Ambienti Virtuali: insights/11_venv.md
+    - Arduino: insights/12_arduino.md
+    - MySql: insights/13_mysql.md
+    - Flask: insights/14_flask.md
+    - Numeri reali: insights/25_reals.md
   - About: about.md
 
