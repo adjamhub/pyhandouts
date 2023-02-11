@@ -760,7 +760,7 @@ if __name__ == "__main__":
 
 
 Per concludere il discorso del layout non posso non dedicare qualche
-riga al dimensionamento delle finestre. Niente di complicato, per
+riga al (ri)dimensionamento delle finestre. Niente di complicato, per
 carità... il ridimensionamento iniziale di una widget dovrebbe essere
 gestito automaticamente (cioè... senza fare nulla) se il layout viene
 implementato correttamente. Anzi... quando la dimensione iniziale non
@@ -768,18 +768,15 @@ ci soddisfa, il più delle volte significa che abbiamo sbagliato qualche
 parametro nel layout!
 
 Ci sono però alcune scelte (poche... tranquilli) che possiamo indurre
-tramite codice e che posso migliorare il comportamento della nostra
+tramite codice e che possono migliorare il comportamento della nostra
 finestra. Vediamole una per una!
 
 <br>
 
 **wx.Window.SetMinSize && wx.Window.SetMaxSize**
 
-:   Imposta la dimensione minima/massima della finestra. Funziona solo per
-    il ridimensionamento manuale, perché il programmatore può comunque
-    superare i limiti imposti usando la funzione *SetSize*. Andrebbe
-    chiamata *prima* di imporre un sizer (ovvero prima di SetSizer).
-
+:   Imposta la dimensione minima/massima della finestra. 
+    
 Esempio banale:
 
 ``` python
@@ -794,7 +791,7 @@ panel.SetSizer(vbox)
 **wx.Sizer.Fit(self, window) && wx.Window.SetSizerAndFit(wx.Sizer)**
 
 :   La funzione *Fit*, disponibile in tutti i sizer, dice al sizer di
-    idimensionare la finestra per aderire alla dimensione minima del
+    ridimensionare la finestra per aderire alla dimensione minima del
     sizer. Va ovviamente chiamata *dopo* aver impostato un sizer in una
     finestra con *SetSizer*.
 
@@ -809,7 +806,7 @@ Esempi banali:
 panel.SetSizer(vbox)
 vbox.Fit(self)
 # ...
-# oppure insieme con SetSizerAndFit
+# oppure insieme, con SetSizerAndFit
 panel.SetSizerAndFit(vbox)
 # ...
 ```
@@ -818,7 +815,7 @@ Volendo approfondire il comportamento dei sizer nel ridimensionamento delle fine
 *wx.Window.ClientToWindowSize* e *wx.Window.WindowToClientSize*. 
 
 In generale, c'è una parte specifica della documentazione a proposito di
-questo problema: <https://docs.wxpython.org/window_sizing_overview.html>
+questo problema: **<a href="https://docs.wxpython.org/window_sizing_overview.html" target="_blank">https://docs.wxpython.org/window_sizing_overview.html</a>**
 
 Se invece pensate sia sufficiente quello che avete visto qui... passate
 agli esercizi del prossimo capitolo!!!
