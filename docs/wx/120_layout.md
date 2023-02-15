@@ -77,6 +77,7 @@ La libreria wxPython offre i seguenti oggetti per gestire il layout:
 |---------------------|------------------------------------------------------------------|
 | wx.BoxSizer         | Contenitore per una riga (o una colonna) di widget               |
 | wx.StaticBoxSizer   | Come il Box Sizer ma con un contorno evidenziato (una StaticBox) |
+| - - - - - - - - -   | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  |
 | wx.GridSizer        | Contenitore a tabella per le widget                              |
 | wx.FlexGridSizer    | Contenitore a tabella per le widget con dimensioni variabili     |
 | wx.GridBagSizer     | Contenitore a tabella con spanning                               |
@@ -132,23 +133,22 @@ Vediamo i parametri:
 - **proportion** può essere 0,1,2
 
     * 0 (valore di *default*) significa che la widget non si ridimensionerà
-    * 1 significa che la widget si ridimensionerà proporzionalmente al suo contenitore
+    * 1 significa che la widget si ridimensionerà **nella direzione del layout** proporzionalmente al suo contenitore
     * 2 significa che la widget cercherà di occupare il doppio del posto di quelle con valore 1
 
 - **flag** permette di decidere come la widget deve comportarsi **all'interno del layout**.
 
-    Diciamo subito che esistono 2 tipi di flag: *flag di bordo* e *flag di allineamento*.
+    Diciamo subito che esistono 3 tipi di flag: il *flag di espansione*, i *flag di allineamento* e i *flag di bordo*.
 
-    I flag di bordo possono decidere *la direzione del bordo* fra una widget e l'altra:
+    Il flag di espansione è alternativo ai flag di allineamento: entrambi governano il posizionamento dell'oggetto **nella direzione ortogonale al layout**.
+    Il flag di espansione dice alla widget di occupare tutto lo spazio; i flag di allineamento la posizionano senza espansione ortogonale. 
+    Vediamo i flag:
+    
+    * wx.EXPAND: widget espansa su tutto lo spazio disponibile (**ortogonalmente nel caso di un sizer lineare**, **nelle due direzioni per un sizer a griglia**)
 
-    * wx.TOP: bordo verso l'alto
-    * wx.RIGHT: bordo verso destra
-    * wx.BOTTOM: bordo verso il basso
-    * wx.LEFT: bordo verso sinistra
-    * wx.ALL: bordo in tutte le direzioni
+    <br>
 
-    I flag di allineamento possono decidere l'allineamento della widget rispetto al contenitore (il layout stesso). 
-    In questo caso dobbiamo distinguere il comportamento a seconda del contenitore. Mi spiego.
+    Ecco invece i flag di allineamento:
 
     <br>
     
@@ -174,10 +174,13 @@ Vediamo i parametri:
 
     <br>
     
-    C'è inoltre un ultimo flag, alternativo a tutti gli altri flag di allineamento, che permette alla widget di espandersi verso direzioni
-    predefinite:
+    I flag di bordo possono decidere *la direzione del bordo* fra una widget e l'altra:
 
-    * wx.EXPAND: widget espansa su tutto lo spazio disponibile (ortogonalmente nel caso di un sizer lineare, nelle due direzioni per un sizer a griglia)
+    * wx.TOP: bordo verso l'alto
+    * wx.RIGHT: bordo verso destra
+    * wx.BOTTOM: bordo verso il basso
+    * wx.LEFT: bordo verso sinistra
+    * wx.ALL: bordo in tutte le direzioni
 
     <br>
     
@@ -204,7 +207,16 @@ che nei nostri esempi sarà sempre un pannello, quindi dovrai fare una cosa del 
 panel.SetSizer(box)
 ```
 
-Sembra complicato all'inizio, ma guardiamo qualche esempio e avremo tutto chiaro.
+!!! warning "Importante!!!"
+
+    Questa cosa qui sopra di collegare il layout principale al pannello contenitore è molto molto molto molto molto molto importante.
+    Del tipo... **o ti ricordi, o non funziona nulla**.
+    
+    Fai tu...
+    
+
+Sono tante piccole cose insieme... necessitano di qualche esempio e qualche esercizio per chiarirci le idee.
+
 
 Il prossimo codice crea un layout orizzontale con 2 pulsanti che vogliamo ridimensionarsi con la finestra (quindi *proportion = 1*) 
 e con un pochino di bordo in tutte le direzioni.
