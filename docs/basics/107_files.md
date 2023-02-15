@@ -321,7 +321,7 @@ Importare i dati dal file e caricarli in un dizionario creato appositamente con 
 
 ## Modulo Pathlib
 
-
+    
 Il modulo Pathlib permette di ricavare informazioni sui percorsi ove si trovano file e directories all’interno del sistema operativo che esegue lo script Python in oggetto. 
 In particolare, di solito viene utilizzato l’oggetto Path importato dalla libreria pathlib.
 
@@ -353,6 +353,54 @@ Negli esempi trattati sopra sono evidenziate alcune funzionalità:
     • un percorso può essere descritto tramite una stringa, con il simbolo "/" (slash) come separatore di percorsi
     • Il Path chiamato "percorso" indica una cartella "ciao" nella home utente che non per forza deve esistere… anzi tra le funzionalità dell’oggetto Path vedremo proprio questa cosa di verificare se un percorso esiste ed eventualmente crearlo
 
+!!! tip "I percorsi delle cartelle principali"
+
+    Dopo qualche anno a parlare del modulo Pathlib, ho capito che gli studenti non hanno bene idea dell'organizzazione dei files in un Sistema Operativo.
+    
+    Cerchiamo di farla semplice: da una parte troviamo il Sistema Operativo Windows (che fa come gli pare), dall'altra tutto il resto del mondo (Linux, BSD, MacOS, iOS, Android)
+    che segue una linea comune.
+    
+    ---
+    
+    **Windows**
+    
+    Il sistema operativo Windows gestisce gli HD in maniera unica: ogni HD viene abbinato ad una lettera, ma per motivi storici di solito si parte da C: (se hai 3 dischi saranno C: D: E:)
+    
+    In uno di questi, di solito C:, c'è il sistema operativo vero e proprio, nella cartella `C:\Windows`. Gli utenti hanno ognuno uno spazio personale (una *home*): queste cartelle
+    si trovano tutte nel percorso `C:\Users` e si chiamano con il relativo nome utente (la home dell'utente pippo sarà `C:\Users\pippo`)
+    
+    All'interno della *home* ci sono alcune cartelle importanti per l'organizzazione dei file dell'utente. Le cartelle:
+    
+    - `Documents`: la cartella dei documenti
+    - `Downloads`: la cartella dove vanno a finire i download
+    - `Desktop`: la cartella che corrisponde al Desktop utente
+    - etc...
+    
+    Quindi ad esempio, il desktop dell'utente pippo si trova nella cartella `C:\Users\pippo\Desktop`.
+    
+    ---
+    
+    **Linux, Mac, BSD, etc...**
+    
+    Tutti gli altri sistemi operativi uniscono tutti gli HD montati sul proprio PC in un unico spazio comune che identificano con il simbolo `/` e chiamano `root` (radice).
+    
+    Le cartelle degli utenti si trovano nella cartella `/home` e si chiamano ovviamente con il nome utente. 
+    Ad esempio lo spazio personale dell'utente ciccio sarà nel percorso `/home/ciccio`.
+    
+    Le cartelle importanti per l'utente si chiamano allo stesso modo, quindi ad esempio, la cartella Downloads di ciccio si troverà su `/home/ciccio/Downloads`
+
+    ---
+    
+    **Una partenza comune: `Path.home()`**
+    
+    In qualsiasi OS, Python identifica la cartella personale tramite la funzione Path.home(), così che (ad esempio) il Desktop di qualunque utente si trovi nel percorso:
+    
+    ``` py
+    percorsoDesktop = Path.home() / "Desktop"
+    ```
+    
+    Molto intelligente :smile:
+
 L’oggetto Path espone fra le altre le seguenti funzioni:
 
 | Funzione              | Descrizione                                                                                                          |
@@ -366,7 +414,7 @@ L’oggetto Path espone fra le altre le seguenti funzioni:
 | `open(mode)`          | Apre il file indicato nel Path in modalità "mode". Ritorna un file object come fa la funzione predefinita "open()"   |
 | `rename(target)`      | Rinomina il Path al percorso indicato nel Path "target".                                                             |
 | `rmdir()`             | Rimuove la cartella abbinata al percorso del Path (solo se la cartella è vuota).                                     | 
-| `unlink()`            | Rimuove un file (solo se è un file). <br> **Attenti a quello che fate, per favore!!!**                               |   
+| `unlink()`            | Rimuove un file (solo se è un file). <br> **Attenti a quello che fate, per favore!!!**                               |
 
 
 Vediamo alcuni esempi per capire il funzionamento delle funzioni più "ostiche": ovviamente ognuno di questi esempi dovrebbe iniziare con l’import dell’oggetto Path dalla libreria pathlib.
