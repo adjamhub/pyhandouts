@@ -478,8 +478,10 @@ for f in home.iterdir():
 home = Path.home()
 
 # creazione della cartella "ciao" nella home
+# ATTENZIONE!!! mkdir da errore se la cartella esiste già... bisogna controllare!!!
 cartellaCiao = home / "ciao"
-cartellaCiao.mkdir()
+if not cartellaCiao.exists():
+    cartellaCiao.mkdir()
 
 # cambio nome della cartella "ciao" in "salve" nella home
 cartellaSalve = home / "salve"
