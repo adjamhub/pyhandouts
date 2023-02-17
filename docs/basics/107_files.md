@@ -424,6 +424,7 @@ Vediamo alcuni esempi per capire il funzionamento delle funzioni più "ostiche":
 From pathlib import Path
 ```
 
+<br>
 
 **Esempio 1: verificare se nella Home è presente un file chiamato "pippo"**
 
@@ -440,15 +441,17 @@ else:
     print("pippo non esiste")
 ```
 
+<br>
 
 **Esempio 2: elenco dei file *.txt presenti nel Desktop dell’utente "pippo"**
 
 ``` python
-desk = Path("C:/Users/pippo/Desktop")
+desk = Path("C:/Users/pippo/Desktop") # equivalente a: Path.home() / "Desktop"
 for f in desk.glob("*.txt"):
     print(f, "(file)")
 ```
 
+<br>
 
 !!! note "Pattern"
 
@@ -457,6 +460,8 @@ for f in desk.glob("*.txt"):
     Così il pattern "*.txt" rappresenta tutti i file che finiscono per ".txt", il pattern "\*" rappresenta tutti i file con qualunque nome, 
     il pattern "a*" rappresenta tutti i file che iniziano per "a" e così via.
 
+
+<br>
 
 **Esempio 3: elenco del contenuto della home con suggerimento a fianco**
 
@@ -470,6 +475,8 @@ for f in home.iterdir():
     else:
         print(f, "(boh)")    
 ``` 
+
+<br>
 
 
 **Esempio 4: creazione, cambio nome ed eliminazione di una cartella nella home utente**
@@ -491,6 +498,7 @@ cartellaCiao.rename(cartellaSalve)
 cartellaSalve.rmdir()
 ```
 
+<br>
 
 **Esempio 5: creazione del file "pippo.txt" nel Desktop**
 
@@ -508,6 +516,8 @@ Adesso tocca a voi provare il codice degli esempi e poi procedere con gli eserci
 
 ### Esercizi
 
+
+------------------------------------------------------------
 
 **Esercizio 631**
 
