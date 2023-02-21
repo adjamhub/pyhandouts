@@ -51,7 +51,7 @@ La lista della spesa è poco più di un semplice esercizio sulla ListBox.
 Menzione particolare al layout, nel mio caso implementato con un'unica
 BagSizer. Attenzione alle righe e alle colonne da far allargare!
 
--   pulsante AGGIUNGI: aggiunge la voce presente nella TextCtrl (se non
+-   pulsante INSERISCI: aggiunge la voce presente nella TextCtrl (se non
     vuota) e la pulisce.
 -   pulsante ELIMINA: elimina la voce selezionata della ListBox (oppure
     nulla, se nulla è selezionato)
