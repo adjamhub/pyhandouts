@@ -193,20 +193,20 @@ Spero sia abbastanza chiaro. Nel dubbio… lo sapete già! Funzioni `dir()` ed `
 ### Esercizi sui files
 
 
-**Esercizio 601**
+**Esercizio 701**
 
 Scrivere un programma che chiede all’utente di digitare il proprio nome e poi salva la stringa digitata sul file "stringa.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 602**
+**Esercizio 702**
 
 Scrivere un programma che carica in lettura il file "stringa.txt" creato nell’esercizio precedente e ne visualizza 
 il contenuto sullo schermo (dovrebbe visualizzare la stringa digitata prima).
 
 ------------------------------------------------------------
 
-**Esercizio 603**
+**Esercizio 703**
 
 Scrivere un programma che chiede all’utente di digitare un numero intero e poi salva il numero digitato sul file "intero.txt".
 
@@ -218,27 +218,27 @@ Scrivere un programma che chiede all’utente di digitare un numero intero e poi
 
 ------------------------------------------------------------
 
-**Esercizio 604**
+**Esercizio 704**
 
 Scrivere un programma che carica in lettura il file "intero.txt" creato nell’esercizio precedente e salva il suo contenuto, 
 convertito in intero, su una variabile. Visualizzare la variabile e verificare il suo tipo con la funzione `type()`.
 
 ------------------------------------------------------------
 
-**Esercizio 605**
+**Esercizio 705**
 
 Scrivere un programma che chiede all’utente di digitare un numero reale e poi salva il numero digitato sul file "reale.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 606**
+**Esercizio 706**
 
 Scrivere un programma che carica in lettura il file "reale.txt" creato nell’esercizio precedente e salva il suo contenuto, convertito in reale, su una variabile. 
 Visualizzare la variabile e verificare il suo tipo con la funzione type().
 
 ------------------------------------------------------------
 
-**Esercizio 607**
+**Esercizio 707**
 
 Creare una lista contenente i nomi di alcuni animali, visualizzarla sullo schermo e poi andare a copiarne il contenuto nel file "animali.txt" avendo cura di mettere 
 ogni animale in una nuova riga.<br>
@@ -246,13 +246,13 @@ Eseguito il codice verificare che il file è effettivamente ben formato con un a
 
 ------------------------------------------------------------
 
-**Esercizio 608**
+**Esercizio 708**
 
 Aprire in lettura il file "animali.txt" creato nell’esercizio precedente in lettura e leggere il contenuto riga per riga visualizzando ogni volta l’animale "estratto".
 
 ------------------------------------------------------------
 
-**Esercizio 609**
+**Esercizio 709**
 
 Aprire il file "animali.txt" in modalità "append" (aggiunta a fine file). Chiedere all’utente di inserire il nome di un animale e procedere all’inserimento nel file. 
 Ripetere l’operazione 2 o 3 volte, aggiungendo ogni volta l’animale inserito nel file.<br>
@@ -260,7 +260,7 @@ Terminato l’inserimento, chiudere il file e ripetere il codice dell’esercizi
 
 ------------------------------------------------------------
 
-**Esercizio 610**
+**Esercizio 710**
 
 Creare un file chiamato "parola.txt" nella stessa cartella del codice di questo esercizio, digitando al suo interno una parola qualsiasi. 
 Provare ad aprire il file in modalità "x" per verificare se è possibile andarlo a sovrascrivere. 
@@ -268,14 +268,14 @@ Ripetere l’operazione in modalità "w" e infine controllare il contenuto del f
 
 ------------------------------------------------------------
 
-**Esercizio 611: area rettangolo**
+**Esercizio 711: area rettangolo**
 
 Implementare un software che legge dal file "lati.txt" due valori reali per la base e l'altezza di un rettangolo, visualizza i dati su schermo, 
 calcola e visualizza l’area del rettangolo e salva il valore calcolato nel file "area.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 612: secondi trascorsi**
+**Esercizio 712: secondi trascorsi**
 
 Implementare un software che legge dal file "secondi.txt" un valore intero che rappresenta i secondi trascorsi dalla mezzanotte di un dato giorno e che trasforma questo valore, 
 visualizzandolo su schermo in ore:minuti:secondi. Ad esempio, se il valore caricato dal file "secondi.txt" fosse 4000 (uguale a 3600, 1 ora, + 360, 6 minuti, + 40), 
@@ -284,20 +284,20 @@ I numeri vanno poi memorizzati nello stesso formato nel file "orario.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 613: stringhe**
+**Esercizio 713: stringhe**
 
 Dichiarare una lista di 5 stringhe e procedere ad un salvataggio su file delle parole, una per riga.
 
 ------------------------------------------------------------
 
-**Esercizio 614: media dei numeri**
+**Esercizio 714: media dei numeri**
 
 Dato un file denominato "numeri.txt" contenente esattamente 10 numeri interi, caricarne il contenuto su una lista, procedere al calcolo della media aritmetica dei numeri inseriti, 
 visualizzare il risultato a video e salvarlo nel file "media.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 615: ricerca elementi**
+**Esercizio 715: ricerca elementi**
 
 Dato un file "sequenza.txt" analogo a quello dell’esercizio precedente, caricare i dati su una lista, visualizzare i dati a video, chiedere un numero intero da cercare 
 all’utente e procedere alla ricerca di tutte le posizioni della lista ove questo numero si trovi.<br>
@@ -305,13 +305,13 @@ Scrivere tutte le posizioni trovate riga per riga nel file "posizioni.txt". Se i
 
 ------------------------------------------------------------
 
-**Esercizio 616: ordinamenti**
+**Esercizio 716: ordinamenti**
 
 Scrivete un programma che legge dal file "sequenza.txt" una sequenza di interi, la ordina in modo crescente e la salva ordinata sul file "ordinati.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 617**
+**Esercizio 717**
 
 Creare un file chiamato "settings.txt" contenente una serie di righe del tipo chiave = valore (ad esempio: nome=Andrea, cognome=Diamantini…). 
 Importare i dati dal file e caricarli in un dizionario creato appositamente con la parte prima dell’uguale "strizzata" degli spazi come chiave e la parte dopo l’uguale, 
@@ -519,31 +519,31 @@ Adesso tocca a voi provare il codice degli esempi e poi procedere con gli eserci
 
 ------------------------------------------------------------
 
-**Esercizio 631**
+**Esercizio 731**
 
 Scrivere un codice per elencare tutti i file presenti sul proprio Desktop e verificare per ognuno se essi siano file oppure cartelle.
 
 ------------------------------------------------------------
 
-**Esercizio 632**
+**Esercizio 732**
 
 Scrivere un codice per creare sul Desktop la cartella "prova" e creare al suo interno il file "pippo.txt" in cui scrivere una parola a scelta dell’utente.
 
 ------------------------------------------------------------
 
-**Esercizio 633**
+**Esercizio 733**
 
 Scrivere un codice per rinominare il file precedentemente creato da "pippo.txt" a "ciccio.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 634**
+**Esercizio 734**
 
 Scrivere un codice per creare, nella cartella "prova" sul Desktop precedentemente creata, un file .txt con il nome scelto dall’utente.
 
 ------------------------------------------------------------
 
-**Esercizio 635**
+**Esercizio 735**
 
 Scrivere un codice per eliminare la cartella "prova" sul Desktop precedentemente creata e verificare che se non si eliminano i file al suo interno, l’eliminazione è impossibile.
 
