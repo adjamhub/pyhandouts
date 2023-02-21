@@ -53,13 +53,13 @@ BagSizer. Attenzione alle righe e alle colonne da far allargare!
 
 -   pulsante INSERISCI: aggiunge la voce presente nella TextCtrl (se non
     vuota) e la pulisce.
--   pulsante ELIMINA: elimina la voce selezionata della ListBox (oppure
+-   pulsante CANCELLA: elimina la voce selezionata della ListBox (oppure
     nulla, se nulla è selezionato)
 -   pulsante CHIUDI: chiude l'applicazione
 
 Aggiungo 2 livelli di difficoltà (opzionali):
 
-1.  il pulsante ELIMINA disabilitato all'inizio e abilitato solo se
+1.  il pulsante CANCELLA disabilitato all'inizio e abilitato solo se
     c'è una voce selezionata nella ListBox.
 2.  Invece di CHIUDI, implementare SALVA E CHIUDI che prima di chiudere
     l'applicazione salva i dati nel file *lista_della_spesa.txt* sul
