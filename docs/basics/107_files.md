@@ -521,32 +521,72 @@ Adesso tocca a voi provare il codice degli esempi e poi procedere con gli eserci
 
 **Esercizio 731**
 
-Scrivere un codice per elencare tutti i file presenti sul proprio Desktop e verificare per ognuno se essi siano file oppure cartelle.
+Scrivere un programama che elenca tutto il contenuto del proprio Desktop e verificare per ogni elemento se esso è un file oppure una cartella.
 
 ------------------------------------------------------------
 
 **Esercizio 732**
 
-Scrivere un codice per creare sul Desktop la cartella "prova" e creare al suo interno il file "pippo.txt" in cui scrivere una parola a scelta dell’utente.
+Scrivere un programma per creare sul Desktop la cartella "prova" e creare all'interno di essa il file "pippo.txt" in cui scrivere una parola a scelta dell’utente.
 
 ------------------------------------------------------------
 
 **Esercizio 733**
 
-Scrivere un codice per rinominare il file precedentemente creato da "pippo.txt" a "ciccio.txt".
+Scrivere un programma per rinominare il file precedentemente creato da "pippo.txt" a "ciccio.txt".
 
 ------------------------------------------------------------
 
 **Esercizio 734**
 
-Scrivere un codice per creare, nella cartella "prova" sul Desktop precedentemente creata, un file .txt con il nome scelto dall’utente.
+Scrivere un programma che chiede all'utente di scegliere un nome per un file (ad esempio "pluto") e che crea sul Desktop il file con il nome scelto dall'utente
+ed estensione txt (nel nostro esempio, il file "pluto.txt").
 
 ------------------------------------------------------------
 
 **Esercizio 735**
 
-Scrivere un codice per eliminare la cartella "prova" sul Desktop precedentemente creata e verificare che se non si eliminano i file al suo interno, l’eliminazione è impossibile.
+Scrivere un programma per eliminare la cartella "prova" sul Desktop precedentemente creata, eliminando prima i file al suo interno e infine la cartella.
 
+------------------------------------------------------------
+
+**Esercizio 736**
+
+Creare sul Desktop la cartella “esercizio”.
+Al suo interno generare un file chiamato “numeri.txt” contenente 10 numeri casuali compresi fra 1 e 100. I numeri vanno scritti in colonna (uno sotto l’altro).
+Creare dentro la cartella “esercizio” un file chiamato “sommaPari” contenente la somma dei numeri pari contenuti nel file “numeri.txt”.
+
+------------------------------------------------------------
+
+**Esercizio 737**
+
+Chiedere all'utente di inserire una stringa.
+Visualizzare l’elenco di tutti i file con estensione `txt` oppure `py` presenti nella propria cartella Downloads al cui interno è presente la stringa inserita.
+
+------------------------------------------------------------
+
+**Esercizio 738**
+
+Creare un programma per ripulire la cartella dei Downloads.<br>
+Prima visualizza la stringa: *"Nella cartella Downloads ci sono TOT files. Vuoi cancellarli?" (T) Sì, tutti. (U) guardiamoli uno per volta (N) No* <br>
+Se l’utente seleziona T, cancella tutto e via.<br>
+Se seleziona N, non fare niente <br>
+Se seleziona U, per ogni file visualizza il nome e chiedi: "Vuoi cancellarlo? (S/N)"
+
+------------------------------------------------------------
+
+**Esercizio 739 (Sposta Files)**
+
+Crea sul Desktop una cartella chiamata ESERCIZI. Cerca i files Python presenti nella tua cartella Documenti e spostali nella cartella ESERCIZI.
+
+!!! tip "Suggerimento: per spostare un file"
+    
+    1. lo apri, 
+    2. copi il contenuto, 
+    3. lo chiudi, 
+    4. crei il file con lo stesso nome nella nuova cartella, 
+    5. ci copi il contenuto, 
+    6. elimini il vecchio file
 
 <br>
 <br>
