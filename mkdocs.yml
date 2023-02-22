@@ -57,6 +57,8 @@ nav:
     - Moduli: basics/106_mod.md
     - Files: basics/107_files.md
     - CSV: basics/108_csv.md
+  - ESP32:
+    - Introduzione: ESP32/00_intro.md
   - OOP: OOP.md
   - wxPython:
     - Introduzione: wx/000_intro.md
@@ -76,7 +78,6 @@ nav:
     - Introduzione: insights/00_intro.md
     - Turtle: insights/01_turtle.md
     - PyGame: insights/02_pygame.md
-    - ESP32: insights/03_ESP32.md
     - Ambienti Virtuali: insights/11_venv.md
     - Arduino: insights/12_arduino.md
     - MySql: insights/13_mysql.md
