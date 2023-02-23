@@ -59,6 +59,9 @@ nav:
     - CSV: basics/108_csv.md
   - ESP32:
     - Introduzione: ESP32/00_intro.md
+    - Sensori: ESP32/10_sensori.md
+    - Input/Output: ESP32/20_IO.md
+    - Networking: ESP32/30_network.md
   - OOP: OOP.md
   - wxPython:
     - Introduzione: wx/000_intro.md
