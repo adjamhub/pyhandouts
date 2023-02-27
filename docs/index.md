@@ -29,7 +29,7 @@ hide:
 
 <div class="w3-row">
 
-<div class="w3-half" style="padding:0 20px 0 0">
+<div class="w3-half" style="padding:0 10px">
 <a href="basics/000_first/" class="md-button md-button--primary" style="width:230px">Python: le basi!!!</a>
 <p>In questo gruppo trovate le dispense di base sulla programmazione Python per iniziare il percorso
 di apprendimento</p>
@@ -37,35 +37,35 @@ di apprendimento</p>
 <br>
 </div>
 
-<div class="w3-half" style="padding:0 0 0 20px">
+<div class="w3-half" style="padding:0 10px">
 <a href="ESP32/00_intro/" class="md-button" style="width:230px">ESP32</a>
 <p>Programmare il microcontrollore ESP32 con MicroPython per realizzare semplici dispositivi e comunicare le misurazioni in tempo reale </p>
 <br>
 <br>
 </div>
 
-<div class="w3-half" style="padding:0 20px 0 0">
+<div class="w3-half" style="padding:0 10px">
 <a href="OOP/" class="md-button" style="width:230px">Python: OOP</a>
 <p>La base di tutta la programmazione moderna: impariamo a programmare in Python secondo il paradigma della OOP!</p>
 <br>
 <br>
 </div>
 
-<div class="w3-half" style="padding:0 0 0 20px">
+<div class="w3-half" style="padding:0 10px">
 <a href="wx/000_intro/" class="md-button" style="width:230px">GUI con wxPython</a>
 <p>Una semplice libreria Python, basata su wxWidgets per la programmazione grafica e l'implementazione di programmi basati su GUI</p>
 <br>
 <br>
 </div>
 
-<div class="w3-half" style="padding:0 20px 0 0">
+<div class="w3-half" style="padding:0 10px">
 <a href="insights/00_intro/" class="md-button" style="width:230px">Approfondimenti</a>
 <p>L'ultima sezione del sito, dedicata allo studio e agli approfondimenti di argomenti spesso "tangenti" al corso di programmazione Python</p>
 <br>
 <br>
 </div>
 
-<div class="w3-half" style="padding:0 0 0 20px">
+<div class="w3-half" style="padding:0 10px">
 <a href="about/" class="md-button" style="width:230px">about MD</a>
 <p>Questa dispensa è scritta con MarkDown. Alcuni appunti che servono soprattutto per me... per non dimenticare i comandi di base</p>
 <br>
