@@ -31,9 +31,13 @@ richiesta o di errore. Tramite la selezione di pulsanti sotto, si può
 ottenere un feedback dall'utente per assicurarsi abbia recepito il
 messaggio.
 
+<br>
+
 ``` python
 MessageDialog( parent , message , caption=TITOLO , style=STILE )
 ```
+
+<br>
 
 I pulsanti di una MessageDialog possono essere i seguenti:
 
@@ -44,13 +48,17 @@ I pulsanti di una MessageDialog possono essere i seguenti:
 | wx.YES_NO  | Pulsanti Sì e No. Combinabile con CANCEL     |  wx.ID_YES oppure wx.ID_NO  |
 | wx.HELP    | Mostra il pulsante AIUTO                     |  wx.ID_HELP                 |
 
+
 Se non si preme nessun pulsante, ad esempio uscendo dalla finestra di
 dialogo con *ESC*, oppure con l'icona di chiusura, essa ritorna il
 valore `wx.ID_NONE`.
 
+<br>
+
 Lo stile può contenere uno dei seguenti valori. Essi sono sovrapponibili
-ai pulsanti con la tecnica del "pipe" (il simbolo "|"), come per i flag
+ai pulsanti con la tecnica del "pipe" (il simbolo `|`), come per i flag
 dei Sizer.
+
 
 | Stile                | Descrizione                              |
 |----------------------| -----------------------------------------|
@@ -67,7 +75,7 @@ Vediamo qualche esempio semplice semplice:
 #  Messaggio informativo
 dial = wx.MessageDialog(None, "Ora della merenda", "Info", wx.OK | wx.CANCEL)
 if dial.ShowModal() == wx.ID_OK:
-    # ...
+    # fai merenda
 
 # Messaggio di errore
 dial = wx.MessageDialog(None, "Biscotti non disponibili", "Errore", wx.OK | wx.ICON_ERROR)
@@ -76,20 +84,20 @@ dial.ShowModal()
 # Messaggio di domanda
 dial = wx.MessageDialog(None, "Ti andrebbe un mandarino?", "Domanda", wx.YES_NO | wx.ICON_QUESTION)
 if dial.ShowModal() == wx.ID_YES:
-    # ...
-elif ...
+    # mangia il mandarino
 
 # Messaggio di avvertimento
 dial = wx.MessageDialog(None, "Troppa nutella all'orizzonte", "Esclamazione", wx.OK | wx.ICON_EXCLAMATION)
 dial.ShowModal()
 ```
 
+<br>
+
 Ovviamente va individuato il giusto momento per visualizzare una
 MessageDialog: abusare di finestre modali è considerato fastidioso e
 maleducato.
 
-
-------------------------------------------------------------------------------------------------------------------------------------------
+<br>
 
 
 **Esercizio 401**
@@ -116,11 +124,13 @@ risponde No, la finestra non si chiude.
 Visualizzare una finestra con una SpinCtrl con valori da -10 a +10. Se
 l'utente seleziona 0, appare un messaggio di avvertimento.
 
+<br>
 
 <!-- ####################################################################################################################################### -->
 ## Dir Dialogs
 
 Servono per selezionare una cartella (presente o no) nel proprio computer.
+
 
 ``` python
 # seleziona una dir e poi visualizza la scelta
@@ -131,6 +141,8 @@ if dlg.ShowModal() == wx.ID_CANCEL:
 percorso = dlg.GetPath()
 # ...
 ```
+
+<br>
 
 **Esercizio 411**
 
@@ -150,6 +162,7 @@ una DirDialog con la possibilità di selezionare cartelle non esistenti.
 Se l'utente ne seleziona una non esistente, il programma la crea (Sugg:
 ricordate il modulo Pathlib???)
 
+<br>
 
 <!-- ####################################################################################################################################### -->
 ## File Dialogs
@@ -172,6 +185,8 @@ if dlg.ShowModal() == wx.ID_CANCEL:
 
 #... il percorso scelto si ottiene con dlg.GetPath()
 ```
+
+<br>
 
 **Esercizio 421**
 
@@ -202,6 +217,7 @@ inizialmente vuota. Cliccando il pulsante si apre una FileDialog in
 modalità apri. Se l'utente seleziona un file di testo e preme OK, il
 contenuto del file viene visualizzato nell'etichetta.
 
+<br>
 
 <!-- ####################################################################################################################################### -->
 ## Colour Dialogs
@@ -220,6 +236,8 @@ if dialog.ShowModal() == wx.ID_OK:
     coloreSelezionato = datiFinali.GetColour()
     # ...
 ```
+
+<br>
 
 **Esercizio 431**
 
@@ -250,6 +268,7 @@ la scritta "Colore selezionato". Cliccando il pulsante si apre una
 ColourDialog che permette di selezionare un colore. Colorare il testo
 dell'etichetta con il colore selezionato.
 
+<br>
 
 <!-- ####################################################################################################################################### -->
 ## Font Dialogs
@@ -269,6 +288,8 @@ if dialog.ShowModal() == wx.ID_OK:
     fontSelezionato = datiFinali.GetFont()
     # ...
 ```
+
+<br>
 
 **Esercizio 441**
 
