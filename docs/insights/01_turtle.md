@@ -31,8 +31,10 @@ s = Screen()
 
 - `t.forward( ppp )`: muove la tartaruga di `ppp` pixel in avanti (dritto al suo muso)
 - `t.backward( ppp )`: muove la tartaruga di `ppp` pixel all'indietro
+
 - `t.left( ggg )`: gira la tartaruga di `ggg` gradi verso sx (in senso antiorario)
 - `t.right( ggg )`: gira la tartaruga di `ggg` gradi verso dx (in senso orario)
+- `t.setheadings( dir )`: orienta la tartaruga verso `dir`: 0 --> DX , 90 --> UP , 180 --> SX , 270 --> DOWN  
 
 ---
 
@@ -55,7 +57,7 @@ s = Screen()
 ---
 
 - `t.shape( "forma" )`: cambia la forma della tartaruga in uno fra: 
-   - `arrow`,`turtle`,`circle`,`square`,`triangle`,`classic`
+   + `arrow`,`turtle`,`circle`,`square`,`triangle`,`classic`
 - `t.shapesize( ppp )`: cambia la dimensione della tartaruga di `ppp` pixel
 
 --- 
