@@ -1,6 +1,9 @@
 site_name: Python Course
 site_author: Andrea Diamantini
-copyright: Andrea Diamantini (c) 2022-2023
+
+copyright: >
+    Andrea Diamantini (c) 2022-2023<br>
+    <a href="#__consent">Change Cookie Settings</a>
 
 # -----------------------------------------------------------------------------------------------
 theme:
@@ -34,6 +37,19 @@ theme:
   plugins:
     - search:
         lang: it
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >
+      Questo sito memorizza alcuni cookies solo per riconoscere un visitatore 
+      che non è alla sua prima visita e alcune preferenze, come il tema di visualizzazione
+      della pagina selezionato.<br>
+      Se non acconsenti, questa finestra riapparirà ogni volta che riapri il sito.<br>
+      Se vuoi cambiare le tue scelte, in fondo alla pagina trovi un link per modificarle ;)
+    actions:
+     - accept
+     - reject
 
 extra_css:
 - stylesheets/extra.css
