@@ -37,7 +37,7 @@ else:
 Alcune considerazioni banali:
 
 - la funzione si chiama "isPositive"
-- la dichiarazione della funzione inizia con la clausola def
+- la dichiarazione della funzione inizia con la clausola `def`
 - eventuali parametri della funzione vanno fra parentesi tonde
 - questa funzione prende un parametro di tipo float e ritorna un valore booleano
 - **PRIMA** la funzione si dichiara (una volta), **POI** si può usare (quante volte ti pare)
@@ -241,7 +241,9 @@ Per fortuna sono qui sotto :)
 **Esercizio 501**
 
 Scrivere una funzione che calcola l'area di un rettangolo e una che ne
-calcola il perimetro, date la base e l'altezza.
+calcola il perimetro, date la base e l'altezza.<br>
+Chiedere all'utente di inserire i valori per base e altezza e calcolare area e perimetro del rettangolo, utilizzando le 
+funzioni implementate.
 
 ------------------------------------------------------------------------------------------------
 
@@ -249,7 +251,9 @@ calcola il perimetro, date la base e l'altezza.
 
 Scrivere una funzione che calcola l'area di un cerchio e una che
 calcola la sua circonferenza. Entrambe richiedono (ovviamente) come
-parametro il raggio del cerchio.
+parametro il raggio del cerchio.<br>
+Chiedere all'utente di inserire un valore per il raggio e procedere a visualizzare area e circonferenza del cerchio relativo, calcolate utilizzando le 
+funzioni implementate.
 
 ------------------------------------------------------------------------------------------------
 
@@ -291,8 +295,9 @@ Scrivere una funzione che, dati due numeri interi positivi come parametri, ritor
 
 **Esercizio 507: carattere**
 
-Scrivere una funzione che, dato un carattere, ritorna la stringa
-"vocale", "consonante", "cifra" a seconda del carattere passato.
+Scrivere una funzione chiamata *valutaCarattere* che prende una stringa come parametro. Se la stringa è formata da più di
+un carattere la funzione ritorna la scritta "errore". Se è un solo carattere, ritorna la stringa
+"vocale", "consonante", "cifra" , "altro" a seconda del carattere passato.
 
 ------------------------------------------------------------------------------------------------
 
