@@ -339,8 +339,8 @@ print( "Cartella corrente:", cur )
 
 # la HOME utente
 # "C:\Users\utente" su Windows, "/home/utente" su Mac/Linux
-home = Path.home()
-print( "Home dir:", home )
+homePath = Path.home()
+print( "Home dir:", homePath )
 
 # il percorso del Desktop
 # il simbolo / congiunge i percorsi
@@ -350,8 +350,9 @@ print( "Il percorso del Desktop:", desktop )
 
 
 Negli esempi trattati sopra sono evidenziate alcune funzionalità:
-    • un percorso può essere descritto tramite una stringa, con il simbolo "/" (slash) come separatore di percorsi
-    • Il Path chiamato "percorso" indica una cartella "ciao" nella home utente che non per forza deve esistere… anzi tra le funzionalità dell’oggetto Path vedremo proprio questa cosa di verificare se un percorso esiste ed eventualmente crearlo
+
+  - un percorso può essere descritto tramite una stringa, con il simbolo `/` (slash) come separatore di percorsi
+  - Un Path indica un percorso che non deve per forza deve esistere... anzi tra le funzionalità di Path c'è quella di verificare se un percorso esiste ed eventualmente crearlo
 
 !!! tip "I percorsi delle cartelle principali"
 
@@ -405,8 +406,10 @@ L’oggetto Path espone fra le altre le seguenti funzioni:
 
 | Funzione              | Descrizione                                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------|
+| `cwd()`               | Ritorna il percorso della cartella corrente. Restituisce un Path.                                                    |
 | `exists()`            | Verifica se il percorso attuale esiste oppure no. Restituisce un valore boolean.                                     |
 | `glob(pattern)`       | Ritorna la lista di tutti i file e le cartelle presenti nel Path e che rispettano il pattern.                        |
+| `home()`              | Ritorna il percorso della cartella utente (la `home`, vedi sopra). Restituisce un Path.                              |
 | `is_dir()`            | Ritorna True se il path attuale è una cartella, False altrimenti.                                                    |
 | `is_file()`           | Ritorna True se il path attuale è un file, False altrimenti.                                                         |
 | `iterdir()`           | Ritorna la lista di tutti i file presenti nel Path.                                                                  |
@@ -416,8 +419,19 @@ L’oggetto Path espone fra le altre le seguenti funzioni:
 | `rmdir()`             | Rimuove la cartella abbinata al percorso del Path (solo se la cartella è vuota).                                     | 
 | `unlink()`            | Rimuove un file (solo se è un file). <br> **Attenti a quello che fate, per favore!!!**                               |
 
+!!! note
 
-Vediamo alcuni esempi per capire il funzionamento delle funzioni più "ostiche": ovviamente ognuno di questi esempi dovrebbe iniziare con l’import dell’oggetto Path dalla libreria pathlib.
+    Per vedere **tutte** le funzioni offerte dall'oggetto Path:
+    
+    ``` py
+    >>> dir(Path)
+    ```
+
+    (Ma questo lo sapevate già...)
+
+
+Vediamo alcuni esempi per capire il funzionamento delle funzioni più "ostiche": 
+ovviamente ognuno di questi esempi dovrebbe iniziare con l’import dell’oggetto Path dalla libreria pathlib.
 
 
 ``` python
@@ -446,7 +460,7 @@ else:
 **Esempio 2: elenco dei file *.txt presenti nel Desktop dell’utente "pippo"**
 
 ``` python
-desk = Path("C:/Users/pippo/Desktop") # equivalente a: Path.home() / "Desktop"
+desk = Path.home() / "Desktop"
 for f in desk.glob("*.txt"):
     print(f, "(file)")
 ```
