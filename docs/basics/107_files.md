@@ -541,45 +541,51 @@ Scrivere un programama che elenca tutto il contenuto del proprio Desktop e verif
 
 **Esercizio 732**
 
-Scrivere un programma per creare sul Desktop la cartella "prova" e creare all'interno di essa il file "pippo.txt" in cui scrivere una parola a scelta dell’utente.
+Scrivere un programma per creare sul Desktop una cartella di nome "prova".<br>
+All'interno di essa dovrà essere inserito un file di nome "pippo.txt".<br>
+Dentro al file "pippo.txt" ci deve essere inserita una frase qualsiasi a scelta dell'utente.<br>
 
 ------------------------------------------------------------
 
 **Esercizio 733**
 
-Scrivere un programma per rinominare il file precedentemente creato da "pippo.txt" a "ciccio.txt".
+Creare sul proprio Desktop un file di nome "gatto".
+Chiedere all'utente di inserire una parola (ad esempio: "cane") e rinominare il file precedentemente creato da "gatto" alla parola inserita dall'utente.
+
+------------------------------------------------------------
+
+**Esercizio 733 bis**
+
+Chiedere all'utente se vuole eliminare il file dell'esercizio precedente. Se sì, eliminarlo. Se il file non è più presente, comunicare all'utente
+che il file non è più presente sul Desktop.
 
 ------------------------------------------------------------
 
 **Esercizio 734**
 
-Scrivere un programma che chiede all'utente di scegliere un nome per un file (ad esempio "pluto") e che crea sul Desktop il file con il nome scelto dall'utente
-ed estensione txt (nel nostro esempio, il file "pluto.txt").
+Scrivere un programma creare una cartella di nome "cartella" sul Desktop e al suo interno un file vuoto di nome "file".
+
+Procedere ad eliminare la cartella "cartella", verificando che è impossibile farlo se prima non si elimina ogni file al suo interno.
 
 ------------------------------------------------------------
 
 **Esercizio 735**
 
-Scrivere un programma per eliminare la cartella "prova" sul Desktop precedentemente creata, eliminando prima i file al suo interno e infine la cartella.
+Creare sul Desktop la cartella “esercizio”.
+Al suo interno generare un file chiamato “numeri.txt” contenente 10 numeri casuali compresi fra 1 e 100. I numeri vanno scritti in colonna (uno sotto l’altro).
+
+Creare dentro la cartella “esercizio” un file chiamato “sommaPari” contenente la somma dei numeri pari contenuti nel file “numeri.txt”.
 
 ------------------------------------------------------------
 
 **Esercizio 736**
 
-Creare sul Desktop la cartella “esercizio”.
-Al suo interno generare un file chiamato “numeri.txt” contenente 10 numeri casuali compresi fra 1 e 100. I numeri vanno scritti in colonna (uno sotto l’altro).
-Creare dentro la cartella “esercizio” un file chiamato “sommaPari” contenente la somma dei numeri pari contenuti nel file “numeri.txt”.
-
-------------------------------------------------------------
-
-**Esercizio 737**
-
-Chiedere all'utente di inserire una stringa.
+Chiedere all'utente di inserire una stringa.<br>
 Visualizzare l’elenco di tutti i file con estensione `txt` oppure `py` presenti nella propria cartella Downloads al cui interno è presente la stringa inserita.
 
 ------------------------------------------------------------
 
-**Esercizio 738**
+**Esercizio 737**
 
 Creare un programma per ripulire la cartella dei Downloads.<br>
 Prima visualizza la stringa: *"Nella cartella Downloads ci sono TOT files. Vuoi cancellarli?" (T) Sì, tutti. (U) guardiamoli uno per volta (N) No* <br>
@@ -589,7 +595,7 @@ Se seleziona U, per ogni file visualizza il nome e chiedi: "Vuoi cancellarlo? (S
 
 ------------------------------------------------------------
 
-**Esercizio 739 (Sposta Files)**
+**Esercizio 738 (Sposta Files)**
 
 Crea sul Desktop una cartella chiamata ESERCIZI. Cerca i files Python presenti nella tua cartella Documenti e spostali nella cartella ESERCIZI.
 
@@ -601,6 +607,7 @@ Crea sul Desktop una cartella chiamata ESERCIZI. Cerca i files Python presenti n
     4. crei il file con lo stesso nome nella nuova cartella, 
     5. ci copi il contenuto, 
     6. elimini il vecchio file
+
 
 <br>
 <br>
