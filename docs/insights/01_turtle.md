@@ -34,7 +34,9 @@ s = Screen()
 
 - `t.left( ggg )`: gira la tartaruga di `ggg` gradi verso sx (in senso antiorario)
 - `t.right( ggg )`: gira la tartaruga di `ggg` gradi verso dx (in senso orario)
-- `t.setheadings( dir )`: orienta la tartaruga verso `dir`: 0 --> DX , 90 --> UP , 180 --> SX , 270 --> DOWN  
+- `t.setheading( dir )`: orienta la tartaruga verso `dir`: 
+
+    - `0` --> destra , `90` --> alto , `180` --> sinistra , `270` --> basso  
 
 ---
 
@@ -56,8 +58,10 @@ s = Screen()
 
 ---
 
-- `t.shape( "forma" )`: cambia la forma della tartaruga in uno fra: 
-   + `arrow`,`turtle`,`circle`,`square`,`triangle`,`classic`
+- `t.shape( forma )`: cambia la forma della tartaruga in uno fra: 
+   
+    - `"arrow"` , `"turtle"` , `"circle"` , `"square"` , `"triangle"` , `"classic"`
+
 - `t.shapesize( ppp )`: cambia la dimensione della tartaruga di `ppp` pixel
 
 --- 
