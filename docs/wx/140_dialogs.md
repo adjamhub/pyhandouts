@@ -50,13 +50,13 @@ I pulsanti di una MessageDialog possono essere i seguenti:
 
 
 Se non si preme nessun pulsante, ad esempio uscendo dalla finestra di
-dialogo con *ESC*, oppure con l'icona di chiusura, essa ritorna il
+dialogo con `ESC`, oppure con l'icona di chiusura, essa ritorna il
 valore `wx.ID_NONE`.
 
 <br>
 
 Lo stile può contenere uno dei seguenti valori. Essi sono sovrapponibili
-ai pulsanti con la tecnica del "pipe" (il simbolo `|`), come per i flag
+ai pulsanti con la tecnica del *pipe* (il simbolo `|`), come per i flag
 dei Sizer.
 
 
@@ -93,9 +93,11 @@ dial.ShowModal()
 
 <br>
 
-Ovviamente va individuato il giusto momento per visualizzare una
-MessageDialog: abusare di finestre modali è considerato fastidioso e
-maleducato.
+!!! warning "Attenzione!"
+
+    Ovviamente va individuato il giusto momento per visualizzare una
+    MessageDialog: abusare di finestre modali è considerato fastidioso e
+    maleducato.
 
 <br>
 
@@ -223,7 +225,7 @@ contenuto del file viene visualizzato nell'etichetta.
 ## Colour Dialogs
 
 Le finestre di dialogo per la selezione dei colori si utilizzano tramite
-la loro classe ausiliaria [wx.ColourData]{.title-ref} che mantiene le
+la loro classe ausiliaria `wx.ColourData` che mantiene le
 informazioni iniziali necessarie per la selezione dei colori e (dopo
 l'esecuzione della dialog) il colore selezionato dall'utente.
 
@@ -231,10 +233,11 @@ l'esecuzione della dialog) il colore selezionato dall'utente.
 # ...
 datiIniziali = wx.ColourData()
 dialog = wx.ColourDialog(self, datiIniziali)
-if dialog.ShowModal() == wx.ID_OK:
-    datiFinali = dialog.GetColourData()
-    coloreSelezionato = datiFinali.GetColour()
-    # ...
+if dialog.ShowModal() != wx.ID_OK:
+    return
+datiFinali = dialog.GetColourData()
+coloreSelezionato = datiFinali.GetColour()
+# ...
 ```
 
 <br>
@@ -283,10 +286,12 @@ frase mi sembra di averla già sentita...)
 # ...
 datiIniziali = wx.FontData()
 dialog = wx.FontDialog(self, datiIniziali)
-if dialog.ShowModal() == wx.ID_OK:
-    datiFinali = dialog.GetFontData()
-    fontSelezionato = datiFinali.GetFont()
-    # ...
+if dialog.ShowModal() != wx.ID_OK:
+    return
+
+datiFinali = dialog.GetFontData()
+fontSelezionato = datiFinali.GetFont()
+# ...
 ```
 
 <br>
