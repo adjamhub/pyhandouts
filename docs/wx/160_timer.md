@@ -88,24 +88,24 @@ class Esempio(wx.Frame):
 
         panel = wx.Panel(self)
         vbox = wx.BoxSizer(wx.VERTICAL)
-        
+
         self.barra = wx.Gauge(panel, range=10)
-        vbox.Add(self.barra, proportion=1, flag=wx.ALL|wx.EXPAND, border=5)
-        
+        vbox.Add(self.barra, proportion=0, flag=wx.ALL|wx.EXPAND, border=10)
+
         hbox = wx.BoxSizer(wx.HORIZONTAL)
 
         pulsanteStart = wx.Button(panel, label="START")
         pulsanteStart.Bind(wx.EVT_BUTTON, self.OnOk)
-        hbox.Add(pulsanteStart, proportion=1, flag=wx.ALL, border=5)
-        
+        hbox.Add(pulsanteStart, proportion=1, flag=wx.ALL|wx.EXPAND, border=5)
+
         pulsanteStop = wx.Button(panel, label="STOP")
         pulsanteStop.Bind(wx.EVT_BUTTON, self.OnStop)
-        hbox.Add(pulsanteStop, proportion=1, flag=wx.ALL, border=5)
-        
+        hbox.Add(pulsanteStop, proportion=1, flag=wx.ALL|wx.EXPAND, border=5)
+
         vbox.Add(hbox, proportion=1, flag=wx.ALL|wx.EXPAND, border=5)
         panel.SetSizer(vbox)
         self.SetMinSize( (600,200) )
-        
+
     def OnTimer(self, event):
         self.conta += 1
         if self.conta > 10:
