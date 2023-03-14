@@ -137,7 +137,7 @@ Servono per selezionare una cartella (presente o no) nel proprio computer.
 ``` python
 # seleziona una dir e poi visualizza la scelta
 dlg = wx.DirDialog(None, 'Seleziona la cartella delle immagini')
-if dlg.ShowModal() == wx.ID_CANCEL:
+if dlg.ShowModal() != wx.ID_OK:
     return
 
 percorso = dlg.GetPath()
@@ -171,21 +171,26 @@ ricordate il modulo Pathlib???)
 
 Analogamente alle DirDialog, servono per selezionare un file (esistente o no) nel proprio computer.
 
+**ESEMPIO 1: SELEZIONA FILE DA APRIRE**
+
 ``` python
-# ESEMPIO 1: SELEZIONA FILE DA APRIRE
 dlg = wx.FileDialog(None, "Apri File", style=wx.FD_OPEN)
 if dlg.ShowModal() == wx.ID_CANCEL:
     return
 
 #... il percorso scelto si ottiene con dlg.GetPath()
-#...
+percorso = dlg.GetPath()
+```
 
-# ESEMPIO 2: SELEZIONA PERCORSO FILE SU CUI SALVARE
+**ESEMPIO 2: SELEZIONA PERCORSO FILE SU CUI SALVARE**
+
+``` python
 dlg = wx.FileDialog(None, "Salva File", style=wx.FD_SAVE)
 if dlg.ShowModal() == wx.ID_CANCEL:
     return
 
 #... il percorso scelto si ottiene con dlg.GetPath()
+percorso = dlg.GetPath()
 ```
 
 <br>
@@ -279,7 +284,7 @@ dell'etichetta con il colore selezionato.
 Le finestre di dialogo per la selezione dei font si utilizzano tramite
 la loro classe ausiliaria `wx.FontData` che mantiene le
 informazioni iniziali necessarie per la selezione dei font e (dopo
-l'esecuzione della dialog) il colore selezionato dall'utente. (Questa
+l'esecuzione della dialog) il font selezionato dall'utente. (Questa
 frase mi sembra di averla già sentita...)
 
 ``` python
@@ -290,7 +295,7 @@ if dialog.ShowModal() != wx.ID_OK:
     return
 
 datiFinali = dialog.GetFontData()
-fontSelezionato = datiFinali.GetFont()
+fontSelezionato = datiFinali.GetChosenFont()
 # ...
 ```
 
