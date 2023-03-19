@@ -26,6 +26,12 @@ al meglio il funzionamento.
 <!-- ####################################################################################################################################### -->
 ## Message Dialogs
 
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.MessageDialog.html" target="_blank">wx.MessageDialog</a>**
+> 
+> Finesta di dialogo per un messaggio, un avvertimento o una domanda da porre all'utente.
+
+
 Sevono per inviare un messaggio esclamativo, di avvertimento, di
 richiesta o di errore. Tramite la selezione di pulsanti sotto, si può
 ottenere un feedback dall'utente per assicurarsi abbia recepito il
@@ -70,6 +76,7 @@ dei Sizer.
 
 
 Vediamo qualche esempio semplice semplice:
+
 
 ``` python
 #  Messaggio informativo
@@ -131,6 +138,12 @@ l'utente seleziona 0, appare un messaggio di avvertimento.
 <!-- ####################################################################################################################################### -->
 ## Dir Dialogs
 
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.DirDialog.html" target="_blank">wx.DirDialog</a>**
+> 
+> Finesta di dialogo per selezionare una cartella.
+
+
 Servono per selezionare una cartella (presente o no) nel proprio computer.
 
 
@@ -168,6 +181,12 @@ ricordate il modulo Pathlib???)
 
 <!-- ####################################################################################################################################### -->
 ## File Dialogs
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.FileDialog.html" target="_blank">wx.FileDialog</a>**
+> 
+> Finesta di dialogo per la selezione file, in apertura o salvataggio.
+
 
 Analogamente alle DirDialog, servono per selezionare un file (esistente o no) nel proprio computer.
 
@@ -229,6 +248,12 @@ contenuto del file viene visualizzato nell'etichetta.
 <!-- ####################################################################################################################################### -->
 ## Colour Dialogs
 
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.ColourDialog.html" target="_blank">wx.ColourDialog</a>**
+> 
+> Finesta di dialogo per selezionare un colore dalla tavolozza nativa del SO.
+
+
 Le finestre di dialogo per la selezione dei colori si utilizzano tramite
 la loro classe ausiliaria `wx.ColourData` che mantiene le
 informazioni iniziali necessarie per la selezione dei colori e (dopo
@@ -240,6 +265,7 @@ datiIniziali = wx.ColourData()
 dialog = wx.ColourDialog(self, datiIniziali)
 if dialog.ShowModal() != wx.ID_OK:
     return
+
 datiFinali = dialog.GetColourData()
 coloreSelezionato = datiFinali.GetColour()
 # ...
@@ -280,6 +306,12 @@ dell'etichetta con il colore selezionato.
 
 <!-- ####################################################################################################################################### -->
 ## Font Dialogs
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.FontDialog.html" target="_blank">wx.FontDialog</a>**
+> 
+> Finesta di dialogo per selezionare un font dalla finestra nativa del SO.
+
 
 Le finestre di dialogo per la selezione dei font si utilizzano tramite
 la loro classe ausiliaria `wx.FontData` che mantiene le
