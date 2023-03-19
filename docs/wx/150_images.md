@@ -1,29 +1,19 @@
 # Immagini & Icone
 
-Per imparare a gestire, visualizzare, modificare immagini con wxPython
-abbiamo bisogno di discutere alcune caratteristiche della libreria e di
-chiarire alcuni concetti relativi alla OOP.
+wxPython gestisce le immagini a vari livelli a seconda di quello che ci vuoi fare:
 
-Vedremo come sia possibile in maniera semplice individuare alcune
-modalità di lavoro con le immagini con wxPython a seconda che si voglia:
+1. Se vuoi visualizzare una o più immagini, magari con piccole funzionalità tipo la scala di grigi o il copia e incolla... il capitolo Immagini è per te!!!
 
-- Visualizzare una semplice immagine di un certo formato nella propria applicazione
+2. Se vuoi visualizzare una icona da abbinare ad un pulsante, un menù o una toolbar...  vai al capitolo Icone!!! 
 
-- Visualizzare una icona da abbinare ad un pulsante o come presto vedremo ad una voce di menù 
-  o ad una barra degli strumenti
+3. Se vuoi realizzare un software per l'elaborazione grafica delle immagini (tipo PhotoShop)... sei nel posto sbagliato!!!
 
-- Creare un software per elaborare le immagini, in maniera temporanea (solo durante la visualizzazione) 
-  o in maniera permanente, salvando quindi le modifiche fatte all'immagine.
 
 !!! warning "Attenzione!"
 
-    Per elaborare le immagini e supportare il numero più alto possibile di
-    formati per le immagini, la libreria wxPython si appoggia sulla libreria
-    *Pillow* (Python Image Library). Questa dovrebbe essere stata installata
-    durante l'installazione di wxPython. Se vi accorgete di qualche
-    problema legato ad essa e pensate che per qualche motivo manchi nel
-    vostro sistema, aprite l'interfaccia di gestione dei pacchetti di Thonny e
-    installate la librerie `pillow`.
+    Per l'elaborazione delle immagini, wxPython si appoggia sulla libreria `pillow` (Python Image Library). 
+    
+    Verifica che sia correttamente installata, ad esempio tramite l'interfaccia di gestione dei pacchetti di Thonny.
   
 
 <!-- ############################################################################################################################# -->
