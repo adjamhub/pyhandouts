@@ -5,24 +5,6 @@
 
 --------------------------------------------------------------------
 
-[wx.Bitmap](https://docs.wxpython.org/wx.Bitmap.html)
-
-:   Classe per la gestione delle immagini.
-
-[wx.StaticBitmap](https://docs.wxpython.org/wx.StaticBitmap.html)
-
-:   Classe per la visualizzazione delle immagini.
-
-[wx.Image](https://docs.wxpython.org/wx.Image.html)
-
-:   Classe per la manipolazione delle immagini.
-
-[wx.ArtProvider](https://docs.wxpython.org/wx.ArtProvider.html)
-
-:   Classe per individuare file multimediali predefiniti.
-
---------------------------------------------------------------------
-
 [wx.Timer](https://docs.wxpython.org/wx.Timer.html)
 
 :   Timer.

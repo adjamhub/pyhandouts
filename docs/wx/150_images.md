@@ -19,6 +19,12 @@ wxPython gestisce le immagini a vari livelli a seconda di quello che ci vuoi far
 <!-- ############################################################################################################################# -->
 ## Immagini
 
+> **Documentazione ufficiale classi per le immagini:**
+> 
+> **<a href="https://docs.wxpython.org/wx.Bitmap.html" target="_blank">wx.Bitmap</a>**: Classe per la gestione delle immagini (OOP).<br>
+> **<a href="https://docs.wxpython.org/wx.StaticBitmap.html" target="_blank">wx.StaticBitmap</a>**: Classe grafica per la visualizzazione delle immagini.<br>
+> **<a href="https://docs.wxpython.org/wx.Image.html" target="_blank">wx.Image</a>**: Classe per la manipolazione delle immagini (OOP).<br>
+
 
 Cominciamo la nostra disamina sulle classi wxPython per la
 visualizzazione e la manipolazione delle immagini. Le prime classi che
@@ -129,6 +135,12 @@ selezionata.
 
 <!-- ############################################################################################################################# -->
 ## Icone
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.ArtProvider.html" target="_blank">wx.ArtProvider</a>**
+> 
+> Classe per la gestione dei file multimediali predefiniti del SO (immagini, icone, video, suoni, etc..)
+
 
 Se la necessità relativa alle immagini è quella di visualizzare le icone
 nei pulsanti (e nei menù e nelle barre degli strumenti, come impareremo
