@@ -102,9 +102,8 @@ dial.ShowModal()
 
 !!! warning "Attenzione!"
 
-    Ovviamente va individuato il giusto momento per visualizzare una
-    MessageDialog: abusare di finestre modali è considerato fastidioso e
-    maleducato.
+    Ovviamente va individuato il giusto momento per visualizzare una MessageDialog: 
+    **abusare di finestre modali è considerato fastidioso e maleducato.**
 
 <br>
 
@@ -153,6 +152,7 @@ dlg = wx.DirDialog(None, 'Seleziona la cartella delle immagini')
 if dlg.ShowModal() != wx.ID_OK:
     return
 
+# la stringa che contiene il percorso della cartella selezionata
 percorso = dlg.GetPath()
 # ...
 ```
@@ -197,7 +197,7 @@ dlg = wx.FileDialog(None, "Apri File", style=wx.FD_OPEN)
 if dlg.ShowModal() == wx.ID_CANCEL:
     return
 
-#... il percorso scelto si ottiene con dlg.GetPath()
+# la stringa che contiene il percorso della cartella selezionata
 percorso = dlg.GetPath()
 ```
 
@@ -208,7 +208,7 @@ dlg = wx.FileDialog(None, "Salva File", style=wx.FD_SAVE)
 if dlg.ShowModal() == wx.ID_CANCEL:
     return
 
-#... il percorso scelto si ottiene con dlg.GetPath()
+# la stringa che contiene il percorso della cartella selezionata
 percorso = dlg.GetPath()
 ```
 
@@ -249,9 +249,10 @@ contenuto del file viene visualizzato nell'etichetta.
 ## Colour Dialogs
 
 
-> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.ColourDialog.html" target="_blank">wx.ColourDialog</a>**
+> **Documentazione ufficiale classi per la gestione dei colori:**
 > 
-> Finesta di dialogo per selezionare un colore dalla tavolozza nativa del SO.
+> **<a href="https://docs.wxpython.org/wx.ColourDialog.html" target="_blank">wx.ColourDialog</a>**: Finesta di dialogo per selezionare un colore dalla tavolozza nativa del SO.<br>
+> **<a href="https://docs.wxpython.org/wx.ColourData.html" target="_blank">wx.ColourData</a>**: Informazioni sui colori in utilizzo su una applicazione.<br>
 
 
 Le finestre di dialogo per la selezione dei colori si utilizzano tramite
@@ -308,9 +309,11 @@ dell'etichetta con il colore selezionato.
 ## Font Dialogs
 
 
-> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.FontDialog.html" target="_blank">wx.FontDialog</a>**
+> **Documentazione ufficiale classi per i font:**
 > 
-> Finesta di dialogo per selezionare un font dalla finestra nativa del SO.
+> **<a href="https://docs.wxpython.org/wx.FontDialog.html" target="_blank">wx.FontDialog</a>**: Finesta di dialogo per selezionare un font dalla finestra nativa del SO.<br>
+> **<a href="https://docs.wxpython.org/wx.FontData.html" target="_blank">wx.FontData</a>**: Informazioni sui Font in utilizzo su una applicazione.<br>
+
 
 
 Le finestre di dialogo per la selezione dei font si utilizzano tramite

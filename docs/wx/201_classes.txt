@@ -1,54 +1,7 @@
-# Classi wxPython
-
-La documentazione ufficiale della libreria **wxPython** è disponibile
-online (in versione integrale) all'indirizzo
-<https://docs.wxpython.org/>. Se volete lavorare consultando quella e
-magari cercando qualche tutorial date un occhio anche allo [wiki del
-sito wxpython](https://wiki.wxpython.org).
-
-Qui sotto trovate i link diretti alla documentazione relativa alle
-classi che abbiamo utilizzato durante il corso. Le trovate elencate con
-la sintassi `MODULO.CLASSE`. <br>
-Nella maggior parte dei casi si tratterà di classi del modulo `wx`, il modulo di base della
-libreria.
-
-Buona lettura!
 
 > **Documentazione ufficiale <a href="https://docs.wxpython.org/wx..html" target="_blank">wx.</a>**
 > 
 > 
-
---------------------------------------------------------------------
-
-[wx.MessageDialog](https://docs.wxpython.org/wx.MessageDialog.html)
-
-:   Finestra di dialogo per messaggi generici
-
-[wx.DirDialog](https://docs.wxpython.org/wx.DirDialog.html)
-
-:   Finestra di dialogo per selezione cartelle
-
-[wx.FileDialog](https://docs.wxpython.org/wx.FileDialog.html)
-
-:   Finestra di dialogo per selezione files
-
-[wx.ColourDialog](https://docs.wxpython.org/wx.ColourDialog.html)
-
-:   Finestra di dialogo per selezione colori
-
-[wx.ColourData](https://docs.wxpython.org/wx.ColourData.html)
-
-:   Classe ausiliaria alla ColourDialog. Contiene le informazioni
-    necessarie ad essa.
-
-[wx.FontDialog](https://docs.wxpython.org/wx.FontDialog.html)
-
-:   Finestra di dialogo per selezione font
-
-[wx.FontData](https://docs.wxpython.org/wx.FontData.html)
-
-:   Classe ausiliaria alla FontDialog. Contiene le informazioni
-    necessarie ad essa.
 
 --------------------------------------------------------------------
 
