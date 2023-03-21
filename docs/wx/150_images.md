@@ -124,7 +124,7 @@ un ID e tramite quello possiamo creare automaticamente una Bitmap.
 
 ``` python
 # la variabile "bitmap" è un oggetto della classe wx.Bitmap
-bitmap = wx.ArtProvider.GetBitmap(wx.UN_ID_FRA_QUELLI_ELENCATI_SOTTO)
+bitmap = wx.ArtProvider.GetBitmap( client = wx.UN_ID_FRA_QUELLI_ELENCATI_SOTTO , size = DefaultSize )
 ```
 
 Vediamo l'elenco delle icone automaticamente supportate (in rigoroso ordine sparso):
@@ -147,9 +147,41 @@ Vediamo l'elenco delle icone automaticamente supportate (in rigoroso ordine spar
 | wx.ART_GO_HOME      | wx.ART_FILE_OPEN      | wx.ART_GOTO_FIRST         | wx.ART_FILE_SAVE       |
 
 
-Per finire, vediamo un esempio di codice in cui inseriamo un icona su un pulsante.
+E' inoltre possibile aggiungere una descrizione della dimensione voluta dell'icona. In mancanza di questa, il parametro predefinito `wx.DefaultSize` impone
+la dimensione originale dell'icona.
+
+Vediamo i valori possibili:
 
 
+| Tipi ArtProvider ID   | Descrizione                                |
+|-----------------------|--------------------------------------------|
+| wx.ART_TOOLBAR        | Icone per le toolbar (media dimensione)    |
+| wx.ART_MENU           | Icone per i menu (piccole)                 |
+| wx.ART_BUTTON         | icone per i pulsanti (grandine)            |
+| wx.ART_FRAME_ICON     | Icone per ... Boh!                         |
+| wx.ART_CMN_DIALOG     | Icone per le finestre di dialogo (medie)   |
+| wx.ART_HELP_BROWSER   | Icone per i messaggi di aiuto (grandine)   |
+| wx.ART_MESSAGE_BOX    | Icone per le message box (medie)           |
+| wx.ART_OTHER          | Altre icone (Default)                      |
+
+
+Per finire, vediamo un pezzettino di codice in cui inseriamo un icona su un pulsante.
+
+``` python
+# ...
+pulsanteIndietro = wx.Button(panel)
+pulsanteIndietro.SetLabel("Precedente")
+pulsanteIndietro.SetBitmap( wx.ArtProvider.GetBitmap( wx.ART_GO_BACK , wx.ART_MENU ) )
+# ...
+```
+
+Per ottenere questo:
+
+![Pulsante Indietro](images/pulsanteIndietro.png "Pulsante Indietro")
+
+
+Spero sia tutto chiaro!!!<br>
+Chiedetemi pure... sarò lieto di farvi fare qualche esercizio di comprensione :smile:
 
 <br>
 <br>
