@@ -22,89 +22,59 @@ wxPython gestisce le immagini a vari livelli a seconda di quello che ci vuoi far
 > **Documentazione ufficiale classi per le immagini:**
 > 
 > **<a href="https://docs.wxpython.org/wx.Bitmap.html" target="_blank">wx.Bitmap</a>**: Classe per la gestione delle immagini (OOP).<br>
-> **<a href="https://docs.wxpython.org/wx.StaticBitmap.html" target="_blank">wx.StaticBitmap</a>**: Classe grafica per la visualizzazione delle immagini.<br>
 > **<a href="https://docs.wxpython.org/wx.Image.html" target="_blank">wx.Image</a>**: Classe per la manipolazione delle immagini (OOP).<br>
+> **<a href="https://docs.wxpython.org/wx.StaticBitmap.html" target="_blank">wx.StaticBitmap</a>**: Classe grafica per la visualizzazione delle immagini.<br>
 
 
-Cominciamo la nostra disamina sulle classi wxPython per la
-visualizzazione e la manipolazione delle immagini. Le prime classi che
-voglio introdurvi a proposito sono quelle che permettono di gestire le
-immagini: badate bene, *NON* quelle con cui potrete visualizzarle sulla
-vostra applicazione, ma quelle tramite le quali potrete gestire un
-**Oggetto Immagine** eventualmente manipolarlo (ad esempio, modificare
-la dimensione, il colore, il livello di trasparenza, etc..) e affidarlo
-ad un oggetto per la visualizzazione all'interno della nostra
-applicazione!
+wxPython gestisce l'interazione con le immagini tramite l'ausilio di 3 classi principali. 
 
-Se avete un file immagine (ad esempio ne conoscete il percorso nel
-vostro sistema) potete gestirlo con la classe **wx.Bitmap**. Il suo
-costruttore più utilizzato è quello che segue:
+La prima classe si chiama `wx.Bitmap` e una sua istanza rappresenta il cosiddetto **oggetto immagine**. Questa classe si occupa
+della relazione fra il file che contiene l'immagine, da qualche parte nel filesystem e un oggetto immagine della classe wx.
 
-``` python
-wx.Bitmap(self, filepath, type=BITMAP_TYPE_ANY)
-```
+Se vogliamo manipolare questa immagine dobbiamo generare, a parte da una Bitmap, il corrispondente oggetto `wx.Image`.
+Un oggetto di questa classe permette di manipolare un oggetto immagine (**non** il file... l'oggetto! La rappresentazione logica della stessa).
+Possiamo modificare cose come la dimensione, il colore, renderla in scala di grigi, abilitarla o disabilitarla, modificare il livello di trasparenza, etc...
+Fatto questo possiamo ricreare una Bitmap a partire da una Image modificata!
 
-Quindi immaginiamo di avere una immagine nella stessa cartella dove è
-presente il nostro script Python, ad esempio il file "foto.jpg":
+L'ultimo oggetto, l'unico con capacità grafiche, si chiama `wx.StaticBitmap`: è l'oggetto grafico da inserire in uno dei nostri layout e da abbinare alla Bitmap
+da visualizzare. Facile!!!
 
-``` python
-oggettoImmagine = wx.Bitmap("foto.jpg")
-```
+Partiamo da qualche esempio ben commentato per prendere confidenza con il codice!
 
-Se vuoi semplicemente visualizzare l'immagine, per gestirla non ti
-serve altro! Ti manca solo una classe per posizionare l'immagine nella
-tua GUI: la classe **wx.StaticBitmap**
+
+**Esempio 1: visualizzare una immagine**
+
+Il file `esempio1.py`, che contiene questo codice è nella stessa cartella del file `foto.jpg` che andremo a visualizzare.
 
 ``` python
 # ...
 panel = wx.Panel(self)
+
 oggettoImmagine = wx.Bitmap("foto.jpg")
 widgetImageViewer = wx.StaticBitmap(panel, bitmap=oggettoImmagine) 
 # ...
 ```
 
-Nel mio esempio l'ho fatta un pò semplice, ma la realtà non è molto diversa da così. 
-Ovviamente questo codice funziona bene se già sapete all'inizio dove si trova l'immagine e volete visualizzarla all'avvio.
-Se volete visualizzare un'immagine selezionata dall'utente dopo che il
-vostro programma è stato lanciato, allora create la Bitmap quando sapete
-il percorso e lo abbinate alla StaticBitmap nel layout tramite la funzione `SetBitmap()`.
+**Esempio 2: visualizzare una immagine in scala di grigi**
 
-Se hai propositi bellicosi nei confronti della tua immagine (ovvero se
-pensi di modificarne dimensione, colore, trasparenza etc...), allora
-hai bisogno della classe **wx.Image**. In essa troverai tutte le
-funzionalità presenti in wxPython per la modifica delle immagini. Non ce
-la faccio a spiegare tutto in questo testo: per darvi un'idea delle
-funzionalità della classe wx.Image vi invito a curiosare sul tool
-**wxdemo** citato nell'ultima pagina della dispensa e a consultare la
-documentazione della classe
-[wx.Image](https://wxpython.org/Phoenix/docs/html/wx.Image.html).
-
-Per ottenere un oggetto della classe wx.Image basta partire da un
-oggetto wx.Bitmap ed estrarlo da questo, come nell'esempio con la
-solita immagine:
-
-``` python
-bmp = wx.Bitmap("foto.jpg")
-img = bmp.ConvertToImage()
-# img è un oggetto della classe wx.Image
-```
-
-Se fate delle modifiche all'oggetto wx.Image poi per visualizzare il
-risultato dovete ricreare una wx.Bitmap e riapplicarla (ad esempio)
-all'oggetto wx.StaticBitmap per la visualizzazione. Nel pezzo di codice
-sotto modifico l'immagine impostandola a *Disabled* ovvero con i colori
-trasformati in scala di grigi e poi la riapplico alla StaticBitmap:
+Il file `esempio2.py`, che contiene questo codice è nella stessa cartella del file `foto.jpg` che andremo a visualizzare.
 
 ``` python
 # ...
-DisabledImg = img.ConvertToDisabled()
-newBmp = wx.Bitmap(DisabledImg)
-viewer.SetBitmap(newBmp)
+panel = wx.Panel(self)
+widgetImageViewer = wx.StaticBitmap(panel)
+
+oggettoImmagine = wx.Bitmap("foto.jpg")
+immagine = oggettoImmagine.ConvertToImage()
+immagineBN = immagine.ConvertToGreyScale()
+oggettoImmagineBN = wx.Bitmap(immagineBN)
+
+widgetImageViewer.SetBitmap(oggettoImmagineBN)
 # ...
 ```
 
-Spero sia chiaro. 
-Adesso comunque arriva qualche esercizio ad aiutarvi :)
+La base ce l'avete... adesso occorre buttarsi un pò con qualche esercizio!!!
+
 
 
 ### Esercizi
@@ -128,7 +98,6 @@ sotto. Con il primo pulsante si apre una finestra di selezione file per
 selezionare una immagine che andrà mostrata nella StaticBitmap. Il
 secondo pulsante è un ToggleButton che abilita/disabilita l'immagine
 selezionata.
-
 
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -158,65 +127,29 @@ un ID e tramite quello possiamo creare automaticamente una Bitmap.
 bitmap = wx.ArtProvider.GetBitmap(wx.UN_ID_FRA_QUELLI_ELENCATI_SOTTO)
 ```
 
-Vediamo l'elenco delle icone automaticamente supportate (in rigoroso ordine alfabetico):
+Vediamo l'elenco delle icone automaticamente supportate (in rigoroso ordine sparso):
 
-| Descrizione                 |  Art Provider ID           |
-|-----------------------------|----------------------------|
-| Aggiungi Bookmark           |  wx.ART_ADD_BOOKMARK       |
-| CDRom                       |  wx.ART_CDROM              |
-| Chiudi                      |  wx.ART_CLOSE              |
-| Copia                       |  wx.ART_COPY               |
-| Una grossa X                |  wx.ART_CROSS_MARK         |
-| Taglia                      |  wx.ART_CUT                |
-| Cancella Bookmark           |  wx.ART_DEL_BOOKMARK       |
-| Cancella                    |  wx.ART_DELETE             |
-| Errore                      |  wx.ART_ERROR              | 
-| File eseguibile             |  wx.ART_EXECUTABLE_FILE    |
-| Apri (file)                 |  wx.ART_FILE_OPEN          |
-| Salva (file)                |  wx.ART_FILE_SAVE          |
-| Salva come                  |  wx.ART_FILE_SAVE_AS       |
-| Trova                       |  wx.ART_FIND               |
-| Trova e sostituisci         |  wx.ART_FIND_AND_REPLACE   |
-| Floppy                      |  wx.ART_FLOPPY
-| Cartella                    |  wx.ART_FOLDER
-| Apri Cartella               |  wx.ART_FOLDER_OPEN
-| Torna Indietro              |  wx.ART_GO_BACK
-| Vai alla cartella superiore |  wx.ART_GO_DIR_UP
-| Vai giù                     |  wx.ART_GO_DOWN
-| Vai avanti                  |  wx.ART_GO_FORWARD
-| Torna a casa (Lassie)       |  wx.ART_GO_HOME
-| Vai dal genitore            |  wx.ART_GO_TO_PARENT
-| Vai su                      |  wx.ART_GO_UP
-| Torna al primo              |  wx.ART_GOTO_FIRST
-| Vai all'ultimo              | wx.ART_GOTO_LAST
-| Hard Disk                   |  wx.ART_HARDDISK
-| Aiuto                       |  wx.ART_HELP
-| Aiuto (libro)               |  wx.ART_HELP_BOOK
-| Aiuto (cartella)            |  wx.ART_HELP_FOLDER
-| Aiuto (pagina)              |  wx.ART_HELP_PAGE
-| Aiuto (impostazioni)        | wx.ART_HELP_SETTINGS
-| Auto (pannello laterale)    |  wx.ART_HELP_SIDE_PANEL
-| Informazioni                |  wx.ART_INFORMATION
-| Vista elenco                |  wx.ART_LIST_VIEW
-| Meno                        |  wx.ART_MINUS
-| Immagine mancante           |  wx.ART_MISSING_IMAGE
-| Nuovo                       |  wx.ART_NEW
-| Nuova cartella              |  wx.ART_NEW_DIR
-| File normale                |  wx.ART_NORMAL_FILE
-| Incolla                     |  wx.ART_PASTE
-| Più                         |  wx.ART_PLUS
-| Stampa                      |  wx.ART_PRINT
-| Domanda                     |  wx.ART_QUESTION
-| Termina l'applicazione      | wx.ART_QUIT
-| Ripristina                  |  wx.ART_REDO
-| Vista riassuntiva           |  wx.ART_REPORT_VIEW
-| Un grosso tick              |  wx.ART_TICK_MARK
-| Suggerimento                |  wx.ART_TIP
-| Annulla                     |  wx.ART_UNDO
-| Attenzione                  |  wx.ART_WARNING
 
-Per adesso basta così! Ma ricordatevi di questo elenco quando parleremo
-di menù e barre degli strumenti...
+| Elenco              | Art Provider ID       | Disponibili               |                        |
+|---------------------|-----------------------|---------------------------|------------------------|
+| wx.ART_ERROR        | wx.ART_GOTO_LAST      | wx.ART_FILE_SAVE_AS       | wx.ART_QUESTION        |
+| wx.ART_PRINT        | wx.ART_DELETE         | wx.ART_WARNING            | wx.ART_HELP            |
+| wx.ART_COPY         | wx.ART_INFORMATION    | wx.ART_TIP                | wx.ART_CUT             |
+| wx.ART_ADD_BOOKMARK | wx.ART_REPORT_VIEW    | wx.ART_PASTE              | wx.ART_DEL_BOOKMARK    |
+| wx.ART_LIST_VIEW    | wx.ART_UNDO           | wx.ART_HELP_SIDE_PANEL    | wx.ART_NEW_DIR         |
+| wx.ART_REDO         | wx.ART_HELP_SETTINGS  | wx.ART_FOLDER             | wx.ART_PLUS            |
+| wx.ART_HELP_BOOK    | wx.ART_FOLDER_OPEN    | wx.ART_MINUS              | wx.ART_HELP_FOLDER     |
+| wx.ART_GO_DIR_UP    | wx.ART_CLOSE          | wx.ART_HELP_PAGE          | wx.ART_EXECUTABLE_FILE |
+| wx.ART_QUIT         | wx.ART_GO_BACK        | wx.ART_NORMAL_FILE        | wx.ART_FIND            |
+| wx.ART_GO_FORWARD   | wx.ART_TICK_MARK      | wx.ART_FIND_AND_REPLACE   | wx.ART_GO_UP           |
+| wx.ART_CROSS_MARK   | wx.ART_HARDDISK       | wx.ART_GO_DOWN            | wx.ART_MISSING_IMAGE   |
+| wx.ART_FLOPPY       | wx.ART_GO_TO_PARENT   | wx.ART_NEW                | wx.ART_CDROM           |
+| wx.ART_GO_HOME      | wx.ART_FILE_OPEN      | wx.ART_GOTO_FIRST         | wx.ART_FILE_SAVE       |
+
+
+Per finire, vediamo un esempio di codice in cui inseriamo un icona su un pulsante.
+
+
 
 <br>
 <br>
