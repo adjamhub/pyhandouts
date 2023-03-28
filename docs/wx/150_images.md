@@ -66,7 +66,7 @@ widgetImageViewer = wx.StaticBitmap(panel)
 
 oggettoImmagine = wx.Bitmap("foto.jpg")
 immagine = oggettoImmagine.ConvertToImage()
-immagineBN = immagine.ConvertToGreyScale()
+immagineBN = immagine.ConvertToGreyscale()
 oggettoImmagineBN = wx.Bitmap(immagineBN)
 
 widgetImageViewer.SetBitmap(oggettoImmagineBN)
