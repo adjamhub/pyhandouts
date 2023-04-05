@@ -38,7 +38,7 @@ di apprendimento</p>
 </div>
 
 <div class="w3-half" style="padding:0 10px">
-<a href="ESP32/00_intro/" class="md-button" style="width:230px">ESP32</a>
+<a href="https://dvjlabs.github.io/esp32_course/" class="md-button" style="width:230px" target="_blank">ESP32</a>
 <p>Programmare il microcontrollore ESP32 con MicroPython per realizzare semplici dispositivi e comunicare le misurazioni in tempo reale </p>
 <br>
 <br>
