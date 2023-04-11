@@ -179,6 +179,7 @@ e nelle prime righe si trova (come commento) il nome di chi lo ha svolto e una d
 (...codice...)
 ```
 
+<br>
 
 **Esercizio 1**
 
@@ -188,7 +189,9 @@ Visualizzare sullo schermo la scritta seguente:
 Ciao, mi chiamo Pinco Pallino
 ```
 
+
 ----------------------------------------------------------------------------
+
 
 **Esercizio 2**
 
@@ -199,6 +202,7 @@ Ciao, mi chiamo Andrea Diamantini
 ```
 
 Sostituendo al mio il nome (e cognome) scritti dall'utente
+
 
 ----------------------------------------------------------------------------
 
@@ -214,7 +218,9 @@ mi chiamo
 Pinco Pallino
 ```
 
+
 ----------------------------------------------------------------------------
+
 
 **Esercizio 4**
 
@@ -229,7 +235,9 @@ Andrea Diamantini
 
 Sostituendo al mio il nome (e cognome) scritti dall'utente
 
+
 ----------------------------------------------------------------------------
+
 
 **Esercizio 5**
 

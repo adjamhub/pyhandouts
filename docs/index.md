@@ -52,7 +52,7 @@ di apprendimento</p>
 </div>
 
 <div class="w3-half" style="padding:0 10px">
-<a href="wx/000_intro/" class="md-button" style="width:230px">GUI con wxPython</a>
+<a href="wx/000_intro/" class="md-button" style="width:230px">wxPython GUI</a>
 <p>Una semplice libreria Python, basata su wxWidgets per la programmazione grafica e l'implementazione di programmi basati su GUI</p>
 <br>
 <br>

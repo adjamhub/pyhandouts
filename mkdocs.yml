@@ -24,8 +24,8 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Noto Sans
+    code: Noto Mono
   language: it
   features:
     - navigation.footer

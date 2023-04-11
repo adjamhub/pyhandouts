@@ -5,7 +5,7 @@ COSE DA FARE
 
 o Da CAPITOLO a LEZIONE:
   - un capitolo è un "pezzo di testo relativo ad un argomento"
-  - una lezione è una parte di un argomento che ti viene spiegata e su cui poi fai gli esercizi.
+  - una lezione è (una parte di) un argomento che ti viene spiegata e su cui poi fai gli esercizi.
   
 o SCARICA HTML SINGOLO
 o SCARICA OFFLINE (CHM???)
@@ -17,41 +17,53 @@ o link che si aprono in un'altra scheda (QUALI???)
 --------------------------
 ## ABBELLIMENTI
 
-o PAGINA INIZIALE: progetta una bella immagine su programmazione, python, studenti... etc.. e poi qualche sezione che spiega i capitoli!
-o EMOJIs
-o TEORIA di MARKDOWN: la pagina ABOUT. Cosa ci mettiamo? Come la organizziamo???
+x PAGINA INIZIALE: progetta una bella immagine su programmazione, python, studenti... etc.. e poi qualche sezione che spiega i capitoli!
+x EMOJIs
+
 o colore dell'area di codice VS colore dell'area di esecuzione
 o le tabelle in genere fanno cagare :O
+o Qua e là... mancano VARIE immagini :(
+o TEORIA di MARKDOWN: la pagina ABOUT. Cosa ci mettiamo? Come la organizziamo???
 
 --------------------------
 ## BASICS
 
-o FIRST THINGS (OK, ma... magari qualche esercizio in più)
-o SEQUENZE (dizionari???? DA DECIDERE)
+x SEQUENZE (dizionari???? DA DECIDERE)
 x FUNZIONI: esercizi ci sono. Si possono aggiungere i vecchi compiti sulle funzioni
-o MODULI (import TODO) ---> PACKAGES????
-o FILEs ????? (possibile unione con modulo pathlib)
-o CSV
+x FILEs ????? (possibile unione con modulo pathlib)
+x CSV
+
+o FIRST THINGS (OK, ma... magari qualche esercizio in più)
+o MODULI (import TODO) 
+o PACKAGES????
 
 COSE DA DECIDERE NELLA DIDATTICA
-- dizionari --> dove arriviamo???
-- packages
-- unione files <--> modulo pathlib
+
+x dizionari --> dove arriviamo??? LI HO MESSI COME PREMESSA AL MODULO CSV
+x unione files <--> modulo pathlib PIU' O MENO FATTO
+
+- packages ???
 
 --------------------------
 # OOP
 
-o Varie cose da sistemare... ANCHE con l'esperienza di quest'anno!!!
-o Python scope rules
+x Python scope rules
+x Varie cose da sistemare... ANCHE con l'esperienza di quest'anno!!!
+
+o dividi su più files, sarà più facile gestirlo
+o staticmethods
 
 --------------------------
 # WX
 
+o continua così
+
 --------------------------
 # INSIGHTs
 
-o PAGINA INIZIALE introduttiva
-o TUTTO IL RESTO :D
+x PAGINA INIZIALE introduttiva
+
+o Elenca qui gli approfondimenti che vorresti ci fossero...
 
 
 

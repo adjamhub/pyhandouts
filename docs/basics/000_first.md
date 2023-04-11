@@ -19,7 +19,7 @@ storie di successo ove Python ha contribuito in maniera determinante.
 Python è un linguaggio ideato da **Guido van Rossum** all'inizio degli anni novanta. Il nome fu scelto (tenetevi alla sedia) per via della sua
 passione per i [Monty Python](https://it.wikipedia.org/wiki/Monty_Python), un gruppo comico britannico attivo negli anni settanta. 
 Per rendervi conto della *incredibile comicità* del gruppo... ecco uno dei primi video su YouTube ottenuto cercando *Monty Python ita*. 
-Dura 84 minuti. Io non ho superato il minuto 4...
+Dura 84 minuti. Noi non supereremo il minuto 4...
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/S04V_mW5v0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
