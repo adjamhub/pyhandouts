@@ -66,10 +66,10 @@ rimando alla loro pagina wikipedia:
 Per installare MariaDB basta seguire le istruzioni che trovate nel loro
 sito ufficiale: <https://mariadb.org/>
 
-# Connessione al DB
 
-Cominciamo stabilendo una connessione fra il nostro script Python e il
-database:
+### Connessione al DB
+
+Cominciamo stabilendo una connessione fra il nostro script Python e il database:
 
 ```python
 import mysql.connector
@@ -82,8 +82,8 @@ pydb = mysql.connector.connect(
 )
 ```
 
-Ovviamente se c'è un problema qualunque nella connessione questo pezzo
-di codice fallirà.
+Ovviamente se c'è un problema qualunque nella connessione questo pezzo di codice fallirà.
+E sarà inutile andare avanti...
 
 
 <!-- ################################################################################# -->
