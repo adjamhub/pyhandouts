@@ -1,127 +1,126 @@
 # GUI complete
 
-In questo capitolo cercheremo di introdurre tutti quegli elementi
-grafici che completano una GUI moderna: barra dei menù, azioni, icone,
-barre degli strumenti, etc... Iniziamo subito!
+In questo capitolo cercheremo di introdurre tutti quegli elementi grafici che implementano una GUI moderna: 
+
+- le azioni
+- la barra dei menù
+- la barra degli strumenti
+- la barra di stato
+- il menù contestuale
+- le impostazioni delle applicazioni
+
+
+## Struttura di base di una App Full GUI
+
+La faccio breve, vi illustro subito il nuovo skeleton:
+
+``` python
+import wx
+
+class Finestra(wx.Frame):
+    
+    def __init__(self):
+        super().__init__(None, title="Window Title")
+        
+        # Spazio per le variabili membro della classe
+        
+        # -------------------------------------------
+        
+        # Chiamata alle funzioni che generano la UI
+        self.creaMenubar()
+        self.creaToolbar()
+        self.creaStatusbar()
+        # -------------------------------------------
+        
+        # Chiamata alla funzione che genera la MainView
+        self.creaMainView()
+        # -------------------------------------------
+        
+        # le ultime cose, ad esempio, la dimensione iniziale, etc...
+        
+        # -------------------------------------------
+        return
+
+    def creaMenubar(self):
+        return
+    
+    def creaToolbar(self):
+        return
+    
+    def creaStatusbar(self):
+        return
+    
+    def creaMainView(self):
+        return
+
+
+# ----------------------------------------
+if __name__ == "__main__":
+    app = wx.App()
+    window = Finestra()
+    window.Show()
+    app.MainLoop()
+```
+
+La struttura si spiega abbastanza da sola... avanti, partendo da qui!
+
+
 
 ## Azioni predefinite
 
-Domanda a bruciapelo: pensate a Microsoft Word o a LibreOffice Writer e ditemi: *In quanti modi diversi si può fare copia e incolla?*
+Domanda a bruciapelo:
 
-Tra scorciatoie da tastiera, pulsantini sulla barra degli strumenti,
-voci nei menù, contestuali e sulla barra, a me ne vengono in mente
-almeno 4... se non 5... Adesso mettetevi un secondo il vostro cappello
-da programmatore e rispondete alla prossima domanda: *Ma se uno può fare
-copia e incolla in 4 modi, significa che un altro lo ha implementato 4
-volte?*
+> In quanti modi diversi si può fare copia e incolla?
+
+Con la combinazione CTRL + C... con l'icona copia sulla barra degli strumenti, con il menù del tasto destro, con la barra in alto...
+Mi vengono in mente almeno 4 metodi.
+
+Adesso pensate un momento come foste **veri** programmatori:
+
+> Ma... per ognuna di queste modalità occorre reimplementare un oggetto grafico e una funzione evento???
 
 Fortunatamente la risposta a quest'ultima domanda è **no**! 
+
 In questo contesto rientra un concetto tipico della programmazione grafica: il concetto di **azione**. E cosa è un'azione?
 
-Un azione è un'astrazione di una funzionalità che il nostro programma
-vuole offrire all'utente. Viene identificata univocamente tramite un
-nome (ad esempio: COPIA), un'icona (...), una scorciatoia (CTRL + C),
-una descrizione.
 
-La libreria wxPython per assicurare uniformità nelle azioni più comuni,
-come ad esempio APRI, SALVA, ESCI, etc... ha pensato bene di definirle
-tramite degli ID: ad esempio l'ID per l'azione SALVA si chiama
-wx.ID_SAVE. Voi identificate un pulsante con quell'ID e quello diventa
-automaticamente il pulsante SALVA! Ha un testo, una scorciatoia, etc...
+> Una **azione** è un'astrazione di una funzionalità che il nostro programma vuole offrire all'utente.<br> 
+> Viene identificata univocamente tramite:
+> 
+> - un nome (ad esempio: COPIA) 
+> - una descrizione (ad esempio, COPIA il CONTENUTO NEGLI APPUNTI)
+> - un'icona (l'icona COPIA)
+> - una scorciatoia (CTRL + C)
 
-Su Linux (precisamente, se wxPython utilizza il backend wxGTK) la nostra
-azione avrà anche un'icona di default. Purtroppo questo non vale per
-tutte le piattaforme supportate... poco male comunque! Possiamo
-inserire le icone necessarie tramite la classe **wx.ArtProvider**, come
-visto nella parte sulle immagini.
+La libreria wxPython per assicurare uniformità nelle azioni più comuni ha pensato bene di identificarle tramite degli ID fissi: 
+ad esempio l'ID per l'azione SALVA si chiama `wx.ID_SAVE`. 
 
-``` python
-# immaginiamo di creare una generica azione SALVA
-var = wx.RobaGrafica( parent, id = wx.ID_SAVE , bitmap = wx.ArtProvider.GetBitmap(wx.ART_SAVE) )
-```
+Ecco l'elenco completo degli ID delle azioni comuni in wxPython:
 
-Ok, ci manca solo l'elenco completo degli ID delle azioni predefinite
-in wxPython. Come noterete osservando la tabella e come spiegato prima,
-questi ID hanno abbinata una etichetta (e una scorciatoia) predefinita,
-tipicamente in lingua inglese. La buona notizia è che wxPython supporta
-l'internazionalizzazione (i18n) e quindi se (ad esempio) il vostro
-sistema operativo è in lingua italiana, troverete le stringhe
-predefinite già tradotte!!!
 
-| ACTION ID         | DEFAULT LABEL                |
-|-------------------|------------------------------|
-| wx.ID_ABOUT       |      About |
-| wx.ID_ADD         |      Add |
-|  wx.ID_APPLY      |       Apply |
-|  wx.ID_BACKWARD   |       Back |
-|  wx.ID_BOLD       |       Bold |
-|  wx.ID_BOTTOM     |       Bottom |
-|  wx.ID_CANCEL     |       Cancel |
-|  wx.ID_CDROM      |       CD-Rom |
-|  wx.ID_CLEAR      |       Clear |
-|  wx.ID_CLOSE      |       Close |
-|  wx.ID_CONVERT    |       Convert |
-|  wx.ID_COPY       |       Copy |
-|  wx.ID_CUT        |       Cut |
-|  wx.ID_DELETE     |       Delete |
-|  wx.ID_DOWN       |       Down |
-|  wx.ID_EDIT       |       Edit |
-|  wx.ID_EXECUTE    |       Execute |
-|  wx.ID_EXIT       |       Quit |
-|  wx.ID_FILE       |       File |
-|  wx.ID_FIND       |       Find |
-|  wx.ID_FIRST      |       First |
-|  wx.ID_FLOPPY     |       Floppy |
-|  wx.ID_FORWARD    |       Forward |
-|  wx.ID_HARDDISK   |       Harddisk |
-|  wx.ID_HELP       |       Help |
-|  wx.ID_HOME       |       Home |
-|  wx.ID_INDENT     |       Indent |
-|  wx.ID_INDEX      |       Index |
-|  wx.ID_INFO       |       Info |
-|  wx.ID_ITALIC     |       Italic |
-|  wx.ID_JUMP_TO    |       Jump to |
-|  wx.ID_JUSTIFY_CENTER |    Centered |
-|  wx.ID_JUSTIFY_FILL   |   Justified |
-|  wx.ID_JUSTIFY_LEFT   |   Align Left |
-|  wx.ID_JUSTIFY_RIGHT  |   Align Right |
-|  wx.ID_LAST           |   Last |
-|  wx.ID_NETWORK        |   Network |
-|  wx.ID_NEW            |   New |
-|  wx.ID_NO             |   No |
-|  wx.ID_OK             |   Ok |
-|  wx.ID_OPEN           |   Open |
-|  wx.ID_PASTE          |   Paste |
-|  wx.ID_PREFERENCES    |   Preferences |
-|  wx.ID_PREVIEW        |   Print preview |
-|  wx.ID_PRINT          |  Print |
-|  wx.ID_PROPERTIES     |   Properties |
-|  wx.ID_REDO           |   Redo |
-|  wx.ID_REFRESH        |   Refresh |
-|  wx.ID_REMOVE         |   Remove |
-|  wx.ID_REPLACE        |   Replace |
-|  wx.ID_REVERT_TO_SAVED |   Revert to Saved |
-|  wx.ID_SAVE            |  Save |
-|  wx.ID_SAVEAS          |  Save As |
-|  wx.ID_SELECTALL       |  Select All |
-|  wx.ID_SELECT_COLOR    |  Color |
-|  wx.ID_SELECT_FONT     |  Font |
-|  wx.ID_SORT_ASCENDING  |  Ascending |
-|  wx.ID_SORT_DESCENDING |  Descending |
-|  wx.ID_SPELL_CHECK     |  Spell Check |
-|  wx.ID_STOP            |  Stop |
-|  wx.ID_STRIKETHROUGH   |  Strikethrough |
-|  wx.ID_TOP             |  Top |
-|  wx.ID_UNDELETE        |  Undelete |
-|  wx.ID_UNDERLINE       |  Underline |
-|  wx.ID_UNDO            |  Undo |
-|  wx.ID_UNINDENT        |  Unindent |
-|  wx.ID_UP              |  Up |
-|  wx.ID_YES             |  Yes |
-|  wx.ID_ZOOM_100        |  Actual Size |
-|  wx.ID_ZOOM_FIT        |  Zoom to Fit | 
-|  wx.ID_ZOOM_IN         |  Zoom In |
-|  wx.ID_ZOOM_OUT        |  Zoom Out |
+| Elenco                 | ACTION ID              | Disponibili            |                       |
+|------------------------|------------------------|------------------------|-----------------------|
+|  wx.ID_ABOUT           |  wx.ID_ADD             |  wx.ID_APPLY           |  wx.ID_BACKWARD       |
+|  wx.ID_BOLD            |  wx.ID_BOTTOM          |  wx.ID_CANCEL          |  wx.ID_CDROM          |
+|  wx.ID_CLEAR           |  wx.ID_CLOSE           |  wx.ID_CONVERT         |  wx.ID_COPY           |
+|  wx.ID_CUT             |  wx.ID_DELETE          |  wx.ID_DOWN            |  wx.ID_EDIT           |
+|  wx.ID_EXECUTE         |  wx.ID_EXIT            |  wx.ID_FILE            |  wx.ID_FIND           |
+|  wx.ID_FIRST           |  wx.ID_FLOPPY          |  wx.ID_FORWARD         |  wx.ID_HARDDISK       |
+|  wx.ID_HELP            |  wx.ID_HOME            |  wx.ID_INDENT          |  wx.ID_INDEX          |
+|  wx.ID_INFO            |  wx.ID_ITALIC          |  wx.ID_JUMP_TO         |  wx.ID_JUSTIFY_CENTER |
+|  wx.ID_JUSTIFY_FILL    |  wx.ID_JUSTIFY_LEFT    |  wx.ID_JUSTIFY_RIGHT   |   wx.ID_LAST          |
+|  wx.ID_NETWORK         |  wx.ID_NEW             |  wx.ID_NO              |   wx.ID_OK            | 
+|  wx.ID_OPEN            |  wx.ID_PASTE           |  wx.ID_PREFERENCES     |   wx.ID_PREVIEW       |
+|  wx.ID_PRINT           |  wx.ID_PROPERTIES      |  wx.ID_REDO            |   wx.ID_REFRESH       |
+|  wx.ID_REMOVE          |  wx.ID_REPLACE         |  wx.ID_REVERT_TO_SAVED |  wx.ID_SAVE           |
+|  wx.ID_SAVEAS          | wx.ID_SELECTALL        |  wx.ID_SELECT_COLOR    |  wx.ID_SELECT_FONT    |
+|  wx.ID_SORT_ASCENDING  | wx.ID_SORT_DESCENDING  | wx.ID_SPELL_CHECK      |  wx.ID_STOP           |
+|  wx.ID_STRIKETHROUGH   | wx.ID_TOP              | wx.ID_UNDELETE         |  wx.ID_UNDERLINE      |
+|  wx.ID_UNDO            | wx.ID_UNINDENT         |  wx.ID_UP              |  wx.ID_YES            |
+|  wx.ID_ZOOM_100        |  wx.ID_ZOOM_FIT        |  wx.ID_ZOOM_IN         |  wx.ID_ZOOM_OUT       |
+
+
+A breve vedremo anche come utilizzarle in maniera più che semplice!!!
 
 
 ## Menubar
