@@ -41,15 +41,19 @@ class Finestra(wx.Frame):
         # -------------------------------------------
         return
 
+    # in questa funzione andremo a creare e popolare la menubar
     def creaMenubar(self):
         return
     
+    # in questa funzione andreamo a creare e popolare la toolbar
     def creaToolbar(self):
         return
     
+    # in questa funzione aggiungeremo la statusbar
     def creaStatusbar(self):
         return
     
+    # questa funzione implementa la vista principale del programma
     def creaMainView(self):
         return
 
@@ -68,16 +72,18 @@ La struttura si spiega abbastanza da sola... avanti, partendo da qui!
 
 ## Azioni predefinite
 
-Domanda a bruciapelo:
 
-> In quanti modi diversi si può fare copia e incolla?
+***In quanti modi diversi si può fare copia e incolla?***
+
 
 Con la combinazione CTRL + C... con l'icona copia sulla barra degli strumenti, con il menù del tasto destro, con la barra in alto...
-Mi vengono in mente almeno 4 metodi.
+Mi vengono in mente almeno 4 metodi. Probabilmente ne esistono anche altri.
 
-Adesso pensate un momento come foste **veri** programmatori:
+Adesso pensate un momento come foste ***veri*** programmatori:
 
-> Ma... per ognuna di queste modalità occorre reimplementare un oggetto grafico e una funzione evento???
+
+***Ma... per ognuna di queste modalità occorre reimplementare un oggetto grafico e una funzione evento???***
+
 
 Fortunatamente la risposta a quest'ultima domanda è **no**! 
 
@@ -126,175 +132,78 @@ A breve vedremo anche come utilizzarle in maniera più che semplice!!!
 ## Menubar
 
 I menù sono oggetti grafici che tutti conosciamo e a cui tutti siamo
-abituati, non ho bisogno di grandi introduzioni! Poiché la nostra
-applicazione iniziale (un oggetto della classe wx.Frame) è completamente
-spoglia, come prima cosa dovremo inserire una MenuBar (una barra dei
-menù) e quando sarà pronta impostarla come barra della nostra Frame
-Widget:
+abituati, non c'è bisogno di fare grandi introduzioni! 
+
+Per aggiungere una menubar:
+
+1. lavoriamo nella funzione `creaMenubar` dello skeleton.
+2. prima creiamo un oggetto Menubar
+3. poi creiamo ogni menù che andremo ad aggiungervi (es: File, Modifica, Visualizza, etc...)
+4. aggiungiamo le azioni necessarie ai nostri menù
+5. aggiungiamo i menù creati alla menubar
+6. applichiamo la menubar alla nostra applicazione
+
+Vediamo degli esempi di codice:
 
 ``` python
+
+# creiamo un oggetto Menubar
 mb = wx.MenuBar()
 
-# ... metti qualcosa nella MenuBar...
-
-window.SetMenuBar(mb)
-```
-
-Non appena avete creato la MenuBar, sarà possibile inserirvi dentro menù
-con azioni predefinite o personalizzate. Ecco alcuni esempi:
-
-``` python
-# 1) PRIMA crea il menù...
+# crea un menù...
 fileMenu = wx.Menu()
 
-# 2) ...POI aggiungi alcune azioni...
-# inserimento DIRETTO di azione predefinita (senza icona su Windows e MacOS)
-fileItem = fileMenu.Append(wx.ID_EXIT)
+# POI aggiungi alcune azioni...
+fileMenu.Append(wx.ID_EXIT)
 
 # inserimento DIRETTO di azione predefinita con TESTO e DESCRIZIONE personalizzati
-saveItem = fileMenu.Append(wx.ID_SAVE, "Salva bene :)", "Salva il documento corrente")
+fileMenu.Append(wx.ID_SAVE, "Salva bene :)", "Salva il documento corrente")
 
 # riga di separazione: serve solo come abbellimento
 fileMenu.AppendSeparator()
 
 # creazione di un menuItem da azione predefinita, inserimento icona, aggiunta al menù
-saveItem = wx.MenuItem(fileMenu, wx.ID_OPEN)
-saveItem.SetBitmap(wx.ArtProvider.GetBitmap(wx.ART_FILE_OPEN))
-fileMenu.Append(saveItem)
+openItem = wx.MenuItem(fileMenu, wx.ID_OPEN)
+openItem.SetBitmap(wx.ArtProvider.GetBitmap(wx.ART_FILE_OPEN))
+fileMenu.Append(openItem)
 
 # creazione di una azione personalizzata con ID=35
 customItem = wx.MenuItem(fileMenu, 35, "Fai qualcosa")
 fileMenu.Append(customItem)
 
-# 3) ...INFINE aggiungi il menù alla menubar
+# CHECK ITEM
+self.fullScreenItem = wx.MenuItem(fileMenu, id=100, text="FullScreen", kind=wx.ITEM_CHECK)
+fileMenu.Append(self.fullScreenItem)
+        
+# PENULTIMA COSA: aggiungi il menù alla menubar
 # (La & prima della F di File attiva la scorciatoia ALT + F)
 menubar.Append(fileMenu, '&File')
+
+# INFINE!!!
+self.SetMenubar(menubar)
 ```
 
-Si ottiene questo (come vedete, su Linux c'è un'icona in più...):
+
+Se avete sistemato tutto al posto giusto, dovreste ottenere qualcosa di simile a questo:
+
+<br>
 
 ![image](images/wxMenuBar.jpg)
 
-Per collegare le azioni create ad una funzione (Binding) va intercettato
-l'evento wx.EVT_MENU abbinato all'ID della voce di menù in questione:
+<br>
+
+Per collegare le azioni create ad una funzione (**Binding**) va intercettato
+l'evento `wx.EVT_MENU` abbinato all'ID della voce di menù in questione:
 
 ``` python
-# per fare Bind dell'azione con ID = wx.ID_EXIT ad una funzione chiamata esci
-self.Bind(wx.EVT_MENU, self.esci, id=wx.ID_EXIT)
+# per fare Bind dell'azione con ID = wx.ID_EXIT ad una funzione chiamata funzioneEsci
+self.Bind(wx.EVT_MENU, self.funzioneEsci, id=wx.ID_EXIT)
 
 # per fare Bind dell'azione con ID = 35 ad una funzione chiamata faiQualcosa
 self.Bind(wx.EVT_MENU, self.faiQualcosa, id=35)
 ```
 
-Come al solito allego il codice completo dell'esempio proposto:
 
-``` python
-import wx
-
-class Esempio(wx.Frame):
-
-    def __init__(self):
-        super().__init__(None, title="Prova Menubar")
-
-        menubar = wx.MenuBar()
-
-        fileMenu = wx.Menu()
-
-        # inserimento DIRETTO di azione predefinita (senza icona su Windows e MacOS)
-        fileItem = fileMenu.Append(wx.ID_EXIT)
-
-        # inserimento DIRETTO di azione predefinita con TESTO e DESCRIZIONE personalizzati
-        saveItem = fileMenu.Append(wx.ID_SAVE, "Salva bene :)", "Salva il documento corrente")
-
-        # riga di separazione: serve solo come abbellimento
-        fileMenu.AppendSeparator()
-
-        # creazione di un menuItem da azione predefinita, inserimento icona, aggiunta al menù
-        saveItem = wx.MenuItem(fileMenu, wx.ID_OPEN)
-        saveItem.SetBitmap(wx.ArtProvider.GetBitmap(wx.ART_FILE_OPEN))
-        fileMenu.Append(saveItem)
-
-        # creazione di una azione personalizzata con ID=35
-        customItem = wx.MenuItem(fileMenu, 35, "Fai qualcosa")
-        fileMenu.Append(customItem)
-
-        menubar.Append(fileMenu, '&File')
-        self.SetMenuBar(menubar)
-
-        self.Bind(wx.EVT_MENU, self.chiudi, id=wx.ID_EXIT)
-        self.Bind(wx.EVT_MENU, self.faiQualcosa, id=35)
-
-    def chiudi(self, event):
-        self.Close(True)
-        return
-
-    def faiQualcosa(self,event):
-        dial = wx.MessageDialog(None, "E cosa dovrei fare?", "Esclamazione", wx.OK | wx.ICON_EXCLAMATION)
-        dial.ShowModal()
-
-# ----------------------------------------
-app = wx.App()
-window = Esempio()
-window.Show()
-app.MainLoop()
-```
-
-### Check Items
-
-Devo aggiungere a questo punto una caratteristica della classe
-wx.MenuItem, ovvero quella che implementa le voci di menù e può
-presentarsi sotto forme diverse: noi ne vedremo solo due, di cui una (la
-forma *NORMALE*) è quella di tutte le voci di menù viste fino ad ora.
-
-La seconda forma interessante (dal nostro punto di vista) è quella
-denominata **ITEM_CHECK**: le azioni in questa forma presentano (oppure
-no) un tick di attivazione e stanno alle azioni normali come i
-ToggleButton stanno ai Button. Come accennato, quando clicchi su queste
-azioni si attiva un tick su di esse che si disabilita al click
-successivo. Utili per azioni a due stati (es: visualizza/nascondi barra
-di stato, attiva/disattiva fullscreen, etc..)
-
-![image](images/wxCheckMenuItem.jpg)
-
-Per implementare un *Check Item* ripropongo un esempio che attiva e
-disattiva il fullscreen (già visto):
-
-``` python
-import wx
-
-class Esempio(wx.Frame):
-
-    def __init__(self):
-        super().__init__(None, title="Prova Menubar")
-
-        self.menubar = wx.MenuBar()
-        fileMenu = wx.Menu()
-
-        # Esempio di CHECK MENU ITEM completamente personalizzato
-        self.fsItem = wx.MenuItem(fileMenu, id=100, text="FullScreen", kind=wx.ITEM_CHECK)
-        fileMenu.Append(self.fsItem)
-
-        self.menubar.Append(fileMenu, '&File')
-        self.SetMenuBar(self.menubar)
-
-        self.Bind(wx.EVT_MENU, self.mettiFullScreen, id=100)
-
-    def mettiFullScreen(self, event):
-        if self.fsItem.IsChecked():
-            # style = 0 serve per non nascondere la menubar quando si è fullscreen
-            self.ShowFullScreen(True, style=0)
-            self.fsItem.SetItemLabel("Exit fullscreen")
-        else:
-            self.ShowFullScreen(False)
-            self.fsItem.SetItemLabel("Fullscreen")
-        return
-
-# ----------------------------------------
-app = wx.App()
-window = Esempio()
-window.Show()
-app.MainLoop()
-```
 
 ## Toolbar
 
@@ -304,77 +213,37 @@ dovrebbero permettere l'accesso alle azioni veloci, ovvero a quelle di
 maggior utilizzo per gli utenti.
 
 Per aggiungere una Toolbar alla nostra Frame Widget dobbiamo utilizzare
-la funzione [CreateToolBar()]{.title-ref} a cui poi potremo aggiungere
+la funzione `CreateToolBar` a cui poi potremo aggiungere
 le azioni che ci interessano.
 
-``` python
-toolbar = window.CreateToolBar()
 
-toolbar.AddTool(...e qui si aggiungono le azioni una ad una...)
+``` python
+toolbar = self.CreateToolBar()
+
+# toolbar.AddTool(...e qui si aggiungono le azioni una ad una...)
+toolbar.AddTool(wx.ID_OPEN, "Apri",  wx.ArtProvider.GetBitmap(wx.ART_FOLDER_OPEN))
+toolbar.AddTool(wx.ID_SAVE, "Salva", wx.ArtProvider.GetBitmap(wx.ART_FILE_SAVE))
+
+# un separatore: come abbellimento e per vedere come si fa :)
+toolbar.AddSeparator()
+
+toolbar.AddTool(wx.ID_EXIT, "Esci",  wx.ArtProvider.GetBitmap(wx.ART_QUIT) )
+
 
 # riempita la toobar, va eseguito il metodo Realize()
 toolbar.Realize()
 ```
 
-Facciamo anche qui un esempio con 2 azioni e un separatore: la prima
-azione sarà un azione standard, mentre la seconda una azione
-personalizzata:
 
-``` 
-# ...
-# azione standard: ID, descrizione, icona
-exitTool = toolbar.AddTool( wx.ID_EXIT, "ESCI", wx.ArtProvider.GetBitmap(wx.ART_QUIT) )
+A questo punto, se volete collegare i pulsanti della Toolbar ad una funzione, 
+basta eseguire il solito Bind() con l'evento `wx.EVT_TOOL`.
 
-# un separatore: come abbellimento e per vedere come si fa :)
-toolbar.AddSeparator()
 
-# azione personalizzata: ID, descrizione, icona
-questionTool = toolbar.AddTool( 73 , "Fai una domanda" , wx.ArtProvider.GetBitmap(wx.ART_QUESTION) )
+``` python
+self.Bind(wx.EVT_TOOL, self.funzioneEsci, id = wx.ID_EXIT )
+self.Bind(wx.EVT_TOOL, self.funzioneApri, id = wx.ID_OPEN )
 ```
 
-A questo punto, se volete collegare i pulsanti della Toolbar ad una
-funzione, basta eseguire il solito Bind() con l'evento **wx.EVT_TOOL**.
-
-``` 
-self.Bind(wx.EVT_TOOL, self.esci, exitTool )
-self.Bind(wx.EVT_TOOL, self.dattiUnaRisposta, exitTool )
-```
-
-Come al solito, propongo l'esempio completo delle toolbar.
-
-``` 
-import wx
-
-class Esempio(wx.Frame):
-
-    def __init__(self):
-        super().__init__(None, title="Prova Toolbar")
-
-        toolbar = self.CreateToolBar()
-
-        exitTool = toolbar.AddTool( wx.ID_EXIT, "ESCI", wx.ArtProvider.GetBitmap(wx.ART_QUIT) )
-        toolbar.AddSeparator()
-        questionTool = toolbar.AddTool( 73 , "Fai una domanda" , wx.ArtProvider.GetBitmap(wx.ART_QUESTION) )
-
-        toolbar.Realize()
-
-        self.Bind(wx.EVT_TOOL, self.esci, exitTool)
-        self.Bind(wx.EVT_TOOL, self.dattiUnaRisposta, questionTool)
-
-    def esci(self, event):
-        self.Close(True)
-        return
-
-    def dattiUnaRisposta(self,event):
-        dial = wx.MessageDialog(None, "Bravo!", "Risposta", wx.OK | wx.ICON_EXCLAMATION)
-        dial.ShowModal()
-
-# ----------------------------------------
-app = wx.App()
-window = Esempio()
-window.Show()
-app.MainLoop()
-```
 
 !!! warning "Attenzione!"
 
@@ -390,6 +259,7 @@ Vediamo una semplicissima dimostrazione di ciò con una finestra avente
 una sola azione, presente sia nella menubar che nella toolbar.
 
 ``` 
+# Esempio banale con una sola azione su menu e toolbar, UN UNICO BINDING
 import wx
 
 class Esempio(wx.Frame):
@@ -414,10 +284,11 @@ class Esempio(wx.Frame):
         return
 
 # ----------------------------------------
-app = wx.App()
-window = Esempio()
-window.Show()
-app.MainLoop()
+if __name__ == "__main__":
+    app = wx.App()
+    window = Esempio()
+    window.Show()
+    app.MainLoop()
 ```
 
 ## wx.StatusBar
@@ -457,12 +328,11 @@ class Esempio(wx.Frame):
 
 # ----------------------------------------
 app = wx.App()
-
 window = Esempio()
 window.Show()
-
 app.MainLoop()
 ```
+
 
 ## Context Menu
 
