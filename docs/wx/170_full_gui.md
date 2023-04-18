@@ -180,7 +180,7 @@ fileMenu.Append(self.fullScreenItem)
 mb.Append(fileMenu, '&File')
 
 # INFINE!!!
-self.SetMenubar(mb)
+self.SetMenuBar(mb)
 ```
 
 
