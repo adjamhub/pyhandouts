@@ -177,10 +177,10 @@ fileMenu.Append(self.fullScreenItem)
         
 # PENULTIMA COSA: aggiungi il menù alla menubar
 # (La & prima della F di File attiva la scorciatoia ALT + F)
-menubar.Append(fileMenu, '&File')
+mb.Append(fileMenu, '&File')
 
 # INFINE!!!
-self.SetMenubar(menubar)
+self.SetMenubar(mb)
 ```
 
 
