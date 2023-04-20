@@ -21,7 +21,19 @@ passione per i [Monty Python](https://it.wikipedia.org/wiki/Monty_Python), un gr
 Per rendervi conto della *incredibile comicità* del gruppo... ecco uno dei primi video su YouTube ottenuto cercando *Monty Python ita*. 
 Dura 84 minuti. Noi non supereremo il minuto 4...
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/S04V_mW5v0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<img onclick="play1()" id="ytb1" src="../images/youtube-button.jpg" alt="youtube video">
+<div id="ytv1"></div>
+<br>
+
+<script>
+function play1() { 
+    var frameB = document.getElementById("ytb1");
+    frameB.style.display="None";
+    var frameV = document.getElementById("ytv1");
+    frameV.innerHTML += '<iframe width="640" height="360" src="https://www.youtube.com/embed/S04V_mW5v0I" frameborder="0" allowfullscreen></iframe>';
+    }
+</script>
 
 
 

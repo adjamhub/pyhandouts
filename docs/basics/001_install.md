@@ -11,12 +11,10 @@ risulti complicata e inadatta a chi deve concentrarsi sull'imparare il
 linguaggio piuttosto che far funzionare tutto il sistema solo per
 eseguire la prova di un semplice programma.
 
-Per risolvere questo problema e favorire lo sviluppo semplice e veloce
-delle applicazioni (**RAD**: [Rapid Application
-Development](https://it.wikipedia.org/wiki/Rapid_application_development))
+Per risolvere questo problema e favorire lo sviluppo semplice e veloce delle applicazioni 
+(**RAD**: [Rapid Application Development](https://it.wikipedia.org/wiki/Rapid_application_development))
 si è addirittura inventata una nuova categoria di software, denominata
-**IDE** ([Integrated Development
-Environment](https://it.wikipedia.org/wiki/Integrated_development_environment)).
+**IDE** ([Integrated Development Environment](https://it.wikipedia.org/wiki/Integrated_development_environment)).
 
 Gli IDE sono software che contengono più o meno tutto quanto necessario
 per sviluppare una applicazione in uno o più linguaggi di
@@ -123,7 +121,20 @@ tutti tonti: non avete idea di quanti tutorial si trovano su YouTube per
 installare Thonny. Nel dubbio ne aggiungo qui uno...
 
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/TlvQOWhlfpo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<img onclick="play1()" id="ytb1" src="../images/youtube-button.jpg" alt="youtube video">
+<div id="ytv1"></div>
+<br>
+
+<script>
+function play1() { 
+    var frameB = document.getElementById("ytb1");
+    frameB.style.display="None";
+    var frameV = document.getElementById("ytv1");
+    frameV.innerHTML += '<iframe width="640" height="360" src="https://www.youtube.com/embed/TlvQOWhlfpo" frameborder="0" allowfullscreen></iframe>';
+    }
+</script>
+
 
 Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
 aiuto. Appena avete finito procedete gli Hello World Test 
