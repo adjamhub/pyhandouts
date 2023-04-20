@@ -23,9 +23,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  font:
-    text: Noto Sans
-    code: Noto Mono
+  font: False
   language: it
   features:
     - navigation.footer
@@ -40,7 +38,7 @@ theme:
 
 extra:
   consent:
-    title: Cookie consent
+    title: Consenso all'uso dei Cookie(s)
     description: >
       Questo sito memorizza alcuni cookies solo per riconoscere un visitatore 
       che non è alla sua prima visita e alcune preferenze, come il tema di visualizzazione
