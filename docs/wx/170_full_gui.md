@@ -45,7 +45,7 @@ class Finestra(wx.Frame):
     def creaMenubar(self):
         return
     
-    # in questa funzione andreamo a creare e popolare la toolbar
+    # in questa funzione andremo a creare e popolare la toolbar
     def creaToolbar(self):
         return
     
@@ -130,6 +130,14 @@ A breve vedremo anche come utilizzarle in maniera più che semplice!!!
 
 
 ## Menubar
+
+
+> **Documentazione ufficiale classi MenuBar, Menu, MenuItem**
+> 
+> **<a href="https://docs.wxpython.org/wx.MenuBar.html" target="_blank">wx.MenuBar</a>**: Classe per implementare la barra dei Menù.<br>
+> **<a href="https://docs.wxpython.org/wx.Menu.html" target="_blank">wx.Menu</a>**: Classe per implementare un Menù.<br>
+> **<a href="https://docs.wxpython.org/wx.MenuItem.html" target="_blank">wx.MenuItem</a>**: Classe per implementare un elemento di Menù<br>
+
 
 I menù sono oggetti grafici che tutti conosciamo e a cui tutti siamo
 abituati, non c'è bisogno di fare grandi introduzioni! 
