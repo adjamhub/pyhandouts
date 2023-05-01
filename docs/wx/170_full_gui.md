@@ -10,17 +10,23 @@ In questo capitolo cercheremo di introdurre tutti quegli elementi grafici che im
 - le impostazioni delle applicazioni
 
 
-## Struttura di base di una App Full GUI
+## Skeleton Full GUI
 
-La faccio breve, vi illustro subito il nuovo skeleton:
+Lo **Skeleton** è un file che contiene la struttura di base dalla quale partire per costruire qualcosa.
+
+Lo skeleton qui sotto descrive chiaramente una struttura da cui partire per alloggiare in maniera chiara e ben strutturata tutti gli elementi
+di una app Full GUI, ovvero comprensiva di azioni, menù, barre degli strumenti, etc...
+
 
 ``` python
 import wx
 
+APP_NAME = "Il nome della vostra App"
+
 class Finestra(wx.Frame):
     
     def __init__(self):
-        super().__init__(None, title="Window Title")
+        super().__init__(None, title=APP_NAME)
         
         # Spazio per le variabili membro della classe
         
@@ -36,7 +42,7 @@ class Finestra(wx.Frame):
         self.creaMainView()
         # -------------------------------------------
         
-        # le ultime cose, ad esempio, la dimensione iniziale, etc...
+        # le ultime cose, ad esempio, le impostazioni iniziali, etc...
         
         # -------------------------------------------
         return
@@ -61,6 +67,7 @@ class Finestra(wx.Frame):
 # ----------------------------------------
 if __name__ == "__main__":
     app = wx.App()
+    app.SetAppName(APP_NAME)
     window = Finestra()
     window.Show()
     app.MainLoop()
@@ -114,15 +121,15 @@ Ecco l'elenco completo degli ID delle azioni comuni in wxPython:
 |  wx.ID_FIRST           |  wx.ID_FLOPPY          |  wx.ID_FORWARD         |  wx.ID_HARDDISK       |
 |  wx.ID_HELP            |  wx.ID_HOME            |  wx.ID_INDENT          |  wx.ID_INDEX          |
 |  wx.ID_INFO            |  wx.ID_ITALIC          |  wx.ID_JUMP_TO         |  wx.ID_JUSTIFY_CENTER |
-|  wx.ID_JUSTIFY_FILL    |  wx.ID_JUSTIFY_LEFT    |  wx.ID_JUSTIFY_RIGHT   |   wx.ID_LAST          |
-|  wx.ID_NETWORK         |  wx.ID_NEW             |  wx.ID_NO              |   wx.ID_OK            | 
-|  wx.ID_OPEN            |  wx.ID_PASTE           |  wx.ID_PREFERENCES     |   wx.ID_PREVIEW       |
-|  wx.ID_PRINT           |  wx.ID_PROPERTIES      |  wx.ID_REDO            |   wx.ID_REFRESH       |
+|  wx.ID_JUSTIFY_FILL    |  wx.ID_JUSTIFY_LEFT    |  wx.ID_JUSTIFY_RIGHT   |  wx.ID_LAST           |
+|  wx.ID_NETWORK         |  wx.ID_NEW             |  wx.ID_NO              |  wx.ID_OK             | 
+|  wx.ID_OPEN            |  wx.ID_PASTE           |  wx.ID_PREFERENCES     |  wx.ID_PREVIEW        |
+|  wx.ID_PRINT           |  wx.ID_PROPERTIES      |  wx.ID_REDO            |  wx.ID_REFRESH        |
 |  wx.ID_REMOVE          |  wx.ID_REPLACE         |  wx.ID_REVERT_TO_SAVED |  wx.ID_SAVE           |
-|  wx.ID_SAVEAS          | wx.ID_SELECTALL        |  wx.ID_SELECT_COLOR    |  wx.ID_SELECT_FONT    |
-|  wx.ID_SORT_ASCENDING  | wx.ID_SORT_DESCENDING  | wx.ID_SPELL_CHECK      |  wx.ID_STOP           |
-|  wx.ID_STRIKETHROUGH   | wx.ID_TOP              | wx.ID_UNDELETE         |  wx.ID_UNDERLINE      |
-|  wx.ID_UNDO            | wx.ID_UNINDENT         |  wx.ID_UP              |  wx.ID_YES            |
+|  wx.ID_SAVEAS          |  wx.ID_SELECTALL       |  wx.ID_SELECT_COLOR    |  wx.ID_SELECT_FONT    |
+|  wx.ID_SORT_ASCENDING  |  wx.ID_SORT_DESCENDING |  wx.ID_SPELL_CHECK     |  wx.ID_STOP           |
+|  wx.ID_STRIKETHROUGH   |  wx.ID_TOP             |  wx.ID_UNDELETE        |  wx.ID_UNDERLINE      |
+|  wx.ID_UNDO            |  wx.ID_UNINDENT        |  wx.ID_UP              |  wx.ID_YES            |
 |  wx.ID_ZOOM_100        |  wx.ID_ZOOM_FIT        |  wx.ID_ZOOM_IN         |  wx.ID_ZOOM_OUT       |
 
 
