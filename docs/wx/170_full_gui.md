@@ -111,26 +111,28 @@ ad esempio l'ID per l'azione SALVA si chiama `wx.ID_SAVE`.
 Ecco l'elenco completo degli ID delle azioni comuni in wxPython:
 
 
-| Elenco                 | ACTION ID              | Disponibili            |                       |
-|------------------------|------------------------|------------------------|-----------------------|
-|  wx.ID_ABOUT           |  wx.ID_ADD             |  wx.ID_APPLY           |  wx.ID_BACKWARD       |
-|  wx.ID_BOLD            |  wx.ID_BOTTOM          |  wx.ID_CANCEL          |  wx.ID_CDROM          |
-|  wx.ID_CLEAR           |  wx.ID_CLOSE           |  wx.ID_CONVERT         |  wx.ID_COPY           |
-|  wx.ID_CUT             |  wx.ID_DELETE          |  wx.ID_DOWN            |  wx.ID_EDIT           |
-|  wx.ID_EXECUTE         |  wx.ID_EXIT            |  wx.ID_FILE            |  wx.ID_FIND           |
-|  wx.ID_FIRST           |  wx.ID_FLOPPY          |  wx.ID_FORWARD         |  wx.ID_HARDDISK       |
-|  wx.ID_HELP            |  wx.ID_HOME            |  wx.ID_INDENT          |  wx.ID_INDEX          |
-|  wx.ID_INFO            |  wx.ID_ITALIC          |  wx.ID_JUMP_TO         |  wx.ID_JUSTIFY_CENTER |
-|  wx.ID_JUSTIFY_FILL    |  wx.ID_JUSTIFY_LEFT    |  wx.ID_JUSTIFY_RIGHT   |  wx.ID_LAST           |
-|  wx.ID_NETWORK         |  wx.ID_NEW             |  wx.ID_NO              |  wx.ID_OK             | 
-|  wx.ID_OPEN            |  wx.ID_PASTE           |  wx.ID_PREFERENCES     |  wx.ID_PREVIEW        |
-|  wx.ID_PRINT           |  wx.ID_PROPERTIES      |  wx.ID_REDO            |  wx.ID_REFRESH        |
-|  wx.ID_REMOVE          |  wx.ID_REPLACE         |  wx.ID_REVERT_TO_SAVED |  wx.ID_SAVE           |
-|  wx.ID_SAVEAS          |  wx.ID_SELECTALL       |  wx.ID_SELECT_COLOR    |  wx.ID_SELECT_FONT    |
-|  wx.ID_SORT_ASCENDING  |  wx.ID_SORT_DESCENDING |  wx.ID_SPELL_CHECK     |  wx.ID_STOP           |
-|  wx.ID_STRIKETHROUGH   |  wx.ID_TOP             |  wx.ID_UNDELETE        |  wx.ID_UNDERLINE      |
-|  wx.ID_UNDO            |  wx.ID_UNINDENT        |  wx.ID_UP              |  wx.ID_YES            |
-|  wx.ID_ZOOM_100        |  wx.ID_ZOOM_FIT        |  wx.ID_ZOOM_IN         |  wx.ID_ZOOM_OUT       |
+| Elenco                | ACTION ID         | Disponibili            |                       |                       |
+|-----------------------|-------------------|------------------------|-----------------------|-----------------------|
+| wx.ID_ABOUT           | wx.ID_EDIT        | wx.ID_JUMP_TO          | wx.ID_PRINT           | wx.ID_STRIKETHROUGH   | 
+| wx.ID_ADD             | wx.ID_EXECUTE     | wx.ID_JUSTIFY_CENTER   | wx.ID_PROPERTIES      |                       |
+| wx.ID_APPLY           | wx.ID_EXIT        | wx.ID_JUSTIFY_FILL     |                       | wx.ID_TOP             | 
+|                       |                   | wx.ID_JUSTIFY_LEFT     | wx.ID_REDO            |                       |
+| wx.ID_BACKWARD        | wx.ID_FILE        | wx.ID_JUSTIFY_RIGHT    | wx.ID_REFRESH         | wx.ID_UNDELETE        |  
+| wx.ID_BOLD            | wx.ID_FIND        |                        | wx.ID_REMOVE          | wx.ID_UNDERLINE       |
+| wx.ID_BOTTOM          | wx.ID_FIRST       | wx.ID_LAST             | wx.ID_REPLACE         | wx.ID_UNDO            |
+|                       | wx.ID_FLOPPY      |                        | wx.ID_REVERT_TO_SAVED | wx.ID_UNINDENT        |
+| wx.ID_CANCEL          | wx.ID_FORWARD     | wx.ID_NETWORK          |                       | wx.ID_UP              |
+| wx.ID_CDROM           |                   | wx.ID_NEW              | wx.ID_SAVE            |                       |
+| wx.ID_CLEAR           | wx.ID_HARDDISK    | wx.ID_NO               | wx.ID_SAVEAS          | wx.ID_YES             |
+| wx.ID_CLOSE           | wx.ID_HELP        |                        | wx.ID_SELECTALL       |                       |
+| wx.ID_CONVERT         | wx.ID_HOME        | wx.ID_OK               | wx.ID_SELECT_COLOR    | wx.ID_ZOOM_100        |
+| wx.ID_COPY            |                   | wx.ID_OPEN             | wx.ID_SELECT_FONT     | wx.ID_ZOOM_FIT        |
+| wx.ID_CUT             | wx.ID_INDENT      |                        | wx.ID_SORT_ASCENDING  | wx.ID_ZOOM_IN         |
+|                       | wx.ID_INDEX       | wx.ID_PASTE            | wx.ID_SORT_DESCENDING | wx.ID_ZOOM_OUT        | 
+| wx.ID_DELETE          | wx.ID_INFO        | wx.ID_PREFERENCES      | wx.ID_SPELL_CHECK     |                       |
+| wx.ID_DOWN            | wx.ID_ITALIC      | wx.ID_PREVIEW          | wx.ID_STOP            |                       |
+
+
 
 
 A breve vedremo anche come utilizzarle in maniera più che semplice!!!
