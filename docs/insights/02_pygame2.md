@@ -1,0 +1,99 @@
+# PyGame (avanzato)
+
+## Sprite(s)
+
+## Groups and collisions
+
+## Aggiungiamo una pallina mobile al suo interno
+
+Questa pallina sarà posizionata dentro lo schermo e sarò possibile muoverla con i tasti freccia!
+
+``` py
+# Primo programma
+
+# importa ed inizializza la libreria pygame
+import pygame
+
+
+pygame.init()
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+# lo screen
+screen = pygame.display.set_mode( (SCREEN_WIDTH, SCREEN_HEIGHT) )
+pygame.display.set_caption("Il mio primo gioco con PyGame!")
+
+# -----------------------------------------------------------------------
+# la pallina
+pallina = pygame.sprite.Sprite()
+pallina.surf = pygame.Surface((50, 50))
+pallina.surf.fill("green")
+pallina.rect = pygame.draw.circle(pallina.surf, "red", (25,25), 25)
+# -----------------------------------------------------------------------
+
+# facile...
+running = True
+
+while running:
+    # serve a gestire la X di chiusura in alto
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+            
+        # quando premi ESC, esc(i)!!!
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                running = False
+
+    # L'insieme dei tasti premuti dall'utente..
+    pressed_keys = pygame.key.get_pressed()
+    
+    # Qui si muove la pallina a seconda delle frecce cliccate.
+    # Attenti al sistema di riferimento!!!
+    if pressed_keys[pygame.K_UP]:
+        pallina.rect.move_ip(0, -1)
+
+    if pressed_keys[pygame.K_DOWN]:
+        pallina.rect.move_ip(0, 1)
+
+    if pressed_keys[pygame.K_LEFT]:
+        pallina.rect.move_ip(-1, 0)
+
+    if pressed_keys[pygame.K_RIGHT]:
+        pallina.rect.move_ip(1, 0)
+    
+    # Questo codice MANTIENE LA PALLINA DENTRO LO SCHERMO!!!
+    if pallina.rect.left < 0:
+        pallina.rect.left = 0
+
+    if pallina.rect.right > SCREEN_WIDTH:
+        pallina.rect.right = SCREEN_WIDTH
+
+    if pallina.rect.top <= 0:
+        pallina.rect.top = 0
+
+    if pallina.rect.bottom >= SCREEN_HEIGHT:
+        pallina.rect.bottom = SCREEN_HEIGHT
+
+                
+    # colora lo schermo di verde
+    screen.fill("green")
+
+    # disegna gli oggetti sullo schermo
+    screen.blit(pallina.surf, pallina.rect)
+
+    # Flip the display
+    pygame.display.flip()
+
+
+# Chiude pygame
+pygame.quit()
+
+```
+<br>
+<br>
+<br>
+
+
+
