@@ -1,3 +1,30 @@
 # Python pygame
 
-Blah blah...
+
+## Disegnare forme 
+
+pygame.draw.circle – This function is used for drawing a circle around a point.
+pygame.draw.rect – This function is used for drawing a rectangle shape.
+pygame.draw.polygon – This function is used for drawing a shape with any number of sides.
+pygame.draw.ellipse – This function is used for drawing a round shape inside a rectangle.
+pygame.draw.line – This function is used for drawing a straight line.
+pygame.draw.arc – This function draws a partial section of an ellipse.
+pygame.draw.lines – This function draws the multiple contiguous line segments.
+
+AGGIUNGI GLI ESEMPI!!!!
+
+
+## Scrivere TESTO
+
+## Problema delle immagini!!!
+
+## Collisioni!!!
+
+## Pulsanti!!!
+
+## Audio
+
+## Animazioni
+
+## User Input
+
