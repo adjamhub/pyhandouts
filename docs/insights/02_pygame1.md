@@ -349,7 +349,89 @@ while running:
 pygame.quit()
 ```
 
-## ... poi ???
+## Aggiungere suoni
+
+Per far vedere come fermare e far ripartire una musichetta ho implementato anche la pausa :)
+
+``` py
+import pygame
+
+pygame.init()   
+
+pygame.mixer.init() 
+pygame.mixer.music.load("zanzara.mp3") 
+pygame.mixer.music.set_volume(0.5) 
+pygame.mixer.music.play()
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
+pygame.display.set_caption("Lavorare con le Immagini") 
+
+imgSfondo = pygame.image.load("pere.jpg") 
+imgSfondo = pygame.transform.scale(imgSfondo,(SCREEN_WIDTH,SCREEN_HEIGHT))
+imgMosca = pygame.image.load("mosca.png") 
+imgMosca = pygame.transform.scale(imgMosca,(30,30))
+
+
+x = SCREEN_WIDTH // 2
+y = SCREEN_HEIGHT // 2
+
+width = 30
+height = 30
+
+speed = 8
+
+running = True
+paused = False
+
+while running:  
+    
+    pygame.time.delay(10)
+    
+    for event in pygame.event.get(): 
+        if event.type == pygame.QUIT: 
+            running = False
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            running = False
+        # PREMI "P" per mettere in pausa (o uscire dalla pausa)
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_p:
+            if paused:
+                paused = False
+                pygame.mixer.music.play()
+            else:
+                paused = True
+                pygame.mixer.music.pause()
+            
+    if paused:
+        continue
+
+    keys = pygame.key.get_pressed() 
+    if keys[pygame.K_LEFT] and x > 0: 
+        x -= speed 
+    if keys[pygame.K_RIGHT] and x < SCREEN_WIDTH - width: 
+        x += speed 
+    if keys[pygame.K_UP] and y > 0: 
+        y -= speed 
+    if keys[pygame.K_DOWN] and y < SCREEN_HEIGHT - height: 
+        y += speed
+    
+    # invece di screen.fill("white")
+    screen.blit(imgSfondo,(0,0) )
+    
+    # invece di pygame.draw.rect(screen, "red", (x, y, width, height)) 
+    screen.blit(imgMosca,(x,y))
+    
+    pygame.display.update() 
+
+# 
+pygame.quit()
+```
+
+## Aggiungere Nemici a caso
+
+
 
 <br>
 <br>
