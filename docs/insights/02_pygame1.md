@@ -228,62 +228,15 @@ while run:
 pygame.quit()
 ```
 
-
-## Disegnare con le frecce
-
-``` py
-import pygame
-
-pygame.init()   
-
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
-
-window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
-pygame.display.set_caption("Disegnare con le frecce") 
-
-x = SCREEN_WIDTH // 2
-y = SCREEN_HEIGHT // 2
-
-width = 10
-height = 10
-
-speed = 8
-
-running = True
-
-while running:  
-    
-    pygame.time.delay(10)
-    
-    for event in pygame.event.get(): 
-        if event.type == pygame.QUIT: 
-            running = False
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-            running = False
-
-    keys = pygame.key.get_pressed() 
-    if keys[pygame.K_LEFT] and x > 0: 
-        x -= speed 
-    if keys[pygame.K_RIGHT] and x < SCREEN_WIDTH - width: 
-        x += speed 
-    if keys[pygame.K_UP] and y > 0: 
-        y -= speed 
-    if keys[pygame.K_DOWN] and y < SCREEN_HEIGHT - height: 
-        y += speed
-    
-    # notare come il fatto di NON riempire lo schermo permette ai rettangoli già
-    # disegnati di rimanere sullo schermo...
-    pygame.draw.rect(window, "white", (x, y, width, height)) 
-    
-    pygame.display.flip() 
-
-# 
-pygame.quit()
-```
+## Aggiungere Nemici a caso
 
 
-## Gestire Immagini
+
+## Gestire le collisioni
+
+
+
+## lavorare con le Immagini
 
 Questo pezzetto di codice presuppone che abbiate nella stessa cartella due immagini:
 
@@ -348,6 +301,7 @@ while running:
 # 
 pygame.quit()
 ```
+
 
 ## Aggiungere suoni
 
@@ -428,8 +382,6 @@ while running:
 # 
 pygame.quit()
 ```
-
-## Aggiungere Nemici a caso
 
 
 
