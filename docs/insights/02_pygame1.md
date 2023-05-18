@@ -91,12 +91,199 @@ Ragionate su come inserire il codice e testatelo finché non funziona! Quando pr
 
 ## Aggiungere scritte
 
+``` py
+import pygame
+
+pygame.init()
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
+
+# Definizione dei font: Quello "grosso" e quello "giusto"
+Titlefont = pygame.font.SysFont('Impact', 70)
+Normalfont = pygame.font.SysFont('Impact', 30)
+
+# oggetto_testo = oggetto_font.render(stringa, True (non serve a una gibba), colore, sfondo)
+game_end = Titlefont.render("Hai Perso!", True, "red","black")
+close_tip = Normalfont.render("Click ESC to exit", True, "blue","yellow")
+
+running = True
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            running = False
+            
+    screen.fill("white") 
+    screen.blit(game_end, (100,100))
+    screen.blit(close_tip, (100,300))
+    pygame.display.flip()
+
+pygame.quit()
+```
+
 
 ## Aggiungere forme
 
+``` py
+import pygame
+
+pygame.init()
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+running = True
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            running = False
+            
+    screen.fill("white")
+    
+    # cerchio ROSSO di raggio 80 al centro dello screen
+    pygame.draw.circle(screen, "red", (SCREEN_WIDTH//2, SCREEN_HEIGHT//2), 80)
+    
+    # rettangolo BLUE che va dal punto (600,400) lungo 180, largo 100
+    pygame.draw.rect(screen, "blue", (600, 400, 180, 100))
+    
+    # linea VERDE dal punto... al punto ... di spessore ...
+    pygame.draw.line(screen, "green", (600, 100), (700, 300), 8)
+    
+    # ellisse VIOLA contenuto nel rettangolo che parte da (100,400) lungo 60, largo 90. Di spessore...
+    pygame.draw.ellipse(screen, "purple" , (100, 400, 60, 90), 8)
+    
+    # poligono GIALLO (riempito) che collega i punti...
+    pygame.draw.polygon(screen, "yellow",((146, 0), (291, 106),(236, 277), (56, 277), (0, 106)))
+    
+    pygame.display.flip()
+
+pygame.quit()
+```
+
+
 ## Muovere un rettangolo
 
+``` py
+import pygame   
+
+pygame.init()
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
+pygame.display.set_caption("Rettangolo che si muove") 
+
+x = SCREEN_WIDTH // 2
+y = SCREEN_HEIGHT // 2
+
+w = 40
+h = 20
+
+speed = 8
+
+run = True
+
+while run: 
+    pygame.time.delay(10) 
+    
+    for event in pygame.event.get(): 
+        if event.type == pygame.QUIT: 
+            run = False
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            run = False
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_s:
+            speed += 1
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_a:
+            speed -= 1
+            
+    keys = pygame.key.get_pressed() 
+    if keys[pygame.K_LEFT] and x > 0: 
+        w,h = 40,20
+        x -= speed 
+    if keys[pygame.K_RIGHT] and x < SCREEN_WIDTH - w: 
+        w,h = 40,20
+        x += speed 
+    if keys[pygame.K_UP] and y > 0: 
+        w,h = 20,40
+        y -= speed 
+    if keys[pygame.K_DOWN] and y < SCREEN_HEIGHT - h: 
+        w,h = 20,40
+        y += speed 
+    
+    screen.fill("black") 
+    pygame.draw.rect(screen, "red", (x, y, w, h)) 
+    pygame.display.update()  
+
+pygame.quit()
+```
+
+
 ## Disegnare con le frecce
+
+``` py
+import pygame
+
+pygame.init()   
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
+pygame.display.set_caption("Disegnare con le frecce") 
+
+x = SCREEN_WIDTH // 2
+y = SCREEN_HEIGHT // 2
+
+width = 10
+height = 10
+
+speed = 8
+
+running = True
+
+while running:  
+    
+    pygame.time.delay(10)
+    
+    for event in pygame.event.get(): 
+        if event.type == pygame.QUIT: 
+            running = False
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            running = False
+
+    keys = pygame.key.get_pressed() 
+    if keys[pygame.K_LEFT] and x > 0: 
+        x -= speed 
+    if keys[pygame.K_RIGHT] and x < SCREEN_WIDTH - width: 
+        x += speed 
+    if keys[pygame.K_UP] and y > 0: 
+        y -= speed 
+    if keys[pygame.K_DOWN] and y < SCREEN_HEIGHT - height: 
+        y += speed
+    
+    # notare come il fatto di NON riempire lo schermo permette ai rettangoli già
+    # disegnati di rimanere sullo schermo...
+    pygame.draw.rect(window, "white", (x, y, width, height)) 
+    
+    pygame.display.update() 
+
+# 
+pygame.quit()
+```
+
+
+## Gestire Immagini
 
 ## ... poi ???
 
