@@ -223,7 +223,7 @@ while run:
     
     screen.fill("black") 
     pygame.draw.rect(screen, "red", (x, y, w, h)) 
-    pygame.display.update()  
+    pygame.display.flip()  
 
 pygame.quit()
 ```
@@ -276,7 +276,7 @@ while running:
     # disegnati di rimanere sullo schermo...
     pygame.draw.rect(window, "white", (x, y, width, height)) 
     
-    pygame.display.update() 
+    pygame.display.flip() 
 
 # 
 pygame.quit()
@@ -343,7 +343,7 @@ while running:
     # invece di pygame.draw.rect(screen, "red", (x, y, width, height)) 
     screen.blit(imgMosca,(x,y))
     
-    pygame.display.update() 
+    pygame.display.flip() 
 
 # 
 pygame.quit()
@@ -423,7 +423,7 @@ while running:
     # invece di pygame.draw.rect(screen, "red", (x, y, width, height)) 
     screen.blit(imgMosca,(x,y))
     
-    pygame.display.update() 
+    pygame.display.flip() 
 
 # 
 pygame.quit()
