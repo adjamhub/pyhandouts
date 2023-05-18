@@ -314,7 +314,7 @@ pygame.quit()
 ```
 
 
-## lavorare con le Immagini
+## Lavorare con le Immagini
 
 Questo pezzetto di codice presuppone che abbiate nella stessa cartella due immagini:
 
@@ -460,6 +460,9 @@ while running:
 # 
 pygame.quit()
 ```
+
+
+## Aggiungere pulsanti
 
 
 
