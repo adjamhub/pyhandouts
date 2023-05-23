@@ -1,60 +1,64 @@
 # Esercizi su GUI complete
 
 
-
-- Blocco Note
-
-    - Blocco Note con Scintilla
-    - Esempio di stampa
+## Editor di testo (basato su wx.stc)
 
 
----
 
 
-- MiniBrowser
+### Esercizio Blocco Note
 
-    - Esercizio Browser completo, con cronologia e bookmarks
-    - Esercizio PDFViewer
+
+### Esempio di stampa 
 
 
 ---
 
-- Visualizzatore Immagini
+## Browser (basato su wx.html2)
 
-    - GIF Viewer (con play/pause/stop)
-    - SlideShow (temporizzato)
-    - SlideShow (con pulsanti AVANTI/INDIETRO)
+
+
+### Esercizio Browser completo, con cronologia e bookmarks
+    
+### Esercizio PDFViewer
+
 
 
 ---
 
-- Media Player
+## MultiMedia Player (basato su wx.media)
 
-    - Video Player
-    - Audio Player
+
+### Video Player
+
+
+### Audio Player
   
-
----
-
-- Rich Text Ctrl
-
-    - Word ??
-
-
----
-
-- wx.ListCtrl
-
-    - File manager ??
     
 
 ---
 
-- Notebook
+## Griglia (basato su wx.grid)
 
-    - Foglio Elettronico
-    - Battleship
+### Foglio Elettronico
+
+### Battleship
  
+
+---
+
+## Rich Text Ctrl (basato su wx.richtext)
+
+
+### Word :)
+
+
+---
+## DA SISTEMARE (DA QUI IN POI!!!)
+
+- wx.ListCtrl
+
+    - File manager ??
 
 ---
 
@@ -64,3 +68,10 @@
     - orologio
     - agenda
 
+---
+
+- Visualizzatore Immagini
+
+    - GIF Viewer (con play/pause/stop)
+    - SlideShow (temporizzato)
+    - SlideShow (con pulsanti AVANTI/INDIETRO)
