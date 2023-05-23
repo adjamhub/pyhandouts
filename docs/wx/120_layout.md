@@ -221,7 +221,7 @@ Sono tante piccole cose insieme... necessitano di qualche esempio e qualche eser
 Il prossimo codice crea un layout orizzontale con 2 pulsanti che vogliamo ridimensionarsi con la finestra (quindi *proportion = 1*) 
 e con un pochino di bordo in tutte le direzioni.
 
-``` python
+``` py title="Layout Orizzontale" hl_lines="8 12 13 14 15 17"
 import wx
 
 class Esempio(wx.Frame):
@@ -415,7 +415,7 @@ a partire da in alto a sinistra, poi si procede in riga e terminata la riga in a
 
 Alla luce delle nuove conoscenze acquisite, facciamo subito una prova semplice semplice:
 
-``` python
+``` py title="Esempio GridSizer" hl_lines="10 17 18 19 20 22"
 import wx
 
 class Esempio(wx.Frame):
@@ -555,7 +555,7 @@ a contare da ZERO!!!)
 
 ![image](images/EsempioFlexGridSizer.png)
 
-``` python
+``` py title="Esempio FlexGridSizer (notate l'utilizzo delle Growable...)" hl_lines="10 36 37 40"
 import wx
 
 class Esempio(wx.Frame):
@@ -682,7 +682,7 @@ Concludo con qualche appunto prima di farvi vedere il codice (che a questo punto
 
 Ecco il codice che implementa quest'ultimo esempio:
 
-``` python
+``` py title="Esempio GridBagSizer" hl_lines="9 12 15 19 20 22 23 24 26"
 import wx
 
 class Esempio(wx.Frame):
@@ -812,7 +812,7 @@ panel.SetSizer(vbox)
     
 Esempi banali:
 
-``` python
+``` py hl_lines="2 3 4"
 # ...
 # utilizza prima SetSizer e dopo Fit...
 panel.SetSizer(vbox)

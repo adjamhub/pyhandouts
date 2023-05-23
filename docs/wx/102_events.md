@@ -21,7 +21,7 @@ Vediamo un esempio di codice di una Finestra con un grosso pulsante
 dentro: al click sul pulsante viene eseguita una funzione e... provate
 a copiare il codice e ad eseguirlo per vedere cosa succede!
 
-``` python
+``` py title="Eseguire una funzione al click di un pulsante" hl_lines="9"
 import wx
 
 class Esempio(wx.Frame):
