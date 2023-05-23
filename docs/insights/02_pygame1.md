@@ -15,15 +15,13 @@ il nome corrispondente e cliccate (incredibilmente) INSTALLA!!!
 Cominciamo dal programma assolutamente minimo, che però in realtà contiene già parecchie
 cosine su cui riflettere!
 
-``` py
-# Primo programma
-
+``` py title="Primo programma"
 # importa ed inizializza la libreria pygame
 import pygame
 
 pygame.init()
 
-# lo screen
+# lo screen (con titolo)
 screen = pygame.display.set_mode( (800, 600) )
 pygame.display.set_caption("Il mio primo gioco con PyGame!")
 
@@ -39,7 +37,7 @@ while running:
     # colora lo schermo di verde
     screen.fill("green")
 
-    # Update display content
+    # aggiorna il contenuto dello schermo
     pygame.display.flip()
 
 # Chiude pygame
@@ -69,14 +67,33 @@ Per adesso basta così con le spiegazioni.... proviamo ad andare avanti con il c
 
 Una cosa che a me piace molto è quella di dare la possibilità di uscire semplicemente premendo il tasto `ESC`: questa funzionalità si può ottenere aggiungendo opportunamente il seguente codice!
 
-``` py
-# DENTRO il FOR che gestisce gli eventi...
-# Se l'evento è la pressione di un tasto...
-# ... e il tasto è il tasto ESC.. esc(i)!
-if event.type == pygame.KEYDOWN:
-    if event.key == pygame.K_ESCAPE:
-        running = False
+
+``` py title="Uscire con il tasto ESC" hl_lines="14 15 16 17 18"
+import pygame
+
+pygame.init()
+
+screen = pygame.display.set_mode( (800, 600) )
+pygame.display.set_caption("Il mio primo gioco con PyGame!")
+
+running = True
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        # Se l'evento è la pressione di un tasto...
+        # ... e il tasto è il tasto ESC.. esc(i)!
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                running = False
+            
+    screen.fill("green")
+    pygame.display.flip()
+
+pygame.quit()
 ```
+
 
 Ragionate su come inserire il codice e testatelo finché non funziona! Quando premi ESC, il gioco deve terminare!
 
@@ -91,7 +108,7 @@ Ragionate su come inserire il codice e testatelo finché non funziona! Quando pr
 
 ## Aggiungere scritte
 
-``` py
+``` py title="Aggiungere scritte" hl_lines="11 12 13 15 16 17 29 30"
 import pygame
 
 pygame.init()
@@ -100,13 +117,14 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
 screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
+pygame.display.set_caption("Aggiungere scritte") 
 
 # Definizione dei font: Quello "grosso" e quello "giusto"
 Titlefont = pygame.font.SysFont('Impact', 70)
 Normalfont = pygame.font.SysFont('Impact', 30)
 
-# oggetto_testo = oggetto_font.render(stringa, True (non serve a una gibba), colore, sfondo)
-game_end = Titlefont.render("Hai Perso!", True, "red","black")
+# oggetto_testo = oggetto_font.render(stringa, True, colore, sfondo (opzionale) )
+game_end = Titlefont.render("Hai Perso!", True, "red")
 close_tip = Normalfont.render("Click ESC to exit", True, "blue","yellow")
 
 running = True
@@ -127,9 +145,9 @@ pygame.quit()
 ```
 
 
-## Aggiungere forme
+## Aggiungere forme geometriche
 
-``` py
+``` py title="Aggiungere forme geometriche" hl_lines="22 23 24 26 27 28 30 31 32 34 35 36 38 39 40"
 import pygame
 
 pygame.init()
@@ -138,6 +156,7 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption("Aggiungere forme geometriche") 
 
 running = True
 
@@ -179,7 +198,7 @@ pygame.quit()
 
 ## Muovere un rettangolo
 
-``` py
+``` py title="Muovere un rettangolo" hl_lines="11 12 13 15 16 17 19 20 32 33 34 35 36 37 40 41 42 43 44 45 46 47 48 49 50 51 54"
 import pygame   
 
 pygame.init()
@@ -190,12 +209,15 @@ SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
 pygame.display.set_caption("Rettangolo che si muove") 
 
+# posizione iniziale
 x = SCREEN_WIDTH // 2
 y = SCREEN_HEIGHT // 2
 
+# dimensioni rettangolo
 w = 40
 h = 20
 
+# velocità di spostamento
 speed = 8
 
 running = True
@@ -208,8 +230,10 @@ while running:
             running = False
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             running = False
+        # cliccando S accelera
         if event.type == pygame.KEYDOWN and event.key == pygame.K_s:
             speed += 1
+        # cliccando A rallenta
         if event.type == pygame.KEYDOWN and event.key == pygame.K_a:
             speed -= 1
             
@@ -240,7 +264,7 @@ pygame.quit()
 In questa parte del tutorial cercherò di aggiungere nemici in posti più o meno casuali e di controllare le collisioni fra
 questi e il giocatore!
 
-``` py
+``` py title="Nemici e Collisioni" hl_lines="12 13 14 15 17 18 42 43 44 45 64 65 66 67 68 69 70 71 72"
 import pygame   
 import random
 
@@ -327,7 +351,7 @@ Questo pezzetto di codice presuppone che abbiate nella stessa cartella due immag
 - pere.jpg, lo sfondo con le pere
 - mosca.png, la mosca con bordo trasparente
 
-``` py
+``` py title="lavorare con le immagini" hl_lines="11 12 13 14 46 47 49 50"
 import pygame
 
 pygame.init()   
@@ -342,7 +366,6 @@ imgSfondo = pygame.image.load("pere.jpg")
 imgSfondo = pygame.transform.scale(imgSfondo,(SCREEN_WIDTH,SCREEN_HEIGHT))
 imgMosca = pygame.image.load("mosca.png") 
 imgMosca = pygame.transform.scale(imgMosca,(30,30))
-
 
 x = SCREEN_WIDTH // 2
 y = SCREEN_HEIGHT // 2
@@ -391,7 +414,7 @@ pygame.quit()
 
 Per far vedere come fermare e far ripartire una musichetta ho implementato anche la pausa :)
 
-``` py
+``` py title="Aggiungere suoni" hl_lines="5 6 7 8 45 48"
 import pygame
 
 pygame.init()   
@@ -405,13 +428,12 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) 
-pygame.display.set_caption("Lavorare con le Immagini") 
+pygame.display.set_caption("Lavorare con le Immagini e i suoni") 
 
 imgSfondo = pygame.image.load("pere.jpg") 
 imgSfondo = pygame.transform.scale(imgSfondo,(SCREEN_WIDTH,SCREEN_HEIGHT))
 imgMosca = pygame.image.load("mosca.png") 
 imgMosca = pygame.transform.scale(imgMosca,(30,30))
-
 
 x = SCREEN_WIDTH // 2
 y = SCREEN_HEIGHT // 2
@@ -471,7 +493,7 @@ pygame.quit()
 ## Aggiungere pulsanti
 
 
-``` py
+``` py title="Aggiungere Pulsanti" hl_lines="10 11 12 18 19 26 27 28 29 33 34 35 36 37"
 import pygame
 
 pygame.init()
