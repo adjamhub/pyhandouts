@@ -106,7 +106,7 @@ o fornendo una dimensione iniziale nel costruttore della stessa, oppure utilizza
 
 Faccio notare che tutte le misure sono espresse in pixel.
 
-``` python
+``` py hl_lines="4"
 import wx
 
 app = wx.App()   
@@ -117,7 +117,7 @@ app.MainLoop()
 
 ...oppure...
 
-``` python
+``` py hl_lines="5"
 import wx
 
 app = wx.App()   
@@ -133,7 +133,7 @@ Entrambi i metodi sono semplici ed efficaci. Dal punto di vista operativo, il me
 In maniera analoga, se vogliamo specificare il **posizionamento** della finestra all'interno dello schermo possiamo 
 specificare la posizione iniziale nel costruttore o eseguire successivamente la funzione `Move(x,y)`
 
-``` python
+``` py hl_lines="4"
 import wx
 
 app = wx.App()   
@@ -144,7 +144,7 @@ app.MainLoop()
 
 ...oppure...
 
-``` python
+``` py hl_lines="5"
 import wx
 
 app = wx.App()   
@@ -160,7 +160,7 @@ all'interno della funzione `__init__`.
 Un'ultima cosa, semplice e molto utile può essere quella relativa al posizionamento automatico con la funzione `Centre()`,
 che posiziona automaticamente la finestra al centro dello schermo:
 
-``` python
+``` py  hl_lines="7 8"
 import wx
 
 app = wx.App()
