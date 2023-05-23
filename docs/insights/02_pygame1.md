@@ -151,21 +151,27 @@ while running:
     screen.fill("white")
     
     # cerchio ROSSO di raggio 80 al centro dello screen
-    pygame.draw.circle(screen, "red", (SCREEN_WIDTH//2, SCREEN_HEIGHT//2), 80)
+    # c è il "rettangolo" che contiene il cerchio disegnato
+    c = pygame.draw.circle(screen, "red", (SCREEN_WIDTH//2, SCREEN_HEIGHT//2), 80)
     
     # rettangolo BLUE che va dal punto (600,400) lungo 180, largo 100
-    pygame.draw.rect(screen, "blue", (600, 400, 180, 100))
+    # r è il rettangolo che contiene il rettangolo disegnato
+    r = pygame.draw.rect(screen, "blue", (600, 400, 180, 100))
     
     # linea VERDE dal punto... al punto ... di spessore ...
-    pygame.draw.line(screen, "green", (600, 100), (700, 300), 8)
+    # l è il "rettangolo" che contiene la linea disegnata 
+    l = pygame.draw.line(screen, "green", (600, 100), (700, 300), 8)
     
     # ellisse VIOLA contenuto nel rettangolo che parte da (100,400) lungo 60, largo 90. Di spessore...
-    pygame.draw.ellipse(screen, "purple" , (100, 400, 60, 90), 8)
+    # el è il rettangolo che contiene l'ellisse disegnata
+    el = pygame.draw.ellipse(screen, "purple" , (100, 400, 60, 90), 8)
     
     # poligono GIALLO (riempito) che collega i punti...
-    pygame.draw.polygon(screen, "yellow",((146, 0), (291, 106),(236, 277), (56, 277), (0, 106)))
+    # pol è il rettangolo che contiene il poligono disegnato
+    pol = pygame.draw.polygon(screen, "yellow",((146, 0), (291, 106),(236, 277), (56, 277), (0, 106)))
     
     pygame.display.flip()
+
 
 pygame.quit()
 ```
@@ -194,7 +200,7 @@ speed = 8
 
 running = True
 
-while run: 
+while running: 
     pygame.time.delay(10) 
     
     for event in pygame.event.get(): 
@@ -304,7 +310,7 @@ while running:
         en = pygame.draw.rect(screen, "white", (posx, posy, 20, 20)) 
         
         # se questo rettangolo "collide" con il punto (x,y) ove si trova il giocatore...
-        if en.collidepoint(x,y):
+        if player.colliderect(en):
             print("HAI PERSO!")
             running = False
 
