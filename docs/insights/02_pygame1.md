@@ -471,6 +471,53 @@ pygame.quit()
 ## Aggiungere pulsanti
 
 
+``` py
+import pygame
+
+pygame.init()
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+font = pygame.font.SysFont('Arial',30) 
+textRect = font.render('Quit' , True , "white") 
+buttonRect = pygame.Rect(SCREEN_WIDTH // 2, SCREEN_HEIGHT //2, 140, 40)
+    
+running = True
+
+while running:
+
+    # posizione del mouse
+    mPos = pygame.mouse.get_pos() 
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            running = False
+        # quando clicchi SOPRA il pulsante... FAI QUALCOSA!!!
+        if event.type == pygame.MOUSEBUTTONDOWN: 
+            if buttonRect.collidepoint(mPos):
+                running = False
+                
+    screen.fill("yellow")
+    
+    # ANIMAZIONE DEL PULSANTE (cambia colore quando ci passi sopra)
+    buttonColor = "red"
+    if buttonRect.collidepoint(mPos):
+        buttonColor = "blue"
+    button = pygame.draw.rect(screen,buttonColor,buttonRect) 
+    
+    screen.blit(textRect , (SCREEN_WIDTH //2 + 50, SCREEN_HEIGHT// 2) )
+    
+    pygame.display.flip()
+
+
+pygame.quit()
+```
+
 
 <br>
 <br>
