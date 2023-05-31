@@ -8,20 +8,26 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* title margin and color */
-h2,h3,h4 {
+h3,h4 {
   margin-top: 90px !important;
   margin-bottom: 30px !important;
 }
 
 h2 {
   background-color: rgba(68,138,255,.1) !important;
+  margin-top: 90px !important;
+  margin-bottom: 50px !important;
 }
 
 blockquote {
   background-color: rgba(160,200,240,.1) !important;  
-  margin-top: 50px !important;
-  margin-bottom: 50px !important;
+  margin: 50px 0 !important;
   padding: 10px;  
+}
+
+/* code blocks */
+.highlight {
+  margin: 3em 0 !important;
 }
 
 

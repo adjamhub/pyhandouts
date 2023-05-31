@@ -84,17 +84,13 @@ casuale: potete scegliere qualsiasi nome ma evitate di sceglierne uno
 già utilizzato nel vostro programma, per evitare confusione!!!
 
 
-**Scrivi 5 volte "ciao"**
-
-``` python
+``` py title='Scrivi 5 volte "ciao"'
 for x in range(5):
     print("ciao")
 ```
 
 
-**Disegna una piramide di "x"**
-
-``` python
+``` py title='Disegna una piramide di "x"'
 for i in range(10):
     print( "x" * i )
 ```
@@ -114,12 +110,12 @@ funzione range().
 Essa è definita come:
 
 > range( [ start = 0 , ] stop [ , step = 1 ] )
-
-dove:
-
-- *start* è il valore iniziale della sequenza (compreso)
-- *stop* è il valore finale (non compreso)
-- *step* è il valore di avanzamento
+>
+> dove:
+> 
+> - *start* è il valore iniziale della sequenza (compreso)
+> - *stop* è il valore finale (non compreso)
+> - *step* è il valore di avanzamento
 
 Ho indicato le parentesi quadre su start e step per indicare che i due
 valori sono opzionali e nel caso non ci siano, il valore iniziale
@@ -129,9 +125,7 @@ UNO.
 È più facile di quello che sembra; vediamo qualche esempio:
 
 
-**Esempio 1**
-
-``` python
+``` py title="Esempio 1"
 # c'è un numero solo, è stop!
 # Start è predefinito a 0, step è predefinito a 1, quindi...
 for i in range(5):
@@ -146,9 +140,7 @@ for i in range(5):
     4
 
 
-**Esempio 2**
-
-``` python
+``` py title="Esempio 2"
 # due numeri, il primo è start, il secondo è stop
 # step è predefinito a +1
 for i in range(1, 5):
@@ -162,9 +154,7 @@ for i in range(1, 5):
     4
 
 
-**Esempio 3**
-
-``` python
+``` py title="Esempio 3"
 # si parte da 1, si avanza di 2 fino a 7 (non compreso)!!!
 for i in range(1, 7, 2):
     print(i)
@@ -176,9 +166,7 @@ for i in range(1, 7, 2):
     5
 
 
-**Esempio 4**
-
-``` python
+``` py title="Esempio 4"
 # si parte da 9, si "avanza" di -2 (quindi si va indietro)
 # ci si ferma prima di arrivare a 0
 for i in range(9, 0, -2):
@@ -195,9 +183,7 @@ for i in range(9, 0, -2):
 Altro esempio, con un po' di codice:
 
 
-**Esempio 5**
-
-``` python
+``` py title="Esempio 5"
 for n in range(1,4):
     q = n**2
     print(q, "è il quadrato di", n)
@@ -915,10 +901,7 @@ funzionare la cosa.
 Facciamo una prova.
 
 
-**Esercizio: inserimento di un numero intero fra 1 e 90 (per la tombola)**
-
-
-``` python
+``` py title="Esercizio: inserimento di un numero intero fra 1 e 90 (per la tombola)"
 # ciclo con condizione sempre vera. Ripete all'infinito
 while True:
     # nell'input dobbiamo suggerire all'utente cosa fare...*
