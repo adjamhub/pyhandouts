@@ -1463,15 +1463,16 @@ mentre
 
 **Esercizio 393: Fibonacci**
 
-La **successione di Fibonacci** è una sequenza di numeri tale che:
+!!! note "La successione di Fibonacci"
 
-    F(1) = 0
-    F(2) = 1
-    F(n) = F(n-1) + F(n-2)
+    È una sequenza numerica tale che:
+    
+    - il primo numero è 0
+    - il secondo numero è 1
+    - il numero successivo si ottiene come somma dei due precedenti
+    
+    Iterando questo procedimento si ottiene la sequenza 0, 1, 1, 2, 3, 5, 8, 13, 21 ... nota come **Successione di Fibonacci**.
 
-Quindi, i numeri di Fibonacci sono quelli della sequenza 0, 1, 1, 2, 3,
-5, 8, 13, 21 ... dove **il numero successivo si ottiene come somma dei 2
-precedenti**.
 
 Dato un numero intero N da parte dell'utente (verificare che sia
 positivo), visualizzare la successione di Fibonacci da 0 fino
