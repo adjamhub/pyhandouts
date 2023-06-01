@@ -21,7 +21,7 @@ L'istruzione for permette di scorrere in maniera semplice gli elementi
 di una sequenza ed effettuare una qualsivoglia operazione che si ripete
 con oggetto l'ennesimo elemento di essa. La struttura di base è:
 
-```
+``` title="Definizione ciclo for"
 for variabile in sequenza:
     # blocco da ripetere, indentato di 4 caratteri
     # . . .
@@ -33,16 +33,17 @@ In questi primi esempi proveremo a lavorare solo con sequenze numeriche,
 autogenerate con il comando `range`. Vediamo un semplice esempio:
 
 
-``` python
+``` py
 for w in range(4):
     print(w)
 ```
 
-    0
-    1
-    2
-    3
-
+``` title="Esecuzione"
+0
+1
+2
+3
+```
 
 Penso si capisca in maniera abbastanza intuitiva come funziona `range`:
 parte da ZERO e va avanti di UNO fino al numero immediatamente prima a
@@ -63,13 +64,15 @@ for n in range(6):
 print("Finito!")
 ```
 
-    0 è pari
-    1 è dispari
-    2 è pari
-    3 è dispari
-    4 è pari
-    5 è dispari
-    Finito!
+``` title="Esecuzione"
+0 è pari
+1 è dispari
+2 è pari
+3 è dispari
+4 è pari
+5 è dispari
+Finito!
+```
 
 Notate l'indentazione dell'esempio in cui tutto il blocco `if` è
 ripetuto nel `for` e le due `print` fanno parte ognuna di una delle
@@ -103,9 +106,11 @@ che avanza di 2, un conto alla rovescia...
 Per tutte le casistiche possibili occorre studiare i parametri della
 funzione range().
 
+
 !!! tip "Suggerimento"
 
     La funzione `range()` è una funzione predefinita del linguaggio che crea "al volo" una sequenza numerica intera. 
+
 
 Essa è definita come:
 
@@ -132,12 +137,13 @@ for i in range(5):
     print(i)
 ```
 
-
-    0
-    1
-    2
-    3
-    4
+``` title="Esecuzione"
+0
+1
+2
+3
+4
+```
 
 
 ``` py title="Esempio 2"
@@ -147,11 +153,12 @@ for i in range(1, 5):
     print(i)
 ```
 
-
-    1
-    2
-    3
-    4
+``` title="Esecuzione"
+1
+2
+3
+4
+```
 
 
 ``` py title="Esempio 3"
@@ -160,10 +167,11 @@ for i in range(1, 7, 2):
     print(i)
 ```
 
-
-    1
-    3
-    5
+``` title="Esecuzione"
+1
+3
+5
+```
 
 
 ``` py title="Esempio 4"
@@ -173,11 +181,13 @@ for i in range(9, 0, -2):
     print(i)
 ```
 
-    9
-    7
-    5
-    3
-    1
+``` title="Esecuzione"
+9
+7
+5
+3
+1
+```
 
 
 Altro esempio, con un po' di codice:
@@ -189,10 +199,11 @@ for n in range(1,4):
     print(q, "è il quadrato di", n)
 ```
 
-
-    1 è il quadrato di 1
-    4 è il quadrato di 2
-    9 è il quadrato di 3
+``` title="Esecuzione"
+1 è il quadrato di 1
+4 è il quadrato di 2
+9 è il quadrato di 3
+```
 
 
 Insomma, secondo me più o meno ci siamo. Dopo una trentina di esercizi,
@@ -380,7 +391,7 @@ nuovo valore calcolato di nuovo alla variabile somma.
 Mettendo insieme i 3 pezzi, che spero abbiate compreso, otteniamo:
 
 
-``` python
+``` py title="Somma numeri fra 5 e 12"
 somma = 0
 
 for s in range(5, 13):
@@ -429,7 +440,7 @@ conta += 1
 Mettiamo insieme ancora una volta i tre pezzi del ragionamento e otteniamo:
 
 
-``` python
+``` py title="Conta dei numeri dispari fra 15 e 30"
 conta = 0
 
 for c in range(15, 30, 2):
@@ -546,7 +557,7 @@ L'istruzione while si abbina ad una condizione e ripete il suo blocco di
 codice finché questa condizione rimane vera. Vediamo la struttura.
 
 
-```
+``` py title="Definizione ciclo while"
 while condizione:
     # blocco di codice da ripetere se la condizione è vera
     # . . .
@@ -564,9 +575,12 @@ while a < 5:
     a = a + 2
 ```
 
-    0
-    2
-    4
+``` title="Esecuzione"
+0
+2
+4
+```
+
 
 Le istruzioni for e while permettono di implementare qualsiasi tipo di
 iterazione in maniera semplice e lineare. Prendiamo prima un po'
@@ -745,15 +759,16 @@ while True:
 print("\nok, adesso andiamo avanti")
 ```
 
-    Ho pensato un numero fra 1 e 10. Prova a indovinarlo
-    Che numero è? 6
-    No, mi spiace! Riprova...
-    Che numero è? 7
-    No, mi spiace! Riprova...
-    Che numero è? 8
-    Incredibile! Hai indovinato!!!
-    ok, adesso andiamo avanti
-
+``` title="Esecuzione"
+Ho pensato un numero fra 1 e 10. Prova a indovinarlo
+Che numero è? 6
+No, mi spiace! Riprova...
+Che numero è? 7
+No, mi spiace! Riprova...
+Che numero è? 8
+Incredibile! Hai indovinato!!!
+ok, adesso andiamo avanti
+```
 
 Mi sembra sia semplice da capire e facile da usare. Andiamo avanti.
 
@@ -774,11 +789,14 @@ for n in range(1, 8):
     print ("Numero: ", n)
 ```
 
-    Numero: 1
-    Numero: 2
-    Numero: 4
-    Numero: 5
-    Numero: 7
+``` title="Esecuzione"
+Numero: 1
+Numero: 2
+Numero: 4
+Numero: 5
+Numero: 7
+```
+
 
 Anche qui, facile da capire e da utilizzare. Magari è una istruzione che
 capiterà di usare poche volte, ma di sicuro non sarà un grande problema
@@ -801,8 +819,7 @@ specifici:
 Vediamo un **esempio con il ciclo for**:
 
 
-``` python
-# Calcolo numeri primi
+``` py title="Verifica se un numero è primo o no"
 numero = int( input("Inserisci numero. Io ti dico se è primo o no: ") )
 
 for divisore in range(2, numero):
@@ -814,16 +831,17 @@ else: # Indentazione! else è incolonnato al for NON all'if!!!
     print(numero, "è primo")
 ```
 
-**Prima esecuzione, inserisco 15**
+``` title="Prima esecuzione, inserisco 15"
+Inserisci numero. Io ti dico se è primo o no: 15
+15 non è primo, infatti 
+15 = 3 * 5
+```
 
-    Inserisci numero. Io ti dico se è primo o no: 15
-    15 non è primo, infatti 
-    15 = 3 * 5
+``` title="Seconda esecuzione, inserisco 17"
+Inserisci numero. Io ti dico se è primo o no: 17
+17 è primo
+```
 
-**Seconda esecuzione, inserisco 17**
-
-    Inserisci numero. Io ti dico se è primo o no: 17
-    17 è primo
 
 Praticamente il secondo ciclo for, basato sulla variabile i, cerca eventuali divisori del numero. 
 Se scorrendo tutti i numeri fra 2 e (numero - 1) non ne trova, allora è un numero primo! Se invece trova
@@ -832,8 +850,7 @@ anche un solo divisore, lo visualizza e interrompe il ciclo con il break, renden
 Ecco un esempio analogo che utilizza **la clausola else abbinata all'istruzione while**.
 
 
-``` python
-# sette e mezzo
+``` py title="sette e mezzo"
 valoreCarte = 0.0
 
 while valoreCarte <= 7.5:
@@ -853,28 +870,25 @@ else: # Indentazione! else è incolonnato a while NON all'if!!!
 print("In mano hai", valoreCarte)
 ```
 
+``` title="Prima esecuzione, vado sempre avanti"
+In mano hai: 0.0
+Vuoi una carta? (s/n) s
+Dammi una carta: 5
+In mano hai: 5.0
+Vuoi una carta? (s/n) s
+Dammi una carta: 3
+Hai sballato, accidenti!!!
+In mano hai 8.0
+```
 
-**Prima esecuzione, vado sempre avanti**
-
-    In mano hai: 0.0
-    Vuoi una carta? (s/n) s
-    Dammi una carta: 5
-    In mano hai: 5.0
-    Vuoi una carta? (s/n) s
-    Dammi una carta: 3
-    Hai sballato, accidenti!!!
-    In mano hai 8.0
-
-
-**Seconda esecuzione, mi fermo dopo la prima carta**
-
-    In mano hai: 0.0
-    Vuoi una carta? (s/n) s
-    Dammi una carta: 6
-    In mano hai: 6.0
-    Vuoi una carta? (s/n) n
-    In mano hai 6.0
-
+``` title="Seconda esecuzione, mi fermo dopo la prima carta"
+In mano hai: 0.0
+Vuoi una carta? (s/n) s
+Dammi una carta: 6
+In mano hai: 6.0
+Vuoi una carta? (s/n) n
+In mano hai 6.0
+```
 
 Spero sia abbastanza chiaro. In generale ci sono altri modi per ovviare
 all'utilizzo di questi `for-else` o `while-else`, semplicemente con un
