@@ -1,20 +1,30 @@
 # Esercizi su GUI complete
 
-
-## Editor di testo (basato su wx.stc)
-
-
-
-
-### Esercizio Blocco Note
-
-
-### Esempio di stampa 
-
+blah blah
 
 ---
 
-## Browser (basato su wx.html2)
+## Editor di testo (su wx.stc)
+
+blah blah
+
+---
+
+**Esercizio: Blocco Note**
+
+blah blah
+
+---
+
+**Esempio: stampa file**
+
+blah blah
+
+---
+
+## Browser (su wx.html2)
+
+blah blah
 
 
 ``` python title="MiniBrowser" hl_lines="2 30"
@@ -96,43 +106,71 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
+---
 
-### Esercizio Browser completo, con cronologia e bookmarks
-    
-### Esercizio PDFViewer
+**Esercizio: Browser completo, con cronologia e bookmarks**
 
+blah blah
+
+---
+
+**Esercizio: PDFViewer**
+
+blah blah
 
 
 ---
 
-## MultiMedia Player (basato su wx.media)
+## MultiMedia Player (su wx.media)
 
+blah blah
 
-### Video Player
+---
 
+**Esercizio: Video Player**
 
-### Audio Player
+blah blah
+
+---
+
+**Esercizio: Audio Player**
   
+blah blah
     
 
 ---
 
-## Griglia (basato su wx.grid)
+## Griglia (su wx.grid)
 
-### Foglio Elettronico
-
-### Battleship
- 
+blah blah
 
 ---
 
-## Rich Text Ctrl (basato su wx.richtext)
+**Esercizio: Foglio Elettronico**
 
+blah blah
 
-### Word :)
+---
+
+**Esercizio: Battleship**
+
+blah blah
 
 
 ---
+
+## Rich Text Ctrl (su wx.richtext)
+
+blah blah
+
+---
+
+**Esercizio: Word :)**
+
+blah blah
+
+---
+
 ## DA SISTEMARE (DA QUI IN POI!!!)
 
 - wx.ListCtrl
@@ -154,3 +192,4 @@ if __name__ == "__main__":
     - GIF Viewer (con play/pause/stop)
     - SlideShow (temporizzato)
     - SlideShow (con pulsanti AVANTI/INDIETRO)
+
