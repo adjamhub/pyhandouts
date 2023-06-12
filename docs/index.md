@@ -38,22 +38,8 @@ di apprendimento</p>
 </div>
 
 <div class="w3-half" style="padding:0 10px">
-<a href="https://dvjlabs.github.io/esp32_course/" class="md-button" style="width:230px" target="_blank">ESP32</a>
-<p>Programmare il microcontrollore ESP32 con MicroPython per realizzare semplici dispositivi e comunicare le misurazioni in tempo reale </p>
-<br>
-<br>
-</div>
-
-<div class="w3-half" style="padding:0 10px">
 <a href="OOP/" class="md-button" style="width:230px">Python: OOP</a>
 <p>La base di tutta la programmazione moderna: impariamo a programmare in Python secondo il paradigma della OOP!</p>
-<br>
-<br>
-</div>
-
-<div class="w3-half" style="padding:0 10px">
-<a href="wx/000_intro/" class="md-button" style="width:230px">wxPython GUI</a>
-<p>Una semplice libreria Python, basata su wxWidgets per la programmazione grafica e l'implementazione di programmi basati su GUI</p>
 <br>
 <br>
 </div>
@@ -66,13 +52,13 @@ di apprendimento</p>
 </div>
 
 <div class="w3-half" style="padding:0 10px">
-<a href="about/" class="md-button" style="width:230px">about MD</a>
-<p>Questa dispensa è scritta con MarkDown. Alcuni appunti che servono soprattutto per me... per non dimenticare i comandi di base</p>
+<a href="wx/000_intro/" class="md-button" style="width:230px">wxPython GUI</a>
+<p>Una semplice libreria Python, basata su wxWidgets per la programmazione grafica e l'implementazione di programmi basati su GUI</p>
 <br>
 <br>
 </div>
 
-</div>
+</div> <!-- end row -->
 
 </section>
 
