@@ -1,5 +1,11 @@
 # Timer(s)
 
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.Timer.html" target="_blank">wx.Timer</a>**
+> 
+> Classe per gestire i timer (con cui implementare semplici temporizzazioni)
+
+
 I Timer sono oggetti molto comuni in ogni libreria OOP. Per la scansione
 del tempo si appoggiano tipicamente al clock di sistema, che
 teoricamente scandisce il milionesimo di secondo, ma che per motivi
@@ -59,8 +65,13 @@ Spero sia tutto chiaro :)
 <!-- #################################################################################################################################### -->
 ## wx.Gauge
 
-La classe `wx.Gauge` rappresenta una widget che implementa una barra di
-avanzamento.
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.Gauge.html" target="_blank">wx.Gauge</a>**
+> 
+> Classe grafica per implementare una barra di avanzamento (orizzontale o verticale)
+
+
+La classe `wx.Gauge` rappresenta una widget che implementa una barra di avanzamento.
 
 ![image](images/wxGauge.jpg)
 

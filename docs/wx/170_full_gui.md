@@ -18,7 +18,7 @@ Lo skeleton qui sotto descrive chiaramente una struttura da cui partire per allo
 di una app Full GUI, ovvero comprensiva di azioni, menù, barre degli strumenti, etc...
 
 
-``` python
+``` py title="Skeleton Full GUI" hl_lines="3 10 14 20 24 48"
 import wx
 
 APP_NAME = "Il nome della vostra App"
@@ -62,7 +62,6 @@ class Finestra(wx.Frame):
     # questa funzione implementa la vista principale del programma
     def creaMainView(self):
         return
-
 
 # ----------------------------------------
 if __name__ == "__main__":
@@ -162,7 +161,7 @@ Per aggiungere una menubar:
 
 Vediamo degli esempi di codice:
 
-``` python
+``` py title="Esempi di inserimento voci di menù"
 
 # creiamo un oggetto Menubar
 mb = wx.MenuBar()
@@ -223,6 +222,12 @@ self.Bind(wx.EVT_MENU, self.faiQualcosa, id=35)
 
 
 ## Toolbar
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.ToolBar.html" target="_blank">wx.ToolBar</a>**
+> 
+> Classe grafica per implementare una barra degli strumenti
+
 
 Se le barre dei menù dovrebbero permettere l'accesso a **tutte** le
 funzioni disponibili in una applicazione, le barre degli strumenti
@@ -310,7 +315,13 @@ if __name__ == "__main__":
 
 ## wx.StatusBar
 
-La classe wx.StatusBar rappresenta una widget che implementa la barra di
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.StatusBar.html" target="_blank">wx.StatusBar</a>**
+> 
+> Classe grafica per implementare una barra di stato
+
+
+La classe `wx.StatusBar` rappresenta una widget che implementa la barra di
 stato delle applicazioni.
 
 ![image](images/wxStatusBar.jpg)
@@ -352,6 +363,7 @@ app.MainLoop()
 
 
 ## Context Menu
+
 
 I *Context Menus* ovvero i menù contestuali sono quei menù che appaiono
 quando si fa click con il tasto destro in determinate posizione della
@@ -417,7 +429,15 @@ Il risultato di questo codice è il seguente:
 Spero che osservare e riprodurre l'esempio sia sufficiente per capire
 il funzionamento :)
 
+
+
 ## Impostazioni
+
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx.FileConfig.html" target="_blank">wx.FileConfig</a>**
+> 
+> Classe per la gestione delle configurazioni utente di una applicazione
+
 
 Può essere interessante e/o addirittura necessario per una applicazione
 salvare da qualche parte alcune impostazioni da ricaricare al prossimo
