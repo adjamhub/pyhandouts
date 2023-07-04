@@ -82,7 +82,11 @@ nav:
     - Moduli: basics/106_mod.md
     - Files: basics/107_files.md
     - CSV: basics/108_csv.md
-  - OOP: OOP.md
+  - OOP:
+    - Introduzione: OOP/000_intro.md
+    - Classi e Oggetti: OOP/001_classes_objects.md
+    - Ereditarietà: OOP/002_inheritance.md
+    - Caratteristiche Avanzate: OOP/003_advanced.md
   - wxPython:
     - Introduzione: wx/000_intro.md
     - Primi concetti: wx/101_first_things.md
