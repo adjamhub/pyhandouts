@@ -38,7 +38,7 @@ di apprendimento</p>
 </div>
 
 <div class="w3-half" style="padding:0 10px">
-<a href="OOP/" class="md-button" style="width:230px">Python: OOP</a>
+<a href="OOP/000_intro/" class="md-button" style="width:230px">Python: OOP</a>
 <p>La base di tutta la programmazione moderna: impariamo a programmare in Python secondo il paradigma della OOP!</p>
 <br>
 <br>

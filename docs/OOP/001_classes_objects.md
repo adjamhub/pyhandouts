@@ -81,7 +81,8 @@ tanto quanto chiamare il metodo area. Chiaro adesso???
 
 Proviamo a dichiarare adesso questa fantomatica classe Cerchio:
 
-``` python
+``` py title="Definizione della classe Cerchio"
+
 # File "cerchio.py"
 import math
 
@@ -187,15 +188,19 @@ Per adesso vediamo le 2 funzioni speciali più comuni in assoluto:
     classe Quadrato. L'utente potrà scegliere il lato del Quadrato, ma
     inizialmente esso sarà disegnato con sfondo bianco e lati neri.
 
-``` python
+``` py title="Classe Quadrato"
+
 class Quadrato:
     def __init__(self, lato):
         self.lato = lato
         self.coloreSfondo = "bianco"
         self.coloreBordo = "nero"
+
 # ...
+
 # nella riga sotto viene eseguita automaticamente la funzione __init__
 obj = Quadrato(4)
+
 # si definisce così un oggetto della classe Quadrato, di lato 4
 # con colore di sfondo bianco e colore del bordo nero.
 ```
