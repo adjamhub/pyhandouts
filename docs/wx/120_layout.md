@@ -734,7 +734,7 @@ if __name__ == "__main__":
 
     Il secondo suggerimento è quello di utilizzare uno strumento di debug,
     fornito direttamente da wxPython: **The Widget Inspection Tool (WIT)**.
-    Ne parlo un pochino in questa [pagina](/wx/293_tools_wit/)
+    Ne parlo un pochino in questa [pagina](299_tools.md)
 
     Buona lettura!
 
