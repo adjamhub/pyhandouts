@@ -1,8 +1,13 @@
 
-p,ul,ol,code {
+p,ul,ol {
   text-align: justify;
   font-size: 0.875rem !important;
   line-height: 1.7 !important;
+}
+
+code,td {
+  font-size: 0.8rem !important;
+  line-height: 1.6 !important;
 }
 
 h1,h2,h3,h4,h5,h6 {
