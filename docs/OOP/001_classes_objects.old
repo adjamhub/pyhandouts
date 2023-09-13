@@ -1,41 +1,20 @@
 # Classi e Oggetti
 
 
-La prima cosa da fare è cercare di capire cosa si intende quando si utilizzano i termini `Classe` e `Oggetto`: vediamo se si riesce al primo colpo!!!
+Cerchiamo innanzitutto di capire che cosa è un oggetto, partendo magari da esempi banali.
 
-Partiamo da un concetto qualsiasi, ad esempio... **la sedia**!
+**Un oggetto è un entità, concreta od astratta, che descrive un concetto.** 
+Una casa, un tavolo, una persona, un colore... sono tutte entità, tutti concetti, tutti... oggetti!!!
 
-**Le classi** servono per descrivere i concetti: parlando delle sedie, potremmo citare ad esempio: 
+E possono essere contenuti in una variabile!
 
-- il materiale
-- il colore
-- l'altezza
-- l'ampienzza della seduta
-- etc...
+!!! note "Gli Oggetti"
 
-Una classe descrive il concetto attraverso una serie di informazioni (ad esempio, quelle che abbiamo citato prima) che saranno dello stesso tipo per tutte le sedie 
-(cioè, tutte le sedie sono fatte di un materiale, hanno un colore, etc...) ma che chiaramente possono avere valori diversi (sedie di legno o di ferro, bianche oppure blu, etc...).
+    Un oggetto é un'entità concreta o astratta, tipica anche della vita
+    comune, definibile elencando le sue caratteristiche e descrivendo il
+    modo con cui interagisce con l'ambiente esterno, cioè i suoi
+    comportamenti.
 
-**Gli oggetti** rappresentano le istanze dei concetti descritti dalle classi. Ad esempio, se state leggendo seduti, la vostra sedia è un oggetto, 
-mentre un'altra sedia è un altro oggetto.
-
-Se in cucina avete sei sedie significa che avete sei oggetti (diversi) della (stessa) classe Sedia. 
-
-
-!!! note "Classi e Oggetti"
-
-    Le Classi sono un concetto analogo ai tipi di variabile, ad esempio il tipo intero, che descrive tutti i numeri che sono interi.
-    
-    Gli Oggetti sono un concetto analogo alle variabili, che possono contenere un unico valore! Quello è l'oggetto!
-    
-
-Spero di essere stato chiaro... più di così non riesco!!!
-
-
-## Le Classi
-
-
-Partiamo sempre da un concetto, ad esempio l'Automobile.
 Partiamo sempre da un esempio: l'oggetto "Rettangolo". Le sue
 caratteristiche potrebbero essere la misura di base e altezza, il colore
 del bordo e il colore di riempimento, mentre i suoi comportamenti

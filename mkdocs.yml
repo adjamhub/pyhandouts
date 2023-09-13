@@ -85,6 +85,7 @@ nav:
   - OOP:
     - Introduzione: OOP/000_intro.md
     - Classi e Oggetti: OOP/001_classes_objects.md
+#    - Classi e Oggetti 2: OOP/002_classes_objects.md
     - Ereditarietà: OOP/002_inheritance.md
     - Caratteristiche Avanzate: OOP/003_advanced.md
   - wxPython:
