@@ -36,71 +36,30 @@ Spero di essere stato chiaro... più di così non riesco!!!
 
 
 Partiamo sempre da un concetto, ad esempio l'Automobile.
-Partiamo sempre da un esempio: l'oggetto "Rettangolo". Le sue
-caratteristiche potrebbero essere la misura di base e altezza, il colore
-del bordo e il colore di riempimento, mentre i suoi comportamenti
-potrebbero essere quelli per il calcolo dell'area, del perimetro e della
-diagonale. Vediamo un altro esempio: l'oggetto "Automobile". Le
-caratteristiche potrebbero essere la marca, il modello, il colore, la
-cilindrata, ecc... i suoi comportamenti potrebbero essere avvia,
-spegni, accelera, frena, curva, ecc...
 
-Spero sia abbastanza chiaro.
+Per implementare la classe `Automobile` potremmo definire caratteristiche come la marca, il modello, il colore, la
+cilindrata. 
+
+Un'automobile è però un concetto in grado anche di alcuni comportamenti: ad esempio avvia, spegni, accelera, frena, curva, ecc...
 
 
 !!! tip "Attributi e Metodi di un oggetto"
 
-    Le caratteristiche, o **attributi di un oggetto**, sono quegli elementi
+    Le *caratteristiche*, o `attributi` di un oggetto, sono quegli elementi
     utili a descriverne le proprietà e lo stato. Sono solitamente
-    individuate tramite dei sostantivi. 
+    individuate tramite dei *sostantivi*. 
     
-    I comportamenti, o **metodi di un oggetto** sono quelle funzionalità che mette a disposizione per interagire
-    con esso. Sono solitamente individuati tramite dei verbi.
+    I *comportamenti*, o `metodi` di un oggetto sono quelle funzionalità che mette a disposizione per interagire
+    con esso. Sono solitamente individuati tramite dei *verbi*.
 
 
-Gli attributi e metodi definiti all'interno di un oggetto vengono
-comunemente definiti i membri dell'oggetto.
+Attributi e metodi definiti all'interno di un oggetto vengono comunemente definiti i ***membri dell'oggetto***.
 
-Vediamo la sintassi utilizzata così da scrivere un po' di codice:
 
-``` python
-# immagina che la variabile "cx" sia un oggetto "Cerchio"
-cx = Cerchio()
+Per provare a scrivere il nostro primo esempio in codice, partiamo da una classe semplicissima, come la classe Cerchio.
 
-# Per accedere ai membri (attributi e metodi) di un oggetto si utilizza
-# il punto. Ad esempio:
+I suoi attributi sono semplicemente il raggio, mentre come metodi metteremo quelli per il calcolo di Area e Circonferenza.
 
-# attributo "raggio"
-# è come una variabile interna, a cui si accede con il punto
-cx.raggio = 3
-# da ora in poi, l’oggetto Cerchio cx ha raggio 3
-
-# metodo "calcolaArea()"
-# è come una funzione interna, a cui si accede con l'operatore punto
-cx.calcolaArea() 
-# valutando PiGreco a 3.14, questa funzione ritorna 28.26
-
-# metodo "calcolaCirconferenza()"
-cx.calcolaCirconferenza()  
-# ritorna 18.84
-```
-
-Chiaro fino a qui? Facciamo un altro passetto, cercando di capire a cosa
-ci serve sapere che secondo Python ogni "cosa" che si appoggia in una
-variabile è un oggetto. Il concetto è abbastanza semplice, seguitemi
-bene. Se ogni oggetto contiene tutti gli attributi che servono a
-definirlo, potremo lavorare semplicemente con tutti gli oggetti
-predefiniti di Python. Se inoltre ogni oggetto ha tutti i metodi che
-ritiene utile sarà anche più conveniente lavorare con esso: avremo una
-serie di funzionalità "gratuite" pronte per essere utilizzate.
-
-Non riuscite a capire il concetto? Proviamo così. Nell'esempio
-precedente abbiamo parlato di un fantomatico oggetto Cerchio. Più o meno
-tutti sapevano già calcolare l'area dato il raggio. Ma se la figura
-fosse stata un icosaedro? Con un oggetto pronto era ugualmente facile
-tanto quanto chiamare il metodo area. Chiaro adesso???
-
-Proviamo a dichiarare adesso questa fantomatica classe Cerchio:
 
 ``` py title="Definizione della classe Cerchio"
 
@@ -120,16 +79,15 @@ class Cerchio:
     def calcolaCirconferenza(self):
         c = 2* math.pi * self.raggio
         return c
-```
 
-Il fantomatico oggetto Cerchio si inizializza con il codice seguente:
+# -------------------------------------------
 
-``` python
-cx = Cerchio(4)   # crea un oggetto della classe Cerchio con raggio 4
-print("Cerchio")
-print("raggio:", cx.raggio)
-print("area:", cx.calcolaArea())
-print("circonferenza:", cx.calcolaCirconferenza())
+if __name__ == "__main__":
+    cx = Cerchio(4)   # crea un oggetto della classe Cerchio con raggio 4
+    print("Cerchio")
+    print("raggio:", cx.raggio)
+    print("area:", cx.calcolaArea())
+    print("circonferenza:", cx.calcolaCirconferenza())
 ```
 
 che dovrebbe visualizzare:
@@ -141,10 +99,9 @@ area: 50.26548245743669
 circonferenza: 25.132741228718345
 ```
 
-Spero adesso sia tutto ok... Non è così, lo so. Per iniziare cerchiamo
-di chiarirci alcuni termini e alcune funzioni *strane* che ho
-utilizzato prima e poi vediamo qualche esercizio.
+A questo punto i concetti dovrebbero essere chiari, mentre la sintassi utilizzata ancora no!!!
 
+Cerchiamo di chiarire spiegando il codice nei punti più oscuri:
 
 <!-- ################################################################################################# -->
 ## Terminologia
@@ -152,11 +109,11 @@ utilizzato prima e poi vediamo qualche esercizio.
 Chiariamo bene i termini che andremo ad utilizzare per definire una
 classe manualmente e che sono utilizzati da Python.
 
-class Intanto faccio notare che, come abbiamo utilizzato la clausola def
-per definire una funzione, bisogna utilizzare la clausola class per
-dichiarare una classe.
 
 `class Cerchio:`
+
+Questo si capisce: come per dichiarare una funzione si utilizza la clausola def, per definire una classe utilizziamo la clausola class.
+
 
 Ricordate?
 
