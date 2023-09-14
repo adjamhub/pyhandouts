@@ -271,11 +271,11 @@ class Rettangolo:
         s = "Rettangolo(" + str(self.b) + "," + str(self.h) + ")"
         return s
 
-    def area(self):
+    def calcolaArea(self):
         a = self.b * self.h
         return a
 
-    def perimetro(self):
+    def calcolaPerimetro(self):
         p = 2*(self.b + self.h)
         return p
 
@@ -284,8 +284,8 @@ if __name__ == "__main__":
     print(ret)
     print("Base:", ret.b)
     print("Altezza:", ret.h)
-    print("Area:", ret.area())
-    print("Perimetro:", ret.perimetro())    
+    print("Area:", ret.calcolaArea())
+    print("Perimetro:", ret.calcolaPerimetro())    
 ```
 
 <!-- ################################################################################################# -->
