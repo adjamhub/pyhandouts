@@ -247,8 +247,9 @@ if __name__ == "__main__":
 
 !!! tip "`self.__dict__`"
 
-    `self.__dict__` è una variabile automatica degli oggetti Python che contiene il dizionario delle variabili membro:
-    per ogni attributo, il nome dello stesso diventa una chiave del dizionario, mentre il suo valore diventa il valore associato!
+    `self.__dict__` è una variabile automatica degli oggetti Python che contiene il dizionario delle variabili membro!
+    
+    Per ogni attributo, il nome dello stesso diventa una chiave del dizionario, mentre il suo valore diventa il valore associato!
     
     
     
