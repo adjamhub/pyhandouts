@@ -220,31 +220,38 @@ i parametri e calcolando area e perimetro dello stesso.
 
 ``` python
 class Rettangolo:
-    def __init__(self,base,altezza):
-        self.b = base
-        self.h = altezza
+    def __init__(self, b = 0, h = 0):
+        self.base = b
+        self.altezza = h
 
     def __str__(self):
-        s = "Rettangolo(" + str(self.b) + "," + str(self.h) + ")"
+        s = "Rettangolo(" + str(self.__dict__) + ")"
         return s
 
     def calcolaArea(self):
-        a = self.b * self.h
+        a = self.base * self.altezza
         return a
 
     def calcolaPerimetro(self):
-        p = 2*(self.b + self.h)
+        p = 2*(self.base + self.altezza)
         return p
 
 if __name__ == "__main__":
     ret = Rettangolo(5,3)
     print(ret)
-    print("Base:", ret.b)
-    print("Altezza:", ret.h)
+    print("Base:", ret.base)
+    print("Altezza:", ret.altezza)
     print("Area:", ret.calcolaArea())
     print("Perimetro:", ret.calcolaPerimetro())    
 ```
 
+!!! tip "self.__dict__"
+
+    `self.__dict__` è una variabile automatica degli oggetti Python che contiene il dizionario delle variabili membro:
+    per ogni attributo, il nome dello stesso diventa una chiave del dizionario, mentre il suo valore diventa il valore associato!
+    
+    
+    
 <!-- ################################################################################################# -->
 ## Esercizi di comprensione
 
