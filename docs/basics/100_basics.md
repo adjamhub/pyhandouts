@@ -135,8 +135,8 @@ scriveteceli! Sempre! Spiegate in ogni porzione di codice l'idea che vi
 frulla in mente e quello che volete fare per realizzarla!
 
 Il secondo programma da provare prevede l'introduzione della funzione
-complementare alla print(), ovvero quella che permette all'utente di
-inserire un valore: **la funzione input()**. Vediamo un esempio:
+complementare alla `print()`, ovvero quella che permette all'utente di
+inserire un valore: **la funzione** `input()`. Vediamo un esempio:
 
 ``` python
 # la funzione input permette a chi utilizza il programma di inserire informazioni
