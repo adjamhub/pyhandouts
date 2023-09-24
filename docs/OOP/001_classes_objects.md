@@ -386,7 +386,7 @@ True, una ritornando False.
 Definire la classe TrapezioRettangolo, che prende come parametri la base
 minore, la base maggiore e l'altezza del Trapezio. 
 
-Definire i metodi `latoObliquo`, `area`, `perimetro`. Dichiarare un oggetto
+Definire i metodi `calcolLatoObliquo`, `calcolaArea`, `calcolaPerimetro`. Dichiarare un oggetto
 TrapezioRettangolo e procedere a visualizzare i suoi parametri, la sua
 area e il suo perimetro.
 
@@ -397,10 +397,10 @@ area e il suo perimetro.
 Definire la classe "Orario", con parametri i tre interi per ore,
 minuti e secondi. Implementare inoltre le seguenti funzioni:
 
-- `secondiDaMezzanotte()`: restituisce l'intero che rappresenta il numero di secondi trascorsi dalla mezzanotte. 
+- `contaSecondiDaMezzanotte()`: restituisce l'intero che rappresenta il numero di secondi trascorsi dalla mezzanotte. 
 - `aggiungiTempo(ore, minuti, secondi)`: aggiunge tempo all'orario corrente. Ad esempio, se l'oggetto della classe Orario segna 
    le 03:14:22 e si esegue su di esso la funzione aggiungoTempo(1,2,3) l'orario diventa le 04:16:25. Attenzione a quando "il giro ricomincia"...
-- `momento()`: ritorna la stringa "mattina" se orario è fra le 8 e le 13, "pomeriggio" se fra 13 e 20, "sera" fra 20 e 23, "notte" altrimenti
+- `verificaMomento()`: ritorna la stringa "mattina" se orario è fra le 8 e le 13, "pomeriggio" se fra 13 e 20, "sera" fra 20 e 23, "notte" altrimenti
 
 --------------------------------------------------------------------
 
@@ -409,11 +409,11 @@ minuti e secondi. Implementare inoltre le seguenti funzioni:
 Definire la classe CartaFedeltà, per la gestione degli utenti di un
 grande magazzino. La carta fedeltà è nominativa (appartiene ad un solo
 cliente) e consente l'accumulo dei punti (attraverso il metodo
-accumulaPunti(soldiSpesi)) calcolati sulla base della spesa effettuata:
+`accumulaPunti(soldiSpesi)`) calcolati sulla base della spesa effettuata:
 ogni 12€ di spesa si aggiunga un punto. All'inizio ovviamente il numero
 di punti è ZERO. Il cliente può decidere, in ogni momento, di usufruire
 di una parte dei punti accumulati per l'ottenimento di un premio
-(implementare un opportuno metodo utilizzaPunti(quantita): il metodo
+(implementare un opportuno metodo `utilizzaPunti(quantita)`: il metodo
 ritorna True... False altrimenti). 
 
 Definire le carte fedeltà per 2 clienti. Il primo cliente fa una spesa pari a 150€. 
@@ -430,14 +430,14 @@ Definire la classe Giocatore con nome, numero di maglia e ruolo
 ricoperto. Il nome del giocatore va impostato tramite parametro, mentre
 il numero va impostato inizialmente a ZERO e il ruolo a "X".
 
-Definire la funzione impostaRuolo(stringa) che prende una stringa come
+Definire la funzione `impostaRuolo(stringa)` che prende una stringa come
 parametro e imposta il ruolo del giocatore. Fare in modo che i ruoli
 accettabili siano solo "P" (per portiere), "D" (per difensore),
 "C" (per centrocampista), "A" (per attaccante). La funzione ritorna
 True o False a seconda del fatto se il ruolo viene effettivamente
 modificato oppure no.
 
-Definire la funzione cambiaNumero(intero) che modifica il numero di
+Definire la funzione `cambiaNumero(intero)` che modifica il numero di
 maglia solo se esso varia fra 1 e 99. Anche qui, la funzione ritorna
 True o False...
 
@@ -459,7 +459,7 @@ dovrebbe fallire) e poi a 11.
 
 Definire la classe EstrazioneLotto. La classe contiene una lista,
 inizialmente vuota, di stringhe che rappresentano le città ove ci sono
-le ruote di estrazione. Prevedere un metodo aggiungiRuota(stringa) che
+le ruote di estrazione. Prevedere un metodo `aggiungiRuota(stringa)` che
 verifica se il nome della città da inserire sia già presente nelle ruote
 e in caso negativo la aggiunge alla lista. Definire una funzioni
 estrai(stringa) che verifica se il nome della città passata come
@@ -470,7 +470,7 @@ fra loro, fra 1 e 90.
 ULTERIORE DIFFICOLTA' (opzionale): fare in modo che i numeri della
 tupla siano ordinati in senso crescente.
 
-Definire una funzione estrazioniDellaSettimana() che permette a tutte le
+Definire una funzione `eseguiEstrazioniDellaSettimana()` che permette a tutte le
 ruote presenti di estrarre i numeri del lotto. La funzione ritorna un
 dizionario che ha come chiavi i nomi delle ruote in cui avvengono le
 estrazioni e come valori le tuple dei 5 numeri estratti.
@@ -506,7 +506,7 @@ Quando si crea un oggetto della classe Agenda si parte (ovviamente) con una list
 La classe presenta inoltre le seguenti funzioni:
 
 - `inserisciImpegno ( descrizione, giorno )` : prende i dati dai parametri della funzione e inserisce il nuovo impegno in agenda. Non ritorna nulla.
-- `listaImpegniDi ( giorno )` : prende come parametro un giorno della settimana e ritorna la lista delle descrizioni degli impegni per quel giorno.
+- `elencaImpegniDi ( giorno )` : prende come parametro un giorno della settimana e ritorna la lista delle descrizioni degli impegni per quel giorno.
 - `rimuoviImpegno ( descrizione )` : prende come parametro la descrizione di un impegno e, se lo trova in agenda, rimuove l’impegno corrispondente. 
   Ritorna True se viene rimosso un impegno, False altrimenti.
 - `trovaImpegno ( descrizione )` : prende come parametro la descrizione di un impegno e, se lo trova in agenda, ritorna il giorno in cui quell’impegno è stato preso. 
