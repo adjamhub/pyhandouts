@@ -10,7 +10,7 @@ Partiamo da un concetto qualsiasi, ad esempio... **la sedia**!
 - il materiale
 - il colore
 - l'altezza
-- l'ampienzza della seduta
+- l'ampiezza della seduta
 - etc...
 
 Una classe descrive il concetto attraverso una serie di informazioni (ad esempio, quelle che abbiamo citato prima) che saranno dello stesso tipo per tutte le sedie 
