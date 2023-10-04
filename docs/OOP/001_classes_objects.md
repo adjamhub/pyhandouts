@@ -225,7 +225,7 @@ class Rettangolo:
         self.altezza = h
 
     def __str__(self):
-        s = "Rettangolo(" + str(self.__dict__) + ")"
+        s = "Rettangolo: " + str(self.__dict__)
         return s
 
     def calcolaArea(self):
@@ -635,6 +635,16 @@ cioè un metodo che permette di impostare un nuovo valore per `_nome` (se il val
 
 ---------------------------------------------------------------------------------------------------------
 
+!!! warning "Privato o protetto?"
+
+  Adesso che abbiamo capito il concetto di visibilità (a grandi linee, mi rendo conto...)
+  facciamo una semplificazione: per ora utilizzeremo **solo** le visibilità:
+  
+  - **pubbliche** (cioè lasceremo tutto identico a prima...)
+  - **private** (quindi metteremo DUE underscore e...)
+  
+  La visibilità **protetta** sarà reintrodotta nel prossimo capitolo!!!
+
 
 Nel linguaggio Python esiste uno strumento che permette una implementazione analoga (ovvero... *simile*, **NON** *uguale*) a questo livello di protezione
 delle variabili che si definisce il **Python @property decorator**.
@@ -644,19 +654,19 @@ Un codice funzionalmente analogo a quello sopra in `C++`, che scriviamo in `Pyth
 ```python
 class Persona:
     def __init__(self, name):
-        # funziona anche se usi il livello private con il doppio underscore 
-        self._nome = name
+        # il ragionamento è identico con la visibilità protetta!!!
+        self.__nome = name
     
     @property
     def nome(self):
         """ DOCUMENTA QUI LA TUA PROPRIETA': il nome della persona """
-        return self._nome
+        return self.__nome
         
     @nome.setter
     def nome(self, name):
         if name == "":
             raise ValueError("Tutte le persone hanno un nome...")
-        self._nome = name
+        self.__nome = name
         return
 ```
 
@@ -664,16 +674,16 @@ Mamma mia, quante cose da spiegare... Cominciamo!
 
 ```python
 def __init__(self, name):
-    self._nome = name
+    self.__nome = name
 ```
 
-Secondo la convenzione già esposta, si intende mantenere `nascosta` la variabile membro `_nome`.
+Secondo la convenzione già esposta, si intende mantenere `nascosta` la variabile membro `__nome`.
 
 ```python
 @property
 def nome(self):
     """ DOCUMENTA QUI LA TUA PROPRIETA': il nome della persona """
-    return self._nome
+    return self.__nome
 ```
 
 Questo decoratore (`@property` con la chiocciolina davanti si dice *decoratore* in Python) fa in modo che `nome` (in questo caso, il nome della funzione) 
@@ -693,7 +703,7 @@ def nome(self, name):
     if name == "":
         # questa la ignoriamo??? La scriviamo così e basta :D
         raise ValueError("Tutte le persone hanno un nome...")
-    self._nome = name
+    self.__nome = name
     return
 ```
 
@@ -719,11 +729,11 @@ la funzione *setter*... ed ecco che diventa impossibile modificarla al di fuori 
 ```python
 class Oggetto:
     def __init__(self):
-        self._valore = 0
+        self.__valore = 0
     
     @property
     def valore(self):
-        return self._valore
+        return self.__valore
 
 obj = Oggetto()
 obj.valore = 5 # ERRORE!!!! NO setter!!!
@@ -770,41 +780,41 @@ class Rettangolo:
     def __init__(self, b, h):
         # i valori passati nella init NON sono sottoposti al controllo
         # imposto dai decoratori sotto, quindi...
-        self._base = abs(b)
-        self._altezza = abs(h)
+        self.__base = abs(b)
+        self.__altezza = abs(h)
     
     def __str__(self):
-        return f"Rettangolo {self._base} x {self._altezza}"
-
+        return "Rettangolo: " + str(self.__dict__)
+        
     @property
     def base(self):
-        return self._base
+        return self.__base
     
     @base.setter
     def base(self, value):
         if value < 0:
             raise ValueError("La base di un rettangolo non può essere negativa")
-        self._base = value
+        self.__base = value
         return
     
     @property
     def altezza(self):
-        return self._altezza
+        return self.__altezza
     
     @altezza.setter
     def altezza(self, value):
         if value < 0:
             raise ValueError("L'altezza di un rettangolo non può essere negativa")
-        self._altezza = value
+        self.__altezza = value
         return
     
     @property
     def area(self):
-        return self._base * self._altezza
+        return self.__base * self.__altezza
     
     @property
     def perimetro(self):
-        return (self._base + self._altezza) * 2
+        return (self.__base + self.__altezza) * 2
     
 if __name__ == "__main__":
     r1 = Rettangolo(5,3)
