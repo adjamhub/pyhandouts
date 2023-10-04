@@ -636,14 +636,14 @@ cioè un metodo che permette di impostare un nuovo valore per `_nome` (se il val
 ---------------------------------------------------------------------------------------------------------
 
 !!! warning "Privato o protetto?"
-
-  Adesso che abbiamo capito il concetto di visibilità (a grandi linee, mi rendo conto...)
-  facciamo una semplificazione: per ora utilizzeremo **solo** le visibilità:
-  
-  - **pubbliche** (cioè lasceremo tutto identico a prima...)
-  - **private** (quindi metteremo DUE underscore e...)
-  
-  La visibilità **protetta** sarà reintrodotta nel prossimo capitolo!!!
+    
+    Adesso che abbiamo capito il concetto di visibilità (a grandi linee, mi rendo conto...)
+    facciamo una semplificazione: per ora utilizzeremo **solo** le visibilità:
+    
+    - **pubbliche** (cioè lasceremo tutto identico a prima...)
+    - **private** (quindi metteremo DUE underscore e...)
+    
+    La visibilità **protetta** sarà reintrodotta nel prossimo capitolo!!!
 
 
 Nel linguaggio Python esiste uno strumento che permette una implementazione analoga (ovvero... *simile*, **NON** *uguale*) a questo livello di protezione
