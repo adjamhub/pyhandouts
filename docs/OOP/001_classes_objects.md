@@ -849,10 +849,9 @@ Definire una classe Temperatura, che NON prende parametri in fase di inizializza
 
 
 !!! tip "Kelvin, Celsius, Farheneit"
-    
     ``` 
     temp:K 
-    C = temp + 273.15
+    C = temp - 273.15
     F = temp * 9 / 5 - 459.67
     ``` 
 
