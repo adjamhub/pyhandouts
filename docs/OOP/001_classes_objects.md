@@ -848,6 +848,14 @@ Definire una classe Temperatura, che NON prende parametri in fase di inizializza
 (come sapete) deve essere non negativa. Presenta inoltre due proprietà in sola lettura per visualizzare la temperatura in gradi Celsius e in gradi Farheneit.
 
 
+!!! tip "Kelvin, Celsius, Farheneit"
+    
+    ``` 
+    temp:K 
+    C = temp + 273.15
+    F = temp * 9 / 5 - 459.67
+    ``` 
+
 --------------------------------------------------------------------
 
 **Esercizio 723**
