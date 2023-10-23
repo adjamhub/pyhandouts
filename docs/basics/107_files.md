@@ -311,7 +311,7 @@ Scrivere tutte le posizioni trovate riga per riga nel file "posizioni.txt". Se i
 
 **Esercizio 715 (2): ordinamenti**
 
-Scrivete un programma che legge dal file "sequenza.txt" una sequenza di interi, la ordina in modo crescente e la salva ordinata sul file "ordinati.txt".
+Scrivete un programma che legge dal file "sequenza.txt" una sequenza di interi, la ordina in modo crescente e la salva ordinata sul file "ordinati.txt" (**uno per riga**).
 
 ------------------------------------------------------------
 
