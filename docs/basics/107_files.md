@@ -193,20 +193,20 @@ Spero sia abbastanza chiaro. Nel dubbio… lo sapete già! Funzioni `dir()` ed `
 ### Esercizi sui files
 
 
-**Esercizio 701**
+**Esercizio 701 (1)**
 
 Scrivere un programma che chiede all’utente di digitare il proprio nome e poi salva la stringa digitata sul file "stringa.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 702**
+**Esercizio 701 (2)**
 
 Scrivere un programma che carica in lettura il file "stringa.txt" creato nell’esercizio precedente e ne visualizza 
 il contenuto sullo schermo (dovrebbe visualizzare la stringa digitata prima).
 
 ------------------------------------------------------------
 
-**Esercizio 703**
+**Esercizio 703 (1)**
 
 Scrivere un programma che chiede all’utente di digitare un numero intero e poi salva il numero digitato sul file "intero.txt".
 
@@ -218,27 +218,27 @@ Scrivere un programma che chiede all’utente di digitare un numero intero e poi
 
 ------------------------------------------------------------
 
-**Esercizio 704**
+**Esercizio 703 (2)**
 
 Scrivere un programma che carica in lettura il file "intero.txt" creato nell’esercizio precedente e salva il suo contenuto, 
 convertito in intero, su una variabile. Visualizzare la variabile e verificare il suo tipo con la funzione `type()`.
 
 ------------------------------------------------------------
 
-**Esercizio 705**
+**Esercizio 705 (1)**
 
 Scrivere un programma che chiede all’utente di digitare un numero reale e poi salva il numero digitato sul file "reale.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 706**
+**Esercizio 705 (2)**
 
 Scrivere un programma che carica in lettura il file "reale.txt" creato nell’esercizio precedente e salva il suo contenuto, convertito in reale, su una variabile. 
 Visualizzare la variabile e verificare il suo tipo con la funzione type().
 
 ------------------------------------------------------------
 
-**Esercizio 707**
+**Esercizio 707 (1)**
 
 Creare una lista contenente i nomi di alcuni animali, visualizzarla sullo schermo e poi andare a copiarne il contenuto nel file "animali.txt" avendo cura di mettere 
 ogni animale in una nuova riga.<br>
@@ -246,13 +246,13 @@ Eseguito il codice verificare che il file è effettivamente ben formato con un a
 
 ------------------------------------------------------------
 
-**Esercizio 708**
+**Esercizio 707 (2)**
 
-Aprire in lettura il file "animali.txt" creato nell’esercizio precedente in lettura e leggere il contenuto riga per riga visualizzando ogni volta l’animale "estratto".
+Aprire in lettura il file "animali.txt" creato nell’esercizio precedente e leggere il contenuto riga per riga visualizzando ogni volta l’animale "estratto".
 
 ------------------------------------------------------------
 
-**Esercizio 709**
+**Esercizio 707 (3)**
 
 Aprire il file "animali.txt" in modalità "append" (aggiunta a fine file). Chiedere all’utente di inserire il nome di un animale e procedere all’inserimento nel file. 
 Ripetere l’operazione 2 o 3 volte, aggiungendo ogni volta l’animale inserito nel file.<br>
@@ -270,6 +270,7 @@ Ripetere l’operazione in modalità "w" e infine controllare il contenuto del f
 
 **Esercizio 711: area rettangolo**
 
+Creare un file di testo, chiamato "lati.txt" salvando all'interno due numeri reali qualsiasi, uno per riga.<br>
 Implementare un software che legge dal file "lati.txt" due valori reali per la base e l'altezza di un rettangolo, visualizza i dati su schermo, 
 calcola e visualizza l’area del rettangolo e salva il valore calcolato nel file "area.txt".
 
@@ -277,6 +278,7 @@ calcola e visualizza l’area del rettangolo e salva il valore calcolato nel fil
 
 **Esercizio 712: secondi trascorsi**
 
+Creare un file di testo chiamato "secondi.txt", contenente al suo interno un numero intero qualsiasi.<br>
 Implementare un software che legge dal file "secondi.txt" un valore intero che rappresenta i secondi trascorsi dalla mezzanotte di un dato giorno e che trasforma questo valore, 
 visualizzandolo su schermo in ore:minuti:secondi. Ad esempio, se il valore caricato dal file "secondi.txt" fosse 4000 (uguale a 3600, 1 ora, + 360, 6 minuti, + 40), 
 il programma scriverebbe su video 1 : 6 : 40.<br>
@@ -292,20 +294,22 @@ Dichiarare una lista di 5 stringhe e procedere ad un salvataggio su file delle p
 
 **Esercizio 714: media dei numeri**
 
-Dato un file denominato "numeri.txt" contenente esattamente 10 numeri interi, caricarne il contenuto su una lista, procedere al calcolo della media aritmetica dei numeri inseriti, 
+Creare un file di testo chiamato "numeri.txt" salvando al suo interno 10 numeri interi, uno per riga.<br>
+Implementare un software che legge dal file "numeri.txt", caricarne il contenuto su una lista, procedere al calcolo della media aritmetica dei numeri inseriti, 
 visualizzare il risultato a video e salvarlo nel file "media.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 715: ricerca elementi**
+**Esercizio 715 (1): ricerca elementi**
 
-Dato un file "sequenza.txt" analogo a quello dell’esercizio precedente, caricare i dati su una lista, visualizzare i dati a video, chiedere un numero intero da cercare 
-all’utente e procedere alla ricerca di tutte le posizioni della lista ove questo numero si trovi.<br>
+Creare un file di testo chiamato "sequenza.txt", salvando al suo interno una certa quantità di numeri interi, uno per riga.
+Implementare un software che legge dal file "sequenza.txt" i dati, li carica su una lista e li visualizza a video. Chiedere poi all'utente di inserire un numero intero
+e procedere alla ricerca di questo nella sequenza caricata dal file. Visualizzare le posizioni ove questo numero si trovi.<br>
 Scrivere tutte le posizioni trovate riga per riga nel file "posizioni.txt". Se il numero non viene mai trovato, si inserisca nel file la scritta maiuscola "NON TROVATO".
 
 ------------------------------------------------------------
 
-**Esercizio 716: ordinamenti**
+**Esercizio 715 (2): ordinamenti**
 
 Scrivete un programma che legge dal file "sequenza.txt" una sequenza di interi, la ordina in modo crescente e la salva ordinata sul file "ordinati.txt".
 
