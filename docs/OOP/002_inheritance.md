@@ -128,7 +128,7 @@ Per farlo dobbiamo forzatamente reimplementare la funzione `__init__` della clas
 Questa cosa mi forza (poiché facendo overriding, la funzione `__init__` ereditata viene nascosta) a reimplementare tutto quanto viene definito 
 nella funzione `__init__` della classe Base.
 
-``` py title="Implementazione banale (NON va bene)
+``` py title="Implementazione banale (NON va bene)"
 class Persona:
     def __init__(self, name):
         self.nome = name
