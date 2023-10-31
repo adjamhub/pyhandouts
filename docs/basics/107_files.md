@@ -411,17 +411,22 @@ L’oggetto Path espone fra le altre le seguenti funzioni:
 | Funzione              | Descrizione                                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------|
 | `cwd()`               | Ritorna il percorso della cartella corrente. Restituisce un Path.                                                    |
-| `exists()`            | Verifica se il percorso attuale esiste oppure no. Restituisce un valore boolean.                                     |
-| `glob(pattern)`       | Ritorna la lista di tutti i file e le cartelle presenti nel Path e che rispettano il pattern.                        |
 | `home()`              | Ritorna il percorso della cartella utente (la `home`, vedi sopra). Restituisce un Path.                              |
+| ------------------    | -----------------------------------------------------------------------------------------                            |
+| `exists()`            | Verifica se il percorso attuale esiste oppure no. Ritorna True o False.                                              |
 | `is_dir()`            | Ritorna True se il path attuale è una cartella, False altrimenti.                                                    |
 | `is_file()`           | Ritorna True se il path attuale è un file, False altrimenti.                                                         |
-| `iterdir()`           | Ritorna la lista di tutti i file presenti nel Path.                                                                  |
-| `mkdir()`             | Crea la cartella abbinata al percorso del Path.                                                                      |
+| ------------------    | -----------------------------------------------------------------------------------------                            |
+| `iterdir()`           | Quando il percorso punta a una directory, ritorna la lista degli oggetti percorso del contenuto della directory      |
+| `glob(pattern)`       | Ritorna la lista di tutti i file e le cartelle presenti nel Path e che rispettano il pattern.                        |
+| ------------------    | -----------------------------------------------------------------------------------------                            |
 | `open(mode)`          | Apre il file indicato nel Path in modalità "mode". Ritorna un file object come fa la funzione predefinita "open()"   |
-| `rename(target)`      | Rinomina il Path al percorso indicato nel Path "target".                                                             |
-| `rmdir()`             | Rimuove la cartella abbinata al percorso del Path (solo se la cartella è vuota).                                     | 
+| `mkdir()`             | Crea la cartella abbinata al percorso del Path.                                                                      |
+| ------------------    | -----------------------------------------------------------------------------------------                            |
 | `unlink()`            | Rimuove un file (solo se è un file). <br> **Attenti a quello che fate, per favore!!!**                               |
+| `rmdir()`             | Rimuove la cartella abbinata al percorso del Path, ma **solo se la cartella è vuota**, altrimenti **ERRORE**!!!      | 
+| ------------------    | -----------------------------------------------------------------------------------------                            |
+| `rename(target)`      | Rinomina il Path al percorso indicato nel Path "target".                                                             |
 
 !!! note
 
