@@ -428,6 +428,7 @@ L’oggetto Path espone fra le altre le seguenti funzioni:
 | ------------------    | -----------------------------------------------------------------------------------------                            |
 | `rename(target)`      | Rinomina il Path al percorso indicato nel Path "target".                                                             |
 
+
 !!! note
 
     Per vedere **tutte** le funzioni offerte dall'oggetto Path:
@@ -444,7 +445,7 @@ ovviamente ognuno di questi esempi dovrebbe iniziare con l’import dell’ogget
 
 
 ``` python
-From pathlib import Path
+from pathlib import Path
 ```
 
 <br>
