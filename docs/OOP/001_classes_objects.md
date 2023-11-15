@@ -550,18 +550,18 @@ della classe. Ogni membro può essere specificato come:
 
 > Nei linguaggi (molto) strutturati:
 > 
-> - `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze;
+> - `public`, ovvero *ereditabile* e visibile a chiunque utilizzi la classe e le sue istanze;
 > - `protected`, ovvero visibile solo all'interno della propria classe di appartenenza e dall'interno di ogni sua classe derivata;
-> - `private`, ovvero visibile solo all'interno della propria classe di appartenenza. **Questa è la visibilità di default**.
+> - `private`, ovvero *non ereditabile* e visibile solo all'interno della propria classe di appartenenza. **Questa è la visibilità di default**.
 
 
 Questi concetti in Python (che è un linguaggio molto più... moderno. Non so quanto in questo caso sia un bene...) sono stati tradotto in maniera molto particolare.
 
 > In Python:
 > 
-> - `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze; **Questa è la visibilità di default in Python**
+> - `public`, ovvero *ereditabile* e visibile a chiunque utilizzi la classe e le sue istanze; **Questa è la visibilità di default in Python**
 > - `protected`, ogni variabile membro che inizia con underscore `_`. Funziona come pubblico. Il livello protetto è *sociale* (ovvero i programmatori per educazione, dovrebbero evitare l'utilizzo esterno alla classe)
-> - `private`, ogni variabile membro che inizia con doppio underscore `__`. Visibile solo all'interno della propria classe di appartenenza.
+> - `private`, ogni variabile membro che inizia con doppio underscore `__`. *Non ereditabile* e Visibile solo all'interno della propria classe di appartenenza.
 
 
 La visibilità di default è diventata quella `public` per eliminare alla radice qualunque problema di accesso. Di sicuro una mossa a favore di chi è poco esperto.
