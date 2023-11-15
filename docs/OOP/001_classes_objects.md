@@ -543,17 +543,26 @@ Definire la classe Rubrica, un oggetto della stessa, inserirvi almeno 4 contatti
 
 
 <!-- ################################################################################################# -->
-## Accesso agli attributi
+## Accesso agli attributi (incapsulamento)
 
 Nei linguaggi di programmazione più *antichi* e *strutturati* (come C++ e Java) esiste il concetto di *visibilità* di un membro (un attributo o un metodo)
 della classe. Ogni membro può essere specificato come:
 
-- `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze;
-- `protected`, ovvero visibile solo all'interno della propria classe di appartenenza e dall'interno di ogni sua classe derivata;
-- `private`, ovvero visibile solo all'interno della propria classe di appartenenza. Questa è la visibilità di default.
+> Nei linguaggi (molto) strutturati:
+> 
+> - `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze;
+> - `protected`, ovvero visibile solo all'interno della propria classe di appartenenza e dall'interno di ogni sua classe derivata;
+> - `private`, ovvero visibile solo all'interno della propria classe di appartenenza. **Questa è la visibilità di default**.
 
 
-Questi concetti in Python (che è un linguaggio molto più... moderno. Non so quanto in questo caso sia un bene...) è stato tradotto in maniera molto particolare.
+Questi concetti in Python (che è un linguaggio molto più... moderno. Non so quanto in questo caso sia un bene...) sono stati tradotto in maniera molto particolare.
+
+> In Python:
+> 
+> - `public`, ovvero visibile a chiunque utilizzi la classe e le sue istanze; **Questa è la visibilità di default in Python**
+> - `protected`, ogni variabile membro che inizia con underscore `_`. Funziona come pubblico. Il livello protetto è *sociale* (ovvero i programmatori per educazione, dovrebbero evitare l'utilizzo esterno alla classe)
+> - `private`, ogni variabile membro che inizia con doppio underscore `__`. Visibile solo all'interno della propria classe di appartenenza.
+
 
 La visibilità di default è diventata quella `public` per eliminare alla radice qualunque problema di accesso. Di sicuro una mossa a favore di chi è poco esperto.
 
@@ -573,7 +582,7 @@ p = Persona("Ciccio")
 print(p._nome) # ecco... adesso sono un programmatore maleducato. Corretto, ma maleducato!!!
 ```
 
-Avrete già capito... la visibilità `private` si ottiene iniziando il nome di una variabile (o di una funzione membro) con 2 underscore. Stavolta però le cose cambiano...
+La visibilità `private` si ottiene iniziando il nome di una variabile (o di una funzione membro) con 2 underscore. Stavolta però le cose cambiano...
 l'interprete custodisce eccome i membri privati e riporta un **AttributeError**. Insisto col mio esempio:
 
 ```python
