@@ -13,7 +13,6 @@ o APP (???)
 
 o link che si aprono in un'altra scheda (QUALI???)
 
-
 --------------------------
 ## ABBELLIMENTI
 
@@ -47,11 +46,15 @@ x unione files <--> modulo pathlib PIU' O MENO FATTO
 --------------------------
 # OOP
 
-x Python scope rules
-x Varie cose da sistemare... ANCHE con l'esperienza di quest'anno!!!
-
-o dividi su più files, sarà più facile gestirlo
 o staticmethods
+
+(-) poni un obiettivo con un progetto IMPORTANTE per NATALE!!!
+(-) ...manca sicuro qualcosa fra gli argomenti: funzioni statiche? virtuali?? classi astratte???
+(-) instance (https://www.pythontutorial.net/python-oop/python-methods/) 
+    vs 
+    class (https://www.pythontutorial.net/python-oop/python-class-methods/) 
+    vs 
+    static (https://www.pythontutorial.net/python-oop/python-static-methods/) methods
 
 --------------------------
 # WX
@@ -61,12 +64,22 @@ o self.panel.Layout()
 o widget avanzate
 o esercizi complicati!!!
 
+(-) Wx Widgets avanzate
+    (-) wx.stc (scintilla)
+    (-) wx.media
+    (-) wx.grid
+    (-) wx.richtext
+    (-) wx.ListCtrl: File Manager
+    (-) le altre... da sistemare!!!
+(-) operazioni di rete
+
 --------------------------
-# INSIGHTs
+# ESP 32
 
-x PAGINA INIZIALE introduttiva
-
-o Elenca qui gli approfondimenti che vorresti ci fossero...
-
-
+(-) DISPENSE ESP32
+    (-) sistema, evidenzia codice
+    (-) esercizi
+    (-) simulatore
+    (-) migliora le spiegazioni
+    (-) RIORGANIZZA in modo da fare MENO circuiti e più cose.
 
