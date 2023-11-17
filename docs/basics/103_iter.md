@@ -104,30 +104,54 @@ complessa: ad esempio una sequenza che non inizia da zero, una sequenza
 che avanza di 2, un conto alla rovescia...
 
 Per tutte le casistiche possibili occorre studiare i parametri della
-funzione range().
+funzione `range()`.
 
 
 !!! tip "Suggerimento"
 
-    La funzione `range()` è una funzione predefinita del linguaggio che crea "al volo" una sequenza numerica intera. 
+    La funzione `range()` è una funzione predefinita del linguaggio che crea *"al volo"* una sequenza numerica intera. 
 
 
-Essa è definita come:
+Essa può prendere 1,2,3 parametri! Vediamo i vari casi:
 
-> range( [ start = 0 , ] stop [ , step = 1 ] )
+> range( stop )
 >
-> dove:
-> 
-> - *start* è il valore iniziale della sequenza (compreso)
+> - la sequenza parte da 0 e avanza di 1:
+> - *stop* è il valore finale (non compreso)
+
+Ad esempio:
+
+``` py
+range(5) # indica la sequenza (0,1,2,3,4)
+```
+
+> range( start , stop )
+>
+> - *start* è il valore iniziale (compreso)
+> - *stop* è il valore finale (non compreso)
+> - si avanza di 1
+
+Ad esempio:
+
+``` py
+range(2,7) # indica la sequenza (2,3,4,5,6)
+```
+
+> range( start , stop , step)
+>
+> - *start* è il valore iniziale (compreso)
 > - *stop* è il valore finale (non compreso)
 > - *step* è il valore di avanzamento
 
-Ho indicato le parentesi quadre su start e step per indicare che i due
-valori sono opzionali e nel caso non ci siano, il valore iniziale
-(start) è sempre ZERO, mentre lo spiazzamento in avanti (step) è sempre
-UNO.
+Ad esempio:
 
-È più facile di quello che sembra; vediamo qualche esempio:
+``` py
+range(3,15,2) # indica la sequenza (3,5,7,9,11,13)
+```
+
+
+È più facile di quello che sembra! <br>
+Vediamo qualche esempio:
 
 
 ``` py title="Esempio 1"
