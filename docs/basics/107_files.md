@@ -412,20 +412,20 @@ L’oggetto Path espone fra le altre le seguenti funzioni:
 |-----------------------|----------------------------------------------------------------------------------------------------------------------|
 | `cwd()`               | Ritorna il percorso della cartella corrente. Restituisce un Path.                                                    |
 | `home()`              | Ritorna il percorso della cartella utente (la `home`, vedi sopra). Restituisce un Path.                              |
-| ------------------    | -----------------------------------------------------------------------------------------                            |
+| ----------------------| -----------------------------------------------------------------------------------------                            |
 | `exists()`            | Verifica se il percorso attuale esiste oppure no. Ritorna True o False.                                              |
 | `is_dir()`            | Ritorna True se il path attuale è una cartella, False altrimenti.                                                    |
 | `is_file()`           | Ritorna True se il path attuale è un file, False altrimenti.                                                         |
-| ------------------    | -----------------------------------------------------------------------------------------                            |
+| ----------------------| -----------------------------------------------------------------------------------------                            |
 | `iterdir()`           | Quando il percorso punta a una directory, ritorna la lista degli oggetti percorso del contenuto della directory      |
 | `glob(pattern)`       | Ritorna la lista di tutti i file e le cartelle presenti nel Path e che rispettano il pattern.                        |
-| ------------------    | -----------------------------------------------------------------------------------------                            |
+| ----------------------| -----------------------------------------------------------------------------------------                            |
 | `open(mode)`          | Apre il file indicato nel Path in modalità "mode". Ritorna un file object come fa la funzione predefinita "open()"   |
 | `mkdir()`             | Crea la cartella abbinata al percorso del Path.                                                                      |
-| ------------------    | -----------------------------------------------------------------------------------------                            |
+| ----------------------| -----------------------------------------------------------------------------------------                            |
 | `unlink()`            | Rimuove un file (solo se è un file). <br> **Attenti a quello che fate, per favore!!!**                               |
 | `rmdir()`             | Rimuove la cartella abbinata al percorso del Path, ma **solo se la cartella è vuota**, altrimenti **ERRORE**!!!      | 
-| ------------------    | -----------------------------------------------------------------------------------------                            |
+| ----------------------| -----------------------------------------------------------------------------------------                            |
 | `rename(target)`      | Rinomina il Path al percorso indicato nel Path "target".                                                             |
 
 
@@ -482,7 +482,7 @@ for f in desk.glob("*.txt"):
     Il parametro pattern della funzione glob è una stringa che ammette la wildcard * dove per wildcard (in informatica) si intende il carattere 
     che può sostituire qualunque altro, anche molti. <br>
     Così il pattern "*.txt" rappresenta tutti i file che finiscono per ".txt", il pattern "\*" rappresenta tutti i file con qualunque nome, 
-    il pattern "a*" rappresenta tutti i file che iniziano per "a" e così via.
+    il pattern "a\*" rappresenta tutti i file che iniziano per "a" e così via.
 
 
 <br>
