@@ -1502,7 +1502,7 @@ Dato un numero intero N da parte dell'utente (verificare che sia
 positivo), visualizzare la successione di Fibonacci da 0 fino
 all'ennesimo numero.
 
-Ad esempio, dato N = 6, va visualizzata la successione: 0 , 1 , 1 , 2 , 3 , 5.
+Ad esempio, dato N = 8, va visualizzata la successione: 0 , 1 , 1 , 2 , 3 , 5 , 8 , 13.
 
 
 ------------------------------------------------------------------------------------------
