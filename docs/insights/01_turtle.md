@@ -19,17 +19,8 @@ Cominciamo dal programma assolutamente minimo, che però in realtà contiene gi�
 # qui importi la libreria turtle e tutte le sue cose
 from turtle import *
 
-# t ed s sono variabili:
-# - t è la tartaruga,
-# - s è lo sfondo dove la tartaruga si muove.
-t = Turtle()
+# s è una variabile che rappresenta lo sfondo dove la tartaruga si muoverà
 s = Screen()
-
-# la forma della tartaruga. Può essere:
-# "arrow" , "turtle" , "circle" , "square" , "triangle" , "classic"
-t.shape("turtle")
-# la dimensione della tartaruga. Default: 1. 2 significa il doppio...
-t.shapesize(1.5)
 
 # il titolo della finestra (guarda in alto)
 s.title("Prima Prova")
@@ -38,13 +29,22 @@ s.title("Prima Prova")
 # Puoi anche indicarlo con la notazione esadecimale RGB: "#00FF00"
 s.bgcolor("green")
 
+# t è una variabile che rappresenta la tartaruga sullo schermo
+t = Turtle()
+
+# la forma della tartaruga. Può essere:
+# "arrow" , "turtle" , "circle" , "square" , "triangle" , "classic"
+t.shape("turtle")
+
+# la dimensione della tartaruga. Il valore di base è 1. Se metti 2 significa il doppio...
+t.shapesize(1.5)
+
 # ... qui fai cose...
 
 # quando clicchi sulla pagina il programma si chiude
 s.exitonclick()
-
-
 ```
+
 
 Leggi i commenti! Prova a modificare il colore di sfondo. Prova a modificare la forma e la dimensione della tartaruga.
 Prova a cliccare sulla pagina. Prova a cambiare il titolo. 
@@ -64,7 +64,7 @@ Hai capito, dai... passiamo avanti!!!
 - `t.right( ggg )`: gira la tartaruga di `ggg` gradi verso dx (in senso orario)
 - `t.setheading( dir )`: orienta la tartaruga verso `dir`: 
 
-    - `0` --> destra , `90` --> alto , `180` --> sinistra , `270` --> basso  
+    - `0` --> destra , `90` --> alto , `180` --> sinistra , `270` --> basso
 
 ---
 
