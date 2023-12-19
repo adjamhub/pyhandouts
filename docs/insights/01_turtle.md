@@ -13,17 +13,45 @@ Buon divertimento!!!
 <!-- ################################################################################# -->
 ## Fare cose con turtle
 
-Inizia sempre con questo codice:
+Cominciamo dal programma assolutamente minimo, che però in realtà contiene già parecchie cosine su cui riflettere!
 
-``` py
+``` py title="Programma di base"
 # qui importi la libreria turtle e tutte le sue cose
 from turtle import *
 
-# t ed s sono variabili: t è la tartaruga, s è lo sfondo
-# dove la tartaruga si muove.
+# t ed s sono variabili:
+# - t è la tartaruga,
+# - s è lo sfondo dove la tartaruga si muove.
 t = Turtle()
 s = Screen()
+
+# la forma della tartaruga. Può essere:
+# "arrow" , "turtle" , "circle" , "square" , "triangle" , "classic"
+t.shape("turtle")
+# la dimensione della tartaruga. Default: 1. 2 significa il doppio...
+t.shapesize(1.5)
+
+# il titolo della finestra (guarda in alto)
+s.title("Prima Prova")
+
+# il colore di sfondo!
+# Puoi anche indicarlo con la notazione esadecimale RGB: "#00FF00"
+s.bgcolor("green")
+
+# ... qui fai cose...
+
+# quando clicchi sulla pagina il programma si chiude
+s.exitonclick()
+
+
 ```
+
+Leggi i commenti! Prova a modificare il colore di sfondo. Prova a modificare la forma e la dimensione della tartaruga.
+Prova a cliccare sulla pagina. Prova a cambiare il titolo. 
+
+Hai capito, dai... passiamo avanti!!!
+
+
 
 ## Le funzioni della tartaruga
 
@@ -56,14 +84,6 @@ s = Screen()
 - `t.showturtle()`: mostra la tartaruga
 - `t.hideturtle()`: nasconde la tartaruga
 
----
-
-- `t.shape( forma )`: cambia la forma della tartaruga in uno fra: 
-   
-    - `"arrow"` , `"turtle"` , `"circle"` , `"square"` , `"triangle"` , `"classic"`
-
-- `t.shapesize( ppp )`: cambia la dimensione della tartaruga di `ppp` pixel
-
 --- 
 
 - `t.circle ( ppp )`: disegna un cerchio di diametro `ppp` pixel
@@ -77,14 +97,6 @@ s = Screen()
 - `t.goto( x , y )`: porta la tartaruga al punto `(x,y)`
 - `t.home()`: porta la tartaruga a casa (al centro)
 
-
-## Il mondo della tartaruga
-
-<br>
-
-- `s.bgcolor( "color" )`: imposta il colore di sfondo
-- `s.exitonclick()`: chiude la finestra `on click`
-- `s.title( "Titolo della finestra" )`: imposta il titolo della finestra.
 
 
 ## Disegni con Turtle
