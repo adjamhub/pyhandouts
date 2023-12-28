@@ -1,37 +1,48 @@
 # OpenCV
 
-Il modulo della tartaruga :)<br>
-E' un modulo *didattico* predefinito in Python (non occorre installarlo, è già presente). Tramite codice
-si muove una tartaruga (o più, o qualche forma che gli assomiglia) e si realizza qualche disegno più o meno
-complicato imparando a programmare in maniera naturale.
+Il modulo Apri Curriculum Vitae :)<br>
 
-Questo che trovate sotto è un ***Crash Course***: non ci sono spiegazioni, ma informazioni buttate là e qualche
-obiettivo da raggiungere...
+Partirei da questo sito su GitHub dove ci sono esempi e codice funzionante: <https://github.com/jasmcaus/opencv-course/tree/master>.
+
+Basics:
+
+- Reading Images and Video
+- Image Transformations
+- Drawing Shapes
+
+Advanced:
+
+- Color Spaces
+- BITWISE operations
+- Masking
+- Histogram Computation
+- Edge Detection
+
+Faces:
+
+- Face Detection
+- Face Recognition
+
 
 Buon divertimento!!!
 
 <!-- ################################################################################# -->
-## Fare cose con turtle
+## install
+
+Secondo loro:
+
+- opencv-contrib-python (contiene tutto quello che serve)
+- caer (boh)
+
+
+## leggere immagini e video
+
 
 Cominciamo dal programma assolutamente minimo, che però in realtà contiene già parecchie cosine su cui riflettere!
 
 ``` py title="Programma di base" hl_lines="27"
+# blah blah... opencv...
 ```
-
-
-Leggi i commenti! Prova a modificare il colore di sfondo. Prova a modificare la forma e la dimensione della tartaruga.
-Prova a cliccare sulla pagina. Prova a cambiare il titolo. 
-
-Hai capito, dai... passiamo avanti!!!
-
-
-!!! note "Nota"
-
-    Hai visto il commento "qui fai cose" nel codice sopra?
-
-
-    Da ora in poi inserirò semplici parti di codice che andranno inserite in quel punto per ogni programma.
-    In questo modo potrò mettere in evidenza meglio il codice importante senza ripetere ogni volta le parti di base
     
 
 <br>
