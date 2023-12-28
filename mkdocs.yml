@@ -105,8 +105,9 @@ nav:
   - Insights:
     - Introduzione: insights/00_intro.md
     - Turtle: insights/01_turtle.md
-    - PyGame: insights/02_pygame1.md
-#    - PyGame (avanzato): insights/02_pygame2.md
+    - PyGame: insights/03_pygame1.md
+#    - PyGame (avanzato): insights/03_pygame2.md
+    - OpenCV: insights/05_opencv.md
     - Ambienti Virtuali: insights/11_venv.md
     - Arduino: insights/12_arduino.md
     - MySql: insights/13_mysql.md
