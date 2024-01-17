@@ -87,7 +87,7 @@ frame con dentro un *panel* sembra normalmente *pieno*.
     Tutti gli esempi da qui in poi sono strutturati in questo modo: vi basterà osservarli un minimo :)
 
 
-QUI INSERISCI DUE IMMAGINI!!! UN FRAME SENZA PANEL E UN FRAME CON PANEL!!!
+![Finestre CoN e SENZA pannello](images/FinestraPannello.png)
 
 <br>
 
