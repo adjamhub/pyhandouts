@@ -483,11 +483,8 @@ class Esempio(wx.Frame):
 
         grid = wx.GridSizer(rows = 4, cols = 4, vgap = 5, hgap = 5)
         self.labels = "789/456*123-.0=+"
-        self.buttons = {}
-        many = []
         for lab in self.labels:
             btn = wx.Button(panel, label=lab)
-            self.buttons[lab] = btn
             grid.Add(btn, proportion = 0, flag = wx.ALL | wx.EXPAND, border = 5)
 
         vbox.Add(grid, proportion = 0, flag = wx.ALL | wx.EXPAND, border = 5)
