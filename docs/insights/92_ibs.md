@@ -106,19 +106,73 @@ Almeno fino al prossimo capitolo...
 
 Per gestire i bytes originati da una conversione (ad esempio di una stringa) o da una trasmissione di rete, Python 3 mette a disposizione 2 tipi di dati:
 
-* la classe `bytes`, immutabile, paragonabile ad una tupla di byte.
-* la classe `bytearray`, mutabile, paragonabile ad una lista di byte.
+* la classe `bytes`, immutabile, paragonabile ad una **tupla di byte**.
+* la classe `bytearray`, mutabile, paragonabile ad una **lista di byte**.
 
 Sostanzialmente, i dati in una di queste classi possono arrivare in pochi modi:
 
-* tramite la conversione di una stringa (encoding)
-* come prodotto di una trasmissione di rete
-* generando una nuova sequenza tramite le funzione predefinite `bytes()` e `bytearray()`
+1. tramite la conversione di una stringa (encoding)
+2. come prodotto di una trasmissione di rete
+3. generando una nuova sequenza tramite le funzione predefinite `bytes()` e `bytearray()`
 
-Partiamo da (scrivimi)
+Partiamo dall'ultima opzione! Possiamo usare entrambe le funzioni in due modi analoghi: l'unica differenza fra loro è che una crea un oggetto di tipo `bytes` e l'altra
+un oggetto di tipo `bytearray`.
+
+Vediamo il codice:
+
+``` python
+# bytes(size:int) oppure bytearray(size:int). Se passi un intero, crea una sequenza di "size" bytes tutti a zero!
+
+b = bytes(3)            # b  vale b'\x00\x00\x00' ,            una sequenza IMMUTABILE di 3 bytes (8x3 = 24 bit) tutti a zero.
+ba = bytearray(3)       # ba vale bytearray(b'\x00\x00\x00') , una sequenza MUTABILE   di 3 bytes tutti a zero.
+
+# bytes(iterable) oppure bytearray(iterable). Prende la sequenza di dati e crea una sequenza di byte con i dati della sequenza.
+
+tupla = (1, 2, 3)
+b1 = bytes(tupla)       # b1 vale b'\x01\x02\x03',             una sequenza immutabile, riempita con i byte ricavati dalla conversione dei dati della tupla
+ba1 = bytearray(tupla)  # ba1 vale bytearray(b'\x01\x02\x03'), una sequenza mutabile,   riempita con i byte ricavati dalla conversione dei dati della tupla
+```
 
 
+## String encoding
 
+
+Il passaggio da stringa a bytes è davvero semplice, considerando che le stringhe utilizzano la codifica UTF-8.
+
+Per passare da stringa a bytes, usiamo la funzione `str.encode(self, encoding='utf-8')`:
+
+``` python
+s = "Andrea"
+b = s.encode()    # b è un bytes che vale b'Andrea'
+```
+
+Se invece hai una sequenza di bytes e vuoi ottenere una stringa, devi utilizzare la funzione `bytes.decode(self, encoding='utf-8')`.
+
+``` python
+b = b'Andrea'
+s = b.decode()    # s è una stringa che vale 'Andrea'
+```
+
+## Int conversion
+
+
+Il passaggio da interi a bytes è analogo a quello delle stringhe, ma con una piccola difficoltà in più: intuire quanti bytes saranno necessari per stanziare la 
+conversione dell'intero in questione non è banale! Nel dubbio... esagerate un pò!!
+
+Le funzioni da utilizzare sono queste:
+
+* **da int a bytes**: funzione `int.to_bytes(len:int)` occorre specificare quanti bytes occuperà il numero convertito. Se ne metti troppo pochi da errore!!! Se ne metti troppi... sprechi memoria.
+* **da bytes a int**: funzione `int.from_bytes(b)`: una semplice conversione 1:1 del bytes in intero.
+
+Vediamo due esempi
+
+``` python
+n = 13
+b = n.to.bytes(3)       # b è un bytes che vale b'\x00\x00\r'
+
+# adesso, per riconvertirlo in int:
+a = int.from_bytes(b)   # a è un intero che vale 13
+```
 
 
 <br>
