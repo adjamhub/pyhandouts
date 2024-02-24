@@ -69,6 +69,7 @@ n4 = int(s4)            # ERRORE!!! Non sa come convertire la x...
 n4 = int(s4, base = 16) # Vale l'intero 47, la conversione di 2E(16) in decimale
 ```
 
+
 ## Stringhe e codifiche
 
 In Python il tipo stringa (`str`) codifica i dati in [UNICODE](https://it.wikipedia.org/wiki/Unicode), utilizzando il sistema di codifica [UTF-8](https://it.wikipedia.org/wiki/UTF-8).
@@ -94,7 +95,32 @@ In Python il tipo stringa (`str`) codifica i dati in [UNICODE](https://it.wikipe
     Il bello è che contiene anche tutte le faccine :wink:
 
 
-Con le stringhe 
+Con le stringhe in Python dunque, mentre osservandola (o usando la funzione `len`) puoi sapere con certezza da quanti caratteri questa è formata, a meno di non conoscere a fondo UTF-8,
+non possiamo sapere *ad occhio* quanti bytes occupa in memoria! 
+
+Almeno fino al prossimo capitolo...
+
+
+
+## bytes e bytearray
+
+Per gestire i bytes originati da una conversione (ad esempio di una stringa) o da una trasmissione di rete, Python 3 mette a disposizione 2 tipi di dati:
+
+* la classe `bytes`, immutabile, paragonabile ad una tupla di byte.
+* la classe `bytearray`, mutabile, paragonabile ad una lista di byte.
+
+Sostanzialmente, i dati in una di queste classi possono arrivare in pochi modi:
+
+* tramite la conversione di una stringa (encoding)
+* come prodotto di una trasmissione di rete
+* generando una nuova sequenza tramite le funzione predefinite `bytes()` e `bytearray()`
+
+Partiamo da (scrivimi)
+
+
+
+
+
 <br>
 <br>
 <br>
