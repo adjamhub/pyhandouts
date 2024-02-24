@@ -118,4 +118,5 @@ nav:
     - MongoDB: insights/43_mongodb.md
     - Arduino: insights/51_arduino.md
     - Numeri reali: insights/91_reals.md
+    - Interi, bytes, stringhe: insights/92_ibs.md
 
