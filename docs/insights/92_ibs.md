@@ -98,8 +98,15 @@ In Python il tipo stringa (`str`) codifica i dati in [UNICODE](https://it.wikipe
 Con le stringhe in Python dunque, mentre osservandola (o usando la funzione `len`) puoi sapere con certezza da quanti caratteri questa è formata, a meno di non conoscere a fondo UTF-8,
 non possiamo sapere *ad occhio* quanti bytes occupa in memoria! 
 
-Almeno fino al prossimo capitolo...
+Se però sei veramente determinato a saperlo... puoi usare la funzione predefinita `ord()`. Questa, dato un carattere, ritorna il valore esadecimale che corrisponde alla sua rappresentazione in UTF-8. Prima di fare qualche esempio, fatemi dire solo che esiste anche la funzione che fa l'inverso, ovvero dato un intero ritorna il carattere corrispondente
+in UTF-8 (o in ASCII. Ve l'ho detto che UTF-8 è stato progettato per essere identico ad ASCII nei primi 127 caratteri???).
 
+``` python
+print( ord('a') )       # scrive 97. In UTF-8, come in ASCII
+print( chr(97) )        # scrive 'a'
+i = 8364
+print( chr(i) )         # simbolo dell'Euro €
+```
 
 
 ## bytes e bytearray
