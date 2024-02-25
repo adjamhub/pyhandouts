@@ -3,19 +3,21 @@
 Uno Web Framework rappresenta una collezione di librerie e moduli che permette ad uno web developer 
 di scrivere applicazioni web senza occuparsi dei dettagli di basso livello.
 
-> **Flask** è uno **Web Framework** scritto in Python, 
+> **Flask** è uno **Web Framework** scritto in Python,<br> 
 > basato sul toolkit **WSGI Werkzeug** e sul template engine **Jinja2**.
 
 **WSGI (Web Server Gateway Interface)** è una specifica che definisce una interfaccia universale 
 di comunicazione fra un server web e una applicazione web: Werkzeug è semplicemente una implementazione 
 WSGI utilizzata da Flask.
 
-Jinja2 è un template engine molto popolare per il linguaggio Python. Un sistema di web template combina 
+**Jinja2** è un template engine molto popolare per il linguaggio Python. Un sistema di web template combina 
 un template (uno schema, uno scheletro) con delle sorgenti dati per creare una pagina web dinamica.
 
 Flask è disponibile in pochi istanti tramite pip:
 
-    $ pip install Flask
+``` bash
+$ pip install Flask
+```
 
 Oppure dall'interfaccia di Thonny per la gestione dei pacchetti (sottinteso: cerca Flask... Installa... Attendi... Boom!)
 
@@ -57,8 +59,9 @@ Flask.
 
 Importiamo l'oggetto Flask dal modulo flask
 
-
-    from flask import Flask
+``` python
+from flask import Flask
+```
 
 Questa operazione è l'operazione di base per lavorare con il modulo
 Flask: non c'è molto altro da commentare se non che siamo già pratici di
@@ -67,9 +70,9 @@ flask, secondo necessità.
 
 Creiamo l'oggetto Flask che gestisce la nostra applicazione
 
-
-    app = Flask(__name__)
-
+``` python
+app = Flask(__name__)
+```
 
 Tecnicamente questo oggetto rappresenta il server web... ovvero il
 software che fornisce le pagine web agli utenti (che le richiedono
@@ -94,8 +97,9 @@ browser.
 
 Impostiamo il decoratore della nostra applicazione
 
-    @app.route("/")
-
+``` python
+@app.route("/")
+```
 
 Un `decoratore` è una struttura Python relativamente complessa che si abbina ad una funzione 
 (quella che indicate sotto alla riga con la @) e che ne modifica il comportamento (la ***decora***).
@@ -313,9 +317,10 @@ identificati dai nomi `username` e `password`. La pagina a cui
 questi dati saranno inviati si trova all'URL relativo `/data`.
 
 
-> Se possibile, quando si usa Flask, evitate di utilizzare il nome
-> **pass**, che corrisponde ad una precisa istruzione Python... meglio
-> evitare confusione!!!
+!!! tip "Suggerimento"
+
+    Se possibile, quando si usa Flask (e Python in genere), evitate di utilizzare il nome **pass**, che corrisponde ad una precisa istruzione Python... 
+    meglio evitare confusione!!!
 
 La pagina si chiamerà "login.html" e sarà ovviamente collocata nella
 cartella "templates" della nostra app.
