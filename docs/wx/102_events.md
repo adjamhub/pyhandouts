@@ -1,9 +1,10 @@
 # Gestione degli eventi
 
-Una volta iniziato il ***Main Event Loop*** le applicazioni wxPython sono in
+Una volta iniziato il ***Main Event Loop***, le applicazioni wxPython sono in
 grado di intercettare gli eventi utente, come ad esempio un click su un
-pulsante o sulla tastiera o un movimento del mouse. Tutte questi eventi
-sono catalogati negli oggetti, ovvero ogni widget sa quali eventi
+pulsante o sulla tastiera o un movimento del mouse. 
+
+Tutte questi eventi sono catalogati negli oggetti, ovvero ogni widget sa quali eventi
 intercettare: ad esempio un pulsante saprà intercettare un click su di
 esso, una linea di testo sarà in grado di capire quando ci scrivi
 dentro, etc...
@@ -14,14 +15,14 @@ abbinare a questo una funzione, in modo che quando l'evento accade, la funzione 
 Per farlo dobbiamo utilizzare la funzione **Bind**:
 
 ``` python
-widget.Bind ( EVENTO, FUNZIONE )
+widget.Bind ( EVENTO, FUNZIONE_EVENTO )
 ```
 
 Vediamo un esempio di codice di una Finestra con un grosso pulsante
 dentro: al click sul pulsante viene eseguita una funzione e... provate
 a copiare il codice e ad eseguirlo per vedere cosa succede!
 
-``` py title="Eseguire una funzione al click di un pulsante" hl_lines="9"
+``` py title="Eseguire una funzione al click di un pulsante" hl_lines="9 11"
 import wx
 
 class Esempio(wx.Frame):
@@ -30,9 +31,9 @@ class Esempio(wx.Frame):
         super().__init__(None, title="Cliccami")
                
         pulsante = wx.Button(self, label="Chiudi tutto")
-        pulsante.Bind(wx.EVT_BUTTON, self.funzione)
+        pulsante.Bind(wx.EVT_BUTTON, self.funzioneEvento)
 
-    def funzione(self, evt):
+    def funzioneEvento(self, evt):
         self.Close()
 
 # ----------------------------------------
@@ -43,8 +44,14 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-Ok... con questo esempio abbiamo capito che un pulsante, ovvero la widget **wx.Button** intercetta il click 
-con l'evento **wx.EVT_BUTTON**. 
+!!! note "Funzioni Evento"
+
+    Le funzioni che possono essere collegate con un Bind ad un evento si dicono `funzioni evento`.
+    Questo tipo di funzioni ha sempre (e solo) due parametri:
+    
+    - `self`, poiché sono sempre funzioni membro di una classe
+    - `evt`, che rappresenta l'evento che le ha scatenate.
+
 
 Provate a sostituire la funzione `self.Close()` con altre funzioni tipo:
 
@@ -61,33 +68,66 @@ Ormai avete capito tutto... io nel dubbio scrivo un pò di deduzioni a partire d
 3. Probabilmente (ed è proprio così) se una widget si chiamasse `wx.Pippo`, il suo evento predefinito si chiamerebbe `wx.EVT_PIPPO`
 4. Le funzioni che rispondono agli eventi hanno tutte la struttura `nomeFunzione (self, event)`.
 
-Ok... adesso invece parto con i dubbi... stavolta con un elenco in ordine sparso?
 
-- Come si fa a sapere quali (altri) eventi può gestire una widget? (Sugg: leggi la documentazione ufficiale della classe **<a href="https://docs.wxpython.org/wx.Button.html" target="_blank">wx.Button</a>**)
-- E... se voglio mettere 2 pulsanti? (fra qualche riga ci arriviamo)
-- E se voglio mettere un pulsante... piccolo? (in realtà lo sai già...)
-- E... se voglio far fare qualcos'altro al mio programma quando clicco il pulsante? (sugg: studia!)
+!!! tip "Come si fa a sapere quali (altri) eventi può gestire un pulsante (wx.Button)?"
 
-Basta così con le domande per adesso... prima di passare a presentare tutte le widgets vediamo altre due cose molto importanti sugli eventi
+    Leggi la documentazione ufficiale della classe **<a href="https://docs.wxpython.org/wx.Button.html" target="_blank">wx.Button</a>**)
 
 
 <!-- ############################################################################################################## -->
 ## Identificare le widgets
 
 
-Immaginate una applicazione con tanti pulsanti (una tastiera virtuale, una calcolatrice, etc...). Capita spesso in questi casi di collegare
-più oggetti alla stessa funzione. Ma come si può distinguere quale pulsante (o più in generale quale widget) ha scatenato l'evento?
-
-***Come si fa ad identificare una widget?***
+La libreria `wxPython` mette a disposizione una serie di funzionalità utili per identificare una widget. Vediamo le principali soluzioni offerte:
 
 
-> Ogni oggetto grafico wxPython dispone di un **ID** identificativo!
+***Indentificare la widget che ha scatenato un evento***
 
 
-Vediamo un semplice esempio con due pulsanti che cliccati richiamano entrambi la stessa funzione!
+La funzione evento prende come parametro l'evento che l'ha scatenata. Questo può ritornare l'evento che l'ha generato tramite la funzione `evt.GetEventObject()`.
+Vediamo:
 
 
-``` python
+``` py title="Identificare la widget che ha generato un evento" hl_lines="11 12"
+import wx
+
+class Esempio(wx.Frame):
+
+    def __init__(self):
+        super().__init__(None, title="Cliccami")     
+        pulsante = wx.Button(self, label="Fai Qualcosa")
+        pulsante.Bind(wx.EVT_BUTTON, self.funzioneEvento)
+
+    def funzioneEvento(self, evt):
+        # btn è il pulsante che ha generato l'evento
+        btn = evt.GetEventObject()
+        btn.SetLabel("Fatto!")
+        return
+
+# ----------------------------------------
+if __name__ == "__main__":
+    app = wx.App()
+    window = Esempio()
+    window.Show()
+    app.MainLoop()
+```
+
+
+***Identificare una widget tramite un Id***
+
+
+> La libreria wxPython identifica in maniera automatica tutte le widget con un ID sempre diverso e sempre **negativo**
+
+
+È comunque possibile impostare un identificativo a scelta, con una importante raccomandazione: **scegliete ID positivi e crescenti**.
+Partite da 1 e andate avanti: in questo modo sarete sicuri di non fare confusione con gli ID assegnati automaticamente alle widget 
+da wxPython e di non sbagliarvi da soli mettendo due volte lo stesso ID!
+
+Nel prossimo esempio abbiamo due pulsanti (con ID impostato) collegati alla stessa funzione. L'id permette di distinguere quale dei due ha
+scatenato l'evento.
+
+
+``` py title="Esempio con funzione GetId" hl_lines="15 16"
 import wx
 
 class Esempio(wx.Frame):
@@ -115,24 +155,30 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-La libreria wxPython identifica in maniera automatica tutte le widget con un ID sempre diverso e sempre **negativo**: 
-la prima widget creata sarà quella con ID -1, la seconda quella con ID -2 e così via...
 
-**Se volete impostare voi l'ID di una widget usate solo numeri positivi crescenti**: in questo modo sarete sicuri di non fare
-confusione con gli ID assegnati automaticamente alle widget da wxPython e di non sbagliarvi da soli mettendo due volte lo stesso ID!
+***Recuperare una widget conoscendo il suo Id***
 
+
+Vi risparmio qualunque esempio, ma immaginate di avere assegnato gli Id da 1 a 10 ad altrettante widgets. Per riottenere
+una qualsiasi delle widgets in oggetto, basta eseguire la funzione `FindWindow(id)`
+
+
+``` python hl_lines="2"
+# per ottenere la widget con ID = 5
+widget = self.FindWindow(5)
+``` 
 
 <!-- ############################################################################################################## -->
-## Bloccare gli eventi
+## Gestire l'evento Close()
 
 
-Può essere utile sapere che in alcuni casi possiamo bloccare gli eventi
-e le naturali risposte delle applicazioni ad essi: il caso tipico in
-programmazione per questa problematica è quando l'utente prova a
+La funzione `Close()`, che abbiamo già precedentemente incontrato, provoca la chiusura
+di una finestra. In realtà però, essa genera un evento di chiusura per la finestra (CloseEvent),
+che poi questa potrà gestire per *programmare* la sua chiusura.
+
+Il caso tipico in programmazione per questa problematica è quando l'utente prova a
 chiudere un editor con il file non ancora salvato! In quel caso
 l'applicazione blocca la chiusura suggerendo di salvare prima il file!
-Nella libreria wxPython è possible bloccare un evento con la funzione
-**Veto()**, da applicare all'evento da bloccare.
 
 Nell'esempio che segue la finestra che appare è chiudibile dall'utente
 (con scorciatoia, cliccando sulla x in alto, etc..) solo se
@@ -150,9 +196,7 @@ class Esempio(wx.Frame):
     def chiudi(self, evt):
         if (self.IsMaximized()):
             self.Destroy()
-        else:
-            # blocca l'evento
-            evt.Veto()
+        return
 
 # ----------------------------------------
 if __name__ == "__main__":
