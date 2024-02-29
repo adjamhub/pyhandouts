@@ -78,20 +78,20 @@ Implementate una griglia di 9 pulsanti con etichetta nulla. Cliccando su
 un pulsante con etichetta nulla appare la **X** o la **O**. Se scegliete
 un font importante sarà molto carino!
 
+Per implementare la vittoria, disabilitate tutti i pulsanti e scrivete sul titolo "HAI VINTO" oppure "HAI PERSO".
+
 Potete implementarne due versioni (in due programmi diversi):
 
--   *User vs CPU*: in questa versione l'utente inizia sempre a giocare;
+-   *User vs User* (più facile): in questa versione si gioca in due. Il primo che
+    clicca mette una "X", quello dopo una "O". Ogni volta il
+    programma valuta chi vince!
+
+-   *User vs CPU* (più complicatino...): in questa versione l'utente inizia sempre a giocare;
     quando clicca su un pulsante appare la "X" e subito dopo il
     programma valuta se l'utente ha vinto e se no fa giocare la CPU,
     aggiungendo una "O" in una casella libera. Più implementate la CPU
     in maniera intelligente, più sarà divertente giocare :)
--   *User vs User*: in questa versione si gioca in due. Il primo che
-    clicca mette una "X", quello dopo una "O". Ogni volta il
-    programma valuta chi vince!
 
-Per implementare la vittoria potete disabilitare tutti i pulsanti e fare
-apparire una nuova finestra con l'etichetta HAI VINTO. O più
-semplicemente scriverlo sul titolo.
 
 
 -------------------------------------------------------------------------------------------
