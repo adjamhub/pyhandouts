@@ -10,7 +10,7 @@ pip install requests
 
 !!! tip "Il protocollo HTTP"
 
-    Se siete qui a studiare il modulo `requests`, si presuppont abbiate
+    Se siete qui a studiare il modulo `requests`, si presuppone abbiate
     già una discreta conoscenza del protocollo HTTP.
     
     In caso contrario... molte cose rimarranno oscure e/o meccaniche.
