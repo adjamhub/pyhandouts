@@ -1,0 +1,1390 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrea Diamantini">
+      
+      
+      
+        <link rel="prev" href="../01_pip/">
+      
+      
+        <link rel="next" href="../11_turtle/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Ambienti Virtuali - Python Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gli-ambienti-virtuali" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Python Course" class="md-header__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ambienti Virtuali
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../basics/000_first/" class="md-tabs__link">
+        Basics
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../OOP/000_intro/" class="md-tabs__link">
+        OOP
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../wx/000_intro/" class="md-tabs__link">
+        wxPython
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../00_intro/" class="md-tabs__link md-tabs__link--active">
+        Insights
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Course" class="md-nav__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Python Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/000_first/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/001_install/" class="md-nav__link">
+        Installazione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/100_basics/" class="md-nav__link">
+        Prime cose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/101_var/" class="md-nav__link">
+        Variabili e Operatori
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/102_alt/" class="md-nav__link">
+        Alternanza
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/103_iter/" class="md-nav__link">
+        Ripetizione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/104_seq/" class="md-nav__link">
+        Sequenze
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/105_funz/" class="md-nav__link">
+        Funzioni
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/106_mod/" class="md-nav__link">
+        Moduli
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/107_files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/108_csv/" class="md-nav__link">
+        CSV
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          OOP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OOP" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          OOP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/000_intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/001_classes_objects/" class="md-nav__link">
+        Classi e Oggetti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/002_inheritance/" class="md-nav__link">
+        Ereditarietà
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/003_advanced/" class="md-nav__link">
+        Caratteristiche Avanzate
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          wxPython
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="wxPython" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          wxPython
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/000_intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/101_first_things/" class="md-nav__link">
+        Primi concetti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/102_events/" class="md-nav__link">
+        Eventi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/110_widgets/" class="md-nav__link">
+        Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/120_layout/" class="md-nav__link">
+        Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/130_full_ex/" class="md-nav__link">
+        Esercizi Completi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/140_dialogs/" class="md-nav__link">
+        Dialogs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/150_images/" class="md-nav__link">
+        Immagini
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/160_timer/" class="md-nav__link">
+        Timer(s)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/170_full_gui/" class="md-nav__link">
+        Full GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/171_full_gui_ex/" class="md-nav__link">
+        Esercizi (GUI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/180_advanced/" class="md-nav__link">
+        Caratteristiche Avanzate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/299_tools/" class="md-nav__link">
+        wx Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
+          Insights
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Insights" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Insights
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_pip/" class="md-nav__link">
+        Pip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ambienti Virtuali
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ambienti Virtuali
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestire-un-ambiente-virtuale" class="md-nav__link">
+    Gestire un ambiente virtuale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lavorare-con-un-ambiente-virtuale" class="md-nav__link">
+    Lavorare con un ambiente virtuale
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_turtle/" class="md-nav__link">
+        Turtle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_pygame1/" class="md-nav__link">
+        PyGame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21_opencv/" class="md-nav__link">
+        OpenCV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../31_requests/" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../32_bs4/" class="md-nav__link">
+        Soup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../35_flask/" class="md-nav__link">
+        Flask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../41_mysql/" class="md-nav__link">
+        MySql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../42_sqlite/" class="md-nav__link">
+        sqlite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../43_mongodb/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../51_arduino/" class="md-nav__link">
+        Arduino
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../91_reals/" class="md-nav__link">
+        Numeri reali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../92_ibs/" class="md-nav__link">
+        Interi, bytes, stringhe
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="gli-ambienti-virtuali">Gli ambienti virtuali</h1>
+<p>Un ambiente virtuale è uno spazio indipendente dal resto del sistema in
+cui è possibile lavorare e fare test con python e pip con la certezza di
+non andare a sporcare o rovinare il proprio ambiente fisico, ovvero
+l'installazione originale di Python nel nostro sistema!</p>
+<p>La loro grande popolarità è dovuta sostanzialmente ai seguenti fatti:</p>
+<ul>
+<li>è possibile creare molti ambienti virtuali contemporaneamente e
+    quindi lavorare su progetti anche potenzialmente in conflitto tra
+    loro senza farli "scontrare" minimamente;</li>
+<li>è possibile installare moduli nuovi con pip senza i privileggi di
+    amministratore, cosa che rende possibile sviluppare su qualunque
+    dispositivo connesso alla rete;</li>
+<li>è possibile installare su ambienti virtuali diverse versioni diverse
+    dello stesso modulo o dello stesso software (basato su Python) per
+    motivi di test e/o di sviluppo;</li>
+<li>è possibile entrare e uscire velocemente da un ambiente virtuale
+    "entrando" nell'ambiente di sviluppo e "ritornando" al sistema
+    immacolato dell'utente</li>
+</ul>
+<p>Fisicamente, un ambiente virtuale non è altro che una cartella
+selezionata da noi in cui il modulo venv (Virtual ENVironment,
+ricordate?) creerà una copia dei programmi "<strong><em>python</em></strong>" e "<strong><em>pip</em></strong>"
+e una copia di tutte le librerie loro necessarie, così come della
+cartella "<strong><em>site-packages</em></strong>" dove verranno installati i moduli
+eventualmente aggiunti con pip.</p>
+<p>L'attivazione dell'ambiente virtuale fa in modo che l'utente lì dentro
+possa usare solo "<strong><em>le copie</em></strong>" di python e pip, così come solo i
+moduli locali installati nella cartella "<strong><em>virtuale</em></strong>", così come i
+moduli della libreria standard python: infatti i moduli della libreria
+standard sono installati direttamente nelle cartelle "<strong><em>base</em></strong>" di
+python e sono sempre disponibili per la versione a cui si riferiscono.</p>
+<p>Facciamo una prova per capire il (semplice) funzionamento di un ambiente
+virtuale</p>
+<!-- ################################################################################# -->
+<h2 id="gestire-un-ambiente-virtuale">Gestire un ambiente virtuale</h2>
+<p>Un ambiente virtuale si crea con il modulo venv che fa parte della
+libreria standard di Python 3, dalla versione 3.4 in avanti. La scelta
+di includere questo modulo nella libreria standard sottolinea due fatti:</p>
+<ol>
+<li>
+<p>Creare ambienti virtuali è un'operazione "standard" per chi lavora
+    in Python, incoraggiata da tutta la comunità tanto da includere il
+    modulo che li gestisce nella libreria standard</p>
+</li>
+<li>
+<p>il modulo venv è la modalità prescelta dai progettisti python per la
+    creazione di ambienti virtuali. In rete si trovano varie altre
+    modalità per crearli e utilizzarli, ma il modulo venv è la modalità
+    da considerare maggiormente.</p>
+</li>
+</ol>
+<p>Creiamo nel nostro sistema una cartella da destinare al nostro primo
+ambiente virtuale; chiamiamola per esempio "TestAmbientiVirtuali" e
+procediamo alla creazione dello stesso</p>
+<hr />
+<p><strong>Per creare l'ambiente virtuale</strong></p>
+<div class="highlight"><pre><span></span><code>$ python -m venv Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
+</code></pre></div>
+<p>Dopo un paio di secondi, l'ambiente virtuale è pronto!</p>
+<p>Con l'operazione precedente abbiamo creato un ambiente virtuale che si
+chiama "TestAmbientiVirtuali" (come la cartella). All'interno della
+stessa il modulo venv avrà creato tutte le copie dell'eseguibile python,
+di pip e della cartella (vuota) "site-packages" dove verranno installati
+i moduli scaricati con il pip virtuale</p>
+<p>Per attivare e disattivare l'ambiente virtuale, all'interno della
+cartella "TestAmbientiVirtuali" venv ha creato gli script "activate" e
+"deactivate". Su Windows si trovano dentro la cartella "Scripts", su Mac
+e Linux si trovano dentro la cartella "bin".</p>
+<hr />
+<p><strong>Per attivare l'ambiente virtuale</strong></p>
+<p>Su Windows</p>
+<div class="highlight"><pre><span></span><code>&gt; cd Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
+&gt; Scripts/activate.bat
+</code></pre></div>
+<p>Su Mac o Linux</p>
+<div class="highlight"><pre><span></span><code>$ cd Percorso/Fino/Alla/Cartella/TestAmbientiVirtuali
+$ source bin/activate
+</code></pre></div>
+<p>Ovviamente, in maniera analoga alle istruzioni per l'attivazione, lo
+script "deactivate" disattiva l'ambiente virtuale creato.</p>
+<p>Se prima e dopo controllate i moduli installati con pip (oppure
+utilizzate un altro prompt dei comandi) potete apprezzare la differenza
+tra l'ambiente fisico e quello virtuale.</p>
+<p>Ecco una schermata del mio computer.</p>
+<p><img alt="system vs virtual pip" src="../images/pipVSvirtualpip.jpg" /></p>
+<p>Tutto qui!</p>
+<p>Basta provare un paio di volte.</p>
+<!-- ################################################################################# -->
+<h2 id="lavorare-con-un-ambiente-virtuale">Lavorare con un ambiente virtuale</h2>
+<p>Ok, siamo in grado di creare e attivare un ambiente virtuale. E adesso?
+Cosa ci facciamo? Gli ambienti virtuali sono un grandissimo aiuto quando
+si vuole sviluppare un'applicazione che si basa su moduli specifici non
+solitamente installati sul sistema. Proviamo con un esempio.</p>
+<hr />
+<p><strong>Lo sviluppatore 1 crea un ambiente virtuale</strong></p>
+<p>Lo sviluppatore 1 vuole implementare nell'ambiente virtuale
+"TestAmbientiVirtuali" appena creato un progetto per calcolare la
+distanza fra le stelle conosciute e capire quali universi potrebbero
+essere visitati dall'uomo, etc...</p>
+<p>Il progetto sarà basato su skyfield e astropy, che sono due moduli
+python utilizzati per i calcoli astronomici. All'interno del suo
+ambiente virtuale installa i moduli a lui necessari:</p>
+<div class="highlight"><pre><span></span><code>(TestAmbientiVirtuali) $ pip install skyfield astropy
+</code></pre></div>
+<p>A questo punto, si crea una cartella che chiamerà "StarsTrips" e
+utilizzerà i due moduli citati per scrivere il codice necessario per il
+suo obiettivo.</p>
+<div class="highlight"><pre><span></span><code>(TestAmbientiVirtuali) $ cd StarsTrips
+
+... ore di coding, parolacce, merende varie ...
+</code></pre></div>
+<p>Terminato il suo lavoro, nella cartella StarsTrips ci sarà la sua
+fantastica applicazione: per permettere a chiunque di eseguire
+direttamente il suo codice gli manca solo di indicare quali moduli ha
+utilizzato per lo sviluppo così che chiunque possa installarli e
+aiutarlo nella sua impresa. Per fare ciò basta fare, dentro la cartella
+StarsTrips:</p>
+<p>Elenca i moduli installati nell'ambiente virtuale scrivendoli nel file
+"requirements.txt"</p>
+<div class="highlight"><pre><span></span><code>(TestAmbientiVirtuali) $ pip freeze &gt; requirements.txt
+</code></pre></div>
+<p>Questo comando crea un file chiamato "requirements.txt" che elenca tutti
+i moduli installati nel nostro ambiente virtuale. Fatto questo, lo
+sviluppatore 1 può condividere con chiunque il proprio lavoro, presente
+nella cartella StarsTrips e cancellare eventualmente l'ambiente
+virtuale, semplicemente eliminando la cartella "TestAmbienteVirtuale".</p>
+<hr />
+<p><strong>Lo sviluppatore 2 vuole provare il programma dello sviluppatore 1</strong></p>
+<p>Lo sviluppatore 2, che vuole testare il lavoro del suo amico/collega,
+prende la cartella StarsTrips, crea un ambiente virtuale, lo attiva e lì
+esegue il comando:</p>
+<div class="highlight"><pre><span></span><code>(NuovoAmbienteVirtuale) $ pip install --r requirements.txt
+</code></pre></div>
+<p>Questo comando installa tutti i moduli python elencati nel file
+<code>requirements.txt</code>. A questo punto lo sviluppatore 2 è pronto per testare
+il lavoro importato.</p>
+<p><br>
+<br>
+<br></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Torna su
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../01_pip/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Pip" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Precedente
+                </span>
+                Pip
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../11_turtle/" class="md-footer__link md-footer__link--next" aria-label="Prossimo: Turtle" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Prossimo
+                </span>
+                Turtle
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Andrea Diamantini (c) 2022-2023<br> <a href="#__consent">Change Cookie Settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Consenso all'uso dei Cookie(s)</h4>
+<p>Questo sito memorizza alcuni cookies solo per riconoscere un visitatore  che non è alla sua prima visita e alcune preferenze, come il tema di visualizzazione della pagina selezionato.<br> Se non acconsenti, questa finestra riapparirà ogni volta che riapri il sito.<br> Se vuoi cambiare le tue scelte, in fondo alla pagina trovi un link per modificarle ;)
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accettazione</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rifiuta</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>

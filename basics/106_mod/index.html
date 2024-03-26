@@ -1,0 +1,2221 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrea Diamantini">
+      
+      
+      
+        <link rel="prev" href="../105_funz/">
+      
+      
+        <link rel="next" href="../107_files/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Moduli - Python Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#moduli-python" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Python Course" class="md-header__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Moduli
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../000_first/" class="md-tabs__link md-tabs__link--active">
+        Basics
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../OOP/000_intro/" class="md-tabs__link">
+        OOP
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../wx/000_intro/" class="md-tabs__link">
+        wxPython
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../insights/00_intro/" class="md-tabs__link">
+        Insights
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Course" class="md-nav__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Python Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../000_first/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001_install/" class="md-nav__link">
+        Installazione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100_basics/" class="md-nav__link">
+        Prime cose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101_var/" class="md-nav__link">
+        Variabili e Operatori
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102_alt/" class="md-nav__link">
+        Alternanza
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103_iter/" class="md-nav__link">
+        Ripetizione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_seq/" class="md-nav__link">
+        Sequenze
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105_funz/" class="md-nav__link">
+        Funzioni
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Moduli
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Moduli
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lavorare-con-i-moduli" class="md-nav__link">
+    Lavorare con i moduli
+  </a>
+  
+    <nav class="md-nav" aria-label="Lavorare con i moduli">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#istruzione-import" class="md-nav__link">
+    Istruzione import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nomi-dei-moduli" class="md-nav__link">
+    Nomi dei moduli
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esercizi-sui-moduli" class="md-nav__link">
+    Esercizi sui moduli
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moduli-standard" class="md-nav__link">
+    Moduli Standard
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduli Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modulo-random" class="md-nav__link">
+    Modulo random
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-math" class="md-nav__link">
+    Modulo math
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-time" class="md-nav__link">
+    Modulo time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-datetime" class="md-nav__link">
+    Modulo datetime
+  </a>
+  
+    <nav class="md-nav" aria-label="Modulo datetime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differenze-di-tempo-timedelta" class="md-nav__link">
+    Differenze di tempo (TimeDelta)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moduli-pypi" class="md-nav__link">
+    Moduli PyPi
+  </a>
+  
+    <nav class="md-nav" aria-label="Moduli PyPi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modulo-pillow" class="md-nav__link">
+    Modulo pillow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-pyscreenshot" class="md-nav__link">
+    Modulo pyscreenshot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-matplotlib" class="md-nav__link">
+    Modulo matplotlib
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107_files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108_csv/" class="md-nav__link">
+        CSV
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          OOP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OOP" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          OOP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/000_intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/001_classes_objects/" class="md-nav__link">
+        Classi e Oggetti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/002_inheritance/" class="md-nav__link">
+        Ereditarietà
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/003_advanced/" class="md-nav__link">
+        Caratteristiche Avanzate
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          wxPython
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="wxPython" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          wxPython
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/000_intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/101_first_things/" class="md-nav__link">
+        Primi concetti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/102_events/" class="md-nav__link">
+        Eventi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/110_widgets/" class="md-nav__link">
+        Widgets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/120_layout/" class="md-nav__link">
+        Layout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/130_full_ex/" class="md-nav__link">
+        Esercizi Completi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/140_dialogs/" class="md-nav__link">
+        Dialogs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/150_images/" class="md-nav__link">
+        Immagini
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/160_timer/" class="md-nav__link">
+        Timer(s)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/170_full_gui/" class="md-nav__link">
+        Full GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/171_full_gui_ex/" class="md-nav__link">
+        Esercizi (GUI)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/180_advanced/" class="md-nav__link">
+        Caratteristiche Avanzate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/299_tools/" class="md-nav__link">
+        wx Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Insights
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Insights" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Insights
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/00_intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/01_pip/" class="md-nav__link">
+        Pip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/02_venv/" class="md-nav__link">
+        Ambienti Virtuali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/11_turtle/" class="md-nav__link">
+        Turtle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/12_pygame1/" class="md-nav__link">
+        PyGame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/21_opencv/" class="md-nav__link">
+        OpenCV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/31_requests/" class="md-nav__link">
+        Requests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/32_bs4/" class="md-nav__link">
+        Soup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/35_flask/" class="md-nav__link">
+        Flask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/41_mysql/" class="md-nav__link">
+        MySql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/42_sqlite/" class="md-nav__link">
+        sqlite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/43_mongodb/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/51_arduino/" class="md-nav__link">
+        Arduino
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/91_reals/" class="md-nav__link">
+        Numeri reali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/92_ibs/" class="md-nav__link">
+        Interi, bytes, stringhe
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="moduli-python">Moduli Python</h1>
+<p>Il capitolo sui moduli Python è uno dei più impegnativi del corso. Non tanto per la difficoltà degli argomenti in sè, ma perché i moduli sono un concetto <strong><em>centrale</em></strong>
+della programmazione in Python: è impossibile pensare al linguaggio Python senza abbinarlo all'utilizzo dei suoi moduli!</p>
+<p>Il capitolo è organizzato per gradi, per fare uno step alla volta:</p>
+<ol>
+<li>
+<p>Nel primo sottocapitolo, <a href="#lavorare-con-i-moduli">Lavorare con i moduli</a>, viene illustrata la creazione di un modulo contenente alcune funzioni da parte del programmatore e il suo utilizzo in vari ambiti.</p>
+</li>
+<li>
+<p>Riusciti in questo primo step, nel sottocapitolo <a href="#moduli-standard">Moduli Standard</a> si passa all'utilizzo dei moduli Python predefiniti, quelli in dotazione con la Python Standard Library: 
+    in questo caso il focus si sposta sull'utilizzo di moduli prodotti da altri, sulla consultazione della documentazione, sull'utilizzo dei moduli Python di base</p>
+</li>
+<li>
+<p>Il terzo livello, nel sottocapitolo <a href="#moduli-pypi">Moduli PyPi</a>, si occupa del reperimento, l'installazione e l'utilizzo di moduli terzi, ovvero attualmente non disponibili 
+    nel nostro sistema, che implementano una funzionalità per noi interessante e/o utile per il software che vogliamo sviluppare.</p>
+</li>
+</ol>
+<p>Al lavoro!</p>
+<!-- ############################################################################################ -->
+
+<h2 id="lavorare-con-i-moduli">Lavorare con i moduli</h2>
+<p>Come accennato, in questo capitolo ci occuperemo di implementare un modulo scrivendo tutto il codice, investigando i concetti di base e procedendo ai test semplici delle
+funzionalità implementate.</p>
+<!-- ############################################################################################ -->
+
+<h3 id="istruzione-import">Istruzione import</h3>
+<p>In Python la clausola import si utilizza per rendere disponibile il codice in un modulo in un altro. 
+Questo concetto rende semplice l'organizzazione del codice in senso logico, sia dal punto di vista dei file che dal punto di vista dell'organizzazione globale del codice.</p>
+<p>Dal punto di vista dei file, ogni modulo è ben organizzato perché contiene codice coerente: un ipotetico modulo <code>numeri</code> conterrà funzioni che lavorano coi numeri, un modulo <code>statistiche</code> contiene funzioni per il calcolo statistico, etc..</p>
+<p>Dal punto di vista dell'organizzazione globale del codice, l'importazione di un modulo genererà un <code>namespace</code> che manterrà semplice la gestione del codice.</p>
+<p>Capisco che il secondo punto di vista necessita di un ulteriore chiarimento: dal punto di vista intuitivo, noi abbiamo già usato il modulo <code>random</code> per le nostre liste numeriche. Allora
+scriviamo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># per accedere alle funzioni del modulo random, dobbiamo scrivere modulo.funzione</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">intero</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+<p>Questa organizzazione imposta dall'import (ovvero <code>modulo.funzione</code>) permette di capire chiaramente che la funzione randint deriva dal modulo random e non è stata definita all'interno
+di questo modulo. Quando le importazioni saranno di più e i moduli scritti da noi più lunghi, questa cosa inizierà ad essere molto utile.</p>
+<p>Inoltre il <code>namespace</code> indotto preserva le funzioni importate da un altro importante problema: se molte persone diverse scrivono codice potrebbe tranquillamente capitare che due funzioni
+scritte da persone diverse, su moduli diversi, abbiano lo stesso nome. Il <code>namespace</code> impedisce confusione in questo caso.</p>
+<!-- ############################################################################################ -->
+
+<h3 id="nomi-dei-moduli">Nomi dei moduli</h3>
+<p>Tutte le persone hanno un nome che le identifica (ad esempio il mio nome è Andrea), ma quando le persone parlano di se stesse usano la parola <code>io</code> (<em>io</em> mi chiamo Andrea).
+E fin qui mi sembra tutto semplice.</p>
+<p>Abbiamo detto finora (e nel dubbio, lo ripeto con chiarezza) che anche i moduli, ovvero i file Python con estensione <code>.py</code>, hanno un nome, che dipende dal nome del file stesso:
+ad esempio, il file <code>pippo.py</code> definisce il modulo di nome <code>pippo</code>. Ogni volta che definite un modulo, Python inizializza alcune variabili speciali, fra cui la variabile <code>__name__</code>
+che contiene il nome del modulo (fra un attimo faccio un esempio).</p>
+<p>Così come le persone, parlando di se stesse, dicono <em>io</em>, i moduli, al loro interno non utilizzano il loro nome, ma utilizzano la parola <code>__main__</code>.</p>
+<p>Cerchiamo di chiarire subito questo primo concetto, il resto verrà naturalmente di conseguenza:</p>
+<div class="highlight"><span class="filename">Esempio 1: un unico file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># file pippo.py</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># la variabile __name__ si riferisce al nome del modulo pippo</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># essendo al suo interno, conterrà la parola &quot;__main__&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Esempio 2: un altro file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># file ciccio.py</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># importo il modulo pippo, dell&#39;esempio 1</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># importando il modulo, andrò ad eseguirlo. la print sopra (eseguita all&#39;esterno del modulo pippo)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># scriverà il suo nome: &quot;pippo&quot;.</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kn">import</span> <span class="nn">pippo</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># la variabile __name__ qui sotto si riferisce al nome del modulo ciccio</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># essendo al suo interno, conterrà la parola &quot;__main__&quot;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">print</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># la variabile __name__ qui sotto si riferisce al nome del modulo pippo</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># NON essendo dentro al modulo pippo, conterrà il suo nome proprio, ovvero &quot;pippo&quot;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">pippo</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+<p>Tutto qui <img alt="😄" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png" title=":smile:" /></p>
+<!-- ############################################################################################ -->
+
+<h3 id="testing">Testing</h3>
+<p>Dalle considerazioni fatte nei precedenti capitoli, vorrei farvi capire una tecnica molto utilizzata in ambito Python per l'esecuzione dei moduli e i test delle funzioni
+in essi contenute.</p>
+<p>La strategia è questa:</p>
+<ol>
+<li>scrivo il modulo con la definizione delle funzioni che mi interessano</li>
+<li>faccio delle prove per assicurarmi che tutto... funzioni! (faccio i <strong>test</strong>!!!) in fondo al file, dentro un <code>if __name__ == "__main__"</code></li>
+<li>Se eseguo direttamente il modulo con le funzioni, l'if mi permette di svolgere i test (e verificare che tutto funzioni correttamente)</li>
+<li>Se importo il modulo in un altro contesto, il suo nome NON sarà "<strong>main</strong>" e i test non saranno svolti, permettendo di importare solo le funzioni!</li>
+</ol>
+<p>Da questa spiegazione, deriva questa modalità di scrittura dei moduli con funzioni:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># file prova.py</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">def</span> <span class="nf">molt</span><span class="p">(</span><span class="n">fatt1</span><span class="p">:</span><span class="nb">float</span><span class="p">,</span><span class="n">fatt2</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="sd">    prende i valori nei parametri fatt1,fatt2 e ritorna il prodotto fatt1 * fatt2 </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="sd">    Ad esempio: molt(4,5) ritorna 20</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="sd">    Parametri</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="sd">    ---------</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="sd">    fatt1</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="sd">        un numero reale, il primo fattore della moltiplicazione</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="sd">    fatt2</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="sd">        un numero reale, il secondo fattore della moltiplicazione</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="k">return</span> <span class="n">fatt1</span> <span class="o">*</span> <span class="n">fatt2</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="c1"># questa parte NON sarà eseguita all&#39;esterno del modulo &quot;prova&quot;</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x:&quot;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y:&quot;</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;molt(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">):</span><span class="si">{</span><span class="n">molt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">)</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    <span class="c1"># ... e così via...</span>
+</code></pre></div>
+<p>Da ora in poi scriveremo così i nostri moduli e in questo modo faremo tutti gli esercizi che seguono. Questo ci permetterà di definire un <em>modus operandi</em> logico e professionale, che ci
+tornerà enormemente utile quando le cose diventeranno inevitabilmente più complicate.</p>
+<p>Adesso, sotto con gli esercizi!</p>
+<!-- ############################################################################################ -->
+
+<h3 id="esercizi-sui-moduli">Esercizi sui moduli</h3>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Ognuno dei seguenti esercizi deve essere implementato in un unico file, nominato con il nome
+indicato nell'intestazione dell'esercizio, completo di documentazione e di (almeno) <strong>3 casi di test
+per ognuna delle funzioni implementate</strong>!!!</p>
+</div>
+<p><strong>Esercizio 601: modulo "SequenzeNumeriche"</strong></p>
+<p><code>minoriDiUnElemento</code><br>
+Creare una funzione che, data una sequenza numerica (tupla o lista) e un
+numero qualsiasi, conta quanti numeri nella sequenza sono minori del
+numero.</p>
+<p><code>sommaElementi</code><br>
+Creare una funzione che, data una sequenza numerica (tupla o lista),
+restituisce la somma dei numeri della sequenza.</p>
+<p><code>mediaElementi</code><br>
+Creare una funzione che, data una sequenza numerica (tupla o lista),
+restituisce la media aritmetica dei numeri della sequenza.</p>
+<hr />
+<p><strong>Esercizio 602: modulo "ManipolazioneStringhe"</strong></p>
+<p><code>lunghezzaStringa</code><br>
+La funzione prende una stringa come parametro e ritorna il numero di
+caratteri di cui è composta (la sua lunghezza)</p>
+<p><code>contaLettera</code><br>
+La funzione prende una stringa e una lettera come parametro e ritorna il
+numero di volte in cui la lettera è presente all'interno della stringa</p>
+<p><code>tutteMaiuscole</code><br>
+La funzione prende una stringa come parametro e ritorna la stringa
+trasformata in maiuscolo</p>
+<p><code>tutteMinuscole</code><br>
+La funzione prende una stringa come parametro e ritorna la stringa
+trasformata in minuscolo</p>
+<p><code>invertiMaiuscoleMinuscole</code><br>
+La funzione prende una stringa come parametro e ritorna la stringa con
+maiuscole e minuscole invertite.</p>
+<p><code>inizialiMaiuscole</code><br>
+La funzione prende una stringa come parametro e ritorna la stringa
+trasformata in minuscolo con le iniziali di ogni parola maiuscole</p>
+<hr />
+<p><strong>Esercizio 603: modulo "PianoCartesiano"</strong></p>
+<p><code>quadrante</code><br>
+La funzione prende due numeri x, y che rappresentano le coordinate del
+punto P nel piano cartesiano e restituisce un numero corrispondente al
+quadrante nel quale esso si trova, ovvero un numero fra 1 e 4.
+Restituisce 0 nel caso che il punto sia su uno degli assi cartesiani.</p>
+<p><code>distanzaOrigine</code><br>
+La funzione prende due numeri x, y che rappresentano le coordinate del
+punto P nel piano cartesiano e restituisce la distanza del punto P
+dall'origine degli assi, ovvero dal punto O di coordinate (0,0).</p>
+<p><code>distanzaFraDuePunti</code><br>
+La funzione prende quattro numeri xP, yP, xQ, yQ che rappresentano le
+coordinate dei punto P e Q nel piano cartesiano e restituisce la
+distanza fra loro.</p>
+<hr />
+<p><strong>Esercizio 604: modulo "CifreNumeriche"</strong></p>
+<p><code>unità</code><br>
+La funzione prende un numero come parametro e restituisce la cifra delle
+unità. Ad esempio unita(23) restituisce 3, unita(8174.56) restituisce 4.</p>
+<p><code>decine</code><br>
+La funzione prende un numero come parametro e restituisce la cifra delle
+decine. Ad esempio decine(23) restituisce 2, decine(8174.56) restituisce 7.</p>
+<p><code>centinaia</code><br>
+La funzione prende un numero come parametro e restituisce la cifra delle
+centinaia. Ad esempio centinaia(23) restituisce 0, centinaia(8174.56)
+restituisce 1.</p>
+<p><code>migliaia</code><br>
+La funzione prende un numero come parametro e restituisce la cifra delle
+migliaia. Ad esempio migliaia(23) restituisce 0, migliaia(8174.56)
+restituisce 8.</p>
+<p><code>decimi</code><br>
+La funzione prende un numero come parametro e restituisce la cifra dei
+decimi. Ad esempio decimi(23) restituisce 0, decimi(8174.56) restituisce
+5.</p>
+<p><code>centesimi</code><br>
+La funzione prende un numero come parametro e restituisce la cifra dei
+centesimi. Ad esempio centesimi(23) restituisce 0, centesimi(8174.56)
+restituisce 6.</p>
+<hr />
+<p><strong>Esercizio 605: modulo "FunzioniNumeriche"</strong></p>
+<p><code>sommaDivisori</code><br>
+La funzione prende un numero intero come parametro e restituisce la
+somma dei suoi divisori propri (ovvero dei divisori minori del numero
+stesso)</p>
+<p><code>listaDivisori</code><br>
+La funzione prende un numero intero come parametro e restituisce la
+lista dei suoi divisori propri (ovvero dei divisori minori del numero
+stesso)</p>
+<p><code>isPrime</code><br>
+La funzione prende un numero intero come parametro e restituisce True se
+il numero è primo, false altrimenti. (sugg: se un numero è primo il suo
+unico divisore proprio è 1...)</p>
+<p><code>perfetto</code><br>
+La funzione prende un numero intero come parametro e restituisce True se
+il numero è perfetto, False altrimenti (un numero si dice perfetto se e
+solo se è uguale alla somma dei suoi divisori propri)</p>
+<p><code>nthPrime</code><br>
+La funzione prende un numero intero come parametro e restituisce
+l'ennesimo numero primo. Ad esempio dato 3, la funzione restituisce 5
+perché, essendo i numeri primi 2, 3, 5, 7, 11, etc... 5 è il terzo
+numero primo.</p>
+<p><code>semiPrimo</code><br>
+La funzione prende un numero intero come parametro e restituisce True se
+il numero è semiprimo, False altrimenti. Un numero si dice semiprimo se
+è esprimibile come prodotto di due numeri primi. Ad esempio 6 = 2<em>3 è
+semiprimo, 7 = 7</em>1 non è semiprimo, infatti 1 non è primo.</p>
+<!-- ############################################################################################ -->
+<!-- VERIFICA SU FUNZIONI E MODULI AUTOPRODOTTI QUI                                               -->
+<!-- ############################################################################################ -->
+
+<h2 id="moduli-standard">Moduli Standard</h2>
+<p>Ovviamente l'utilità dei moduli non è solo organizzativa, ma... storica!!! 
+Immaginate se qualcuno avesse raccolto tutte le funzioni più "fighe" scritte in Python e le avesse catalogate in gruppi omogenei;
+ad esempio le funzioni aritmetiche, le funzioni per le stringhe, le funzioni per data e ora e così via.</p>
+<p>Beh... qualcuno lo ha fatto! Ed ha creato la <strong><em>Python Standard Library</em></strong>.</p>
+<p>Essa non è nient'altro che una collezione di moduli, inclusi per semplicità in qualunque installazione Python, 
+che quindi possiamo utilizzare semplicemente scrivendo <code>import nomeModulo</code>.</p>
+<p>Fighissimo!</p>
+<blockquote>
+<p>Elenco qui alcuni fra i moduli più comuni, indicando il nome e una descrizione sommaria:</p>
+<ul>
+<li><code>random</code>:     Generazioni di numeri "pseudo-casuali"</li>
+<li><code>math</code>:       Operazioni matematiche comuni</li>
+<li><code>time</code>:       Gestione Tempo</li>
+<li><code>datetime</code>:   Gestione Data e Ora</li>
+<li><code>pathlib</code>:    Accesso a file e directories</li>
+<li><code>csv</code>:        Lettura e Scrittura su file csv</li>
+</ul>
+</blockquote>
+<p>Se questi elencati non vi bastano e siete curiosi su quanti ce ne siano effettivamente, provate a consultare la documentazione ufficiale:
+<a href="https://docs.python.org/3/library/index.html">https://docs.python.org/3/library/index.html</a>.</p>
+<p>Ancora non vi basta? Bene! Allora sappiate che ci sono altre migliaia di moduli pieni zeppi di funzioni utili per gli incarichi più disparati,
+già catalogati e liberi di essere utilizzati da chiunque! La differenza con i precedenti è che questi non fanno parte della Python Standard
+Library, ma sono elencati semplicemente nel <strong><em>Python Package Index</em></strong> (<a href="https://pypi.org/">https://pypi.org/</a>). </p>
+<p>Ma questa è la storia del prossimo capitolo (Moduli PyPi). Per adesso, guardiamo qualcuno dei moduli standard!</p>
+<div class="admonition tip">
+<p class="admonition-title">Suggerimento</p>
+<p>La documentazione ufficiale (in inglese) di ogni modulo è inserita nel modulo
+stesso: per ottenerla, dato il modulo "NomeModulo", basta scrivere nell'interprete:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; import NomeModulo
+&gt;&gt;&gt; dir(NomeModulo)    
+&gt;&gt;&gt; help(NomeModulo.FunzioneInteressante)
+</code></pre></div>
+<p>Prova con uno dei moduli elencati sopra!!!</p>
+</div>
+<!-- ############################################################################################ -->
+<h3 id="modulo-random">Modulo random</h3>
+<p>Serve per operazioni che richiedono una certa "casualità", anche se il termine corretto sarebbe "<em>pseudocasualità</em>".
+Vediamo una carrellata delle funzioni pià interessanti del modulo. Per tutte le altre... ormai dovreste aver capito!!!</p>
+<p><br></p>
+<p><strong>Funzione randint</strong><br>
+Dato un intervallo (con entrambi gli estremi inclusi) seleziona un numero pseudocasuale al suo interno
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># estrae un numero pseudocasuale fra 1 e 90</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+</code></pre></div></p>
+<p><br></p>
+<p><strong>Funzione choice</strong><br>
+Applicata ad una sequenza generica ritorna un elemento casuale della stessa (utile per le estrazioni)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">numero</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># scegle un elemento della lista (a caso)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>                  <span class="c1"># scrive.... (boh, ad esempio)... 4</span>
+</code></pre></div></p>
+<p><br></p>
+<p><strong>Funzione shuffle</strong><br>
+funziona solo con le liste e serve per mescolare la lista passata come parametro. Ovviamente non ritorna valori.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>  <span class="c1"># mischia la lista</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>           <span class="c1"># ad esempio: [4, 3, 1, 5, 2]</span>
+</code></pre></div></p>
+<p><br></p>
+<p>Non è affatto difficile! Provate a fare i seguenti esercizi aiutandovi <em>anche</em> con la documentazione integrata.</p>
+<p><br>
+<br></p>
+<p><strong>Esercizio 621 (randint)</strong></p>
+<p>Riempire una lista con 5 numeri casuali fra 1 e 90 diversi fra loro.
+Pronta la cartella della tombola!!!</p>
+<hr />
+<p><strong>Esercizio 622 (randint)</strong></p>
+<p>Generare 5 numeri casuali fra 0 e 1 con 2 cifre esatte dopo la virgola
+(sugg: genera interi fra 0 e 100, dividi per...)</p>
+<hr />
+<p><strong>Esercizio 623 (choice)</strong></p>
+<p>Dichiarare una tupla contenenti l'elenco dei cognomi della classe ed
+estrarne uno con choice. Chi esce sarà interrogato!!!</p>
+<hr />
+<p><strong>Esercizio 624 (choice)</strong></p>
+<p>Creare una lista contenente i numeri da 1 a 10 ed estrarre un numero con
+choice. Provvedere successivamente ad eliminare il numero estratto dalla
+lista e visualizzare la stessa.</p>
+<hr />
+<p><strong>Esercizio 625 (shuffle)</strong></p>
+<p>Dichiarare una lista contenente l'elenco dei cognomi della classe (in
+ordine alfabetico) e mischiarla con shuffle. Visualizzare la lista
+mescolata: quello sarà l'ordine delle interrogazioni!!!</p>
+<hr />
+<p><strong>Esercizio 626 (shuffle)</strong></p>
+<p>Creare una lista contenente i numeri da 1 a 10 e mescolarla.
+Visualizzare la lista nel nuovo ordine ottenuto e successivamente
+riordinarla.</p>
+<!-- ############################################################################################ -->
+<h3 id="modulo-math">Modulo math</h3>
+<p>Contiene tutte le funzioni matematiche utili per le operazioni su
+esponenziali, logaritmi, trigonometria, etc...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># esempi di operazioni varie</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">import</span> <span class="nn">math</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># logaritmo in base e di 10</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="c1"># coseno di 90 gradi (pi greco radianti)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># fattoriale di 5, ovvero 5! = 1 * 2 * 3 * 4 * 5</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1"># radice quadrata di 12</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="mi">345</span><span class="p">,</span><span class="mi">678</span><span class="p">)</span> <span class="c1"># Massimo Comun Divisore</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">math</span><span class="o">.</span><span class="n">lcm</span><span class="p">(</span><span class="mi">345</span><span class="p">,</span><span class="mi">678</span><span class="p">)</span> <span class="c1"># Minimo Comune Multiplo (da Python 3.9)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">ceil</span><span class="o">/</span><span class="n">floor</span><span class="o">/</span><span class="n">trunc</span> <span class="c1"># RTFM</span>
+</code></pre></div>
+<p>Il modulo math si porta dietro anche una serie di costanti <em>famose</em>:</p>
+<div class="highlight"><pre><span></span><code># variabili (pre)definite in math:
+# math.e = 2.718281828459045 (numero di Nepero)
+# math.inf = inf (più infinito)
+# math.nan = nan (not a number. PS: hai combinato qualcosa)
+# math.pi = 3.141592653589793 (pi greco)
+</code></pre></div>
+<p><br>
+<br></p>
+<p><strong>Esercizio 631 (sqrt)</strong></p>
+<p>Scrivere una funzione che calcola le soluzioni dell'equazione di
+secondo grado <code>Ax^2 + Bx + C = 0</code>.</p>
+<p>In particolare la funzione prende come parametri i coefficienti A, B, C
+dell'equazione e restituisce la lista delle soluzioni reali della
+stessa.</p>
+<p>La lista può contenere 0, 1, 2 soluzioni (anche coincidenti) a seconda
+dei casi.</p>
+<hr />
+<p><strong>Esercizio 632 (sqrt, floor)</strong></p>
+<p>Scrivere una funzione per calcolare la radice quadrata intera di un
+numero. La radice quadrata intera di un numero x è il più grande intero
+n tale che <code>n * n &lt;= x</code>.</p>
+<p>Provate a scrivere questa funzione con l'aiuto del modulo math (facile)
+e provate a scriverne una analoga senza (un po' più complicato)</p>
+<hr />
+<p><strong>Esercizio 633 (gcd , lcm)</strong></p>
+<p>Scrivere una funzione che prende numeratore e denominatore di una
+frazione e ritorna una tupla di 2 valori contenenti numeratore e
+denominatore ridotti ai minimi termini. Ad esempio, la funzione
+riduci(15,6) ritorna la tupla (5,2).</p>
+<hr />
+<p><strong>Esercizio 634 (gcd , lcm)</strong></p>
+<p>In una piazza si trova il capolinea di tre linee di tram: A, B, e C. Il
+tram A parte ogni TOT_A minuti, il tram B ogni TOT_B minuti, il tram C
+ogni TOT_C minuti. Ogni quanti minuti i 3 tram si ritrovano al capolinea
+insieme? Implementare la funzione calcolaMinuti(TOT_A, TOT_B, TOT_C) che
+ritorna il numero di minuti che bisogna aspettare per avere di nuovo i 3
+tram insieme al capolinea.</p>
+<!-- ############################################################################################ -->
+<h3 id="modulo-time">Modulo time</h3>
+<p>Il modulo <code>time</code> in Python gestisce l'interazione con il temporizzatore del computer in cui esso viene
+eseguito ed è dunque in grado di effettuare operazioni collegate al tempo, come:</p>
+<ul>
+<li>aspettare per un lasso di tempo</li>
+<li>controllare l'orario corrente</li>
+<li>formattare l'orario in base alle sue <em>componenti</em>.</li>
+</ul>
+<p>Vediamo alcuni esempi:</p>
+<p><br></p>
+<p><strong>Funzione sleep</strong><br>
+Serve per mettere in stand-by lo script Python per un certo numero di secondi (vale anche la virgola!!!)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">time</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lo scrive subito&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lo scrive dopo 2 secondi e mezzo!!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><br></p>
+<p><strong>Funzione time</strong><br>
+Questa funzione ritorna il numero di secondi trascorsi da <code>Epoch</code> (noi diremmo... dalla notte dei tempi)! 
+In realtà, <code>epoch</code> non è altro che <code>January 1, 1970, 00:00:00 UTC</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">time</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1"># il numero di secondi trascorsi da Epoch</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">seconds</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seconds since epoch:&quot;</span><span class="p">,</span> <span class="n">seconds</span><span class="p">)</span>
+</code></pre></div>
+<p><br></p>
+<p>Partendo da questa, abbiamo varie possibilità per la formattazione e la gestione di questo <em>tempo</em>:</p>
+<p><br></p>
+<p><strong>Funzioni *time</strong><br>
+In questo caso mi viene più semplice presentare alcune delle funzioni di tempo con qualche esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">time</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">seconds</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># ctime: </span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1"># prende i secondi trascorsi e ritorna una stringa</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">local_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Local time:&quot;</span><span class="p">,</span> <span class="n">local_time</span><span class="p">)</span> 
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1"># Scrive: Local time: Wed Dec 28 08:16:19 2022</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="c1"># localtime: </span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c1"># prende i secondi trascorsi e ritorna struct_time, una tupla contenente le informazioni </span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1"># sul tempo: anno, mese, giorno, ore, minuti, secondi, nome del giorno, giorno dell&#39;anno, bisestile</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="n">res</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;result:&quot;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="c1"># Scrive: result: time.struct_time(tm_year=2022, tm_mon=12, tm_mday=28, tm_hour=8, tm_min=8, tm_sec=53, tm_wday=2, tm_yday=362, tm_isdst=0)</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="c1"># mktime:</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="c1"># prende una tupla di tipo struct_time e ritorna il numero di secondi passati da Epoch per quella data</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="n">time_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">362</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="n">seconds</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span><span class="n">time_tuple</span><span class="p">)</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="c1"># Scrive: 1672217044.0</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="c1"># asctime:</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="c1"># prende una tupla di tipo struct_time e ritorna una stringa che la rappresenta</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="n">res</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">(</span><span class="n">time_tuple</span><span class="p">)</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="c1"># Scrive: Fri Dec 28 08:44:04 2022</span>
+</code></pre></div>
+<p><br>
+<br></p>
+<p><strong>Esercizio 641</strong></p>
+<p>Visualizza l'ora corrente in ORE:MINUTI:SECONDI (sugg: visualizza i giusti campi della tupla di tempo)</p>
+<hr />
+<p><strong>Esercizio 642</strong></p>
+<p>Chiedi all'utente un numero grande a piacere e calcola se è primo. Dopo aver risposto alla domanda
+visualizza quanto tempo il tuo programma ha impiegato a calcolarlo.</p>
+<hr />
+<p><strong>Esercizio 643</strong></p>
+<p>Calcola quanti secondi sono trascorsi dal 1 gennaio di quest'anno a oggi.</p>
+<hr />
+<!-- ############################################################################################ -->
+<h3 id="modulo-datetime">Modulo datetime</h3>
+<p>Contiene le funzioni per la manipolazione di data e ora. Contiene 4
+classi diverse a cui si accede con l'operatore PUNTO (.):</p>
+<ul>
+<li>la classe <strong><em>Date</em></strong> per la gestione della data, con giorno, mese ed anno;</li>
+<li>la classe <strong><em>Time</em></strong> per la gestione dell'orario, con ore, minuti, secondi e microsecondi;</li>
+<li>la classe <strong><em>DateTime</em></strong> per la gestione di Data e Ora: praticamente è la classe unione delle due precedenti;</li>
+<li>la classe <strong><em>TimeDelta</em></strong> per il calcolo delle differenze di tempo.</li>
+</ul>
+<p>Vediamo alcuni esempi per chiarire i concetti espressi. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">datetime</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1"># nell&#39;ordine: anno, mese, giorno</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">scopertaAmerica</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">1492</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># nell&#39;ordine: ore, minuti, secondi</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">oraDellaPausa</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">00</span><span class="p">)</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c1"># nell&#39;ordine: anno, mese, giorno, ore, minuti, secondi</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">uomoSullaLuna</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1969</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">00</span><span class="p">)</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="c1"># con le variabili nominali: giorni, secondi, microsecondi, millisecondi, minuti, ore, settimane.</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="c1"># (i campi con valore 0 possono essere omessi)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">fra3giornie2ore</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">microseconds</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">milliseconds</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">weeks</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<p>Successivamente vedremo uno o due esempi che coinvolgono la classe <code>TimeDelta</code>. 
+Per visualizzare informazioni sulle classi in oggetto ricordatevi di utilizzare le funzioni dir() e help():</p>
+<p>Una delle cose più semplici da fare con queste classi è ottenere ora e data correnti:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Per la classe Date, possiamo ottenere il giorno odierno</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">oggi</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="c1"># vale 2019-05-23</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># La classe Time NON ha un metodo per l&#39;ora corrente.</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># Dobbiamo usare la classe DateTime</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">adesso</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="c1"># vale 2019-05-23 19:26:03.478039</span>
+</code></pre></div>
+<p>Una volta impostata una data o un'ora è possibile accedere ai valori dei campi che la caratterizzano:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Anno: &quot;</span><span class="p">,</span> <span class="n">adesso</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mese: &quot;</span><span class="p">,</span> <span class="n">adesso</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Giorno: &quot;</span><span class="p">,</span> <span class="n">adesso</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ore: &quot;</span><span class="p">,</span> <span class="n">adesso</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minuti: &quot;</span><span class="p">,</span> <span class="n">adesso</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Secondi: &quot;</span><span class="p">,</span> <span class="n">adesso</span><span class="o">.</span><span class="n">second</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>L'accesso ai valori dei campi che caratterizzano una variabile<br>
+di tipo <code>Date</code> , <code>DateTime</code> , <code>Time</code> è sempre <strong>in sola lettura</strong>.</p>
+</blockquote>
+<p>Questo significa che possiamo visualizzare i valori come fatto qui sopra, ma non possiamo utilizzare questi campi per modificare una data.
+Per essere completamente espliciti, non è possibile fare operazioni tipo le seguenti:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">dataAcaso</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">dataAcaso</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="mi">2020</span>  <span class="c1"># ERRORE</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">dataAcaso</span><span class="o">.</span><span class="n">hour</span> <span class="o">=</span> <span class="mi">12</span>    <span class="c1"># ERRORE. (capito? Non si può...)</span>
+</code></pre></div>
+<p>Le date non sono fatte per essere modificate. Invece di cambiarne una... create un'altra variabile!</p>
+<p>Per visualizzare date, ore o data con ora a piacimento, tutte e tre le classi mettono a disposizione la funzione <code>strftime()</code> che prende
+l'oggetto Data (o Ora, o Data e Ora) e ritorna una stringa personalizzata, secondo i seguenti parametri (ho messo solo i
+principali...):</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Descrizione</th>
+<th>Esempio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%a</td>
+<td>Giorno della settimana (breve)</td>
+<td>Wed</td>
+</tr>
+<tr>
+<td>%A</td>
+<td>Giorno della settimana</td>
+<td>Wednesday</td>
+</tr>
+<tr>
+<td>%w</td>
+<td>Giorno della settimana come numero: 0 è Domenica</td>
+<td>3</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>Giorno del mese: 01-31</td>
+<td>31</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>Nome del mese (breve)</td>
+<td>Dec</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>Nome del mese</td>
+<td>December</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>Mese come numero: 01-12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>Anno (breve, 2 cifre)</td>
+<td>18</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>Anno</td>
+<td>2018</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>Ore: 00-23</td>
+<td>17</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>Minuti: 00-59</td>
+<td>41</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>Secondi: 00-59</td>
+<td>08</td>
+</tr>
+<tr>
+<td>%%</td>
+<td>Per visualizzare %</td>
+<td>%</td>
+</tr>
+</tbody>
+</table>
+<p>Qualche esempio è meglio di molte spiegazioni:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; adesso = datetime.datetime.now()
+&gt;&gt;&gt; print( adesso.strftime(&quot;%d-%m-%Y&quot;) )
+23-05-2019
+
+&gt;&gt;&gt; print( adesso.strftime(&quot;Sono le %H:%M&quot;) )
+Sono le 19:26
+
+&gt;&gt;&gt; print( adesso.strftime(&quot;%A&quot;) )
+Thursday
+</code></pre></div>
+<p>È facile capire che in ogni tipologia di dato potete usare solo i
+parametri relativi ad esso: ovvero con un oggetto date, i parametri
+relativi ad ore, minuti o secondi non vanno bene, mentre con un oggetto
+time non vanno quelli sul giorno, il mese, etc... su un oggetto datetime
+funzionano tutti!!!</p>
+<!-- ############################################################################################ -->
+<h4 id="differenze-di-tempo-timedelta">Differenze di tempo (TimeDelta)</h4>
+<p>Ok, domanda a bruciapelo. Da quanto tempo l'uomo è andato sulla Luna? Da
+quanti anni? Da quanti giorni??</p>
+<p>Le differenze di tempo sono materia per la classe TimeDelta; un elemento
+della classe stessa si ottiene facendo una differenza tra due elementi
+di tipo DateTime o Date (<strong>non Time... attenti! E dello stesso tipo... attentissimi!! <code>datetime - datetime</code>, oppure <code>date - date</code></strong>)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">adesso</span> <span class="o">-</span> <span class="n">uomoSullaLuna</span><span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="mi">18205</span> <span class="n">days</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mf">12.510824</span>
+</code></pre></div>
+<p>Le differenze di tempo si fanno banalmente con il segno meno:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">diff</span> <span class="o">=</span> <span class="n">adesso</span> <span class="o">-</span> <span class="n">uomoSullaLuna</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">days</span><span class="p">)</span> <span class="c1"># scrive 18205 (int)</span>
+</code></pre></div>
+<p>Ok... in giorni è quello. Ma... in anni? Settimane? Ore? Minuti? Secondi? 
+In questo caso occorre fare un po' di calcoli: si fa la differenza fra 2 date (o 2 datetime, NON due time), si utilizza la
+funzione <code>total_seconds()</code> che ritorna i secondi totali e poi si fa qualche divisione...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">diff</span> <span class="o">=</span> <span class="n">adesso</span> <span class="o">-</span> <span class="n">uomoSullaLuna</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">secondiTotali</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>  <span class="c1"># int() per arrotondare...</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">minutiTotali</span> <span class="o">=</span> <span class="n">secondiTotali</span> <span class="o">//</span> <span class="mi">60</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">oreTotali</span> <span class="o">=</span> <span class="n">minutiTotali</span> <span class="o">//</span> <span class="mi">60</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">giorniTotali</span> <span class="o">=</span> <span class="n">oreTotali</span> <span class="o">//</span> <span class="mi">24</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="n">settimaneTotali</span> <span class="o">=</span> <span class="n">giorniTotali</span> <span class="o">//</span> <span class="mi">7</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">anniTotali</span> <span class="o">=</span> <span class="n">giorniTotali</span> <span class="o">//</span> <span class="mi">365</span> <span class="c1"># più o meno...</span>
+</code></pre></div>
+<p>Come la differenza fra due date (o due datetime) risulta in un oggetto timedelta, così la somma fra una data e un timedelta risulta una data:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">oggi</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">duegiorni</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">dopodomani</span> <span class="o">=</span> <span class="n">oggi</span> <span class="o">+</span> <span class="n">duegiorni</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">dopodomani</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">dopodomani</span><span class="p">))</span> <span class="c1"># vedremo un oggetto datetime.date con la data di dopodomani</span>
+</code></pre></div>
+<p>Prendiamo un po' confidenza con il modulo grazie ad un po' di esercizi :)</p>
+<hr />
+<p><strong>Esercizio 651 (now)</strong></p>
+<p>Visualizzare la data e l'ora corrente, scrivendo la frase "Oggi è il
+GG/MM/AAAA e sono le ore HH:MM"</p>
+<hr />
+<p><strong>Esercizio 652 (...)</strong></p>
+<p>Data l'ora di adesso e inserito dall'utente l'ora di fine lezione
+calcolare il numero di minuti mancanti.</p>
+<hr />
+<p><strong>Esercizio 653 (tuple, weekday)</strong></p>
+<p>Chiedere all'utente di inserire la data di nascita e visualizzare il
+giorno della settimana in cui è nato.</p>
+<hr />
+<p><strong>Esercizio 654 (...)</strong></p>
+<p>Chiedere all'utente di inserire due numeri per giorno e mese dell'anno
+corrente e calcolare quante settimane sono passate dall'inizio dell'anno
+a quella data.</p>
+<!-- ############################################################################################ -->
+<h2 id="moduli-pypi">Moduli PyPi</h2>
+<p>I moduli della libreria standard sono facilissimi da utilizzare (anche
+perché sono già installati sul computer...) ma fanno operazioni...
+standard, niente di veramente eclatante!</p>
+<p>Python in realtà mette a disposizione dei suoi utenti miriadi di moduli
+per i compiti più disparati: creare un codice a barre, calcolare la
+distanza fra 2 stelle, trasferire una canzone tramite bluetooth, ecc...</p>
+<p>La cosa veramente incredibile (su Python) è che tutti questi moduli,
+sviluppati da chicchessia, sono raccolti in un unico repository: il
+<strong>Python Package index, PyPi</strong>. <a href="https://pypi.org/">https://pypi.org</a>.</p>
+<p><img alt="pypi site" src="../images/pypi_site.jpg" /></p>
+<p>Qui sopra vedete la schermata iniziale del sito. Come vedete sono
+disponibili oltre 275.000 moduli... Potete cercare praticamente quello
+che volete: io ho provato con "chicken", "football", "rock music"
+e ho avuto soddisfazione...</p>
+<p>Certo, al nostro livello non siamo in grado ancora di usare qualsivoglia
+modulo (soprattutto perché siete ancora particolarmente allergici a
+leggere la documentazione), ma imparare a scaricarli e a installarli
+(fatto uno, fatto tutti) e poi ad usare qualcuno dei più semplici... si
+può!</p>
+<p>Per installare un modulo di questi, non c'è bisogno di mettersi a cercalo nel sito... basta usare Thonny!</p>
+<p><img alt="thonny package 1" src="../images/thonny_package_1.jpg" /></p>
+<p>Da lì digitate la stringa di ricerca (nell'esempio c'è la stringa <em>wxpython</em>) e cliccate su <em>Trova una pacchetto PyPi</em> 
+(è sbagliato lo so... se tutto va bene quando lo leggerete sulla vostra installazione sarà stato corretto...)</p>
+<p><img alt="thonny package 2" src="../images/thonny_package_2.jpg" /></p>
+<p>Trovato il pacchetto che vi serve, non serve altro che cliccare sul pulsante INSTALLA in basso e attendere :)</p>
+<p><img alt="thonny package 3" src="../images/thonny_package_3.jpg" /></p>
+<p>Se invece non avete (ancora) Thonny, aprite il prompt dei comandi Windows oppure il terminale Mac o Linux e digitate:</p>
+<div class="highlight"><pre><span></span><code>pip3 install -U nomeModulo
+</code></pre></div>
+<p>Quando ha finito... ve ne accorgerete.</p>
+<!-- ############################################################################################ -->
+<h3 id="modulo-pillow">Modulo pillow</h3>
+<p>Il modulo Pillow è considerato il modulo standard per la manipolazione
+delle immagini in Python. In realtà sarebbe un sostituto (built-in
+replacement) per la vera libreria di default per il trattamento delle
+immagini: PIL, ovvero la <strong>Python Image Library</strong>. Ma ormai è
+considerata lo standard per lavorare con le immagini.</p>
+<p>Installate il modulo Pillow e poi procedete ad esaminare e testare il
+seguente esempio commentato, badando a decommentare ogni volta una
+piccola parte di esso.</p>
+<p>Tutti i nostri frammenti di codice dovranno includere il pacchetto
+pillow</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># per compatibilità con PIL anche Pillow si chiama PIL</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c1"># Per aprire e visualizzare una immagine</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="c1"># l&#39;immagine deve trovarsi nella stessa cartella dello script</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">)</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="n">img</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>Alcune operazioni sparse sull'immagine:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># ruota l&#39;immagine di 90 gradi e la visualizza</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">rotatedImg</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">rotatedImg</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="c1"># ridimensiona l&#39;immagine a 200x200 pixel</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">resizedImg</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="n">resizedImg</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="c1"># ribalta l&#39;immagine orizzontalmente</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="c1"># (oppure verticalmente, mettendo Image.FLIP_TOP_BOTTOM)</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="n">flippedImg</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">FLIP_LEFT_RIGHT</span><span class="p">)</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="n">flippedImg</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="c1"># trasforma l&#39;immagine in bianco e nero</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="n">convertedImg</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">)</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="n">convertedImg</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>Per ritagliare una immagine (crop) occorre utilizzare il metodo: <code>Image.crop( (left, upper, right, lower) )</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># ritagliamo l&#39;immagine da (0,0) in alto a sx a (300,300) in basso a dx</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">croppedImage</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">crop</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">300</span><span class="p">))</span>
+</code></pre></div>
+<p>Se invece volessimo salvare l'immagine modificata... (ad esempio quella in bianco e nero)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">convertedImg</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;pythonBN.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Proviamo adesso alcune opzioni per sfocare l'immagine (blur)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># occorre importare anche l&#39;oggetto ImageFilter</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageFilter</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;prova.jpg&quot;</span><span class="p">)</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="n">blurImage</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">BLUR</span><span class="p">)</span>              <span class="c1"># blur generico</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="n">boxBlurImage</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">BoxBlur</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>    <span class="c1"># blur radiale</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="n">gaussImage</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span> <span class="c1"># blur gaussiano</span>
+</code></pre></div>
+<p>Basta!</p>
+<p>Volete fare, sapere di più? Leggete la documentazione!</p>
+<!-- ############################################################################################ -->
+<h3 id="modulo-pyscreenshot">Modulo pyscreenshot</h3>
+<p>Il modulo pscreenshot serve per fare gli screenshot del Desktop.
+Semplice e veloce. Ricordate solo che questo modulo lavora con le
+immagini, quindi per funzionare ha bisogno <strong><em>anche</em></strong> del modulo
+pillow. Installate il modulo chiamato "pyscreenshot" (pillow ce lo
+dovreste avere da prima), poi su una shell python digitate:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; import pyscreenshot
+
+&gt;&gt;&gt; dir(pyscreenshot)
+</code></pre></div>
+<p>vedrete elencate le funzioni offerte dal modulo pyscreenshot. Come ci
+siamo sempre detti, quelle che iniziano con doppio underscore vanno
+ignorate. Non sono tantissime. O meglio... questo è uno dei moduli più
+semplici. Per fare lo screenshot ci interessa una singola funzione:
+grab().</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kn">import</span> <span class="nn">pyscreenshot</span> <span class="k">as</span> <span class="nn">ss</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="n">image</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">grab</span><span class="p">()</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;screenshot.png&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>L'esempio sopra fa uno screenshot del Desktop e lo salva come file
+"screenshot.png" nella stessa cartella ove si trova lo script Python con il codice sopra.</p>
+<p>Se avete letto la documentazione della funzione grab() saprete che
+potete decidere di fare lo screenshot ad una sezione dello schermo. La
+prova di questo ve la lascio come esercizio.</p>
+<!-- ############################################################################################ -->
+<h3 id="modulo-matplotlib">Modulo matplotlib</h3>
+<p>Il modulo Matplotlib serve per creare dei plot, ovvero dei grafici a
+partire da funzioni algebriche nel piano e nello spazio.</p>
+<p>Immaginate di voler disegnare il grafico della retta y = 2 x.</p>
+<p>Scegliete alcuni punti per le ascisse x = [ 1 , 2 , 3 , 4 ]</p>
+<p>Calcolate le ordinate corrispondenti y = [ 2 , 4 , 6 , 8 ]</p>
+<p>Disegnate il piano cartesiano e vi ponete i punti calcolati: (1,2) (2,4) (3,6) (4,8)</p>
+<p>Infine tirate una riga che passa per questi punti</p>
+<p>Con Matplotlib si possono fare cose del genere. Ci provo per la retta dell'esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Grafico della retta y = 2 x&quot;</span><span class="p">)</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Asse X&quot;</span><span class="p">)</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Asse Y&quot;</span><span class="p">)</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p>Con questo codice ho generato la seguente immagine:</p>
+<p><img alt="grafico retta y=2x" src="../images/graph1.png" title="grafico retta y=2x" /></p>
+<p>Ovviamente potrei disegnare anche dei pezzi segmentati:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># per disegnare solo i punti, usa plot(x,y,&quot;o&quot;)</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Punti a caso&quot;</span><span class="p">)</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="Grafico 2" src="../images/graph2.png" /> <img alt="Grafico 3" src="../images/graph3.png" /></p>
+<p>Per caratterizzare il grafico si potrebbe aggiungere una griglia:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># inserisci una di queste funzioni PRIMA di plt.show()</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="c1"># così visualizzi TUTTA la griglia</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="c1"># così visualizzi SOLO le righe VERTICALI</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">)</span> 
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="c1"># così visualizzi SOLO le righe ORIZZONTALI</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Se vogliamo inserire più di un grafico, si potrebbe inserire una legenda</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">f1</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="n">f2</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    <span class="n">f1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>    <span class="n">f2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="n">x</span> <span class="p">,</span> <span class="n">f1</span> <span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=2x&quot;</span><span class="p">)</span>   <span class="c1"># aggiungi un&#39;etichetta</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="n">x</span> <span class="p">,</span> <span class="n">f2</span> <span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y=x**2&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>  <span class="c1"># crea la legenda</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="Grafico 4" src="../images/graph4.png" /></p>
+<p>Se invece di visualizzare l'immagine volete salvarla da qualche parte, invece di <code>show()</code>, 
+dovete usare il metodo <code>savefig("nomeImmagine.estensione")</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;immagine.jpg&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Facile :)</p>
+<p>La libreria Matplotlib si può utilizzare anche per disegnare barre
+(verticali oppure orizzontali):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">nomi</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Asini&quot;</span><span class="p">,</span> <span class="s2">&quot;Bradipi&quot;</span><span class="p">,</span> <span class="s2">&quot;Cavalli&quot;</span><span class="p">,</span> <span class="s2">&quot;Daini&quot;</span><span class="p">]</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">nomi</span><span class="p">,</span><span class="n">numeri</span><span class="p">)</span> <span class="c1"># per le barre orizzontali, usa barh()</span>
+</code></pre></div>
+<p><img alt="Grafico 5" src="../images/graph5.png" /></p>
+<p>Con quegli stessi dati posso disegnare anche un diagramma a torta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">numeri</span> <span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">nomi</span><span class="p">)</span>
+</code></pre></div>
+<p>Basta!</p>
+<p>Se volete approfondire un po', guardate il sito ufficiale: <a href="https://matplotlib.org/">https://matplotlib.org/</a></p>
+<p>Oltre alla documentazione (so che non la leggerete) ci sono molti esempi
+e tutorial...</p>
+<p>Se proprio volete imparare... basta solo fare un po' di esercizio :)</p>
+<p><br>
+<br>
+<br></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Torna su
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../105_funz/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Funzioni" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Precedente
+                </span>
+                Funzioni
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../107_files/" class="md-footer__link md-footer__link--next" aria-label="Prossimo: Files" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Prossimo
+                </span>
+                Files
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Andrea Diamantini (c) 2022-2023<br> <a href="#__consent">Change Cookie Settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Consenso all'uso dei Cookie(s)</h4>
+<p>Questo sito memorizza alcuni cookies solo per riconoscere un visitatore  che non è alla sua prima visita e alcune preferenze, come il tema di visualizzazione della pagina selezionato.<br> Se non acconsenti, questa finestra riapparirà ogni volta che riapri il sito.<br> Se vuoi cambiare le tue scelte, in fondo alla pagina trovi un link per modificarle ;)
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accettazione</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rifiuta</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
