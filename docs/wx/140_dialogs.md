@@ -190,9 +190,9 @@ ricordate il modulo Pathlib???)
 
 Analogamente alle DirDialog, servono per selezionare un file (esistente o no) nel proprio computer.
 
-**ESEMPIO 1: SELEZIONA FILE DA APRIRE**
 
-``` python
+
+``` py title="ESEMPIO 1: SELEZIONA FILE DA APRIRE"
 dlg = wx.FileDialog(None, "Apri File", style=wx.FD_OPEN)
 if dlg.ShowModal() == wx.ID_CANCEL:
     return
@@ -201,9 +201,8 @@ if dlg.ShowModal() == wx.ID_CANCEL:
 percorso = dlg.GetPath()
 ```
 
-**ESEMPIO 2: SELEZIONA PERCORSO FILE SU CUI SALVARE**
 
-``` python
+``` py title="ESEMPIO 2: SELEZIONA PERCORSO FILE SU CUI SALVARE"
 dlg = wx.FileDialog(None, "Salva File", style=wx.FD_SAVE)
 if dlg.ShowModal() == wx.ID_CANCEL:
     return

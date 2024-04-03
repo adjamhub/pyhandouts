@@ -42,11 +42,10 @@ da visualizzare. Facile!!!
 Partiamo da qualche esempio ben commentato per prendere confidenza con il codice!
 
 
-**Esempio 1: visualizzare una immagine**
+<br>
+<br>
 
-Il file `esempio1.py`, che contiene questo codice è nella stessa cartella del file `foto.jpg` che andremo a visualizzare.
-
-``` python
+``` py title="Esempio 1: visualizzare una immagine"
 # ...
 panel = wx.Panel(self)
 
@@ -55,11 +54,12 @@ widgetImageViewer = wx.StaticBitmap(panel, bitmap=oggettoImmagine)
 # ...
 ```
 
-**Esempio 2: visualizzare una immagine in scala di grigi**
+<br>
+<br>
 
-Il file `esempio2.py`, che contiene questo codice è nella stessa cartella del file `foto.jpg` che andremo a visualizzare.
 
-``` python
+
+``` py title="Esempio 2: visualizzare una immagine in scala di grigi"
 # ...
 panel = wx.Panel(self)
 widgetImageViewer = wx.StaticBitmap(panel)
@@ -124,7 +124,7 @@ un ID e tramite quello possiamo creare automaticamente una Bitmap.
 
 ``` python
 # la variabile "bitmap" è un oggetto della classe wx.Bitmap
-bitmap = wx.ArtProvider.GetBitmap( client = wx.UN_ID_FRA_QUELLI_ELENCATI_SOTTO , size = DefaultSize )
+bitmap = wx.ArtProvider.GetBitmap( id = wx.UN_ID_FRA_QUELLI_ELENCATI_SOTTO , client=wx.UN_VALORE_PER_ILPOSIZIONAMENTO, size = DefaultSize )
 ```
 
 Vediamo l'elenco delle icone automaticamente supportate (in rigoroso ordine sparso):
@@ -159,8 +159,7 @@ Vediamo l'elenco delle icone automaticamente supportate (in rigoroso ordine spar
 | wx.ART_GO_HOME | | |
 | wx.ART_GO_DIR_UP | | | 
  
-E' inoltre possibile aggiungere una descrizione della dimensione voluta dell'icona. In mancanza di questa, il parametro predefinito `wx.DefaultSize` impone
-la dimensione originale dell'icona.
+E' inoltre possibile aggiungere una descrizione della posizione che l'icona dovrà andare ad occupare. Questa scelta determinerà anche la dimensione iniziale.
 
 Vediamo i valori possibili:
 
