@@ -188,6 +188,7 @@ ricordate il modulo Pathlib???)
 > Finesta di dialogo per la selezione file, in apertura o salvataggio.
 
 
+La classe FileDialog crea una finestra di selezione file.
 Analogamente alle DirDialog, servono per selezionare un file (esistente o no) nel proprio computer.
 
 
@@ -197,7 +198,7 @@ dlg = wx.FileDialog(None, "Apri File", style=wx.FD_OPEN)
 if dlg.ShowModal() == wx.ID_CANCEL:
     return
 
-# la stringa che contiene il percorso della cartella selezionata
+# la stringa che contiene il percorso del file da aprire
 percorso = dlg.GetPath()
 ```
 
@@ -207,7 +208,7 @@ dlg = wx.FileDialog(None, "Salva File", style=wx.FD_SAVE)
 if dlg.ShowModal() == wx.ID_CANCEL:
     return
 
-# la stringa che contiene il percorso della cartella selezionata
+# la stringa che contiene il percorso del file su cui fare salva
 percorso = dlg.GetPath()
 ```
 
