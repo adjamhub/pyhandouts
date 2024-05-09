@@ -1,24 +1,57 @@
-# Esercizi su GUI complete
+# Widgets avanzate
+
+
+In questo capitolo andiamo ad introdurre alcune widgets molto potenti per realizzare programmi
+specializzati in determinati ambiti! 
+
+Iniziamo a gustare la potenza della OOP e delle librerie integrate!!!
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+## Griglia per foglio di calcolo
+
+
+Modulo wx.grid
+
+
+---
+
+**Esercizio: Foglio Elettronico**
 
 blah blah
 
 ---
 
-## Editor di testo (su wx.stc)
+**Esercizio: Battleship**
+
+blah blah
+
+
+---
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+## Editor di documenti stiloso
+
+
+Modulo wx.stc
+
+
+---
+
+**Esercizio: Blocco Note con wx.stc**
 
 blah blah
 
 ---
 
-**Esercizio: Blocco Note**
 
-blah blah
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+## Browser per la navigazione internet
 
----
 
-## Browser (su wx.html2)
-
-blah blah
+Modulo wx.html2
 
 
 ``` python title="MiniBrowser" hl_lines="2 30"
@@ -115,9 +148,14 @@ blah blah
 
 ---
 
-## MultiMedia Player (su wx.media)
 
-blah blah
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+## Media Player
+
+
+Modulo wx.media
+
 
 ---
 
@@ -134,28 +172,13 @@ blah blah
 
 ---
 
-## Griglia (su wx.grid)
 
-blah blah
-
----
-
-**Esercizio: Foglio Elettronico**
-
-blah blah
-
----
-
-**Esercizio: Battleship**
-
-blah blah
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+## Rich Text Ctrl 
 
 
----
+Modulo wx.richtext
 
-## Rich Text Ctrl (su wx.richtext)
-
-blah blah
 
 ---
 
@@ -165,7 +188,11 @@ blah blah
 
 ---
 
-## DA SISTEMARE (DA QUI IN POI!!!)
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+## DA SISTEMARE
 
 - wx.ListCtrl
 
@@ -187,3 +214,6 @@ blah blah
     - SlideShow (temporizzato)
     - SlideShow (con pulsanti AVANTI/INDIETRO)
 
+<br>
+<br>
+<br>

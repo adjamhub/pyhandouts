@@ -99,10 +99,9 @@ nav:
     - Immagini: wx/150_images.md
     - Timer(s): wx/160_timer.md
     - Full GUI: wx/170_full_gui.md
-    - Esercizi (GUI): wx/171_full_gui_ex.md
-    - Widgets Avanzate: wx/180_advanced.md
-    - Printing: wx/181_printing.md
-    - Network: wx/182_network.md
+    - Widgets Avanzate: wx/171_advanced.md
+    - Printing: wx/172_printing.md
+    - Network: wx/180_network.md
     - wx Tools: wx/299_tools.md
   - Insights:
     - Introduzione: insights/00_intro.md

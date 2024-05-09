@@ -18,7 +18,7 @@ Lo skeleton qui sotto descrive chiaramente una struttura da cui partire per allo
 di una app Full GUI, ovvero comprensiva di azioni, menù, barre degli strumenti, etc...
 
 
-``` py title="Skeleton Full GUI" hl_lines="3 10 14 20 24 48"
+``` py title="Skeleton Full GUI" hl_lines="3 10 13 20 23 81"
 import wx
 
 APP_NAME = "Il nome della vostra App"
@@ -30,21 +30,22 @@ class Finestra(wx.Frame):
         
         # Spazio per le variabili membro della classe
         
-        # -------------------------------------------
         
         # Chiamata alle funzioni che generano la UI
         self.creaMenubar()
         self.creaToolbar()
-        self.creaStatusbar()
-        # -------------------------------------------
+        
+        # la statusbar è semplice...
+        self.bar = self.CreateStatusBar()
         
         # Chiamata alla funzione che genera la MainView
         self.creaMainView()
-        # -------------------------------------------
         
-        # le ultime cose, ad esempio, le impostazioni iniziali, etc...
+        # le ultime cose, ad esempio, i Bind, le impostazioni iniziali, etc...
+        self.Bind(wx.EVT_CLOSE, self.funzioneEsci)
         
-        # -------------------------------------------
+        # chiamata alla funzione di caricamento impostazioni
+        self.loadConfig()
         return
 
     # in questa funzione andremo a creare e popolare la menubar
@@ -54,15 +55,47 @@ class Finestra(wx.Frame):
     # in questa funzione andremo a creare e popolare la toolbar
     def creaToolbar(self):
         return
-    
-    # in questa funzione aggiungeremo la statusbar
-    def creaStatusbar(self):
-        return
-    
+
     # questa funzione implementa la vista principale del programma
     def creaMainView(self):
         return
 
+    def loadConfig(self):
+        config = wx.FileConfig(APP_NAME)
+        
+        # dimensione
+        w = int(config.Read("width", "800")) # 678 è la larghezza INIZIALE
+        h = int(config.Read("height", "600")) # 432 è la altezza  INIZIALE
+        self.SetSize(w,h)
+        
+        # posizione
+        x = int(config.Read("x", "-1")) 
+        y = int(config.Read("y", "-1")) 
+        if (x,y) == (-1,-1):   # se la posizione è (-1,-1) lo metto al centro!
+            self.Centre()
+        else:
+            self.Move(x,y)
+        return
+    
+    def saveConfig(self):
+        config = wx.FileConfig(APP_NAME)
+        
+        # dimensione
+        (w,h) = self.GetSize()
+        config.Write("width", str(w))
+        config.Write("height", str(h))
+        
+        # posizione
+        (x,y) = self.GetPosition()
+        config.Write("x", str(x))
+        config.Write("y", str(y))
+        return
+
+    def funzioneEsci(self,evt):
+        self.saveConfig()
+        self.Destroy()
+        return
+        
 # ----------------------------------------
 if __name__ == "__main__":
     app = wx.App()
@@ -72,7 +105,9 @@ if __name__ == "__main__":
     app.MainLoop()
 ```
 
-La struttura si spiega abbastanza da sola... avanti, partendo da qui!
+Ok... abbiamo una struttura di base come ottimo punto di partenza per creare una applicazione con tutti gli oggetti grafici di base!
+
+Vediamo pezzo per pezzo come integrare cose in essa!
 
 
 
@@ -170,30 +205,34 @@ mb = wx.MenuBar()
 fileMenu = wx.Menu()
 
 # POI aggiungi alcune azioni...
-fileMenu.Append(wx.ID_EXIT)
+fileMenu.Append(wx.ID_NEW)
+fileMenu.Append(wx.ID_OPEN)
 
-# inserimento DIRETTO di azione predefinita con TESTO e DESCRIZIONE personalizzati
+# altro esempio: inserimento DIRETTO di azione predefinita con TESTO e DESCRIZIONE personalizzati
 fileMenu.Append(wx.ID_SAVE, "Salva bene :)", "Salva il documento corrente")
 
 # riga di separazione: serve solo come abbellimento
 fileMenu.AppendSeparator()
 
 # creazione di un menuItem da azione predefinita, inserimento icona, aggiunta al menù
-openItem = wx.MenuItem(fileMenu, wx.ID_OPEN)
-openItem.SetBitmap(wx.ArtProvider.GetBitmap(wx.ART_FILE_OPEN))
-fileMenu.Append(openItem)
+closeItem = wx.MenuItem(fileMenu, wx.ID_CLOSE)
+closeItem.SetBitmap(wx.ArtProvider.GetBitmap(wx.ART_CLOSE))
+fileMenu.Append(closeItem)
+
+# altro menù...
+toolsMenu = wx.Menu()
 
 # creazione di una azione personalizzata con ID=35
-customItem = wx.MenuItem(fileMenu, 35, "Fai qualcosa")
-fileMenu.Append(customItem)
+customItem = wx.MenuItem(toolsMenu, 35, "Fai qualcosa")
+toolsMenu.Append(customItem)
 
 # CHECK ITEM
-self.fullScreenItem = wx.MenuItem(fileMenu, id=100, text="FullScreen", kind=wx.ITEM_CHECK)
-fileMenu.Append(self.fullScreenItem)
+fullScreenItem = wx.MenuItem(toolsMenu, id=100, text="FullScreen", kind=wx.ITEM_CHECK)
+toolsMenu.Append(fullScreenItem)
         
-# PENULTIMA COSA: aggiungi il menù alla menubar
-# (La & prima della F di File attiva la scorciatoia ALT + F)
-mb.Append(fileMenu, '&File')
+# PENULTIMA COSA: aggiungi i menù alla menubar
+mb.Append(fileMenu, '&File') # (La & prima della F di File attiva la scorciatoia ALT + F)
+mb.Append(toolsMenu, '&Tools')
 
 # INFINE!!!
 self.SetMenuBar(mb)
