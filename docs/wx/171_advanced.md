@@ -54,7 +54,7 @@ blah blah
 Modulo wx.html2
 
 
-``` python title="MiniBrowser" hl_lines="2 30"
+``` python title="MiniBrowser" hl_lines="2 15"
 import wx
 import wx.html2
 
@@ -65,60 +65,22 @@ class Finestra(wx.Frame):
     def __init__(self):
         super().__init__(None, title=APP_NAME)
         panel = wx.Panel(self)
-        
+
         mainLayout = wx.BoxSizer(wx.VERTICAL)
-        
-        # prima riga -------------------------------------------------
-        box1 = wx.BoxSizer(wx.HORIZONTAL)
-        
-        # la URLBAR e il PULSANTE VAI!!!
-        self.urlbar = wx.TextCtrl(panel, value="", style=wx.TE_PROCESS_ENTER)
-        self.button = wx.Button(panel,label = "vai")
-        
-        box1.Add(self.urlbar, proportion=1, flag=wx.ALL, border=5)
-        box1.Add(self.button, proportion=0, flag=wx.ALL, border=5)
-        
-        mainLayout.Add(box1, proportion=0, flag=wx.EXPAND, border=0)
-        
-        # seconda riga -------------------------------------------------        
-        box2 = wx.BoxSizer(wx.HORIZONTAL)
         
         # La WEBVIEW
         self.browser = wx.html2.WebView.New(panel)
         self.browser.Bind(wx.html2.EVT_WEBVIEW_LOADED, self.hoCaricato)
+        mainLayout.Add(self.browser, proportion=1, flag=wx.ALL|wx.EXPAND, border=5)
         
-        box2.Add(self.browser, proportion=1, flag=wx.ALL|wx.EXPAND, border=5)        
-        mainLayout.Add(box2, proportion=1, flag=wx.EXPAND, border=0)
+        # la pagina iniziale
+        self.browser.LoadURL("https://www.adjam.org/")
 
         panel.SetSizer(mainLayout)
-        
-        # le ultime cose...
-        self.button.Bind(wx.EVT_BUTTON, self.loadSite)
-        self.urlbar.Bind(wx.EVT_TEXT_ENTER, self.loadSite)
-
-
-        # la pagina iniziale
-        self.caricaSito("https://www.adjam.org/")
-
         self.SetSize(1200,800)
         self.Centre()
 
-    def loadSite(self,evt):
-        url = self.urlbar.GetValue()
-        
-        # semplice "sanificazione"
-        if not url.startswith("http"):
-            url = "http://" + url
-            
-        self.caricaSito(url)
-        return
-
-    def caricaSito(self, url):
-        self.browser.LoadURL(url)
-        return
-        
     def hoCaricato(self, evt):
-        self.urlbar.SetValue(self.browser.GetCurrentURL())
         self.SetTitle(APP_NAME + " - " + self.browser.GetCurrentTitle())
         return
 
@@ -126,10 +88,10 @@ class Finestra(wx.Frame):
 if __name__ == "__main__":
     app = wx.App()
     app.SetAppName(APP_NAME)
-    
+
     window = Finestra()
     window.Show()
-    
+
     app.MainLoop()
 ```
 
