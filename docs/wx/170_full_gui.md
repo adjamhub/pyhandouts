@@ -18,32 +18,38 @@ Lo skeleton qui sotto descrive chiaramente una struttura da cui partire per allo
 di una app Full GUI, ovvero comprensiva di azioni, menù, barre degli strumenti, etc...
 
 
-``` py title="Skeleton Full GUI" hl_lines="3 10 13 20 23 81"
+``` py title="Skeleton Full GUI" hl_lines="3 10 19 22 83"
 import wx
 
 APP_NAME = "Il nome della vostra App"
 
 class Finestra(wx.Frame):
-    
+
     def __init__(self):
         super().__init__(None, title=APP_NAME)
+
+        # La MainView
+        panel = wx.Panel(self)
+
+        vbox = wx.BoxSizer(wx.VERTICAL)
+        self.mainview = wx.StaticText(panel, label = "cambiami con il tuo oggetto principale!!!")
+        vbox.Add(self.mainview, proportion=1, flag=wx.EXPAND)
+
+        panel.SetSizer(vbox)
         
         # Spazio per le variabili membro della classe
-        
-        
+
+
         # Chiamata alle funzioni che generano la UI
         self.creaMenubar()
         self.creaToolbar()
-        
+
         # la statusbar è semplice...
         self.bar = self.CreateStatusBar()
-        
-        # Chiamata alla funzione che genera la MainView
-        self.creaMainView()
-        
+
         # le ultime cose, ad esempio, i Bind, le impostazioni iniziali, etc...
         self.Bind(wx.EVT_CLOSE, self.funzioneEsci)
-        
+
         # chiamata alla funzione di caricamento impostazioni
         self.loadConfig()
         return
@@ -51,23 +57,19 @@ class Finestra(wx.Frame):
     # in questa funzione andremo a creare e popolare la menubar
     def creaMenubar(self):
         return
-    
+
     # in questa funzione andremo a creare e popolare la toolbar
     def creaToolbar(self):
         return
 
-    # questa funzione implementa la vista principale del programma
-    def creaMainView(self):
-        return
-
     def loadConfig(self):
         config = wx.FileConfig(APP_NAME)
-        
+
         # dimensione
         w = int(config.Read("width", "800")) # 678 è la larghezza INIZIALE
         h = int(config.Read("height", "600")) # 432 è la altezza  INIZIALE
         self.SetSize(w,h)
-        
+
         # posizione
         x = int(config.Read("x", "-1")) 
         y = int(config.Read("y", "-1")) 
@@ -76,15 +78,15 @@ class Finestra(wx.Frame):
         else:
             self.Move(x,y)
         return
-    
+
     def saveConfig(self):
         config = wx.FileConfig(APP_NAME)
-        
+
         # dimensione
         (w,h) = self.GetSize()
         config.Write("width", str(w))
         config.Write("height", str(h))
-        
+
         # posizione
         (x,y) = self.GetPosition()
         config.Write("x", str(x))
@@ -95,7 +97,7 @@ class Finestra(wx.Frame):
         self.saveConfig()
         self.Destroy()
         return
-        
+
 # ----------------------------------------
 if __name__ == "__main__":
     app = wx.App()
