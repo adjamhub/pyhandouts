@@ -71,53 +71,57 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Basics:
-    - Introduzione: basics/000_first.md
-    - Installazione: basics/001_install.md
-    - Prime cose: basics/100_basics.md
-    - Variabili e Operatori: basics/101_var.md
-    - Alternanza: basics/102_alt.md
-    - Ripetizione: basics/103_iter.md
-    - Sequenze: basics/104_seq.md
-    - Funzioni: basics/105_funz.md
-    - Moduli: basics/106_mod.md
-    - Files: basics/107_files.md
-    - CSV: basics/108_csv.md
+    - Introduzione: 00_basics/000_first.md
+    - Installazione: 00_basics/001_install.md
+    - Prime cose: 00_basics/100_basics.md
+    - Variabili e Operatori: 00_basics/101_var.md
+    - Alternanza: 00_basics/102_alt.md
+    - Ripetizione: 00_basics/103_iter.md
+    - Sequenze: 00_basics/104_seq.md
+    - Funzioni: 00_basics/105_funz.md
+    - Moduli: 00_basics/106_mod.md
+    - Files: 00_basics/107_files.md
+    - CSV: 00_basics/108_csv.md
   - OOP:
-    - Introduzione: OOP/000_intro.md
-    - Classi e Oggetti: OOP/001_classes_objects.md
-#    - Classi e Oggetti 2: OOP/002_classes_objects.md
-    - Ereditarietà: OOP/002_inheritance.md
-    - Caratteristiche Avanzate: OOP/003_advanced.md
+    - Introduzione: 01_OOP/000_intro.md
+    - Classi e Oggetti: 01_OOP/001_classes_objects.md
+#    - Classi e Oggetti 2: 01_OOP/002_classes_objects.md
+    - Ereditarietà: 01_OOP/002_inheritance.md
+    - Caratteristiche Avanzate: 01_OOP/003_advanced.md
   - wxPython:
-    - Introduzione: wx/000_intro.md
-    - Primi concetti: wx/101_first_things.md
-    - Eventi: wx/102_events.md
-    - Widgets: wx/110_widgets.md
-    - Layout: wx/120_layout.md
-    - Esercizi Completi: wx/130_full_ex.md
-    - Dialogs: wx/140_dialogs.md
-    - Immagini: wx/150_images.md
-    - Timer(s): wx/160_timer.md
-    - Full GUI: wx/170_full_gui.md
-    - Widgets Avanzate: wx/171_advanced.md
-    - Printing: wx/172_printing.md
-    - Network: wx/180_network.md
-    - wx Tools: wx/299_tools.md
+    - Introduzione: 02_wx/000_intro.md
+    - Primi concetti: 02_wx/101_first_things.md
+    - Eventi: 02_wx/102_events.md
+    - Widgets: 02_wx/110_widgets.md
+    - Layout: 02_wx/120_layout.md
+    - Esercizi Completi: 02_wx/130_full_ex.md
+    - Dialogs: 02_wx/140_dialogs.md
+    - Immagini: 02_wx/150_images.md
+    - Timer(s): 02_wx/160_timer.md
+    - Full GUI: 02_wx/170_full_gui.md
+    - Widgets Avanzate: 02_wx/171_advanced.md
+    - Printing: 02_wx/172_printing.md
+    - Network: 02_wx/180_network.md
+    - wx Tools: 02_wx/299_tools.md
+  - Teoria delle reti:
+    - Introduzione: 11_theory/00_intro.md
+  - Programmazione di rete:
+    - Introduzione: 12_network/00_intro.md
+    - Sockets: 12_network/10_socket.md
+    - Requests: 12_network/31_requests.md
+    - Soup: 12_network/32_bs4.md
+    - Flask: 12_network/35_flask.md
   - Insights:
-    - Introduzione: insights/00_intro.md
-    - Pip: insights/01_pip.md
-    - Ambienti Virtuali: insights/02_venv.md
-    - Turtle: insights/11_turtle.md
-    - PyGame: insights/12_pygame1.md
-#    - PyGame (avanzato): insights/13_pygame2.md
-    - OpenCV: insights/21_opencv.md
-    - Requests: insights/31_requests.md
-    - Soup: insights/32_bs4.md
-    - Flask: insights/35_flask.md
-    - MySql: insights/41_mysql.md
-    - sqlite: insights/42_sqlite.md
-    - MongoDB: insights/43_mongodb.md
-    - Arduino: insights/51_arduino.md
-    - Numeri reali: insights/91_reals.md
-    - Interi, bytes, stringhe: insights/92_ibs.md
+    - Introduzione: 99_insights/00_intro.md
+    - Pip: 99_insights/01_pip.md
+    - Ambienti Virtuali: 99_insights/02_venv.md
+    - Turtle: 99_insights/11_turtle.md
+    - PyGame: 99_insights/12_pygame1.md
+#    - PyGame (avanzato): 99_insights/13_pygame2.md
+    - OpenCV: 99_insights/21_opencv.md
+    - MySql: 99_insights/41_mysql.md
+    - sqlite: 99_insights/42_sqlite.md
+    - Arduino: 99_insights/51_arduino.md
+    - Numeri reali: 99_insights/91_reals.md
+    - Interi, bytes, stringhe: 99_insights/92_ibs.md
 
