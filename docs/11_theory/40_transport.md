@@ -1,1 +1,0 @@
-# Livello di trasporto

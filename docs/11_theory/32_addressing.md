@@ -1,1 +1,0 @@
-# Indirizzamento IPv4
