@@ -52,7 +52,7 @@ distribuisce la sua creatura determinano la sua fortuna: Python diventa brevemen
 *attiva* di sviluppatori.
 
 Python ha avuto il suo momento di massima espansione con la versione 2.x del linguaggio, rilasciata nel 2000, momento in cui è passato 
-**da *"linguaggio di programmazione settoriale"* a *"linguaggio tra i più utilizzati e conosciuti"*.**
+da ***"linguaggio di programmazione settoriale"*** a ***"linguaggio tra i più utilizzati e conosciuti"***.
 
 Pochi anni dopo, ci si rende conto che per fare un passo definitivo, il linguaggio deve essere *sistemato* per funzionare bene in tutte le
 lingue (e in tutti i set di caratteri), avere una sintassi consistente e *facile da dedurre e indovinare* ed essere *facile* da potenziare
