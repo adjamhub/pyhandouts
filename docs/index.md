@@ -29,40 +29,32 @@ hide:
 
 <div class="w3-row">
 
-<div class="w3-half" style="padding:0 20px 0 0">
-<a href="00_basics/000_first/" class="md-button md-button--primary" style="width:300px">Python: le basi!!!</a>
+<div class="w3-half" style="padding:0 10px">
+<a href="basics/000_first/" class="md-button md-button--primary" style="width:230px">Python: le basi!!!</a>
 <p>In questo gruppo trovate le dispense di base sulla programmazione Python per iniziare il percorso
 di apprendimento</p>
 <br>
-</div>
-
-<div class="w3-half" style="padding:0 0 0 20px">
-<a href="11_theory/00_intro/" class="md-button" style="width:300px">Reti: teoria</a>
-<p>La teoria delle reti: dal modello OSI alle implementazioni moderne su cui si basa la Suite Internet!</p>
 <br>
 </div>
 
-<div class="w3-half" style="padding:0 20px 0 0">
-<a href="01_OOP/000_intro/" class="md-button" style="width:300px">Python: OOP</a>
-<p>La base della programmazione moderna: impariamo a programmare in Python secondo il paradigma della OOP!</p>
+<div class="w3-half" style="padding:0 10px">
+<a href="OOP/000_intro/" class="md-button" style="width:230px">Python: OOP</a>
+<p>La base di tutta la programmazione moderna: impariamo a programmare in Python secondo il paradigma della OOP!</p>
+<br>
 <br>
 </div>
 
-<div class="w3-half" style="padding:0 0 0 20px">
-<a href="12_network/00_intro/" class="md-button" style="width:300px">Programmazione di rete</a>
-<p>Tecniche di programmazione di rete in Python: la base comune, le librerie più utilizzate, gli strumenti del web!</p>
-<br>
-</div>
-
-<div class="w3-half" style="padding:0 20px 0 0">
-<a href="02_wx/000_intro/" class="md-button" style="width:300px">wxPython GUI</a>
-<p>Una libreria Python basata su wxWidgets per la programmazione grafica e l'implementazione di programmi basati su GUI</p>
-<br>
-</div>
-
-<div class="w3-half" style="padding:0 0 0 20px">
-<a href="99_insights/00_intro/" class="md-button" style="width:300px">Approfondimenti</a>
+<div class="w3-half" style="padding:0 10px">
+<a href="insights/00_intro/" class="md-button" style="width:230px">Approfondimenti</a>
 <p>L'ultima sezione del sito, dedicata allo studio e agli approfondimenti di argomenti spesso "tangenti" al corso di programmazione Python</p>
+<br>
+<br>
+</div>
+
+<div class="w3-half" style="padding:0 10px">
+<a href="wx/000_intro/" class="md-button" style="width:230px">wxPython GUI</a>
+<p>Una semplice libreria Python, basata su wxWidgets per la programmazione grafica e l'implementazione di programmi basati su GUI</p>
+<br>
 <br>
 </div>
 
