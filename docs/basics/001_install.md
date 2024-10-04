@@ -140,6 +140,22 @@ Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
 aiuto. Appena avete finito procedete gli Hello World Test 
 del prossimo capitolo.
 
+
+<!-- ############################################################################################ -->
+## Thonny, impostazioni di base
+
+
+![image](images/Thonny_General.jpg)
+
+
+![image](images/Thonny_Editor.jpg)
+
+
+![image](images/Thonny_Run_Debug.jpg)
+
+
+![image](images/Thonny_Assistant.jpg)
+
 <br>
 <br>
 <br>
