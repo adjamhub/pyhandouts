@@ -136,10 +136,6 @@ function play1() {
 </script>
 
 
-Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
-aiuto. Appena avete finito procedete gli Hello World Test 
-del prossimo capitolo.
-
 
 <!-- ############################################################################################ -->
 ## Thonny, impostazioni di base
@@ -170,6 +166,11 @@ Nella scheda **ASSISTANT** abbiamo disabilitato tutto! Durante l'esecuzione andr
 ![image](images/Thonny_Assistant.png)
 
 
+<br>
+
+Spero tutto questo sia sufficiente. Altrimenti contattatemi per avere
+aiuto. Appena avete finito procedete gli Hello World Test 
+del prossimo capitolo.
 
 <br>
 <br>
