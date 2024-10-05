@@ -144,17 +144,19 @@ del prossimo capitolo.
 <!-- ############################################################################################ -->
 ## Thonny, impostazioni di base
 
+(fra un pò ci scriverò qualcosa di intelligente... per adesso avete gli screenshot delle impostazioni
+consigliate...)
 
-![image](images/Thonny_General.jpg)
-
-
-![image](images/Thonny_Editor.jpg)
-
-
-![image](images/Thonny_Run_Debug.jpg)
+![image](images/Thonny_General.png)
 
 
-![image](images/Thonny_Assistant.jpg)
+![image](images/Thonny_Editor.png)
+
+
+![image](images/Thonny_Run_Debug.png)
+
+
+![image](images/Thonny_Assistant.png)
 
 <br>
 <br>
