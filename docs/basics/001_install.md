@@ -144,19 +144,32 @@ del prossimo capitolo.
 <!-- ############################################################################################ -->
 ## Thonny, impostazioni di base
 
-(fra un pò ci scriverò qualcosa di intelligente... per adesso avete gli screenshot delle impostazioni
-consigliate...)
+
+Per accedere al menù delle impostazioni di Thonny, selezionate la voce STRUMENTI ---> OPZIONI.
+
+
+Nella scheda **GENERALE** vi invio a selezionare la voce evidenziata. Le altre sono a vostro piacimento:
 
 ![image](images/Thonny_General.png)
 
 
+Nella scheda **EDITOR** ci sono le opzioni più importanti per lavorare bene durante la scrittura del software. 
+Nel laboratorio sono impostate così. Quelle sottolineate sono quelle assolutamente necessarie!!!
+
 ![image](images/Thonny_Editor.png)
 
+
+Nella scheda **RUN && DEBUG** c'è solo una opzione interessante per noi: forza il salvataggio automatico dei programmi
+da eseguire!
 
 ![image](images/Thonny_Run_Debug.png)
 
 
+Nella scheda **ASSISTANT** abbiamo disabilitato tutto! Durante l'esecuzione andremo a leggere i suggerimenti direttamente dall'interprete nella shell!
+
 ![image](images/Thonny_Assistant.png)
+
+
 
 <br>
 <br>
