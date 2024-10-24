@@ -118,7 +118,7 @@ Questo si capisce: come per dichiarare una funzione si utilizza la clausola def,
 Ricordate?
 
 Per evitare confusione fra i concetti mi piace utilizzare i termini classe e oggetto. In OOP solitamente si usa il
-termine "classe" per la definizione dell'oggetto, mentre "oggetto" è l'istanza del tipo classe definito. Prima abbiamo scritto:
+termine ***classe*** per la definizione dell'oggetto, mentre ***oggetto*** è l'istanza del tipo classe definito. Prima abbiamo scritto:
 
 `cx = Cerchio(4)`
 
@@ -591,7 +591,7 @@ class Persona:
         self.__nome = name
 
 p = Persona("Ciccio")
-print(p.__nome)      # ERRORE!!! Adesso sono solo un somaro...
+print(p.__nome)      # ERRORE!!! Adesso sono anche un somaro...
 ```
 
 Capito come Python rende la visibilità dei membri delle classi, passiamo alla domanda di concetto: che cosa può interessarci tutto ciò? Risposta: a proteggere le variabili!
@@ -601,7 +601,7 @@ Dall'esterno. Da un uso libero. Da chi vuole visualizzarle senza permesso. Da ch
 
 Inserisco un pezzo di codice di linguaggio C++ nella speranza di rendere evidente il concetto:
 
-```c
+```c title="Esempio di classe in linguaggio C++"
 class Persona
 {
 // attributi privati (in C gli attributi si segnano con un solo underscore)
@@ -700,7 +700,7 @@ diventi una `Python property`. La `docstring` interna specifica la descrizione d
 
 
 > Una proprietà è una caratteristica tipica di un oggetto, 
-> a cui possono essere aggiunti funzioni `getter` e `setter`.
+> a cui possono essere aggiunti funzioni `getter` , `setter` e... un'altra che non studieremo!!!.
 
 
 La definizione della proprietà implica automaticamente l'esistenza della funzione `getter`, quella che ritorna il valore. Se vogliamo inserire anche la funzione
@@ -767,7 +767,7 @@ print("Area:", ret.area)    # scrive "Area: 20"
 ret.area = 30               # ERRORE!!! Quali sono base e altezza di un rettangolo di area 30? Boh...
 ```
 
-Mi sembra facile.
+
 Provate a verificare la vostra comprensione coi seguenti esercizi.
 
 
