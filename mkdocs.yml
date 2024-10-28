@@ -71,6 +71,7 @@ markdown_extensions:
  
 nav:
   - Home: index.md
+# ---------------------------------------------------------------    
   - Basics:
     - Introduzione: basics/000_first.md
     - Installazione: basics/001_install.md
@@ -83,12 +84,13 @@ nav:
     - Moduli: basics/106_mod.md
     - Files: basics/107_files.md
     - CSV: basics/108_csv.md
+# ---------------------------------------------------------------    
   - OOP:
     - Introduzione: OOP/000_intro.md
     - Classi e Oggetti: OOP/001_classes_objects.md
-#    - Classi e Oggetti 2: OOP/002_classes_objects.md
     - Ereditarietà: OOP/002_inheritance.md
     - Caratteristiche Avanzate: OOP/003_advanced.md
+   # ---------------------------------------------------------------    
   - wxPython:
     - Introduzione: wx/000_intro.md
     - Primi concetti: wx/101_first_things.md
@@ -104,13 +106,13 @@ nav:
     - Printing: wx/172_printing.md
     - Network: wx/180_network.md
     - wx Tools: wx/299_tools.md
+   # ---------------------------------------------------------------    
   - Insights:
     - Introduzione: insights/00_intro.md
     - Pip: insights/01_pip.md
     - Ambienti Virtuali: insights/02_venv.md
     - Turtle: insights/11_turtle.md
     - PyGame: insights/12_pygame1.md
-#    - PyGame (avanzato): insights/13_pygame2.md
     - OpenCV: insights/21_opencv.md
     - MySql: insights/41_mysql.md
     - sqlite: insights/42_sqlite.md
