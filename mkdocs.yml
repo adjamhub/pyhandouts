@@ -112,9 +112,6 @@ nav:
     - PyGame: insights/12_pygame1.md
 #    - PyGame (avanzato): insights/13_pygame2.md
     - OpenCV: insights/21_opencv.md
-    - Requests: insights/31_requests.md
-    - Soup: insights/32_bs4.md
-    - Flask: insights/35_flask.md
     - MySql: insights/41_mysql.md
     - sqlite: insights/42_sqlite.md
     - MongoDB: insights/43_mongodb.md
