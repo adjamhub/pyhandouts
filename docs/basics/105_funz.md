@@ -1,10 +1,6 @@
 # Funzioni
 
 
-<!-- ############################################################################################ -->
-
-## Funzioni in Python
-
 Il termine "*funzione*" viene utilizzato in programmazione con un significato analogo a quello della matematica: 
 una funzione è una procedura che può ricevere valori come argomenti e restituire un **unico** valore come risultato. 
 Nel linguaggio comune si dice anche che una funzione **ritorna** un valore.
