@@ -82,6 +82,8 @@ nav:
     - Sequenze: basics/104_seq.md
     - Funzioni: basics/105_funz.md
     - Moduli: basics/106_mod.md
+    - Python Standard Library: basics/106_psl.md
+    - PyPi: basics/106_pypi.md
     - Files: basics/107_files.md
     - CSV: basics/108_csv.md
 # ---------------------------------------------------------------    
