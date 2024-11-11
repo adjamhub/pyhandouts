@@ -45,7 +45,7 @@ Quando ha finito... ve ne accorgerete.
 
 
 <!-- ############################################################################################ -->
-### Modulo pillow
+## Modulo pillow
 
 
 Il modulo Pillow è considerato il modulo standard per la manipolazione delle immagini in Python. 
@@ -98,7 +98,7 @@ convertedImg.show()
 Per ritagliare una immagine (crop) occorre utilizzare il metodo: `Image.crop( (left, upper, right, lower) )`
 
 
-``` py title="ritaglia l'immagine iniziale"
+``` python
 # ritagliamo l'immagine da (0,0) in alto a sx a (300,300) in basso a dx
 croppedImage = img.crop((0,0,300,300))
 ```
@@ -131,9 +131,27 @@ Basta!
 Volete fare, sapere di più? Leggete la documentazione!
 
 
+------------------------------------------------------------------------------------------------
+
+**Esercizio 661**
+
+Data una immagine qualsiasi (ad esempio, la fantastica `pippo.jpg`, da mettere nella stessa cartella del seguente script) utilizzare il modulo pillow
+per creare le immagini `pippoAllaRovescia.jpg`, contenente l'immagine iniziale rovesciata (ruotata di 180 gradi) e `pippoBiancoNeroRovesciato.jpg` contenente 
+l'immagine iniziale rovesciata e in scala di grigi
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 662**
+
+Data una immagine qualsiasi (ad esempio, la fantastica `pippo.jpg`, da mettere nella stessa cartella del seguente script) utilizzare il modulo pillow
+per creare le immagini `pippo_100.jpg`, contenente l'immagine iniziale ridimensionata a 100 x 100 pixel e `pippo_100_50.jpg` contenente l'immagine precedente 
+ritagliata dall'alto per diventare 100 x 50 pixel.
+
+------------------------------------------------------------------------------------------------
+
 
 <!-- ############################################################################################ -->
-### Modulo pyscreenshot 
+## Modulo pyscreenshot 
 
 
 Il modulo pscreenshot serve per fare gli screenshot del Desktop.
@@ -143,10 +161,10 @@ pillow. Installate il modulo chiamato "pyscreenshot" (pillow ce lo
 dovreste avere da prima), poi su una shell python digitate:
 
 
-    >>> import pyscreenshot
-    
-    >>> dir(pyscreenshot)
-
+``` python
+>>> import pyscreenshot
+>>> dir(pyscreenshot)
+```
 
 vedrete elencate le funzioni offerte dal modulo pyscreenshot. Come ci
 siamo sempre detti, quelle che iniziano con doppio underscore vanno
@@ -172,9 +190,24 @@ potete decidere di fare lo screenshot ad una sezione dello schermo. La
 prova di questo ve la lascio come esercizio.
 
 
+------------------------------------------------------------------------------------------------
+
+**Esercizio 671**
+
+Utilizzare il modulo `pyscreenshot` per fare uno screenshot dello schermo, ridimensionarlo a 800 x 600 pixel e modificarlo in scala di grigi.
+Salvare l'immagine ottenuta.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 672**
+
+Utilizzare i moduli `time` e `pyscreenshot` per fare uno screenshot del desktop vuoto: una volta eseguito, il programma fornirà 5 secondi al'utente prima di fare lo screenshot,
+in modo tale da fornirgli il tempo di *liberare* lo schermo.
+
+------------------------------------------------------------------------------------------------
 
 <!-- ############################################################################################ -->
-### Modulo matplotlib
+## Modulo matplotlib
 
 
 Il modulo Matplotlib serve per creare dei plot, ovvero dei grafici a
@@ -320,6 +353,24 @@ Oltre alla documentazione (so che non la leggerete) ci sono molti esempi
 e tutorial...
 
 Se proprio volete imparare... basta solo fare un po' di esercizio :)
+
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 681**
+
+Provate a realizzare una coppia di grafici secondo le seguenti specifiche: sulle ascisse ci vanno le date delle valutazioni e sull'ordinata i voti ottenuti.
+Il primo grafico rappresenta i voti di una materia a vostra scelta, mentre il secondo è la riga orizzontale fissa che rappresenta la sufficienza.
+Visualizzare entrambi nello stesso plot.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 682**
+
+Ci penso...
+
+------------------------------------------------------------------------------------------------
+
 
 <br>
 <br>
