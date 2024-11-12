@@ -193,20 +193,20 @@ Spero sia abbastanza chiaro. Nel dubbio… lo sapete già! Funzioni `dir()` ed `
 ### Esercizi sui files
 
 
-**Esercizio 701 (1)**
+**Esercizio 701 (parte 1)**
 
 Scrivere un programma che chiede all’utente di digitare il proprio nome e poi salva la stringa digitata sul file "stringa.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 701 (2)**
+**Esercizio 701 (parte 2)**
 
-Scrivere un programma che carica in lettura il file "stringa.txt" creato nell’esercizio precedente e ne visualizza 
+Scrivere un altro programma che carica in lettura il file "stringa.txt" creato nell’esercizio precedente e ne visualizza 
 il contenuto sullo schermo (dovrebbe visualizzare la stringa digitata prima).
 
 ------------------------------------------------------------
 
-**Esercizio 703 (1)**
+**Esercizio 702 (parte 1)**
 
 Scrivere un programma che chiede all’utente di digitare un numero intero e poi salva il numero digitato sul file "intero.txt".
 
@@ -218,27 +218,27 @@ Scrivere un programma che chiede all’utente di digitare un numero intero e poi
 
 ------------------------------------------------------------
 
-**Esercizio 703 (2)**
+**Esercizio 702 (parte 2)**
 
-Scrivere un programma che carica in lettura il file "intero.txt" creato nell’esercizio precedente e salva il suo contenuto, 
+Scrivere un altro programma che carica in lettura il file "intero.txt" creato nell’esercizio precedente e salva il suo contenuto, 
 convertito in intero, su una variabile. Visualizzare la variabile e verificare il suo tipo con la funzione `type()`.
 
 ------------------------------------------------------------
 
-**Esercizio 705 (1)**
+**Esercizio 703 (parte 1)**
 
 Scrivere un programma che chiede all’utente di digitare un numero reale e poi salva il numero digitato sul file "reale.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 705 (2)**
+**Esercizio 703 (parte 2)**
 
 Scrivere un programma che carica in lettura il file "reale.txt" creato nell’esercizio precedente e salva il suo contenuto, convertito in reale, su una variabile. 
 Visualizzare la variabile e verificare il suo tipo con la funzione type().
 
 ------------------------------------------------------------
 
-**Esercizio 707 (1)**
+**Esercizio 704 (parte 1)**
 
 Creare una lista contenente i nomi di alcuni animali, visualizzarla sullo schermo e poi andare a copiarne il contenuto nel file "animali.txt" avendo cura di mettere 
 ogni animale in una nuova riga.<br>
@@ -246,13 +246,13 @@ Eseguito il codice verificare che il file è effettivamente ben formato con un a
 
 ------------------------------------------------------------
 
-**Esercizio 707 (2)**
+**Esercizio 704 (parte 2)**
 
 Aprire in lettura il file "animali.txt" creato nell’esercizio precedente e leggere il contenuto riga per riga visualizzando ogni volta l’animale "estratto".
 
 ------------------------------------------------------------
 
-**Esercizio 707 (3)**
+**Esercizio 704 (parte 3)**
 
 Aprire il file "animali.txt" in modalità "append" (aggiunta a fine file). Chiedere all’utente di inserire il nome di un animale e procedere all’inserimento nel file. 
 Ripetere l’operazione 2 o 3 volte, aggiungendo ogni volta l’animale inserito nel file.<br>
@@ -300,7 +300,7 @@ visualizzare il risultato a video e salvarlo nel file "media.txt".
 
 ------------------------------------------------------------
 
-**Esercizio 715 (1): ricerca elementi**
+**Esercizio 715 (parte 1): ricerca elementi**
 
 Creare un file di testo chiamato "sequenza.txt", salvando al suo interno una certa quantità di numeri interi, uno per riga.
 Implementare un software che legge dal file "sequenza.txt" i dati, li carica su una lista e li visualizza a video. Chiedere poi all'utente di inserire un numero intero
@@ -309,19 +309,20 @@ Scrivere tutte le posizioni trovate riga per riga nel file "posizioni.txt". Se i
 
 ------------------------------------------------------------
 
-**Esercizio 715 (2): ordinamenti**
+**Esercizio 715 (parte 2): ordinamenti**
 
 Scrivete un programma che legge dal file "sequenza.txt" una sequenza di interi, la ordina in modo crescente e la salva ordinata sul file "ordinati.txt" (**uno per riga**).
 
 ------------------------------------------------------------
 
-**Esercizio 717**
+**Esercizio 716**
 
 Creare un file chiamato "settings.txt" contenente una serie di righe del tipo chiave = valore (ad esempio: nome=Andrea, cognome=Diamantini…). 
 Importare i dati dal file e caricarli in un dizionario creato appositamente con la parte prima dell’uguale "strizzata" degli spazi come chiave e la parte dopo l’uguale, 
 "strizzata" di spazi e newline come valore.
 
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 ## Modulo Pathlib
 
@@ -434,6 +435,7 @@ L’oggetto Path espone fra le altre le seguenti funzioni:
     Per vedere **tutte** le funzioni offerte dall'oggetto Path:
     
     ``` py
+    >>> from pathlib import Path
     >>> dir(Path)
     ```
 
