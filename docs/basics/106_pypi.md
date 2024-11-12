@@ -100,7 +100,7 @@ Per ritagliare una immagine (crop) occorre utilizzare il metodo: `Image.crop( (l
 
 ``` python
 # ritagliamo l'immagine da (0,0) in alto a sx a (300,300) in basso a dx
-croppedImage = img.crop((0,0,300,300))
+croppedImage = img.crop( (0,0, 300,300) )
 ```
 
 
