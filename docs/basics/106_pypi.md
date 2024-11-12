@@ -288,7 +288,9 @@ plt.grid(axis="y")
 
 Se vogliamo inserire più di un grafico, si potrebbe inserire una legenda
 
-```python
+```python title="2 grafici nello stesso piano cartesiano"
+import matplotlib.pyplot as plt
+
 x = []
 f1 = []
 f2 = []
@@ -326,11 +328,14 @@ La libreria Matplotlib si può utilizzare anche per disegnare barre
 (verticali oppure orizzontali):
 
 
-```python
+```python title="Barre Verticali"
+import matplotlib.pyplot as plt
+
 nomi = ["Asini", "Bradipi", "Cavalli", "Daini"]
 numeri = [5, 8, 2, 4]
 
 plt.bar(nomi,numeri) # per le barre orizzontali, usa barh()
+plt.show()
 ```
     
 
