@@ -260,6 +260,13 @@ Terminato l’inserimento, chiudere il file e ripetere il codice dell’esercizi
 
 ------------------------------------------------------------
 
+**Esercizio 705**
+
+Il programma legge e modifica il file "contatore.txt", a seconda del suo contenuto. Se il file non esiste, si crea scrivendoci dentro il valore 1. Se esiste, se ne legge il contenuto
+e si modifica il file scrivendo in esso il numero successivo. Ad esempio, se il file contiene il numero 1, si scriverà al suo posto il numero 2. E così via, ad ogni esecuzione del programma.
+
+------------------------------------------------------------
+
 **Esercizio 710**
 
 Creare un file chiamato "parola.txt" nella stessa cartella del codice di questo esercizio, digitando al suo interno una parola qualsiasi. 
