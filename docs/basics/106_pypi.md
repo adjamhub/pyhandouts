@@ -175,10 +175,10 @@ grab().
 
 
 ```python
-import pyscreenshot as ss
+import pyscreenshot
 
-image = ss.grab()
-image.save('screenshot.png')
+shot = pyscreenshot.grab()
+shot.save('screenshot.png')
 ```
 
 
