@@ -49,8 +49,7 @@ Per quanto riguarda la gestione invece... qui tratteremo solo la gestione testua
 
 Vediamo alcuni semplici esempi:
 
-``` python
-# Esempio 1: creazione di un file con testo inserito all’interno
+``` python title="Esempio 1: creazione di un file con testo inserito all’interno"
 file = open("ciao.txt", "w")
 file.write("Ecco qua.\nCapito?")
 file.close()
@@ -61,8 +60,7 @@ L'esecuzione del codice lo crea con dentro scritto il testo indicato.
 Dopo aver eseguito questo codice, vedrete nella cartella del file python, un file chiamato "ciao.txt" che contiene 2 righe... 
 Nella stessa cartella creiamo un nuovo file sorgente con questo codice:
 
-``` python
-# Esempio 2: lettura del file "ciao.txt" creato sopra
+``` python title="Esempio 2: lettura del file "ciao.txt" creato sopra"
 file = open("ciao.txt", "r")
 contenuto = file.read()
 file.close()
@@ -78,8 +76,7 @@ Capito?
 
 Penso sia tutto abbastanza intuitivo da capire. Facciamo un esempio con la modalità `append`
 
-``` python
-# Esempio 3: aggiunta a fine file
+``` python title="Esempio 3: aggiunta a fine file"
 file = open("ciao.txt", "a")
 file.write("\nSperiamo di sì")
 file.close()
@@ -104,8 +101,7 @@ Se vogliamo leggere il file di testo riga per riga abbiamo due possibilità:
 1.  il ciclo for
 2.  la funzione readline()
 
-``` python
-# Esempio 4: lettura delle righe con ciclo for
+``` python title="Esempio 4: lettura delle righe con ciclo for"
 file = open("ciao.txt", "r")
 for riga in file:
     print(riga)
@@ -123,8 +119,7 @@ Speriamo di sì
 Stesso risultato lo si ottiene con la funzione `readline()` che, come dice il nome, legge una linea del file di testo. 
 Il difetto di questa seconda modalità è che devi sapere quante righe contiene il file...
 
-``` python
-# Esempio 5: lettura delle righe con funzione readline()
+``` python title="Esempio 5: lettura delle righe con funzione readline()"
 file = open("ciao.txt", "r")
 riga1 = file.readline()
 print(riga1)
@@ -257,13 +252,6 @@ Aprire in lettura il file "animali.txt" creato nell’esercizio precedente e leg
 Aprire il file "animali.txt" in modalità "append" (aggiunta a fine file). Chiedere all’utente di inserire il nome di un animale e procedere all’inserimento nel file. 
 Ripetere l’operazione 2 o 3 volte, aggiungendo ogni volta l’animale inserito nel file.<br>
 Terminato l’inserimento, chiudere il file e ripetere il codice dell’esercizio precedente per visualizzarne il contenuto.
-
-------------------------------------------------------------
-
-**Esercizio 705**
-
-Il programma legge e modifica il file "contatore.txt", a seconda del suo contenuto. Se il file non esiste, si crea scrivendoci dentro il valore 1. Se esiste, se ne legge il contenuto
-e si modifica il file scrivendo in esso il numero successivo. Ad esempio, se il file contiene il numero 1, si scriverà al suo posto il numero 2. E così via, ad ogni esecuzione del programma.
 
 ------------------------------------------------------------
 
@@ -459,9 +447,8 @@ from pathlib import Path
 
 <br>
 
-**Esempio 1: verificare se nella Home è presente un file chiamato "pippo"**
 
-``` python
+``` python title="Esempio 1: verificare se nella Home è presente un file chiamato 'pippo'"
 percorso = Path.home()
 pippo = percorso / "pippo"
 if pippo.exists():
@@ -476,9 +463,8 @@ else:
 
 <br>
 
-**Esempio 2: elenco dei file *.txt presenti nel Desktop dell’utente "pippo"**
 
-``` python
+``` python title="Esempio 2: elenco dei file *.txt presenti nel Desktop dell’utente 'pippo'"
 desk = Path.home() / "Desktop"
 for f in desk.glob("*.txt"):
     print(f, "(file)")
@@ -496,9 +482,8 @@ for f in desk.glob("*.txt"):
 
 <br>
 
-**Esempio 3: elenco del contenuto della home con suggerimento a fianco**
 
-``` python
+``` python title="Esempio 3: elenco del contenuto della home con suggerimento a fianco"
 home = Path.home()
 for f in home.iterdir():
     if f.is_file():
@@ -512,9 +497,8 @@ for f in home.iterdir():
 <br>
 
 
-**Esempio 4: creazione, cambio nome ed eliminazione di una cartella nella home utente**
 
-``` python
+``` python title="Esempio 4: creazione, cambio nome ed eliminazione di una cartella nella home utente"
 home = Path.home()
 
 # creazione della cartella "ciao" nella home
@@ -533,9 +517,8 @@ cartellaSalve.rmdir()
 
 <br>
 
-**Esempio 5: creazione del file "pippo.txt" nel Desktop**
 
-``` python
+``` python title="Esempio 5: creazione del file "pippo.txt" nel Desktop"
 desktop = Path.home() / "Desktop"
 filePath = desktop / "pippo.txt"
 file = filePath.open("w")
@@ -554,7 +537,7 @@ Adesso tocca a voi provare il codice degli esempi e poi procedere con gli eserci
 
 **Esercizio 731**
 
-Scrivere un programama che elenca tutto il contenuto del proprio Desktop e verificare per ogni elemento se esso è un file oppure una cartella.
+Scrivere un programma che elenca tutto il contenuto del proprio Desktop e verificare per ogni elemento se esso è un file oppure una cartella.
 
 ------------------------------------------------------------
 
@@ -599,12 +582,21 @@ Creare dentro la cartella “esercizio” un file chiamato “sommaPari” conte
 
 **Esercizio 736**
 
+Ogni volta che esegui il programma "es736.py" questo aggiorna un file chiamato "contatore.txt", salvato nella home, a seconda del suo contenuto. 
+Se il file non esiste, si crea scrivendoci dentro il valore 1. Se esiste, se ne legge il contenuto e si modifica il file scrivendo in esso il numero successivo. 
+Ad esempio, se il file contiene il numero 3, si scriverà al suo posto il numero 4. E così via, ad ogni esecuzione del programma.
+
+------------------------------------------------------------
+
+
+**Esercizio 737**
+
 Chiedere all'utente di inserire una stringa.<br>
 Visualizzare l’elenco di tutti i file con estensione `txt` oppure `py` presenti nella propria cartella Downloads al cui interno è presente la stringa inserita.
 
 ------------------------------------------------------------
 
-**Esercizio 737**
+**Esercizio 738**
 
 Creare un programma per ripulire la cartella dei Downloads.<br>
 Prima visualizza la stringa: *"Nella cartella Downloads ci sono TOT files. Vuoi cancellarli?" (T) Sì, tutti. (U) guardiamoli uno per volta (N) No* <br>
@@ -614,7 +606,7 @@ Se seleziona U, per ogni file visualizza il nome e chiedi: "Vuoi cancellarlo? (S
 
 ------------------------------------------------------------
 
-**Esercizio 738 (Sposta Files)**
+**Esercizio 739 (Sposta Files)**
 
 Crea sul Desktop una cartella chiamata ESERCIZI. Cerca i files Python presenti nella tua cartella Documenti e spostali nella cartella ESERCIZI.
 
