@@ -518,7 +518,7 @@ cartellaSalve.rmdir()
 <br>
 
 
-``` python title="Esempio 5: creazione del file "pippo.txt" nel Desktop"
+``` python title="Esempio 5: creazione del file 'pippo.txt' nel Desktop"
 desktop = Path.home() / "Desktop"
 filePath = desktop / "pippo.txt"
 file = filePath.open("w")
