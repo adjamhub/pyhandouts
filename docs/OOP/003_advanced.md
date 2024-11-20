@@ -70,15 +70,13 @@ sotto.
 
 
 La funzione `__str__` permette ad un oggetto della classe di essere
-utilizzato nella funzione print(). Questa per noi non dovrebbe più
-risultare un problema.
+utilizzato nella funzione `print()`. Questa cosa dovremmo già averla capita...
 
 Le funzioni aritmetiche (addizione, sottrazione, etc...) prendono come
-parametro 2 oggetti di una classe (tipicamente coi 2 parametri self ,
-other ) e ritornano sempre un oggetto della classe stessa!
+parametro 2 oggetti di una classe (tipicamente coi 2 parametri `self` , `other`) 
+e ritornano sempre un oggetto della classe stessa!
 
-Ripropongo la funzione `__add__` della classe Punto2D implementata
-poche righe fa:
+Ripropongo la funzione `__add__` della classe `Punto2D` implementata poche righe fa:
 
 ``` python
 # come vedete la funzione prende 2 parametri, che rappresentano
@@ -93,14 +91,12 @@ def __add__ (self, other):
 ```
 
 Le funzioni di confronto (minore, maggiore, diverso, etc...) prendono
-come parametro i 2 oggetti da confrontare e ritornano un booleano
+come parametro i 2 oggetti da confrontare e ritornano un booleano.
 
-ad esempio per implementare l'operatore minore bisogna definire la
-funzione `__lt__` che prende i 2 parametri `self`, `other` che
-rappresentano i 2 oggetti. Se secondo la tua implementazione la funzione
-ritorna True significa che il primo oggetto è minore del secondo,
-altrimenti se si ritorna False significa che il primo oggetto NON è
-minore del secondo.
+Ad esempio per implementare l'operatore minore bisogna definire la funzione `__lt__`.
+Essa prende i 2 parametri `self`, `other` che rappresentano i 2 oggetti. 
+Se la funzione ritorna `True` significa che il primo oggetto è minore del secondo,
+altrimenti, se ritorna `False` significa che il primo oggetto NON è minore del secondo.
 
 ``` python
 # dati 2 punti, uno è minore dell’altro 
