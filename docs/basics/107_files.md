@@ -245,7 +245,7 @@ Eseguito il codice verificare che il file è effettivamente ben formato con un a
 
 **Esercizio 704 (parte 2)**
 
-Aprire in lettura il file "animali.txt" creato nell’esercizio precedente e leggere il contenuto riga per riga visualizzando ogni volta l’animale "estratto".
+Aprire in lettura il file "animali.txt" creato nella parte 1 e leggere il contenuto riga per riga visualizzando ogni volta l’animale "estratto".
 
 ------------------------------------------------------------
 
@@ -257,17 +257,28 @@ Terminato l’inserimento, chiudere il file e ripetere il codice dell’esercizi
 
 ------------------------------------------------------------
 
+**Esercizio 704 (parte 4)**
+
+Creare una lista, inizialmente vuota.<br>
+Aprire il file "animali.txt" in lettura e inserire ogni animale presente nel file come elemento (stringa) nella lista.<br>
+Visualizzare la lista così ottenuta (attenzione ai caratteri di a capo!!!")
+
+------------------------------------------------------------
+
 **Esercizio 710**
 
-Creare un file chiamato "parola.txt" nella stessa cartella del codice di questo esercizio, digitando al suo interno una parola qualsiasi. 
-Provare ad aprire il file in modalità "x" per verificare se è possibile andarlo a sovrascrivere. 
-Ripetere l’operazione in modalità "w" e infine controllare il contenuto del file.
+Creare a mano un file chiamato "parola.txt" nella stessa cartella del codice di questo esercizio, digitando al suo interno una parola qualsiasi.
+
+Scrivere un programma per provare ad aprire il file in modalità "x" per verificare se è possibile andarlo a sovrascrivere. 
+
+Ripetere l’operazione in modalità "w" e infine controllare il contenuto del file: cosa contiene adesso???
 
 ------------------------------------------------------------
 
 **Esercizio 711: area rettangolo**
 
-Creare un file di testo, chiamato "lati.txt" salvando all'interno due numeri reali qualsiasi, uno per riga.<br>
+Creare a mano un file di testo, chiamato "lati.txt" salvando all'interno due numeri reali qualsiasi, uno per riga.
+
 Implementare un software che legge dal file "lati.txt" due valori reali per la base e l'altezza di un rettangolo, visualizza i dati su schermo, 
 calcola e visualizza l’area del rettangolo e salva il valore calcolato nel file "area.txt".
 
@@ -275,10 +286,12 @@ calcola e visualizza l’area del rettangolo e salva il valore calcolato nel fil
 
 **Esercizio 712: secondi trascorsi**
 
-Creare un file di testo chiamato "secondi.txt", contenente al suo interno un numero intero qualsiasi.<br>
+Creare a mano un file di testo chiamato "secondi.txt", contenente al suo interno un numero intero positivo qualsiasi.<br>
+
 Implementare un software che legge dal file "secondi.txt" un valore intero che rappresenta i secondi trascorsi dalla mezzanotte di un dato giorno e che trasforma questo valore, 
 visualizzandolo su schermo in ore:minuti:secondi. Ad esempio, se il valore caricato dal file "secondi.txt" fosse 4000 (uguale a 3600, 1 ora, + 360, 6 minuti, + 40), 
-il programma scriverebbe su video 1 : 6 : 40.<br>
+il programma dovrà visualizzare a video 01:06:40, aggiungendo opportunamente uno ZERO in caso di cifra unica.
+
 I numeri vanno poi memorizzati nello stesso formato nel file "orario.txt".
 
 ------------------------------------------------------------
@@ -291,7 +304,8 @@ Dichiarare una lista di 5 stringhe e procedere ad un salvataggio su file delle p
 
 **Esercizio 714: media dei numeri**
 
-Creare un file di testo chiamato "numeri.txt" salvando al suo interno 10 numeri interi, uno per riga.<br>
+Creare a mano un file di testo chiamato "numeri.txt" salvando al suo interno 10 numeri interi, uno per riga.<br>
+
 Implementare un software che legge dal file "numeri.txt", caricarne il contenuto su una lista, procedere al calcolo della media aritmetica dei numeri inseriti, 
 visualizzare il risultato a video e salvarlo nel file "media.txt".
 
@@ -299,7 +313,8 @@ visualizzare il risultato a video e salvarlo nel file "media.txt".
 
 **Esercizio 715 (parte 1): ricerca elementi**
 
-Creare un file di testo chiamato "sequenza.txt", salvando al suo interno una certa quantità di numeri interi, uno per riga.
+Creare a mano un file di testo chiamato "sequenza.txt", salvando al suo interno una certa quantità di numeri interi, uno per riga.
+
 Implementare un software che legge dal file "sequenza.txt" i dati, li carica su una lista e li visualizza a video. Chiedere poi all'utente di inserire un numero intero
 e procedere alla ricerca di questo nella sequenza caricata dal file. Visualizzare le posizioni ove questo numero si trovi.<br>
 Scrivere tutte le posizioni trovate riga per riga nel file "posizioni.txt". Se il numero non viene mai trovato, si inserisca nel file la scritta maiuscola "NON TROVATO".
