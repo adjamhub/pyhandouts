@@ -505,8 +505,8 @@ Contare i numeri che vanno da 10 a 20. (dovrebbe fare 11...)
 
 **Esercizio 323**
 
-Dato un numero intero N, inserito dall'utente, visualizzare la somma dei
-numeri da 1 a N
+Dato un numero intero chiamato PAOLO, inserito dall'utente, visualizzare la somma dei
+numeri da 1 a PAOLO (compreso)
 
 
 ------------------------------------------------------------------------------------------
