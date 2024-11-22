@@ -60,7 +60,7 @@ L'esecuzione del codice lo crea con dentro scritto il testo indicato.
 Dopo aver eseguito questo codice, vedrete nella cartella del file python, un file chiamato "ciao.txt" che contiene 2 righe... 
 Nella stessa cartella creiamo un nuovo file sorgente con questo codice:
 
-``` python title="Esempio 2: lettura del file "ciao.txt" creato sopra"
+``` python title="Esempio 2: lettura del file 'ciao.txt' creato sopra"
 file = open("ciao.txt", "r")
 contenuto = file.read()
 file.close()
@@ -74,7 +74,9 @@ Ecco qua.
 Capito?
 ```
 
+
 Penso sia tutto abbastanza intuitivo da capire. Facciamo un esempio con la modalità `append`
+
 
 ``` python title="Esempio 3: aggiunta a fine file"
 file = open("ciao.txt", "a")
