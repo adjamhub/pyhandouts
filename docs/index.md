@@ -5,9 +5,6 @@ hide:
   - footer
 ---
 <style>
-.w3-row:after,.w3-row:before{content:"";display:table;clear:both}
-.w3-half{float:left;width:100%;}
-@media (min-width:601px){.w3-half{width:49.99999%}}
 </style>
 
 <body>
@@ -18,47 +15,37 @@ hide:
 
 <h1 style="font-weight:bold;margin:0px">Corso Python</h1>
 <p>Le dispense per le lezioni di programmazione del prof.</p>
-
-<br>
-<br>
-
 </section>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <section class="">
 
-<div class="w3-row">
+<div style="padding:20px; width: 70%">
+<a href="basics/000_first/"><b>Getting Started!</b></a>
+<p>Le prime cose da sapere e da fare per essere operativi con Python: linguaggi compilati e interpretati. Scaricare e installare Python, Primi programmi.
+</p>
+</div>
 
-<div class="w3-half" style="padding:0 10px">
-<a href="basics/000_first/" class="md-button md-button--primary" style="width:230px">Python: le basi!!!</a>
+<div style="padding:20px; width: 70%">
+<a href="basics/000_first/"><b>Python: le basi!!!</b></a>
 <p>In questo gruppo trovate le dispense di base sulla programmazione Python per iniziare il percorso
 di apprendimento</p>
-<br>
-<br>
 </div>
 
-<div class="w3-half" style="padding:0 10px">
-<a href="OOP/000_intro/" class="md-button" style="width:230px">Python: OOP</a>
+<div style="padding:20px; width: 70%">
+<a href="OOP/000_intro/"><b>Python: OOP</b></a>
 <p>La base di tutta la programmazione moderna: impariamo a programmare in Python secondo il paradigma della OOP!</p>
-<br>
-<br>
 </div>
 
-<div class="w3-half" style="padding:0 10px">
-<a href="insights/00_intro/" class="md-button" style="width:230px">Approfondimenti</a>
-<p>L'ultima sezione del sito, dedicata allo studio e agli approfondimenti di argomenti spesso "tangenti" al corso di programmazione Python</p>
-<br>
-<br>
-</div>
-
-<div class="w3-half" style="padding:0 10px">
-<a href="wx/000_intro/" class="md-button" style="width:230px">wxPython GUI</a>
+<div style="padding:20px; width: 70%">
+<a href="wx/000_intro/"><b>wxPython GUI</b></a>
 <p>Una semplice libreria Python, basata su wxWidgets per la programmazione grafica e l'implementazione di programmi basati su GUI</p>
-<br>
-<br>
 </div>
 
-</div> <!-- end row -->
+<div style="padding:20px; width: 70%">
+<a href="insights/00_intro/" ><b>Approfondimenti</b></a>
+<p>L'ultima sezione del sito, dedicata allo studio e agli approfondimenti di argomenti spesso "tangenti" al corso di programmazione Python</p>
+</div>
 
 </section>
 
