@@ -5,6 +5,11 @@ hide:
   - footer
 ---
 <style>
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 </style>
 
 <body>
@@ -22,29 +27,43 @@ hide:
 
 <div style="padding:20px; width: 70%">
 <a href="basics/000_first/"><b>Getting Started!</b></a>
-<p>Le prime cose da sapere e da fare per essere operativi con Python: linguaggi compilati e interpretati. Scaricare e installare Python, Primi programmi.
-</p>
+<div class="flex-container">
+<img src="python.webp">
+<p>Le prime cose da sapere e da fare per essere operativi con Python: linguaggi compilati e interpretati. Scaricare e installare Python, Primi programmi.</p>
+</div>
 </div>
 
 <div style="padding:20px; width: 70%">
 <a href="basics/000_first/"><b>Python: le basi!!!</b></a>
+<div class="flex-container">
+<img src="python.webp">
 <p>In questo gruppo trovate le dispense di base sulla programmazione Python per iniziare il percorso
 di apprendimento</p>
+</div>
 </div>
 
 <div style="padding:20px; width: 70%">
 <a href="OOP/000_intro/"><b>Python: OOP</b></a>
+<div class="flex-container">
+<img src="python.webp">
 <p>La base di tutta la programmazione moderna: impariamo a programmare in Python secondo il paradigma della OOP!</p>
+</div>
 </div>
 
 <div style="padding:20px; width: 70%">
 <a href="wx/000_intro/"><b>wxPython GUI</b></a>
+<div class="flex-container">
+<img src="python.webp">
 <p>Una semplice libreria Python, basata su wxWidgets per la programmazione grafica e l'implementazione di programmi basati su GUI</p>
+</div>
 </div>
 
 <div style="padding:20px; width: 70%">
 <a href="insights/00_intro/" ><b>Approfondimenti</b></a>
+<div class="flex-container">
+<img src="python.webp">
 <p>L'ultima sezione del sito, dedicata allo studio e agli approfondimenti di argomenti spesso "tangenti" al corso di programmazione Python</p>
+</div>
 </div>
 
 </section>
