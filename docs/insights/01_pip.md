@@ -1,3 +1,0 @@
-# Python PIP
-
-Blah blah...

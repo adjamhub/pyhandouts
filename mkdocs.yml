@@ -111,7 +111,6 @@ nav:
    # ---------------------------------------------------------------    
   - Insights:
     - Introduzione: insights/00_intro.md
-    - Pip: insights/01_pip.md
     - Ambienti Virtuali: insights/02_venv.md
     - Turtle: insights/11_turtle.md
     - PyGame: insights/12_pygame1.md
@@ -122,4 +121,6 @@ nav:
     - Arduino: insights/51_arduino.md
     - Numeri reali: insights/91_reals.md
     - Interi, bytes, stringhe: insights/92_ibs.md
+    - asyncio: insights/99_asyncio.md
+    
 
