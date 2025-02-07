@@ -122,5 +122,6 @@ nav:
     - Numeri reali: insights/91_reals.md
     - Interi, bytes, stringhe: insights/92_ibs.md
     - asyncio: insights/99_asyncio.md
+    - uv: insights/99_uv.md
     
 
