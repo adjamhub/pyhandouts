@@ -170,8 +170,8 @@ più disparati:
 - `aioping`, una libreria asincrona per il protocollo ICMP (su cui si basa ping)
 - `asynctest`, una libreria per i test su funzioni e librerie asincrone-
 
-Molti (ma non tutti) sono genericamente indicati su questo strano sito: <a href="https://github.com/timofurrer/awesome-asyncio" target="_blank">Awesome AsyncIO</a>
-
+Molti (ma non tutti) sono genericamente indicati su questo strano sito:
+<a href="https://github.com/timofurrer/awesome-asyncio" target="_blank">Awesome AsyncIO</a>.
 Trovare esempi in rete di utilizzo di queste librerie diventa ogni giorno più facile.
 
 
