@@ -240,8 +240,8 @@ class Esempio(wx.Frame):
 
     def __init__(self):
         super().__init__(None, title="Soldati")
-        testo = "\nSi sta come\nd'autunno\nsugli alberi\nle foglie\n"
-        etichetta = wx.StaticText(self, label=testo)
+        panel = wx.Panel(self)
+        etichetta = wx.StaticText(panel, label = "Si sta come\nd'autunno\nsugli alberi\nle foglie\n")
 
 # ----------------------------------------
 if __name__ == "__main__":
