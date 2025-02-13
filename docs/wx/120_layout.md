@@ -207,7 +207,7 @@ che nei nostri esempi sarà sempre un pannello, quindi dovrai fare una cosa del 
 panel.SetSizer(box)
 ```
 
-!!! warning "Importante!!!"
+!!! danger "Importante!!!"
 
     Questa cosa qui sopra di collegare il layout principale al pannello contenitore è molto molto molto molto molto molto importante.
     Del tipo... **o ti ricordi, o non funziona nulla**.
