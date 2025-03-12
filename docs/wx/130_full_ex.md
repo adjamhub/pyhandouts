@@ -31,7 +31,7 @@ visualizzarli dovete ritrasformare il risultato in una stringa.
 
 **Esercizio 302 (Calcolatrice)**
 
-![image](images/ex_calcolatrice.jpg)
+![image](images/ex_calcolatrice.png)
 
 Evoluzione del programma sommatore. Nella calcolatrice è presente anche
 un layout a griglia. La TextCtrl è impostata in modalità READONLY e ogni
