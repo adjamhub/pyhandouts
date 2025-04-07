@@ -1,15 +1,15 @@
 # Funzioni
 
 
-Il termine "*funzione*" viene utilizzato in programmazione con un significato analogo a quello della matematica: 
-una funzione è una procedura che può ricevere valori come argomenti e restituire un **unico** valore come risultato. 
+Il termine "*funzione*" viene utilizzato in programmazione con un significato analogo a quello della matematica:
+una funzione è una procedura che può ricevere valori come argomenti e restituire un **unico** valore come risultato.
 Nel linguaggio comune si dice anche che una funzione **ritorna** un valore.
 
 La sintassi generale per le funzioni in Python è così strutturata:
 
     def nome_funzione ( parametri: tipo ) -> tipo_di_ritorno :
         # blocco di codice che implementa la funzione
-        # codice... 
+        # codice...
         # la funzione ritorna un valore con l'istruzione return
         # return valore (del tipo_di_ritorno)
 
@@ -105,7 +105,11 @@ Quando poi la funzione viene chiamata i parametri prendono dei valori:
 print( saluta("ciccio") )
 ```
 
-    "ciao ciccio"
+scrive
+
+``` bash
+'ciao ciccio'
+```
 
 
 Se la funzione prende più di un parametro, Python fornisce 2 possibilità:
@@ -125,10 +129,8 @@ def ripeti(parola:str , numero:int)->str :
     return res
 ```
 
-
 Nella chiamata con inserimento ordinato dei valori basta inserire i dati
 nell'ordine della definizione: prima la parola e poi il numero:
-
 
 ```python
 print( ripeti ("ciao", 4) ) # scrive "ciao ciao ciao ciao"
@@ -143,7 +145,7 @@ print( ripeti (3, "ciao") ) # ERRORE!!!
 ```
 
 
-Se lo si desidera è anche possibile procedere ad un **inserimento nominale**, 
+Se lo si desidera è anche possibile procedere ad un **inserimento nominale**,
 indicando cioè il nome della variabile in cui inserire il valore: in questo caso, l'ordine di inserimento non conta.
 
 
@@ -153,7 +155,7 @@ print( ripeti (numero = 3 , parola = "ciao") ) # ciao ciao ciao
 ```
 
 
-È inoltre possibile passare alle funzioni alcuni **valori di default**: questi vengono utilizzati se la funzione 
+È inoltre possibile passare alle funzioni alcuni **valori di default**: questi vengono utilizzati se la funzione
 viene chiamata senza i valori da passare ai parametri o ignorati in presenza di essi.
 
 
@@ -183,23 +185,25 @@ Spero sia chiaro, a me perlomeno sembra così.
 
 Se ricordate la struttura di base di una funzione, proveremo adesso ad aggiungere una piccola parte: la documentazione!
 
-    def nome_funzione ( parametri: tipo ) -> tipo_di_ritorno :
-        """ documentazione di nome_funzione in formato doc_string """
-        # blocco di codice che implementa la funzione
-        # return valore del tipo_di_ritorno
+``` python
+def nome_funzione ( parametri: tipo ) -> tipo_di_ritorno :
+    """ documentazione di nome_funzione in formato doc_string """
+    # blocco di codice che implementa la funzione
+    # return valore del tipo_di_ritorno
+```
 
 La documentazione di una funzione va strutturata nel modo seguente:
 
+``` python
+def nome_funzione ( par1: tipo1, par2: tipo2 ) -> tipo_di_ritorno :
+    """ Una breve frase che descrive COSA la funzione fa (NON come lo fa).
+        Se la funzione ha più di un parametro, spiegare bene quali informazioni
+        servono per eseguirla.
 
-    def nome_funzione ( par1: tipo1, par2: tipo2 ) -> tipo_di_ritorno :
-        """ Una breve frase che descrive COSA la funzione fa (NON come lo fa).
-            
-            Un esempio di utilizzo della funzione 
-        
-            Opzionalmente (necessaria solo quando la funzione ha 2 o più parametri), 
-            una descrizione dei valori necessari per eseguire la funzione
-        """
-    
+        Alcuni esempi di utilizzo (possibilmente in formato doctest... ci arriviamo)
+    """
+```
+
 Facciamo una prova, implementando la funzione `trova(carattere, stringa)` che ritorna `True` se il carattere è presente nella stringa,
 `False` altrimenti.
 
@@ -207,26 +211,27 @@ Facciamo una prova, implementando la funzione `trova(carattere, stringa)` che ri
 def trova(carattere:str, stringa:str) -> bool:
     """
     Dice se carattere è presente o meno nella stringa.
-    
-    Ad esempio trova("c", "cane") ritorna True, mentre
-    trova("c", "gatto") ritorna False
-    
-    Parametri
-    ----------
-    carattere
-        il carattere da cercare
-    stringa
-        la stringa in cui cercare il carattere        
+
+    Ad esempio:
+    >>> trova('c', 'cane')
+    True
+    >>> trova('c', 'gatto')
+    False
     """
-    
+
     if carattere in stringa:
         return True
-    
+
     return False
 ```
 
-Tutto qui! Di sicuro non è una cosa molto complicata... ma chiaramente ci vorrà un pò di esercizio per essere sicuri di avere capito tutto bene.
-Per fortuna sono qui sotto :)
+Come vedete, il formato `doctest` prevede di scrivere gli esempi come se eseguiste la funzione a mano nel prompt Python sotto. Poi il modulo
+fa la sua magia ed esegue effettivamente quel codice e verifica che il risultato sia lo stesso di quello lì scritto.
+Ne riparliamo nel prossimo capitolo.
+
+Per adesso tutto qui! <br>
+Adesso ci vuole solo una montagna di esercizi per assicurarci di aver capito tutto bene. <br>
+Per fortuna sono qui sotto :smile:
 
 
 <!-- ############################################################################################ -->
@@ -238,7 +243,7 @@ Per fortuna sono qui sotto :)
 
 Scrivere una funzione che calcola l'area di un rettangolo e una che ne
 calcola il perimetro, date la base e l'altezza.<br>
-Chiedere all'utente di inserire i valori per base e altezza e calcolare area e perimetro del rettangolo, utilizzando le 
+Chiedere all'utente di inserire i valori per base e altezza e calcolare area e perimetro del rettangolo, utilizzando le
 funzioni implementate.
 
 ------------------------------------------------------------------------------------------------
@@ -248,7 +253,7 @@ funzioni implementate.
 Scrivere una funzione che calcola l'area di un cerchio e una che
 calcola la sua circonferenza. Entrambe richiedono (ovviamente) come
 parametro il raggio del cerchio.<br>
-Chiedere all'utente di inserire un valore per il raggio e procedere a visualizzare area e circonferenza del cerchio relativo, calcolate utilizzando le 
+Chiedere all'utente di inserire un valore per il raggio e procedere a visualizzare area e circonferenza del cerchio relativo, calcolate utilizzando le
 funzioni implementate.
 
 ------------------------------------------------------------------------------------------------
@@ -300,7 +305,7 @@ un carattere la funzione ritorna la scritta "errore". Se è un solo carattere, r
 **Esercizio 508: inverti stringa**
 
 Scrivere una funzione che, data una stringa, ritorna la stringa
-rovesciata. 
+rovesciata.
 Ad esempio fornito "ciao" come parametro, la funzione
 ritorna la stringa "oaic".
 
@@ -326,7 +331,7 @@ diventa "cifiafaofo".
 
 **Esercizio 511**
 
-Scrivere una funzione che prende come parametro una lista di numeri interi 
+Scrivere una funzione che prende come parametro una lista di numeri interi
 e ritorna una lista con solo i numeri dispari della lista precedente.
 
 Ad esempio, `dispari( [1,2,3,4,5,6,7] )` ritorna `[1,3,5,7]`.
@@ -361,4 +366,3 @@ Ad esempio `intersezioneMaiuscola("casa", scuola")` ritorna `[ "A", "C", "S"]`
 <br>
 <br>
 <br>
-
