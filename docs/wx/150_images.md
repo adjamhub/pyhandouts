@@ -124,7 +124,7 @@ un ID e tramite quello possiamo creare automaticamente una Bitmap.
 
 ``` python
 # la variabile "bitmap" è un oggetto della classe wx.Bitmap
-bitmap = wx.ArtProvider.GetBitmap( id = wx.UN_ID_FRA_QUELLI_ELENCATI_SOTTO , client=wx.UN_VALORE_PER_ILPOSIZIONAMENTO, size = DefaultSize )
+bitmap = wx.ArtProvider.GetBitmap( id = wx.UN_ID_FRA_QUELLI_ELENCATI_SOTTO , client=wx.UN_VALORE_PER_ILPOSIZIONAMENTO, size = wx.DefaultSize )
 ```
 
 Vediamo l'elenco delle icone automaticamente supportate (in rigoroso ordine sparso):
