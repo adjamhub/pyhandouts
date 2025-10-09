@@ -270,8 +270,28 @@ print().
 **Esercizio 701**
 
 Definire la classe Persona con attributi nome, cognome, data e luogo di
+nascita, sesso (M/F). La funzione di `__init__` della classe deve prevedere tutti i parametri
+necessari per l'inizializzazione degli oggetti.
+
+Definite un maschio e una femmina della classe a libera scelta.
+
+--------------------------------------------------------------------
+
+**Esercizio 701 bis**
+
+Definire la classe Persona con attributi nome, cognome, data e luogo di
 nascita, sesso (M/F). La funzione di `__init__` della classe non deve
 avere argomenti. 
+
+Definite un maschio e una femmina della classe a libera scelta.
+
+--------------------------------------------------------------------
+
+**Esercizio 701 ter**
+
+Definire la classe Persona con attributi nome, cognome, data e luogo di
+nascita, sesso (M/F). La funzione di `__init__` della classe deve prevedere parametri e valori di default
+per tutti i parametri tranne nome e cognome.
 
 Definite un maschio e una femmina della classe a libera scelta.
 
