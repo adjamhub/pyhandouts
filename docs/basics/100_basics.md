@@ -193,12 +193,34 @@ Pinco Pallino
 
 Visualizzare sullo schermo il seguente disegno:
 
+
 ``` 
 + + + +
 +     +
 +     +
 + + + +
 ```
+
+----------------------------------------------------------------------------
+
+
+**Esercizio 4**
+
+
+Visualizzare sullo schermo il seguente disegno:
+
+
+``` 
+     +
+    +++
+   +++++
+  +++++++
+ +++++++++
++++++++++++
+     +
+     +
+```
+
 
 <br>
 <br>
