@@ -46,7 +46,8 @@ Potete usare il prompt per eseguire una o più righe di codice e vedere che cosa
 in grado di fare (tanta roba) in maniera... un pò scomoda (ma adatta a fare prove, a valutare comandi, etc...).
 Ecco alcuni esempi di utilizzo dell'interprete. Le spiegazioni arriveranno (tutte!!!) successivamente. Per adesso... imparate provando!
 
-``` python
+
+``` python title="Esempi da eseguire nell'interprete"
 >>> print("Ciao")
 Ciao
 
@@ -94,12 +95,13 @@ Tutto qui!<br>
 
 
 <!-- ############################################################################################################### -->
-## Comandi di base
+## Istruzione print
 
 La prima istruzione che abbiamo incontrato è la classica `print()`.
 Serve per visualizzare i suoi argomenti!
 
-``` python
+
+``` python title="prove con l'istruzione print nell'interprete"
 >>> print("Ciao")
 Ciao
 
@@ -110,12 +112,18 @@ Ciao a tutti
 Ciao ciao ne
 ```
 
-Non mi sembra molto complicato... 
+Non mi sembra molto complicato...
+
 - Potete scrivere quante robe volete
-- Ogni cosa va tra apici (singoli o doppi... basta che ci sia coerenza
+- Ogni cosa va tra apici, singoli o doppi... basta che ci sia coerenza
 - Per scrivere più cose basta separarle nella print con una virgola e poi queste verranno scritte con uno spazio di separazione
 
-Se abbiamo paura di dimenticarci qualcosa... oppure vogliamo spiegare una o più righe di codice, possiamo
+
+<!-- ############################################################################################################### -->
+## Commenti al codice
+
+
+Se abbiamo paura di dimenticarci qualcosa... oppure vogliamo spiegare una o più righe di codice in italiano, possiamo
 utilizzare i **commenti**!
 
 ``` python
@@ -133,35 +141,6 @@ quando le righe di codice si avvicinano pericolosamente alle centinaia.
 Inoltre, cosa ancora più importante, piacciono al vostro prof! Quindi
 scriveteceli! Sempre! Spiegate in ogni porzione di codice l'idea che vi
 frulla in mente e quello che volete fare per realizzarla!
-
-Il secondo programma da provare prevede l'introduzione della funzione
-complementare alla `print()`, ovvero quella che permette all'utente di
-inserire un valore: **la funzione** `input()`. Vediamo un esempio:
-
-``` python
-# la funzione input permette a chi utilizza il programma di inserire informazioni
-nome = input("Come ti chiami? ")
-print("Ciao", nome)
-```
-
-Quando si esegue questo codice vedremo qualcosa tipo:
-
-    Come ti chiami? Andrea
-    Ciao Andrea
-
-Ecco fatto! 
-Qui abbiamo anticipato un concetto facile da intuire ma di cui si parlerà nel prossimo capitolo: **le variabili**!!! 
-Ne parleremo nel prossimo capitolo... adesso voglio farvi solo vedere un esempio scritto nell'interprete e lasciare il resto a voi...
-
-``` python
->>> nome = "Andrea"
-
->>> print(nome)
-Andrea
-
->>> print("nome")
-nome
-```
 
 
 
@@ -195,19 +174,6 @@ Ciao, mi chiamo Pinco Pallino
 
 **Esercizio 2**
 
-Chiedere all'utente il suo nome, poi chiedere all'utente il suo cognome e alla fine visualizzare sullo schermo la scritta seguente:
-
-``` 
-Ciao, mi chiamo Andrea Diamantini
-```
-
-Sostituendo al mio il nome (e cognome) scritti dall'utente
-
-
-----------------------------------------------------------------------------
-
-
-**Esercizio 3**
 
 Visualizzare sullo schermo la scritta seguente (andando a capo quando
 necessario):
@@ -222,24 +188,8 @@ Pinco Pallino
 ----------------------------------------------------------------------------
 
 
-**Esercizio 4**
+**Esercizio 3**
 
-Chiedere all'utente il suo nome, poi chiedere all'utente il suo cognome e alla fine visualizzare sullo schermo la scritta seguente
-(andando a capo quando necessario):
-
-``` 
-Ciao,
-mi chiamo 
-Andrea Diamantini
-```
-
-Sostituendo al mio il nome (e cognome) scritti dall'utente
-
-
-----------------------------------------------------------------------------
-
-
-**Esercizio 5**
 
 Visualizzare sullo schermo il seguente disegno:
 
