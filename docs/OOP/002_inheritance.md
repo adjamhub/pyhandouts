@@ -217,7 +217,7 @@ Come avete visto, porta tutto :)
 <!-- ################################################################################################# -->
 ## Esercizi su ereditarietà
 
-**Esercizio 741**
+**Esercizio 1241**
 
 Definire la classe Quadrato con attributo il lato e metodi "area" e
 "perimetro". Da quella derivare la classe Cubo, in cui va aggiunto il
@@ -232,7 +232,7 @@ il risultato dei metodi area e volume.
 
 --------------------------------------------------------------------
 
-**Esercizio 742**
+**Esercizio 1242**
 
 Definire la classe Persona, con attributi nome ed età e metodi saluta()
 (restituisce la stringa "ciao, sono + nome") e invecchia() (aggiunge
@@ -259,7 +259,7 @@ invecchia (ridefinito) e il metodo insegna con le materie "diritto" e
 
 --------------------------------------------------------------------
 
-**Esercizio 743**
+**Esercizio 1243**
 
 Definire la classe Punto2D, con attributi le coordinate del punto nel
 piano cartesiano e le funzioni "distanzaDalCentro" e
@@ -278,7 +278,7 @@ quest'ultima funzione definire il Punto3D di coordinate (1,1,2).
 
 --------------------------------------------------------------------
 
-**Esercizio 744**
+**Esercizio 1244**
 
 Definire la classe Cerchio con gli attributi e i metodi che ritenete
 opportuni.
@@ -290,7 +290,7 @@ Definire una sfera di raggio 3, di cui calcolare area e volume.
 
 --------------------------------------------------------------------
 
-**Esercizio 745**
+**Esercizio 1245**
 
 Definire la classe Contatto con nome, nick, numero, mail. In fase di
 definizione la classe prende solo nome e numero e imposta gli altri alla
@@ -312,7 +312,7 @@ Definire il seguente contatto di lavoro:
 
 --------------------------------------------------------------------
 
-**Esercizio 746**
+**Esercizio 1246**
 
 Definire una classe Persona con attributi nome e anno di nascita,
 forniti tramite parametri e indirizzo, inizialmente impostato alla
@@ -327,7 +327,7 @@ eventualmente aggiornando le informazioni dell'abbonato.
 
 --------------------------------------------------------------------
 
-**Esercizio 747**
+**Esercizio 1247**
 
 Definire una classe Veicolo, che contempli fra le sue caratteristiche la
 possibilità di indicare la velocità massima (in km/h) e che in fase di

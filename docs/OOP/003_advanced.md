@@ -112,7 +112,7 @@ Spero sia chiaro! Come al solito... per capire meglio ci sono gli esercizi :)
 <!-- ################################################################################################# -->
 ### Esercizi sulle funzioni operatori
 
-**Esercizio 761**
+**Esercizio 1361**
 
 Definire la classe Frazione, con parametri numeratore e denominatore.
 
@@ -134,7 +134,7 @@ Dichiarare almeno 3 frazioni con cui testare le funzioni implementate.
 
 --------------------------------------------------------------------
 
-**Esercizio 762**
+**Esercizio 1362**
 
 Definire la classe Rettangolo, con attributi base e altezza e metodi
 area e perimetro. Implementare in essa le funzioni aritmetiche, che
@@ -148,7 +148,7 @@ implementate.
 
 --------------------------------------------------------------------
 
-**Esercizio 763**
+**Esercizio 1363**
 
 Definire la classe Reale (che rappresenta un numero reale) con l'unico
 attributo float che rappresenta il suo valore. Definire in essa le
@@ -166,7 +166,7 @@ funzioni implementate.
 
 --------------------------------------------------------------------
 
-**Esercizio 764**
+**Esercizio 1364**
 
 Definire la classe DataSemplice, con i due attributi interi che
 rappresentano i giorni e i mesi. Nella classe DataSemplice i mesi hanno

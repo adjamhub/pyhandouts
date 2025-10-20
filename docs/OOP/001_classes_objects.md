@@ -267,7 +267,7 @@ print().
 
 --------------------------------------------------------------------
 
-**Esercizio 701**
+**Esercizio 1101**
 
 Definire la classe Persona con attributi nome, cognome, data e luogo di
 nascita, sesso (M/F). La funzione di `__init__` della classe deve prevedere tutti i parametri
@@ -277,7 +277,7 @@ Definite un maschio e una femmina della classe a libera scelta.
 
 --------------------------------------------------------------------
 
-**Esercizio 701 bis**
+**Esercizio 1101 bis**
 
 Definire la classe Persona con attributi nome, cognome, data e luogo di
 nascita, sesso (M/F). La funzione di `__init__` della classe non deve
@@ -287,7 +287,7 @@ Definite un maschio e una femmina della classe a libera scelta.
 
 --------------------------------------------------------------------
 
-**Esercizio 701 ter**
+**Esercizio 1101 ter**
 
 Definire la classe Persona con attributi nome, cognome, data e luogo di
 nascita, sesso (M/F). La funzione di `__init__` della classe deve prevedere parametri e valori di default
@@ -297,7 +297,7 @@ Definite un maschio e una femmina della classe a libera scelta.
 
 --------------------------------------------------------------------
 
-**Esercizio 702**
+**Esercizio 1102**
 
 Definire la classe TriangoloRettangolo inserendo come attributi i due
 cateti. Aggiungere i metodi per il calcolo dell'ipotenusa, dell'area e
@@ -308,7 +308,7 @@ visualizzare i suoi attributi e calcolare l'ipotenusa, l'area e il perimetro.
 
 --------------------------------------------------------------------
 
-**Esercizio 703**
+**Esercizio 1103**
 
 Definire la classe Animale con attributi nome e specie. Aggiungere il
 metodo "corri" (ritorna la stringa "sto correndo...") e "mangia"
@@ -318,7 +318,7 @@ Definire un cane di nome "Piero" e farlo correre e mangiare. Visualizzare i suoi
 
 --------------------------------------------------------------------
 
-**Esercizio 704**
+**Esercizio 1104**
 
 Definire la classe Persona con attributi nome, età e sesso (M/F). La
 funzione di `__init__` della classe deve prendere come argomento solo
@@ -334,7 +334,7 @@ procedere poi a visualizzare gli attributi di entrambi.
 
 --------------------------------------------------------------------
 
-**Esercizio 705**
+**Esercizio 1105**
 
 Definire la classe ContoCorrente con attributi proprietario e capitale;
 il proprietario va definito tramite parametro della funzione
@@ -354,7 +354,7 @@ valori dell'oggetto con la funzione print().
 
 --------------------------------------------------------------------
 
-**Esercizio 706**
+**Esercizio 1106**
 
 Definire la classe Crittografia con attributo un numero intero che
 indica lo spiazzamento dei caratteri. Questo numero sarà utilizzato per criptare le stringhe traslando i caratteri
@@ -372,7 +372,7 @@ stringa, verificando che la stringa decriptata sia uguale a quella inserita prim
 
 --------------------------------------------------------------------
 
-**Esercizio 707**
+**Esercizio 1107**
 
 Definire la classe Automobile con attributi marca, modello, velocità e
 numero di persone trasportate. La funzione init prende come parametri la
@@ -400,7 +400,7 @@ True, una ritornando False.
 
 --------------------------------------------------------------------
 
-**Esercizio 708**
+**Esercizio 1108**
 
 Definire la classe TrapezioRettangolo, che prende come parametri la base
 minore, la base maggiore e l'altezza del Trapezio. 
@@ -411,7 +411,7 @@ area e il suo perimetro.
 
 --------------------------------------------------------------------
 
-**Esercizio 709**
+**Esercizio 1109**
 
 Definire la classe "Orario", con parametri i tre interi per ore,
 minuti e secondi. Implementare inoltre le seguenti funzioni:
@@ -423,7 +423,7 @@ minuti e secondi. Implementare inoltre le seguenti funzioni:
 
 --------------------------------------------------------------------
 
-**Esercizio 710**
+**Esercizio 1110**
 
 Definire la classe CartaFedeltà, per la gestione degli utenti di un
 grande magazzino. La carta fedeltà è nominativa (appartiene ad un solo
@@ -443,7 +443,7 @@ punti accumulati.
 
 --------------------------------------------------------------------
 
-**Esercizio 711**
+**Esercizio 1111**
 
 Definire la classe Giocatore con nome, numero di maglia e ruolo
 ricoperto. Il nome del giocatore va impostato tramite parametro, mentre
@@ -474,7 +474,7 @@ dovrebbe fallire) e poi a 11.
 
 --------------------------------------------------------------------
 
-**Esercizio 712**
+**Esercizio 1112**
 
 Definire la classe EstrazioneLotto. La classe contiene una lista,
 inizialmente vuota, di stringhe che rappresentano le città ove ci sono
@@ -511,7 +511,7 @@ ottenuto, con una visualizzazione simile a questa:
 
 --------------------------------------------------------------------
 
-**Esercizio 713: Agenda**
+**Esercizio 1113: Agenda**
 
 
 Una agenda contiene una serie di impegni identificati con una descrizione generica e con il giorno in cui questo impegno è preso. 
@@ -537,7 +537,7 @@ e fare un test di utilizzo di tutte le altre funzioni
 
 --------------------------------------------------------------------
 
-**Esercizio 714: Rubrica**
+**Esercizio 1114: Rubrica**
 
 Una rubrica contiene una lista di contatti. Ogni contatto comprende un nome ed un numero di telefono (memorizzabile comunque come una stringa). 
 Esempi di contatti potrebbero essere:
@@ -795,7 +795,7 @@ Provate a verificare la vostra comprensione coi seguenti esercizi.
 
 --------------------------------------------------------------------
 
-**Esercizio 720: SVOLTO**
+**Esercizio 1120: SVOLTO**
 
 (Ri)definire la classe Rettangolo, facendo in modo che base e altezza siano numeri comunque positivi e che area e perimetro
 siano calcolate automaticamente come proprietà in sola lettura.
@@ -863,14 +863,14 @@ E adesso sotto con un esercizio analogo!
 
 --------------------------------------------------------------------
 
-**Esercizio 721**
+**Esercizio 1121**
 
 (Ri)definire la classe Cerchio, facendo in modo che il raggio sia un numero sempre positivo e che il diametro, l'area e la circonferenza 
 siano calcolate automaticamente come proprietà in sola lettura.
 
 --------------------------------------------------------------------
 
-**Esercizio 722**
+**Esercizio 1122**
 
 Definire una classe Temperatura, che NON prende parametri in fase di inizializzazione. Ha una sola variabile membro, la temperatura in gradi Kelvin, che
 (come sapete) deve essere non negativa. Presenta inoltre due proprietà in sola lettura per visualizzare la temperatura in gradi Celsius e in gradi Farheneit.
@@ -885,14 +885,14 @@ Definire una classe Temperatura, che NON prende parametri in fase di inizializza
 
 --------------------------------------------------------------------
 
-**Esercizio 723**
+**Esercizio 1123**
 
 Definire la classe Data con giorno, mese, anno che NON possono essere modificati (capito come fanno le classi Datetime???)
 
 
 --------------------------------------------------------------------
 
-**Esercizio 724**
+**Esercizio 1124**
 
 Definire la classe Contatore. Essa ha un solo valore membro (la conta, appunto).
 La conta parte da zero, non può essere modificata e viene incrementata ogni volta che viene visualizzata.
