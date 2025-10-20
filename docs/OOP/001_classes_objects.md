@@ -379,18 +379,17 @@ numero di persone trasportate. La funzione init prende come parametri la
 marca e il modello e imposta a ZERO gli altri attributi. Implementare i
 seguenti metodi:
 
--   `faiSalirePersona`: aggiunge una persona al numero di persone 
+-   `faiSalirePersona`: se l'auto è ferma, aggiunge una persona al numero di persone 
     trasportate fino ad un massimo di 5. Ritorna True se è stato
     possibile aggiungere una persona, False altrimenti.
--   `faiScenderePersona`: toglie una persona al numero di persone
+-   `faiScenderePersona`: se l'auto è ferma, toglie una persona al numero di persone
     trasportate (Se possibile ovviamente). Ritorna True se è stato
     possibile togliere una persona, False altrimenti.
--   `accelera`: aggiunge 20 kmh alla velocità di marcia, fino ad un
-    massimo di 120 kmh. Funziona solo se il numero di persone
-    trasportate è positivo. Ritorna True se è stato possibile aumentare
+-   `accelera`: se è presente almeno una persona (l'autista) aggiunge 20 kmh alla velocità di marcia, 
+    fino ad un massimo di 120 kmh. Ritorna True se è stato possibile aumentare
     la velocità, False altrimenti.
--   `rallenta`: toglie 20 kmh alla velocità di marcia, ovviamente fino a
-    fermarsi. Ritorna True se è stato possibile diminuire la velocità,
+-   `rallenta`: se è presente almeno una persona (l'autista), toglie 20 kmh alla velocità di marcia, 
+    ovviamente fino a fermarsi. Ritorna True se è stato possibile diminuire la velocità,
     False altrimenti.
 -   `frena`: azzera la velocità di marcia. Ritorna True se è stato
     possibile frenare, False altrimenti.
