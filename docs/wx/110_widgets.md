@@ -133,19 +133,19 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------
 
-**Esercizio 111 (Button)**
+**Esercizio 2111 (Button)**
 
 Creare una applicazione con un pulsante *CHIUDI*. Quando lo clicchi, l'applicazione si chiude.
 
 --------------------------------------------------------------------
 
-**Esercizio 112 (Button)**
+**Esercizio 2112 (Button)**
 
 Creare una applicazione con un pulsante *MASSIMIZZA*. Quando lo clicchi, l'applicazione si massimizza.
 
 --------------------------------------------------------------------
 
-**Esercizio 113 (Button)**
+**Esercizio 2113 (Button)**
 
 Creare una applicazione con un pulsante *NUOVA FINESTRA*. Quando lo clicchi, si apre una nuova finestra, identica alla precedente.
 
@@ -200,7 +200,7 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------
 
-**Esercizio 115 (ToggleButton)**
+**Esercizio 2115 (ToggleButton)**
 
 Creare una applicazione con una finestra con titolo *Ciccio* che
 contiene un pulsante "Toggle". Quando clicchi il pulsante, il titolo
@@ -209,7 +209,7 @@ così via.
 
 --------------------------------------------------------------------
 
-**Esercizio 116 (ToggleButton)**
+**Esercizio 2116 (ToggleButton)**
 
 Creare una applicazione con una finestra che contiene un pulsante "Toggle". 
 Quando clicchi il pulsante, appare una nuova finestra vuota di fianco a questa; quando lo clicchi di nuovo la finestra scompare.
@@ -374,7 +374,7 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------
 
-**Esercizio 131 (Button, StaticText, TextCtrl)**
+**Esercizio 2131 (Button, StaticText, TextCtrl)**
 
 Creare una applicazione con una finestra che contiene una StaticText,
 inizialmente vuota, una TextCtrl e un pulsante. Quando l'utente clicca
@@ -383,7 +383,7 @@ StaticText e la TextCtrl ripulita.
 
 --------------------------------------------------------------------
 
-**Esercizio 132 (TextCtrl, Button)**
+**Esercizio 2132 (TextCtrl, Button)**
 
 Salvate questo esercizio come `es132.py` in una cartella e nella stessa creerete un file
 chiamato `testo.txt` contenente un testo a piacere.
@@ -450,7 +450,7 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------
 
-**Esercizio 136 (TextCtrl, Button, ComboBox)**
+**Esercizio 2136 (TextCtrl, Button, ComboBox)**
 
 Inserite nella finestra una ComboBox inizialmente vuota, una TextCtrl e
 un Button. L'utente digita qualcosa nella TextCtrl e quando clicca il
@@ -459,7 +459,7 @@ pulisce la TextCtrl.
 
 --------------------------------------------------------------------
 
-**Esercizio 137 (Frame, ComboBox)**
+**Esercizio 2137 (Frame, ComboBox)**
 
 la finestra presenta una ComboBox con opzioni '600x400', '800x600',
 'massimizza'. Quando l'utente seleziona una delle opzioni la finestra
@@ -467,7 +467,7 @@ si ridimensiona secondo quanto indicato.
 
 --------------------------------------------------------------------
 
-**Esercizio 138 (StaticText, ComboBox, TextCtrl, Button)**
+**Esercizio 2138 (StaticText, ComboBox, TextCtrl, Button)**
 
 Inserite nella finestra una StaticText con scritto "nome" e accanto una TextCtrl per l'inserimento.
 Nella riga sotto, una nuova StaticText con scritto "cognome" e accanto una TextCtrl per l'inserimento.
@@ -536,7 +536,7 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------
 
-**Esercizio 141 (StaticText, CheckBox)**
+**Esercizio 2141 (StaticText, CheckBox)**
 
 Serie di 5 CheckBox con una selezione di cibi (es: pasta, pizza,
 etc...). Man mano che l'utente seleziona cibi la StaticText sotto alle
@@ -544,7 +544,7 @@ CheckBox si aggiorna mostrando tutti i cibi selezionati.
 
 --------------------------------------------------------------------
 
-**Esercizio 142 (StaticText, CheckBox)**
+**Esercizio 2142 (StaticText, CheckBox)**
 
 Identico all'esercizio precedente, ma la StaticText non visualizza il
 testo delle CheckBox selezionate ma il numero di queste. Ad esempio
@@ -553,7 +553,7 @@ crescerà o diminuirà a seconda che vengono attivate o no le CheckBox.
 
 --------------------------------------------------------------------
 
-**Esercizio 143 (Button, CheckBox)**
+**Esercizio 2143 (Button, CheckBox)**
 
 la finestra contiene 3 pulsanti: il primo massimizza la finestra, il
 secondo la iconizza sulla barra delle applicazioni, il terzo la chiude.
@@ -565,7 +565,7 @@ viceversa.
 
 --------------------------------------------------------------------
 
-**Esercizio 144 (Frame, ComboBox, CheckBox)**
+**Esercizio 2144 (Frame, ComboBox, CheckBox)**
 
 Dichiarate una tupla di valori qualsiasi e con essa create sia una
 ComboBox che elenca tutti gli elementi della tupla, sia una serie di
@@ -637,7 +637,7 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------
 
-**Esercizio 146 (RadioButton, StaticText)**
+**Esercizio 2146 (RadioButton, StaticText)**
 
 Implementare un testo con domanda: *Dimmi come vieni a scuola* e un
 elenco di opzioni a vostra scelta, tra cui ad esempio auto, moto, bici,
@@ -647,7 +647,7 @@ MEZZODITRASPORTO*.
 
 --------------------------------------------------------------------
 
-**Esercizio 147 (TextCtrl, RadioButton, Button, StaticText)**
+**Esercizio 2147 (TextCtrl, RadioButton, Button, StaticText)**
 
 Applicazione con una TextCtrl per inserire il nome e un RadioButton per
 selezionare il sesso (opzioni *Maschio*, *Femmina*) più un pulsante e
@@ -662,7 +662,7 @@ fra le 14 e le 22 si scrive *Buonasera*, fra le 22 e le 6 si scrive
 
 --------------------------------------------------------------------
 
-**Esercizio 148 (TextCtrl, RadioButton, Button)**
+**Esercizio 2148 (TextCtrl, RadioButton, Button)**
 
 Applicazione con una TextCtrl e un pulsante. L'utente scrive una serie
 di parole separate da virgola nella TextCtrl e quando preme il pulsante
@@ -723,14 +723,14 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------
 
-**Esercizio 151 (Slider, StaticText)**
+**Esercizio 2151 (Slider, StaticText)**
 
 Inserite nella finestra uno Slider che va da 1 a 10 e aggiungete una
 StaticText che visualizza il suo valore aggiornato in tempo reale.
 
 --------------------------------------------------------------------
 
-**Esercizio 152 (TextCtrl, Button, Slider)**
+**Esercizio 2152 (TextCtrl, Button, Slider)**
 
 Inserite nella finestra due coppie TextCtrl/Button. La prima coppia
 decide il valore minimo dello Slider, la seconda coppia il valore
@@ -738,7 +738,7 @@ massimo. I pulsanti aggiornano lo stato dello Slider.
 
 --------------------------------------------------------------------
 
-**Esercizio 153 (Slider, Button)**
+**Esercizio 2153 (Slider, Button)**
 
 Inserite nella finestra due Slider, uno orizzontale che va da 200 a 800
 per la larghezza e uno verticale che va da 100 a 500 per l'altezza.
@@ -809,7 +809,7 @@ if __name__ == "__main__":
 
 --------------------------------------------------------------------
 
-**Esercizio 156 (SpinCtrl, Button, StaticText)**
+**Esercizio 2156 (SpinCtrl, Button, StaticText)**
 
 Inserite nella finestra una SpinCtrl per inserire un intero fra 1 e 10.
 Quando si clicca il pulsante nella StaticText sotto appare il countdown
@@ -817,7 +817,7 @@ dal numero selezionato fino a zero.
 
 --------------------------------------------------------------------
 
-**Esercizio 157 (SpinCtrl...)**
+**Esercizio 2157 (SpinCtrl...)**
 
 Un altro esercizio con la SpinCtrl
 
@@ -932,7 +932,7 @@ Provate a cambiare l'evento nel Bind per vedere la differenza di funzionamento.
 
 --------------------------------------------------------------------
 
-**Esercizio 166 (ListBox, Button, StaticText)**
+**Esercizio 2166 (ListBox, Button, StaticText)**
 
 Inserite nella finestra una ListBox con una sequenza di voci e la
 possibilità di selezionarne contemporaneamente più di una. Quando
@@ -941,7 +941,7 @@ le voci selezionate, separate da virgola.
 
 --------------------------------------------------------------------
 
-**Esercizio 167 (ListBox, TextCtrl, Button)**
+**Esercizio 2167 (ListBox, TextCtrl, Button)**
 
 Inserite nella finestra una ListBox inizialmente vuota, una TextCtrl e
 un pulsante. L'utente digita qualcosa nella TextCtrl e quando clicca il
@@ -950,7 +950,7 @@ pulisce la TextCtrl.
 
 --------------------------------------------------------------------
 
-**Esercizio 168 (ListBox, Button)**
+**Esercizio 2168 (ListBox, Button)**
 
 Inserite nella finestra una ListBox vuota e un pulsante. Quando
 l'utente clicca il pulsante, il programma carica dal file *dati.txt*

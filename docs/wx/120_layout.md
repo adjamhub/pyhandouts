@@ -369,7 +369,7 @@ layout!
 ### Esercizi *BoxSizer
 
 
-**Esercizio 201 (line)**
+**Esercizio 2201 (line)**
 
 ![image](exLayout/LineLayout1.png)
 
@@ -377,7 +377,7 @@ layout!
 -------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 202 (line)**
+**Esercizio 2202 (line)**
 
 ![image](exLayout/LineLayout2.png)
 
@@ -739,7 +739,7 @@ if __name__ == "__main__":
 ### Esercizi *GridSizer
 
 
-**Esercizio 251 (grid)**
+**Esercizio 2251 (grid)**
 
 ![image](exLayout/exGrid1.jpg)
 
@@ -747,7 +747,7 @@ if __name__ == "__main__":
 ------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 252 (grid)**
+**Esercizio 2252 (grid)**
 
 ![image](exLayout/exGrid2.jpg)
 
@@ -755,7 +755,7 @@ if __name__ == "__main__":
 ------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 253 (grid)**
+**Esercizio 2253 (grid)**
 
 ![image](exLayout/exGridBag1.jpg)
 

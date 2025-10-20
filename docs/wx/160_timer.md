@@ -146,7 +146,7 @@ if __name__ == "__main__":
 <!-- #################################################################################################################################### -->
 ## Esercizi
 
-**Esercizio 601 (orologio)**
+**Esercizio 2601 (orologio)**
 
 Implementare una semplice finestra con un'unica etichetta che
 visualizza un orologio funzionante (che scorre) con ore, minuti,
@@ -156,7 +156,7 @@ secondi.
 ----------------------------------------------------------------------------------
 
 
-**Esercizio 602 (cronometro)**
+**Esercizio 2602 (cronometro)**
 
 Implementare un cronometro con una etichetta con valore iniziale
 "00:00:00" rappresentanti rispettivamente minuti, secondi e centesimi
@@ -168,7 +168,7 @@ di secondo e tre pulsanti per le funzioni START, STOP, RESET.
 
 ----------------------------------------------------------------------------------
 
-**Esercizio 603 (semaforo)**
+**Esercizio 2603 (semaforo)**
 
 Applicazione con 4 immagini per 3 caselle: luce rossa, luce gialla, luce
 verde, luce grigia (luce spenta). Il semaforo inizia con la luce verde

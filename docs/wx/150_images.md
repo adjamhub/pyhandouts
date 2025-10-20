@@ -81,7 +81,7 @@ La base ce l'avete... adesso occorre buttarsi un pò con qualche esercizio!!!
 
 ----------------------------------------------------------------------------------------------------------------------
 
-**Esercizio 501**
+**Esercizio 2501**
 
 Crea una semplice interfaccia con un pannello e un StaticBitmap per
 visualizzare una immagine presente nella stessa cartella ove salverete
@@ -91,7 +91,7 @@ il codice dell'esercizio.
 ----------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 502**
+**Esercizio 2502**
 
 Crea una applicazione con 2 pulsanti allineati sopra e una StaticBitmap
 sotto. Con il primo pulsante si apre una finestra di selezione file per

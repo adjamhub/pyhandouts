@@ -108,7 +108,7 @@ dial.ShowModal()
 <br>
 
 
-**Esercizio 401**
+**Esercizio 2401**
 
 Visualizzate una finestra con un pulsante che quando premuto visualizza
 un messaggio informativo a vostro piacere.
@@ -117,7 +117,7 @@ un messaggio informativo a vostro piacere.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 402**
+**Esercizio 2402**
 
 Visualizzate una finestra vuota. Quando si clicca per chiuderla appare
 il messaggio di domanda "Sicuro di voler chiudere?". Se l'utente
@@ -127,7 +127,7 @@ risponde No, la finestra non si chiude.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 403**
+**Esercizio 2403**
 
 Visualizzare una finestra con una SpinCtrl con valori da -10 a +10. Se
 l'utente seleziona 0, appare un messaggio di avvertimento.
@@ -159,7 +159,7 @@ percorso = dlg.GetPath()
 
 <br>
 
-**Esercizio 411**
+**Esercizio 2411**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre la DirDialog che
@@ -170,7 +170,7 @@ etichetta di testo si visualizzi il percorso selezionato.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 412**
+**Esercizio 2412**
 
 Visualizzare una finestra con un pulsante. Cliccando il pulsante si apre
 una DirDialog con la possibilità di selezionare cartelle non esistenti.
@@ -214,7 +214,7 @@ percorso = dlg.GetPath()
 
 <br>
 
-**Esercizio 421**
+**Esercizio 2421**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre la FileDialog che
@@ -225,7 +225,7 @@ nella etichetta di testo si visualizzi il percorso del file selezionato.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 422**
+**Esercizio 2422**
 
 Visualizzare una finestra con un pulsante. Cliccando il pulsante si apre
 una FileDialog in modalità salva. Se l'utente ne seleziona uno non
@@ -236,7 +236,7 @@ Pathlib???)
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 423**
+**Esercizio 2423**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre una FileDialog in
@@ -274,7 +274,7 @@ coloreSelezionato = datiFinali.GetColour()
 
 <br>
 
-**Esercizio 431**
+**Esercizio 2431**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre una ColourDialog che
@@ -285,7 +285,7 @@ etichetta.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 432**
+**Esercizio 2432**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre una ColourDialog che
@@ -296,7 +296,7 @@ del colore selezionato.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 433**
+**Esercizio 2433**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo con
 la scritta "Colore selezionato". Cliccando il pulsante si apre una
@@ -336,7 +336,7 @@ fontSelezionato = datiFinali.GetChosenFont()
 
 <br>
 
-**Esercizio 441**
+**Esercizio 2441**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo
 inizialmente vuota. Cliccando il pulsante si apre una FontDialog che
@@ -347,7 +347,7 @@ etichetta.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Esercizio 442**
+**Esercizio 2442**
 
 Visualizzare una finestra con un pulsante ed una etichetta di testo con
 la scritta "Font selezionato". Cliccando il pulsante si apre una
