@@ -157,7 +157,7 @@ ritagliata dall'alto per diventare 100 x 50 pixel.
 Il modulo `pyscreenshot` serve per fare gli screenshot del Desktop.
 Semplice e veloce. Ricordate solo che questo modulo lavora con le
 immagini, quindi per funzionare ha bisogno ***anche*** del modulo
-pillow. Installate il modulo chiamato "pyscreenshot" (pillow ce lo
+`pillow`. Installate il modulo chiamato "pyscreenshot" (pillow ce lo
 dovreste avere da prima), poi su una shell python digitate:
 
 
