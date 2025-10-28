@@ -48,7 +48,7 @@ Quando ha finito... ve ne accorgerete.
 ## Modulo pillow
 
 
-Il modulo Pillow è considerato il modulo standard per la manipolazione delle immagini in Python. 
+Il modulo `Pillow` è considerato il modulo standard per la manipolazione delle immagini in Python. 
 In realtà sarebbe un sostituto (*built-in replacement*) per la vera libreria di default per il trattamento delle
 immagini: PIL, ovvero la **Python Image Library**. 
 Ma ormai è considerata lo standard per lavorare con le immagini.
@@ -111,7 +111,7 @@ Se invece volessimo salvare l'immagine modificata... (ad esempio quella in bianc
 convertedImg.save("pythonBN.png")
 ```
 
-Proviamo adesso alcune opzioni per sfocare l'immagine (blur)
+Proviamo adesso alcune opzioni per sfocare l'immagine (*blur*)
 
 
 ```python
@@ -154,7 +154,7 @@ ritagliata dall'alto per diventare 100 x 50 pixel.
 ## Modulo pyscreenshot 
 
 
-Il modulo pscreenshot serve per fare gli screenshot del Desktop.
+Il modulo `pyscreenshot` serve per fare gli screenshot del Desktop.
 Semplice e veloce. Ricordate solo che questo modulo lavora con le
 immagini, quindi per funzionare ha bisogno ***anche*** del modulo
 pillow. Installate il modulo chiamato "pyscreenshot" (pillow ce lo
@@ -166,11 +166,11 @@ dovreste avere da prima), poi su una shell python digitate:
 >>> dir(pyscreenshot)
 ```
 
-vedrete elencate le funzioni offerte dal modulo pyscreenshot. Come ci
+vedrete elencate le funzioni offerte dal modulo `pyscreenshot`. Come ci
 siamo sempre detti, quelle che iniziano con doppio underscore vanno
 ignorate. Non sono tantissime. O meglio... questo è uno dei moduli più
 semplici. Per fare lo screenshot ci interessa una singola funzione:
-grab().
+`grab()`.
 
 
 
@@ -183,9 +183,9 @@ shot.save('screenshot.png')
 
 
 L'esempio sopra fa uno screenshot del Desktop e lo salva come file
-"screenshot.png" nella stessa cartella ove si trova lo script Python con il codice sopra.
+*"screenshot.png"* nella stessa cartella ove si trova lo script Python con il codice sopra.
 
-Se avete letto la documentazione della funzione grab() saprete che
+Se avete letto la documentazione della funzione `grab()` saprete che
 potete decidere di fare lo screenshot ad una sezione dello schermo. La
 prova di questo ve la lascio come esercizio.
 
@@ -205,6 +205,9 @@ Utilizzare i moduli `time` e `pyscreenshot` per fare uno screenshot del desktop 
 in modo tale da fornirgli il tempo di *liberare* lo schermo.
 
 ------------------------------------------------------------------------------------------------
+
+
+
 
 <!-- ############################################################################################ -->
 ## Modulo matplotlib
