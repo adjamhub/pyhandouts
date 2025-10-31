@@ -109,7 +109,7 @@ Se invece volessimo salvare l'immagine modificata... (ad esempio quella in bianc
 convertedImg.save("pythonBN.png")
 ```
 
-Proviamo adesso alcune opzioni per sfocare l'immagine (blur)
+Proviamo adesso alcune opzioni per sfocare l'immagine (*blur*)
 
 
 ```python
@@ -156,7 +156,7 @@ ritagliata dall'alto per diventare 100 x 50 pixel.
 Il modulo `pyscreenshot` serve per fare gli screenshot del Desktop.
 Semplice e veloce. Ricordate solo che questo modulo lavora con le
 immagini, quindi per funzionare ha bisogno ***anche*** del modulo
-pillow. Installate il modulo chiamato `pyscreenshot` (`pillow` ce lo
+`pillow`. Installate il modulo chiamato `pyscreenshot` (`pillow` ce lo
 dovreste avere da prima), poi su una shell python digitate:
 
 
@@ -172,7 +172,6 @@ semplici. Per fare lo screenshot ci interessa una singola funzione:
 `grab`.
 
 
-
 ```python
 import pyscreenshot
 
@@ -182,7 +181,7 @@ shot.save('screenshot.png')
 
 
 L'esempio sopra fa uno screenshot del Desktop e lo salva come file
-"screenshot.png" nella stessa cartella ove si trova lo script Python con il codice sopra.
+*"screenshot.png"* nella stessa cartella ove si trova lo script Python con il codice sopra.
 
 Se avete letto la documentazione della funzione `grab` saprete che
 potete decidere di fare lo screenshot ad una sezione dello schermo. La
@@ -208,6 +207,9 @@ Utilizzare i moduli `time` e `pyscreenshot` per fare uno screenshot del desktop 
 in modo tale da fornirgli il tempo di *liberare* lo schermo.
 
 ------------------------------------------------------------------------------------------------
+
+
+
 
 <!-- ############################################################################################ -->
 ## Modulo matplotlib
