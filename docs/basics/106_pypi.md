@@ -37,7 +37,7 @@ Se invece non avete (ancora) Thonny, aprite il prompt dei comandi Windows oppure
 
 
 ``` bash
-pip3 install -U nomeModulo
+pip install -U nomeModulo
 ```
 
 
@@ -48,15 +48,13 @@ Quando ha finito... ve ne accorgerete.
 ## Modulo pillow
 
 
-Il modulo Pillow è considerato il modulo standard per la manipolazione delle immagini in Python. 
+Il modulo `pillow` è considerato il modulo standard per la manipolazione delle immagini in Python. 
 In realtà sarebbe un sostituto (*built-in replacement*) per la vera libreria di default per il trattamento delle
 immagini: PIL, ovvero la **Python Image Library**. 
 Ma ormai è considerata lo standard per lavorare con le immagini.
 
-Installate il modulo Pillow e poi procedete ad esaminare e testare il seguente esempio commentato, 
-badando a decommentare ogni volta una piccola parte di esso.
-
-Tutti i nostri frammenti di codice dovranno includere il pacchetto pillow
+Installate il modulo `pillow` e poi procedete ad esaminare e testare il seguente esempio, aggiungendo ogni volta
+un pezzetto al codice.
 
 
 ``` python
@@ -128,10 +126,11 @@ gaussImage = img.filter(ImageFilter.GaussianBlur(20)) # blur gaussiano
 Basta!
 
 
-Volete fare, sapere di più? Leggete la documentazione!
 
+### Esercizi
 
-------------------------------------------------------------------------------------------------
+Volete fare, sapere di più? Leggete la documentazione! Ma per imparare ad usare qualcosa... occorre esercitarsi!!!
+
 
 **Esercizio 661**
 
@@ -154,10 +153,10 @@ ritagliata dall'alto per diventare 100 x 50 pixel.
 ## Modulo pyscreenshot 
 
 
-Il modulo pscreenshot serve per fare gli screenshot del Desktop.
+Il modulo `pyscreenshot` serve per fare gli screenshot del Desktop.
 Semplice e veloce. Ricordate solo che questo modulo lavora con le
 immagini, quindi per funzionare ha bisogno ***anche*** del modulo
-pillow. Installate il modulo chiamato "pyscreenshot" (pillow ce lo
+pillow. Installate il modulo chiamato `pyscreenshot` (`pillow` ce lo
 dovreste avere da prima), poi su una shell python digitate:
 
 
@@ -166,11 +165,11 @@ dovreste avere da prima), poi su una shell python digitate:
 >>> dir(pyscreenshot)
 ```
 
-vedrete elencate le funzioni offerte dal modulo pyscreenshot. Come ci
+vedrete elencate le funzioni offerte dal modulo `pyscreenshot`. Come ci
 siamo sempre detti, quelle che iniziano con doppio underscore vanno
 ignorate. Non sono tantissime. O meglio... questo è uno dei moduli più
 semplici. Per fare lo screenshot ci interessa una singola funzione:
-grab().
+`grab`.
 
 
 
@@ -185,12 +184,16 @@ shot.save('screenshot.png')
 L'esempio sopra fa uno screenshot del Desktop e lo salva come file
 "screenshot.png" nella stessa cartella ove si trova lo script Python con il codice sopra.
 
-Se avete letto la documentazione della funzione grab() saprete che
+Se avete letto la documentazione della funzione `grab` saprete che
 potete decidere di fare lo screenshot ad una sezione dello schermo. La
 prova di questo ve la lascio come esercizio.
 
 
-------------------------------------------------------------------------------------------------
+
+### Esercizi
+
+Ed eccolo qui... il sottocapitolo che aspettavate :wink:
+
 
 **Esercizio 671**
 
@@ -210,20 +213,20 @@ in modo tale da fornirgli il tempo di *liberare* lo schermo.
 ## Modulo matplotlib
 
 
-Il modulo Matplotlib serve per creare dei plot, ovvero dei grafici a
+Il modulo `matplotlib` serve per creare dei plot, ovvero dei grafici a
 partire da funzioni algebriche nel piano e nello spazio.
 
-Immaginate di voler disegnare il grafico della retta y = 2 x.
+Immaginate di voler disegnare il grafico della retta `y = 2 x`.
 
-Scegliete alcuni punti per le ascisse x = [ 1 , 2 , 3 , 4 ]
+Scegliete alcuni punti per le ascisse `x = [ 1 , 2 , 3 , 4 ]`
 
-Calcolate le ordinate corrispondenti y = [ 2 , 4 , 6 , 8 ]
+Calcolate le ordinate corrispondenti `y = [ 2 , 4 , 6 , 8 ]`
 
-Disegnate il piano cartesiano e vi ponete i punti calcolati: (1,2) (2,4) (3,6) (4,8)
+Disegnate il piano cartesiano e vi ponete i punti calcolati: `(1,2) (2,4) (3,6) (4,8)`
 
 Infine tirate una riga che passa per questi punti
 
-Con Matplotlib si possono fare cose del genere. Ci provo per la retta dell'esempio:
+Con `matplotlib` si possono fare cose del genere. Ci provo per la retta dell'esempio:
 
 
 ```python
@@ -321,11 +324,10 @@ plt.savefig("immagine.jpg")
 ```
     
  
-Facile :)
+Facile :smile:
 
 
-La libreria Matplotlib si può utilizzare anche per disegnare barre
-(verticali oppure orizzontali):
+Si può utilizzare questa libreria anche per disegnare barre verticali od orizzontali, i celebri *istogrammi*:
 
 
 ```python title="Barre Verticali"
@@ -357,8 +359,11 @@ Se volete approfondire un po', guardate il sito ufficiale: <https://matplotlib.o
 Oltre alla documentazione (so che non la leggerete) ci sono molti esempi
 e tutorial...
 
-Se proprio volete imparare... basta solo fare un po' di esercizio :)
 
+
+### Esercizi
+
+Se proprio volete imparare... basta solo fare un po' di esercizio :wink:
 
 ------------------------------------------------------------------------------------------------
 
@@ -372,10 +377,65 @@ Visualizzare entrambi nello stesso plot.
 
 **Esercizio 682**
 
-Ci penso...
+Crea un grafico che rappresenta la funzione `y = 3x + 1` nell'intervallo da `x = 0` a `x = 10`.
+
+- Usa almeno 11 punti (da 0 a 10) 
+- Aggiungi un titolo al grafico 
+- Etichetta gli assi X e Y 
+- Visualizza il grafico 
 
 ------------------------------------------------------------------------------------------------
 
+**Esercizio 683**
+
+Hai rilevato le temperature (in gradi Celsius) durante una settimana di ottobre:
+
+- Lunedì: 18° 
+- Martedì: 20° 
+- Mercoledì: 19° 
+- Giovedì: 22° 
+- Venerdì: 21° 
+- Sabato: 17° 
+- Domenica: 16° 
+
+Crea un grafico a barre che mostri le temperature dei diversi giorni.
+
+- Usa `plt.bar()` per creare le barre 
+- Aggiungi un titolo significativo 
+- Etichetta correttamente gli assi 
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 684**
+
+Hai ottenuto i seguenti voti durante il quadrimestre in Python:
+
+6, 7, 7, 8, 7, 9, 8, 7
+
+Crea un diagramma a torta che mostri la distribuzione percentuale dei voti (quanti 6, quanti 7, quanti 8, quanti 9 hai preso).
+
+- Conta quante volte appare ogni voto 
+- Usa `plt.pie()` per creare il diagramma 
+- Aggiungi le etichette con i voti (6, 7, 8, 9) 
+
+Prova a ripetere la generazione del grafico con un elenco di 20 voti generati casualmente scelti fra 6,7,8,9.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 685**
+
+Disegna nello stesso grafico due funzioni:
+
+- `f(x) = x²` (parabola) 
+- `g(x) = 4x` (retta) 
+
+nell'intervallo da `x = 0` a `x = 5`.
+
+- Usa almeno 20 punti per avere curve fluide 
+- Aggiungi una legenda che distingua le due funzioni 
+- Aggiungi una griglia per rendere il grafico più leggibile 
+- Usa colori diversi per le due linee (parametro color in plot()) 
+- Salva il grafico come file "confronto.png" invece di visualizzarlo 
 
 <br>
 <br>
