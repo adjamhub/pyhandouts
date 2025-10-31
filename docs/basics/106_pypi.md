@@ -148,6 +148,33 @@ ritagliata dall'alto per diventare 100 x 50 pixel.
 
 ------------------------------------------------------------------------------------------------
 
+**Esercizio 663**
+
+Data un'immagine `foto.jpg`, creare un programma che applica un effetto "galleria d'arte" creando 4 versioni della stessa immagine con 
+filtri diversi (normale, bianco e nero, sfocata, contorni) e le salva come `foto_normale.jpg`, `foto_bn.jpg`, `foto_blur.jpg` e `foto_contorni.jpg`. Utilizzare il filtro `ImageFilter.CONTOUR` per l'ultima versione.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 664**
+
+Creare un programma che prende un'immagine `logo.png` e genera una miniatura (thumbnail) di dimensione massima 200x200 pixel mantenendo le proporzioni originali dell'immagine. Salvare il risultato come `logo_thumb.png`. 
+
+Provate a documentarvi e a utilizzare il metodo `thumbnail()`.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 665**
+
+Data un'immagine `panorama.jpg`, creare un programma che la divide in 4 parti uguali (quadrante in alto a sinistra, in alto a destra, in basso a sinistra, in basso a destra) e salva ciascun quadrante come file separato: `panorama_tl.jpg`, `panorama_tr.jpg`, `panorama_bl.jpg`, `panorama_br.jpg`.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 666**
+
+Creare un programma che prende due immagini della stessa dimensione (`sfondo.jpg` e `overlay.png`) e le combina sovrapponendo la seconda sulla prima con trasparenza del 50%. Salvare il risultato come `composizione.jpg`. 
+
+Provate a documentarvi e a utilizzare i metodi `Image.blend()` oppure `Image.alpha_composite()`.
+
 
 <!-- ############################################################################################ -->
 ## Modulo pyscreenshot 
@@ -208,7 +235,27 @@ in modo tale da fornirgli il tempo di *liberare* lo schermo.
 
 ------------------------------------------------------------------------------------------------
 
+**Esercizio 673**
 
+Creare un programma che fa 3 screenshot consecutivi dello schermo a distanza di 2 secondi l'uno dall'altro e li salva con nomi progressivi: `screen_1.png`, `screen_2.png`, `screen_3.png`.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 674**
+
+Creare un programma che fa uno screenshot solo della parte centrale dello schermo (ad esempio, un'area di 800x600 pixel centrata) e la salva come `screen_center.png`. Utilizzare la funzione `grab()` con i parametri appropriati per specificare l'area.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 675**
+
+Creare un programma che chiede all'utente quanti secondi aspettare prima di fare lo screenshot, attende il tempo specificato, fa lo screenshot, lo ruota di 90 gradi in senso orario e lo salva come `screen_rotated.png`.
+
+------------------------------------------------------------------------------------------------
+
+**Esercizio 676**
+
+Creare un "monitor della produttività": il programma fa uno screenshot ogni 30 secondi per 5 volte, ridimensiona ogni immagine a 320x240 pixel e le salva con timestamp nel nome (ad esempio monitor_14-30-15.png). L'utente deve avere 3 secondi di avviso prima del primo screenshot.
 
 
 <!-- ############################################################################################ -->
