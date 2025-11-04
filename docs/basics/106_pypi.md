@@ -230,8 +230,10 @@ Salvare l'immagine ottenuta.
 
 **Esercizio 672**
 
-Utilizzare i moduli `time` e `pyscreenshot` per fare uno screenshot del desktop vuoto: una volta eseguito, il programma fornirà 5 secondi al'utente prima di fare lo screenshot,
-in modo tale da fornirgli il tempo di *liberare* lo schermo.
+Utilizzare i moduli `time` e `pyscreenshot` per fare uno screenshot del desktop: una volta eseguito, il programma fornirà 5 secondi all'utente prima di fare lo screenshot,
+in modo tale da fornirgli il tempo di *preparare* lo schermo.
+
+Salvare il file con nome screenshot_ANNO_MESE_GIORNO_ORE_MINUTI_SECONDI.jpg
 
 ------------------------------------------------------------------------------------------------
 
