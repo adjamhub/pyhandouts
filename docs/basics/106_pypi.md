@@ -132,9 +132,12 @@ Basta!
 Volete fare, sapere di più? Leggete la documentazione! Ma per imparare ad usare qualcosa... occorre esercitarsi!!!
 
 
+------------------------------------------------------------------------------------------------
+
+
 **Esercizio 661**
 
-Data una immagine qualsiasi (ad esempio, la fantastica `pippo.jpg`, da mettere nella stessa cartella del seguente script) utilizzare il modulo pillow
+Data una immagine qualsiasi (ad esempio, la fantastica `pippo.jpg`, da mettere nella stessa cartella del seguente script) utilizzare il modulo `pillow`
 per creare le immagini `pippoAllaRovescia.jpg`, contenente l'immagine iniziale rovesciata (ruotata di 180 gradi) e `pippoBiancoNeroRovesciato.jpg` contenente 
 l'immagine iniziale rovesciata e in scala di grigi
 
@@ -142,7 +145,7 @@ l'immagine iniziale rovesciata e in scala di grigi
 
 **Esercizio 662**
 
-Data una immagine qualsiasi (ad esempio, la fantastica `pippo.jpg`, da mettere nella stessa cartella del seguente script) utilizzare il modulo pillow
+Data una immagine qualsiasi (ad esempio, la fantastica `pippo.jpg`, da mettere nella stessa cartella del seguente script) utilizzare il modulo `pillow`
 per creare le immagini `pippo_100.jpg`, contenente l'immagine iniziale ridimensionata a 100 x 100 pixel e `pippo_100_50.jpg` contenente l'immagine precedente 
 ritagliata dall'alto per diventare 100 x 50 pixel.
 
@@ -157,7 +160,7 @@ filtri diversi (normale, bianco e nero, sfocata, contorni) e le salva come `foto
 
 **Esercizio 664**
 
-Creare un programma che prende un'immagine `logo.png` e genera una miniatura (thumbnail) di dimensione massima 200x200 pixel mantenendo le proporzioni originali dell'immagine. Salvare il risultato come `logo_thumb.png`. 
+Creare un programma che prende un'immagine `logo.png` e genera una miniatura (*thumbnail*) di dimensione massima 200x200 pixel mantenendo le proporzioni originali dell'immagine. Salvare il risultato come `logo_thumb.png`. 
 
 Provate a documentarvi e a utilizzare il metodo `thumbnail()`.
 
@@ -221,6 +224,9 @@ prova di questo ve la lascio come esercizio.
 Ed eccolo qui... il sottocapitolo che aspettavate :wink:
 
 
+------------------------------------------------------------------------------------------------
+
+
 **Esercizio 671**
 
 Utilizzare il modulo `pyscreenshot` per fare uno screenshot dello schermo, ridimensionarlo a 800 x 600 pixel e modificarlo in scala di grigi.
@@ -233,7 +239,7 @@ Salvare l'immagine ottenuta.
 Utilizzare i moduli `time` e `pyscreenshot` per fare uno screenshot del desktop: una volta eseguito, il programma fornirà 5 secondi all'utente prima di fare lo screenshot,
 in modo tale da fornirgli il tempo di *preparare* lo schermo.
 
-Salvare il file con nome screenshot_ANNO_MESE_GIORNO_ORE_MINUTI_SECONDI.jpg
+Salvare il file con nome `screenshot_ANNO_MESE_GIORNO_ORE_MINUTI_SECONDI.jpg`.
 
 ------------------------------------------------------------------------------------------------
 
