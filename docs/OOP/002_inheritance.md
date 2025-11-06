@@ -2,7 +2,8 @@
 
 
 
-L'ereditarietà è un concetto tipico della programmazione orientata agli oggetti che ovviamente qui sarà declinato in salsa Python :)
+L'ereditarietà è un concetto tipico della programmazione orientata agli oggetti che ovviamente qui sarà declinato in salsa Python :wink:
+
 Essa è la capacità di definire una classe (la ***classe derivata***) a partire da una già esistente (la ***classe base***), facendo in modo che 
 la nuova classe *erediti* tutte le caratteristiche della classe iniziale.
 
