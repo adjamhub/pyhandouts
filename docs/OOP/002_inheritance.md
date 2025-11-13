@@ -317,13 +317,15 @@ Definire il seguente contatto di lavoro:
 
 Definire una classe Persona con attributi nome e anno di nascita,
 forniti tramite parametri e indirizzo, inizialmente impostato alla
-stringa vuota. Derivare da essa una classe Abbonato, che comprenda il
-numero di noleggi effettuati e la percentuale di sconto a cui l'utente
-ha diritto. Ovviamente il numero di noleggi all'inizio è zero, mentre lo
+stringa vuota. 
+
+Derivare da essa una classe Abbonato, che comprenda il numero di noleggi effettuati 
+e la percentuale di sconto a cui l'utente ha diritto. Ovviamente il numero di noleggi all'inizio è zero, mentre lo
 sconto iniziale è del 5% per tutti gli adulti fino a 50 anni e del 10%
-per i più grandi (da 50 in su). Ogni 2 noleggi lo sconto aumenta del 5%
-fino ad un massimo del 50% di sconto sul prezzo di noleggio. Definire
-una funzione "noleggiaFilm" che aggiunge un noleggio all'abbonato,
+per i più grandi (da 50 in su). 
+
+Ogni 2 noleggi lo sconto aumenta del 5% fino ad un massimo del 50% di sconto sul prezzo di noleggio. 
+Definire una funzione "noleggiaFilm" che aggiunge un noleggio all'abbonato,
 eventualmente aggiornando le informazioni dell'abbonato.
 
 --------------------------------------------------------------------
