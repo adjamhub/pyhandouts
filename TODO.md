@@ -1,6 +1,7 @@
-COSE DA FARE
+# COSE DA FARE
 
 --------------------------
+
 ## IN GENERALE...
 
 o Da CAPITOLO a LEZIONE:
@@ -45,7 +46,7 @@ o MODULI
   - togli pyscreenshot, integra ImageGrab
     
 --------------------------
-# OOP
+## OOP
 
 o staticmethods
 
@@ -59,7 +60,7 @@ o instance vs class vs static
   - static (https://www.pythontutorial.net/python-oop/python-static-methods/) methods
 
 --------------------------
-# WX
+## WX
 
 o tutto con self.qualcosina???
 
