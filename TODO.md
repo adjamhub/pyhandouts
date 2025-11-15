@@ -7,11 +7,10 @@ o Da CAPITOLO a LEZIONE:
   - un capitolo è un "pezzo di testo relativo ad un argomento"
   - una lezione è (una parte di) un argomento che ti viene spiegata e su cui poi fai gli esercizi.
   
-o SCARICA HTML SINGOLO
-
-o SCARICA OFFLINE (CHM???)
-
-o APP (???)
+o SCARICA:
+  - HTML SINGOLO
+  - OFFLINE (CHM???)
+  - APP (???)
 
 o link che si aprono in un'altra scheda (QUALI???)
 
@@ -36,14 +35,14 @@ o PACKAGES????
 o str.format() nelle stringhe, dopo le f-strings (o al posto di ?)
 
 o eccezioni. 
-    - DOVE ? DOPO le sequenze? PRIMA delle strutture di controllo?
-    - QUANDO? Inizio Anno Prossimo???
+  - DOVE ? DOPO le sequenze? PRIMA delle strutture di controllo?
+  - QUANDO? Inizio Anno Prossimo???
 
 o MODULI 
-    - (import TODO) ???
-    - argparse
-    - os, sys
-    - togli pyscreenshot, integra ImageGrab
+  - (import TODO) ???
+  - argparse
+  - os, sys
+  - togli pyscreenshot, integra ImageGrab
     
 --------------------------
 # OOP
@@ -54,11 +53,10 @@ o poni un obiettivo con un progetto IMPORTANTE per NATALE!!!
 
 o ...manca sicuro qualcosa fra gli argomenti: funzioni statiche? virtuali?? classi astratte???
 
-o instance (https://www.pythontutorial.net/python-oop/python-methods/) 
-    vs 
-    class (https://www.pythontutorial.net/python-oop/python-class-methods/) 
-    vs 
-    static (https://www.pythontutorial.net/python-oop/python-static-methods/) methods
+o instance vs class vs static
+  - instance(https://www.pythontutorial.net/python-oop/python-methods/) 
+  - class (https://www.pythontutorial.net/python-oop/python-class-methods/) 
+  - static (https://www.pythontutorial.net/python-oop/python-static-methods/) methods
 
 --------------------------
 # WX
@@ -72,12 +70,12 @@ o widget avanzate
 o esercizi complicati!!!
 
 o Wx Widgets avanzate
-    - wx.stc (scintilla)
-    - wx.media
-    - wx.grid
-    - wx.richtext
-    - wx.ListCtrl: File Manager
-    - le altre... da sistemare!!!
+  - wx.stc (scintilla)
+  - wx.media
+  - wx.grid
+  - wx.richtext
+  - wx.ListCtrl: File Manager
+  - le altre... da sistemare!!!
 
  o operazioni di rete (integrazione con async??)
 
