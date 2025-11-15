@@ -27,22 +27,21 @@ o TEORIA di MARKDOWN: la pagina ABOUT. Cosa ci mettiamo? Come la organizziamo???
 --------------------------
 ## BASICS
 
-x SEQUENZE (dizionari???? DA DECIDERE)
-x FUNZIONI: esercizi ci sono. Si possono aggiungere i vecchi compiti sulle funzioni
-x FILEs ????? (possibile unione con modulo pathlib)
-x CSV
-
 o FIRST THINGS (OK, ma... magari qualche esercizio in più)
-o MODULI (import TODO) 
 o PACKAGES????
 
-COSE DA DECIDERE NELLA DIDATTICA
+o str.format() nelle stringhe, dopo le f-strings (o al posto di ?)
 
-x dizionari --> dove arriviamo??? LI HO MESSI COME PREMESSA AL MODULO CSV
-x unione files <--> modulo pathlib PIU' O MENO FATTO
+o eccezioni. DOVE ?????????????? 
+  DOPO le sequenze? PRIMA delle strutture di controllo?
+  QUANDO??? Inizio Anno Prossimo???
 
-- packages ???
-
+o MODULI 
+    o (import TODO) ???
+    o argparse
+    o os, sys
+    o togli pyscreenshot, integra ImageGrab
+    
 --------------------------
 # OOP
 
@@ -74,12 +73,5 @@ o esercizi complicati!!!
 (-) operazioni di rete
 
 --------------------------
-# ESP 32
 
-(-) DISPENSE ESP32
-    (-) sistema, evidenzia codice
-    (-) esercizi
-    (-) simulatore
-    (-) migliora le spiegazioni
-    (-) RIORGANIZZA in modo da fare MENO circuiti e più cose.
 
