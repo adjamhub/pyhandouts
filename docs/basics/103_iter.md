@@ -1220,18 +1220,14 @@ secondario rispetto a questo!
 
 Provo a scrivere il codice:
 
-**Passaggio 1**
-
-``` python
+``` py title="Passaggio 1"
 # Dato N, visualizzo tutti i numeri fra 2 e N - 1
 for div in range(2, N -- 1):
     print (div)
 ```
 
 
-**Passaggio 2**
-
-``` python
+``` py title="Passaggio 2"
 # Dato N, visualizzo quali numeri fra 2 e N - 1 dividono N
 for div in range(2, N -- 1):
     if N % div == 0:
@@ -1239,9 +1235,7 @@ for div in range(2, N -- 1):
 ```
 
 
-**Passaggio 3**
-
-``` python
+``` py title="Passaggio 3"
 # Dato N, conto quanti numeri fra 2 e N - 1 dividono N
 conta = 0
 for div in range(2, N -- 1):
@@ -1250,13 +1244,10 @@ for div in range(2, N -- 1):
 ```
 
 
-**Passaggio 4 (finale)**
-
-
-```
+``` py title="Passaggio 4 (finale)"
 # Dato N, faccio lo step 3 e poi guardo il risultato
 # se la conta è ZERO, N è primo, altrimenti no.
-. . .
+# . . .
 
 if conta == 0:
     print(N, "è primo")
