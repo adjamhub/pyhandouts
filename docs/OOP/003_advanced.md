@@ -163,8 +163,8 @@ funzioni operatore per somma, sottrazione, divisione, maggiore, uguale.
 
 Derivare da essa la classe Complesso, che rappresenta un numero
 complesso. Reimplementare le funzioni ereditate secondo necessità.
-Definire inoltre la funzione modulo(), che calcola il modulo del numero
-e la funzione coniugato() che ritorna un oggetto Complesso che
+Definire inoltre la funzione `modulo()`, che calcola il modulo del numero
+e la funzione `coniugato()` che ritorna un oggetto Complesso che
 rappresenta il complesso coniugato del numero iniziale.
 
 Definire i numeri reali: 4.5 , -7.2 , 9.1 Testare le funzioni
@@ -180,11 +180,11 @@ rappresentano i giorni e i mesi. Nella classe DataSemplice i mesi hanno
 la lunghezza normale (Gennaio ne ha 31, Febbraio 28, etc...) ma non ci
 sono gli anni e quindi non esistono gli anni bisestili.
 
-Presenta una funzione "isValid()" che ritorna True se la data
+Presenta una funzione `isValid()` che ritorna True se la data
 rappresentata è valida, ovvero la coppia di numeri rappresenta una
 combinazione giorno/mese esistente, False altrimenti.
 
-Presenta una funzione "contaGiorni()" che restituisce il numero di
+Presenta una funzione `contaGiorni()` che restituisce il numero di
 giorni trascorsi dal 1 Gennaio alla data rappresentata, se valida. -1
 altrimenti. Implementare le funzioni operatori per l'addizione, la
 sottrazione, il minore e il diverso. Due date si sommano sommando il
@@ -204,6 +204,10 @@ Testare le seguenti operazioni:
 -   03 mar -- 2 feb
 -   03 mar < 2 feb
 -   05 lug != 2 feb
+
+Procedere dichiarando una lista e inserendo al suo interno fino a 10 DataSemplice 
+con valori casuali (validi) per giorno e mese. Visualizzare la lista così generata.
+Testare l'ordinamento tramite funzione `sort` e visualizzare la lista ordinata.
 
 <br>
 <br>
