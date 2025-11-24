@@ -107,6 +107,13 @@ def __lt__ ( self , other ):
     return False
 ```
 
+
+!!! tip "Liste e ordinamenti di oggetti"
+
+    Se create una lista di Punto2D o di oggetti in genere, per far funzionare
+    correttamente la funzione `sort` vi basta implementare la funzione `__lt__`!!!
+
+
 Spero sia chiaro! Come al solito... per capire meglio ci sono gli esercizi :)
 
 <!-- ################################################################################################# -->
@@ -124,7 +131,7 @@ Definire in essa le funzioni:
 
 - `semplifica()`: riduce ai minimi termini i generatori (numeratore e
   denominatore) della frazione. Ad esempio se il numeratore è 25 e il
-  denominatore è 30, allora si possono entrambe dividere per 5 ( il MCD
+  denominatore è 30, allora si possono entrambe dividere per 5 (il MCD
   fra 25 e 30) ottenendo 5 e 6.
 
 Definire inoltre le funzioni operatori per somma, moltiplicazione,
