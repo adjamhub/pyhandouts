@@ -145,7 +145,7 @@ frulla in mente e quello che volete fare per realizzarla!
 
 
 <!-- ############################################################################################ -->
-## Esercizi (NO IA)
+## Esercizi
 
 Per ognuno dei seguenti quesiti, creare un modulo (un file .py) per eseguire la richiesta dell'esercizio. Tipicamente i file degli esercizi si chiamano `esNUMERO.py`, ad esempio `es1.py` oppure `es001.py`
 e nelle prime righe si trova (come commento) il nome di chi lo ha svolto e una descrizione dell'esercizio. Una cosa tipo:

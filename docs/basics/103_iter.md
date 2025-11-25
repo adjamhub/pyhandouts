@@ -236,7 +236,13 @@ ne sarete convinti anche voi :)
 
 <!-- ###################################################################################################### -->
 
-### Esercizi su for e range (NO IA)
+### Esercizi su for e range
+
+!!! danger "NO IA"
+
+    Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+    Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+    contesto affidarsi alle IA per la risoluzione degli stessi!!!
 
 
 Utilizzate il comando `for ... in range ( ... )` per la risoluzione dei seguenti esercizi:
@@ -484,7 +490,14 @@ E adesso sotto con gli esercizi!
 
 <!-- ###################################################################################################### -->
 
-### Esercizi su somma e conta (NO IA)
+### Esercizi su somma e conta
+
+
+!!! danger "NO IA"
+
+    Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+    Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+    contesto affidarsi alle IA per la risoluzione degli stessi!!!
 
 
 **Esercizio 321**
@@ -615,7 +628,15 @@ comportamento dei cicli.
 
 <!-- ###################################################################################################### -->
 
-### Esercizi su while (IA con logica)
+### Esercizi su while
+
+
+!!! warning "Attenzione alle IA"
+
+    Capisco la tentazione di *aiutarsi* nella risoluzione tramite le IA. Ricordate però
+    che sarete valutati sulla comprensione di quanto avete consegnato. *Come* hai svolto un
+    certo esercizio e *perché* lo hai svolto in quel modo...
+
 
 
 **Esercizio 341**
@@ -958,7 +979,14 @@ Capito vero? Verifichiamolo con qualche esercizio :)
 
 <!-- ###################################################################################################### -->
 
-### Esercizi sul controllo valori (NO IA)
+### Esercizi sul controllo valori
+
+
+!!! danger "NO IA"
+
+    Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+    Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+    contesto affidarsi alle IA per la risoluzione degli stessi!!!
 
 
 **Esercizio 361**
@@ -1315,13 +1343,19 @@ mettervi alla prova!!!
 
 
 <!-- ###################################################################################################### -->
-## Esercizi finali sui cicli (IA con logica)
+## Esercizi finali sui cicli
 
 
 Gli esercizi elencati qua di seguito non sono semplici applicazioni dei
 concetti studiati finora, ma sono i primi esercizi che richiedono una
 buona dose di ragionamento e di preparazione per "progettare" la
 soluzione dell'esercizio.
+
+!!! warning "Attenzione alle IA"
+
+    Capisco la tentazione di *aiutarsi* nella risoluzione tramite le IA. Ricordate però
+    che sarete valutati sulla comprensione di quanto avete consegnato. *Come* hai svolto un
+    certo esercizio e *perché* lo hai svolto in quel modo...
 
 
 ------------------------------------------------------------------------------------------

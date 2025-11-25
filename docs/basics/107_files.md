@@ -187,7 +187,14 @@ Spero sia abbastanza chiaro. Nel dubbio… lo sapete già! Funzioni `dir()` ed `
 
 
 
-### Esercizi sui files (NO IA almeno fino al 715)
+### Esercizi sui files
+
+
+!!! danger "NO IA almeno fino al 715"
+
+    Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+    Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+    contesto affidarsi alle IA per la risoluzione degli stessi!!!
 
 
 **Esercizio 701 (parte 1)**
@@ -614,7 +621,14 @@ Grazie alla funzione `open()` dell’oggetto Path possiamo creare o aprire in le
 Adesso tocca a voi provare il codice degli esempi e poi procedere con gli esercizi!
 
 
-### Esercizi (NO IA)
+### Esercizi
+
+
+!!! danger "NO IA"
+
+    Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+    Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+    contesto affidarsi alle IA per la risoluzione degli stessi!!!
 
 
 ------------------------------------------------------------

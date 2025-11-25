@@ -239,6 +239,13 @@ Per fortuna sono qui sotto :smile:
 ## Esercizi
 
 
+!!! danger "NO IA almeno fino al 510!"
+
+    Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+    Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+    contesto affidarsi alle IA per la risoluzione degli stessi!!!
+
+
 **Esercizio 501**
 
 Scrivere una funzione che calcola l'area di un rettangolo e una che ne
