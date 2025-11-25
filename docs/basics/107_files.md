@@ -187,7 +187,7 @@ Spero sia abbastanza chiaro. Nel dubbio… lo sapete già! Funzioni `dir()` ed `
 
 
 
-### Esercizi sui files
+### Esercizi sui files (NO IA almeno fino al 715)
 
 
 **Esercizio 701 (parte 1)**
@@ -327,12 +327,79 @@ Scrivete un programma che legge dal file "sequenza.txt" una sequenza di interi, 
 
 ------------------------------------------------------------
 
-**Esercizio 716**
+**Esercizio 717: password**
 
-Creare un file chiamato "settings.txt" contenente una serie di righe del tipo chiave = valore (ad esempio: nome=Andrea, cognome=Diamantini…). 
-Importare i dati dal file e caricarli in un dizionario creato appositamente con la parte prima dell’uguale "strizzata" degli spazi come chiave e la parte dopo l’uguale, 
-"strizzata" di spazi e newline come valore.
+Scrivere un programma che chiede all'utente di inserire una password (una stringa qualsiasi) e la salva nel file "password.txt".
 
+Scrivere poi un secondo programma che chiede all'utente di inserire una password, legge il contenuto del file "password.txt" e verifica se la password inserita corrisponde a quella salvata. Visualizzare "Accesso consentito" o "Accesso negato" a seconda del risultato.
+
+------------------------------------------------------------
+
+**Esercizio 718: statistiche testo**
+
+Creare a mano un file di testo chiamato "testo.txt" contenente alcune frasi di testo qualsiasi (minimo 3-4 righe).
+
+Implementare un software che legge dal file "testo.txt", conta il numero totale di righe, il numero totale di parole e il numero totale di caratteri (spazi esclusi). Visualizzare le statistiche a schermo e salvarle nel file "statistiche.txt" nel formato:
+```
+Righe: X
+Parole: Y
+Caratteri: Z
+```
+
+------------------------------------------------------------
+
+**Esercizio 719: prezzi prodotti**
+
+Creare a mano un file di testo chiamato "prezzi.txt" contenente 5 prezzi di prodotti (numeri reali con 2 decimali), uno per riga.
+
+Implementare un software che legge i prezzi dal file, calcola il totale, il prezzo medio, il prezzo minimo e il prezzo massimo. Visualizzare tutti i risultati a schermo e salvarli nel file "riepilogo.txt", formattati con 2 decimali.
+
+------------------------------------------------------------
+
+**Esercizio 720 (parte 1): voti studente**
+
+Creare a mano un file di testo chiamato "voti.txt" contenente 8 voti (numeri interi da 1 a 10), uno per riga.
+
+Implementare un software che legge i voti dal file, calcola la media, conta quanti sono sufficienti (>= 6) e quanti insufficienti (< 6). Visualizzare i risultati e salvarli nel file "report_voti.txt".
+
+------------------------------------------------------------
+
+**Esercizio 720 (parte 2): promozione**
+
+Estendere l'esercizio precedente per determinare se lo studente è promosso o bocciato. Lo studente è promosso se la media è >= 6 E non ha più di 2 insufficienze. Aggiungere questa informazione al file "report_voti.txt".
+
+------------------------------------------------------------
+
+**Esercizio 722: invertire righe**
+
+Creare a mano un file di testo chiamato "originale.txt" con 5-6 righe di testo.
+
+Scrivere un programma che legge il file "originale.txt", carica tutte le righe in una lista, inverte l'ordine delle righe e salva il risultato nel file "invertito.txt". Visualizzare sia il contenuto originale che quello invertito.
+
+------------------------------------------------------------
+
+**Esercizio 723: filtra parole**
+Creare a mano un file di testo chiamato "parole.txt" contenente una lista di parole, una per riga (minimo 10 parole).
+
+Implementare un software che legge le parole dal file, chiede all'utente di inserire una lunghezza minima (es: 5) e salva nel file "parole_lunghe.txt" solo le parole che hanno una lunghezza maggiore o uguale a quella specificata. Visualizzare quante parole sono state filtrate.
+
+------------------------------------------------------------
+
+**Esercizio 724: agenda telefonica semplice**
+
+Creare sul Desktop una cartella chiamata "agenda".
+
+Implementare un software che permette all'utente di salvare contatti in un file "contatti.txt" nella cartella agenda. Ogni contatto deve contenere nome e numero di telefono separati da una virgola (es: "Mario Rossi,3331234567").
+
+Il programma deve offrire un menu:
+- (A) Aggiungi contatto
+- (V) Visualizza tutti i contatti
+- (C) Cerca contatto per nome
+- (Q) Esci
+
+Quando si cerca un contatto, visualizzare nome e numero se trovato, altrimenti comunicare che il contatto non esiste.
+
+---
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
@@ -547,7 +614,7 @@ Grazie alla funzione `open()` dell’oggetto Path possiamo creare o aprire in le
 Adesso tocca a voi provare il codice degli esempi e poi procedere con gli esercizi!
 
 
-### Esercizi
+### Esercizi (NO IA)
 
 
 ------------------------------------------------------------
