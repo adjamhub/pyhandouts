@@ -236,7 +236,7 @@ ne sarete convinti anche voi :)
 
 <!-- ###################################################################################################### -->
 
-### Esercizi su for e range
+### Esercizi su for e range (NO IA)
 
 
 Utilizzate il comando `for ... in range ( ... )` per la risoluzione dei seguenti esercizi:
@@ -484,7 +484,7 @@ E adesso sotto con gli esercizi!
 
 <!-- ###################################################################################################### -->
 
-### Esercizi su somma e conta
+### Esercizi su somma e conta (NO IA)
 
 
 **Esercizio 321**
@@ -615,7 +615,7 @@ comportamento dei cicli.
 
 <!-- ###################################################################################################### -->
 
-### Esercizi su while
+### Esercizi su while (IA con logica)
 
 
 **Esercizio 341**
@@ -958,7 +958,7 @@ Capito vero? Verifichiamolo con qualche esercizio :)
 
 <!-- ###################################################################################################### -->
 
-### Esercizi sul controllo valori
+### Esercizi sul controllo valori (NO IA)
 
 
 **Esercizio 361**
@@ -1315,7 +1315,7 @@ mettervi alla prova!!!
 
 
 <!-- ###################################################################################################### -->
-## Esercizi finali sui cicli
+## Esercizi finali sui cicli (IA con logica)
 
 
 Gli esercizi elencati qua di seguito non sono semplici applicazioni dei
