@@ -435,7 +435,7 @@ print( "Home dir:", homePath )
 
 # il percorso del Desktop
 # il simbolo / congiunge i percorsi
-desktop = home / "Desktop"
+desktop = homePath / "Desktop"
 print( "Il percorso del Desktop:", desktop )
 ```
 
