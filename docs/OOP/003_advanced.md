@@ -48,25 +48,26 @@ Quindi da ora in poi...
 c = a + b
 ```
 
-Per definire altri tipi di operazioni basta consultare la tabella qua
-sotto.
+Data una generica classe `Pippo` e due oggetti qualunque, diciamo `a` e `b`
+della classe `Pippo`:
 
-| Operatore            | Espressione     | Funzione interna per l'overloading  |
-|----------------------|-----------------|-------------------------------------|
-| print                | print ( a )     | `a.__str__()`                       | 
-| Addizione            | a + b           | `a.__add__(b)`                      |
-| Sottrazione          | a - b           | `a.__sub__(b)`                      |
-| Moltiplicazione      | a * b           | `a.__mul__(b)`                      |
-| Divisione            | a / b           | `a.__truediv__(b)`                  |
-| Divisione Intera     | a // b          | `a.__floordiv__(b)`                 |
-| Potenza              | a ** b          | `a.__pow__(b)`                      |
-| Modulo               | a % b           | `a.__mod__(b)`                      |
-| Minore               | a < b           | `a.__lt__(b)`                       |
-| Minore o uguale      | a <= b          | `a.__le__(b)`                       |
-| Uguale               | a == b          | `a.__eq__(b)`                       |
-| Diverso              | a != b          | `a.__ne__(b)`                       |
-| Maggiore             | a > b           | `a.__gt__(b)`                       |
-| Maggiore o uguale    | a >= b          | `a.__ge__(b)`                       |
+
+| Se vuoi usare:       | e scrivere      | Implementa nella classe la funzione:| che ritorna                     |
+|----------------------|-----------------|-------------------------------------|---------------------------------|
+| print                | print ( a )     | `def __str__(self)`                 | una stringa                     |
+| Addizione            | a + b           | `def __add__(self,other)`           | un oggetto della classe         |
+| Sottrazione          | a - b           | `def __sub__(self,other)`           | un oggetto della classe         |
+| Moltiplicazione      | a * b           | `def __mul__(self,other)`           | un oggetto della classe         |
+| Divisione            | a / b           | `def __truediv__(self,other)`       | un oggetto della classe         |
+| Divisione Intera     | a // b          | `def __floordiv__(self,other)`      | un oggetto della classe         |
+| Potenza              | a ** b          | `def __pow__(self,other)`           | un oggetto della classe         |
+| Modulo               | a % b           | `def __mod__(self,other)`           | un oggetto della classe         |
+| Minore               | a < b           | `def __lt__(self,other)`            | un bool (True o False)          |
+| Minore o uguale      | a <= b          | `def __le__(self,other)`            | un bool (True o False)          |
+| Uguale               | a == b          | `def __eq__(self,other)`            | un bool (True o False)          |
+| Diverso              | a != b          | `def __ne__(self,other)`            | un bool (True o False)          |
+| Maggiore             | a > b           | `def __gt__(self,other)`            | un bool (True o False)          |
+| Maggiore o uguale    | a >= b          | `def __ge__(self,other)`            | un bool (True o False)          |
 
 
 La funzione `__str__` permette ad un oggetto della classe di essere
