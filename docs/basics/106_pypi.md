@@ -176,7 +176,7 @@ image.show()
 
 ### Screenshot
 
-Il modulo ImageGrab serve per fare gli screenshot del Desktop. Espone banalmente la semplice funzione `grab()` che realizza il compito assegnatole.
+Il modulo ImageGrab serve per fare gli screenshot del Desktop. Espone banalmente la funzione `grab()` che realizza il compito assegnatole.
 
 
 ``` python title="Screenshot del Desktop"
@@ -188,7 +188,7 @@ shot.save('screenshot.png')
 
 L'esempio sopra fa uno screenshot del Desktop e lo salva come file "screenshot.png" nella stessa cartella ove si trova lo script Python con il codice sopra.
 
-Se avete letto la documentazione della funzione grab saprete che potete decidere di fare lo screenshot ad una sezione dello schermo. La prova di questo ve la lascio come esercizio.
+Se leggete la documentazione della funzione `grab` saprete che è possibile fare lo screenshot anche ad una sola sezione dello schermo. La prova di questo ve la lascio come esercizio.
 
 
 
