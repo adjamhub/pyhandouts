@@ -123,7 +123,72 @@ gaussImage = img.filter(ImageFilter.GaussianBlur(20)) # blur gaussiano
 ```
 
 
-Basta!
+Il metodo `expand()` può essere utilizzato per aggiungere bordi alle immagini, espandendo la loro dimensione senza intaccare la vista originale
+
+
+``` python title="Aggiunge un bordo rosso di 20 pixel all'immagine"
+from PIL import Image, ImageOps
+
+image = Image.open("immagine.jpg")
+expanded_image = ImageOps.expand(image, border=20, fill="red")
+expanded_image.show()
+```
+
+### Nuove Immagini e testo
+
+In `pillow` i colori delle immagini vengono gestiti attraverso informazioni a 4 bytes con la specifica chiamata **RGBA**. Questa specifica è una
+estensione della classica **RGB** a 3 bytes in cui la **A** finale, anch'essa rappresentata con 1 byte, indica l'*alpha color*, ovvero la trasparenza,
+dove 0 indica la massima trasparenza (invisibile), mentre 255 indica nessuna trasparenza (opacità).
+
+
+``` python title="Rettangolo rosso semitrasparente 600x400"
+from PIL import Image
+
+image = Image.new('RGBA', (600,400), (255,0,0,128) )
+image.show()
+```
+
+
+Se si preferisce è possibile utilizzare la notazione esadecimale
+
+
+``` python title="Stesso colore, notazione esadecimale"
+image = Image.new('RGBA', (600,400), #FF000080 )
+```
+
+Immaginate di voler piazzare un testo al centro del rettangolo così creato
+
+``` python title="Testo con Draw"
+from PIL import Image, ImageDraw
+
+image = Image.new('RGBA', (600,400), (255,0,0,128) )
+
+text = "Ho capito tutto!"
+font = ImageFont.truetype("arial.ttf", size=30)
+text_position = (150, 185)
+text_color = (0,255,255)
+
+draw = ImageDraw.Draw(image)
+draw.text(text_position, text, fill=text_color, font=font)
+
+image.show()
+```
+
+### Screenshot
+
+Il modulo ImageGrab serve per fare gli screenshot del Desktop. Espone banalmente la semplice funzione `grab()` che realizza il compito assegnatole.
+
+
+``` python title="Screenshot del Desktop"
+from PIL import ImageGrab
+
+shot = ImageGrab.grab()
+shot.save('screenshot.png')
+```
+
+L'esempio sopra fa uno screenshot del Desktop e lo salva come file "screenshot.png" nella stessa cartella ove si trova lo script Python con il codice sopra.
+
+Se avete letto la documentazione della funzione grab saprete che potete decidere di fare lo screenshot ad una sezione dello schermo. La prova di questo ve la lascio come esercizio.
 
 
 
@@ -178,65 +243,19 @@ Creare un programma che prende due immagini della stessa dimensione (`sfondo.jpg
 
 Provate a documentarvi e a utilizzare i metodi `Image.blend()` oppure `Image.alpha_composite()`.
 
-
-<!-- ############################################################################################ -->
-## Modulo pyscreenshot 
-
-
-Il modulo `pyscreenshot` serve per fare gli screenshot del Desktop.
-Semplice e veloce. Ricordate solo che questo modulo lavora con le
-immagini, quindi per funzionare ha bisogno ***anche*** del modulo
-`pillow`. Installate il modulo chiamato `pyscreenshot` (`pillow` ce lo
-dovreste avere da prima), poi su una shell python digitate:
-
-
-``` python
->>> import pyscreenshot
->>> dir(pyscreenshot)
-```
-
-vedrete elencate le funzioni offerte dal modulo `pyscreenshot`. Come ci
-siamo sempre detti, quelle che iniziano con doppio underscore vanno
-ignorate. Non sono tantissime. O meglio... questo è uno dei moduli più
-semplici. Per fare lo screenshot ci interessa una singola funzione:
-`grab`.
-
-
-```python
-import pyscreenshot
-
-shot = pyscreenshot.grab()
-shot.save('screenshot.png')
-```
-
-
-L'esempio sopra fa uno screenshot del Desktop e lo salva come file
-*"screenshot.png"* nella stessa cartella ove si trova lo script Python con il codice sopra.
-
-Se avete letto la documentazione della funzione `grab` saprete che
-potete decidere di fare lo screenshot ad una sezione dello schermo. La
-prova di questo ve la lascio come esercizio.
-
-
-
-### Esercizi
-
-Ed eccolo qui... il sottocapitolo che aspettavate :wink:
-
-
 ------------------------------------------------------------------------------------------------
 
 
 **Esercizio 671**
 
-Utilizzare il modulo `pyscreenshot` per fare uno screenshot dello schermo, ridimensionarlo a 800 x 600 pixel e modificarlo in scala di grigi.
+Fare uno screenshot dello schermo, ridimensionarlo a 800 x 600 pixel e modificarlo in scala di grigi.
 Salvare l'immagine ottenuta.
 
 ------------------------------------------------------------------------------------------------
 
 **Esercizio 672**
 
-Utilizzare i moduli `time` e `pyscreenshot` per fare uno screenshot del desktop: una volta eseguito, il programma fornirà 5 secondi all'utente prima di fare lo screenshot,
+Una volta eseguito, il programma fornirà 5 secondi all'utente prima di fare lo screenshot,
 in modo tale da fornirgli il tempo di *preparare* lo schermo.
 
 Salvare il file con nome `screenshot_ANNO_MESE_GIORNO_ORE_MINUTI_SECONDI.jpg`.
