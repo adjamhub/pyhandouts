@@ -122,7 +122,7 @@ installare Thonny. Nel dubbio ne aggiungo qui uno...
 
 
 <br>
-<img onclick="play1()" id="ytb1" src="../images/youtube-button.jpg" alt="youtube video">
+<img onclick="play1()" id="ytb1" src="../images/youtube-button.png" alt="youtube video">
 <div id="ytv1"></div>
 <br>
 
@@ -175,4 +175,3 @@ del prossimo capitolo.
 <br>
 <br>
 <br>
-

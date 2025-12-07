@@ -22,7 +22,7 @@ Per rendervi conto della *incredibile comicità* del gruppo... ecco uno dei prim
 Dura 84 minuti. Noi non supereremo il minuto 4...
 
 <br>
-<img onclick="play1()" id="ytb1" src="../images/youtube-button.jpg" alt="youtube video">
+<img onclick="play1()" id="ytb1" src="../images/youtube-button.png" alt="youtube video">
 <div id="ytv1"></div>
 <br>
 
@@ -162,4 +162,3 @@ nell'ambiente adatto.
 <br>
 <br>
 <br>
-
