@@ -386,6 +386,7 @@ Scrivere un programma che legge il file "originale.txt", carica tutte le righe i
 ------------------------------------------------------------
 
 **Esercizio 723: filtra parole**
+
 Creare a mano un file di testo chiamato "parole.txt" contenente una lista di parole, una per riga (minimo 10 parole).
 
 Implementare un software che legge le parole dal file, chiede all'utente di inserire una lunghezza minima (es: 5) e salva nel file "parole_lunghe.txt" solo le parole che hanno una lunghezza maggiore o uguale a quella specificata. Visualizzare quante parole sono state filtrate.
