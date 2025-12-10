@@ -73,9 +73,9 @@ Vediamo pezzo per pezzo cosa abbiamo scritto:
 Per adesso basta così con le spiegazioni.... proviamo ad andare avanti con il codice!!!
 
 
-## Uscire con il tasto ESC
+## Uscire con il tasto ++esc++
 
-Una cosa che a me piace molto è quella di dare la possibilità di uscire semplicemente premendo il tasto `ESC`: 
+Una cosa che a me piace molto è quella di dare la possibilità di uscire semplicemente premendo il tasto ++esc++: 
 questa funzionalità si può ottenere aggiungendo il seguente codice!
 
 
@@ -111,7 +111,7 @@ Ragionate su come modificare il codice per fare qualunque cosa alla pressione di
 
 !!! tip "suggerimento"
 
-    Potrebbe essere carino impostare l'uscita dal gioco con il tasto Q (QUIT), oppure
+    Potrebbe essere carino impostare l'uscita dal gioco con il tasto ++q++ (QUIT), oppure
     con un tasto a propria scelta! 
     
     L'elenco completo dei codici relativi ai tasti si trova

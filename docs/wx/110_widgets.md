@@ -321,7 +321,7 @@ Cito qui i più importanti:
 | wx.TE_MULTILINE     | Permette alla TextCtrl di utilizzare più righe     |
 | wx.TE_PASSWORD      | Ogni carattere viene visualizzato con un asterisco |
 | wx.TE_READONLY      | Testo non modificabile dall'utente                 |
-| wx.TE_PROCESS_ENTER | Gestisce il tasto INVIO come evento separato       |
+| wx.TE_PROCESS_ENTER | Gestisce il tasto ++enter++ come evento separato   |
 
 
 !!! note "Nota"
@@ -414,7 +414,7 @@ La ComboBox supporta i seguenti stili di lavoro:
 | (default)            | Linea singola di testo editabile + menù a tendina |
 | wx.CB_READONLY       | Linea di testo NON editabile.                     |
 | wx.CB_SORT           | Ordina automaticamente le voci                    |
-| wx.TE_PROCESS_ENTER  | Gestisce il tasto INVIO come evento separato      |
+| wx.TE_PROCESS_ENTER  | Gestisce il tasto ++enter++ come evento separato  |
 
 Nell'esempio proposto vediamo una etichetta e un menù a tendina.
 Selezionando una voce del menù a tendina (evento `wx.EVT_COMBOBOX`) si modifica il contenuto dell'etichetta.
