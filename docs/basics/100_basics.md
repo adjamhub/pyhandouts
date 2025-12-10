@@ -86,7 +86,7 @@ Noi molto semplicemente proveremo di nuovo con un HelloWorld! Scrivete ancora il
 print("Hello, World!")
 ```
 
-Poi premete ++F5++ per avviare l'esecuzione. Thonny prima di eseguire un modulo, salva su file le modifiche che avete fatto! Se non avete ancora salvato nulla, parte la procedura
+Poi premete ++f5++ per avviare l'esecuzione. Thonny prima di eseguire un modulo, salva su file le modifiche che avete fatto! Se non avete ancora salvato nulla, parte la procedura
 di salva con nome:
 
 ![Hello World su Thonny!](images/thonny_file_HelloWorld.jpg)
