@@ -98,10 +98,8 @@ Se avete osservato i 3 esempi proposti avrete notato che:
     o andare a capo (come ad esempio fa la print())
 -   la funzione `read()` copia su una stringa tutto il contenuto del file in una volta sola.
 
-Se vogliamo leggere il file di testo riga per riga abbiamo due possibilità:
-
-1.  il ciclo for
-2.  la funzione readline()
+Se invece vogliamo leggere il file di testo **riga per riga** possiamo sfruttare il ciclo `for` abbinato al descrittore di file
+per ottenere in ogni iterazione una riga del file stesso:
 
 ``` python title="Esempio 4: lettura delle righe con ciclo for"
 file = open("ciao.txt", "r")
@@ -110,41 +108,39 @@ for riga in file:
 file.close()
 ```
 
-Che (ancora una volta) visualizzerà:
+!!! warning "Attenti ai doppi a capo!!!"
 
-``` 
-Ecco qua.
-Capito?
-Speriamo di sì
-```
+    La lettura in questo modo visualizzerà:
 
-Stesso risultato lo si ottiene con la funzione `readline()` che, come dice il nome, legge una linea del file di testo. 
-Il difetto di questa seconda modalità è che devi sapere quante righe contiene il file...
+    ``` 
+    Ecco qua.
 
-``` python title="Esempio 5: lettura delle righe con funzione readline()"
+    Capito?
+    
+    Speriamo di sì
+
+    ```
+
+    infatti ogni riga di un file finisce *a capo* così come `print` manda a capo a fine riga, risultando un doppio a capo
+
+
+La corretta esecuzione di questo codice necessita di una *pulizia* della riga tramite la funzione `strip()`.
+
+
+``` python title="Esempio 5: lettura delle righe di un file senza a capo finale"
 file = open("ciao.txt", "r")
-riga1 = file.readline()
-print(riga1)
-riga2 = file.readline()
-print(riga2)
-riga3 = file.readline()
-print(riga3)
+for riga in file:
+    print(riga.strip())
 file.close()
 ```
 
-Che (per l'ennesima volta) visualizzerà:
+Che (finalmente) visualizzerà:
 
 ``` 
 Ecco qua.
 Capito?
 Speriamo di sì
 ```
-
-!!! warning "Attenzione!"
-    
-    La visualizzazione degli ultimi due esempi non è proprio... corretta!!! Se eseguite gli ultimi due spezzoni di codice vedrete infatti delle righe vuote in più...
-    
-    Se volete capire perché... ragionate sul funzionamento della print e sul fatto che le righe dei file finiscono (ma comprendono) il carattere *a capo* `\n`
     
 
 Basta con gli esempi! Ma fra un attimo iniziamo con gli esercizi ;)
