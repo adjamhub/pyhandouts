@@ -2,9 +2,9 @@ site_name: Python Course
 site_author: Andrea Diamantini
 
 copyright: >
-    Andrea Diamantini (c) 2022-inf<br>
-    <a href="#__consent">Change Cookie Settings</a><br>
-    This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+  Andrea Diamantini (c) 2022-inf<br>
+  <a href="#__consent">Change Cookie Settings</a><br>
+  This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
 
 # -----------------------------------------------------------------------------
 theme:
@@ -15,7 +15,7 @@ theme:
       primary: indigo
       accent: blue
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
@@ -41,17 +41,17 @@ extra:
   consent:
     title: Consenso all'uso dei Cookie(s)
     description: >
-      Questo sito memorizza alcuni cookies solo per riconoscere un visitatore 
+      Questo sito memorizza alcuni cookies solo per riconoscere un visitatore
       che non è alla sua prima visita e alcune preferenze, come il tema di visualizzazione
       della pagina selezionato.<br>
       Se non acconsenti, questa finestra riapparirà ogni volta che riapri il sito.<br>
       Se vuoi cambiare le tue scelte, in fondo alla pagina trovi un link per modificarle ;)
     actions:
-     - accept
-     - reject
+      - accept
+      - reject
 
 extra_css:
-- stylesheets/extra.css
+  - stylesheets/extra.css
 
 # -----------------------------------------------------------------------------------------------
 
@@ -61,68 +61,62 @@ markdown_extensions:
   - toc: {}
   - def_list: {}
   - pymdownx.emoji: {}
-  - pymdownx.tasklist: {custom_checkbox: True}
-  - pymdownx.highlight: {anchor_linenums: True}
+  - pymdownx.tasklist: { custom_checkbox: True }
+  - pymdownx.highlight: { anchor_linenums: True }
   - pymdownx.inlinehilite: {}
   - pymdownx.snippets: {}
   - pymdownx.superfences: {}
   - pymdownx.keys: {}
-  
+
   # -----------------------------------------------------------------------------------------------
- 
+
 nav:
   - Home: index.md
-# ---------------------------------------------------------------    
+  # ---------------------------------------------------------------
   - Basics:
-    - Introduzione: basics/000_first.md
-    - Installazione: basics/001_install.md
-    - Prime cose: basics/100_basics.md
-    - Variabili e Operatori: basics/101_var.md
-    - Alternanza: basics/102_alt.md
-    - Ripetizione: basics/103_iter.md
-    - Sequenze: basics/104_seq.md
-    - Funzioni: basics/105_funz.md
-    - Moduli: basics/106_mod.md
-    - Python Standard Library: basics/106_psl.md
-    - PyPi: basics/106_pypi.md
-    - Files: basics/107_files.md
-    - CSV: basics/108_csv.md
-# ---------------------------------------------------------------    
+      - Introduzione: basics/000_first.md
+      - Installazione: basics/001_install.md
+      - Prime cose: basics/100_basics.md
+      - Variabili e Operatori: basics/101_var.md
+      - Alternanza: basics/102_alt.md
+      - Ripetizione: basics/103_iter.md
+      - Sequenze: basics/104_seq.md
+      - Funzioni: basics/105_funz.md
+      - Moduli: basics/106_mod.md
+      - Python Standard Library: basics/106_psl.md
+      - PyPi: basics/106_pypi.md
+      - Files: basics/107_files.md
+      - CSV: basics/108_csv.md
+  # ---------------------------------------------------------------
   - OOP:
-    - Introduzione: OOP/000_intro.md
-    - Classi e Oggetti: OOP/001_classes_objects.md
-    - Ereditarietà: OOP/002_inheritance.md
-    - Caratteristiche Avanzate: OOP/003_advanced.md
-   # ---------------------------------------------------------------    
+      - Introduzione: OOP/000_intro.md
+      - Classi e Oggetti: OOP/001_classes_objects.md
+      - Ereditarietà: OOP/002_inheritance.md
+      - Caratteristiche Avanzate: OOP/003_advanced.md
+    # ---------------------------------------------------------------
   - wxPython:
-    - Introduzione: wx/000_intro.md
-    - Primi concetti: wx/101_first_things.md
-    - Eventi: wx/102_events.md
-    - Widgets: wx/110_widgets.md
-    - Layout: wx/120_layout.md
-    - Esercizi Completi: wx/130_full_ex.md
-    - Dialogs: wx/140_dialogs.md
-    - Immagini: wx/150_images.md
-    - Timer(s): wx/160_timer.md
-    - Full GUI: wx/170_full_gui.md
-    - Widgets Avanzate: wx/171_advanced.md
-    - Printing: wx/172_printing.md
-    - Network: wx/180_network.md
-    - wx Tools: wx/299_tools.md
-   # ---------------------------------------------------------------    
+      - Introduzione: wx/000_intro.md
+      - Primi concetti: wx/101_first_things.md
+      - Eventi: wx/102_events.md
+      - Widgets: wx/110_widgets.md
+      - Layout: wx/120_layout.md
+      - Esercizi Completi: wx/130_full_ex.md
+      - Dialogs: wx/140_dialogs.md
+      - Immagini: wx/150_images.md
+      - Timer(s): wx/160_timer.md
+      - Full GUI: wx/170_full_gui.md
+      - Widgets Avanzate: wx/171_advanced.md
+      - Printing: wx/172_printing.md
+      - Network: wx/180_network.md
+      - wx Tools: wx/299_tools.md
+    # ---------------------------------------------------------------
   - Insights:
-    - Introduzione: insights/00_intro.md
-    - Ambienti Virtuali: insights/02_venv.md
-    - Turtle: insights/11_turtle.md
-    - PyGame: insights/12_pygame1.md
-    - OpenCV: insights/21_opencv.md
-    - MySql: insights/41_mysql.md
-    - sqlite: insights/42_sqlite.md
-    - MongoDB: insights/43_mongodb.md
-    - Arduino: insights/51_arduino.md
-    - Numeri reali: insights/91_reals.md
-    - Interi, bytes, stringhe: insights/92_ibs.md
-    - asyncio: insights/99_asyncio.md
-    - uv: insights/99_uv.md
-    
-
+      - Introduzione: insights/00_intro.md
+      - uv: insights/01_uv.md
+      - Turtle: insights/11_turtle.md
+      - PyGame: insights/12_pygame.md
+      - MySql: insights/41_mysql.md
+      - Arduino: insights/51_arduino.md
+      - Numeri reali: insights/91_reals.md
+      - Interi, bytes, stringhe: insights/92_ibs.md
+      - asyncio: insights/99_asyncio.md
