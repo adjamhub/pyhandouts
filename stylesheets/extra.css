@@ -1,0 +1,66 @@
+
+p,ul,ol {
+  font-size: 0.875rem !important;
+  line-height: 1.7 !important;
+}
+
+p {
+  text-align: justify;
+}
+
+code,td {
+  font-size: 0.8rem !important;
+  line-height: 1.6 !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold !important;
+}
+
+/* title margin and color */
+h3,h4 {
+  margin-top: 90px !important;
+  margin-bottom: 30px !important;
+}
+
+h2 {
+  background-color: rgba(68,138,255,.1) !important;
+  margin-top: 90px !important;
+  margin-bottom: 50px !important;
+}
+
+blockquote {
+  background-color: rgba(160,200,240,.1) !important;  
+  margin: 50px 0 !important;
+  padding: 10px;  
+}
+
+/* code blocks */
+.highlight {
+  margin: 3em 0 !important;
+}
+
+
+/* admonitions */
+
+.admonition {
+  margin: 3em 0 !important;
+  font-size: .9em !important;
+}
+
+.note {
+  background-color: rgba(68,138,255,.1) !important;
+}
+
+.warning {
+  background-color: rgba(255,145,0,.1) !important;
+}
+
+.tip {
+  background-color: rgba(0,191,165,.1) !important;
+}
+
+.error , .danger {
+  background-color: rgba(255,23,68,.1) !important;
+}
+
