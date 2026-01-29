@@ -330,7 +330,7 @@ Cito qui i più importanti:
     
     ``` py
     # TextCtrl multilinea con gestione del pulsante INVIO
-    text = wx.TextCtrl(panel, style = wx.TE_MULTILINE | wx.TE_PROCESS_ENTER
+    text = wx.TextCtrl(panel, style = wx.TE_PASSWORD | wx.TE_PROCESS_ENTER
     ```
 
 
