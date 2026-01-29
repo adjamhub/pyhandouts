@@ -461,23 +461,23 @@ pulisce la TextCtrl.
 
 **Esercizio 2137 (Frame, ComboBox)**
 
-la finestra presenta una ComboBox con opzioni '600x400', '800x600',
-'massimizza'. Quando l'utente seleziona una delle opzioni la finestra
+la finestra presenta una ComboBox con opzioni '*600x400*', '*800x600*',
+'*massimizza*'. Quando l'utente seleziona una delle opzioni la finestra
 si ridimensiona secondo quanto indicato.
 
 --------------------------------------------------------------------
 
 **Esercizio 2138 (StaticText, ComboBox, TextCtrl, Button)**
 
-Inserite nella finestra una StaticText con scritto "nome" e accanto una TextCtrl per l'inserimento.
-Nella riga sotto, una nuova StaticText con scritto "cognome" e accanto una TextCtrl per l'inserimento.
-Nella riga sotto una StaticText con scritto "sesso" e accanto una ComboBox contenente le opzioni "M" e "F".<br>
+Inserite nella finestra una StaticText con scritto "*nome*" e accanto una TextCtrl per l'inserimento.
+Nella riga sotto, una nuova StaticText con scritto "*cognome*" e accanto una TextCtrl per l'inserimento.
+Nella riga sotto una StaticText con scritto "*sesso*" e accanto una ComboBox contenente le opzioni "M" e "F".<br>
 Nella riga sotto un pulsante STAMPA.
 
-Quando si clicca il pulsante viene creato il file "dati.txt" nella stessa cartella dello script python con
-scritto "Signor Nome Cognome" oppure "Signora Nome Cognome" a seconda del sesso selezionato.
+Quando si clicca il pulsante viene creato il file "*dati.txt*" nella stessa cartella dello script python con
+scritto "*Signor Nome Cognome*" oppure "*Signora Nome Cognome*" a seconda del sesso selezionato.
 
-PS: Ovviamente sul file **non** dovete scrivere veramente *Nome* e "Cognome*...
+PS: Ovviamente sul file **non** dovete scrivere veramente *Nome* e *Cognome*...
 
 <br>
 
