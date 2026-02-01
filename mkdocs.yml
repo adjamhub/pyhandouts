@@ -41,11 +41,10 @@ extra:
   consent:
     title: Consenso all'uso dei Cookie(s)
     description: >
-      Questo sito memorizza alcuni cookies solo per riconoscere un visitatore
-      che non è alla sua prima visita e alcune preferenze, come il tema di visualizzazione
-      della pagina selezionato.<br>
-      Se non acconsenti, questa finestra riapparirà ogni volta che riapri il sito.<br>
-      Se vuoi cambiare le tue scelte, in fondo alla pagina trovi un link per modificarle ;)
+      Questo sito memorizza sul tuo PC solo due cookies: uno per ricordarsi se hai già visto questo avviso,
+      un altro per ricordarsi il tema di visualizzazione (chiaro/scuro).<br>
+      Se non acconsenti, dovrai selezionare ogni volta la tua scelta.<br>
+      In fondo alla pagina c'è il link per fare reset ;)
     actions:
       - accept
       - reject
