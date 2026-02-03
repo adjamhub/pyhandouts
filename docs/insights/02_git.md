@@ -8,12 +8,20 @@
 ## Operazioni
 
 - init
-- commit
-- branch
-- merge
-- rebase
-- push
-- fetch && pull
-- tag
-- log
 - clone
+
+- status
+- add
+- commit
+- log
+
+- branch
+- checkout
+- rebase
+- merge
+
+- push
+- fetch
+- pull
+
+- tag
