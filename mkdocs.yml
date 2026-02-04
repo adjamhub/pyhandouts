@@ -33,9 +33,9 @@ theme:
     - navigation.top
     - toc.integrate
     - content.code.copy
-  plugins:
-    - search:
-        lang: it
+plugins:
+  - search:
+      lang: it
 
 extra:
   consent:
