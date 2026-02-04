@@ -79,6 +79,7 @@ nav:
       - Variabili e Operatori: basics/101_var.md
       - Alternanza: basics/102_alt.md
       - Ripetizione: basics/103_iter.md
+      - Eccezioni: basics/104_ecz.md
       - Sequenze: basics/104_seq.md
       - Funzioni: basics/105_funz.md
       - Moduli: basics/106_mod.md
@@ -112,6 +113,7 @@ nav:
   - Insights:
       - Introduzione: insights/00_intro.md
       - uv: insights/01_uv.md
+      - git: insights/02_git.md
       - Turtle: insights/11_turtle.md
       - PyGame: insights/12_pygame.md
       - MySql: insights/41_mysql.md
