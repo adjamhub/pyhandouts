@@ -26,7 +26,7 @@ Aprite [Thonny](https://thonny.org) e dal menù *strumenti* selezionate *Apri SH
 
 ![image](images/installa_wx_1.png)
 
-Da lì digitate il comando `pip install wxpython` (oppure su Mac `pip3 install wxpython`) e premete INVIO:
+Da lì digitate il comando `pip install wxpython` (oppure su Mac `pip3 install wxpython`) e premete ++enter++:
 
 ![image](images/installa_wx_2.png)
 
