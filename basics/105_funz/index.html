@@ -1,0 +1,1894 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrea Diamantini">
+      
+      
+      
+        <link rel="prev" href="../104_seq/">
+      
+      
+        <link rel="next" href="../106_mod/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Funzioni - Python Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#funzioni" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Python Course" class="md-header__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Funzioni
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../000_first/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OOP/000_intro/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../wx/000_intro/" class="md-tabs__link">
+          
+  
+  wxPython
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../insights/00_intro/" class="md-tabs__link">
+          
+  
+  Insights
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Course" class="md-nav__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Python Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../000_first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001_install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installazione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prime cose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101_var/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variabili e Operatori
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102_alt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alternanza
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103_iter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ripetizione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_ecz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eccezioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_seq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequenze
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Funzioni
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Funzioni
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parametri-delle-funzioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri delle funzioni
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentare-le-funzioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentare le funzioni
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esercizi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizi
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moduli
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_psl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Standard Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_pypi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyPi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108_csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            OOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/001_classes_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classi e Oggetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/002_inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ereditarietà
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/003_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Caratteristiche Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wxPython
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            wxPython
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/101_first_things/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primi concetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/102_events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eventi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/110_widgets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/120_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/130_full_ex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Esercizi Completi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/140_dialogs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dialogs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/150_images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Immagini
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/160_timer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timer(s)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/170_full_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Full GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/171_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/172_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/180_network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/299_tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Insights
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Insights
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/00_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/01_uv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/02_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/11_turtle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/12_pygame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/41_mysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySql
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/51_arduino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/91_reals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numeri reali
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/92_ibs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interi, bytes, stringhe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/99_asyncio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    asyncio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="funzioni">Funzioni</h1>
+<p>Il termine "<em>funzione</em>" viene utilizzato in programmazione con un significato analogo a quello della matematica:
+una funzione è una procedura che può ricevere valori come argomenti e restituire un <strong>unico</strong> valore come risultato.
+Nel linguaggio comune si dice anche che una funzione <strong>ritorna</strong> un valore.</p>
+<p>La sintassi generale per le funzioni in Python è così strutturata:</p>
+<div class="highlight"><pre><span></span><code>def nome_funzione ( parametri: tipo ) -&gt; tipo_di_ritorno :
+    # blocco di codice che implementa la funzione
+    # codice...
+    # la funzione ritorna un valore con l&#39;istruzione return
+    # return valore (del tipo_di_ritorno)
+</code></pre></div>
+<p>Come al solito, cominciamo con un semplice esempio per capire il funzionamento:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">isPositive</span> <span class="p">(</span> <span class="n">number</span><span class="p">:</span><span class="nb">float</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">numero</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci un numero: &quot;</span><span class="p">))</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">if</span> <span class="n">isPositive</span><span class="p">(</span><span class="n">numero</span><span class="p">):</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hai inserito un numero positivo&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NON Hai inserito un numero positivo&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Alcune considerazioni banali:</p>
+<ul>
+<li>la funzione si chiama "isPositive"</li>
+<li>la dichiarazione della funzione inizia con la clausola <code>def</code></li>
+<li>eventuali parametri della funzione vanno fra parentesi tonde</li>
+<li>questa funzione prende un parametro di tipo float e ritorna un valore booleano</li>
+<li><strong>PRIMA</strong> la funzione si dichiara (una volta), <strong>POI</strong> si può usare (quante volte ti pare)</li>
+</ul>
+<p>Altro esempio banale:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">somma</span> <span class="p">(</span><span class="n">addendo1</span><span class="p">:</span> <span class="nb">float</span> <span class="p">,</span> <span class="n">addendo2</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">return</span> <span class="n">addendo1</span> <span class="o">+</span> <span class="n">addendo2</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;27 + 35 = &quot;</span> <span class="p">,</span> <span class="n">somma</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;12 + 5 = &quot;</span> <span class="p">,</span> <span class="n">somma</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+</code></pre></div>
+<p>Questo solo per mettere in evidenza che, se ci sono più parametri, essi
+vanno elencati fra virgole dentro le parentesi tonde.</p>
+<p>Le funzioni in sé non aggiungono nessun nuovo potere al linguaggio che
+le utilizza, se non una nuova sconvolgente comodità: quella di poter
+riorganizzare e riutilizzare con semplicità il codice!</p>
+<p>Le funzioni infatti hanno una definizione (quella che... comincia con
+def!!!), utile appunto a definire il suo nome, i parametri di cui ha
+bisogno e il suo comportamento e poi possono essere utilizzate
+un'infinità di volte, semplicemente richiamando il loro nome e fornendo
+i parametri necessari! Quante volte fino ad oggi avete usato la funzione
+print()? Qualcuno si è chiesto per caso <strong><em>come</em></strong> faccia a scrivere
+l'argomento sul monitor? Forse, ma non più di tanto. Tutti si sono
+semplicemente preoccupati di capire <strong><em>cosa</em></strong> la funzione print()
+faccia... e poi l'hanno utilizzata. E riutilizzata. E...</p>
+<p>Dopo aver visto le funzioni, all'interno di questo capitolo, studieremo
+una modalità che ci permetterà di utilizzarle ancora meglio! I moduli
+(l'argomento successivo) non sono altro che collezioni di funzioni
+divise per argomento (matematiche, statistiche, grafiche, data e ora,
+ecc...) già pronte all'uso! Una pacchia :)</p>
+<p>Per adesso però, cerchiamo di prendere mano con la definizione e
+l'utilizzo delle funzioni. Vediamo ancora qualche piccola cosa e poi
+<em>divertiamoci</em> con una valanga di esercizi da svolgere!!!</p>
+<!-- ############################################################################################ -->
+
+<h2 id="parametri-delle-funzioni">Parametri delle funzioni</h2>
+<p>I parametri di una funzione sono quelle variabili indicate tra parentesi
+nella sua dichiarazione e che prendono i valori che vengono inseriti in
+essa al momento della sua chiamata.</p>
+<p>Capisco lo sconcerto... riprovo con un esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># la variabile &quot;nome&quot; è il parametro (di tipo str) della funzione saluta()</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">def</span> <span class="nf">saluta</span> <span class="p">(</span><span class="n">nome</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">return</span> <span class="s2">&quot;ciao &quot;</span> <span class="o">+</span> <span class="n">nome</span>
+</code></pre></div>
+<p>Quando poi la funzione viene chiamata i parametri prendono dei valori:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># il valore &quot;ciccio&quot; sarà inserito nel parametro &quot;nome&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># della funzione &quot;saluta()&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span> <span class="n">saluta</span><span class="p">(</span><span class="s2">&quot;ciccio&quot;</span><span class="p">)</span> <span class="p">)</span>
+</code></pre></div>
+<p>scrive</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="s1">&#39;ciao ciccio&#39;</span>
+</code></pre></div>
+<p>Se la funzione prende più di un parametro, Python fornisce 2 possibilità:</p>
+<ol>
+<li><strong>l'inserimento ordinato</strong> dei valori</li>
+<li><strong>l'inserimento nominale</strong> dei valori</li>
+</ol>
+<p>Partiamo come al solito definendo una funzione di prova e verificando cosa succede:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># la funzione ritorna parola ripetuta per un certo numero di volte</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># (con uno spazio di separazione in mezzo, ma non alla fine):</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># ripeti(&quot;ciao&quot;, 3) ritorna &quot;ciao ciao ciao&quot;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">def</span> <span class="nf">ripeti</span><span class="p">(</span><span class="n">parola</span><span class="p">:</span><span class="nb">str</span> <span class="p">,</span> <span class="n">numero</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">str</span> <span class="p">:</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">parola</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">numero</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">parola</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div>
+<p>Nella chiamata con inserimento ordinato dei valori basta inserire i dati
+nell'ordine della definizione: prima la parola e poi il numero:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">print</span><span class="p">(</span> <span class="n">ripeti</span> <span class="p">(</span><span class="s2">&quot;ciao&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># scrive &quot;ciao ciao ciao ciao&quot;</span>
+</code></pre></div>
+<p>mentre se si inseriscono i dati nell'ordine errato si va incontro ad un errore:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">print</span><span class="p">(</span> <span class="n">ripeti</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;ciao&quot;</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># ERRORE!!!</span>
+</code></pre></div>
+<p>Se lo si desidera è anche possibile procedere ad un <strong>inserimento nominale</strong>,
+indicando cioè il nome della variabile in cui inserire il valore: in questo caso, l'ordine di inserimento non conta.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span> <span class="n">ripeti</span> <span class="p">(</span><span class="n">parola</span> <span class="o">=</span> <span class="s2">&quot;ciao&quot;</span> <span class="p">,</span> <span class="n">numero</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># ciao ciao ciao</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">print</span><span class="p">(</span> <span class="n">ripeti</span> <span class="p">(</span><span class="n">numero</span> <span class="o">=</span> <span class="mi">3</span> <span class="p">,</span> <span class="n">parola</span> <span class="o">=</span> <span class="s2">&quot;ciao&quot;</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># ciao ciao ciao</span>
+</code></pre></div>
+<p>È inoltre possibile passare alle funzioni alcuni <strong>valori di default</strong>: questi vengono utilizzati se la funzione
+viene chiamata senza i valori da passare ai parametri o ignorati in presenza di essi.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># definizione della funzione `saluta` con valore di default &quot;ciccio&quot;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1"># per il parametro nome</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">def</span> <span class="nf">saluta</span><span class="p">(</span><span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;ciccio&quot;</span><span class="p">):</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">return</span> <span class="s2">&quot;ciao &quot;</span> <span class="o">+</span> <span class="n">nome</span>
+</code></pre></div>
+<p>Allora è possibile scrivere in fase di chiamata:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">saluta</span><span class="p">()</span>        <span class="c1"># ritorna la stringa &quot;ciao ciccio&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">saluta</span><span class="p">(</span><span class="s2">&quot;pippo&quot;</span><span class="p">)</span> <span class="c1"># ritorna la stringa &quot;ciao pippo&quot;</span>
+</code></pre></div>
+<p>Spero sia chiaro, a me perlomeno sembra così.</p>
+<!-- ############################################################################################ -->
+
+<h2 id="documentare-le-funzioni">Documentare le funzioni</h2>
+<p>Se ricordate la struttura di base di una funzione, proveremo adesso ad aggiungere una piccola parte: la documentazione!</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">nome_funzione</span> <span class="p">(</span> <span class="n">parametri</span><span class="p">:</span> <span class="n">tipo</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tipo_di_ritorno</span> <span class="p">:</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot; documentazione di nome_funzione in formato doc_string &quot;&quot;&quot;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="c1"># blocco di codice che implementa la funzione</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="c1"># return valore del tipo_di_ritorno</span>
+</code></pre></div>
+<p>La documentazione di una funzione va strutturata nel modo seguente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span> <span class="nf">nome_funzione</span> <span class="p">(</span> <span class="n">par1</span><span class="p">:</span> <span class="n">tipo1</span><span class="p">,</span> <span class="n">par2</span><span class="p">:</span> <span class="n">tipo2</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tipo_di_ritorno</span> <span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot; Una breve frase che descrive COSA la funzione fa (NON come lo fa).</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="sd">        Se la funzione ha più di un parametro, spiegare bene quali informazioni</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="sd">        servono per eseguirla.</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="sd">        Alcuni esempi di utilizzo (possibilmente in formato doctest... ci arriviamo)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<p>Facciamo una prova, implementando la funzione <code>trova(carattere, stringa)</code> che ritorna <code>True</code> se il carattere è presente nella stringa,
+<code>False</code> altrimenti.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">trova</span><span class="p">(</span><span class="n">carattere</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">stringa</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="sd">    Dice se carattere è presente o meno nella stringa.</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="sd">    Ad esempio:</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="sd">    &gt;&gt;&gt; trova(&#39;c&#39;, &#39;cane&#39;)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="sd">    True</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="sd">    &gt;&gt;&gt; trova(&#39;c&#39;, &#39;gatto&#39;)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="sd">    False</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="k">if</span> <span class="n">carattere</span> <span class="ow">in</span> <span class="n">stringa</span><span class="p">:</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>        <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+<p>Come vedete, il formato <code>doctest</code> prevede di scrivere gli esempi come se eseguiste la funzione a mano nel prompt Python sotto. Poi il modulo
+fa la sua magia ed esegue effettivamente quel codice e verifica che il risultato sia lo stesso di quello lì scritto.
+Ne riparliamo nel prossimo capitolo.</p>
+<p>Per adesso tutto qui! <br>
+Adesso ci vuole solo una montagna di esercizi per assicurarci di aver capito tutto bene. <br>
+Per fortuna sono qui sotto <img alt="😄" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png" title=":smile:" /></p>
+<!-- ############################################################################################ -->
+
+<h2 id="esercizi">Esercizi</h2>
+<div class="admonition danger">
+<p class="admonition-title">NO IA almeno fino al 510!</p>
+<p>Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+contesto affidarsi alle IA per la risoluzione degli stessi!!!</p>
+</div>
+<p><strong>Esercizio 501</strong></p>
+<p>Scrivere una funzione che calcola l'area di un rettangolo e una che ne
+calcola il perimetro, date la base e l'altezza.<br>
+Chiedere all'utente di inserire i valori per base e altezza e calcolare area e perimetro del rettangolo, utilizzando le
+funzioni implementate.</p>
+<hr />
+<p><strong>Esercizio 502</strong></p>
+<p>Scrivere una funzione che calcola l'area di un cerchio e una che
+calcola la sua circonferenza. Entrambe richiedono (ovviamente) come
+parametro il raggio del cerchio.<br>
+Chiedere all'utente di inserire un valore per il raggio e procedere a visualizzare area e circonferenza del cerchio relativo, calcolate utilizzando le
+funzioni implementate.</p>
+<hr />
+<p><strong>Esercizio 503: triangoli rettangoli</strong></p>
+<p>Scrivere 3 funzioni relative ai triangoli rettangoli. Tutte e tre
+prendono come parametri la lunghezza reale dei cateti e calcolano
+rispettivamente:</p>
+<ul>
+<li>l'ipotenusa</li>
+<li>l'area</li>
+<li>il perimetro.</li>
+</ul>
+<p>Utilizzare la funzione <code>ipotenusa</code> all'interno della funzione <code>perimetro</code>.</p>
+<hr />
+<p><strong>Esercizio 504: potenze</strong></p>
+<p>Dati un parametro per la base e uno (intero) per l'esponente,
+implementare la funzione potenza. Attenzione ai valori negativi degli
+esponenti.</p>
+<p>(Per implementare questa funzione <strong>non</strong> potete usare la sintassi Python <code>base**esp</code>, ma dovete <em>scrivere</em> i calcoli da fare)</p>
+<hr />
+<p><strong>Esercizio 505: MCD</strong></p>
+<p>Scrivere una funzione che, dati due numeri interi positivi come parametri, ritorna il Massimo Comun Divisore fra questi.</p>
+<hr />
+<p><strong>Esercizio 506: mcm</strong></p>
+<p>Scrivere una funzione che, dati due numeri interi positivi come parametri, ritorna il minimo comune multiplo fra questi.</p>
+<hr />
+<p><strong>Esercizio 507: carattere</strong></p>
+<p>Scrivere una funzione chiamata <em>valutaCarattere</em> che prende una stringa come parametro. Se la stringa è formata da più di
+un carattere la funzione ritorna la scritta "errore". Se è un solo carattere, ritorna la stringa
+"vocale", "consonante", "cifra" , "altro" a seconda del carattere passato.</p>
+<hr />
+<p><strong>Esercizio 508: inverti stringa</strong></p>
+<p>Scrivere una funzione che, data una stringa, ritorna la stringa
+rovesciata.
+Ad esempio fornito "ciao" come parametro, la funzione
+ritorna la stringa "oaic".</p>
+<hr />
+<p><strong>Esercizio 509: palindroma</strong></p>
+<p>Scrivere una funzione che, data una stringa, dice se è palindroma oppure
+no. Una stringa palindroma (ad esempio: "anna") si legge uguale in
+entrambi i versi. Ritornare <code>True</code> o <code>False</code> a seconda che la stringa sia
+palindroma oppure no.</p>
+<hr />
+<p><strong>Esercizio 510: farfallese</strong></p>
+<p>Scrivere una funzione che, data una stringa, ritorna la stringa
+convertita in farfallese. In farfallese ogni vocale viene seguita da una
+f + la vocale ripetuta. Ad esempio la stringa "ciao" in farfallese
+diventa "cifiafaofo".</p>
+<hr />
+<p><strong>Esercizio 511</strong></p>
+<p>Scrivere una funzione che prende come parametro una lista di numeri interi
+e ritorna una lista con solo i numeri dispari della lista precedente.</p>
+<p>Ad esempio, <code>dispari( [1,2,3,4,5,6,7] )</code> ritorna <code>[1,3,5,7]</code>.</p>
+<hr />
+<p><strong>Esercizio 512</strong></p>
+<p>Scrivere una funzione che prende come parametro una lista e
+ritorna il numero di interi presenti come elementi della sequenza. (Pensa, pensa...)</p>
+<hr />
+<p><strong>Esercizio 513</strong></p>
+<p>Scrivere una funzione che prende come parametro una stringa qualsiasi e ritorna una stringa
+con le lettere minuscole (solo le lettere) ordinate alfabeticamente e
+ripetute una sola volta.</p>
+<p>Ad esempio <code>elencaLettere("casa")</code> ritorna <code>"acs"</code>. <code>elencaLettere("Hai capito?")</code> ritorna <code>"achiopt"</code>.</p>
+<hr />
+<p><strong>Esercizio 514</strong></p>
+<p>Scrivere una funzione che prende come parametro due stringhe e che ritorna l'intersezione
+MAIUSCOLA delle loro lettere ordinate alfabeticamente, ovvero una lista
+con le lettere (scritte in maiuscolo) presenti in entrambe le stringhe.</p>
+<p>Ad esempio <code>intersezioneMaiuscola("casa", scuola")</code> ritorna <code>[ "A", "C", "S"]</code></p>
+<p><br>
+<br>
+<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../104_seq/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Sequenze">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                Sequenze
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../106_mod/" class="md-footer__link md-footer__link--next" aria-label="Successivo: Moduli">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                Moduli
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Andrea Diamantini (c) 2022-inf<br> <a href="#__consent">Change Cookie Settings</a><br> This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Consenso all'uso dei Cookie(s)</h4>
+<p>Questo sito memorizza sul tuo PC solo due cookies: uno per ricordarsi se hai già visto questo avviso, un altro per ricordarsi il tema di visualizzazione (chiaro/scuro).<br> Se non acconsenti, dovrai selezionare ogni volta la tua scelta.<br> In fondo alla pagina c'è il link per fare reset ;)
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accetta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rifiuta</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
