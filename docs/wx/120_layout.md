@@ -73,14 +73,14 @@ caratteristiche comuni:
 
 La libreria wxPython offre i seguenti oggetti per gestire il layout:
 
-|  Sizer              | Descrizione                                                      |
-|---------------------|------------------------------------------------------------------|
-| wx.BoxSizer         | Contenitore per una riga (o una colonna) di widget               |
-| wx.StaticBoxSizer   | Come il Box Sizer ma con un contorno evidenziato (una StaticBox) |
-| - - - - - - - - -   | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  |
-| wx.GridSizer        | Contenitore a tabella per le widget                              |
-| wx.FlexGridSizer    | Contenitore a tabella per le widget con dimensioni variabili     |
-| wx.GridBagSizer     | Contenitore a tabella con spanning                               |
+|  Sizer                | Descrizione                                                      |
+|-----------------------|------------------------------------------------------------------|
+| `wx.BoxSizer`         | Contenitore per una riga (o una colonna) di widget               |
+| `wx.StaticBoxSizer`   | Come il Box Sizer ma con un contorno evidenziato (una StaticBox) |
+| - - - - - - - - - -   | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  |
+| `wx.GridSizer`        | Contenitore a tabella per le widget                              |
+| `wx.FlexGridSizer`    | Contenitore a tabella per le widget con dimensioni variabili     |
+| `wx.GridBagSizer`     | Contenitore a tabella con spanning                               |
 
 
 Prima di iniziare a preoccuparvi, sappiate che i contenitori sono solo di 2 tipi:
@@ -144,7 +144,7 @@ Vediamo i parametri:
     Il flag di espansione dice alla widget di occupare tutto lo spazio; i flag di allineamento la posizionano senza espansione ortogonale. 
     Vediamo i flag:
     
-    * wx.EXPAND: widget espansa su tutto lo spazio disponibile (**ortogonalmente nel caso di un sizer lineare**, **nelle due direzioni per un sizer a griglia**)
+    * `wx.EXPAND`: widget espansa su tutto lo spazio disponibile (**ortogonalmente nel caso di un sizer lineare**, **nelle due direzioni per un sizer a griglia**)
 
     <br>
 
@@ -154,37 +154,37 @@ Vediamo i parametri:
     
     In un **layout orizzontale**, gli allineamenti disponibili sono:
 
-    * wx.ALIGN_TOP, incolonnata in alto
-    * wx.ALIGN_BOTTOM, incolonnata in basso
-    * wx.ALIGN_CENTER_VERTICAL, allineamento verticale al centro
+    * `wx.ALIGN_TOP`, incolonnata in alto
+    * `wx.ALIGN_BOTTOM`, incolonnata in basso
+    * `wx.ALIGN_CENTER_VERTICAL`, allineamento verticale al centro
 
     <br>
     
     In un **layout verticale**, gli allineamenti disponibili sono:
 
-    * wx.ALIGN_LEFT, allineata a sinistra
-    * wx.ALIGN_RIGHT, allineata a destra
-    * wx.ALIGN_CENTER_HORIZONTAL, allineamento orizzontale al centro
+    * `wx.ALIGN_LEFT`, allineata a sinistra
+    * `wx.ALIGN_RIGHT`, allineata a destra
+    * `wx.ALIGN_CENTER_HORIZONTAL`, allineamento orizzontale al centro
 
     <br>
     
     In un **layout a griglia** funzionano tutti gli allineamenti indicati e in più il seguente:
 
-    * wx.ALIGN_CENTER, allineamento centrato orizzontalmente e verticalmente
+    * `wx.ALIGN_CENTER`, allineamento centrato orizzontalmente e verticalmente
 
     <br>
     
     I flag di bordo possono decidere *la direzione del bordo* fra una widget e l'altra:
 
-    * wx.TOP: bordo verso l'alto
-    * wx.RIGHT: bordo verso destra
-    * wx.BOTTOM: bordo verso il basso
-    * wx.LEFT: bordo verso sinistra
-    * wx.ALL: bordo in tutte le direzioni
+    * `wx.TOP`: bordo verso l'alto
+    * `wx.RIGHT`: bordo verso destra
+    * `wx.BOTTOM`: bordo verso il basso
+    * `wx.LEFT`: bordo verso sinistra
+    * `wx.ALL`: bordo in tutte le direzioni
 
     <br>
     
-    Va detto che è possibile combinare 2 o più flag con il simbolo "|" (la barra verticale, si chiama *pipe*). Vediamo qualche esempio:
+    Va detto che è possibile combinare 2 o più flag con il simbolo `|` (la barra verticale, si chiama *pipe*). Vediamo qualche esempio:
 
 ``` python
 # bordo in alto e a sinistra con la widget in espansione
@@ -218,7 +218,7 @@ panel.SetSizer(box)
 Sono tante piccole cose insieme... necessitano di qualche esempio e qualche esercizio per chiarirci le idee.
 
 
-Il prossimo codice crea un layout orizzontale con 2 pulsanti che vogliamo ridimensionarsi con la finestra (quindi *proportion = 1*) 
+Il prossimo codice crea un layout orizzontale con 2 pulsanti che vogliamo ridimensionarsi con la finestra (quindi `proportion = 1`) 
 e con un pochino di bordo in tutte le direzioni.
 
 ``` py title="Layout Orizzontale" hl_lines="8 12 13 14 15 17"
@@ -260,9 +260,9 @@ Il risultato del codice precedente è questo:
 
     - metti a 0 il valore di proportion di uno dei due pulsanti
     - metti a 2 il valore di proportion di uno dei due pulsanti
-    - aggiungi wx.EXPAND ai flag dei pulsanti
+    - aggiungi `wx.EXPAND` ai flag dei pulsanti
     - modifica il valore del bordo per uno dei pulsanti.
-    - togli wx.ALL dai flag e metti qualcuno degli altri flag disponibili
+    - togli `wx.ALL` dai flag e metti qualcuno degli altri flag disponibili
 
     Fatte queste prove potrai apprezzare meglio quanto appreso finora ;)
 
@@ -331,7 +331,7 @@ if __name__ == "__main__":
     Capisco perfettamente che non vi sentiate ancora in grado di implementare layout così complicati! 
     Scrivo però alcuni suggerimenti banali:
 
-    1. scrivete sempre tutti i parametri nella funzione *Add*: *sizer.Add(widget, proportion = 0, flag = wx.ALL, border = 5)*
+    1. scrivete sempre tutti i parametri nella funzione *Add*: `sizer.Add(widget, proportion = 0, flag = wx.ALL, border = 5)`
     2. partiamo da una situazione semplice: proporzione ZERO, e bordo 5 da tutti i lati.
     3. se qualcosa non quadra, fate una modifica per volta e guardate subito cosa succede!
 
@@ -345,12 +345,12 @@ if __name__ == "__main__":
 > Contenitore per una riga (o una colonna) di widget con contorno evidenziato
 
 
-Lo StaticBoxSizer è esattamente identico al BoxSizer se non per il fatto 
-che contiene al suo interno già una StaticBox per decorare ed
+Lo `StaticBoxSizer` è esattamente identico al BoxSizer se non per il fatto 
+che contiene al suo interno già una `StaticBox` per decorare ed
 evidenziare il layout creato.
 
 A livello operativo bisogna dunque fornire, in fase di definizione,
-anche un genitore (per la StaticBox, solitamente un pannello) e il testo
+anche un genitore (per la `StaticBox`, solitamente un pannello) e il testo
 della stessa.
 
 ``` python
@@ -362,7 +362,7 @@ sbox = wx.StaticBoxSizer( wx.HORIZONTAL, panel, "titolo" )
 ```
 
 Negli esempi relativi al BoxSizer provate a cambiarne qualcuno con uno
-StaticBoxSizer per apprezzare la differenza. E poi passate al prossimo
+`StaticBoxSizer` per apprezzare la differenza. E poi passate al prossimo
 layout!
 
 
@@ -406,11 +406,11 @@ grid = wx.GridSizer( rows = 4 , cols = 3, vgap = 5 , hgap = 5 )
 ```
 
 !!! note "Applicazioni della OOP"
-    Ok, adesso proviamo a guadagnare punti a favore della OOP. Come si fa ad aggiungere widgets ad un GridSizer? 
-    Esattamente con la stessa identica funzione della BoxSizer. Perchè? Beh... perché derivano entrambe dalla stessa classe
+    Ok, adesso proviamo a guadagnare punti a favore della OOP. Come si fa ad aggiungere widgets ad un `GridSizer`? 
+    Esattamente con la stessa identica funzione della `BoxSizer`. Perchè? Beh... perché derivano entrambe dalla stessa classe
     (la classe `wx.Sizer`, che **non** studieremo) ed ereditano entrambe la funzione **Add**. 
 
-L'unica cosa da sapere, oltre alla OOP, è il fatto che le widget vengono aggiunte alla GridSizer tramite la funzione Add in fila, 
+L'unica cosa da sapere, oltre alla OOP, è il fatto che le widget vengono aggiunte alla `GridSizer` tramite la funzione `Add` in fila, 
 a partire da in alto a sinistra, poi si procede in riga e terminata la riga in alto si continua sotto.
 
 Alla luce delle nuove conoscenze acquisite, facciamo subito una prova semplice semplice:
@@ -456,8 +456,8 @@ Risultato:
 
     Anche qui, prima di andare avanti, copia e incolla il primo esempio e fai i seguenti tentativi:
 
-    - metti *proportion = 1* sui 4 oggetti (nella GridSizer il concetto della proporzione non funziona! Non cambia nulla!)
-    - sostituisci il flag del pulsante con wx.EXPAND
+    - metti `proportion = 1` sui 4 oggetti (nella GridSizer il concetto della proporzione non funziona! Non cambia nulla!)
+    - sostituisci il flag del pulsante con `wx.EXPAND`
     - aggiungi un bordo a tutti gli oggetti
     - cambia gli allineamenti per tutti gli oggetti!
 
@@ -530,13 +530,13 @@ wx.FlexGridSizer(rows = 1, cols = 0, vgap = 0, hgap = 0)
 grid = wx.FlexGridSizer( rows = 4 , cols = 3, vgap = 5 , hgap = 5 )
 ```
 
-La differenza fondamentale fra un GridSizer e un FlexGridSizer è che il
+La differenza fondamentale fra un `GridSizer` e un `FlexGridSizer` è che il
 GridSizer subisce un espansione in quei campi in cui le widget vengono
-inserite con flag wx.EXPAND, mentre il FlexGridSizer all'inizio non è
-per niente allungabile: inutile mettere wx.EXPAND!
+inserite con flag `wx.EXPAND`, mentre il `FlexGridSizer` all'inizio non è
+per niente allungabile: inutile mettere `wx.EXPAND`!
 
-Per permettere ad un FlexGridSizer di espandere una riga o una colonna
-bisogna indicarlo esplicitamente con una delle seguenti funzioni:
+Per permettere ad un `FlexGridSizer` di espandere una riga o una colonna
+bisogna **indicarlo esplicitamente** con una delle seguenti funzioni:
 
 ``` python
 # Permette di allungare una riga
@@ -546,7 +546,7 @@ AddGrowableRow(rowNumber)
 AddGrowableCol(colNumber)
 ```
 
-Nell'esempio che segue viene utilizzato un FlexGridSizer per permettere
+Nell'esempio che segue viene utilizzato un `FlexGridSizer` per permettere
 di allungare la seconda colonna e la terza riga (ricordate che si inizia
 a contare da ZERO!!!)
 
@@ -639,13 +639,13 @@ Vediamo i parametri:
     inizia a contare da ZERO.
 -   **span** indica di quanto la widget si deve allargare. Di default
     occupa solo la sua casella. Prende una tupla 2D. Ad esempio
-    inserendo span = (2,3) dite che la widget deve allargarsi di 2 righe
+    inserendo `span = (2,3)` dite che la widget deve allargarsi di 2 righe
     e 3 colonne.
 -   **flag** e **border** sono gli stessi del solito.
 
 Di default le caselle della griglia mantengono la loro proporzione se la
 finestra viene ridimensionata. Se volete invece fare in modo che una
-riga o una colonna si comporti come nel FlexGridSizer, usate i seguenti
+riga o una colonna si comporti come nel `FlexGridSizer`, usate i seguenti
 metodi:
 
 ``` python
@@ -660,7 +660,7 @@ bag.AddGrowableCol (col)
 ```
 
 Per concludere arriviamo finalmente all'ultimo esempio con un layout
-GridBagSizer. Stavolta parto dall'immagine del layout da disegnare:
+`GridBagSizer`. Stavolta parto dall'immagine del layout da disegnare:
 
 ![image](images/wxGridBagSizerLayout.jpg)
 
@@ -673,8 +673,8 @@ di come potete organizzare.
 
 Concludo con qualche appunto prima di farvi vedere il codice (che a questo punto dovreste già immaginare):
 
-- gli oggetti che non hanno span o che non capitano in righe o colonne *growable* non hanno bisogno di wx.EXPAND
-- gli oggetti che hanno span o che capitano in righe o colonne *growable*, per essere loro stessi espandibili, hanno bisogno di wx.EXPAND
+- gli oggetti che non hanno span o che non capitano in righe o colonne *growable* non hanno bisogno di `wx.EXPAND`
+- gli oggetti che hanno span o che capitano in righe o colonne *growable*, per essere loro stessi espandibili, hanno bisogno di `wx.EXPAND`
 - la riga e la colonna *growable* (almeno una per dimensione) rendono il layout fluido: per verificarlo, provate a commentare quelle righe
 
 Ecco il codice che implementa quest'ultimo esempio:
@@ -799,13 +799,13 @@ panel.SetSizer(vbox)
 
 **wx.Sizer.Fit(self, window) && wx.Window.SetSizerAndFit(wx.Sizer)**
 
-:   La funzione *Fit*, disponibile in tutti i sizer, dice al sizer di
-    ridimensionare la finestra per aderire alla dimensione minima del
-    sizer. Va ovviamente chiamata *dopo* aver impostato un sizer in una
-    finestra con *SetSizer*.
+La funzione `Fit`, disponibile in tutti i sizer, dice al sizer di
+ridimensionare la finestra per aderire alla dimensione minima del
+sizer. Va ovviamente chiamata **dopo** aver impostato un sizer in una
+finestra con `SetSizer`.
 
-    È possibile ovviare alla chiamata delle due funzioni consecutive
-    inserendo il sizer nella finestra con *SetSizerAndFit*. 
+È possibile ovviare alla chiamata delle due funzioni consecutive
+inserendo il sizer nella finestra con `SetSizerAndFit`. 
     
 Esempi banali:
 
@@ -832,4 +832,3 @@ agli esercizi del prossimo capitolo!!!
 <br>
 <br>
 <br>
-
