@@ -150,16 +150,16 @@ indica la capacità di ridimensionamento della widget all'interno del layout. Pu
 
 permette di decidere come la widget deve comportarsi **all'interno del layout**. Esistono 3 tipi di flag: il flag di *espansione*, i flag di *allineamento* e i flag di *bordo*.
 
-Il flag di espansione è alternativo ai flag di allineamento: entrambi governano il posizionamento dell'oggetto **nella direzione ortogonale al layout**.
+Il *flag di espansione* è alternativo ai flag di allineamento: entrambi governano il posizionamento dell'oggetto **nella direzione ortogonale al layout**.
 Il flag di espansione dice alla widget di occupare tutto lo spazio; i flag di allineamento la posizionano senza espansione ortogonale. I flag di bordo attivano
-il bordo (specificato nel parametro border), nella direzione identificata dal flag.
+il bordo (specificato nel parametro `border`), nella direzione identificata dal flag.
 
 
 | Flag di espansione | Layout di utilizzo                  |  Widget                     |
 |--------------------|-------------------------------------|-----------------------------|
 |`wx.EXPAND`         | Tutti i layout                      | espansa su tutto lo spazio disponibile <br>(**ortogonalmente nel caso di un sizer lineare**,<br> **nelle due direzioni per un sizer a griglia**)   |
 
-I flag di allineamento impostano un allineamento nella direzione ortogonale al layout, nel caso di layout lineare; nella direzione indicata nel caso di un
+I *flag di allineamento* impostano un allineamento nella direzione ortogonale al layout, nel caso di layout lineare; nella direzione indicata nel caso di un
 layout a griglia.
 
 | Flag di allineamento         | Layout di utilizzo            | Widget                             |
@@ -174,7 +174,7 @@ layout a griglia.
 
 <br>
 
-I flag di bordo possono decidere *la direzione del bordo* fra una widget e l'altra. Essi sono:
+I *flag di bordo* possono decidere **la direzione** del bordo fra una widget e l'altra. Essi sono:
 
 
 | Flag di bordo   | Layout di utilizzo    | Widget                         |
@@ -210,9 +210,9 @@ rappresenta la dimensione in pixel del bordo della widget, nelle direzioni indic
 Quando hai finito di lavorare con layout e widget devi applicare il layout al suo contenitore, 
 che nei nostri esempi sarà sempre un pannello, quindi dovrai fare una cosa del genere:
 
-``` python
+``` python title="Non funziona nulla se non"
 # ...
-# per inserire il BoxSizer come layout del Panel
+# inserisci un sizer come layout del Panel
 panel.SetSizer(box)
 ```
 
@@ -267,8 +267,8 @@ Il risultato del codice precedente è questo:
     Prima di andare avanti, proviamo a capire quello che abbiamo visto e fatto fino ad ora! 
     Prova a fare le seguenti modifiche al codice precedente:
 
-    - metti a 0 il valore di proportion di uno dei due pulsanti
-    - metti a 2 il valore di proportion di uno dei due pulsanti
+    - metti a `0` il valore di proportion di uno dei due pulsanti
+    - metti a `2` il valore di proportion di uno dei due pulsanti
     - aggiungi `wx.EXPAND` ai flag dei pulsanti
     - modifica il valore del bordo per uno dei pulsanti.
     - togli `wx.ALL` dai flag e metti qualcuno degli altri flag disponibili
