@@ -128,81 +128,84 @@ box.Add(widget, proportion = 0, flag = 0, border = 0)
 
 Vediamo i parametri:
 
-- **widget** è la widget da inserire
+<hr>
+    
+**widget**
 
-- **proportion** può essere 0,1,2
+è l'oggetto grafico (o un altro layout, nel caso di layuot più complessi) da inserire
+
+<hr>
+
+**proportion** 
+
+indica la capacità di ridimensionamento della widget all'interno del layout. Può essere 0,1,2:
 
   * `0` (valore di *default*) significa che la widget non si ridimensionerà
   * `1` significa che la widget si ridimensionerà **nella direzione del layout** proporzionalmente al suo contenitore
   * `2` significa che la widget cercherà di occupare il doppio del posto di quelle con valore 1
 
-- **flag** permette di decidere come la widget deve comportarsi **all'interno del layout**.
+<hr>
 
-  Diciamo subito che esistono 3 tipi di flag: il *flag di espansione*, i *flag di allineamento* e i *flag di bordo*.
+**flag** 
 
-  Il flag di espansione è alternativo ai flag di allineamento: entrambi governano il posizionamento dell'oggetto **nella direzione ortogonale al layout**.
-  Il flag di espansione dice alla widget di occupare tutto lo spazio; i flag di allineamento la posizionano senza espansione ortogonale. I flag di bordo attivano
-  il bordo (specificato nel parametro border), nella direzione identificata dal flag.
+permette di decidere come la widget deve comportarsi **all'interno del layout**. Esistono 3 tipi di flag: il flag di *espansione*, i flag di *allineamento* e i flag di *bordo*.
+
+Il flag di espansione è alternativo ai flag di allineamento: entrambi governano il posizionamento dell'oggetto **nella direzione ortogonale al layout**.
+Il flag di espansione dice alla widget di occupare tutto lo spazio; i flag di allineamento la posizionano senza espansione ortogonale. I flag di bordo attivano
+il bordo (specificato nel parametro border), nella direzione identificata dal flag.
 
 
-  Vediamo i flag:
-  
-  **Flag di espansione**:
-  
-    * `wx.EXPAND`: widget espansa su tutto lo spazio disponibile (**ortogonalmente nel caso di un sizer lineare**, **nelle due direzioni per un sizer a griglia**)
-  
-  
-  **Flag di allineamento**:
-  
-      
-    In un **layout orizzontale**, gli allineamenti disponibili sono:
-  
-    * `wx.ALIGN_TOP`, incolonnata in alto
-    * `wx.ALIGN_BOTTOM`, incolonnata in basso
-    * `wx.ALIGN_CENTER_VERTICAL`, allineamento verticale al centro
-  
-    <br>
+| Flag di espansione | Layout di utilizzo                  |  Widget                     |
+|--------------------|-------------------------------------|-----------------------------|
+|`wx.EXPAND`         | Tutti i layout                      | espansa su tutto lo spazio disponibile <br>(**ortogonalmente nel caso di un sizer lineare**,<br> **nelle due direzioni per un sizer a griglia**)   |
+
+I flag di allineamento impostano un allineamento nella direzione ortogonale al layout, nel caso di layout lineare; nella direzione indicata nel caso di un
+layout a griglia.
+
+| Flag di allineamento         | Layout di utilizzo            | Widget                             |
+|------------------------------|-------------------------------|------------------------------------|    
+| `wx.ALIGN_TOP`               | linea in orizzontale, griglia | incolonnata in alto                |
+| `wx.ALIGN_BOTTOM`            | linea in orizzontale, griglia | incolonnata in basso               |
+| `wx.ALIGN_CENTER_VERTICAL`   | linea in orizzontale, griglia | allineamento verticale al centro   |
+| `wx.ALIGN_LEFT`              | linea in verticale, griglia   | allineata a sinistra               |
+| `wx.ALIGN_RIGHT`             | linea in verticale, griglia   | allineata a destra                 |
+| `wx.ALIGN_CENTER_HORIZONTAL` | linea in verticale, griglia   | allineamento orizzontale al centro |
+| `wx.ALIGN_CENTER`            | griglia                       | allineamento centrato <br>orizzontalmente e verticalmente |
+
+<br>
+
+I flag di bordo possono decidere *la direzione del bordo* fra una widget e l'altra. Essi sono:
+
+
+| Flag di bordo   | Layout di utilizzo    | Widget                         |
+|-----------------|-----------------------|--------------------------------|    
+| `wx.TOP`        | Tutti i layout        | bordo verso l'alto             |
+| `wx.RIGHT`      | Tutti i layout        | bordo verso destra             |
+| `wx.BOTTOM`     | Tutti i layout        | bordo verso il basso           |
+| `wx.LEFT`       | Tutti i layout        | bordo verso sinistra           |
+| `wx.ALL`        | Tutti i layout        | bordo in tutte le direzioni    |
+
+
+<br>
     
-    In un **layout verticale**, gli allineamenti disponibili sono:
-  
-    * `wx.ALIGN_LEFT`, allineata a sinistra
-    * `wx.ALIGN_RIGHT`, allineata a destra
-    * `wx.ALIGN_CENTER_HORIZONTAL`, allineamento orizzontale al centro
-  
-    <br>
+Va detto che è possibile combinare 2 o più flag con il simbolo `|` (la barra verticale, si chiama *pipe*). Vediamo qualche esempio:
+
+``` python
+# bordo in alto e a sinistra con la widget in espansione
+... flag = wx.TOP | wx.LEFT | wx.EXPAND ... 
+
+# widget allineata a destra con 10 pixel di bordo
+... flag = wx.ALIGN_RIGHT | wx.RIGHT, border = 10 )
+```
+
+<hr>
     
-    In un **layout a griglia** funzionano tutti gli allineamenti indicati e in più il seguente:
-  
-    * `wx.ALIGN_CENTER`, allineamento centrato orizzontalmente e verticalmente
-  
-    <br>
+**border** 
 
-  **Flag di Bordo**:
-  
-    I flag di bordo possono decidere *la direzione del bordo* fra una widget e l'altra:
+rappresenta la dimensione in pixel del bordo della widget, nelle direzioni indicate dai flag di bordo 
+(se non ci sono flag di bordo, è un parametro inutile).
 
-    * `wx.TOP`: bordo verso l'alto
-    * `wx.RIGHT`: bordo verso destra
-    * `wx.BOTTOM`: bordo verso il basso
-    * `wx.LEFT`: bordo verso sinistra
-    * `wx.ALL`: bordo in tutte le direzioni
-  
-  
-  <br>
-      
-  Va detto che è possibile combinare 2 o più flag con il simbolo `|` (la barra verticale, si chiama *pipe*). Vediamo qualche esempio:
-  
-  ``` python
-  # bordo in alto e a sinistra con la widget in espansione
-  ... flag = wx.TOP | wx.LEFT | wx.EXPAND ... 
-  
-  # widget allineata a destra con 10 pixel di bordo
-  ... flag = wx.ALIGN_RIGHT | wx.RIGHT, border = 10 )
-  ```
-
-- **border** rappresenta la dimensione in pixel del bordo della widget, nelle direzioni indicate dai flag di bordo 
-  (se non ci sono flag di bordo, è un parametro inutile).
-
+<hr>
 
 Quando hai finito di lavorare con layout e widget devi applicare il layout al suo contenitore, 
 che nei nostri esempi sarà sempre un pannello, quindi dovrai fare una cosa del genere:
