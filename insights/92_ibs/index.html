@@ -1,0 +1,1792 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrea Diamantini">
+      
+      
+      
+        <link rel="prev" href="../91_reals/">
+      
+      
+        <link rel="next" href="../99_asyncio/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Interi, bytes, stringhe - Python Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interi-bytes-stringhe" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Python Course" class="md-header__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interi, bytes, stringhe
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/000_first/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OOP/000_intro/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../wx/000_intro/" class="md-tabs__link">
+          
+  
+  wxPython
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00_intro/" class="md-tabs__link">
+          
+  
+  Insights
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Course" class="md-nav__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Python Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/000_first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/001_install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installazione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/100_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prime cose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/101_var/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variabili e Operatori
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/102_alt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alternanza
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/103_iter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ripetizione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/104_ecz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eccezioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/104_seq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequenze
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/105_funz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/106_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moduli
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/106_psl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Standard Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/106_pypi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyPi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/107_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/108_csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            OOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/001_classes_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classi e Oggetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/002_inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ereditarietà
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/003_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Caratteristiche Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wxPython
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            wxPython
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/101_first_things/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primi concetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/102_events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eventi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/110_widgets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/120_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/130_full_ex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Esercizi Completi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/140_dialogs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dialogs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/150_images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Immagini
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/160_timer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timer(s)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/170_full_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Full GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/171_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/172_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/180_network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/299_tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Insights
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Insights
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_uv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_turtle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_pygame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../41_mysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySql
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../51_arduino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../91_reals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numeri reali
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Interi, bytes, stringhe
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Interi, bytes, stringhe
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interi-base-2-8-10-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interi, base 2, 8, 10, 16
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stringhe-e-codifiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stringhe e codifiche
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bytes-e-bytearray" class="md-nav__link">
+    <span class="md-ellipsis">
+      bytes e bytearray
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      String encoding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Int conversion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../99_asyncio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    asyncio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="interi-bytes-stringhe">Interi, bytes, stringhe</h1>
+<p>In questa sezione vorrei regalare alcune piccole delucidazioni su come funzionano gli interi in Python e come si confrontano con i bytes
+e la loro rappresentazione sotto forma di stringhe.</p>
+<p>Questo approfondimento è necessario soprattutto quando si lavora con dati in rete, in cui il formato privilegiato per la trasmissione è chiaramente
+quello in <code>bytes</code>.</p>
+<p>Ma andiamo con ordine.</p>
+<h2 id="interi-base-2-8-10-16">Interi, base 2, 8, 10, 16</h2>
+<p>Le basi numeriche più comuni sono chiaramente (in rigoroso ordine crescente) le basi 2, 8, 10, 16. A dire la verità, la base più comune è la base 10 (e questo perché abbiamo 10 dita...).
+Le altre sono diventate comuni soprattutto grazie all'informatica.</p>
+<p>Vediamo come rappresentare cifre nelle diverse basi:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">interoBase10</span> <span class="o">=</span> <span class="mi">27</span>       <span class="c1"># come ovvio... è 27 in base 10. 27...</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">interoBase2</span>  <span class="o">=</span> <span class="mb">0b1101</span>   <span class="c1"># 1101 in base 2. Ovvero 13 in base 10.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">interoBase8</span>  <span class="o">=</span> <span class="mo">0o13</span>     <span class="c1"># 13 in base 8. Ovvero 11 in base 10.</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">interoBase16</span> <span class="o">=</span> <span class="mh">0xAF</span>     <span class="c1"># AF in base 16. Ovvero 175 in base 10.</span>
+</code></pre></div>
+<p>Come si vede Python fornisce dei prefissi semplici per indicare un numero nelle basi comuni. Facile!</p>
+<div class="admonition warning">
+<p class="admonition-title">Attenzione!</p>
+<p>Quando andate a visualizzare questi numeri, ad esempio con una print, vedrete sempre e comunque la loro rappresentazione decimale:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">interoBase10</span><span class="p">)</span> <span class="c1"># scrive 27</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">interoBase2</span><span class="p">)</span>  <span class="c1"># scrive 13</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">interoBase8</span><span class="p">)</span>  <span class="c1"># scrive 11</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">interoBase16</span><span class="p">)</span> <span class="c1"># scrive 175</span>
+</code></pre></div>
+</div>
+<p>Se invece <strong>avete un numero decimale e lo volete rappresentare in binario, ottale, esadecimale</strong>, Python fornisce delle comodissime funzioni predefinite. 
+Occhio che per <em>cristallizzare</em> la rappresentazione dei numeri in quella base, Python in realtà crea delle stringhe!</p>
+<p>Vediamo il codice:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">67</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">b</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   <span class="c1"># b è la stringa &#39;0b1000011&#39;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">c</span> <span class="o">=</span> <span class="nb">oct</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   <span class="c1"># c è la stirnga &#39;0o103&#39;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">d</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   <span class="c1"># d è la stringa &#39;0x43&#39;</span>
+</code></pre></div>
+<p>Se invece abbiamo delle stringhe che rappresentano dei numeri in base 2,8,10,16, lo strumento da utilizzare è la funzione <code>int()</code> con accortezza!</p>
+<p>Infatti!</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;89&#39;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">n1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>            <span class="c1"># Vale l&#39;intero 89. Questo lo sapevamo già...</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;0b101&#39;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">n2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>            <span class="c1"># ERRORE!!! Non sa come convertire la b...</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">n2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="n">base</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Vale l&#39;intero 5, la conversione di 101(2) in decimale</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">s3</span> <span class="o">=</span> <span class="s1">&#39;0o23&#39;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">n3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>            <span class="c1"># ERRORE!!! Non sa come convertire la o...</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">n3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s3</span><span class="p">,</span> <span class="n">base</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>  <span class="c1"># Vale l&#39;intero 19, la conversione di 23(8) in decimale</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">s4</span> <span class="o">=</span> <span class="s1">&#39;0x2E&#39;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">n4</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s4</span><span class="p">)</span>            <span class="c1"># ERRORE!!! Non sa come convertire la x...</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="n">n4</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s4</span><span class="p">,</span> <span class="n">base</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span> <span class="c1"># Vale l&#39;intero 47, la conversione di 2E(16) in decimale</span>
+</code></pre></div>
+<h2 id="stringhe-e-codifiche">Stringhe e codifiche</h2>
+<p>In Python il tipo stringa (<code>str</code>) codifica i dati in <a href="https://it.wikipedia.org/wiki/Unicode">UNICODE</a>, utilizzando il sistema di codifica <a href="https://it.wikipedia.org/wiki/UTF-8">UTF-8</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Codifca dei caratteri (più in breve possibile)</p>
+<p>All'inizio c'era solo <code>ASCII</code>, in cui c'era una corrispondenza 1 a 1 fra un byte e un carattere della lingua americana. Poiché con un byte puoi distinguere massimo 256 caratteri
+diversi, <code>ASCII</code> non è sufficiente per tutte le lingue (con tutti i loro simboli) del mondo. Quindi ognuno ha pensato al proprio standard di rappresentazione dei caratteri.</p>
+<p>Un bordello!</p>
+<p>Entra in scena <code>UNICODE</code>. Un unico codice per tutti i caratteri del mondo. Per farceli stare tutti, codifica ogni carattere in due byte, per un totale di 65.536 caratteri 
+diversi! Abbastanza...<br>
+Il problema con questa codifica è che tutto diventa grosso il doppio!!! Una parola di 4 lettere (ad esempio: "ciao") diventa pesante 8 byte...</p>
+<p>Bestemmiano tutti!</p>
+<p>L'idea di usare un unico codice per TUTTI i caratteri è una figata... la teniamo! Pensiamo una codifica per risparmiare spazio: nascono le codifiche a lunghezza variabile.
+La migliore sembra essere <code>UTF-8</code> (lo standard de facto attuale). In UTF-8 un carattere può occupare 1,2,3,4 bytes, ma nel 98% dei casi la rappresentazione delle stringhe
+è più corta di quella a lunghezza fissa a 2 bytes!!</p>
+<p>Il bello è che contiene anche tutte le faccine <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f609.png" title=":wink:" /></p>
+</div>
+<p>Con le stringhe in Python dunque, mentre osservandola (o usando la funzione <code>len</code>) puoi sapere con certezza da quanti caratteri questa è formata, a meno di non conoscere a fondo UTF-8,
+non possiamo sapere <em>ad occhio</em> quanti bytes occupa in memoria! </p>
+<p>Se però sei veramente determinato a saperlo... puoi usare la funzione predefinita <code>ord()</code>. Questa, dato un carattere, ritorna il valore esadecimale che corrisponde alla sua rappresentazione in UTF-8. Prima di fare qualche esempio, fatemi dire solo che esiste anche la funzione che fa l'inverso, ovvero dato un intero ritorna il carattere corrispondente
+in UTF-8 (o in ASCII. Ve l'ho detto che UTF-8 è stato progettato per essere identico ad ASCII nei primi 127 caratteri???).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">print</span><span class="p">(</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="p">)</span>       <span class="c1"># scrive 97. In UTF-8, come in ASCII</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span> <span class="p">)</span>        <span class="c1"># scrive &#39;a&#39;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">8364</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span> <span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">)</span>         <span class="c1"># simbolo dell&#39;Euro €</span>
+</code></pre></div>
+<h2 id="bytes-e-bytearray">bytes e bytearray</h2>
+<p>Per gestire i bytes originati da una conversione (ad esempio di una stringa) o da una trasmissione di rete, Python 3 mette a disposizione 2 tipi di dati:</p>
+<ul>
+<li>la classe <code>bytes</code>, immutabile, paragonabile ad una <strong>tupla di byte</strong>.</li>
+<li>la classe <code>bytearray</code>, mutabile, paragonabile ad una <strong>lista di byte</strong>.</li>
+</ul>
+<p>Sostanzialmente, i dati in una di queste classi possono arrivare in pochi modi:</p>
+<ol>
+<li>tramite la conversione di una stringa (encoding)</li>
+<li>come prodotto di una trasmissione di rete</li>
+<li>generando una nuova sequenza tramite le funzione predefinite <code>bytes()</code> e <code>bytearray()</code></li>
+</ol>
+<p>Partiamo dall'ultima opzione! Possiamo usare entrambe le funzioni in due modi analoghi: l'unica differenza fra loro è che una crea un oggetto di tipo <code>bytes</code> e l'altra
+un oggetto di tipo <code>bytearray</code>.</p>
+<p>Vediamo il codice:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># bytes(size:int) oppure bytearray(size:int). Se passi un intero, crea una sequenza di &quot;size&quot; bytes tutti a zero!</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">b</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>            <span class="c1"># b  vale b&#39;\x00\x00\x00&#39; ,            una sequenza IMMUTABILE di 3 bytes (8x3 = 24 bit) tutti a zero.</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">ba</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>       <span class="c1"># ba vale bytearray(b&#39;\x00\x00\x00&#39;) , una sequenza MUTABILE   di 3 bytes tutti a zero.</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># bytes(iterable) oppure bytearray(iterable). Prende la sequenza di dati e crea una sequenza di byte con i dati della sequenza.</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">b1</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>       <span class="c1"># b1 vale b&#39;\x01\x02\x03&#39;,             una sequenza immutabile, riempita con i byte ricavati dalla conversione dei dati della tupla</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">ba1</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>  <span class="c1"># ba1 vale bytearray(b&#39;\x01\x02\x03&#39;), una sequenza mutabile,   riempita con i byte ricavati dalla conversione dei dati della tupla</span>
+</code></pre></div>
+<h2 id="string-encoding">String encoding</h2>
+<p>Il passaggio da stringa a bytes è davvero semplice, considerando che le stringhe utilizzano la codifica UTF-8.</p>
+<p>Per passare da stringa a bytes, usiamo la funzione <code>str.encode(self, encoding='utf-8')</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Andrea&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>    <span class="c1"># b è un bytes che vale b&#39;Andrea&#39;</span>
+</code></pre></div>
+<p>Se invece hai una sequenza di bytes e vuoi ottenere una stringa, devi utilizzare la funzione <code>bytes.decode(self, encoding='utf-8')</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">b</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;Andrea&#39;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">s</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>    <span class="c1"># s è una stringa che vale &#39;Andrea&#39;</span>
+</code></pre></div>
+<h2 id="int-conversion">Int conversion</h2>
+<p>Il passaggio da interi a bytes è analogo a quello delle stringhe, ma con una piccola difficoltà in più: intuire quanti bytes saranno necessari per stanziare la 
+conversione dell'intero in questione non è banale! Nel dubbio... esagerate un pò!!</p>
+<p>Le funzioni da utilizzare sono queste:</p>
+<ul>
+<li><strong>da int a bytes</strong>: funzione <code>int.to_bytes(len:int)</code> occorre specificare quanti bytes occuperà il numero convertito. Se ne metti troppo pochi da errore!!! Se ne metti troppi... sprechi memoria.</li>
+<li><strong>da bytes a int</strong>: funzione <code>int.from_bytes(b)</code>: una semplice conversione 1:1 del bytes in intero.</li>
+</ul>
+<p>Vediamo due esempi</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">13</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">to</span><span class="o">.</span><span class="n">bytes</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>       <span class="c1"># b è un bytes che vale b&#39;\x00\x00\r&#39;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># adesso, per riconvertirlo in int:</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>   <span class="c1"># a è un intero che vale 13</span>
+</code></pre></div>
+<p><br>
+<br>
+<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../91_reals/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Numeri reali">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                Numeri reali
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../99_asyncio/" class="md-footer__link md-footer__link--next" aria-label="Successivo: asyncio">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                asyncio
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Andrea Diamantini (c) 2022-inf<br> <a href="#__consent">Change Cookie Settings</a><br> This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Consenso all'uso dei Cookie(s)</h4>
+<p>Questo sito memorizza sul tuo PC solo due cookies: uno per ricordarsi se hai già visto questo avviso, un altro per ricordarsi il tema di visualizzazione (chiaro/scuro).<br> Se non acconsenti, dovrai selezionare ogni volta la tua scelta.<br> In fondo alla pagina c'è il link per fare reset ;)
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accetta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rifiuta</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2639 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrea Diamantini">
+      
+      
+      
+        <link rel="prev" href="../100_basics/">
+      
+      
+        <link rel="next" href="../102_alt/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Variabili e Operatori - Python Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#variabili-e-operatori" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Python Course" class="md-header__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Variabili e Operatori
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../000_first/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OOP/000_intro/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../wx/000_intro/" class="md-tabs__link">
+          
+  
+  wxPython
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../insights/00_intro/" class="md-tabs__link">
+          
+  
+  Insights
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Course" class="md-nav__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Python Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../000_first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001_install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installazione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prime cose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Variabili e Operatori
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Variabili e Operatori
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variabili" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variabili
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variabili">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operatore-di-assegnazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operatore di assegnazione
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esercizi-semplici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizi semplici
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Numeri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operatori-aritmetici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operatori Aritmetici
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatori-di-confronto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operatori di confronto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatori-logici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operatori Logici
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esercizi-sui-numeri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizi sui numeri
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stringhe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stringhe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stringhe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esercizi-sulle-stringhe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizi sulle stringhe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      f-strings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="f-strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formattazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      formattazione
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-valori" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input valori
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input valori">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esercizio-svolto-area-del-rettangolo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizio svolto: area del rettangolo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esercizi-finali" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizi finali
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102_alt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alternanza
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103_iter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ripetizione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_ecz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eccezioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_seq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequenze
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105_funz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moduli
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_psl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Standard Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_pypi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyPi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108_csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            OOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/001_classes_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classi e Oggetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/002_inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ereditarietà
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/003_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Caratteristiche Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wxPython
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            wxPython
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/101_first_things/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primi concetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/102_events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eventi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/110_widgets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/120_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/130_full_ex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Esercizi Completi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/140_dialogs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dialogs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/150_images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Immagini
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/160_timer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timer(s)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/170_full_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Full GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/171_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/172_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/180_network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/299_tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Insights
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Insights
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/00_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/01_uv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/02_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/11_turtle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/12_pygame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/41_mysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySql
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/51_arduino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/91_reals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numeri reali
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/92_ibs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interi, bytes, stringhe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/99_asyncio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    asyncio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="variabili-e-operatori">Variabili e Operatori</h1>
+<p>In questo capitolo introdurremo due fra i concetti più importanti della programmazione di base in Python.
+Attenzione alle definizioni e agli esempi!!!</p>
+<p>Per rendere semplice e veloce provare i concetti appresi con un pò di codice, faremo largo uso dell'interprete.
+Obbligatorio provare il codice che vedete sul vostro computer. </p>
+<h2 id="variabili">Variabili</h2>
+<p>Una variabile è una porzione di memoria identificata tramite un identificativo univoco (nome, nell'esempio), 
+che permette di memorizzare un valore di un qualche tipo. Vediamo alcuni semplici esempi:</p>
+<div class="highlight"><span class="filename">Semplici esempi di variabili dichiarate nell'interprete</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;Pippo&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">Pippo</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># A me non piacciono i nomi di variabile con gli accenti o gli apostrofi...</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">eta</span> <span class="o">=</span> <span class="mi">8</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">eta</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="mi">8</span>
+</code></pre></div>
+<p>Come si vede per definire una variabile, bisogna fare 3 cose:</p>
+<ol>
+<li>scegliere un nome per la variabile (ad esempio: altezza)</li>
+<li>decidere un valore da assegnargli (ad esempio: 143)</li>
+<li>assegnare alla variabile il valore tramite l'operatore =</li>
+</ol>
+<p>Scriviamo un esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">altezza</span> <span class="o">=</span> <span class="mi">143</span>
+</code></pre></div>
+<p>I nomi delle variabili sono <strong>identificatori univoci</strong> e per esserlo
+devono rispettare le seguenti regole:</p>
+<ul>
+<li>essere composto solo da lettere (a-z, A-Z), numeri (0-9) e underscore ( il carattere _ , ad esempio per <code>altezza_rettangolo</code> )</li>
+<li>non può iniziare con un numero</li>
+<li>non contenere spazi o caratteri speciali (ad esempio <code>altezza rettangolo</code> con lo spazio, non va bene!)</li>
+<li>non essere uguale a nessuna delle parole chiave del linguaggio (ad esempio, non puoi chiamare una variabile <code>print</code>)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Python è CASE-SENSITIVE</p>
+<p>Significa che Python fa differenza fra MAIUSCOLE e minuscole... <br>
+<code>var</code> , <code>Var</code> , <code>VAR</code> sono tre nomi diversi</p>
+</div>
+<p>Fin qui è facile.<br>
+Occhio adesso però: Python è un linguaggio <a href="https://en.wikipedia.org/wiki/Strong_and_weak_typing"><strong><em>Strongly Typed</em></strong></a>, 
+il che significa che in ogni istante è sempre possibile sapere che tipo di dato c'è in una variabile. </p>
+<p>Faccio un esempio banale, che può aiutare a capire:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># &quot;7&quot; è una stringa, una parola</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">prova</span> <span class="o">=</span> <span class="s2">&quot;7&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Python sa che prova contiene una stringa. Per noi è &quot;7&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">prova</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="mi">7</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># 7 senza apici è un valore numerico, un numero</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">prova</span> <span class="o">=</span> <span class="mi">7</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Python adesso sa che la variabile prova contiene un numero. Per noi è comunque 7</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">prova</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="mi">7</span>
+</code></pre></div>
+<p>Praticamente in Python una variabile esiste solo quando è assegnata di un valore, tramite l'operatore <code>=</code> (di cui parleremo fra un attimo).
+Il nome scelto, con le regole descritte sopra, serve solo da etichetta per ritrovare quel valore (che... <strong>è</strong> la variabile)!!!</p>
+<p>Se siete curiosi di sapere anche voi il tipo di dato contenuto in una variabile, potete verificarlo utilizzando la funzione predefinita <code>type()</code>.</p>
+<div class="highlight"><span class="filename">Prove con type</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">var</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">var</span> <span class="o">=</span> <span class="mf">5.0</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;5&quot;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+<h3 id="operatore-di-assegnazione">Operatore di assegnazione</h3>
+<p>Adesso dico una cosa che fino a qui io ho dato per scontato e che voi non avevate ancora pensato. <br><br></p>
+<p>In Python l'operatore <code>=</code> non assomiglia neanche un pò all'operatore <code>=</code> della matematica. 
+Anzi... per chi inizia a programmare, forse è l'operatore più complicato.</p>
+<p>In matematica scrivo tranquillamente <code>5 + 3 = 8</code> e questa cosa significa che la quantità a destra è uguale alla quantità a sinistra. Infatti
+potrei anche scrivere <code>8 = 5 + 3</code> e tutto avrebbe ancora perfettamente senso.<br></p>
+<p>In Python qualunque delle espressioni sopra da errore:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">8</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="ne">SyntaxError</span><span class="o">...</span>
+</code></pre></div>
+<p>L'operatore <code>=</code> in Python non serve per fare le uguaglianze ma è un operatore di assegnazione, che funziona in un modo molto preciso:
+prende la quantità scritta a destra dell'operatore, la <code>valuta</code> (ovvero, tiene conto del valore e del tipo presenti) e la assegna al nome
+di variabile che è presente a sinistra.</p>
+<div class="highlight"><span class="filename">Esempi di assegnazione</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># prendo il valore 5 e lo assegno ad una variabile di nome a</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>  <span class="c1"># valuto il valore di a (vale 5) e lo assegno ad una variabile di nome b</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>      <span class="c1"># Ovviamente, b vale...</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="mi">5</span>
+</code></pre></div>
+<p>Invece se scrivo...</p>
+<div class="highlight"><span class="filename">Uso errato dell'operatore di assegnazione</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">=</span> <span class="n">c</span>  <span class="c1"># valuto il valore di c (non so quale sia) e vorrei assegnarlo... (no no no no...)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="ne">SyntaxError</span><span class="o">...</span>
+</code></pre></div>
+<p>Spero sia tutto chiaro... Prima di procedere oltre, qualche esercizio di prova.</p>
+<!-- #################################################################################################### -->
+
+<h3 id="esercizi-semplici">Esercizi semplici</h3>
+<div class="admonition danger">
+<p class="admonition-title">NO IA</p>
+<p>Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+contesto affidarsi alle IA per la risoluzione degli stessi!!!</p>
+</div>
+<p><strong>Esercizio 101</strong></p>
+<p>Definire la variabile <code>nome</code> con valore il proprio nome e la variabile <code>cognome</code>
+con valore (indovina...). Visualizzare il contenuto delle variabili (con <code>print</code>) ed il tipo contenuto in esse (con <code>type</code>).</p>
+<div class="highlight"><span class="filename">Esempio con il nome</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Andrea&#39;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nome:&quot;</span><span class="p">,</span> <span class="n">nome</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">nome</span><span class="p">))</span>
+</code></pre></div>
+<hr />
+<p><strong>Esercizio 102</strong></p>
+<p>Definire le seguenti variabili:</p>
+<ul>
+<li>sesso (una lettera, 'M' oppure 'F')</li>
+<li>data di nascita (in realtà 3 variabili per 3 numeri: giorno, mese, anno)</li>
+<li>comune di nascita (ad esempio 'Senigallia')</li>
+<li>la provincia (2 lettere, ad esempio 'AN')</li>
+</ul>
+<p>Visualizzare il contenuto delle variabili (con <code>print</code>) ed il tipo contenuto in esse (con <code>type</code>).</p>
+<hr />
+<p><strong>Esercizio 103</strong></p>
+<p>writeme!</p>
+<hr />
+<p><strong>Esercizio 104</strong></p>
+<p>plswriteme!</p>
+<!-- #################################################################################################### -->
+
+<h2 id="numeri">Numeri</h2>
+<p>Python considera i seguenti tipi numerici:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th style="text-align: center;">Oggetto</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Numeri Interi</td>
+<td style="text-align: center;"><code>int</code></td>
+<td>I numeri interi (secondo Python). <br> Il più grande (o più piccolo) intero rappresentabile dipende dalla quantità di memoria presente nella macchina.</td>
+</tr>
+<tr>
+<td>Numeri Reali</td>
+<td style="text-align: center;"><code>float</code></td>
+<td>I numeri <em>reali</em> (secondo Python), tipicamente definiti <em>a virgola mobile</em> (floating point numbers) <br> Sono rappresentabili numeri da  <code>-1.797693134862316 e308</code> a <code>1.797693134862316 e308</code></td>
+</tr>
+<tr>
+<td>Valori Booleani</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td>I valori di verità dell'algebra booleana. <br> Utilizzano i valori <code>True</code> oppure <code>False</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Mi sembra facile da capire: <br>
+un numero intero è un qualsiasi numero, positivo o negativo, senza virgola. <br>
+Un numero reale è un qualsiasi numero con la virgola, solo che <strong>in Python il separatore decimale è il punto</strong>!!!. </p>
+<p>Quindi:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>     <span class="c1"># intero</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">5.0</span>   <span class="c1"># reale</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># ... e così via...</span>
+</code></pre></div>
+<p>I valori booleani sono solo <code>True</code> o <code>False</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">d</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+<p>Gli operatori abbinati a questi tipi di dati sono elencati, con esempi e spiegazione, sotto.</p>
+<!-- #################################################################################################### -->
+
+<h3 id="operatori-aritmetici">Operatori Aritmetici</h3>
+<p>Non credo ci sarà molto da spiegare sul funzionamento intrinseco degli operatori seguenti, ma va fatta una importante precisazione! Il risultato di una operazione
+aritmetica in Python è un valore, dunque... una variabile! E Python vuole sempre sapere il tipo (oltreché il valore) delle sue variabili!!! Quindi, banalmente... quando c'è un float
+da qualche parte, il risultato sarà comunque float. Occhio agli esempi...</p>
+<p><br></p>
+<p><strong>Addizione (Operatore <code>+</code>)</strong></p>
+<p>Non credo ci sia molto da spiegare su questo operatore...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="mi">4</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">3.0</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">4</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="mf">7.0</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Sottrazione (Operatore <code>-</code>)</strong></p>
+<p>Anche qui.. mi sembra facile...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">5</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">7.2</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="mf">6.2</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Moltiplicazione (Operatore <code>*</code>)</strong></p>
+<p>Tutto sommato, anche questo (operatore) dovrebbe essere semplice...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">*</span> <span class="mi">3</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="mi">18</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4.5</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">*</span> <span class="mi">2</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="o">-</span><span class="mf">9.0</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Divisione (Operatore <code>/</code>)</strong></p>
+<p>E come alle elementari... qui le cose si complicano (un pò)... Fate attenzione all'operatore divisione, perché
+in Python il risultato di una divisione è sempre un numero reale, un <code>float</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="mf">3.5</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="mf">3.0</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Divisione Intera (Operatore <code>//</code>)</strong></p>
+<p>Avendo un operatore con risultato reale, ne esiste anche uno con risultato intero. Di regola questo dovrebbe essere utilizzato con due numeri interi.
+Il risultato di una divisione intera è sempre un intero.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attenzione!</p>
+<p>I risultati di una divisione intera sono sempre interi e vengono sempre calcolati per troncamento, mai per arrotondamento!!!</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span> <span class="o">//</span> <span class="mi">2</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="mi">3</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">//</span> <span class="mi">2</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="mi">3</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">39</span> <span class="o">//</span> <span class="mi">10</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="mi">3</span>
+</code></pre></div>
+</div>
+<p><br></p>
+<p><strong>Modulo (Resto divisione intera, Operatore <code>%</code>)</strong></p>
+<p>L'operatore modulo, comune a tutti i linguaggi di programmazione, serve per calcolare il resto della divisione intera fra due numeri (interi, ovviamente).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># 7 diviso 2 fa 3 col resto di 1, quindi...</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span> <span class="o">%</span> <span class="mi">2</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="mi">1</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="c1"># 6 diviso 2 fa 3 col resto di 0, quindi...</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">2</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="mi">0</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="c1"># 39 diviso 10 fa 3 col resto di 9, quindi...</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">39</span> <span class="o">%</span> <span class="mi">10</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="mi">9</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Elevamento a potenza (Operatore <code>**</code>)</strong></p>
+<p>Questo operatore, introdotto in Python per mera comodità, esegue l'elevamento a potenza di due numeri.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span> <span class="o">**</span> <span class="mi">2</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="mi">49</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">**</span> <span class="mi">0</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="mi">1</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="mi">8</span>
+</code></pre></div>
+<p><br></p>
+<p>La priorità degli operatori aritmetici rispecchia la logica della matematica con moltiplicazione e divisione prima di addizione e
+sottrazione. Per i raggruppamenti si usano le parentesi tonde <code>(())</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="mi">7</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>           <span class="c1"># fa 13</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">(</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>       <span class="c1"># fa 27</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">(</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">8</span> <span class="p">)</span> <span class="o">**</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>    <span class="c1"># fa 4.5!!!! 1 + 8 fa 9, 9 alla 1 fa 1, 9 diviso 2 fa 4.5!!!!!</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="p">(</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">8</span> <span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># fa 3.0!!!!! Okkio...</span>
+</code></pre></div>
+<p>Gli esempi, scritti sopra e sotto per semplicità con i numeri interi, funzionano ovviamente con tutti i tipi numerici supportati da Python.</p>
+<!-- #################################################################################################### -->
+
+<h3 id="operatori-di-confronto">Operatori di confronto</h3>
+<p>Gli operatori di confronto in Python sono operatori binari il cui risultato è sempre un valore booleano!</p>
+<table>
+<thead>
+<tr>
+<th>Operatore</th>
+<th>Descrizione</th>
+<th>Esempio</th>
+<th>Risultato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>È uguale a</td>
+<td>5 == 8</td>
+<td>False</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>È diverso da</td>
+<td>5 != 8</td>
+<td>True</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>È maggiore di</td>
+<td>5 &gt; 8</td>
+<td>False</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>È minore di</td>
+<td>5 &lt; 8</td>
+<td>True</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>È maggiore o uguale a</td>
+<td>5 &gt;= 8</td>
+<td>False</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>È minore o uguale a</td>
+<td>5 &lt;= 8</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<!-- #################################################################################################### -->
+
+<h3 id="operatori-logici">Operatori Logici</h3>
+<p>Gli operatori logici in Python sono operatori binari il cui risultato è sempre un valore booleano!</p>
+<table>
+<thead>
+<tr>
+<th>Operatore</th>
+<th>Descrizione</th>
+<th>Esempio</th>
+<th>Risultato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Congiunzione logica</td>
+<td>x = 6<br>y = 3<br>x &lt; 10 and y &gt; 1</td>
+<td><br><br>True</td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>Disgiunzione logica</td>
+<td>x = 6<br>y = 3<br>x == 5 or y == 5</td>
+<td><br><br>False</td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>Negazione logica</td>
+<td>x = 6<br>y = 3<br>not (x == y)</td>
+<td><br><br>True</td>
+</tr>
+</tbody>
+</table>
+<!-- #################################################################################################### -->
+
+<h3 id="esercizi-sui-numeri">Esercizi sui numeri</h3>
+<div class="admonition danger">
+<p class="admonition-title">NO IA</p>
+<p>Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+contesto affidarsi alle IA per la risoluzione degli stessi!!!</p>
+</div>
+<p>Alcuni esercizi semplicissimi per assicurarsi di avere ben compreso la
+logica dei numeri e degli operatori in Python.</p>
+<hr />
+<p><strong>Esercizio 121</strong></p>
+<p>Definire una variabile intera, con un numero a scelta e una variabile reale, anch'essa a piacere.
+Visualizzare nome, valore e tipo.</p>
+<hr />
+<p><strong>Esercizio 122</strong></p>
+<p>Definire le variabili n1,n2 contenenti due nuemri interi a piacere. Calcolare:</p>
+<ul>
+<li>n1 + n2</li>
+<li>n1 - n2</li>
+<li>n1 * n2</li>
+<li>n1 / n2</li>
+<li>n1 // n2</li>
+<li>n1 % n2</li>
+<li>n1 ** n2</li>
+</ul>
+<p>Verificare il tipo di ognuno dei risultati con la funzione <code>type()</code>.</p>
+<hr />
+<p><strong>Esercizio 123</strong></p>
+<p>Definire le variabili r1,r2 contenenti due numeri reali a piacere. Calcolare:</p>
+<ul>
+<li>r1 + r2</li>
+<li>r1 - r2</li>
+<li>r1 * r2</li>
+<li>r1 / r2</li>
+<li>r1 ** r2</li>
+</ul>
+<p>Verificare il tipo di ognuno dei risultati con la funzione <code>type()</code>.</p>
+<hr />
+<p><strong>Esercizio 124</strong></p>
+<p>Definire le variabili p, q contenenti due numeri interi a piacere. Calcolare:</p>
+<ul>
+<li>p &lt; q</li>
+<li>p == q</li>
+<li>p != q</li>
+<li>p &gt;= q</li>
+</ul>
+<hr />
+<p><strong>Esercizio 125</strong></p>
+<p>Definire le variabili a, b, c contenenti tre numeri reali a piacere. Calcolare:</p>
+<ul>
+<li>a &lt; b and b &lt; c</li>
+<li>a == b or a != c</li>
+<li>not (a != b)</li>
+</ul>
+<!-- #################################################################################################### -->
+
+<h2 id="stringhe">Stringhe</h2>
+<p>Abbiamo già visto come dichiarare una qualsiasi variabile numerica; per
+una stringa le cose non sono affatto più difficili:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;Andrea&quot;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">Andrea</span>
+</code></pre></div>
+<p>In Python gli oggetti stringa sono definibili tramite l'uso degli
+apici. Per "semplificare" le cose, Python non fa grande differenza fra
+apici singoli e doppi, ma richiede coerenza nell'utilizzo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">primo</span> <span class="o">=</span> <span class="s2">&quot;riso&quot;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">primo</span><span class="p">)</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">riso</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">secondo</span> <span class="o">=</span> <span class="s1">&#39;carne&#39;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">secondo</span><span class="p">)</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="n">carne</span>
+</code></pre></div>
+<p>l'utilizzo di un tipo di apice permette di inserire con più semplicità l'altro all'interno della stringa</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">primo</span> <span class="o">=</span> <span class="s2">&quot;penne all&#39;arrabbiata&quot;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">primo</span><span class="p">)</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">penne</span> <span class="nb">all</span><span class="s1">&#39;arrabbiata</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">contorno</span> <span class="o">=</span> <span class="s1">&#39;patate &quot;duchessa&quot;&#39;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">contorno</span><span class="p">)</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="n">patate</span> <span class="s2">&quot;duchessa&quot;</span>
+</code></pre></div>
+<p>Nel caso si voglia insistere ad utilizzare un solo tipo di apice,
+bisogna spiegare a Python quali sono quelli da intendere come semplici
+caratteri precedendoli con il carattere di escape <code>backslash</code> ( \ )</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">dessert</span> <span class="o">=</span> <span class="s2">&quot;cornetti con crema </span><span class="se">\&quot;</span><span class="s2">chantilly</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">dessert</span><span class="p">)</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">cornetti</span> <span class="n">con</span> <span class="n">crema</span> <span class="s2">&quot;chantilly&quot;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">frutta</span> <span class="o">=</span> <span class="s1">&#39;pere </span><span class="se">\&#39;</span><span class="s1">abate</span><span class="se">\&#39;</span><span class="s1"> e prugne secche&#39;</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">frutta</span><span class="p">)</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="n">pere</span> <span class="s1">&#39;abate&#39;</span> <span class="n">e</span> <span class="n">prugne</span> <span class="n">secche</span>
+</code></pre></div>
+<p>Come si vede Python interpreta correttamente le sequenze con apici e
+caratteri di escape. Gli stessi possono essere utilizzati anche per
+scrivere caratteri non stampabili, ma utili tipograficamente:</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\n</code></td>
+<td>Capo riga</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>tabulazione</td>
+</tr>
+</tbody>
+</table>
+<p>Vediamo qualche esempio per chiarezza.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;Andrea</span><span class="se">\n</span><span class="s2">Diamantini&quot;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">Andrea</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">Diamantini</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">scuola</span> <span class="o">=</span> <span class="s2">&quot;Liceo</span><span class="se">\t</span><span class="s2">Da Vinci</span><span class="se">\n</span><span class="s2">Jesi</span><span class="se">\t</span><span class="s2">(AN)&quot;</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">scuola</span><span class="p">)</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="n">Liceo</span> <span class="n">Da</span> <span class="n">Vinci</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="n">Jesi</span>  <span class="p">(</span><span class="n">AN</span><span class="p">)</span>
+</code></pre></div>
+<p>Spero sia abbastanza chiaro.</p>
+<p>Le stringhe supportano l'operatore + per la congiunzione delle stringhe
+e l'operatore * per la ripetizione delle stesse. Anche qui, un esempio
+conta più di mille parole.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">frutto</span> <span class="o">=</span> <span class="s2">&quot;ba&quot;</span> <span class="o">+</span> <span class="s2">&quot;na&quot;</span> <span class="o">*</span> <span class="mi">2</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">frutto</span><span class="p">)</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="n">banana</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">mitraglia</span> <span class="o">=</span> <span class="s2">&quot;ra&quot;</span> <span class="o">+</span> <span class="s2">&quot;tta&quot;</span> <span class="o">*</span> <span class="mi">10</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">mitraglia</span><span class="p">)</span> <span class="c1"># tutti stecchiti :)</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="n">rattattattattattattattattattatta</span>
+</code></pre></div>
+<p>Altra caratteristica delle stringhe in Python è che esse supportano la
+<strong><em>"concatenazione automatica per vicinanza"</em></strong>. Provo ancora a spiegare
+con un esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">gioco</span> <span class="o">=</span> <span class="s2">&quot;cal&quot;</span> <span class="s2">&quot;cio&quot;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">gioco</span><span class="p">)</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="n">calcio</span>
+</code></pre></div>
+<p>Se vuoi concatenare una stringa su più righe, devi usare le parentesi tonde</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">periodoLungo</span> <span class="o">=</span> <span class="p">(</span> <span class="s2">&quot;Quando uno deve parlare e non ha niente da dire&quot;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="o">&gt;&gt;&gt;</span>                  <span class="s2">&quot; dice cose stupide e a volte... le scrive!&quot;</span> <span class="p">)</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">periodoLungo</span><span class="p">)</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="n">Quando</span> <span class="n">uno</span> <span class="n">deve</span> <span class="n">parlare</span> <span class="n">e</span> <span class="n">non</span> <span class="n">ha</span> <span class="n">niente</span> <span class="n">da</span> <span class="n">dire</span> <span class="n">dice</span> <span class="n">cose</span> <span class="n">stupide</span> <span class="n">e</span> <span class="n">a</span> <span class="n">volte</span><span class="o">...</span> <span class="n">le</span> <span class="n">scrive</span><span class="err">!</span>
+</code></pre></div>
+<p>Ok, più o meno ci siamo! Qualche esercizio per assicurarsi che sia tutto chiaro e andiamo avanti :)</p>
+<!-- #################################################################################################### -->
+
+<h3 id="esercizi-sulle-stringhe">Esercizi sulle stringhe</h3>
+<div class="admonition danger">
+<p class="admonition-title">NO IA</p>
+<p>Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+contesto affidarsi alle IA per la risoluzione degli stessi!!!</p>
+</div>
+<p>Alcuni semplici esercizi di comprensione sulle stringhe</p>
+<hr />
+<p><strong>Esercizio 141</strong></p>
+<p>Definire due variabili contenenti rispettivamente il <code>nome</code> e il <code>cognome</code> di una persona.
+Definire la variabile <code>NomeCompleto</code> formata dalla sequenza 'sig.' (o 'sig.ra') + uno spazio + il nome + uno spazio + il cognome.
+Visualizzare le stringhe <code>nome</code>, <code>cognome</code> e <code>NomeCompleto</code> in righe diverse</p>
+<hr />
+<p><strong>Esercizio 142</strong></p>
+<p>Definita la stringa </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">es</span> <span class="o">=</span> <span class="s1">&#39;Esercizio 142&#39;</span>
+</code></pre></div>
+<p>visualizzare la stringa per 18 volte in 18 righe diverse, una volta per riga (sugg: ricordate che <code>+</code> congiunge, "\n"
+va a capo e <code>*</code> intero ripete...)</p>
+<hr />
+<p><strong>Esercizio 143</strong></p>
+<p>Definire la variabile <code>colore1</code> con un colore a scelta. Ripetere l'operazione per <code>colore2</code>.
+Definire la stringa <code>bicolore</code> data dal primo colore, uno spazio, la &amp;, un altro
+spazio e infine il secondo colore.</p>
+<p>Visualizzare la stringa così definita.</p>
+<hr />
+<p><strong>Esercizio 144: Nome ed età</strong></p>
+<p>Definire la variabile <code>nome</code> con il proprio nome e la variabile <code>eta</code> con il numero intero che rappresenta la propria età.
+Visualizzare la frase "Mi chiamo NOME ed ho ETA anni" ovviamente sostituendo opportunatamente le parole maiuscole con i valori
+delle variabili definite.</p>
+<!-- #################################################################################################### -->
+
+<h2 id="f-strings">f-strings</h2>
+<p>Arrivati a questo punto del corso, siete già quasi degli espertoni della funzione <code>print()</code> e avrete capito come questa
+possa visualizzare qualunque tipo di variabile semplicemente per elencazione. Chiarifico subito con un banale esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;Andrea&quot;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">anni</span> <span class="o">=</span> <span class="mi">18</span> <span class="c1"># ;)</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Io mi chiamo&quot;</span><span class="p">,</span> <span class="n">nome</span><span class="p">,</span> <span class="s2">&quot;ed ho&quot;</span><span class="p">,</span> <span class="n">anni</span><span class="p">,</span> <span class="s2">&quot;anni&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Se eseguite questo brillante codice vedrete scritta la frase "Io mi chiamo Andrea ed ho 18 anni" con la print che visualizza senza 
+problemi una stringa e un intero. Se siete a vostro agio con questo tipo di scrittura... saltate questo capitolo <img alt="😎" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f60e.png" title=":sunglasses:" /></p>
+<p>In realtà questa modalità di visualizzare informazioni risulta un pò scomoda:</p>
+<ul>
+<li>devi alternare stringhe "fisse" con variabili di tutti i tipi</li>
+<li>devi stare attento agli spazi</li>
+<li>devi ricordarti le virgole</li>
+</ul>
+<p>Insomma, bene... ma non benissimo!</p>
+<p>Python, nella speranza di fornire uno strumento più semplice, dalla versione 3.6 ha introdotto il concetto di <code>formatted string literals</code>, abbreviato
+appunto in <code>f-strings</code>. Qui la <a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings">documentazione ufficiale</a>.</p>
+<p>In poche parole, queste sono stringhe precedute da una <code>f</code> (da cui l'abbreviazione del nome), che permettono di visualizzare variabili semplicemente
+indicando il loro nome dentro parentesi graffe <code>{}</code>. Un esempio e sarà chiarissimo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;Andrea&quot;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">anni</span> <span class="o">=</span> <span class="mi">28</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s2">&quot;Io mi chiamo </span><span class="si">{</span><span class="n">nome</span><span class="si">}</span><span class="s2"> ed ho </span><span class="si">{</span><span class="n">anni</span><span class="si">}</span><span class="s2"> anni&quot;</span> <span class="p">)</span>
+</code></pre></div>
+<p>Adesso ho corretto l'età <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f609.png" title=":wink:" /></p>
+<p>Come vedete, la stringa scritta in questo modo risulta più semplicemente leggibile dal programmatore, non ha le mille virgole di prima e, grazie alle parentesi
+graffe, evidenzia bene quale parte della stessa espone le variabili da visualizzare.</p>
+<p>Adesso che le avete viste, sta a voi decidere se utilizzarle oppure no!</p>
+<div class="admonition tip">
+<p class="admonition-title">Suggerimento</p>
+<p>Perchè non provate a togliere la <code>f</code> davanti per vedere cosa succede se scrivo solo:</p>
+<p><code>print( "Io mi chiamo {nome} ed ho {anni} anni" )</code></p>
+<p>?</p>
+</div>
+<h3 id="formattazione">formattazione</h3>
+<p>A dire la verità, grazie alle f-strings in Python è facilissimo anche <em>formattare</em> numeri e stringhe secondo necessità. Provo ad elencare le 
+possibilità più conosciute in una tabella:</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`:ns</td>
+<td>Lascia almeno n spazi per una stringa</td>
+</tr>
+<tr>
+<td><code>:+</code></td>
+<td>Esplicita il segno</td>
+</tr>
+<tr>
+<td><code>:,</code></td>
+<td>Usa la virgola come separatore delle migliaia</td>
+</tr>
+<tr>
+<td><code>:b</code></td>
+<td>Formato binario del numero</td>
+</tr>
+<tr>
+<td><code>:f</code></td>
+<td>Formato con parte intera e decimale (float)</td>
+</tr>
+<tr>
+<td><code>:X</code></td>
+<td>Formato esadecimale del numero</td>
+</tr>
+<tr>
+<td><code>:%</code></td>
+<td>Formato percentuale del numero</td>
+</tr>
+</tbody>
+</table>
+<p>E a spiegare con qualche esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;Andrea&quot;</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ciao, </span><span class="si">{</span><span class="n">nome</span><span class="si">:</span><span class="s2">8s</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">Ciao</span><span class="p">,</span> <span class="n">Andrea</span>  <span class="err">!</span> <span class="c1"># notate i due spazi vuoti prima del !</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ciao, </span><span class="si">{</span><span class="n">nome</span><span class="si">:</span><span class="s2">4s</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="n">Ciao</span><span class="p">,</span> <span class="n">Andrea</span><span class="err">!</span>   <span class="c1"># almeno 4... ma ne servivano 6...</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">minima</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.5</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">massima</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La temperatura è fra i </span><span class="si">{</span><span class="n">minima</span><span class="si">:</span><span class="s2">+</span><span class="si">}</span><span class="s2"> e i </span><span class="si">{</span><span class="n">massima</span><span class="si">:</span><span class="s2">+</span><span class="si">}</span><span class="s2"> gradi&quot;</span> <span class="p">)</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="n">La</span> <span class="n">temperatura</span> <span class="n">è</span> <span class="n">fra</span> <span class="n">i</span> <span class="o">-</span><span class="mf">3.5</span> <span class="n">e</span> <span class="n">i</span> <span class="o">+</span><span class="mi">5</span> <span class="n">gradi</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">26</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> in binario è </span><span class="si">{</span><span class="n">num</span><span class="si">:</span><span class="s2">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="mi">26</span> <span class="ow">in</span> <span class="n">binario</span> <span class="n">è</span> <span class="mi">11010</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> in esadecimale è </span><span class="si">{</span><span class="n">num</span><span class="si">:</span><span class="s2">X</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="mi">26</span> <span class="ow">in</span> <span class="n">esadecimale</span> <span class="n">è</span> <span class="mi">1</span><span class="n">A</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">numeroGrande</span> <span class="o">=</span> <span class="mi">1250870</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Numero grande: </span><span class="si">{</span><span class="n">numeroGrande</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="n">Numero</span> <span class="n">grande</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="mi">250</span><span class="p">,</span><span class="mi">870</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.34</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Con max 2 valori interi e 4 cifre dopo la virgola: </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">2.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="n">Con</span> <span class="nb">max</span> <span class="mi">2</span> <span class="n">valori</span> <span class="n">interi</span> <span class="n">e</span> <span class="mi">4</span> <span class="n">cifre</span> <span class="n">dopo</span> <span class="n">la</span> <span class="n">virgola</span><span class="p">:</span> <span class="mf">0.3400</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Con max 1 valore intero e 1 cifra dopo la virgola: </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">1.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="n">Con</span> <span class="nb">max</span> <span class="mi">1</span> <span class="n">valori</span> <span class="n">interi</span> <span class="n">e</span> <span class="mi">1</span> <span class="n">cifra</span> <span class="n">dopo</span> <span class="n">la</span> <span class="n">virgola</span><span class="p">:</span> <span class="mf">0.3</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;percentuale </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">.0%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="n">percentuale</span><span class="p">:</span> <span class="mi">34</span><span class="o">%</span>
+</code></pre></div>
+<p>Spero sia chiaro <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f609.png" title=":wink:" /></p>
+<!-- #################################################################################################### -->
+
+<h2 id="input-valori">Input valori</h2>
+<p>La seconda istruzione Python che andiamo a introdurre si chiama <code>input</code> e permette all'utente, ovvero colui
+che esegue il programma, di inserire un valore. Vediamo un esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># la funzione input permette a chi utilizza il programma di inserire informazioni</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="n">nome</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Come ti chiami? &quot;</span><span class="p">)</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ciao&quot;</span><span class="p">,</span> <span class="n">nome</span><span class="p">)</span>
+</code></pre></div>
+<p>Quando si esegue questo codice vedremo qualcosa tipo:</p>
+<div class="highlight"><pre><span></span><code>Come ti chiami? Andrea
+Ciao Andrea
+</code></pre></div>
+<p>Faccio un'altra prova, giusto per essere sicuro che abbiamo capito:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quanti anni hai? &quot;</span><span class="p">)</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ho </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> anni&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Mi sembra una istruzione davvero semplice... purtroppo l'errore è dietro l'angolo...</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Numero: &quot;</span><span class="p">)</span> <span class="c1"># inserisci 6</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Numero: &quot;</span><span class="p">)</span> <span class="c1"># inserisci 4</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="n">m</span><span class="p">)</span>          <span class="c1"># Tu pensi che scriverà 10, invece...</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="mi">64</span>
+</code></pre></div>
+<p>Python non è diventato matto stamattina... la funzione <code>input</code> restituisce sempre e solo stringhe, come possiamo verificare
+con la funzione <code>type</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Numero: &quot;</span><span class="p">)</span> <span class="c1"># inserisci 6</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="mi">6</span> <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+<p>Capito cosa è successo?! Una concatenazione invece di una somma!</p>
+<p>Per evitare questi errori dobbiamo spesso effettuare delle <strong>conversioni di tipo</strong>;
+le funzioni necessarie sono semplici e intuitive.</p>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool()</code></td>
+<td>Trasforma, se possibile, il suo argomento in un booleano.<br> (<code>0</code>, <code>0.0</code> e <code>""</code> valgono <strong>False</strong>, tutto il resto vale <strong>True</strong>)</td>
+</tr>
+<tr>
+<td><code>int()</code></td>
+<td>Trasforma, se possibile, il suo argomento in un intero, altrimenti restituisce ERRORE</td>
+</tr>
+<tr>
+<td><code>float()</code></td>
+<td>Trasforma, se possibile, il suo argomento in un reale, altrimenti restituisce ERRORE</td>
+</tr>
+<tr>
+<td><code>str()</code></td>
+<td>Trasforma il suo argomento in una stringa. <br> Funziona sempre <img alt="😉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f609.png" title=":wink:" /></td>
+</tr>
+</tbody>
+</table>
+<p>Vediamo alcuni esempi per capire il concetto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c1"># Vuoi un intero? Chiedilo esplicitamente e trasforma il valore digitato</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci un numero intero: &quot;</span><span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hai inserito&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="n">Hai</span> <span class="n">inserito</span> <span class="mi">4</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+<p>Certo... se l'utente non digita un numero... la conversione non funziona!!! 
+L'unica funzione di conversione che funziona sempre è <code>str()</code>: Tutto si può convertire in una stringa :)</p>
+<p>Per chi fa più fatica a intuire al volo e vuole sempre conferme scritte
+aggiungo un semplicissimo esercizio svolto per capire in quali casi
+potrebbero essere utili le conversioni di tipo.</p>
+<!-- #################################################################################################### -->
+
+<h3 id="esercizio-svolto-area-del-rettangolo">Esercizio svolto: area del rettangolo</h3>
+<p>Chiedi all'utente i valori di base e altezza e calcola l'area del
+rettangolo di quelle dimensioni.</p>
+<div class="highlight"><span class="filename">File: areaRettangolo.py</span><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="c1"># Area del rettangolo, date base e altezza dall&#39;utente</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="c1"># in un solo passaggio chiedo le variabili e le converto in float</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Area rettangolo, date base e altezza&quot;</span><span class="p">)</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="n">base</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Base: &quot;</span><span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="n">altezza</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Altezza: &quot;</span><span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="n">area</span> <span class="o">=</span> <span class="n">base</span> <span class="o">*</span> <span class="n">altezza</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Area rettangolo = </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Esecuzione del codice</p>
+<div class="highlight"><pre><span></span><code>Area rettangolo, date base e altezza
+Base: 4.5
+Altezza: 2.5
+Area rettangolo = 11.25
+</code></pre></div>
+<!-- #################################################################################################### -->
+
+<h2 id="esercizi-finali">Esercizi finali</h2>
+<p>Per ognuno dei seguenti esercizi (e da adesso in poi), creare un file
+denominato esXXX.py, dove XXX è il numero dell'esercizio. All'interno
+del file le prime righe devono essere sempre un commento contenente
+nome, classe ed esercizio. Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1"># Andrea Diamantini</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="c1"># 2 XS</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="c1"># Esercizio 100: merenda</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="o">...</span> <span class="p">(</span><span class="n">poi</span> <span class="n">il</span> <span class="n">codice</span> <span class="n">dell</span><span class="s1">&#39;esercizio) ...</span>
+</code></pre></div>
+<p>Chiaro?</p>
+<p>Al lavoro!!!</p>
+<hr />
+<p><strong>Esercizio 161</strong></p>
+<p>Definire le seguenti variabili: la stringa nome, l'intero eta, il booleano motorino.
+Visualizzare il loro contenuto con a fianco il tipo di dato rappresentato.</p>
+<hr />
+<p><strong>Esercizio 162</strong></p>
+<p>Chiedere all'utente di inserire una stringa per il colore di un tavolino; un intero per la sua altezza in cm; 
+un reale per il suo peso in Kg.
+Visualizzare tutti i dati inseriti.</p>
+<hr />
+<p><strong>Esercizio 163</strong></p>
+<p>Permettere all'utente di inserire due valori interi e visualizzarne la somma.</p>
+<hr />
+<p><strong>Esercizio 164</strong></p>
+<p>Dichiarare due variabili contenente due valori reali, visualizzarne il
+valore e il prodotto.</p>
+<hr />
+<p><strong>Esercizio 165</strong></p>
+<p>Per ognuno dei seguenti valori di x e y, visualizzare il risultato della
+divisione intera con resto fra i due numeri.</p>
+<p>Ad esempio, per x = 13 e y = 5, visualizzare:</p>
+<div class="highlight"><pre><span></span><code>13 / 5 = 2 con resto di 3
+</code></pre></div>
+<p>(fatto bene una volta, il copia e incolla è tuo amico...)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">12</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">25</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">13</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">13</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
+</code></pre></div>
+<hr />
+<p><strong>Esercizio 166</strong></p>
+<p>Chiedere all'utente di inserire 2 valori reali per la base
+e l'altezza di un triangolo. Visualizzare i valori inseriti e calcolare 
+l'area del triangolo avente tali misure.</p>
+<hr />
+<p><strong>Esercizio 167</strong></p>
+<p>Dati tre numeri interi, inseriti dall'utente, visualizzarli come fossero ore, minuti e secondi di un orario (esempio: 5:34:27).
+Considerarli dunque come <code>hh:mm:ss</code> di un orario determinato. </p>
+<p>Calcolare i secondi trascorsi dalla mezzanotte del giorno prima e visualizzare il risultato a video.</p>
+<hr />
+<p><strong>Esercizio 168</strong></p>
+<p>Sapendo che in un parcheggio la prima ora costa 2.5 € mentre tutte lo
+successive costano 2 €, scrivere un programma che richieda il numero
+complessivo delle ore di parcheggio e visualizzi il totale da pagare.</p>
+<hr />
+<p><strong>Esercizio 180 (svolto)</strong></p>
+<p>Dati due valori interi A, B, scrivere una espressione che è sempre vera
+quando A è minore di zero e B è maggiore di 3.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci A: &quot;</span><span class="p">))</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="n">B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci B: &quot;</span><span class="p">))</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">B</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>                      <span class="c1"># scriverà True o False a seconda dei valori inseriti</span>
+</code></pre></div>
+<hr />
+<p><strong>Esercizio 181</strong></p>
+<p>Dati due valori interi A, B, scrivere una espressione che è sempre falsa
+quando A è maggiore di 4 e B è maggiore di 12.</p>
+<hr />
+<p><strong>Esercizio 182</strong></p>
+<p>Dati due valori interi A, B, scrivere una espressione che è sempre vera
+quando i segni di A e B sono discordi (cioè uno è positivo, l'altro
+negativo).</p>
+<hr />
+<p><strong>Esercizio 183</strong></p>
+<p>Dato un valore intero A, scrivere una espressione che è sempre vera
+quando A assume un valore pari.</p>
+<hr />
+<p><strong>Esercizio 184</strong></p>
+<p>Dato un valore intero A, scrivere una espressione che è sempre falsa
+quando A è multiplo di 5.</p>
+<hr />
+<p><strong>Esercizio 185: unità</strong></p>
+<p>Chiedere all'utente di inserire un numero intero. Visualizzare poi il
+numero stesso e la cifra delle unità. Ad esempio se il numero
+inserito è 243, la cifra da visualizzare è 3. Se il numero inserito è
+85, la cifra da visualizzare è 5. Se il numero inserito è 1357, la cifra
+da visualizzare è 7.</p>
+<hr />
+<p><strong>Esercizio 186: centinaia</strong></p>
+<p>Chiedere all'utente di inserire un numero intero. Visualizzare poi il
+numero stesso e la cifra delle centinaia. Ad esempio se il numero
+inserito è 243, la cifra da visualizzare è 2. Se il numero inserito è
+85, la cifra da visualizzare è 0. Se il numero inserito è 1357, la cifra
+da visualizzare è 3.</p>
+<div class="admonition tip">
+<p class="admonition-title">Suggerimento</p>
+<p>Se sapete verificare se un numero è multiplo di un altro,
+sapete trovare le cifre di un numero, verificando se è multiplo di 10,
+100, 1000...)</p>
+</div>
+<hr />
+<p><strong>Esercizio 186: decimi</strong></p>
+<p>Chiedere all'utente di inserire un numero reale. Visualizzare poi il
+numero stesso e la cifra dei decimi. </p>
+<p>Ad esempio se il numero inserito è 243.57, la cifra da visualizzare è 5. </p>
+<p>Se il numero inserito è 85.12, la cifra da visualizzare è 1. </p>
+<p>Se il numero inserito è 1357, la cifra da visualizzare è 0.</p>
+<p><br>
+<br>
+<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../100_basics/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Prime cose">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                Prime cose
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../102_alt/" class="md-footer__link md-footer__link--next" aria-label="Successivo: Alternanza">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                Alternanza
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Andrea Diamantini (c) 2022-inf<br> <a href="#__consent">Change Cookie Settings</a><br> This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Consenso all'uso dei Cookie(s)</h4>
+<p>Questo sito memorizza sul tuo PC solo due cookies: uno per ricordarsi se hai già visto questo avviso, un altro per ricordarsi il tema di visualizzazione (chiaro/scuro).<br> Se non acconsenti, dovrai selezionare ogni volta la tua scelta.<br> In fondo alla pagina c'è il link per fare reset ;)
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accetta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rifiuta</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
