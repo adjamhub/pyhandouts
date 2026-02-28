@@ -715,7 +715,73 @@ Crea sul Desktop una cartella chiamata ESERCIZI. Cerca i files Python presenti n
     6. elimini il vecchio file
 
 
-<br>
-<br>
-<br>
+<!-- ############################################################################################ -->
+## Modulo PlatformDirs
 
+Il modulo `platformdirs` fornisce un modo standardizzato per determinare la directory dei file di configurazione, la directory dei dati e la directory della cache per un'applicazione su diverse piattaforme.
+
+Il modulo va installato scaricandolo da PyPI, quindi dal menù strumenti di Thonny, aprite il Terminale (la shell di sistema) e digitate:
+
+```
+$ pip install platformdirs
+```
+
+Questo modulo presenta un elenco di funzioni semplicissime, in grado di ritornare una `str` oppure un `Path` per individuare una directory utente, seguendo una logica semplicissima.
+
+Definisci prima un oggetto di tipo PlatformDir, indicando il nome della tua App e il fatto che vuoi creare le cartelle se non esistono:
+
+``` python
+from platformdirs import PlatformDirs
+
+dirs = PlatformDirs("MyApp", ensure_exists=True)
+```
+
+### Livello utente vs Livello sistema
+
+Ognuna delle directory può essere individuata su due livelli: utente e sistema. Il livello utente è tipico di ogni utente, le cartelle individuate si trovano da qualche parte nella sua home directory e contengono le configurazioni, i dati e la cache utente. Ad esempio, le opzioni di Thonny  o di Google Chrome vengono salvate lì... infatti se cambiate postazione o un altro si siede sul vostro PC deve riconfigurare tutto da capo!
+
+Il livello di sistema è tipico di ogni computer. Lì ci stanno configurazioni, dati, cache del software comuni a tutti gli utenti.
+
+Nella nostra semplice panoramica illustreremo solo le directory a livello utente: più utili, meno... dannose, più gestibili.
+
+
+### directory di configurazione utente
+
+Le directory di configurazione sono utilizzate per archiviare file di configurazione dell'applicazione e preferenze dell'utente. 
+
+``` python
+# questa è una str. 
+conf_str = dirs.user_config_dir / "config.txt"
+
+# questo è un Path
+conf_path = dirs.user_config_path / "config.txt"
+```
+
+### directory dei dati
+
+La directory dei dati può essere utile per un database, un file scaricato da internet, contenuto creato dall'utente o altro.
+
+``` python
+# questa è una str. Su Windows, sarà "C:\Users\NomeUtente\AppData\Local\MyApp\" 
+data_str = dirs.user_data_dir 
+
+# questo è un Path
+data_path = dirs.user_data_path
+```
+
+
+### directory della cache
+
+La directory della cache può essere utilizzata per archiviare dati temporanei che possono essere ricreati se necessario.
+
+``` python
+# questa è una str.
+cache_str = dirs.user_cache_dir 
+
+# questo è un Path
+cache_path = dirs.user_cache_path
+```
+
+<br>
+<br>
+<br>
