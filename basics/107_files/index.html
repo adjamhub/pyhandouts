@@ -1,0 +1,2341 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrea Diamantini">
+      
+      
+      
+        <link rel="prev" href="../106_pypi/">
+      
+      
+        <link rel="next" href="../108_csv/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Files - Python Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#files" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Python Course" class="md-header__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../000_first/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OOP/000_intro/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../wx/000_intro/" class="md-tabs__link">
+          
+  
+  wxPython
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../insights/00_intro/" class="md-tabs__link">
+          
+  
+  Insights
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Course" class="md-nav__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Python Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../000_first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001_install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installazione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prime cose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101_var/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variabili e Operatori
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102_alt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alternanza
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103_iter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ripetizione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_ecz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eccezioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_seq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequenze
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105_funz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moduli
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_psl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Standard Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_pypi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyPi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#files-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Files Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esercizi-sui-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizi sui files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-pathlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modulo Pathlib
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modulo Pathlib">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esercizi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizi
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-platformdirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modulo PlatformDirs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modulo PlatformDirs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#livello-utente-vs-livello-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Livello utente vs Livello sistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-di-configurazione-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      directory di configurazione utente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-dei-dati" class="md-nav__link">
+    <span class="md-ellipsis">
+      directory dei dati
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directory-della-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      directory della cache
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108_csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            OOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/001_classes_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classi e Oggetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/002_inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ereditarietà
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/003_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Caratteristiche Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wxPython
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            wxPython
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/101_first_things/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primi concetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/102_events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eventi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/110_widgets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/120_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/130_full_ex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Esercizi Completi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/140_dialogs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dialogs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/150_images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Immagini
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/160_timer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timer(s)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/170_full_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Full GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/171_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/172_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/180_network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/299_tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Insights
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Insights
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/00_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/01_uv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/02_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/11_turtle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/12_pygame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/41_mysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySql
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/51_arduino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/91_reals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numeri reali
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/92_ibs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interi, bytes, stringhe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/99_asyncio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    asyncio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="files">Files</h1>
+<p>Le operazioni di I/O (input/output) da file e verso file sono operazioni native in Python, che come vedremo, si eseguono con un semplice
+comando (nativo, appunto) e che servono per interagire con un generico file presente nel filesystem (quindi sul nostro computer).</p>
+<p>Il primo capitolo è dedicato espressamente a comprendere come questo meccanismo funzioni. Nel secondo capitolo, con il modulo <code>pathlib</code> si apprende
+uno strumento utile alla manipolazione dei percorsi dei file (es: dove si trova la cartella dei download? Voglio creare una cartella sul Desktop di...)
+e alla gestione dei file e delle cartelle.</p>
+<h2 id="files-management">Files Management</h2>
+<p>Per interagire con il filesystem del sistema in cui è in esecuzione uno
+script, Python mette a disposizione due semplici funzioni predefinite: <code>open()</code> e <code>close()</code>.
+Banalmente, la prima permette di <em>aprire</em> un file e lavorarci dentro, mentre la seconda lo <em>chiude</em>.</p>
+<p>Vediamo nel dettaglio cosa questo significhi:</p>
+<div class="highlight"><pre><span></span><code>file_object = open ( name, mode )
+</code></pre></div>
+<p>La funzione <code>open</code> ha due parametri principali, di cui solo il primo è obbligatorio: 
+il nome del file da aprire. Il secondo parametro indica la modalità di apertura: lettura, scrittura o aggiunta a fine file.</p>
+<p>Elenchiamo le principali modalità:</p>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>Modalità di lettura (read).<br> Il file NON sarà modificato da alcuna operazione. Se il file non esiste l'apertura fallisce. <br> <strong>Modo di default</strong>.</td>
+</tr>
+<tr>
+<td>w</td>
+<td>Modalità di scrittura (write). <br> Un file esistente verrà sovrascritto, altrimenti ne verrà creato uno nuovo.</td>
+</tr>
+<tr>
+<td>x</td>
+<td>Modalità di creazione file (non lo so perché x...).<br> Ritorna un errore se il file esiste già. Se funziona, apre il file in scrittura.</td>
+</tr>
+<tr>
+<td>a</td>
+<td>Modalità di aggiunta a fine file (append). <br> Il file verrà aperto in scrittura, aggiungendo in fondo a ciò che esiste quello che viene scritto. <br> Altrimenti è come write.</td>
+</tr>
+</tbody>
+</table>
+<p>Oltre ad aprire un file per leggerci o scriverci, bisogna anche sapere
+come farlo. Le modalità di gestione dei file sono solo due:</p>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t</td>
+<td>Modalità testuale. <br> In questa modalità i dati vengono gestiti byte a byte. <br> <strong>Modo di default.</strong></td>
+</tr>
+<tr>
+<td>b</td>
+<td>Modalità binaria. <br> In questa modalità i dati vengono gestiti bit a bit.</td>
+</tr>
+</tbody>
+</table>
+<p>Da queste informazioni si desume che l'apertura generica di un file corrisponde ad una apertura in lettura in modalità testuale: 
+qualsiasi altra operazione dovrà essere esplicitata. Per evitare errori, esplicitiamo sempre la modalità di apertura! 
+Per quanto riguarda la gestione invece... qui tratteremo solo la gestione testuale :)</p>
+<p>Vediamo alcuni semplici esempi:</p>
+<div class="highlight"><span class="filename">Esempio 1: creazione di un file con testo inserito all’interno</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;ciao.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Ecco qua.</span><span class="se">\n</span><span class="s2">Capito?&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>In questo primo esempio il file "ciao.txt" inizialmente non esiste.
+L'esecuzione del codice lo crea con dentro scritto il testo indicato.
+Dopo aver eseguito questo codice, vedrete nella cartella del file python, un file chiamato "ciao.txt" che contiene 2 righe... 
+Nella stessa cartella creiamo un nuovo file sorgente con questo codice:</p>
+<div class="highlight"><span class="filename">Esempio 2: lettura del file 'ciao.txt' creato sopra</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;ciao.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">contenuto</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">contenuto</span><span class="p">)</span>
+</code></pre></div>
+<p>Che visualizzerà:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Ecco qua.
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Capito?
+</code></pre></div>
+<p>Penso sia tutto abbastanza intuitivo da capire. Facciamo un esempio con la modalità <code>append</code></p>
+<div class="highlight"><span class="filename">Esempio 3: aggiunta a fine file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;ciao.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Speriamo di sì&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>Se aprite il file "ciao.txt" <strong>DOPO</strong> aver eseguito il codice sopra, vedrete che il testo è diventato di 3 righe:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Ecco qua.
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Capito?
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Speriamo di sì
+</code></pre></div>
+<p>Se avete osservato i 3 esempi proposti avrete notato che:</p>
+<ul>
+<li>la funzione <code>write()</code> scrive su file la stringa esatta che gli viene fornita come parametro senza aggiungere spazi 
+    o andare a capo (come ad esempio fa la print())</li>
+<li>la funzione <code>read()</code> copia su una stringa tutto il contenuto del file in una volta sola.</li>
+</ul>
+<p>Se invece vogliamo leggere il file di testo <strong>riga per riga</strong> possiamo sfruttare il ciclo <code>for</code> abbinato al descrittore di file
+per ottenere in ogni iterazione una riga del file stesso:</p>
+<div class="highlight"><span class="filename">Esempio 4: lettura delle righe con ciclo for</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;ciao.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Attenti ai doppi a capo!!!</p>
+<p>La lettura in questo modo visualizzerà:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Ecco qua.
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Capito?
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Speriamo di sì
+</code></pre></div>
+<p>infatti ogni riga di un file finisce <em>a capo</em> così come <code>print</code> manda a capo a fine riga, risultando un doppio a capo</p>
+</div>
+<p>La corretta esecuzione di questo codice necessita di una <em>pulizia</em> della riga tramite la funzione <code>strip()</code>.</p>
+<div class="highlight"><span class="filename">Esempio 5: lettura delle righe di un file senza a capo finale</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;ciao.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">riga</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>Che (finalmente) visualizzerà:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Ecco qua.
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Capito?
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Speriamo di sì
+</code></pre></div>
+<p>Basta con gli esempi! Ma fra un attimo iniziamo con gli esercizi ;)</p>
+<h3 id="file-objects">File Objects</h3>
+<p>Un file object non è nient’altro che una variabile a cui è stato assegnato l’abbinamento con un file tramite la funzione open(). Se ad esempio scrivo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span> <span class="s2">&quot;file.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span> <span class="p">)</span>
+</code></pre></div>
+<p>allora f diventa un file object!
+Questo tipo di variabile presenta alcune caratteristiche che permettono al programmatore di investigare sullo stato della relazione fra la variabile (e quindi il programma) e il file.
+Le caratteristiche esposte sono:</p>
+<table>
+<thead>
+<tr>
+<th>Caratteristica</th>
+<th>Descrizione</th>
+<th>Esempio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file.name</td>
+<td>Contiene il nome del file</td>
+<td>"file.txt"</td>
+</tr>
+<tr>
+<td>file.mode</td>
+<td>Contiene il modo di apertura del file</td>
+<td>"w"</td>
+</tr>
+<tr>
+<td>file.closed</td>
+<td>Indica se il file è chiuso oppure no</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p>Queste possono essere utilizzate ad esempio per verificare se è possibile scrivere sul file oppure se il file è già stato chiuso.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">closed</span> <span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;impossibile interagire con il file!&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span> <span class="ow">or</span> <span class="n">file</span><span class="o">.</span><span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;ciao&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;file non aperto in scrittura!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Spero sia abbastanza chiaro. Nel dubbio… lo sapete già! Funzioni <code>dir()</code> ed <code>help()</code> !!!</p>
+<h3 id="esercizi-sui-files">Esercizi sui files</h3>
+<div class="admonition danger">
+<p class="admonition-title">NO IA almeno fino al 715</p>
+<p>Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+contesto affidarsi alle IA per la risoluzione degli stessi!!!</p>
+</div>
+<p><strong>Esercizio 701 (parte 1)</strong></p>
+<p>Scrivere un programma che chiede all’utente di digitare il proprio nome e poi salva la stringa digitata sul file "stringa.txt".</p>
+<hr />
+<p><strong>Esercizio 701 (parte 2)</strong></p>
+<p>Scrivere un altro programma che carica in lettura il file "stringa.txt" creato nell’esercizio precedente e ne visualizza 
+il contenuto sullo schermo (dovrebbe visualizzare la stringa digitata prima).</p>
+<hr />
+<p><strong>Esercizio 702 (parte 1)</strong></p>
+<p>Scrivere un programma che chiede all’utente di digitare un numero intero e poi salva il numero digitato sul file "intero.txt".</p>
+<div class="admonition tip">
+<p class="admonition-title">Suggerimento</p>
+<p>La lettura e scrittura da file funziona sempre e solo con le stringhe, quindi quando si lavora con interi bisogna ricordarsi di convertirli 
+in stringhe quando si scrive su file e riconvertirli in interi quando si leggono da file.</p>
+</div>
+<hr />
+<p><strong>Esercizio 702 (parte 2)</strong></p>
+<p>Scrivere un altro programma che carica in lettura il file "intero.txt" creato nell’esercizio precedente e salva il suo contenuto, 
+convertito in intero, su una variabile. Visualizzare la variabile e verificare il suo tipo con la funzione <code>type()</code>.</p>
+<hr />
+<p><strong>Esercizio 703 (parte 1)</strong></p>
+<p>Scrivere un programma che chiede all’utente di digitare un numero reale e poi salva il numero digitato sul file "reale.txt".</p>
+<hr />
+<p><strong>Esercizio 703 (parte 2)</strong></p>
+<p>Scrivere un programma che carica in lettura il file "reale.txt" creato nell’esercizio precedente e salva il suo contenuto, convertito in reale, su una variabile. 
+Visualizzare la variabile e verificare il suo tipo con la funzione type().</p>
+<hr />
+<p><strong>Esercizio 704 (parte 1)</strong></p>
+<p>Creare una lista contenente i nomi di alcuni animali, visualizzarla sullo schermo e poi andare a copiarne il contenuto nel file "animali.txt" avendo cura di mettere 
+ogni animale in una nuova riga.<br>
+Eseguito il codice verificare che il file è effettivamente ben formato con un animale per riga.</p>
+<hr />
+<p><strong>Esercizio 704 (parte 2)</strong></p>
+<p>Aprire in lettura il file "animali.txt" creato nella parte 1 e leggere il contenuto riga per riga visualizzando ogni volta l’animale "estratto".</p>
+<hr />
+<p><strong>Esercizio 704 (parte 3)</strong></p>
+<p>Aprire il file "animali.txt" in modalità "append" (aggiunta a fine file). Chiedere all’utente di inserire il nome di un animale e procedere all’inserimento nel file. 
+Ripetere l’operazione 2 o 3 volte, aggiungendo ogni volta l’animale inserito nel file.<br>
+Terminato l’inserimento, chiudere il file e ripetere il codice dell’esercizio precedente per visualizzarne il contenuto.</p>
+<hr />
+<p><strong>Esercizio 704 (parte 4)</strong></p>
+<p>Creare una lista, inizialmente vuota.<br>
+Aprire il file "animali.txt" in lettura e inserire ogni animale presente nel file come elemento (stringa) nella lista.<br>
+Visualizzare la lista così ottenuta (attenzione ai caratteri di a capo!!!")</p>
+<hr />
+<p><strong>Esercizio 710</strong></p>
+<p>Creare a mano un file chiamato "parola.txt" nella stessa cartella del codice di questo esercizio, digitando al suo interno una parola qualsiasi.</p>
+<p>Scrivere un programma per provare ad aprire il file in modalità "x" per verificare se è possibile andarlo a sovrascrivere. </p>
+<p>Ripetere l’operazione in modalità "w" e infine controllare il contenuto del file: cosa contiene adesso???</p>
+<hr />
+<p><strong>Esercizio 711: area rettangolo</strong></p>
+<p>Creare a mano un file di testo, chiamato "lati.txt" salvando all'interno due numeri reali qualsiasi, uno per riga.</p>
+<p>Implementare un software che legge dal file "lati.txt" due valori reali per la base e l'altezza di un rettangolo, visualizza i dati su schermo, 
+calcola e visualizza l’area del rettangolo e salva il valore calcolato nel file "area.txt".</p>
+<hr />
+<p><strong>Esercizio 712: secondi trascorsi</strong></p>
+<p>Creare a mano un file di testo chiamato "secondi.txt", contenente al suo interno un numero intero positivo qualsiasi.<br></p>
+<p>Implementare un software che legge dal file "secondi.txt" un valore intero che rappresenta i secondi trascorsi dalla mezzanotte di un dato giorno e che trasforma questo valore, 
+visualizzandolo su schermo in ore:minuti:secondi. Ad esempio, se il valore caricato dal file "secondi.txt" fosse 4000 (uguale a 3600, 1 ora, + 360, 6 minuti, + 40), 
+il programma dovrà visualizzare a video 01:06:40, aggiungendo opportunamente uno ZERO in caso di cifra unica.</p>
+<p>I numeri vanno poi memorizzati nello stesso formato nel file "orario.txt".</p>
+<hr />
+<p><strong>Esercizio 713: stringhe</strong></p>
+<p>Dichiarare una lista di 5 stringhe e procedere ad un salvataggio su file delle parole, una per riga.</p>
+<hr />
+<p><strong>Esercizio 714: media dei numeri</strong></p>
+<p>Creare a mano un file di testo chiamato "numeri.txt" salvando al suo interno 10 numeri interi, uno per riga.<br></p>
+<p>Implementare un software che legge dal file "numeri.txt", caricarne il contenuto su una lista, procedere al calcolo della media aritmetica dei numeri inseriti, 
+visualizzare il risultato a video e salvarlo nel file "media.txt".</p>
+<hr />
+<p><strong>Esercizio 715 (parte 1): ricerca elementi</strong></p>
+<p>Creare a mano un file di testo chiamato "sequenza.txt", salvando al suo interno una certa quantità di numeri interi, uno per riga.</p>
+<p>Implementare un software che legge dal file "sequenza.txt" i dati, li carica su una lista e li visualizza a video. Chiedere poi all'utente di inserire un numero intero
+e procedere alla ricerca di questo nella sequenza caricata dal file. Visualizzare le posizioni ove questo numero si trovi.<br>
+Scrivere tutte le posizioni trovate riga per riga nel file "posizioni.txt". Se il numero non viene mai trovato, si inserisca nel file la scritta maiuscola "NON TROVATO".</p>
+<hr />
+<p><strong>Esercizio 715 (parte 2): ordinamenti</strong></p>
+<p>Scrivete un programma che legge dal file "sequenza.txt" una sequenza di interi, la ordina in modo crescente e la salva ordinata sul file "ordinati.txt" (<strong>uno per riga</strong>).</p>
+<hr />
+<p><strong>Esercizio 717: password</strong></p>
+<p>Scrivere un programma che chiede all'utente di inserire una password (una stringa qualsiasi) e la salva nel file "password.txt".</p>
+<p>Scrivere poi un secondo programma che chiede all'utente di inserire una password, legge il contenuto del file "password.txt" e verifica se la password inserita corrisponde a quella salvata. Visualizzare "Accesso consentito" o "Accesso negato" a seconda del risultato.</p>
+<hr />
+<p><strong>Esercizio 718: statistiche testo</strong></p>
+<p>Creare a mano un file di testo chiamato "testo.txt" contenente alcune frasi di testo qualsiasi (minimo 3-4 righe).</p>
+<p>Implementare un software che legge dal file "testo.txt", conta il numero totale di righe, il numero totale di parole e il numero totale di caratteri (spazi esclusi). Visualizzare le statistiche a schermo e salvarle nel file "statistiche.txt" nel formato:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Righe: X
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Parole: Y
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Caratteri: Z
+</code></pre></div></p>
+<hr />
+<p><strong>Esercizio 719: prezzi prodotti</strong></p>
+<p>Creare a mano un file di testo chiamato "prezzi.txt" contenente 5 prezzi di prodotti (numeri reali con 2 decimali), uno per riga.</p>
+<p>Implementare un software che legge i prezzi dal file, calcola il totale, il prezzo medio, il prezzo minimo e il prezzo massimo. Visualizzare tutti i risultati a schermo e salvarli nel file "riepilogo.txt", formattati con 2 decimali.</p>
+<hr />
+<p><strong>Esercizio 720 (parte 1): voti studente</strong></p>
+<p>Creare a mano un file di testo chiamato "voti.txt" contenente 8 voti (numeri interi da 1 a 10), uno per riga.</p>
+<p>Implementare un software che legge i voti dal file, calcola la media, conta quanti sono sufficienti (&gt;= 6) e quanti insufficienti (&lt; 6). Visualizzare i risultati e salvarli nel file "report_voti.txt".</p>
+<hr />
+<p><strong>Esercizio 720 (parte 2): promozione</strong></p>
+<p>Estendere l'esercizio precedente per determinare se lo studente è promosso o bocciato. Lo studente è promosso se la media è &gt;= 6 E non ha più di 2 insufficienze. Aggiungere questa informazione al file "report_voti.txt".</p>
+<hr />
+<p><strong>Esercizio 722: invertire righe</strong></p>
+<p>Creare a mano un file di testo chiamato "originale.txt" con 5-6 righe di testo.</p>
+<p>Scrivere un programma che legge il file "originale.txt", carica tutte le righe in una lista, inverte l'ordine delle righe e salva il risultato nel file "invertito.txt". Visualizzare sia il contenuto originale che quello invertito.</p>
+<hr />
+<p><strong>Esercizio 723: filtra parole</strong></p>
+<p>Creare a mano un file di testo chiamato "parole.txt" contenente una lista di parole, una per riga (minimo 10 parole).</p>
+<p>Implementare un software che legge le parole dal file, chiede all'utente di inserire una lunghezza minima (es: 5) e salva nel file "parole_lunghe.txt" solo le parole che hanno una lunghezza maggiore o uguale a quella specificata. Visualizzare quante parole sono state filtrate.</p>
+<hr />
+<p><strong>Esercizio 724: agenda telefonica semplice</strong></p>
+<p>Creare sul Desktop una cartella chiamata "agenda".</p>
+<p>Implementare un software che permette all'utente di salvare contatti in un file "contatti.txt" nella cartella agenda. Ogni contatto deve contenere nome e numero di telefono separati da una virgola (es: "Mario Rossi,3331234567").</p>
+<p>Il programma deve offrire un menu:
+- (A) Aggiungi contatto
+- (V) Visualizza tutti i contatti
+- (C) Cerca contatto per nome
+- (Q) Esci</p>
+<p>Quando si cerca un contatto, visualizzare nome e numero se trovato, altrimenti comunicare che il contatto non esiste.</p>
+<hr />
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<h2 id="modulo-pathlib">Modulo Pathlib</h2>
+<p>Il modulo Pathlib permette di ricavare informazioni sui percorsi ove si trovano file e directories all’interno del sistema operativo che esegue lo script Python in oggetto. 
+In particolare, di solito viene utilizzato l’oggetto Path importato dalla libreria pathlib.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># il file &quot;song.mp3&quot; della cartella &quot;musica&quot; su C: in Windows </span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">canzone</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;C:/musica/song.mp3&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Percorso della canzone:&quot;</span><span class="p">,</span> <span class="n">canzone</span><span class="p">)</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># la cartella corrente (dove abbiamo salvato questo file Python)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="n">cur</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Cartella corrente:&quot;</span><span class="p">,</span> <span class="n">cur</span> <span class="p">)</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="c1"># la HOME utente</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="c1"># &quot;C:\Users\utente&quot; su Windows, &quot;/home/utente&quot; su Mac/Linux</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="n">homePath</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Home dir:&quot;</span><span class="p">,</span> <span class="n">homePath</span> <span class="p">)</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c1"># il percorso del Desktop</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="c1"># il simbolo / congiunge i percorsi</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="n">desktop</span> <span class="o">=</span> <span class="n">homePath</span> <span class="o">/</span> <span class="s2">&quot;Desktop&quot;</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Il percorso del Desktop:&quot;</span><span class="p">,</span> <span class="n">desktop</span> <span class="p">)</span>
+</code></pre></div>
+<p>Negli esempi trattati sopra sono evidenziate alcune funzionalità:</p>
+<ul>
+<li>un percorso può essere descritto tramite una stringa, con il simbolo <code>/</code> (slash) come separatore di percorsi</li>
+<li>Un Path indica un percorso che non deve per forza deve esistere... anzi tra le funzionalità di Path c'è quella di verificare se un percorso esiste ed eventualmente crearlo</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">I percorsi delle cartelle principali</p>
+<p>Dopo qualche anno a parlare del modulo Pathlib, ho capito che gli studenti non hanno bene idea dell'organizzazione dei files in un Sistema Operativo.</p>
+<p>Cerchiamo di farla semplice: da una parte troviamo il Sistema Operativo Windows (che fa come gli pare), dall'altra tutto il resto del mondo (Linux, BSD, MacOS, iOS, Android)
+che segue una linea comune.</p>
+<hr />
+<p><strong>Windows</strong></p>
+<p>Il sistema operativo Windows gestisce gli HD in maniera unica: ogni HD viene abbinato ad una lettera, ma per motivi storici di solito si parte da C: (se hai 3 dischi saranno C: D: E:)</p>
+<p>In uno di questi, di solito C:, c'è il sistema operativo vero e proprio, nella cartella <code>C:\Windows</code>. Gli utenti hanno ognuno uno spazio personale (una <em>home</em>): queste cartelle
+si trovano tutte nel percorso <code>C:\Users</code> e si chiamano con il relativo nome utente (la home dell'utente pippo sarà <code>C:\Users\pippo</code>)</p>
+<p>All'interno della <em>home</em> ci sono alcune cartelle importanti per l'organizzazione dei file dell'utente. Le cartelle:</p>
+<ul>
+<li><code>Documents</code>: la cartella dei documenti</li>
+<li><code>Downloads</code>: la cartella dove vanno a finire i download</li>
+<li><code>Desktop</code>: la cartella che corrisponde al Desktop utente</li>
+<li>etc...</li>
+</ul>
+<p>Quindi ad esempio, il desktop dell'utente pippo si trova nella cartella <code>C:\Users\pippo\Desktop</code>.</p>
+<hr />
+<p><strong>Linux, Mac, BSD, etc...</strong></p>
+<p>Tutti gli altri sistemi operativi uniscono tutti gli HD montati sul proprio PC in un unico spazio comune che identificano con il simbolo <code>/</code> e chiamano <code>root</code> (radice).</p>
+<p>Le cartelle degli utenti si trovano nella cartella <code>/home</code> e si chiamano ovviamente con il nome utente. 
+Ad esempio lo spazio personale dell'utente ciccio sarà nel percorso <code>/home/ciccio</code>.</p>
+<p>Le cartelle importanti per l'utente si chiamano allo stesso modo, quindi ad esempio, la cartella Downloads di ciccio si troverà su <code>/home/ciccio/Downloads</code></p>
+<hr />
+<p><strong>Una partenza comune: <code>Path.home()</code></strong></p>
+<p>In qualsiasi OS, Python identifica la cartella personale tramite la funzione Path.home(), così che (ad esempio) il Desktop di qualunque utente si trovi nel percorso:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">percorsoDesktop</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;Desktop&quot;</span>
+</code></pre></div>
+<p>Molto intelligente <img alt="😄" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png" title=":smile:" /></p>
+</div>
+<p>L’oggetto Path espone fra le altre le seguenti funzioni:</p>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cwd()</code></td>
+<td>Ritorna il percorso della cartella corrente. Restituisce un Path.</td>
+</tr>
+<tr>
+<td><code>home()</code></td>
+<td>Ritorna il percorso della cartella utente (la <code>home</code>, vedi sopra). Restituisce un Path.</td>
+</tr>
+<tr>
+<td>----------------------</td>
+<td>-----------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td><code>exists()</code></td>
+<td>Verifica se il percorso attuale esiste oppure no. Ritorna True o False.</td>
+</tr>
+<tr>
+<td><code>is_dir()</code></td>
+<td>Ritorna True se il path attuale è una cartella, False altrimenti.</td>
+</tr>
+<tr>
+<td><code>is_file()</code></td>
+<td>Ritorna True se il path attuale è un file, False altrimenti.</td>
+</tr>
+<tr>
+<td>----------------------</td>
+<td>-----------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td><code>iterdir()</code></td>
+<td>Quando il percorso punta a una directory, ritorna la lista degli oggetti percorso del contenuto della directory</td>
+</tr>
+<tr>
+<td><code>glob(pattern)</code></td>
+<td>Ritorna la lista di tutti i file e le cartelle presenti nel Path e che rispettano il pattern.</td>
+</tr>
+<tr>
+<td>----------------------</td>
+<td>-----------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td><code>open(mode)</code></td>
+<td>Apre il file indicato nel Path in modalità "mode". Ritorna un file object come fa la funzione predefinita "open()"</td>
+</tr>
+<tr>
+<td><code>mkdir()</code></td>
+<td>Crea la cartella abbinata al percorso del Path.</td>
+</tr>
+<tr>
+<td>----------------------</td>
+<td>-----------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td><code>unlink()</code></td>
+<td>Rimuove un file (solo se è un file). <br> <strong>Attenti a quello che fate, per favore!!!</strong></td>
+</tr>
+<tr>
+<td><code>rmdir()</code></td>
+<td>Rimuove la cartella abbinata al percorso del Path, ma <strong>solo se la cartella è vuota</strong>, altrimenti <strong>ERRORE</strong>!!!</td>
+</tr>
+<tr>
+<td>----------------------</td>
+<td>-----------------------------------------------------------------------------------------</td>
+</tr>
+<tr>
+<td><code>rename(target)</code></td>
+<td>Rinomina il Path al percorso indicato nel Path "target".</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Per vedere <strong>tutte</strong> le funzioni offerte dall'oggetto Path:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Path</span><span class="p">)</span>
+</code></pre></div>
+<p>(Ma questo lo sapevate già...)</p>
+</div>
+<p>Vediamo alcuni esempi per capire il funzionamento delle funzioni più "ostiche": 
+ovviamente ognuno di questi esempi dovrebbe iniziare con l’import dell’oggetto Path dalla libreria pathlib.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</code></pre></div>
+<p><br></p>
+<div class="highlight"><span class="filename">Esempio 1: verificare se nella Home è presente un file chiamato 'pippo'</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">percorso</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">pippo</span> <span class="o">=</span> <span class="n">percorso</span> <span class="o">/</span> <span class="s2">&quot;pippo&quot;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">if</span> <span class="n">pippo</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pippo esiste&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="k">if</span> <span class="n">pippo</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ed è un file&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    <span class="k">if</span> <span class="n">pippo</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ed è una cartella&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pippo non esiste&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><br></p>
+<div class="highlight"><span class="filename">Esempio 2: elenco dei file *.txt presenti nel Desktop dell’utente 'pippo'</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">desk</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;Desktop&quot;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">desk</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.txt&quot;</span><span class="p">):</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s2">&quot;(file)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><br></p>
+<div class="admonition note">
+<p class="admonition-title">Pattern</p>
+<p>Il parametro pattern della funzione glob è una stringa che ammette la wildcard * dove per wildcard (in informatica) si intende il carattere 
+che può sostituire qualunque altro, anche molti. <br>
+Così il pattern "*.txt" rappresenta tutti i file che finiscono per ".txt", il pattern "*" rappresenta tutti i file con qualunque nome, 
+il pattern "a*" rappresenta tutti i file che iniziano per "a" e così via.</p>
+</div>
+<p><br></p>
+<div class="highlight"><span class="filename">Esempio 3: elenco del contenuto della home con suggerimento a fianco</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">home</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">home</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s2">&quot;(file)&quot;</span><span class="p">)</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="k">elif</span> <span class="n">f</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s2">&quot;(dir)&quot;</span><span class="p">)</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s2">&quot;(boh)&quot;</span><span class="p">)</span>    
+</code></pre></div>
+<p><br></p>
+<div class="highlight"><span class="filename">Esempio 4: creazione, cambio nome ed eliminazione di una cartella nella home utente</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">home</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="c1"># creazione della cartella &quot;ciao&quot; nella home</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c1"># ATTENZIONE!!! mkdir da errore se la cartella esiste già... bisogna controllare!!!</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="n">cartellaCiao</span> <span class="o">=</span> <span class="n">home</span> <span class="o">/</span> <span class="s2">&quot;ciao&quot;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">cartellaCiao</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    <span class="n">cartellaCiao</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="c1"># cambio nome della cartella &quot;ciao&quot; in &quot;salve&quot; nella home</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="n">cartellaSalve</span> <span class="o">=</span> <span class="n">home</span> <span class="o">/</span> <span class="s2">&quot;salve&quot;</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="n">cartellaCiao</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">cartellaSalve</span><span class="p">)</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="c1"># eliminazione della cartella &quot;salve&quot;</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="n">cartellaSalve</span><span class="o">.</span><span class="n">rmdir</span><span class="p">()</span>
+</code></pre></div>
+<p><br></p>
+<div class="highlight"><span class="filename">Esempio 5: creazione del file 'pippo.txt' nel Desktop</span><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">desktop</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;Desktop&quot;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">filePath</span> <span class="o">=</span> <span class="n">desktop</span> <span class="o">/</span> <span class="s2">&quot;pippo.txt&quot;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">file</span> <span class="o">=</span> <span class="n">filePath</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Ciao Pippo&quot;</span><span class="p">)</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p>Grazie alla funzione <code>open()</code> dell’oggetto Path possiamo creare o aprire in lettura file in un percorso a nostra scelta. O a scelta dell’utente.
+Adesso tocca a voi provare il codice degli esempi e poi procedere con gli esercizi!</p>
+<h3 id="esercizi">Esercizi</h3>
+<div class="admonition danger">
+<p class="admonition-title">NO IA</p>
+<p>Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+contesto affidarsi alle IA per la risoluzione degli stessi!!!</p>
+</div>
+<hr />
+<p><strong>Esercizio 731</strong></p>
+<p>Scrivere un programma che elenca tutto il contenuto del proprio Desktop e verificare per ogni elemento se esso è un file oppure una cartella.</p>
+<hr />
+<p><strong>Esercizio 732</strong></p>
+<p>Scrivere un programma per creare sul Desktop una cartella di nome "prova".<br>
+All'interno di essa dovrà essere inserito un file di nome "pippo.txt".<br>
+Dentro al file "pippo.txt" ci deve essere inserita una frase qualsiasi a scelta dell'utente.<br></p>
+<hr />
+<p><strong>Esercizio 733</strong></p>
+<p>Creare sul proprio Desktop un file di nome "gatto".
+Chiedere all'utente di inserire una parola (ad esempio: "cane") e rinominare il file precedentemente creato da "gatto" alla parola inserita dall'utente.</p>
+<hr />
+<p><strong>Esercizio 733 bis</strong></p>
+<p>Chiedere all'utente se vuole eliminare il file dell'esercizio precedente. Se sì, eliminarlo. Se il file non è più presente, comunicare all'utente
+che il file non è più presente sul Desktop.</p>
+<hr />
+<p><strong>Esercizio 734</strong></p>
+<p>Scrivere un programma creare una cartella di nome "cartella" sul Desktop e al suo interno un file vuoto di nome "file".</p>
+<p>Procedere ad eliminare la cartella "cartella", verificando che è impossibile farlo se prima non si elimina ogni file al suo interno.</p>
+<hr />
+<p><strong>Esercizio 735</strong></p>
+<p>Creare sul Desktop la cartella “esercizio”.
+Al suo interno generare un file chiamato “numeri.txt” contenente 10 numeri casuali compresi fra 1 e 100. I numeri vanno scritti in colonna (uno sotto l’altro).</p>
+<p>Creare dentro la cartella “esercizio” un file chiamato “sommaPari” contenente la somma dei numeri pari contenuti nel file “numeri.txt”.</p>
+<hr />
+<p><strong>Esercizio 736</strong></p>
+<p>Ogni volta che esegui il programma "es736.py" questo aggiorna un file chiamato "contatore.txt", salvato nella home, a seconda del suo contenuto. 
+Se il file non esiste, si crea scrivendoci dentro il valore 1. Se esiste, se ne legge il contenuto e si modifica il file scrivendo in esso il numero successivo. 
+Ad esempio, se il file contiene il numero 3, si scriverà al suo posto il numero 4. E così via, ad ogni esecuzione del programma.</p>
+<hr />
+<p><strong>Esercizio 737</strong></p>
+<p>Chiedere all'utente di inserire una stringa.<br>
+Visualizzare l’elenco di tutti i file con estensione <code>txt</code> oppure <code>py</code> presenti nella propria cartella Downloads al cui interno è presente la stringa inserita.</p>
+<hr />
+<p><strong>Esercizio 738</strong></p>
+<p>Creare un programma per ripulire la cartella dei Downloads.<br>
+Prima visualizza la stringa: <em>"Nella cartella Downloads ci sono TOT files. Vuoi cancellarli?" (T) Sì, tutti. (U) guardiamoli uno per volta (N) No</em> <br>
+Se l’utente seleziona T, cancella tutto e via.<br>
+Se seleziona N, non fare niente <br>
+Se seleziona U, per ogni file visualizza il nome e chiedi: "Vuoi cancellarlo? (S/N)"</p>
+<hr />
+<p><strong>Esercizio 739 (Sposta Files)</strong></p>
+<p>Crea sul Desktop una cartella chiamata ESERCIZI. Cerca i files Python presenti nella tua cartella Documenti e spostali nella cartella ESERCIZI.</p>
+<div class="admonition tip">
+<p class="admonition-title">Suggerimento: per spostare un file</p>
+<ol>
+<li>lo apri, </li>
+<li>copi il contenuto, </li>
+<li>lo chiudi, </li>
+<li>crei il file con lo stesso nome nella nuova cartella, </li>
+<li>ci copi il contenuto, </li>
+<li>elimini il vecchio file</li>
+</ol>
+</div>
+<!-- ############################################################################################ -->
+<h2 id="modulo-platformdirs">Modulo PlatformDirs</h2>
+<p>Il modulo <code>platformdirs</code> fornisce un modo standardizzato per determinare la directory dei file di configurazione, la directory dei dati e la directory della cache per un'applicazione su diverse piattaforme.</p>
+<p>Il modulo va installato scaricandolo da PyPI, quindi dal menù strumenti di Thonny, aprite il Terminale (la shell di sistema) e digitate:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$ pip install platformdirs
+</code></pre></div>
+<p>Questo modulo presenta un elenco di funzioni semplicissime, in grado di ritornare una <code>str</code> oppure un <code>Path</code> per individuare una directory utente, seguendo una logica semplicissima.</p>
+<p>Definisci prima un oggetto di tipo PlatformDir, indicando il nome della tua App e il fatto che vuoi creare le cartelle se non esistono:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kn">from</span> <span class="nn">platformdirs</span> <span class="kn">import</span> <span class="n">PlatformDirs</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">dirs</span> <span class="o">=</span> <span class="n">PlatformDirs</span><span class="p">(</span><span class="s2">&quot;MyApp&quot;</span><span class="p">,</span> <span class="n">ensure_exists</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="livello-utente-vs-livello-sistema">Livello utente vs Livello sistema</h3>
+<p>Ognuna delle directory può essere individuata su due livelli: utente e sistema. Il livello utente è tipico di ogni utente, le cartelle individuate si trovano da qualche parte nella sua home directory e contengono le configurazioni, i dati e la cache utente. Ad esempio, le opzioni di Thonny  o di Google Chrome vengono salvate lì... infatti se cambiate postazione o un altro si siede sul vostro PC deve riconfigurare tutto da capo!</p>
+<p>Il livello di sistema è tipico di ogni computer. Lì ci stanno configurazioni, dati, cache del software comuni a tutti gli utenti.</p>
+<p>Nella nostra semplice panoramica illustreremo solo le directory a livello utente: più utili, meno... dannose, più gestibili.</p>
+<h3 id="directory-di-configurazione-utente">directory di configurazione utente</h3>
+<p>Le directory di configurazione sono utilizzate per archiviare file di configurazione dell'applicazione e preferenze dell'utente. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># questa è una str. </span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="n">conf_str</span> <span class="o">=</span> <span class="n">dirs</span><span class="o">.</span><span class="n">user_config_dir</span> <span class="o">/</span> <span class="s2">&quot;config.txt&quot;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1"># questo è un Path</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="n">conf_path</span> <span class="o">=</span> <span class="n">dirs</span><span class="o">.</span><span class="n">user_config_path</span> <span class="o">/</span> <span class="s2">&quot;config.txt&quot;</span>
+</code></pre></div>
+<h3 id="directory-dei-dati">directory dei dati</h3>
+<p>La directory dei dati può essere utile per un database, un file scaricato da internet, contenuto creato dall'utente o altro.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># questa è una str. Su Windows, sarà &quot;C:\Users\NomeUtente\AppData\Local\MyApp\&quot; </span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="n">data_str</span> <span class="o">=</span> <span class="n">dirs</span><span class="o">.</span><span class="n">user_data_dir</span> 
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c1"># questo è un Path</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="n">data_path</span> <span class="o">=</span> <span class="n">dirs</span><span class="o">.</span><span class="n">user_data_path</span>
+</code></pre></div>
+<h3 id="directory-della-cache">directory della cache</h3>
+<p>La directory della cache può essere utilizzata per archiviare dati temporanei che possono essere ricreati se necessario.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># questa è una str.</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">cache_str</span> <span class="o">=</span> <span class="n">dirs</span><span class="o">.</span><span class="n">user_cache_dir</span> 
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="c1"># questo è un Path</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="n">cache_path</span> <span class="o">=</span> <span class="n">dirs</span><span class="o">.</span><span class="n">user_cache_path</span>
+</code></pre></div>
+<p><br>
+<br>
+<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../106_pypi/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: PyPi">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                PyPi
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../108_csv/" class="md-footer__link md-footer__link--next" aria-label="Successivo: CSV">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                CSV
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Andrea Diamantini (c) 2022-inf<br> <a href="#__consent">Change Cookie Settings</a><br> This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Consenso all'uso dei Cookie(s)</h4>
+<p>Questo sito memorizza sul tuo PC solo due cookies: uno per ricordarsi se hai già visto questo avviso, un altro per ricordarsi il tema di visualizzazione (chiaro/scuro).<br> Se non acconsenti, dovrai selezionare ogni volta la tua scelta.<br> In fondo alla pagina c'è il link per fare reset ;)
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accetta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rifiuta</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

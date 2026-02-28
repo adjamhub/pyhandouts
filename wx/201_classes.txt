@@ -1,0 +1,52 @@
+
+> **Documentazione ufficiale <a href="https://docs.wxpython.org/wx..html" target="_blank">wx.</a>**
+> 
+> 
+
+--------------------------------------------------------------------
+
+[wx.Timer](https://docs.wxpython.org/wx.Timer.html)
+
+:   Timer.
+
+[wx.DateTime](https://docs.wxpython.org/wx.DateTime.html)
+
+:   Classe wxPython per la gestione di data e ora.
+
+[wx.Gauge](https://docs.wxpython.org/wx.Gauge.html)
+
+:   Barra di avanzamento.
+
+--------------------------------------------------------------------
+
+[wx.MenuBar](https://docs.wxpython.org/wx.MenuBar.html)
+
+:   Classe per implementare una barra dei menù
+
+[wx.Menu](https://docs.wxpython.org/wx.Menu.html)
+
+:   Classe per implementare un menù
+
+[wx.MenuItem](https://docs.wxpython.org/wx.Menuitem.html)
+
+:   Classe per implementare un elemento di menù
+
+[wx.ToolBar](https://docs.wxpython.org/wx.ToolBar.html)
+
+:   Classe per implementare una barra dei menù
+
+[wx.StatusBar](https://docs.wxpython.org/wx.StatusBar.html)
+
+:   Classe per implementare una barra di stato.
+
+[wx.ConfigBase](https://docs.wxpython.org/wx.ConfigBase.html)
+
+:   Classe **astratta** (non può essere utilizzata direttamente) per il
+    salvataggio delle impostazioni.
+
+[wx.FileConfig](https://docs.wxpython.org/wx.FileConfig.html)
+
+:   Classe per il salvataggio delle impostazioni su file INI (coppie
+    VARIABILE=VALORE)
+
+

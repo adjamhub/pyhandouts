@@ -1,0 +1,1989 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrea Diamantini">
+      
+      
+      
+        <link rel="prev" href="../101_var/">
+      
+      
+        <link rel="next" href="../103_iter/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Alternanza - Python Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#strutture-di-alternanza" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../.." title="Python Course" class="md-header__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Alternanza
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../000_first/" class="md-tabs__link">
+          
+  
+  Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OOP/000_intro/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../wx/000_intro/" class="md-tabs__link">
+          
+  
+  wxPython
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../insights/00_intro/" class="md-tabs__link">
+          
+  
+  Insights
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Course" class="md-nav__button md-logo" aria-label="Python Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Python Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../000_first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001_install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installazione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prime cose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101_var/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variabili e Operatori
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Alternanza
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Alternanza
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#istruzione-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      Istruzione if
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indentazione-in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indentazione in Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esercizi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esercizi
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103_iter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ripetizione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_ecz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eccezioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104_seq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequenze
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105_funz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moduli
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_psl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Standard Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106_pypi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyPi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108_csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            OOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/001_classes_objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classi e Oggetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/002_inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ereditarietà
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/003_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Caratteristiche Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    wxPython
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            wxPython
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/000_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/101_first_things/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primi concetti
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/102_events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eventi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/110_widgets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/120_layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/130_full_ex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Esercizi Completi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/140_dialogs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dialogs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/150_images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Immagini
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/160_timer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timer(s)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/170_full_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Full GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/171_advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets Avanzate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/172_printing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Printing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/180_network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wx/299_tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wx Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Insights
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Insights
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/00_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduzione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/01_uv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/02_git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/11_turtle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/12_pygame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyGame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/41_mysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySql
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/51_arduino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/91_reals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numeri reali
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/92_ibs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interi, bytes, stringhe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../insights/99_asyncio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    asyncio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="strutture-di-alternanza">Strutture di alternanza</h1>
+<p>Il lavoro di creazione dell'algoritmo risolutivo di un problema si può descrivere, in buona approssimazione, con la
+stesura di una serie di operazioni da compiere per ottenere il risultato prefissato. </p>
+<p>La <strong>programmazione strutturata</strong> schematizza sistematicamente le operazioni da svolgere secondo alcune operazioni atomiche ricorrenti:</p>
+<ol>
+<li><strong>sequenza</strong>, in cui le istruzioni sono eseguite una dopo l'altra</li>
+<li><strong>alternanza</strong>, in cui alcune istruzioni sono eseguite alternativamente (o un gruppo o un altro)</li>
+<li><strong>ripetizione</strong>, in cui alcune istruzioni sono ripetute un numero finito di volte.</li>
+</ol>
+<p>Accanto a queste semplici strutture possono esserne inserite altre più
+generali o più particolari, per schematizzare ogni algoritmo secondo i
+criteri che più si adattano ai propri gusti. Queste tre sono state
+scelte perché vale il seguente:</p>
+<blockquote>
+<p><strong><em>Teorema di Jacopini-Bohm (1966)</em></strong></p>
+<p>"Qualsiasi algoritmo può essere riscritto in maniera equivalente
+utilizzando solo le strutture di sequenza, alternanza, ripetizione."</p>
+</blockquote>
+<p>Questo algoritmo cioè sostanzialmente afferma che le tre strutture
+indicate sono i mattoni fondamentali per riprodurre qualsiasi algoritmo
+formulabile dall'uomo. In altre parole, tutti i problemi che sono
+risolvibile, hanno anche una soluzione costruita semplicemente con
+istruzioni in sequenza, alternanza e ripetizione.</p>
+<!-- ###################################################################################################### -->
+
+<h2 id="istruzione-if">Istruzione if</h2>
+<p>if è la più semplice istruzione per realizzare la struttura di
+alternanza. Si pone una condizione e a seconda che essa risulti vera
+oppure no si eseguono alternativamente due blocchi di istruzione.</p>
+<p>Vediamo la definizione di codice:</p>
+<div class="highlight"><span class="filename">Definizione struttura di alternanza</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">if</span> <span class="n">condizione</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1"># blocco di codice da eseguire se condizione è vera</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="c1"># indentato di 4 caratteri</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="c1"># poi si va a istruzione successiva</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">[</span><span class="k">elif</span> <span class="n">condizione2</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="c1"># blocco di codice da eseguire se condizione2 è vera</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="c1"># indentato di 4 caratteri]</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="c1"># poi si va a istruzione successiva</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">[</span><span class="k">elif</span> <span class="n">condizione3</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="c1"># blocco di codice da eseguire se condizione3 è vera</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="c1"># indentato di 4 caratteri]</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="c1"># poi si va a istruzione successiva</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">[</span><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="c1"># blocco di codice da eseguire se TUTTE LE CONDIZIONI PRECEDENTI sono false</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="c1"># indentato di 4 caratteri]</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># ISTRUZIONE SUCCESSIVA</span>
+</code></pre></div>
+<p>Le parentesi quadre sopra indicano parti opzionali della struttura di
+alternanza. Spero si capisca meglio con qualche esempio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span> <span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci un numero intero: &quot;</span><span class="p">))</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;POSITIVO&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ZERO&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NEGATIVO&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FINITO&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Esecuzione</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Inserisci un numero intero: 7
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>POSITIVO
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>FINITO
+</code></pre></div>
+<p>Dal punto di vista funzionale, il codice scorre le istruzioni sopra scritte come nel diagramma seguente:</p>
+<p><br></p>
+<p><img alt="Diagramma Alternanza" src="../images/DiagrammaAlternanza.png" title="Diagramma Alternanza" /></p>
+<p><br></p>
+<p>Le parti con le istruzioni <code>elif</code> ed <code>else</code> sono opzionali,
+ovvero si può costruire un <code>if-else</code> semplice, come questo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">y</span> <span class="o">=</span> <span class="nb">int</span> <span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci un altro numero intero: &quot;</span><span class="p">))</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">if</span> <span class="n">y</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hai inserito un numero pari&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hai inserito un numero dispari&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Esecuzione</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Inserisci un altro numero intero: 8
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Hai inserito un numero pari
+</code></pre></div>
+<p>oppure lasciare proprio l'istruzione <code>if</code> da sola:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">z</span> <span class="o">=</span> <span class="nb">int</span> <span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci un ultimo numero intero: &quot;</span><span class="p">))</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">if</span> <span class="n">z</span> <span class="o">!=</span> <span class="mi">9</span> <span class="p">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pensavo inserissi 9 :(&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Esecuzione</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Inserisci un ultimo numero intero: -5
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Pensavo inserissi 9 :(
+</code></pre></div>
+<p>Capito??<br>
+Provate tutti questi codici e poi giù con gli esercizi...</p>
+<!-- ###################################################################################################### -->
+
+<h2 id="indentazione-in-python">Indentazione in Python</h2>
+<div class="admonition note">
+<p class="admonition-title">Indentazione</p>
+<p><strong><em>Indentare</em></strong> significa inserire una certa quantità di spazi vuoti
+all'inizio di una o più righe per incolonnare opportunamente il codice
+sorgente. </p>
+</div>
+<p>I linguaggi più famosi, come C o Java, utilizzano le parentesi
+graffe per indicare un blocco di codice e opzionalmente suggeriscono di
+indentare il codice per rendere i blocchi più evidenti:</p>
+<div class="highlight"><span class="filename">Esempio di codice in linguaggio C, INDENTATO</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="c1">// fai qualcosa se numero è maggiore di ZERO</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">else</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="c1">// fai qualcosa se numero NON è maggiore di ZERO</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">}</span>
+</code></pre></div>
+<p>Come si vede, lo spostamento a destra di alcune righe del codice le
+rende più evidenti. Come dicevamo comunque, per C o Java l'indentazione
+è assolutamente opzionale e il seguente pezzo di codice è assolutamente
+equivalente al precedente.</p>
+<div class="highlight"><span class="filename">Esempio di codice in linguaggio C, NON INDENTATO</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// fai qualcosa se numero è maggiore di ZERO</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// fai qualcosa se numero NON è maggiore di ZERO</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
+</code></pre></div>
+<p>Io penso che sia alquanto evidente come il primo esempio sia molto più
+facile da leggere, da comprendere e imparare rispetto al secondo, anche
+se per il linguaggio C essi rappresentano lo stesso identico concetto.</p>
+<p>Altri linguaggi, come il PASCAL, non utilizzano le parentesi ma parole
+chiave del linguaggio. Anche qui l'indentazione è opzionale.</p>
+<div class="highlight"><span class="filename">Esempio di codice in linguaggio PASCAL, NON INDENTATO</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fai</span><span class="w"> </span><span class="n">qualcosa</span><span class="w"> </span><span class="n">se</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="err">è</span><span class="w"> </span><span class="n">maggiore</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">ZERO</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">else</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">(</span><span class="w"> </span><span class="n">fai</span><span class="w"> </span><span class="n">qualcosa</span><span class="w"> </span><span class="n">se</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="n">NON</span><span class="w"> </span><span class="err">è</span><span class="w"> </span><span class="n">maggiore</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">ZERO</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">;</span>
+</code></pre></div>
+<p>Anche qui, pur avendo le parole chiave <code>if ... then ... else ...</code> che racchiudono
+i due blocchi, a mio parere senza indentazione la leggibilità e la
+chiarezza del codice vengono molto meno.</p>
+<blockquote>
+<p>Python obbliga i suoi utilizzatori ad usare l'<strong>indentazione</strong> 
+come unica forma di organizzazione del codice in blocchi! </p>
+</blockquote>
+<p>In questo modo le parole del linguaggio da imparare sono pochissime e la struttura del linguaggio
+è molto facile da leggere.</p>
+<p>A questo aggiungiamo che lo stile predefinito di Python per
+l'indentazione è di inserire 4 spazi ogni volta si voglia identificare
+un blocco di codice. In questo modo tutti i programmi Python sono per
+definizione</p>
+<ul>
+<li>i più semplici da leggere</li>
+<li>con una struttura logica identica alla indentazione delle righe di codice che la implementano</li>
+<li>con una organizzazione uniforme in TUTTI i programmi Python.</li>
+</ul>
+<p>Vediamo il solito esempio scritto in Python:</p>
+<div class="highlight"><span class="filename">Esempio di codice in linguaggio Python (indentato per forza)</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">if</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="c1"># i blocchi Python iniziano con 4 spazi</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="c1"># Qui si fa qualcosa se numero è maggiore di ZERO</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="c1"># altro blocco di codice</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="c1"># qui si fa qualcosa se numero NON è maggiore di ZERO</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;qui i blocchi sono finiti&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Tutto qua! <br></p>
+<p>D'ora in avanti quando incontreremo strutture con blocchi di
+codice li evidenzieremo tramite indentazione di 4 spazi. Come vedremo
+alcuni editor di testo ci aiutano molto per questa operazione :)</p>
+<div class="admonition warning">
+<p class="admonition-title">Roba da precisoni!!!</p>
+<p>Python 3.x utilizza una specifica chiamata <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> che
+descrive per filo e per segno <strong><em>come</em></strong> scrivere qualunque struttura di
+codice Python. </p>
+<p>Questo con l'obiettivo dichiarato di uniformare lo stile di qualsiasi pezzo di codice Python scritto da chiunque e 
+semplificare così la lettura del codice!</p>
+</div>
+<p>In particolare vorrei sottolineare come questa specifica sia
+assolutamente allergica al carattere di tabulazione <span class="keys"><kbd class="key-tab">Tab</kbd></span>, presente in
+alto a destra in ogni tastiera. <strong>Il carattere di tabulazione NON deve
+essere usato negli script Python</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Suggerimento</p>
+<p>Se state utilizzando <em>Thonny</em> (come dovreste) potete utilizzare tranquillamente
+il tasto <span class="keys"><kbd class="key-tab">Tab</kbd></span> della tastiera perché esso <strong><em>trasforma automaticamente ogni <span class="keys"><kbd class="key-tab">Tab</kbd></span> in una
+sequenza di 4 caratteri</em></strong> evitando fastidi durante l'esecuzione del codice e
+semplificando il lavoro del programmatore che non deve digitare a mano 4, 8, 12,,, spazi!!</p>
+</div>
+<p>Per forzare gli utenti ad usare queste buone regole di uniformità,
+l'interprete Python segnala un errore ogni volta che trova un carattere
+di tabulazione nel codice. E il prof mette una insufficienza. Fate
+voi...</p>
+<!-- ###################################################################################################### -->
+
+<h2 id="esercizi">Esercizi</h2>
+<div class="admonition danger">
+<p class="admonition-title">NO IA (almeno fino a 213)</p>
+<p>Gli esercizi di questo gruppo servono solo per la comprensione dei concetti illustrati. 
+Se non si riesce a farli significa che occorre studiare meglio i concetti sopra. Inutile in questo
+contesto affidarsi alle IA per la risoluzione degli stessi!!!</p>
+</div>
+<p><strong>Esercizio 201</strong></p>
+<p>Scrivere un programma che richiede un numero intero all'utente e
+visualizza la scritta "PARI" oppure "DISPARI" a seconda del valore
+inserito.</p>
+<hr />
+<p><strong>Esercizio 202</strong></p>
+<p>Scrivere un programma che richiede un numero intero all'utente e
+visualizza la scritta "DIVISIBILE PER 5" oppure "NON DIVISIBILE PER
+5" a seconda del valore inserito.</p>
+<hr />
+<p><strong>Esercizio 203</strong></p>
+<p>Dati due numeri interi da parte dell'utente, da memorizzare nelle variabili
+n1, n2, verificare se il primo è un multiplo del secondo. Visualizzare la scritta "MULTIPLO"
+o "NON MULTIPLO".</p>
+<hr />
+<p><strong>Esercizio 204</strong></p>
+<p>Dato un numero intero, inserito dall'utente, restituire la scritta
+CORRETTO se il numero è pari e compreso fra 100 e 200 (estremi esclusi),
+NON CORRETTO altrimenti.</p>
+<hr />
+<p><strong>Esercizio 205</strong></p>
+<p>Dato un numero intero, inserito dall'utente, restituire la scritta
+CORRETTO se il numero è dispari e compreso fra -5 e 5 (estremi inclusi),
+NON CORRETTO altrimenti.</p>
+<hr />
+<p><strong>Esercizio 206: confronti</strong></p>
+<p>Dati due numeri reali da parte dell'utente, visualizzarli in ordine
+crescente (prima il più piccolo, poi il più grande).</p>
+<hr />
+<p><strong>Esercizio 207</strong></p>
+<p>Dati due numeri reali da parte dell'utente, memorizzati nelle variabili
+n1 e n2, inserire il valore più piccolo nella variabile "piccolo" e il
+più grande nella variabile "grande", infine visualizzarli.</p>
+<hr />
+<p><strong>Esercizio 208</strong></p>
+<p>Dati tre numeri reali da parte dell'utente, visualizzarli in ordine
+crescente (prima il più piccolo, poi il medio, poi il più grande).</p>
+<hr />
+<p><strong>Esercizio 209</strong></p>
+<p>Dati tre numeri reali da parte dell'utente, memorizzati nelle variabili
+n1, n2, n3; inserire il valore più piccolo nella variabile "v1", il
+medio nella variabile "v2" e il più grande nella variabile "v3".</p>
+<hr />
+<p><strong>Esercizio 210</strong></p>
+<p>Dati quattro numeri reali da parte dell'utente, memorizzati nelle
+variabili n1, n2, n3, n4; visualizzare il valore più grande fra i 4.</p>
+<hr />
+<p><strong>Esercizio 211</strong></p>
+<p>Dati quattro numeri reali da parte dell'utente, memorizzati nelle
+variabili n1, n2, n3, n4; visualizzare il valore più piccolo fra i 4.</p>
+<hr />
+<p><strong>Esercizio 212: metà e doppio di un intero</strong></p>
+<p>Programma che, dato un numero intero, ne visualizza la metà se il numero
+è pari o ne visualizza il doppio se il numero è dispari.</p>
+<hr />
+<p><strong>Esercizio 213: radice quadrata</strong></p>
+<p>Programma che dato un numero intero, dice se questo è positivo oppure
+no. Se il numero è positivo, ne calcola la radice quadrata. Se il numero
+è negativo ne calcola l'opposto.</p>
+<hr />
+<p><strong>Esercizio 214: anno bisestile</strong></p>
+<p>Dato un numero intero da parte dell'utente, visualizzare se questo
+rappresenta un anno bisestile oppure no. Un anno è bisestile se è
+divisibile per 4, ma non per 100 oppure se è divisibile per 400.</p>
+<p>Ad esempio il 1900 <strong>non</strong> è stato un anno bisestile, perché 1900 è
+divisibile per 4 ma anche per 100. L'anno 2000 è stato bisestile perché
+2000 è divisibile per 400.</p>
+<hr />
+<p><strong>Esercizio 215</strong></p>
+<p>Un negozio applica degli sconti diversi a seconda del prezzo dei
+prodotti. Sul prezzo di un prodotto viene praticato lo sconto del 3% se
+costa fino a 100 euro e del 5% se costa di più. Inserito da tastiera il
+prezzo P, calcolare il prezzo da pagare secondo la regola sopra
+descritta.</p>
+<hr />
+<p><strong>Esercizio 216: biglietto del treno</strong></p>
+<p>Sul prezzo di un biglietto di un treno viene applicato un supplemento
+del 7% se il treno è di tipo 'A', del 12% se è di tipo 'B' e del 18%
+se è di tipo 'C'. Per gli altri treni non c'è supplemento.</p>
+<p>Chiedere all'utente di inserire un numero reale che rappresenta il
+costo del biglietto e un carattere che rappresenta il tipo di treno,
+quindi calcolare il prezzo reale del biglietto, applicando l'eventuale
+sovrapprezzo secondo le indicazioni precedenti.</p>
+<p>Infine visualizzare il prezzo iniziale (inserito dall'utente) il tipo
+di treno indicato e il prezzo finale.</p>
+<hr />
+<p><strong>Esercizio 217: temperature</strong></p>
+<p>Si permetta all'utente di inserire un numero reale che rappresenterà una
+temperatura in gradi Celsius. Il programma visualizzerà la temperatura
+inserita e poi la convertirà in gradi Fahrenheit e in gradi Kelvin.
+Prima della conversione, il programma verificherà se la temperatura
+inserita è minore allo zero assoluto (ZERO gradi Kelvin) e in quel caso
+visualizzerà un errore senza visualizzare le conversioni.</p>
+<div class="admonition tip">
+<p class="admonition-title">Suggerimento</p>
+<p>Per convertire le temperature, usa le seguenti formule:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Fahrenheit = (9/5) * Celsius + 32
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Kelvin = Celsius + 273.15
+</code></pre></div>
+</div>
+<hr />
+<p><strong>Esercizio 218: triangolo o no</strong></p>
+<p>Dati 3 numeri A, B, C da parte dell'utente, che rappresentano le
+lunghezze di 3 lati, valutare se essi possono rappresentare un
+triangolo. In caso affermativo dire quale tipo di triangolo: equilatero,
+isoscele, rettangolo, scaleno.</p>
+<hr />
+<p><strong>Esercizio 219: data valida</strong></p>
+<p>Chiedere all'utente di inserire 2 numeri interi GG, MM e si determini se
+questi possono rappresentare i giorni e i mesi di una data. In
+particolare, se questo è vero si riporti la scritta DATA VALIDA,
+altrimenti la scritta DATA NON VALIDA.</p>
+<p>Ad esempio,</p>
+<ul>
+<li>dati i valori GG = 25, MM = 7 si ritorna DATA VALIDA.</li>
+<li>dati i valori GG = 5,  MM = 17 si ritorna DATA NON VALIDA.</li>
+<li>dati i valori GG = 31, MM = 3 si ritorna DATA VALIDA.</li>
+<li>dati i valori GG = 31, MM = 4 si ritorna DATA NON VALIDA.</li>
+</ul>
+<p>Il 29 febbraio non è una data valida, non essendo presente il controllo
+sull'anno.</p>
+<div class="admonition tip">
+<p class="admonition-title">Filastrocca sui mesi</p>
+<p>Trenta dì conta Novembre, con April, Giugno e Settembre.
+Di ventotto ce n'è uno... tutti gli altri ne han trentuno!!!</p>
+</div>
+<hr />
+<p><strong>Esercizio 220: orario</strong></p>
+<p>Chiedere all'utente di inserire due numeri interi per le ore e i minuti
+di un orario e visualizzare la scritta ORARIO ERRATO se esso è una
+combinazione impossibile (ad esempio se i valori sono negativi, oppure
+se le ore superano 23, etc...).</p>
+<p>Se l'orario è corretto, visualizzare una scritta secondo il seguente
+schema:</p>
+<ul>
+<li>Dalle 8.00 alle 8.59: visualizzare PRIMA ORA</li>
+<li>Dalle 9.00 alle 9.59: visualizzare SECONDA ORA</li>
+<li>Dalle 10.00 alle 10.54: visualizzare TERZA ORA</li>
+<li>Dalle 10.55 alle 11.04: visualizzare INTERVALLO</li>
+<li>Dalle 11.05 alle 11.59: visualizzare QUARTA ORA</li>
+<li>Dalle 12.00 alle 13.00: visualizzare QUINTA ORA</li>
+</ul>
+<p>In tutti gli altri casi, visualizzare la scritta TEMPO LIBERO.</p>
+<!-- TODO: 
+risistema a livelli il controllo delle date. 
+Guarda gli esercizi su minore e manggiore. Uno su valore assoluto. Uno su minorenne, maggiorenne, adulto, anziano. etc... 
+-->
+
+<p><br>
+<br>
+<br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Torna su
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Piede" >
+        
+          
+          <a href="../101_var/" class="md-footer__link md-footer__link--prev" aria-label="Precedente: Variabili e Operatori">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Precedente
+              </span>
+              <div class="md-ellipsis">
+                Variabili e Operatori
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../103_iter/" class="md-footer__link md-footer__link--next" aria-label="Successivo: Ripetizione">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Successivo
+              </span>
+              <div class="md-ellipsis">
+                Ripetizione
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Andrea Diamantini (c) 2022-inf<br> <a href="#__consent">Change Cookie Settings</a><br> This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Consenso all'uso dei Cookie(s)</h4>
+<p>Questo sito memorizza sul tuo PC solo due cookies: uno per ricordarsi se hai già visto questo avviso, un altro per ricordarsi il tema di visualizzazione (chiaro/scuro).<br> Se non acconsenti, dovrai selezionare ogni volta la tua scelta.<br> In fondo alla pagina c'è il link per fare reset ;)
+</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accetta</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Rifiuta</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
