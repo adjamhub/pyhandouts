@@ -6,7 +6,9 @@ Elenco i punti da seguire nell'ordine (più o meno) in cui dovrebbero essere svo
 ## nome pacchetto
 
 Per prima cosa, **scegli bene il nome del pacchetto**. Un nome semplice, possibilmente senza spazi nè maiuscole. Nel proseguio del capitolo, farò
-finta di aver scelto il nome `ciccio`. Se avete pensato un nome con due o più parole (tipo `distruzione dell'universo`) dovete renderlo un identificatore
+finta di aver scelto il nome `ciccio`. 
+
+Se avete pensato un nome con due o più parole (tipo `distruzione dell'universo`) dovete renderlo un identificatore
 semplice, ovvero togliere spazi, articoli e proposizioni (rendendolo ad esempio `DistruzioneUniverso` oppure `distruzione_universo`).
 
 
@@ -26,10 +28,7 @@ Immaginate che all'inizio, non sapendo bene quale nome scegliere, io abbia creat
 
 ``` bash
 provaPack
-├── .git
-├── .gitignore
 ├── pyproject.toml
-├── .python-version
 ├── README.md
 └── src
     └── provapack
@@ -47,10 +46,7 @@ Alla fine la struttura sarà la seguente:
 
 ``` bash
 provaPack
-├── .git
-├── .gitignore
 ├── pyproject.toml (modificato)
-├── .python-version
 ├── README.md
 └── src
     └── ciccio
@@ -66,7 +62,7 @@ Riordina e sistema gli import di ogni file del tuo progetto con la seguente logi
 
 2) poi gli import aggiunti tramite `pip` (es: pygame, platformdirs, etc...), poi salta una riga
 
-3) infine gli import del tuo proprio package (i files dentro `src/my_package` ) inclusi in forma esplicita o implicita
+3) infine gli import del tuo proprio package (i files dentro `src/my_package` ) inclusi in forma esplicita o implicita. Meglio la forma implicita...
 
 
 Alla fine sarà una cosa del genere:
@@ -103,7 +99,6 @@ Buona norma organizzare codice e files all'interno della cartella del modulo in 
 ``` bash
 provaPack
 ├── pyproject.toml
-├── .python-version
 ├── README.md
 └── src
     └── ciccio
@@ -150,8 +145,8 @@ Ricordati di aggiungere `PlatformDirs` al tuo package con `uv`:
 uv add PlatformDirs
 ```
 
-e poi revisiona tutti i percorsi dei files che il tuo package scrive (es: impostazioni, classifica). Eventualmente riguarda il capitolo sui files
-dove è spiegato il modulo `PlatformDirs`.
+e poi revisiona tutti i percorsi dei files che il tuo package scrive (es: impostazioni, classifica, etc...), riscrivendo il percorso con `PlatformDirs`.<br> 
+Eventualmente riguarda il capitolo sui files dove è spiegato il modulo `PlatformDirs`.
 
 
 ## Github: descrizione e README
@@ -159,7 +154,7 @@ dove è spiegato il modulo `PlatformDirs`.
 E' buona norma trovare un momento anche per curare un minimo il repository GitHub, soprattutto sistemando queste due semplici cose!
 
 La descrizione del progetto si può modificare direttamente su GitHub, cliccando sulla rotellina della modifica in alto a dx del progetto (di fianco alla parola **About**).
-Scrivete una frase semplice, che descrive sommariamente il gioco ed elenca i vostri cognomi. Ad esempio una cosa tipo: "Una versione di Acchiappa la Talpa by Pippo e Ciccio".
+Scrivete una frase semplice, che descrive sommariamente il gioco ed elenca i vostri cognomi. Ad esempio una cosa tipo: "Una versione di 'Acchiappa la Talpa', by Pippo e Ciccio".
 
 Il file `README.md` fornisce la descrizione che compare a fondo pagina. Va scritto in `markdown`, un linguaggio di rappresentazione semplice e potente. Trovate tonnellate di documentazione online. Potete anche semplicemente scrivere testo semplice. Si può modificare online oppure facendo un commit sul file stesso. Sarebbe molto carino aggiungerci una *pubblicità* per il vostro gioco! Fate uno screenshot, aggiungetelo al progetto e al file README. Spazio alla fantasia...
 
@@ -167,7 +162,15 @@ Il file `README.md` fornisce la descrizione che compare a fondo pagina. Va scrit
 ## File README. Descrizione Operativa!
 
 Aggiungete una interruzione al vostro file README, ad esempio una  `<hr>` e poi producete una descrizione operativa: raccontate come vi siete organizzati per lavorare,
-chi ha fatto cosa in maniera meticolosa. Ad esempio Gina ha creato sul sito www.immaginibellissime.com le immagini file1.jpg, file2.jpg. Pino ha scritto insieme alla AI Cancer la funzione spara_a_salve() e la funzione schioppaTutto(). Gina e Pino hanno lavorato insieme a tutte le funzioni del file coso.py, che era stato inizialmente generato tramite l'AI OplaGQT. Insomma... una cosa del genere...
+chi ha fatto cosa **in maniera meticolosa**: per ogni file del progetto voglio sapere l'origine e gli autori!!!
+
+Ad esempio:
+
+- Gina ha creato sul sito www.immaginibellissime.com le immagini file1.jpg, file2.jpg. 
+- Pino ha scritto insieme alla AI Cancer la funzione spara_a_salve() e la funzione schioppaTutto(). 
+- Gina e Pino hanno lavorato insieme a tutte le funzioni del file coso.py, che era stato inizialmente generato tramite l'AI OplaGQT. 
+ 
+Insomma... una cosa del genere...
 
 
 ## Licenza
@@ -192,14 +195,18 @@ Tutti i file python che avete scritto dovrebbero avere una intestazione di quest
 ```
 
 Se usate l'inglese bene. Altrimenti va bene anche l'italiano. E' il momento di rivalutare la scelta della licenza.
-Scegliete una licenza opensource, anche controllando questo sito: <a href="https://choosealicense.com/">Choose a License</a>.
+Scegliete una licenza opensource, anche controllando questo sito: <a href="https://choosealicense.com/">Choose a License</a>. Oppure mantenete quella iniziale.
 
-In caso, sostituite il file **LICENSE**. Oppure andiamo avanti...
+In caso, sostituite il file **LICENSE**. E ricominciate la valutazione di questo punto. 
+
+Oppure andiamo avanti...
 
 
 ## Aggiornate il numero di versione!!
 
 Se fino ad ora abbiamo lavorato alla versione `0.1.0` del nostro progetto, è ora di aggiornare almeno alla versione `0.2.0`!!!
-Per farlo basta modificare il file `pyproject.toml`
+Per farlo basta modificare il file `pyproject.toml` (e fare il commit)! 
+
+Se proprio vi sentite fenomeni, potete *taggare* il commit con l'etichetta `v0.2.0`!
 
 **Finito!!!**
