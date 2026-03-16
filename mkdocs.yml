@@ -114,6 +114,7 @@ nav:
       - Introduzione: insights/00_intro.md
       - uv: insights/01_uv.md
       - git: insights/02_git.md
+      - Package: insights/03_package.md
       - Turtle: insights/11_turtle.md
       - PyGame: insights/12_pygame.md
       - MySql: insights/41_mysql.md
