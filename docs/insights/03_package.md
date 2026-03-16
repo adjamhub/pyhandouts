@@ -164,6 +164,11 @@ Scrivete una frase semplice, che descrive sommariamente il gioco ed elenca i vos
 Il file `README.md` fornisce la descrizione che compare a fondo pagina. Va scritto in `markdown`, un linguaggio di rappresentazione semplice e potente. Trovate tonnellate di documentazione online. Potete anche semplicemente scrivere testo semplice. Si può modificare online oppure facendo un commit sul file stesso. Sarebbe molto carino aggiungerci una *pubblicità* per il vostro gioco! Fate uno screenshot, aggiungetelo al progetto e al file README. Spazio alla fantasia...
 
 
+## File README. Descrizione Operativa!
+
+Aggiungete una interruzione al vostro file README, ad esempio una  `<hr>` e poi producete una descrizione operativa: raccontate come vi siete organizzati per lavorare,
+chi ha fatto cosa in maniera meticolosa. Ad esempio Gina ha creato sul sito www.immaginibellissime.com le immagini file1.jpg, file2.jpg. Pino ha scritto insieme alla AI Cancer la funzione spara_a_salve() e la funzione schioppaTutto(). Gina e Pino hanno lavorato insieme a tutte le funzioni del file coso.py, che era stato inizialmente generato tramite l'AI OplaGQT. Insomma... una cosa del genere...
+
 
 ## Licenza
 
@@ -195,6 +200,6 @@ In caso, sostituite il file **LICENSE**. Oppure andiamo avanti...
 ## Aggiornate il numero di versione!!
 
 Se fino ad ora abbiamo lavorato alla versione `0.1.0` del nostro progetto, è ora di aggiornare almeno alla versione `0.2.0`!!!
-Per farlo basta modificare il file `pyporject.toml`
+Per farlo basta modificare il file `pyproject.toml`
 
 **Finito!!!**
