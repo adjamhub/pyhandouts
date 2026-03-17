@@ -53,6 +53,16 @@ provaPack
         └── __init__.py
 ```
 
+## Aggiungi il build-system
+
+Aggiungi **obbligatoriamente** la seguente direttiva sul file `pyproject.toml`:
+
+``` bash
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+``` 
+
 
 ## Sistema gli import
 
