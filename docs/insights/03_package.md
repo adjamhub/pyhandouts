@@ -126,12 +126,13 @@ Poi aggiungete un file chiamato `resources.py` al vostro progetto, in cui scrive
 
 ``` python title="resources.py"
 from importlib.resources import files
+from pathlib import Path
 
 # eventualmente aggiungere tutte le funzioni relative alle cartelle che avete creato in src.
 def get_sound(filename: str) -> Path:
     return files(__package__) / "sounds" / filename
 
-def get_image(filename: str):
+def get_image(filename: str) -> Path:
     return files(__package__) / "images" / filename
 ```
 
