@@ -585,18 +585,19 @@ for r in letture:
 ```
 
 !!! warning "Attenzione"
-  Se il JSON è malformato, Python solleva `json.JSONDecodeError`:
-  
-  ```python title="Gestione degli errori su JSON"
-  import json
-  
-  testo_errato = '{"nome": "Andrea", "età": }'  # JSON non valido!
-  
-  try:
-      dati = json.loads(testo_errato)
-  except json.JSONDecodeError as e:
-      print(f"Errore nel parsing JSON: {e}")
-  ```
+
+    Se il JSON è malformato, Python solleva `json.JSONDecodeError`:
+    
+    ```python title="Gestione degli errori su JSON"
+    import json
+    
+    testo_errato = '{"nome": "Andrea", "età": }'  # JSON non valido!
+    
+    try:
+        dati = json.loads(testo_errato)
+    except json.JSONDecodeError as e:
+        print(f"Errore nel parsing JSON: {e}")
+    ```
 
 
 ### Esercizi su JSON
