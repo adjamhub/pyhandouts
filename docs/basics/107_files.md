@@ -27,12 +27,12 @@ il nome del file da aprire. Il secondo parametro indica la modalità di apertura
 Elenchiamo le principali modalità:
 
 
-| Modo | Descrizione                                                                                                                                                                     |
-|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| r    | Modalità di lettura (read).<br> Il file NON sarà modificato da alcuna operazione. Se il file non esiste l'apertura fallisce. <br> **Modo di default**.                          |
-| w    | Modalità di scrittura (write). <br> Un file esistente verrà sovrascritto, altrimenti ne verrà creato uno nuovo.                                                                 |
-| x    | Modalità di creazione file (non lo so perché x...).<br> Ritorna un errore se il file esiste già. Se funziona, apre il file in scrittura.                                        |
-| a    | Modalità di aggiunta a fine file (append). <br> Il file verrà aperto in scrittura, aggiungendo in fondo a ciò che esiste quello che viene scritto. <br> Altrimenti è come write.|
+| Modo | Descrizione                                                                                                                                                     |
+|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| r    | Lettura (read).<br> Il file NON sarà modificato da alcuna operazione. Se il file non esiste l'apertura fallisce. <br> **Modo di default**.                      |
+| w    | Scrittura (write). <br> Un file esistente verrà sovrascritto, altrimenti ne verrà creato uno nuovo.                                                             |
+| x    | Creazione file (non lo so perché x...).<br> Ritorna un errore se il file esiste già. Se funziona, apre il file in scrittura.                                    |
+| a    | Aggiunta a fine file (append). <br> Apre oil in scrittura, ma aggiungendo in fondo a ciò che esiste quello che viene scritto. <br> Altrimenti è come write.     |
 
 
 Oltre ad aprire un file per leggerci o scriverci, bisogna anche sapere
