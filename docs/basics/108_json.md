@@ -499,7 +499,7 @@ dati = {
 
 testo_json = json.dumps(dati)
 print(testo_json)
-# {"stazione": "ESP32-01", "temperatura": 23.5, "umidit\u00e0": 60, "attivo": true}
+# {"stazione": "ESP32-01", "temperatura": 23.5, "umidità": 60, "attivo": true}
 ```
 
 
@@ -554,15 +554,11 @@ letture = [
 ]
 
 file = open("letture.json", "w")
-file.write( json.dumps(letture) )
+# scrive il file a capo con indentazione a 2 spazi: 
+# rende il JSON facilmente leggibile anche dalle persone!
+file.write( json.dumps(letture, indent=2) )
 file.close()
 ```
-
-!!! tip "Suggerimento"
-
-  Se aggiungi a `write` l'opzione `indent=2` o `indent=4` rendi il file ben leggibile anche dalle persone! Omettilo per risparmiare byte.
-  Se vuoi aggiungelo, scrivi (ad esempio) `file.write( json.dumps(letture) , indent=2 )`
-
 
 Il file `letture.json` (scritto con `indent=2`) conterrà:
 
@@ -589,10 +585,9 @@ for r in letture:
 ```
 
 !!! warning "Attenzione"
-
   Se il JSON è malformato, Python solleva `json.JSONDecodeError`:
   
-  ```python
+  ```python title="Gestione degli errori su JSON"
   import json
   
   testo_errato = '{"nome": "Andrea", "età": }'  # JSON non valido!
@@ -602,27 +597,6 @@ for r in letture:
   except json.JSONDecodeError as e:
       print(f"Errore nel parsing JSON: {e}")
   ```
-
-
-JSON supporta strutture complesse con dizionari e liste annidati:
-
-```python title="Esempio con strutture complesse"
-import json
-
-payload = {
-    "dispositivo": "ESP32-03",
-    "posizione": {"piano": 2, "stanza": "Lab"},
-    "sensori": [
-        {"tipo": "DHT11", "temperatura": 24.0, "umidità": 57},
-        {"tipo": "DS18B20", "temperatura": 24.3}
-    ]
-}
-
-# Accesso ai dati nidificati
-print(payload["posizione"]["stanza"])           # Lab
-print(payload["sensori"][0]["temperatura"])     # 24.0
-print(payload["sensori"][1]["tipo"])            # DS18B20
-```
 
 
 ### Esercizi su JSON
