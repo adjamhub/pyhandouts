@@ -25,10 +25,10 @@ esempio commentato e capirete subito come funziona.
 # con la nostra widget come parent
 # Manteniamo un riferimento ad esso con una variabile membro (una del tipo self.var)
 # Se nella vostra app avete 2 timer, inserite un ID
-self.timer = wx.Timer(self)
+timerBellissimo = wx.Timer(self)
 
 # facciamo il BIND tramite la parent widget: BIND(evento, funzione, oggetto)
-self.Bind(wx.EVT_TIMER, self.funzioneDaEseguire, self.timer)
+self.Bind(wx.EVT_TIMER, self.funzioneDaEseguire, timerBellissimo)
 ```
 
 Ecco qua! Come avete visto non è particolarmente complicato. Adesso il
@@ -49,14 +49,14 @@ fra 10 secondi, avviate il timer con la funzione **StartOnce(10000)**.
 # AVVIA il TIMER
 # Il parametro è in millisecondi. 
 # Significa che questo timer genererà un evento EVT_TIMER ogni secondo finchè non verrà fermato
-timer.Start(1000)
+timerBellissimo.Start(1000)
 
 # FERMA IL TIMER
-timer.Stop()
+timerBellissimo.Stop()
 
 # AVVIA IL TIMER per un'unica esecuzione
 # come Start() ma termina il timer al primo timeout
-timer.StartOnce(millisecondi)
+timerBellissimo.StartOnce(millisecondi)
 ```
 
 Spero sia tutto chiaro :)
@@ -93,7 +93,7 @@ class Esempio(wx.Frame):
     def __init__(self):
         super().__init__(None, title="Quando la barra è carica, il programma si chiude")
 
-        self.timer = wx.Timer(self,1)
+        self.timer = wx.Timer(self)
         self.Bind(wx.EVT_TIMER, self.OnTimer, self.timer)        
         self.conta = 0
 
@@ -159,7 +159,7 @@ secondi.
 **Esercizio 2602 (cronometro)**
 
 Implementare un cronometro con una etichetta con valore iniziale
-"00:00:00" rappresentanti rispettivamente minuti, secondi e centesimi
+"00:00.00" rappresentanti rispettivamente minuti, secondi e centesimi
 di secondo e tre pulsanti per le funzioni START, STOP, RESET.
 
 -   START fa (ri)partire il cronometro
@@ -179,4 +179,3 @@ all'infinito).
 <br>
 <br>
 <br>
-
