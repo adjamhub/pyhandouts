@@ -220,4 +220,23 @@ Per farlo basta modificare il file `pyproject.toml` (e fare il commit)!
 
 Se proprio vi sentite fenomeni, potete *taggare* il commit con l'etichetta `v0.2.0`!
 
+
+## Creazione eseguibile da distribuire (su Windows)
+
+Potrebbe essere comodo provare a distribuire il proprio codice in forma eseguibile (es: gioco.exe) per semplificare la distribuzione fra gli utenti meno esperti.
+Per farlo utilizzeremo un tool chiamato `pyinstaller`. Posizionati nella cartella principale del nostro progetto (nel mio caso, del progetto `ciccio`) e digitiamo:
+
+``` bash
+uv add --dev pyinstaller
+```
+
+Poi dalla stessa cartella, eseguite:
+
+``` bash
+uv run pyinstaller --onefile --windowed --collect-all ciccio -n "ciccio" ./src/ciccio/__init__.py
+```
+
+Se tutto va bene dovrebbe essersi creata una cartella chiamata `dist` con dentro l'eseguibile!!!
+
+
 **Finito!!!**
