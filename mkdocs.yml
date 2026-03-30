@@ -86,7 +86,8 @@ nav:
       - Python Standard Library: basics/106_psl.md
       - PyPi: basics/106_pypi.md
       - Files: basics/107_files.md
-      - CSV: basics/108_csv.md
+      - JSON: basics/108_json.md
+      - CSV: basics/109_csv.md
   # ---------------------------------------------------------------
   - OOP:
       - Introduzione: OOP/000_intro.md
