@@ -53,16 +53,6 @@ provaPack
         └── __init__.py
 ```
 
-## Aggiungi il build-system
-
-Aggiungi **obbligatoriamente** la seguente direttiva sul file `pyproject.toml`:
-
-``` bash
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-``` 
-
 
 ## Sistema gli import
 
@@ -72,7 +62,7 @@ Riordina e sistema gli import di ogni file del tuo progetto con la seguente logi
 
 2) poi gli import aggiunti tramite `pip` (es: pygame, platformdirs, etc...), poi salta una riga
 
-3) infine gli import del tuo proprio package (i files dentro `src/my_package` ) inclusi in forma esplicita o implicita. Meglio la forma implicita...
+3) infine gli import del tuo proprio package (i files dentro `src/my_package` ) inclusi in forma esplicita o implicita. Meglio la forma **esplicita**...
 
 
 Alla fine sarà una cosa del genere:
@@ -139,7 +129,8 @@ def get_image(filename: str) -> Path:
 A questo punto, nel vostro codice, quando avete bisogno di un file, scrivete:
 
 ``` python
-from .resources import *
+# ricorda, ciccio è il nome del mio package
+from ciccio.resources import *
 
 fileSfondo = get_image("sfondo.png")
 fileAudio = get_sound("sottofondo.mp3")
@@ -153,7 +144,7 @@ fileAudio = get_sound("sottofondo.mp3")
 Ricordati di aggiungere `PlatformDirs` al tuo package con `uv`:
 
 ```bash
-uv add PlatformDirs
+uv add platformdirs
 ```
 
 e poi revisiona tutti i percorsi dei files che il tuo package scrive (es: impostazioni, classifica, etc...), riscrivendo il percorso con `PlatformDirs`.<br> 
@@ -213,12 +204,14 @@ In caso, sostituite il file **LICENSE**. E ricominciate la valutazione di questo
 Oppure andiamo avanti...
 
 
+
 ## Aggiornate il numero di versione!!
 
 Se fino ad ora abbiamo lavorato alla versione `0.1.0` del nostro progetto, è ora di aggiornare almeno alla versione `0.2.0`!!!
 Per farlo basta modificare il file `pyproject.toml` (e fare il commit)! 
 
 Se proprio vi sentite fenomeni, potete *taggare* il commit con l'etichetta `v0.2.0`!
+
 
 
 ## Creazione eseguibile da distribuire (su Windows)
