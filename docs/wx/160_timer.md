@@ -36,14 +36,14 @@ timer è pronto e collegato alla funzione da eseguire al timeout. Ma come
 si fa a far partire il timer? E a fermarlo? E...
 
 Come vediamo fra un attimo, per attivare un timer, basta invocare la
-funzione **Start(millisecondi)**. Se ad esempio invochiamo Start(100),
-ogni 100 millisecondi il timer genererà un evento wx.EVT_TIMER che nel
-nostro esempio, scatenerà la *funzioneDaEseguire*.
+funzione `Start(millisecondi)`. Se ad esempio invochiamo `Start(100)`,
+ogni 100 millisecondi il timer genererà un evento `wx.EVT_TIMER` che nel
+nostro esempio, scatenerà la funzione `funzioneDaEseguire`.
 
 Se avete necessità di fermare questa ripetizione infinita, usate la
-funzione **Stop()**. Ultima, ma non meno importante, se avete bisogno di
+funzione `Stop()`. Ultima, ma non meno importante, se avete bisogno di
 eseguire una sola volta la funzione dilazionata nel tempo, ad esempio
-fra 10 secondi, avviate il timer con la funzione **StartOnce(10000)**.
+una volta dopo 3 secondi e poi basta, avviate il timer con la funzione `StartOnce(3000)`.
 
 ``` python
 # AVVIA il TIMER
@@ -76,8 +76,8 @@ La classe `wx.Gauge` rappresenta una widget che implementa una barra di avanzame
 ![image](images/wxGauge.jpg)
 
 La barra di avanzamento va impostata indicando il range predefinito. In
-questo esempio ho messo range=10 e questo significa che la barra si
-caricherà come fosse divisa in 10 pezzi. Nell'esempio presentato
+questo esempio ho messo `range=10` e questo significa che la barra si
+caricherà come fosse divisa in 10 parti, 10 stati di avanzamento. Nell'esempio presentato
 abbiamo un timer per far avanzare la barra di uno step automaticamente
 ogni secondo e 2 pulsanti per fare OK e STOP.
 
