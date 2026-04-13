@@ -177,16 +177,17 @@ class Esempio(wx.Frame):
     def __init__(self):
         super().__init__(None, title="Fullscreen(er)")
         panel = wx.Panel(self)
-        self.fullScreenButton = wx.ToggleButton(panel, label="Metti fullscreen", pos=(5,5), size=(150,40))
-        self.fullScreenButton.Bind(wx.EVT_TOGGLEBUTTON, self.mettiFullScreen)
+        pulsanteToggle = wx.ToggleButton(panel, label="Metti fullscreen", pos=(5,5), size=(150,40))
+        pulsanteToggle.Bind(wx.EVT_TOGGLEBUTTON, self.mettiFullScreen)
 
     def mettiFullScreen(self, evt):
-        if not self.IsFullScreen():
+        pulsanteCliccato = evt.GetEventObject()
+        if pulsanteCliccato.Value:
             self.ShowFullScreen(True)
-            self.fullScreenButton.SetLabel("Esci dal fullscreen")
+            pulsanteCliccato.SetLabel("Esci dal fullscreen")
         else:
             self.ShowFullScreen(False)
-            self.fullScreenButton.SetLabel("Metti fullscreen")
+            pulsanteCliccato.SetLabel("Metti fullscreen")
 
 # ----------------------------------------
 if __name__ == "__main__":
@@ -958,4 +959,3 @@ presente nella stessa cartella (dovete crearlo voi, con una parola ogni
 riga: ogni riga del file diventerà una voce nella ListBox).
 
 <br>
-
