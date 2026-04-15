@@ -1,9 +1,9 @@
-# JSON
+# Dizionari, JSON, CSV
 
-In questo capitolo, per lavorare con il formato di testo JSON, introdurremo prima una struttura dati che *completa* la nostra conoscenza sulle sequenze: i dizionari!
+In questo capitolo tratteremo il tipo Python chiamato dizionari e vedremo due strutture molto usate in informatica che utilizzano a pieno il concetto Python dei dizionari:
+il formato JSON e i file CSV.
 
-Questi saranno lo strumento tramite il quale lavoreremo poi con i dati su file e il modulo `json`.
-
+-------------------------------------------------------------------------------------------------
 
 ## Dizionari
 
@@ -451,6 +451,9 @@ Inserire tramite codice una serie di almeno 5 persone e procedere ad una visuali
 3. Visualizzare il nome del maschio e della femmina che pesano di più.
 
 
+------------------------------------------------------------------------------------
+
+
 
 ## Modulo JSON
 
@@ -490,12 +493,11 @@ Vediamo alcuni esempi per capire meglio:
 ```python title='json.dumps()'
 import json
 
-dati = {
-    "stazione": "ESP32-01",
-    "temperatura": 23.5,
-    "umidità": 60,
-    "attivo": True
-}
+dati = {}
+dati["stazione"] = "ESP32-01"
+dati["temperatura"] = 23.5
+dati["umidità"] = 60
+dati["attivo"] = True
 
 testo_json = json.dumps(dati)
 print(testo_json)
@@ -547,11 +549,10 @@ Serializzare con `dumps()` restituisce una stringa normale: per salvarla su file
 ```python
 import json
 
-letture = [
-    {"id": 1, "temp": 22.1, "hum": 55},
-    {"id": 2, "temp": 23.4, "hum": 58},
-    {"id": 3, "temp": 21.8, "hum": 62},
-]
+letture = []
+letture.append( {"id": 1, "temp": 22.1, "hum": 55} )
+letture.append( {"id": 2, "temp": 23.4, "hum": 58} )
+letture.append( {"id": 3, "temp": 21.8, "hum": 62} )
 
 file = open("letture.json", "w")
 # scrive il file a capo con indentazione a 2 spazi: 
@@ -607,20 +608,22 @@ for r in letture:
 **Esercizio 851**
 
 Crea un dizionario Python con almeno 5 chiavi (nome, cognome, età, città, hobby) e convertilo in una stringa JSON stampata in modo leggibile (indentata).
+Infine salva la stringa nel file *dati.json*.
 
 
 ------------------------------------------------------------------------------------
 
 **Esercizio 852**
 
-Parti dalla stringa JSON dell'Esercizio 1, convertila di nuovo in un dizionario Python e stampa solo i valori (non le chiavi) uno per riga.
+Ricarica il contenuto dal file *dati.json* dell'esercizio precedente e convertila di nuovo in un dizionario Python.
+Visualizza solo i valori (non le chiavi) uno per riga.
 
 
 ------------------------------------------------------------------------------------
 
 **Esercizio 853**
 
-Crea un dizionario Python che contenga: una stringa, un intero, un float, un booleano, `None`, una lista e un dizionario annidato. Convertilo in JSON e verifica come cambiano i tipi stampando il risultato con `indent=2`.
+Crea un dizionario Python che contenga: una stringa, un intero, un float, un booleano, `None`, una lista e un dizionario annidato. Convertilo in JSON e verifica come cambiano i tipi visualizzando il risultato con `indent=2`.
 
 
 ------------------------------------------------------------------------------------
@@ -630,13 +633,14 @@ Crea un dizionario Python che contenga: una stringa, un intero, un float, un boo
 Crea un file `config.json` che contenga le impostazioni di un'applicazione:
 - nome app, versione, debug (bool), porte permesse (lista di interi).
 
-Scrivi uno script che legge il file e stampa ogni impostazione con una riga descrittiva.
+Scrivi uno script che legge il file e visualizza ogni impostazione con una riga descrittiva.
 
 ------------------------------------------------------------------------------------
 
 **Esercizio 855**
 
-Crea una lista di almeno 4 dizionari, ognuno con i campi `id`, `tipo`, `valore`, `unità`. Salvala in `sensori.json`, poi rileggila e stampa solo i sensori con valore superiore a 25.
+Crea una lista di almeno 4 dizionari, ognuno con i campi `id`, `tipo`, `valore`, `unità`. Salvala in `sensori.json`, poi rileggila e visualizza gli id dei sensori
+che hanno valore superiore a 25.
 
 ------------------------------------------------------------------------------------
 
@@ -649,7 +653,7 @@ Leggi il file `sensori.json` creato nell'esercizio precedente, aggiungi un nuovo
 
 **Esercizio 857**
 
-Crea un dizionario che rappresenti una scuola: nome, indirizzo (a sua volta un dizionario con via, città, CAP), e una lista di classi (ogni classe ha nome e numero di studenti). Serializzalo in JSON e poi deserializzalo, stampando il nome della scuola e l'elenco delle classi con il numero di studenti.
+Crea un dizionario che rappresenti una scuola: nome, indirizzo (a sua volta un dizionario con via, città, CAP), e una lista di classi (ogni classe ha nome e numero di studenti). Serializzalo in JSON e poi deserializzalo, visualizzando il nome della scuola e l'elenco delle classi con il numero di studenti.
 
 
 ------------------------------------------------------------------------------------
@@ -671,8 +675,8 @@ Simula la ricezione di questo messaggio da un ESP32:
 
 Scrivi uno script che:
 1. Fa il parsing del messaggio.
-2. Stampa `device_id` e `timestamp`.
-3. Stampa temperatura e umidità di ogni sensore (se disponibili).
+2. Visualizza `device_id` e `timestamp`.
+3. Visualizza temperatura e umidità di ogni sensore (se disponibili).
 
 ------------------------------------------------------------------------------------
 
@@ -685,6 +689,289 @@ Crea uno script che simula un logger di dati. Ad ogni esecuzione:
 
 Esegui lo script più volte e verifica che il file cresca correttamente.
 
+
+------------------------------------------------------------------------------------
+
+
+
+## Modulo CSV
+
+Il modulo `csv` è un modulo della libreria predefinita che serve per trattare i file in formato CSV (Comma Separated Value).
+
+Il CSV è un formato di testo utilizzato per l'importazione ed
+esportazione di una tabella di dati da fogli elettronici o da basi di
+dati. Essere in grado di manipolarlo ci permette dunque di migliorare di
+molto (ma con poco sforzo) le nostre attuali capacità di programmatori!
+
+Per fare un esempio semplice con il formato CSV, immaginate di voler
+memorizzare la seguente tabella dati:
+
+| Nome      | Ruolo           | Squadra        |
+|-----------|-----------------|----------------|
+| Maradona  | Centrocampista  | Napoli         |
+| Gullit    | Attaccante      | Milan          |
+| Brehme    | Difensore       | Inter          |
+| Falcao    | Centrocampista  | Roma           |
+
+
+Ogni riga della tabella nel formato CSV termina quando si va a capo.
+Ogni colonna della tabella termina con una virgola. Da cui si ottiene:
+
+
+
+``` py title="Esempio 0: il file 'giocatori.csv'"
+Nome,Ruolo,Squadra
+Maradona,Centrocampista,Napoli
+Gullit,Attaccante,Milan
+Brehme,Difensore,Inter
+Falcao,Centrocampista,Roma
+```
+
+
+Mi sembra molto semplice da capire :)
+
+!!! note 
+    Il modulo CSV permette di caricare in maniera automatica i dati estratti 
+    in strutture dati che noi ben conosciamo: **i dizionari!**
+
+Da tutte queste considerazioni insieme capite la necessità di studiare
+questo modulo. Per caricare i dati da un file csv si può semplicemente
+utilizzare la funzione `DictReader()` del modulo CSV, che carica ogni
+riga del file (successiva alla prima) in un dizionario, con la prima riga che 
+diventa la chiave di ogni voce.
+
+Facciamo alcuni esempi caricando i dati dal file "giocatori.csv" di
+cui conosciamo già la struttura.
+
+
+
+``` py title="Esempio 1: lettura del file CSV e caricamento dati in una LISTA di DIZIONARI"
+import csv
+
+# la lista su cui caricheremo i dati
+dati = []
+
+file = open("giocatori.csv", "r")
+lettore = csv.DictReader(file)
+
+for riga in lettore:
+    dati.append(riga)
+
+file.close()
+
+# da adesso in poi basta lavorare sulla variabile dati
+# ...
+
+# visualizzazione dati
+for giocatore in dati:
+    print(giocatore)
+```
+
+
+L'output di questo codice diventa questo:
+
+
+``` py
+{'Nome': 'Maradona', 'Ruolo': 'Centrocampista', 'Squadra': 'Napoli'}
+{'Nome': 'Gullit', 'Ruolo': 'Attaccante', 'Squadra': 'Milan'}
+{'Nome': 'Brehme', 'Ruolo': 'Difensore', 'Squadra': 'Inter'}
+{'Nome': 'Falcao', 'Ruolo': 'Centrocampista', 'Squadra': 'Roma'}
+```
+
+
+!!! danger "ATTENTI a EXCEL!!!"
+
+    Se create il file CSV con Microsoft Excel questo imporrà come separatore il punto e virgola `;` invece della virgola `,`.
+
+    Invece di mettersi a cambiare tutti i file, è più semplice indicare a Python quale è il simbolo delimitatore dei campi, 
+    con questa sintassi:
+
+    ``` py
+    file = open("giocatori.csv", "r")
+    lettore = csv.DictReader(file, delimiter=";")
+    ```
+
+
+In maniera analoga è possibile scrivere in un file CSV partendo da una serie di
+dizionari (una... lista di dizionari!!!) utilizzando la funzione `DictWriter`.
+
+
+
+``` py title="Esempio 2: salvataggio su file dei dati presenti in una lista di dizionari" hl_lines="9 10"
+import csv
+
+dati = []
+dati.append( {"nome":"Gino","cognome":"Panino","professione":"imbianchino"} )
+dati.append( {"nome":"Pino","cognome":"Pinguino", "professione":"spazzacamino"} )
+
+campi = ["nome","cognome", "professione"]
+
+# il parametro newline così impostato assicura che il codice funzioni uguale su Win,Mac,Linux
+file = open("esempio.csv", "w", newline="") 
+scrittore = csv.DictWriter(file, campi)
+
+# inserisce l’intestazione nel file
+scrittore.writeheader()
+
+for riga in dati:
+    scrittore.writerow(riga)
+    
+file.close()
+```
+
+
+Questo codice produce un file CSV chiamato "esempio.csv" contenente i seguenti dati:
+
+
+``` py
+nome, cognome, professione
+Gino, Panino, imbianchino
+Pino, Pinguino, spazzacamino
+```
+
+
+Spero sia tutto chiaro!
+
+
+!!! warning "ATTENZIONE!!!"
+
+    Se avete una lista di dizionari con tanti campi e volete creare un file CSV con un numero ristretto (di campi) fate così:
+    
+    
+    ``` py hl_lines="4 8"
+    # ...
+    
+    # indicate i campi che volete scrivere nel file
+    campi = ["nome","cognome"]
+    
+    file = open("giocatori.csv", "w", newline="") 
+    # dite a DictWriter di ignorare i campi mancanti
+    scrittore = csv.DictWriter(file, campi, extrasaction='ignore')
+    
+    # ...
+    ```
+
+Arrivati qui dovete semplicemente riprovare il codice proposto in questi
+esempi e poi mettervi alla prova con i seguenti esercizi!
+
+
+<!-- ############################################################################################ -->
+
+### Esercizi
+
+!!! note "Nota"
+
+    Gli esercizi che seguono si basano tutti sui file CSV reperibili su <https://www.adjam.org/csv/>.
+    
+    Ogni esercizio indica il file da scaricare per poter eseguire l'esercizio correttamente.
+
+------------------------------------------------------------------------------------
+
+**Esercizio 881**
+
+Si basa sulla **mappa dei cinema italiani**.
+
+
+*Step 0*
+:   Caricare i dati dal file CSV in una opportuna lista dati.
+
+*Step 1*
+:   Visualizzare, per ogni cinema, il "Nome" (del cinema) e il "Comune", ove esso è locato.
+
+*Step 2*
+:   Come lo step precedente, ma limitandosi solo a quelli della regione "Marche". La regione si trova nel campo "Regione".
+
+*Step 3*
+:   Estrapolare i cinema inseriti dopo il 2015 per la regione "Lombardia". Con i suddetti dati creare un nuovo file CSV chiamato "LombardiaPost2015.csv" con i dati delle colonne "Nome", "Comune", "Provincia", "Longitudine", "Latitudine".
+
+----------------------------------------------------------------------------------------------
+
+**Esercizio 882**
+
+Si basa sull'**anagrafica delle scuole italiane.**
+
+
+*Step 0*
+:   Caricare i dati dal file CSV in una opportuna lista dati.
+
+*Step 1*
+:   Dato un codice scuola, digitato dall'utente, visualizzare il nome, l'indirizzo, la città, il numero di telefono, 
+la mail e il sito web della scuola corrispondente. Oppure la scritta "Codice Scuola non esistente".
+
+*Step 2*
+:   Contare le tipologie di scuole, dividendo tra scuola dell'infanzia, prima, e secondaria di primo e secondo grado e fra scuola statale e paritaria. 
+Il risultato dovrà essere visualizzato in un formato tipo:
+
+        Scuola dell'infanzia (statale): 98
+        Scuola dell'infanzia (paritarie): 34
+        ...
+
+*Step 3*
+:   Inserita una città da parte dell'utente, visualizzare tutte le scuole (nome e via) divise per tipologia 
+(es: prima quelle dell'infanzia, poi le scuole primarie, etc...)
+
+*Step 4*
+:   Selezionato un CAP da parte dell'utente, visualizzare i nomi e i codici scuola di tutte le scuole presenti in quel CAP.
+
+
+-----------------------------------------------------------------------------------------
+
+**Esercizio 883**
+
+Si basa sulla **mappa dei monumenti italiani.**
+
+
+*Step 0*
+:   Caricare i dati dal file CSV in una opportuna lista dati.
+
+*Step 1*
+:   Creare una tupla con i nomi delle regioni italiane. Visualizzare i nomi delle regioni e permettere all'utente di selezionarne una. 
+Visualizzare tutti i nomi dei monumenti di quella regione (tra virgolette) con accanto il nome della città in cui si trova (separata da virgola) e tra
+parentesi il "tipo" di monumento.
+
+: Ad esempio, selezionata "Puglia", uno dei monumenti potrebbe essere:
+
+        "Eraclio", Barletta (Monumento)
+
+
+*Step 2*
+:   Creare nella home dell'utente il file "MonumentiPuglia.txt" (se la regione selezionata è la Puglia) con i
+monumenti elencati uno per riga (ripeto, nella stessa visualizzazione dello step precedente).
+
+*Step 3*
+:   Inserito un anno a scelta a dell'utente visualizzare il numero di monumenti inseriti nel file in quell'anno.
+
+*Step 4*
+:   Per ognuno degli anni dal 2010 al 2019, visualizzare il numero di monumenti inseriti in quell'anno.
+
+*Step 5*
+:   Inserito un ID OpenStreetMap da parte dell'utente, visualizzare tutti i dati relativi al monumento selezionato oppure visualizzare la scritta:
+"nessun monumento esistente con ID:" e visualizzare l'ID inserito.
+
+------------------------------------------------------------------------------------
+
+
+**Esercizio 884**
+
+Si basa sulla **mappa delle strutture ricettive marchigiane.**
+
+
+*Step 0*
+:   Caricare i dati dal file CSV in una opportuna lista dati.
+
+*Step 1*
+:   Inserito dall'utente un numero S compreso fra 1 e 5, visualizzare tutte le strutture ricettive classificate come "Alberghi S stelle" dove S è
+il numero inserito dall'utente
+
+*Step 2*
+:   Come il precedente ma permettendo all'utente di selezionare anche una provincia (da scegliere in un elenco opportuno). Saranno dunque
+visualizzate tutte le strutture classificate in un certo modo di quella provincia.
+
+*Step 3*
+:   Visualizzare il numero totale di strutture ricettive per provincia.
+
+*Step 4*
+:   Selezionata una provincia, visualizzare i nomi di tutte le città della provincia che presentano strutture ricettive.
 
 <br>
 <br>
