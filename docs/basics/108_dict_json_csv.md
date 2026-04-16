@@ -146,6 +146,7 @@ I dizionari supportano inoltre alcuni metodi aggiuntivi tipici della classe `dic
 | `dic.pop(key, default)`  | Restituisce il valore corrispondente a key e lo elimina dal dizionario. Se non presente restituisce `default`.<br> Se non presente e default non impostato, genera un errore chiamato `KeyError`.|
 | `dic.copy()`             | Clona dic                                                                                                                       |
 | `dic.clear()`            | Cancella dic, ovvero rimuove tutti i suoi elementi                                                                              |
+| `dic.items()`            | Restituisce i dati del dizionario come una lista di tuple (chiave,valore)                                                       |
 
 
 **Esempio 1: keys**
@@ -227,6 +228,21 @@ prefisso.pop("US", 0) # valore di default impostato a 0, ritorna 0
 
 !!! tip
     con un valore di default impostato `pop()` non da mai errore!!!
+
+
+**Esempio 4: items**
+
+``` py
+# prefisso vale { "ES": 34, "DE": 49, "FR": 33, "UK": 44 }
+
+# scrive tutte le coppie "chiave valore" una per riga
+for chiave in prefisso:
+    print(chiave, prefisso[chiave])
+    
+# in maniera analoga con dict.items()
+for k,v in prefisso.items():
+    print(k, v)
+```
 
 
 Spero che osservando gli esempi sia tutto chiaro sul funzionamento dei dizionari e sulle funzioni disponibili per essi. 
@@ -462,7 +478,7 @@ Lo trovi ovunque: API web, file di configurazione, scambio dati tra dispositivi 
 
 Un documento JSON assomiglia a un dizionario Python:
 
-```json
+```json title="Stringa JSON ben indentata"
 {
   "nome": "Andrea",
   "età": 30,
@@ -857,7 +873,7 @@ esempi e poi mettervi alla prova con i seguenti esercizi!
 
 <!-- ############################################################################################ -->
 
-### Esercizi
+### Esercizi su CSV
 
 !!! note "Nota"
 
