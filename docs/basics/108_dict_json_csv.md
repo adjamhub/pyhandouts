@@ -708,6 +708,103 @@ Esegui lo script più volte e verifica che il file cresca correttamente.
 
 ------------------------------------------------------------------------------------
 
+!!! note "Nota"
+
+    Gli esercizi da qui in poi si basano sui file JSON CSV reperibili da 
+    <a href="https://adjamhub.github.io/pyhandouts/data/" target="_blank">https://adjamhub.github.io/pyhandouts/data/</a>.
+    
+    Ogni esercizio indica il file da scaricare per poter eseguire l'esercizio correttamente.
+
+------------------------------------------------------------------------------------
+
+**Esercizio 861**
+
+Si basa sulla **mappa dei cinema italiani**.
+
+
+*Step 0*
+:   Caricare i dati dal file JSON in una opportuna lista dati. Visualizzare il numero di elementi presenti
+
+*Step 1*
+:   Data una regione (es: Marche), visualizzare, per ogni cinema, il "Nome" (del cinema) e il "Comune", ove esso è locato.
+
+*Step 2*
+:   Data una regione (es: Marche) contare il numero di cinema presenti.
+
+*Step 3*
+:   Creare una nuova lista con tutti e soli i cinema che presentano un anno di inserimento. Salvare i dati nel file "CinemaConAnnoDiInserimento.json".
+
+
+----------------------------------------------------------------------------------------------
+
+**Esercizio 862**
+
+Si basa sull'**anagrafica delle scuole italiane.**
+
+
+*Step 0*
+:   Caricare i dati dal file JSON in una opportuna lista dati. Visualizzare il numero di dati presenti.
+
+*Step 1*
+:   Dato un codice scuola, digitato dall'utente, visualizzare il nome, l'indirizzo, la città, il numero di telefono, 
+la mail e il sito web della scuola corrispondente. Oppure la scritta "Codice Scuola non esistente".
+
+*Step 2*
+:   Contare le tipologie di scuole, dividendo tra scuola dell'infanzia, prima, e secondaria di primo e secondo grado e fra scuola statale e paritaria. 
+Il risultato dovrà essere visualizzato in un formato tipo:
+
+        Scuola dell'infanzia (statale): 98
+        Scuola dell'infanzia (paritarie): 34
+        ...
+
+*Step 3*
+:   Inserita una città da parte dell'utente, visualizzare tutte le scuole (nome e via) divise per tipologia 
+(es: prima quelle dell'infanzia, poi le scuole primarie, etc...)
+
+*Step 4*
+:   Selezionato un CAP da parte dell'utente, visualizzare i nomi e i codici scuola di tutte le scuole presenti in quel CAP.
+
+
+-----------------------------------------------------------------------------------------
+
+**Esercizio 863**
+
+Si basa sulla **mappa dei monumenti italiani.**
+
+
+*Step 0*
+:   Caricare i dati dal file JSON in una opportuna lista dati. Visualizzare il numero dei monumenti presenti.
+
+*Step 1*
+:   Creare una tupla con i nomi delle regioni italiane. Visualizzare i nomi delle regioni e permettere all'utente di selezionarne una. 
+Visualizzare tutti i nomi dei monumenti di quella regione (tra virgolette) con accanto il nome della città in cui si trova (separata da virgola) e tra
+parentesi il "tipo" di monumento.
+
+: Ad esempio, selezionata "Puglia", uno dei monumenti potrebbe essere:
+
+        "Eraclio", Barletta (Monumento)
+
+
+*Step 2*
+:   Data una regione (es: Puglia) creare nel Desktop dell'utente un file denominato "Monumenti<Regione>.json" (ad esempio "MonumentiPuglia.json")
+contenente tutti e solo i monumenti della regione selezionata.
+
+*Step 3*
+:   Inserito un anno a scelta a dell'utente visualizzare il numero di monumenti inseriti nel file in quell'anno.
+
+*Step 4*
+:   Per ognuno degli anni dal 2010 al 2019, visualizzare il numero di monumenti inseriti in quell'anno.
+
+*Step 5*
+:   Inserito un ID OpenStreetMap da parte dell'utente, visualizzare tutti i dati relativi al monumento selezionato oppure visualizzare la scritta:
+"nessun monumento esistente con ID:" e visualizzare l'ID inserito.
+
+------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 ## Modulo CSV
@@ -877,7 +974,7 @@ esempi e poi mettervi alla prova con i seguenti esercizi!
 
 !!! note "Nota"
 
-    Gli esercizi che seguono si basano tutti sui file CSV reperibili su 
+    Gli esercizi che seguono si basano tutti sui file CSV reperibili da 
     <a href="https://adjamhub.github.io/pyhandouts/data/" target="_blank">https://adjamhub.github.io/pyhandouts/data/</a>.
     
     Ogni esercizio indica il file da scaricare per poter eseguire l'esercizio correttamente.
