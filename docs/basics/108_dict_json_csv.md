@@ -877,7 +877,7 @@ esempi e poi mettervi alla prova con i seguenti esercizi!
 
 !!! note "Nota"
 
-    Gli esercizi che seguono si basano tutti sui file CSV reperibili su <https://www.adjam.org/csv/>.
+    Gli esercizi che seguono si basano tutti sui file CSV reperibili su <https://adjamhub.github.io/data/>.
     
     Ogni esercizio indica il file da scaricare per poter eseguire l'esercizio correttamente.
 
