@@ -655,50 +655,32 @@ Scrivi uno script che legge il file e visualizza ogni impostazione con una riga 
 
 **Esercizio 855**
 
-Crea una lista di almeno 4 dizionari, ognuno con i campi `id`, `tipo`, `valore`, `unità`. Salvala in `sensori.json`, poi rileggila e visualizza gli id dei sensori
+Crea manualmente una lista di almeno 4 dizionari, ognuno con i campi `id`, `tipo`, `valore`, `unità`. 
+Salvala in `sensori.json`, poi rileggila e visualizza gli id dei sensori
 che hanno valore superiore a 25.
 
 ------------------------------------------------------------------------------------
 
 **Esercizio 856**
 
-Leggi il file `sensori.json` creato nell'esercizio precedente, aggiungi un nuovo sensore alla lista e risalva il file. Verifica aprendo il file che il nuovo sensore sia presente.
+Leggi il file `sensori.json` creato nell'esercizio precedente, aggiungi un nuovo sensore alla lista e risalva il file. 
+Verifica aprendo il file che il nuovo sensore sia presente.
 
 ------------------------------------------------------------------------------------
 
 
 **Esercizio 857**
 
-Crea un dizionario che rappresenti una scuola: nome, indirizzo (a sua volta un dizionario con via, città, CAP), e una lista di classi (ogni classe ha nome e numero di studenti). Serializzalo in JSON e poi deserializzalo, visualizzando il nome della scuola e l'elenco delle classi con il numero di studenti.
+Crea un dizionario che rappresenti una scuola: nome, indirizzo (a sua volta un dizionario con via, città, CAP), e una lista di classi (ogni classe ha nome e numero di studenti). 
+Salvalo in JSON nel file 'scuola.json'. Rileggi il file e ricarica i dati, poi leggili tutti uno per riga con `chiave:valore` vicini.
 
 
 ------------------------------------------------------------------------------------
 
 **Esercizio 858**
 
-Simula la ricezione di questo messaggio da un ESP32:
-
-```json
-{
-  "device_id": "ESP32-07",
-  "timestamp": 1711450000,
-  "readings": [
-    {"sensor": "DHT11", "temp": 23.1, "hum": 61},
-    {"sensor": "DS18B20", "temp": 23.4}
-  ]
-}
-```
-
-Scrivi uno script che:
-1. Fa il parsing del messaggio.
-2. Visualizza `device_id` e `timestamp`.
-3. Visualizza temperatura e umidità di ogni sensore (se disponibili).
-
-------------------------------------------------------------------------------------
-
-**Esercizio 859**
-
 Crea uno script che simula un logger di dati. Ad ogni esecuzione:
+
 1. Legge il file `log.json` (se esiste); se non esiste, parte da una lista vuota.
 2. Aggiunge un nuovo record con `{"lettura": N, "valore": <numero casuale tra 20 e 30>}` dove N è il numero progressivo.
 3. Salva il file aggiornato.
