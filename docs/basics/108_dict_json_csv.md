@@ -710,7 +710,7 @@ Esegui lo script più volte e verifica che il file cresca correttamente.
 
 !!! note "Nota"
 
-    Gli esercizi da qui in poi si basano sui file JSON CSV reperibili da 
+    Gli esercizi da qui in poi si basano sui file JSON reperibili da 
     <a href="https://adjamhub.github.io/pyhandouts/data/" target="_blank">https://adjamhub.github.io/pyhandouts/data/</a>.
     
     Ogni esercizio indica il file da scaricare per poter eseguire l'esercizio correttamente.
@@ -737,7 +737,7 @@ Si basa sulla **mappa dei cinema italiani**.
 
 ----------------------------------------------------------------------------------------------
 
-**Esercizio 862**
+**Esercizio 862 (da sistemare)**
 
 Si basa sull'**anagrafica delle scuole italiane.**
 
@@ -767,7 +767,7 @@ Il risultato dovrà essere visualizzato in un formato tipo:
 
 -----------------------------------------------------------------------------------------
 
-**Esercizio 863**
+**Esercizio 863 (da sistemare)**
 
 Si basa sulla **mappa dei monumenti italiani.**
 
