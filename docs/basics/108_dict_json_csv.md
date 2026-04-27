@@ -693,7 +693,7 @@ Esegui lo script più volte e verifica che il file cresca correttamente.
 !!! note "Nota"
 
     Gli esercizi da qui in poi si basano sui file JSON reperibili da 
-    <a href="https://adjamhub.github.io/pyhandouts/data/" target="_blank">https://adjamhub.github.io/pyhandouts/data/</a>.
+    <a href="https://adjam.org/data/" target="_blank">https://adjam.org/data/</a>.
     
     Ogni esercizio indica il file da scaricare per poter eseguire l'esercizio correttamente.
 
@@ -957,7 +957,7 @@ esempi e poi mettervi alla prova con i seguenti esercizi!
 !!! note "Nota"
 
     Gli esercizi che seguono si basano tutti sui file CSV reperibili da 
-    <a href="https://adjamhub.github.io/pyhandouts/data/" target="_blank">https://adjamhub.github.io/pyhandouts/data/</a>.
+    <a href="https://adjam.org/data/" target="_blank">https://adjam.org/data/</a>.
     
     Ogni esercizio indica il file da scaricare per poter eseguire l'esercizio correttamente.
 
