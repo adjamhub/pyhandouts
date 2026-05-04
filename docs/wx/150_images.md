@@ -49,8 +49,9 @@ Partiamo da qualche esempio ben commentato per prendere confidenza con il codice
 # ...
 panel = wx.Panel(self)
 
+self.widgetImageViewer = wx.StaticBitmap(panel)
 oggettoImmagine = wx.Bitmap("foto.jpg")
-widgetImageViewer = wx.StaticBitmap(panel, bitmap=oggettoImmagine) 
+self.widgetImageViewer.SetBitmap(oggettoImmagine)
 # ...
 ```
 
@@ -62,19 +63,31 @@ widgetImageViewer = wx.StaticBitmap(panel, bitmap=oggettoImmagine)
 ``` py title="Esempio 2: visualizzare una immagine in scala di grigi"
 # ...
 panel = wx.Panel(self)
-widgetImageViewer = wx.StaticBitmap(panel)
+self.widgetImageViewer = wx.StaticBitmap(panel)
 
 oggettoImmagine = wx.Bitmap("foto.jpg")
 immagine = oggettoImmagine.ConvertToImage()
 immagineBN = immagine.ConvertToGreyscale()
 oggettoImmagineBN = wx.Bitmap(immagineBN)
 
-widgetImageViewer.SetBitmap(oggettoImmagineBN)
+self.widgetImageViewer.SetBitmap(oggettoImmagineBN)
 # ...
 ```
 
 La base ce l'avete... adesso occorre buttarsi un pò con qualche esercizio!!!
 
+
+!!! tip "Suggerimento"
+
+    Se volete applicare un colore di sfondo alla vostra StaticBitmap, potete farlo con il seguente codice:
+    
+    ``` py
+    # bitmap rossa (RGB = (255,0,0) ) opaca (ultimo valore 255) grande 800x600
+    sfondoRosso = wx.Bitmap.FromRGBA(800,600,255,0,0,255)    
+    self.widgetImageViewer.SetBitmap(sfondoRosso)
+    # ...
+    ```
+    
 
 
 ### Esercizi
@@ -197,4 +210,3 @@ Chiedetemi pure... sarò lieto di farvi fare qualche esercizio di comprensione :
 <br>
 <br>
 <br>
-
