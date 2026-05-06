@@ -82,7 +82,8 @@ La base ce l'avete... adesso occorre buttarsi un pò con qualche esercizio!!!
     Se volete applicare un colore di sfondo alla vostra StaticBitmap, potete farlo con il seguente codice:
     
     ``` py
-    # bitmap rossa (RGB = (255,0,0) ) opaca (ultimo valore 255) grande 800x600
+    # wx.Bitmap.FromRGBA(width, height, R, G, B, opacity)
+    # dim: 800x600, colore: rossa ( RGB = (255,0,0) ), opaca: sì (ultimo valore, sempre 255)!
     sfondoRosso = wx.Bitmap.FromRGBA(800,600,255,0,0,255)    
     self.widgetImageViewer.SetBitmap(sfondoRosso)
     # ...
