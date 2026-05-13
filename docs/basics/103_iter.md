@@ -1250,14 +1250,14 @@ Provo a scrivere il codice:
 
 ``` py title="Passaggio 1"
 # Dato N, visualizzo tutti i numeri fra 2 e N - 1
-for div in range(2, N -- 1):
+for div in range(2, N):
     print (div)
 ```
 
 
 ``` py title="Passaggio 2"
 # Dato N, visualizzo quali numeri fra 2 e N - 1 dividono N
-for div in range(2, N -- 1):
+for div in range(2, N):
     if N % div == 0:
         print (div)
 ```
@@ -1266,7 +1266,7 @@ for div in range(2, N -- 1):
 ``` py title="Passaggio 3"
 # Dato N, conto quanti numeri fra 2 e N - 1 dividono N
 conta = 0
-for div in range(2, N -- 1):
+for div in range(2, N):
     if N % div == 0:
         conta += 1
 ```
@@ -1301,7 +1301,7 @@ while True:
 # conta dei divisori "propri" di N
 conta = 0
 
-for div in range(2, N - 1):
+for div in range(2, N):
     if N % div == 0:
         conta += 1
 
@@ -1541,4 +1541,3 @@ Dopo aver fatto inserire un numero intero positivo dire da quante cifre
 <br>
 <br>
 <br>
-
